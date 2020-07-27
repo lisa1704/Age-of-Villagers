@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Age of villagers", "Age of 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Age of villagers.test", "..\Age of villagers.test\Age of villagers.test.csproj", "{C6230D75-02F6-49CD-8B5E-B717A1F70152}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "42-Rifah", "42-Rifah", "{BA9A2370-339B-4878-AD7B-CF04309D8696}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
