@@ -35,30 +35,30 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void TreeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WaterButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HouseButton_Click(object sender, EventArgs e)
-        {
-
+            InitializeComponent();
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            ConfirmSaveVillage.ShowDialog();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
+        {
+            DialogResult result = ConfirmOpenVillage.ShowDialog();
+        }
+
+        private void House_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TreeButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
