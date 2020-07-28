@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ageofvillegers.Properties
+namespace Ageofvillagers.Properties
 {
 
 

@@ -1,4 +1,4 @@
-﻿namespace Ageofvillegers
+﻿namespace Ageofvillagers
 {
     partial class Form1
     {
