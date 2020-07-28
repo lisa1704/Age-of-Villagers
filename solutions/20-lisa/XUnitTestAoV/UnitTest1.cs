@@ -13,7 +13,7 @@ namespace XUnitTestAoV
         [Fact]
         public void IsOK()
         {
-            Assert.True(2 > 1);
+            Assert.True(4 > 1);
         }
     }
 }
