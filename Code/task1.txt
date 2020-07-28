@@ -1,6 +1,0 @@
-prepared my project structure
-
-watched the repository
-created branch
-created folder within 'solutions' folder
-created a empty project in visual studio
