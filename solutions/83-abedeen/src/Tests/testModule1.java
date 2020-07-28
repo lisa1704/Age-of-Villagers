@@ -13,4 +13,12 @@ public class testModule1 {
         String call = dog.Bark(1);
         assertEquals("Bhew", call);
     }
+
+    @Test
+    protected void BarkTest_2()
+    {
+        Ghew Animal = new Ghew();
+        String call = Animal.Bark(2);
+        assertEquals("Halum", call);
+    }
 }
