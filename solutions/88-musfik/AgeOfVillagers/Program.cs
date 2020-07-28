@@ -18,5 +18,6 @@ namespace AgeOfVillagers
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new VillageWindow());
         }
+
     }
 }
