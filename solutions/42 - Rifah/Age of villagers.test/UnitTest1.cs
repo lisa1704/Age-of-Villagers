@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Age_of_villagers.test
+namespace Age_Of_Villagers.test
 {
     public class UnitTest1
     {
