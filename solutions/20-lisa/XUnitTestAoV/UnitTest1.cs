@@ -8,7 +8,8 @@ namespace XUnitTestAoV
         [Fact]
         public void Test1()
         {
-            Assert.Equal(2, 2);
+            int a = 2, b = 2;
+            Assert.Equal(4, a+b);
         }
         [Fact]
         public void IsOK()
