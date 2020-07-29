@@ -12,6 +12,10 @@ namespace Age_of_Villagers
 {
     public partial class VillageWindow : Form
     {
+        int x;
+        int y;
+        Graphics g;
+        string text = "";
         public VillageWindow()
         {
             InitializeComponent();
@@ -21,5 +25,21 @@ namespace Age_of_Villagers
         {
 
         }
+
+        private void villagePanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            x = e.X;
+            y = e.Y;
+            g = villagePanel.CreateGraphics();
+            Font fy = new Font("Helvetica", 10, FontStyle.Bold);
+            Brush br = new SolidBrush(System.Drawing.Color.Red);
+            g.DrawString(text, fy, br, new Point(x, y));
+        }
+
+        private void treeButton_Click(object sender, EventArgs e)
+        {
+            text = "Tree";
+        }
+
     }
 }

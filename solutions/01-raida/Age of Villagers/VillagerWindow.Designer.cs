@@ -45,10 +45,12 @@
             // villagePanel
             // 
             this.villagePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.villagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.villagePanel.Location = new System.Drawing.Point(12, 12);
             this.villagePanel.Name = "villagePanel";
             this.villagePanel.Size = new System.Drawing.Size(600, 400);
             this.villagePanel.TabIndex = 12;
+            this.villagePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.villagePanel_MouseClick);
             // 
             // menuPanel
             // 
@@ -71,9 +73,9 @@
             // 
             this.gameLabel.AutoSize = true;
             this.gameLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameLabel.Location = new System.Drawing.Point(55, 48);
+            this.gameLabel.Location = new System.Drawing.Point(45, 47);
             this.gameLabel.Name = "gameLabel";
-            this.gameLabel.Size = new System.Drawing.Size(160, 24);
+            this.gameLabel.Size = new System.Drawing.Size(170, 24);
             this.gameLabel.TabIndex = 4;
             this.gameLabel.Text = "Age Of Villagers";
             // 
@@ -129,6 +131,7 @@
             this.treeButton.TabIndex = 1;
             this.treeButton.Text = "Tree";
             this.treeButton.UseVisualStyleBackColor = false;
+            this.treeButton.Click += new System.EventHandler(this.treeButton_Click);
             // 
             // saveButton
             // 
