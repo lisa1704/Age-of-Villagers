@@ -33,7 +33,7 @@
             this.gameLabel = new System.Windows.Forms.Label();
             this.nationList = new System.Windows.Forms.ListBox();
             this.openButton = new System.Windows.Forms.Button();
-            this.waterfallButton = new System.Windows.Forms.Button();
+            this.watersourceButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.treeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.menuPanel.Controls.Add(this.gameLabel);
             this.menuPanel.Controls.Add(this.nationList);
             this.menuPanel.Controls.Add(this.openButton);
-            this.menuPanel.Controls.Add(this.waterfallButton);
+            this.menuPanel.Controls.Add(this.watersourceButton);
             this.menuPanel.Controls.Add(this.newButton);
             this.menuPanel.Controls.Add(this.treeButton);
             this.menuPanel.Controls.Add(this.saveButton);
@@ -102,15 +102,16 @@
             this.openButton.Text = "Open Village";
             this.openButton.UseVisualStyleBackColor = false;
             // 
-            // waterfallButton
+            // watersourceButton
             // 
-            this.waterfallButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.waterfallButton.Location = new System.Drawing.Point(85, 238);
-            this.waterfallButton.Name = "waterfallButton";
-            this.waterfallButton.Size = new System.Drawing.Size(75, 23);
-            this.waterfallButton.TabIndex = 3;
-            this.waterfallButton.Text = "Water Source";
-            this.waterfallButton.UseVisualStyleBackColor = false;
+            this.watersourceButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.watersourceButton.Location = new System.Drawing.Point(85, 238);
+            this.watersourceButton.Name = "watersourceButton";
+            this.watersourceButton.Size = new System.Drawing.Size(75, 38);
+            this.watersourceButton.TabIndex = 3;
+            this.watersourceButton.Text = "Water Source";
+            this.watersourceButton.UseVisualStyleBackColor = false;
+            this.watersourceButton.Click += new System.EventHandler(this.watersourceButton_Click);
             // 
             // newButton
             // 
@@ -152,6 +153,7 @@
             this.houseBotton.TabIndex = 2;
             this.houseBotton.Text = "House";
             this.houseBotton.UseVisualStyleBackColor = false;
+            this.houseBotton.Click += new System.EventHandler(this.houseBotton_Click);
             // 
             // villageNameBox
             // 
@@ -184,7 +186,7 @@
         private System.Windows.Forms.Label gameLabel;
         private System.Windows.Forms.ListBox nationList;
         private System.Windows.Forms.Button openButton;
-        private System.Windows.Forms.Button waterfallButton;
+        private System.Windows.Forms.Button watersourceButton;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button treeButton;
         private System.Windows.Forms.Button saveButton;

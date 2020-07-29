@@ -41,5 +41,14 @@ namespace Age_of_Villagers
             text = "Tree";
         }
 
+        private void houseBotton_Click(object sender, EventArgs e)
+        {
+            text = "House";
+        }
+
+        private void watersourceButton_Click(object sender, EventArgs e)
+        {
+            text = "River";
+        }
     }
 }
