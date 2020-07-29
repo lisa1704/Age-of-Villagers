@@ -75,7 +75,7 @@
             this.gameLabel.Name = "gameLabel";
             this.gameLabel.Size = new System.Drawing.Size(160, 24);
             this.gameLabel.TabIndex = 4;
-            this.gameLabel.Text = "Villagers Game";
+            this.gameLabel.Text = "Age Of Villagers";
             // 
             // nationList
             // 
