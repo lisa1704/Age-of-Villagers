@@ -15,6 +15,9 @@ namespace Age_of_villagers
         int x;
         int y;
         string type;
+        List<Point> h_points = new List<Point>();
+        List<Point> t_points = new List<Point>();
+        List<Point> w_points = new List<Point>();
         public Form1()
         {
             InitializeComponent();
@@ -54,26 +57,34 @@ namespace Age_of_villagers
         {
             Graphics g = drawpanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
-            if (type=="house")
-            {
-                g.DrawRectangle(p, x - 50, y - 50, 100, 100);
-            }
-            if (type == "tree")
-            {
-                g.DrawEllipse(p, x - 50, y - 50, 100, 100);
-            }
-            if (type == "watter")
-            {
-                g.DrawEllipse(p, x - 50, y - 50, 100, 100);
-            }
-
+                foreach (Point pt in h_points)
+                {
+                    g.DrawRectangle(p, pt.X - 50, pt.Y - 50, 100, 100);
+                }
+                foreach (Point pt in t_points)
+                {
+                    g.DrawEllipse(p, pt.X - 50, pt.Y - 50, 100, 100);
+                }
+                foreach (Point pt in w_points)
+                {
+                    g.DrawEllipse(p, pt.X - 50, pt.Y - 50, 100, 100);
+                }
         }
 
         private void drawpanel_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point(e.X, e.Y);
-            x = p.X;
-            y = p.Y;
+            if (type == "house")
+            {
+                h_points.Add(e.Location);
+            }
+            if (type == "tree")
+            {
+                t_points.Add(e.Location);
+            }
+            if (type == "watter")
+            {
+                w_points.Add(e.Location);
+            }                
             drawpanel.Invalidate();
         }
     }
