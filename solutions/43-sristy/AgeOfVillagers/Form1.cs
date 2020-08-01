@@ -12,80 +12,80 @@ namespace Age_of_villagers
 {
     public partial class Form1 : Form
     {
-        int x;
-        int y;
+        string name;
         string type;
+        string item;
         List<Point> h_points = new List<Point>();
         List<Point> t_points = new List<Point>();
         List<Point> w_points = new List<Point>();
+
+        Nationfactory nationfactory = new Nationfactory();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void side_panel(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void side_panel(object sender, PaintEventArgs e) { }
         private void house_Click(object sender, EventArgs e)
         {
-            type = "house";
+            item = "house";
         }
 
         private void tree_Click(object sender, EventArgs e)
         {
-            type = "tree";
+            item = "tree";
         }
 
-        private void wattersource_Click(object sender, EventArgs e)
+        private void watersource_Click(object sender, EventArgs e)
         {
-            type = "watter";
+            item = "water";
         }
 
         private void draw_panel(object sender, PaintEventArgs e)
         {
             Graphics g = drawpanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
                 foreach (Point pt in h_points)
                 {
-                    g.DrawRectangle(p, pt.X - 50, pt.Y - 50, 100, 100);
+                nationfactory.GetNation(type).Draw_house(g, pt.X - 50, pt.Y - 50);
                 }
                 foreach (Point pt in t_points)
                 {
-                    g.DrawEllipse(p, pt.X - 50, pt.Y - 50, 100, 100);
+                nationfactory.GetNation(type).Draw_tree(g, pt.X - 50, pt.Y - 50);
                 }
                 foreach (Point pt in w_points)
                 {
-                    g.DrawEllipse(p, pt.X - 50, pt.Y - 50, 100, 100);
-                }
+                nationfactory.GetNation(type).Draw_watersource(g, pt.X - 50, pt.Y - 50);
+            }
         }
 
-        private void drawpanel_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void drawpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            if (type == "house")
+            if (item == "house")
             {
                 h_points.Add(e.Location);
             }
-            if (type == "tree")
+            if (item == "tree")
             {
                 t_points.Add(e.Location);
             }
-            if (type == "watter")
+            if (item == "water")
             {
                 w_points.Add(e.Location);
-            }                
+            }
             drawpanel.Invalidate();
+        }
+
+        private void villagename_KeyDown(object sender, KeyEventArgs e)
+        {
+            name = villagename.Text;
+        }
+
+        private void vallagetype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            type = villagetype.Text;
+            nationfactory.GetNation(type);
         }
     }
 }
