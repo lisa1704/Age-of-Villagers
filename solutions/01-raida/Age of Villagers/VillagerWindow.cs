@@ -55,5 +55,11 @@ namespace Age_of_Villagers
         {
             MessageBox.Show(villageNameBox.Text);
         }
+
+        private void nationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
+            MessageBox.Show(selectedNation);
+        }
     }
 }

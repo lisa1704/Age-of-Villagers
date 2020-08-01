@@ -91,6 +91,7 @@
             this.nationList.Name = "nationList";
             this.nationList.Size = new System.Drawing.Size(173, 56);
             this.nationList.TabIndex = 5;
+            this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
             // 
             // openButton
             // 
