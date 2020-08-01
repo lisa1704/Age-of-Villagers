@@ -143,6 +143,7 @@
             this.saveButton.TabIndex = 7;
             this.saveButton.Text = "Save Village";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // houseBotton
             // 
@@ -157,7 +158,7 @@
             // 
             // villageNameBox
             // 
-            this.villageNameBox.Location = new System.Drawing.Point(42, 90);
+            this.villageNameBox.Location = new System.Drawing.Point(42, 100);
             this.villageNameBox.Name = "villageNameBox";
             this.villageNameBox.Size = new System.Drawing.Size(173, 20);
             this.villageNameBox.TabIndex = 6;

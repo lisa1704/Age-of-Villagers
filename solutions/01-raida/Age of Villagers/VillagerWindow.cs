@@ -50,5 +50,10 @@ namespace Age_of_Villagers
         {
             text = "River";
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(villageNameBox.Text);
+        }
     }
 }
