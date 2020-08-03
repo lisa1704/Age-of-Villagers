@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InationFactory.cs" />
     <Compile Include="VillagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
