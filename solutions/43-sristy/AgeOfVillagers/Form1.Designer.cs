@@ -72,7 +72,7 @@
             "Inuit"});
             this.villagetype.Location = new System.Drawing.Point(23, 102);
             this.villagetype.Name = "villagetype";
-            this.villagetype.Size = new System.Drawing.Size(178, 24);
+            this.villagetype.Size = new System.Drawing.Size(185, 24);
             this.villagetype.TabIndex = 10;
             this.villagetype.Text = "Village type";
             this.villagetype.SelectedIndexChanged += new System.EventHandler(this.vallagetype_SelectedIndexChanged);

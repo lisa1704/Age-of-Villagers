@@ -87,5 +87,21 @@ namespace Age_of_villagers
             type = villagetype.Text;
             nationfactory.GetNation(type);
         }
+
+        //private void drawpanel_MouseDoubleClick(object sender, MouseEventArgs e)
+        //{
+        //    if (item == "house")
+        //    {
+        //        h_points.Remove(h_points.Last());
+        //    }
+        //    if (item == "tree")
+        //    {
+        //        t_points.Remove(t_points.Last());
+        //    }
+        //    if (item == "water")
+        //    {
+        //        w_points.Remove(w_points.Last());
+        //    }
+        //}
     }
 }
