@@ -55,7 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InationFactory.cs" />
+    <Compile Include="Bangladesh.cs" />
+    <Compile Include="INationFactory.cs" />
+    <Compile Include="INation.cs" />
+    <Compile Include="Nationfactory.cs" />
     <Compile Include="VillagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
