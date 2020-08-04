@@ -1,91 +1,40 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class VillageWindow : Form
+    class VillageWindow : Form
     {
-        private Panel drawingPanel;
-        private Panel toolsPanel;
-
-        public VillageWindow()
-        {
-            InitializeComponent();
-        }
+        private Panel panel2;
+        private Panel panel1;
 
         private void InitializeComponent()
         {
-            toolsPanel = new Panel();
-            SuspendLayout();
-            InitDrawingPanel();
-            InitToolsPanel();
-            InitWindow();
-            ResumeLayout(false);
-        }
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(1, 83);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 400);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(598, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 600);
+            this.panel2.TabIndex = 1;
+            // 
+            // VillageWindow
+            // 
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "VillageWindow";
+            this.ResumeLayout(false);
 
-        private void InitWindow()
-        {
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 400);
-            Controls.Add(toolsPanel);
-            Controls.Add(drawingPanel);
-            Name = "VillageWindow";
-            Text = "Age of Villagers";
-
-        }
-
-        private void InitToolsPanel()
-        {
-            toolsPanel = new TableLayoutPanel
-            {
-                Location = new Point(600, 0),
-                Name = "toolsPanel",
-                Size = new Size(200, 400),
-                TabIndex = 1,
-                ColumnCount = 1,
-                Padding = new Padding(30)
-            };
-            AddLabel("Age Of Villagers");
-            AddLabel(" ");
-            AddRadioButton("Tree");
-            AddRadioButton("House");
-            AddRadioButton("Water Source");
-        }
-
-        private void AddLabel(string text)
-        {
-            var label = new Label
-            {
-
-                Text = text,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Width = int.MaxValue
-
-            };
-            toolsPanel.Controls.Add(label);
-        }
-
-        private void AddRadioButton(string text)
-        {
-            var button = new RadioButton
-            {
-                Text = text
-            };
-            toolsPanel.Controls.Add(button);
-        }
-
-        private void InitDrawingPanel()
-        {
-            drawingPanel = new Panel
-            {
-                Location = new Point(0, 0),
-                Name = "drawingPanel",
-                Size = new Size(600, 400),
-                TabIndex = 0,
-                BackColor = Color.AliceBlue
-
-            };
         }
     }
 }
