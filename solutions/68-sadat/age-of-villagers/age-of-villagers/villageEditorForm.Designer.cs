@@ -163,6 +163,8 @@
             this.nationNameTextBox.TabIndex = 2;
             this.nationNameTextBox.Text = "Enter Nation Name";
             this.nationNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nationNameTextBox.Enter += new System.EventHandler(this.nationNameTextBox_enter);
+            this.nationNameTextBox.Leave += new System.EventHandler(this.nationNameTextBox_leave);
             // 
             // villageNameTextBox
             // 
@@ -175,6 +177,8 @@
             this.villageNameTextBox.TabIndex = 1;
             this.villageNameTextBox.Text = "Enter Village Name";
             this.villageNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.villageNameTextBox.Enter += new System.EventHandler(this.villageNameTextBox_enter);
+            this.villageNameTextBox.Leave += new System.EventHandler(this.villageNameTextBox_leave);
             // 
             // label1
             // 

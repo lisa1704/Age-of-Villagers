@@ -63,5 +63,39 @@ namespace age_of_villagers
         {
 
         }
+
+        private void villageNameTextBox_enter(object sender, EventArgs e)
+        {
+            if (villageNameTextBox.Text == "Enter Village Name")
+            {
+                villageNameTextBox.Text = "";
+            }
+        }
+
+        private void villageNameTextBox_leave(object sender, EventArgs e)
+        {
+            if (villageNameTextBox.Text == "")
+            {
+                villageNameTextBox.Text = "Enter Village Name";
+            }
+
+        }
+
+        private void nationNameTextBox_enter(object sender, EventArgs e)
+        {
+            if (nationNameTextBox.Text == "Enter Nation Name")
+            {
+                nationNameTextBox.Text = "";
+            }
+
+        }
+
+        private void nationNameTextBox_leave(object sender, EventArgs e)
+        {
+            if (nationNameTextBox.Text == "")
+            {
+                nationNameTextBox.Text = "Enter Nation Name";
+            }
+        }
     }
 }
