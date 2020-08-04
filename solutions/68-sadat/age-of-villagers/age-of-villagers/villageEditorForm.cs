@@ -10,12 +10,23 @@ using System.Windows.Forms;
 
 namespace age_of_villagers
 {
-    public partial class Form1 : Form
+    public partial class villageEditor : Form
     {
-        public Form1()
+        public villageEditor()
         {
+            
             InitializeComponent();
+
         }
 
+        private void villageEditor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
