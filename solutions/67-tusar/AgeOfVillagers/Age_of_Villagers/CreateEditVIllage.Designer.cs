@@ -57,7 +57,7 @@ namespace Age_of_Villagers
             this.panel1.Controls.Add(this.title);
             this.panel1.Location = new System.Drawing.Point(592, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 364);
+            this.panel1.Size = new System.Drawing.Size(235, 364);
             this.panel1.TabIndex = 0;
             // 
             // btnOpenVillage
@@ -74,6 +74,7 @@ namespace Age_of_Villagers
             this.btnOpenVillage.TabStop = false;
             this.btnOpenVillage.Text = "Open Village";
             this.btnOpenVillage.UseVisualStyleBackColor = false;
+            this.btnOpenVillage.Click += new System.EventHandler(this.btnOpenVillage_Click);
             // 
             // btnNewVillage
             // 
@@ -89,6 +90,7 @@ namespace Age_of_Villagers
             this.btnNewVillage.TabStop = false;
             this.btnNewVillage.Text = "New Village";
             this.btnNewVillage.UseVisualStyleBackColor = false;
+            this.btnNewVillage.Click += new System.EventHandler(this.btnNewVillage_Click);
             // 
             // btnSaveVillage
             // 
@@ -104,6 +106,7 @@ namespace Age_of_Villagers
             this.btnSaveVillage.TabStop = false;
             this.btnSaveVillage.Text = "Save Village";
             this.btnSaveVillage.UseVisualStyleBackColor = false;
+            this.btnSaveVillage.Click += new System.EventHandler(this.btnSaveVillage_Click);
             // 
             // rbtnWaterResource
             // 
@@ -115,6 +118,7 @@ namespace Age_of_Villagers
             this.rbtnWaterResource.TabStop = true;
             this.rbtnWaterResource.Text = "Water Resource";
             this.rbtnWaterResource.UseVisualStyleBackColor = true;
+            this.rbtnWaterResource.CheckedChanged += new System.EventHandler(this.rbtnWaterResource_CheckedChanged);
             // 
             // rbtnHouse
             // 
@@ -126,6 +130,7 @@ namespace Age_of_Villagers
             this.rbtnHouse.TabStop = true;
             this.rbtnHouse.Text = "House";
             this.rbtnHouse.UseVisualStyleBackColor = true;
+            this.rbtnHouse.CheckedChanged += new System.EventHandler(this.rbtnHouse_CheckedChanged);
             // 
             // rbtnTree
             // 
@@ -137,6 +142,7 @@ namespace Age_of_Villagers
             this.rbtnTree.TabStop = true;
             this.rbtnTree.Text = "Tree";
             this.rbtnTree.UseVisualStyleBackColor = true;
+            this.rbtnTree.CheckedChanged += new System.EventHandler(this.rbtnTree_CheckedChanged);
             // 
             // textNation
             // 
@@ -147,8 +153,9 @@ namespace Age_of_Villagers
             this.textNation.Name = "textNation";
             this.textNation.Size = new System.Drawing.Size(186, 16);
             this.textNation.TabIndex = 2;
-            this.textNation.Text = "Bangladeshi Farmers";
+            this.textNation.Text = "Name of the Nation";
             this.textNation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNation.TextChanged += new System.EventHandler(this.textNation_TextChanged);
             // 
             // textVillageName
             // 
@@ -159,14 +166,15 @@ namespace Age_of_Villagers
             this.textVillageName.Name = "textVillageName";
             this.textVillageName.Size = new System.Drawing.Size(186, 16);
             this.textVillageName.TabIndex = 1;
-            this.textVillageName.Text = "Katakhali";
+            this.textVillageName.Text = "Name of the Village";
             this.textVillageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textVillageName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textVillageName.TextChanged += new System.EventHandler(this.textVillageName_TextChanged);
             // 
             // title
             // 
             this.title.BackColor = System.Drawing.Color.PowderBlue;
             this.title.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.title.Enabled = false;
             this.title.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.Location = new System.Drawing.Point(18, 22);
             this.title.Name = "title";
@@ -176,16 +184,21 @@ namespace Age_of_Villagers
             this.title.TabStop = false;
             this.title.Text = "Age of Villagers";
             this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.title.TextChanged += new System.EventHandler(this.title_TextChanged);
             // 
             // CreateEditVIllage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(814, 361);
+            this.ClientSize = new System.Drawing.Size(819, 361);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CreateEditVIllage";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Village Creation";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
