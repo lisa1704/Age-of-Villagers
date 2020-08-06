@@ -32,5 +32,10 @@ namespace Age_Of_Villagers
         {
 
         }
+
+        private void buttonNewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

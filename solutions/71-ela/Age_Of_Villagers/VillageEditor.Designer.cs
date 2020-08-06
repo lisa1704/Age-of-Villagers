@@ -28,96 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.VillageNameEditor = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NationSelector = new System.Windows.Forms.DomainUpDown();
-            this.Label_AOV = new System.Windows.Forms.Label();
-            this.DrawingSpace = new System.Windows.Forms.Panel();
-            this.buttonTree = new System.Windows.Forms.Button();
+            this.villageNameEditor = new System.Windows.Forms.TextBox();
+            this.villageEditorPanel = new System.Windows.Forms.Panel();
+            this.buttonOpenVillage = new System.Windows.Forms.Button();
+            this.buttonNewVillage = new System.Windows.Forms.Button();
+            this.buttonSaveVillage = new System.Windows.Forms.Button();
+            this.buttonWaterSource = new System.Windows.Forms.Button();
             this.buttonHouse = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.buttonTree = new System.Windows.Forms.Button();
+            this.nationSelector = new System.Windows.Forms.DomainUpDown();
+            this.labelTittle = new System.Windows.Forms.Label();
+            this.drawingSpace = new System.Windows.Forms.Panel();
+            this.villageEditorPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // VillageNameEditor
+            // villageNameEditor
             // 
-            this.VillageNameEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.villageNameEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.VillageNameEditor.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VillageNameEditor.Location = new System.Drawing.Point(66, 70);
-            this.VillageNameEditor.Name = "VillageNameEditor";
-            this.VillageNameEditor.Size = new System.Drawing.Size(194, 29);
-            this.VillageNameEditor.TabIndex = 3;
-            this.VillageNameEditor.Text = " Village Name";
-            this.VillageNameEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.villageNameEditor.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.villageNameEditor.Location = new System.Drawing.Point(66, 70);
+            this.villageNameEditor.Name = "villageNameEditor";
+            this.villageNameEditor.Size = new System.Drawing.Size(193, 29);
+            this.villageNameEditor.TabIndex = 3;
+            this.villageNameEditor.Text = " Village Name";
+            this.villageNameEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel1
+            // villageEditorPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.buttonHouse);
-            this.panel1.Controls.Add(this.buttonTree);
-            this.panel1.Controls.Add(this.NationSelector);
-            this.panel1.Controls.Add(this.Label_AOV);
-            this.panel1.Controls.Add(this.VillageNameEditor);
-            this.panel1.Location = new System.Drawing.Point(629, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(298, 507);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.villageEditorPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.villageEditorPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.villageEditorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.villageEditorPanel.Controls.Add(this.buttonOpenVillage);
+            this.villageEditorPanel.Controls.Add(this.buttonNewVillage);
+            this.villageEditorPanel.Controls.Add(this.buttonSaveVillage);
+            this.villageEditorPanel.Controls.Add(this.buttonWaterSource);
+            this.villageEditorPanel.Controls.Add(this.buttonHouse);
+            this.villageEditorPanel.Controls.Add(this.buttonTree);
+            this.villageEditorPanel.Controls.Add(this.nationSelector);
+            this.villageEditorPanel.Controls.Add(this.labelTittle);
+            this.villageEditorPanel.Controls.Add(this.villageNameEditor);
+            this.villageEditorPanel.Location = new System.Drawing.Point(629, 4);
+            this.villageEditorPanel.Name = "villageEditorPanel";
+            this.villageEditorPanel.Size = new System.Drawing.Size(299, 507);
+            this.villageEditorPanel.TabIndex = 0;
+            this.villageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // NationSelector
+            // buttonOpenVillage
             // 
-            this.NationSelector.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationSelector.Items.Add("Bangladeshi Farmers");
-            this.NationSelector.Items.Add("Arab Bedouin");
-            this.NationSelector.Items.Add("Egyptian Kings");
-            this.NationSelector.Items.Add("Inuit Hunters");
-            this.NationSelector.Location = new System.Drawing.Point(66, 123);
-            this.NationSelector.Name = "NationSelector";
-            this.NationSelector.Size = new System.Drawing.Size(198, 29);
-            this.NationSelector.TabIndex = 6;
-            this.NationSelector.Text = "Nation";
-            this.NationSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.buttonOpenVillage.AutoSize = true;
+            this.buttonOpenVillage.BackColor = System.Drawing.Color.Silver;
+            this.buttonOpenVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenVillage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOpenVillage.Location = new System.Drawing.Point(150, 448);
+            this.buttonOpenVillage.Name = "buttonOpenVillage";
+            this.buttonOpenVillage.Size = new System.Drawing.Size(114, 39);
+            this.buttonOpenVillage.TabIndex = 15;
+            this.buttonOpenVillage.Text = "Open Village";
+            this.buttonOpenVillage.UseVisualStyleBackColor = false;
             // 
-            // Label_AOV
+            // buttonNewVillage
             // 
-            this.Label_AOV.AutoSize = true;
-            this.Label_AOV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_AOV.Location = new System.Drawing.Point(61, 17);
-            this.Label_AOV.Name = "Label_AOV";
-            this.Label_AOV.Size = new System.Drawing.Size(203, 29);
-            this.Label_AOV.TabIndex = 4;
-            this.Label_AOV.Text = "Age Of Villagers";
+            this.buttonNewVillage.AutoSize = true;
+            this.buttonNewVillage.BackColor = System.Drawing.Color.Silver;
+            this.buttonNewVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewVillage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonNewVillage.Location = new System.Drawing.Point(21, 448);
+            this.buttonNewVillage.Name = "buttonNewVillage";
+            this.buttonNewVillage.Size = new System.Drawing.Size(111, 39);
+            this.buttonNewVillage.TabIndex = 14;
+            this.buttonNewVillage.Text = "New Village";
+            this.buttonNewVillage.UseVisualStyleBackColor = false;
+            this.buttonNewVillage.Click += new System.EventHandler(this.buttonNewVillage_Click);
             // 
-            // DrawingSpace
+            // buttonSaveVillage
             // 
-            this.DrawingSpace.Location = new System.Drawing.Point(11, 91);
-            this.DrawingSpace.MaximumSize = new System.Drawing.Size(600, 400);
-            this.DrawingSpace.MinimumSize = new System.Drawing.Size(600, 400);
-            this.DrawingSpace.Name = "DrawingSpace";
-            this.DrawingSpace.Size = new System.Drawing.Size(600, 400);
-            this.DrawingSpace.TabIndex = 7;
+            this.buttonSaveVillage.AutoSize = true;
+            this.buttonSaveVillage.BackColor = System.Drawing.Color.Silver;
+            this.buttonSaveVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveVillage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonSaveVillage.Location = new System.Drawing.Point(101, 382);
+            this.buttonSaveVillage.Name = "buttonSaveVillage";
+            this.buttonSaveVillage.Size = new System.Drawing.Size(111, 39);
+            this.buttonSaveVillage.TabIndex = 11;
+            this.buttonSaveVillage.Text = "Save Village";
+            this.buttonSaveVillage.UseVisualStyleBackColor = false;
             // 
-            // buttonTree
+            // buttonWaterSource
             // 
-            this.buttonTree.AutoSize = true;
-            this.buttonTree.BackColor = System.Drawing.Color.Silver;
-            this.buttonTree.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTree.Location = new System.Drawing.Point(66, 196);
-            this.buttonTree.Name = "buttonTree";
-            this.buttonTree.Size = new System.Drawing.Size(92, 39);
-            this.buttonTree.TabIndex = 7;
-            this.buttonTree.Text = "Tree";
-            this.buttonTree.UseVisualStyleBackColor = false;
+            this.buttonWaterSource.AutoSize = true;
+            this.buttonWaterSource.BackColor = System.Drawing.Color.Silver;
+            this.buttonWaterSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonWaterSource.Location = new System.Drawing.Point(101, 254);
+            this.buttonWaterSource.Name = "buttonWaterSource";
+            this.buttonWaterSource.Size = new System.Drawing.Size(122, 39);
+            this.buttonWaterSource.TabIndex = 9;
+            this.buttonWaterSource.Text = "Water Source";
+            this.buttonWaterSource.UseVisualStyleBackColor = false;
             // 
             // buttonHouse
             // 
@@ -131,86 +139,80 @@
             this.buttonHouse.Text = "House";
             this.buttonHouse.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonTree
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(101, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 39);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Water Source";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonTree.AutoSize = true;
+            this.buttonTree.BackColor = System.Drawing.Color.Silver;
+            this.buttonTree.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTree.Location = new System.Drawing.Point(66, 196);
+            this.buttonTree.Name = "buttonTree";
+            this.buttonTree.Size = new System.Drawing.Size(92, 39);
+            this.buttonTree.TabIndex = 7;
+            this.buttonTree.Text = "Tree";
+            this.buttonTree.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // nationSelector
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(101, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 39);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Save Village";
-            this.button1.UseVisualStyleBackColor = false;
+            this.nationSelector.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationSelector.Items.Add("Bangladeshi Farmers");
+            this.nationSelector.Items.Add("Arab Bedouin");
+            this.nationSelector.Items.Add("Egyptian Kings");
+            this.nationSelector.Items.Add("Inuit Hunters");
+            this.nationSelector.Location = new System.Drawing.Point(66, 123);
+            this.nationSelector.Name = "nationSelector";
+            this.nationSelector.Size = new System.Drawing.Size(198, 29);
+            this.nationSelector.TabIndex = 6;
+            this.nationSelector.Text = "Nation";
+            this.nationSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button5
+            // labelTittle
             // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.Silver;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(172, 448);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 39);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "New Village";
-            this.button5.UseVisualStyleBackColor = false;
+            this.labelTittle.AutoSize = true;
+            this.labelTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTittle.Location = new System.Drawing.Point(61, 17);
+            this.labelTittle.Name = "labelTittle";
+            this.labelTittle.Size = new System.Drawing.Size(203, 29);
+            this.labelTittle.TabIndex = 4;
+            this.labelTittle.Text = "Age Of Villagers";
             // 
-            // button6
+            // drawingSpace
             // 
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.Silver;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(26, 448);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 39);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Open Village";
-            this.button6.UseVisualStyleBackColor = false;
+            this.drawingSpace.Location = new System.Drawing.Point(11, 91);
+            this.drawingSpace.MaximumSize = new System.Drawing.Size(600, 400);
+            this.drawingSpace.MinimumSize = new System.Drawing.Size(600, 400);
+            this.drawingSpace.Name = "drawingSpace";
+            this.drawingSpace.Size = new System.Drawing.Size(600, 400);
+            this.drawingSpace.TabIndex = 7;
             // 
             // AgeOfVillagers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 524);
-            this.Controls.Add(this.DrawingSpace);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(960, 523);
+            this.Controls.Add(this.drawingSpace);
+            this.Controls.Add(this.villageEditorPanel);
             this.Name = "AgeOfVillagers";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.villageEditorPanel.ResumeLayout(false);
+            this.villageEditorPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox VillageNameEditor;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DomainUpDown NationSelector;
-        private System.Windows.Forms.Label Label_AOV;
-        private System.Windows.Forms.Panel DrawingSpace;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox villageNameEditor;
+        private System.Windows.Forms.Panel villageEditorPanel;
+        private System.Windows.Forms.DomainUpDown nationSelector;
+        private System.Windows.Forms.Label labelTittle;
+        private System.Windows.Forms.Panel drawingSpace;
+        private System.Windows.Forms.Button buttonWaterSource;
         private System.Windows.Forms.Button buttonHouse;
         private System.Windows.Forms.Button buttonTree;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonSaveVillage;
+        private System.Windows.Forms.Button buttonOpenVillage;
+        private System.Windows.Forms.Button buttonNewVillage;
     }
 }
 
