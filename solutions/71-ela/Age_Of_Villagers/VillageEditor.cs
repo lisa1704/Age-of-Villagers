@@ -19,7 +19,7 @@ namespace Age_Of_Villagers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Graphics g = drawingSpace.CreateGraphics();
 
         }
 
@@ -33,7 +33,21 @@ namespace Age_Of_Villagers
 
         }
 
-        private void buttonNewVillage_Click(object sender, EventArgs e)
+
+
+        private void drawingSpace_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
