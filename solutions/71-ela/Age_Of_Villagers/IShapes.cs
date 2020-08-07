@@ -8,7 +8,7 @@ namespace Age_Of_Villagers
 {
     interface IShapes
     {
-        void Draw(Graphics g,int x, int y,int height,int width);
+        void Draw(Graphics g,int x, int y,int height,int width, int rotate);
         Rectangle shape();
     }
 }

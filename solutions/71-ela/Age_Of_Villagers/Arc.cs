@@ -7,7 +7,9 @@ namespace Age_Of_Villagers
     {
      
 
-        public void Draw(Graphics g, int x, int y, int height, int width)
+      
+
+        public void Draw(Graphics g, int x, int y, int height, int width, int rotate)
         {
             throw new NotImplementedException();
         }

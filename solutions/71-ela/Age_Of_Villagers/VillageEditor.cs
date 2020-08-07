@@ -138,7 +138,7 @@ namespace Age_Of_Villagers
             else if (treeButton.Checked)
             {
                 IShapes t = new Triangle();
-                t.Draw(g, X, y, 16, 16);
+                t.Draw(g, X, y, 16, 16,0);
             }
          
 

@@ -11,8 +11,8 @@ namespace Age_Of_Villagers
         
         IShapes rectangle;
 
-        public  int house_width = 16;
-        public  int house_height = 16;
+        public  int house_width = 50;
+        public  int house_height = 50;
         private  int tree_width = 16;
         private int tree_height = 24;
 
@@ -27,8 +27,8 @@ namespace Age_Of_Villagers
 
         public  void DrawHouse(Graphics g,int x,int y)
         {
-            triangle.Draw(g, x,y,house_height/2,house_width/2);
-            rectangle.Draw(g, x, y+ house_height / 2, house_height / 2, house_width / 2);
+            triangle.Draw(g, x,y,house_height/2,house_width,0);
+            rectangle.Draw(g, x, y+ house_height / 2, house_height / 2, house_width ,0);
 
             
         }

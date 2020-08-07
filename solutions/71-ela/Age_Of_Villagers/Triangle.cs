@@ -10,8 +10,11 @@ namespace Age_Of_Villagers
             throw new NotImplementedException();
         }
 
-        public void Draw(Graphics g, int x, int y, int height, int width)
+        public void Draw(Graphics g, int x, int y, int height, int width, int rotate)
+
+
         {
+            y = y + rotate;
             Pen p = new Pen(Color.Green);
             g.DrawLine(p, x , y ,x+width, y);
             g.DrawLine(p, x , y, x + (width / 2), y - height);
