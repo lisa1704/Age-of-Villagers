@@ -15,6 +15,7 @@ namespace Age_Of_Villagers
         Graphics g;
         int x, y, h, w;
         IShapes r = new Rectangle();
+        INations nation;
      
         Pen p;
         public AgeOfVillagers()
@@ -44,6 +45,33 @@ namespace Age_Of_Villagers
 
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (selectNation.Text == "Arab Bedouin")
+            {
+                nation = new ArabBeduin();
+                
+            }
+            else if (selectNation.Text == "Bangladeshi Farmers")
+            {
+                nation = new BangladeshiFarmers();
+                
+            }
+
+            else if (selectNation.Text == "Egyptian Kings")
+            {
+                nation = new BangladeshiFarmers();
+
+            }
+            else if (selectNation.Text == "Inuit Hunters")
+            {
+                nation = new BangladeshiFarmers();
+
+            }
+
+            else
+            {
+
+            }
+
 
         }
 
@@ -100,13 +128,12 @@ namespace Age_Of_Villagers
 
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
-            BangladeshiFarmers d = new BangladeshiFarmers();
-
+           
             int X = e.Location.X;
             int y = e.Location.Y;
             if(houseButton.Checked)
             {
-                d.DrawHouse(g, X, y);
+                nation.DrawHouse(g, X, y);
             }
             else if (treeButton.Checked)
             {
