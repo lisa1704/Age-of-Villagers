@@ -71,6 +71,12 @@ namespace Age_Of_Villagers
             
         }
 
+        private void buttonNewVillage_Click(object sender, EventArgs e)
+        {
+           
+            g.Clear(Color.White);
+        }
+
         private void drawHouse(int X,int Y)
         {
            

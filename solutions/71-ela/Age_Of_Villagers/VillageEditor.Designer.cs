@@ -154,6 +154,7 @@
             this.buttonNewVillage.TabIndex = 14;
             this.buttonNewVillage.Text = "New Village";
             this.buttonNewVillage.UseVisualStyleBackColor = false;
+            this.buttonNewVillage.Click += new System.EventHandler(this.buttonNewVillage_Click);
             // 
             // buttonSaveVillage
             // 
