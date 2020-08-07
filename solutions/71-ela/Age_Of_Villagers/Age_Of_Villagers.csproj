@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IShapes.cs" />
     <Compile Include="VillageEditor.cs">
       <SubType>Form</SubType>
     </Compile>

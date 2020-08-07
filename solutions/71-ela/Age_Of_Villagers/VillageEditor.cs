@@ -14,6 +14,7 @@ namespace Age_Of_Villagers
     {
         Graphics g;
         int x, y, h, w;
+        IShapes r = new Rectangle();
      
         Pen p;
         public AgeOfVillagers()
@@ -77,6 +78,11 @@ namespace Age_Of_Villagers
             g.Clear(Color.White);
         }
 
+        private void drawingSpace_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void drawHouse(int X,int Y)
         {
            
@@ -99,11 +105,12 @@ namespace Age_Of_Villagers
             int y = e.Location.Y;
             if(houseButton.Checked)
             {
-                drawHouse(x, y);
+                r.Draw(g, X, y, 16, 16);
             }
             else if (treeButton.Checked)
             {
-                g.DrawLine(p, X, y, X + 25, y + 25);
+                IShapes t = new Triangle();
+                t.Draw(g, X, y, 16, 16);
             }
          
 
