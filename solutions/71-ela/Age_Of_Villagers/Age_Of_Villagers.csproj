@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arc.cs" />
+    <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="INations.cs" />
     <Compile Include="IShapes.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="VillageEditor.cs">
       <SubType>Form</SubType>
     </Compile>

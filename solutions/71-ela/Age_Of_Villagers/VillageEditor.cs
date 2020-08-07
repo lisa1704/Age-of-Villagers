@@ -100,12 +100,13 @@ namespace Age_Of_Villagers
 
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
+            BangladeshiFarmers d = new BangladeshiFarmers();
 
             int X = e.Location.X;
             int y = e.Location.Y;
             if(houseButton.Checked)
             {
-                r.Draw(g, X, y, 16, 16);
+                d.DrawHouse(g, X, y);
             }
             else if (treeButton.Checked)
             {
