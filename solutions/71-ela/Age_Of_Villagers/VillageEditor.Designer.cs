@@ -99,6 +99,7 @@
             this.houseButton.TabStop = true;
             this.houseButton.Text = "House";
             this.houseButton.UseVisualStyleBackColor = true;
+           
             // 
             // treeButton
             // 

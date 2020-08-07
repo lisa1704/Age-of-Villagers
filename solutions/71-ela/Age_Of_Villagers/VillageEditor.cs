@@ -111,6 +111,8 @@ namespace Age_Of_Villagers
 
         }
 
+     
+
         private void drawHouse(int X,int Y)
         {
            
@@ -137,8 +139,8 @@ namespace Age_Of_Villagers
             }
             else if (treeButton.Checked)
             {
-                IShapes t = new Triangle();
-                t.Draw(g, X, y, 16, 16,0);
+             
+                nation.DrawTree(g, X, y);
             }
          
 
