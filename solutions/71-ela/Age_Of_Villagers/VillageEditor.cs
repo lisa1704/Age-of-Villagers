@@ -12,14 +12,20 @@ namespace Age_Of_Villagers
 {
     public partial class AgeOfVillagers : Form
     {
+        Graphics g;
+        int x, y, h, w;
+     
+        Pen p;
         public AgeOfVillagers()
         {
             InitializeComponent();
+            g = drawingSpace.CreateGraphics();
+            p = new Pen(Color.Black);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Graphics g = drawingSpace.CreateGraphics();
+       
 
         }
 
@@ -35,11 +41,6 @@ namespace Age_Of_Villagers
 
 
 
-        private void drawingSpace_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -49,6 +50,56 @@ namespace Age_Of_Villagers
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
+            
+
+            
+
+        }
+
+        private void drawingSpace_MouseDown(object sender, MouseEventArgs e)
+        {
+            x = e.X;
+            y = e.Y;
+
+        }
+
+        private void drawingSpace_MouseUp(object sender, MouseEventArgs e)
+        {
+            h = e.X - x;
+            w = e.Y - y;
+           
+            
+        }
+
+        private void drawHouse(int X,int Y)
+        {
+           
+            g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
+            g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
+            g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
+            g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
+            g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
+        }
+
+        private void drawingSpace_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            int X = e.Location.X;
+            int y = e.Location.Y;
+            if(houseButton.Checked)
+            {
+                drawHouse(x, y);
+            }
+            else if (treeButton.Checked)
+            {
+                g.DrawLine(p, X, y, X + 25, y + 25);
+            }
+         
 
         }
     }

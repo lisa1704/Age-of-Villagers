@@ -30,6 +30,9 @@
         {
             this.villageNameEditor = new System.Windows.Forms.TextBox();
             this.villageEditorPanel = new System.Windows.Forms.Panel();
+            this.waterSourceButton = new System.Windows.Forms.RadioButton();
+            this.houseButton = new System.Windows.Forms.RadioButton();
+            this.treeButton = new System.Windows.Forms.RadioButton();
             this.selectNation = new System.Windows.Forms.ComboBox();
             this.buttonOpenVillage = new System.Windows.Forms.Button();
             this.buttonNewVillage = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.labelTittle = new System.Windows.Forms.Label();
             this.drawingSpace = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.treeButton = new System.Windows.Forms.RadioButton();
-            this.houseButton = new System.Windows.Forms.RadioButton();
-            this.waterSourceButton = new System.Windows.Forms.RadioButton();
             this.villageEditorPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,43 @@
             this.villageEditorPanel.Size = new System.Drawing.Size(299, 507);
             this.villageEditorPanel.TabIndex = 0;
             this.villageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // waterSourceButton
+            // 
+            this.waterSourceButton.AutoSize = true;
+            this.waterSourceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterSourceButton.Location = new System.Drawing.Point(96, 243);
+            this.waterSourceButton.Name = "waterSourceButton";
+            this.waterSourceButton.Size = new System.Drawing.Size(133, 24);
+            this.waterSourceButton.TabIndex = 20;
+            this.waterSourceButton.TabStop = true;
+            this.waterSourceButton.Text = "Water Source";
+            this.waterSourceButton.UseVisualStyleBackColor = true;
+            // 
+            // houseButton
+            // 
+            this.houseButton.AutoSize = true;
+            this.houseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.houseButton.Location = new System.Drawing.Point(96, 213);
+            this.houseButton.Name = "houseButton";
+            this.houseButton.Size = new System.Drawing.Size(79, 24);
+            this.houseButton.TabIndex = 19;
+            this.houseButton.TabStop = true;
+            this.houseButton.Text = "House";
+            this.houseButton.UseVisualStyleBackColor = true;
+            // 
+            // treeButton
+            // 
+            this.treeButton.AutoSize = true;
+            this.treeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeButton.Location = new System.Drawing.Point(96, 183);
+            this.treeButton.Name = "treeButton";
+            this.treeButton.Size = new System.Drawing.Size(64, 24);
+            this.treeButton.TabIndex = 17;
+            this.treeButton.TabStop = true;
+            this.treeButton.Text = "Tree";
+            this.treeButton.UseVisualStyleBackColor = true;
+            this.treeButton.CheckedChanged += new System.EventHandler(this.treeButton_CheckedChanged);
             // 
             // selectNation
             // 
@@ -151,7 +188,10 @@
             this.drawingSpace.Name = "drawingSpace";
             this.drawingSpace.Size = new System.Drawing.Size(600, 400);
             this.drawingSpace.TabIndex = 7;
-            this.drawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingSpace_Paint);
+            this.drawingSpace.Click += new System.EventHandler(this.drawingSpace_Click);
+            this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
+            this.drawingSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseDown);
+            this.drawingSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseUp);
             // 
             // label1
             // 
@@ -162,43 +202,6 @@
             this.label1.Size = new System.Drawing.Size(205, 37);
             this.label1.TabIndex = 8;
             this.label1.Text = "Drawing Space";
-            // 
-            // treeButton
-            // 
-            this.treeButton.AutoSize = true;
-            this.treeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeButton.Location = new System.Drawing.Point(96, 183);
-            this.treeButton.Name = "treeButton";
-            this.treeButton.Size = new System.Drawing.Size(64, 24);
-            this.treeButton.TabIndex = 17;
-            this.treeButton.TabStop = true;
-            this.treeButton.Text = "Tree";
-            this.treeButton.UseVisualStyleBackColor = true;
-            this.treeButton.CheckedChanged += new System.EventHandler(this.treeButton_CheckedChanged);
-            // 
-            // houseButton
-            // 
-            this.houseButton.AutoSize = true;
-            this.houseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.houseButton.Location = new System.Drawing.Point(96, 213);
-            this.houseButton.Name = "houseButton";
-            this.houseButton.Size = new System.Drawing.Size(79, 24);
-            this.houseButton.TabIndex = 19;
-            this.houseButton.TabStop = true;
-            this.houseButton.Text = "House";
-            this.houseButton.UseVisualStyleBackColor = true;
-            // 
-            // waterSourceButton
-            // 
-            this.waterSourceButton.AutoSize = true;
-            this.waterSourceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterSourceButton.Location = new System.Drawing.Point(96, 243);
-            this.waterSourceButton.Name = "waterSourceButton";
-            this.waterSourceButton.Size = new System.Drawing.Size(133, 24);
-            this.waterSourceButton.TabIndex = 20;
-            this.waterSourceButton.TabStop = true;
-            this.waterSourceButton.Text = "Water Source";
-            this.waterSourceButton.UseVisualStyleBackColor = true;
             // 
             // AgeOfVillagers
             // 
