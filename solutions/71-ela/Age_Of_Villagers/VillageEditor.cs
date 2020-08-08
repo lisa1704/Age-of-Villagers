@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Newtonsoft.Json;
 namespace Age_Of_Villagers
 {
     public partial class AgeOfVillagers : Form
@@ -16,7 +17,9 @@ namespace Age_Of_Villagers
         int x, y, h, w;
         IShapes r = new Rectangle();
         INations nation;
-     
+        Village village;
+
+
         Pen p;
         public AgeOfVillagers()
         {
@@ -111,7 +114,14 @@ namespace Age_Of_Villagers
 
         }
 
-     
+        private void buttonSaveVillage_Click(object sender, EventArgs e)
+        {
+            Village village = new Village { Nation = nation, VillageName = villageNameEditor.Text };
+            var jsonVillage = JsonConvert.SerializeObject(village);
+
+            System.IO.File.WriteAllText(@"E:\path.json", jsonVillage);
+
+        }
 
         private void drawHouse(int X,int Y)
         {
@@ -136,6 +146,7 @@ namespace Age_Of_Villagers
             if(houseButton.Checked)
             {
                 nation.DrawHouse(g, X, y);
+
             }
             else if (treeButton.Checked)
             {

@@ -99,7 +99,6 @@
             this.houseButton.TabStop = true;
             this.houseButton.Text = "House";
             this.houseButton.UseVisualStyleBackColor = true;
-           
             // 
             // treeButton
             // 
@@ -169,6 +168,7 @@
             this.buttonSaveVillage.TabIndex = 11;
             this.buttonSaveVillage.Text = "Save Village";
             this.buttonSaveVillage.UseVisualStyleBackColor = false;
+            this.buttonSaveVillage.Click += new System.EventHandler(this.buttonSaveVillage_Click);
             // 
             // labelTittle
             // 
