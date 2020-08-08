@@ -8,7 +8,7 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void Test1()
         {
-
+            Assert.Equal("Hello", "Hello");
         }
     }
 }
