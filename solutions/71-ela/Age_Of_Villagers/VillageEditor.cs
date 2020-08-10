@@ -16,15 +16,10 @@ namespace Age_Of_Villagers
         Graphics g;
 
         int x, y, h, w;
-        IShapes r = new Rectangle();
-        INations nation;
 
+        INations nation;
         Village openVillage;
         Village village;
-
- 
-
-
         Pen p;
         public AgeOfVillagers()
         {
@@ -32,13 +27,13 @@ namespace Age_Of_Villagers
             g = drawingSpace.CreateGraphics();
             p = new Pen(Color.Black);
             village = new Village();
-            openVillage= new Village();
+            openVillage = new Village();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-       
+
 
         }
 
@@ -61,7 +56,7 @@ namespace Age_Of_Villagers
                 nation = new ArabBeduin();
                 g.Clear(Color.White);
 
-               
+
                 foreach (Point p in village.housePosition)
                 {
                     nation.DrawHouse(g, p.x, p.y);
@@ -113,13 +108,13 @@ namespace Age_Of_Villagers
 
         }
 
-       
+
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
-            
 
-            
+
+
 
         }
 
@@ -134,23 +129,23 @@ namespace Age_Of_Villagers
         {
             h = e.X - x;
             w = e.Y - y;
-           
-            
+
+
         }
 
         private void buttonNewVillage_Click(object sender, EventArgs e)
         {
-           
+
             g.Clear(Color.White);
         }
 
-    
+
 
         public void buttonSaveVillage_Click(object sender, EventArgs e)
         {
             village.VillageName = villageNameEditor.Text;
-          
-            
+
+
             var jsonVillage = JsonConvert.SerializeObject(village);
 
             System.IO.File.WriteAllText(@"E:\path.json", jsonVillage);
@@ -180,25 +175,32 @@ namespace Age_Of_Villagers
             {
                 var filePath = openFileDialog1.FileName;
                 openVillage = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
-               
+
+
 
 
             }
-            INations onation = new ArabBeduin();
+
+
+        }
+
+        private void OpenVillage(INations nation)
+        {
             g.Clear(Color.White);
 
             foreach (Point p in openVillage.housePosition)
             {
-                onation.DrawHouse(g, p.x, p.y);
+                nation.DrawHouse(g, p.x, p.y);
             }
             foreach (Point p in openVillage.treePosition)
             {
-                onation.DrawTree(g, p.x, p.y);
+                nation.DrawTree(g, p.x, p.y);
             }
 
 
 
         }
+  
 
         private void drawHouse(int X,int Y)
         {
