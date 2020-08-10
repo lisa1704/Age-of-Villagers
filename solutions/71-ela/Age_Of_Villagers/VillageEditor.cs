@@ -241,7 +241,8 @@ namespace Age_Of_Villagers
             else if (waterSourceButton.Checked)
             {
                 nation.DrawWaterSource(g, X, y);
-                
+                village.waterSoucePosition.Add(new Point(X, y));
+
             }
          
 

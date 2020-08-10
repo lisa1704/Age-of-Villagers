@@ -61,9 +61,9 @@ namespace Age_Of_Villagers
 
         }
 
-        public override void DrawWaterSource(Graphics g)
+        public override void DrawWaterSource(Graphics g,int x,int y)
         {
-            throw new NotImplementedException();
+            arc.Draw(g, x, y, 12, 12, 360);
         }
 
         public override Color SetBackground()
@@ -75,7 +75,11 @@ namespace Age_Of_Villagers
 
         public override Size SetWaterSourceSize(int width, int height)
         {
-            throw new NotImplementedException();
+          Size size= new Size();
+            size.Width = 12;
+            size.Height = 12;
+                return size;
+
         }
     }
 }
