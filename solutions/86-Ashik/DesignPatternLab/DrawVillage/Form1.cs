@@ -17,19 +17,24 @@ namespace DrawVillage
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Form1_Paint(object sender, PaintEventArgs e)
         {
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
-
+            this.Width = 600;
+            this.Width = 400;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void splitter1_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = e.Graphics;
+            Pen myPen = new Pen(Color.Black);
+            Brush myBrush = new SolidBrush(Color.Blue);
 
+            g.DrawLine(myPen, 2, 2, 5400, 2);
         }
     }
 }
