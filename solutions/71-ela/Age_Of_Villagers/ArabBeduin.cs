@@ -13,8 +13,8 @@ namespace Age_Of_Villagers
 
         IShapes rectangle;
 
-      
-      
+
+
         Pen p;
 
         public ArabBeduin()
@@ -28,6 +28,7 @@ namespace Age_Of_Villagers
         public override void DrawHouse(Graphics g, int x, int y)
         {
             triangle.Draw(g, x, y, house_height / 2, house_width / 2,0);
+            
 
             rectangle.Draw(g, x+ house_height / 2, y, house_height / 2, house_width / 2, house_width/4);
 
@@ -49,7 +50,7 @@ namespace Age_Of_Villagers
 
         public override void DrawWaterSource(Graphics g)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override Color SetBackground()
@@ -57,14 +58,11 @@ namespace Age_Of_Villagers
             return Color.Orange;
         }
 
-        public override void SetWaterSource()
+        public override Size  SetWaterSourceSize(int width,int height)
         {
-            throw new NotImplementedException();
+            return new Size();
         }
 
-        public override string getNationName()
-        {
-            return "Arab Beduin";
-        }
+      
     }
 }

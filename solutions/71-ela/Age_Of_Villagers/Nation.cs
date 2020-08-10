@@ -12,19 +12,22 @@ namespace Age_Of_Villagers
         public int house_height;
         public int tree_width;
         public  int tree_height;
+        Pen pen;
+
         public Nation()
         {
             this.house_width = 100;
             this.house_height = 100;
             this.tree_height = 24;
             this.tree_width = 16;
+            this.pen = new Pen(Color.Black);
         }
         public abstract void DrawTree(Graphics g,int x,int y);
        public abstract void DrawHouse(Graphics g,int x,int y);
        public abstract void DrawWaterSource(Graphics g);
        public abstract Color SetBackground();
-       public abstract void SetWaterSource();
-       public abstract string getNationName();
+        public abstract Size SetWaterSourceSize(int width, int height);
+  
 
       
 

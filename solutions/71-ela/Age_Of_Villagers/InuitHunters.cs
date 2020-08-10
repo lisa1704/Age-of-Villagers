@@ -30,20 +30,17 @@ namespace Age_Of_Villagers
 
         public override void DrawWaterSource(Graphics g)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public override string getNationName()
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public override Color SetBackground()
         {
             return Color.White;
         }
 
-        public override void SetWaterSource()
+        public override Size SetWaterSourceSize(int width, int height)
         {
             throw new NotImplementedException();
         }

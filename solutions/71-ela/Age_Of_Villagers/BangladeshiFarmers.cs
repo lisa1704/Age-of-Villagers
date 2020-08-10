@@ -57,14 +57,9 @@ namespace Age_Of_Villagers
             return Color.PaleGreen;
         }
 
-        public override void SetWaterSource()
+        public override Size SetWaterSourceSize(int width, int height)
         {
             throw new NotImplementedException();
-        }
-
-        public override string getNationName()
-        {
-            return "Bangladeshi Farmers";
         }
     }
 }
