@@ -59,12 +59,39 @@ namespace Age_Of_Villagers
             if (selectNation.Text == "Arab Bedouin")
             {
                 nation = new ArabBeduin();
-                
+                g.Clear(Color.White);
+
+               
+                foreach (Point p in village.housePosition)
+                {
+                    nation.DrawHouse(g, p.x, p.y);
+                }
+                foreach (Point p in openVillage.treePosition)
+                {
+                    nation.DrawTree(g, p.x, p.y);
+                }
+
+
+
+
+
             }
             else if (selectNation.Text == "Bangladeshi Farmers")
             {
                 nation = new BangladeshiFarmers();
-                
+                g.Clear(Color.White);
+
+
+                foreach (Point p in village.housePosition)
+                {
+                    nation.DrawHouse(g, p.x, p.y);
+                }
+                foreach (Point p in openVillage.treePosition)
+                {
+                    nation.DrawTree(g, p.x, p.y);
+                }
+
+
             }
 
             else if (selectNation.Text == "Egyptian Kings")
