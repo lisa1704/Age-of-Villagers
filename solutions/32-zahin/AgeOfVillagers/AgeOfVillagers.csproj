@@ -67,16 +67,16 @@
     <Compile Include="InuitHunters.cs" />
     <Compile Include="EgyptianKing.cs" />
     <Compile Include="Village.cs" />
-    <Compile Include="CreateNewVillage.cs">
+    <Compile Include="VillageActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateNewVillage.Designer.cs">
-      <DependentUpon>CreateNewVillage.cs</DependentUpon>
+    <Compile Include="VillageActions.Designer.cs">
+      <DependentUpon>VillageActions.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateNewVillage.resx">
-      <DependentUpon>CreateNewVillage.cs</DependentUpon>
+    <EmbeddedResource Include="VillageActions.resx">
+      <DependentUpon>VillageActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

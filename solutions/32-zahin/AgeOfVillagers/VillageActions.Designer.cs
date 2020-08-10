@@ -1,6 +1,6 @@
 ﻿namespace AgeOfVillagers
 {
-    partial class CreateNewVillage
+    partial class VillageActions
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.OptionsBoard = new System.Windows.Forms.GroupBox();
+            this.VillageName = new System.Windows.Forms.TextBox();
             this.WaterSourceButton = new System.Windows.Forms.RadioButton();
             this.HouseButton = new System.Windows.Forms.RadioButton();
             this.TreeButton = new System.Windows.Forms.RadioButton();
@@ -39,7 +40,6 @@
             this.DrawingBoard = new System.Windows.Forms.GroupBox();
             this.ConfirmSaveVillage = new System.Windows.Forms.SaveFileDialog();
             this.ConfirmOpenVillage = new System.Windows.Forms.OpenFileDialog();
-            this.VillageName = new System.Windows.Forms.TextBox();
             this.OptionsBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,15 @@
             this.OptionsBoard.TabIndex = 0;
             this.OptionsBoard.TabStop = false;
             this.OptionsBoard.Text = "Options Here";
+            this.OptionsBoard.Enter += new System.EventHandler(this.OptionsBoard_Enter);
+            // 
+            // VillageName
+            // 
+            this.VillageName.Location = new System.Drawing.Point(48, 63);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(154, 22);
+            this.VillageName.TabIndex = 0;
+            this.VillageName.Text = "Enter Village Name";
             // 
             // WaterSourceButton
             // 
@@ -144,7 +153,7 @@
             this.Nations.Name = "Nations";
             this.Nations.Size = new System.Drawing.Size(154, 24);
             this.Nations.TabIndex = 0;
-            this.Nations.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.Nations.SelectedIndexChanged += new System.EventHandler(this.NationsName);
             // 
             // DrawingBoard
             // 
@@ -155,18 +164,11 @@
             this.DrawingBoard.TabIndex = 0;
             this.DrawingBoard.TabStop = false;
             this.DrawingBoard.Text = "Drawing Board";
+            this.DrawingBoard.Enter += new System.EventHandler(this.DrawingBoardActions);
             // 
             // ConfirmOpenVillage
             // 
             this.ConfirmOpenVillage.InitialDirectory = "D:\\3-1\\SWE 4502 (Design Pattern Lab)\\Assignment Test\\AgeOfVillagers";
-            // 
-            // VillageName
-            // 
-            this.VillageName.Location = new System.Drawing.Point(48, 63);
-            this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(154, 22);
-            this.VillageName.TabIndex = 0;
-            this.VillageName.Text = "Enter Village Name";
             // 
             // CreateNewVillage
             // 
