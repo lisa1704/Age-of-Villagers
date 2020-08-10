@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : Nations
     {
+        private string item;
+
+        public ArabBedouin()
+        {
+
+        }
+
         public void DrawHouse()
         {
             throw new NotImplementedException();

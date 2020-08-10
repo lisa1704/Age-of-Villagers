@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateNewVillage());
+            Application.Run(new VillageActions());
         }
     }
 }

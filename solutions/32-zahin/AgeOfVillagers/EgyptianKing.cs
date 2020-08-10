@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class EgyptianKing : Nations
     {
+        private string item;
+
+        public EgyptianKing()
+        {
+
+        }
+
         public void DrawHouse()
         {
             throw new NotImplementedException();

@@ -8,9 +8,15 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : Nations
     {
+        private string item;
+
+        public BangladeshiFarmers()
+        {
+        }
+
         public void DrawHouse()
         {
-            throw new NotImplementedException();
+        
         }
 
         public void DrawTree()

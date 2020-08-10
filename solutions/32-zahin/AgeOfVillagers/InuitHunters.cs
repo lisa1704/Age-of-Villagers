@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class InuitHunters : Nations
     {
+        private string item;
+
+        public InuitHunters()
+        {
+
+        }
+
         public void DrawHouse()
         {
             throw new NotImplementedException();
