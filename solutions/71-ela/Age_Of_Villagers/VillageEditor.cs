@@ -180,7 +180,7 @@ namespace Age_Of_Villagers
 
             else if (nationName == "Egyptian Kings")
             {
-                nation = new BangladeshiFarmers();
+                nation = new EgyptianKings();
 
             }
             else if (nationName == "Inuit Hunters")

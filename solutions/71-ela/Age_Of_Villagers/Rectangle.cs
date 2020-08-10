@@ -5,7 +5,7 @@ namespace Age_Of_Villagers
 {
     class Rectangle : IShapes
     {
-        public void Draw( Graphics g,int x, int y, int height, int width,int rotate)
+        public void Draw(Graphics g, int x, int y,  int height, int width, int rotate)
         {
             Pen p = new Pen(Color.Red);
 
