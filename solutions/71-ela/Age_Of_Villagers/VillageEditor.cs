@@ -132,6 +132,44 @@ namespace Age_Of_Villagers
 
         private void buttonOpenVillage_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"E:\",
+                Title = "Open a village (.json file)",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "json",
+                Filter = "json files (*.json)|*.json",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = openFileDialog1.FileName;
+                openVillage = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+               
+
+
+            }
+            INations onation = new ArabBeduin();
+            g.Clear(Color.White);
+
+            foreach (Point p in openVillage.housePosition)
+            {
+                onation.DrawHouse(g, p.x, p.y);
+            }
+            foreach (Point p in openVillage.treePosition)
+            {
+                onation.DrawTree(g, p.x, p.y);
+            }
+
+
 
         }
 
