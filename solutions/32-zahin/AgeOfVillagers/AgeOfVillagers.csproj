@@ -61,8 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="ArabBedouin.cs" />
+    <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="EgyptianKing.cs" />

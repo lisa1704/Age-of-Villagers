@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface INation
+    interface Nations
     {
         void DrawHouse();
         void DrawTree();
