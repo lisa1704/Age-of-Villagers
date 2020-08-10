@@ -53,7 +53,8 @@ namespace Age_Of_Villagers
         {
 
             nation = NationFactory(selectNation.Text);
-            g.Clear(Color.White);
+            drawingSpace.BackColor = nation.SetBackground();
+            g.Clear(drawingSpace.BackColor);
             OpenVillage(village,nation);
          
                
@@ -92,7 +93,7 @@ namespace Age_Of_Villagers
         private void buttonNewVillage_Click(object sender, EventArgs e)
         {
 
-            g.Clear(Color.White);
+            g.Clear(drawingSpace.BackColor);
         }
 
 
@@ -197,7 +198,8 @@ namespace Age_Of_Villagers
             return nation;
 
         }
-  
+
+      
 
         private void drawHouse(int X,int Y)
         {

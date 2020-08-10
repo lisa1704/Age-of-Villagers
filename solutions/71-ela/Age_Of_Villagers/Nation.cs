@@ -22,7 +22,7 @@ namespace Age_Of_Villagers
         public abstract void DrawTree(Graphics g,int x,int y);
        public abstract void DrawHouse(Graphics g,int x,int y);
        public abstract void DrawWaterSource(Graphics g);
-       public abstract void SetBackground(Graphics g);
+       public abstract Color SetBackground();
        public abstract void SetWaterSource();
        public abstract string getNationName();
 

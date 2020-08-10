@@ -66,9 +66,9 @@ namespace Age_Of_Villagers
             throw new NotImplementedException();
         }
 
-        public override void SetBackground(Graphics g)
+        public override Color SetBackground()
         {
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
 
         public override void SetWaterSource()

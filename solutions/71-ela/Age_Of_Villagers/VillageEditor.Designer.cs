@@ -183,7 +183,7 @@
             // 
             // drawingSpace
             // 
-            this.drawingSpace.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.drawingSpace.BackColor = System.Drawing.SystemColors.ControlDark;
             this.drawingSpace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.drawingSpace.Location = new System.Drawing.Point(11, 91);
             this.drawingSpace.MaximumSize = new System.Drawing.Size(600, 400);
@@ -191,7 +191,9 @@
             this.drawingSpace.Name = "drawingSpace";
             this.drawingSpace.Size = new System.Drawing.Size(600, 400);
             this.drawingSpace.TabIndex = 7;
+           
             this.drawingSpace.Click += new System.EventHandler(this.drawingSpace_Click);
+          
             this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
             this.drawingSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseDown);
             this.drawingSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseUp);
