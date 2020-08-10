@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="ArabBedouin.cs" />
+    <Compile Include="INation.cs" />
+    <Compile Include="InuitHunters.cs" />
+    <Compile Include="EgyptianKing.cs" />
+    <Compile Include="Village.cs" />
     <Compile Include="CreateNewVillage.cs">
       <SubType>Form</SubType>
     </Compile>
