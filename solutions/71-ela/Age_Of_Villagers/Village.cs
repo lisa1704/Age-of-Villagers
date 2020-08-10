@@ -11,8 +11,8 @@ namespace Age_Of_Villagers
 {
     class Village
     {
-        string villageName;
-        INations nation;
+        public string villageName;
+        public string nationName;
         public List<Point> housePosition;
         public List<Point> treePosition;
         public Village()
@@ -25,6 +25,7 @@ namespace Age_Of_Villagers
         public string VillageName { get => villageName; set => villageName = value; }
 
        
-        internal INations Nation { get => nation; set => nation = value; }
+       
+        public string NationName { get => nationName; set => nationName = value; }
     }
 }

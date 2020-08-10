@@ -17,7 +17,7 @@ namespace Age_Of_Villagers
 
         int x, y, h, w;
 
-        INations nation;
+        Nation nation;
         Village openVillage;
         Village village;
         Pen p;
@@ -51,62 +51,18 @@ namespace Age_Of_Villagers
 
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (selectNation.Text == "Arab Bedouin")
-            {
-                nation = new ArabBeduin();
-                g.Clear(Color.White);
+
+            nation = NationFactory(selectNation.Text);
+            g.Clear(Color.White);
+            OpenVillage(village,nation);
+         
+               
 
 
-                foreach (Point p in village.housePosition)
-                {
-                    nation.DrawHouse(g, p.x, p.y);
-                }
-                foreach (Point p in openVillage.treePosition)
-                {
-                    nation.DrawTree(g, p.x, p.y);
-                }
+    
 
-
-
-
-
-            }
-            else if (selectNation.Text == "Bangladeshi Farmers")
-            {
-                nation = new BangladeshiFarmers();
-                g.Clear(Color.White);
-
-
-                foreach (Point p in village.housePosition)
-                {
-                    nation.DrawHouse(g, p.x, p.y);
-                }
-                foreach (Point p in openVillage.treePosition)
-                {
-                    nation.DrawTree(g, p.x, p.y);
-                }
-
-
-            }
-
-            else if (selectNation.Text == "Egyptian Kings")
-            {
-                nation = new BangladeshiFarmers();
-
-            }
-            else if (selectNation.Text == "Inuit Hunters")
-            {
-                nation = new BangladeshiFarmers();
-
-            }
-
-            else
-            {
-
-            }
-
-
-        }
+}
+        
 
 
 
@@ -144,6 +100,7 @@ namespace Age_Of_Villagers
         public void buttonSaveVillage_Click(object sender, EventArgs e)
         {
             village.VillageName = villageNameEditor.Text;
+            village.NationName = selectNation.Text;
 
 
             var jsonVillage = JsonConvert.SerializeObject(village);
@@ -175,6 +132,8 @@ namespace Age_Of_Villagers
             {
                 var filePath = openFileDialog1.FileName;
                 openVillage = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+                OpenVillage(openVillage, NationFactory(openVillage.nationName));
+
 
 
 
@@ -184,20 +143,58 @@ namespace Age_Of_Villagers
 
         }
 
-        private void OpenVillage(INations nation)
+        private void OpenVillage(Village village,Nation nation )
         {
+
             g.Clear(Color.White);
 
-            foreach (Point p in openVillage.housePosition)
+  
+
+            foreach (Point p in village.housePosition)
             {
                 nation.DrawHouse(g, p.x, p.y);
             }
-            foreach (Point p in openVillage.treePosition)
+            foreach (Point p in village.treePosition)
             {
                 nation.DrawTree(g, p.x, p.y);
             }
 
 
+
+        }
+
+        private Nation NationFactory(string nationName)
+        {
+            Nation nation = null;
+
+            if (nationName == "Arab Bedouin")
+            {
+                nation = new ArabBeduin();
+
+            }
+            else if (nationName == "Bangladeshi Farmers")
+            {
+                nation = new BangladeshiFarmers();
+
+            }
+
+            else if (nationName == "Egyptian Kings")
+            {
+                nation = new BangladeshiFarmers();
+
+            }
+            else if (nationName == "Inuit Hunters")
+            {
+                nation = new BangladeshiFarmers();
+
+            }
+
+            else
+            {
+
+            }
+
+            return nation;
 
         }
   

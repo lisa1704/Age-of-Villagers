@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Age_Of_Villagers
 {
-    public class BangladeshiFarmers : INations
+    public class BangladeshiFarmers : Nation
     {
 
 
@@ -11,10 +11,7 @@ namespace Age_Of_Villagers
         
         IShapes rectangle;
  
-        public  int house_width = 50;
-        public  int house_height = 50;
-        private  int tree_width = 16;
-        private int tree_height = 24;
+       
 
 
 
@@ -25,7 +22,7 @@ namespace Age_Of_Villagers
            
         }
 
-        public  void DrawHouse(Graphics g,int x,int y)
+        public override void DrawHouse(Graphics g,int x,int y)
         {
             triangle.Draw(g, x,y,house_height/2,house_width,0);
             rectangle.Draw(g, x, y+ house_height / 2, house_height / 2, house_width ,0);
@@ -35,27 +32,27 @@ namespace Age_Of_Villagers
 
        
 
-        public void DrawTree(Graphics g, int x, int y)
+        public override void DrawTree(Graphics g, int x, int y)
         {
             throw new NotImplementedException();
         }
 
-        public  void DrawWaterSource(Graphics g)
+        public override void DrawWaterSource(Graphics g)
         {
             throw new NotImplementedException();
         }
 
-        public  void SetBackground(Graphics g)
+        public override void SetBackground(Graphics g)
         {
             throw new NotImplementedException();
         }
 
-        public  void SetWaterSource()
+        public override void SetWaterSource()
         {
             throw new NotImplementedException();
         }
 
-        public string getNationName()
+        public override string getNationName()
         {
             return "Bangladeshi Farmers";
         }
