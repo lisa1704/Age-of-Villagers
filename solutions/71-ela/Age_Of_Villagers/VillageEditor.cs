@@ -28,6 +28,7 @@ namespace Age_Of_Villagers
             p = new Pen(Color.Black);
             village = new Village();
             openVillage = new Village();
+          
 
         }
 
@@ -53,16 +54,19 @@ namespace Age_Of_Villagers
         {
 
             nation = NationFactory(selectNation.Text);
-            drawingSpace.BackColor = nation.SetBackground();
-            g.Clear(drawingSpace.BackColor);
+            
+
+            g.Clear(nation.SetBackground());
+      
             OpenVillage(village,nation);
-         
-               
+           
 
 
-    
 
-}
+
+
+
+        }
         
 
 
@@ -147,7 +151,7 @@ namespace Age_Of_Villagers
         private void OpenVillage(Village village,Nation nation )
         {
 
-            g.Clear(Color.White);
+            g.Clear(nation.SetBackground());
 
   
 
