@@ -20,7 +20,8 @@ namespace AgeOfVillagers
 
         private void NewVillage_Load(object sender, EventArgs e)
         {
-
+            CreateNewVillage village = new CreateNewVillage();
+            village.InitializeComponent();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -35,7 +36,8 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            CreateNewVillage village = new CreateNewVillage();
+            village.InitializeComponent();
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
