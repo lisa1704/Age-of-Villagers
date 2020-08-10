@@ -68,7 +68,7 @@ namespace Age_Of_Villagers
 
         public override Color SetBackground()
         {
-            return Color.Yellow;
+            return Color.LightYellow;
         }
 
         public override void SetWaterSource()

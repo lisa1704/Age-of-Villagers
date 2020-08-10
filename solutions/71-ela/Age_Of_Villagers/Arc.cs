@@ -19,7 +19,7 @@ namespace Age_Of_Villagers
         public void Draw(Graphics g, int x, int y, int height, int width, int rotate)
         {
             
-            g.DrawArc(p, new RectangleF(new PointF(x,y),new SizeF(new PointF(width,height))),0,360);
+            g.DrawArc(p, new RectangleF(new PointF(x,y),new SizeF(new PointF(width,height))),0,rotate);
         }
 
         public Rectangle shape()

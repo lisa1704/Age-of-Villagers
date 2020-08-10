@@ -190,7 +190,7 @@ namespace Age_Of_Villagers
             }
             else if (nationName == "Inuit Hunters")
             {
-                nation = new BangladeshiFarmers();
+                nation = new InuitHunters();
 
             }
 
