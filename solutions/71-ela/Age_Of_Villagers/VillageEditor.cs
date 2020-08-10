@@ -14,10 +14,15 @@ namespace Age_Of_Villagers
     public partial class AgeOfVillagers : Form
     {
         Graphics g;
+
         int x, y, h, w;
         IShapes r = new Rectangle();
         INations nation;
+
+        Village openVillage;
         Village village;
+
+ 
 
 
         Pen p;
@@ -26,6 +31,9 @@ namespace Age_Of_Villagers
             InitializeComponent();
             g = drawingSpace.CreateGraphics();
             p = new Pen(Color.Black);
+            village = new Village();
+            openVillage= new Village();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -109,17 +117,21 @@ namespace Age_Of_Villagers
             g.Clear(Color.White);
         }
 
-        private void drawingSpace_Paint(object sender, PaintEventArgs e)
-        {
+    
 
-        }
-
-        private void buttonSaveVillage_Click(object sender, EventArgs e)
+        public void buttonSaveVillage_Click(object sender, EventArgs e)
         {
-            Village village = new Village { Nation = nation, VillageName = villageNameEditor.Text };
+            village.VillageName = villageNameEditor.Text;
+          
+            
             var jsonVillage = JsonConvert.SerializeObject(village);
 
             System.IO.File.WriteAllText(@"E:\path.json", jsonVillage);
+
+        }
+
+        private void buttonOpenVillage_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -140,18 +152,21 @@ namespace Age_Of_Villagers
 
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
+            
            
             int X = e.Location.X;
             int y = e.Location.Y;
             if(houseButton.Checked)
             {
                 nation.DrawHouse(g, X, y);
+                village.housePosition.Add(new Point(X, y));
 
             }
             else if (treeButton.Checked)
             {
              
                 nation.DrawTree(g, X, y);
+                village.treePosition.Add(new Point(X, y));
             }
          
 

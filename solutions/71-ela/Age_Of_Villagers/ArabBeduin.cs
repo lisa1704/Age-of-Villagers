@@ -13,7 +13,7 @@ namespace Age_Of_Villagers
 
         IShapes rectangle;
 
-
+        public String nationName;
         public  int house_width = 50;
         public  int house_height = 50;
         private  int tree_width = 16;
@@ -63,6 +63,11 @@ namespace Age_Of_Villagers
         public  void SetWaterSource()
         {
             throw new NotImplementedException();
+        }
+
+        public string getNationName()
+        {
+            return "Arab Beduin";
         }
     }
 }

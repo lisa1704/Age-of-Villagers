@@ -54,6 +54,7 @@
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="INations.cs" />
     <Compile Include="IShapes.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Village.cs" />

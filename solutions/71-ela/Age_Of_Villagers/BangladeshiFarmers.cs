@@ -3,14 +3,14 @@ using System.Drawing;
 
 namespace Age_Of_Villagers
 {
-    class BangladeshiFarmers : INations
+    public class BangladeshiFarmers : INations
     {
 
 
         IShapes triangle;
         
         IShapes rectangle;
-
+ 
         public  int house_width = 50;
         public  int house_height = 50;
         private  int tree_width = 16;
@@ -53,6 +53,11 @@ namespace Age_Of_Villagers
         public  void SetWaterSource()
         {
             throw new NotImplementedException();
+        }
+
+        public string getNationName()
+        {
+            return "Bangladeshi Farmers";
         }
     }
 }

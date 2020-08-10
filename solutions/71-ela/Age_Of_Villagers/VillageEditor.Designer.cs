@@ -141,6 +141,7 @@
             this.buttonOpenVillage.TabIndex = 15;
             this.buttonOpenVillage.Text = "Open Village";
             this.buttonOpenVillage.UseVisualStyleBackColor = false;
+            this.buttonOpenVillage.Click += new System.EventHandler(this.buttonOpenVillage_Click);
             // 
             // buttonNewVillage
             // 
@@ -191,7 +192,6 @@
             this.drawingSpace.Size = new System.Drawing.Size(600, 400);
             this.drawingSpace.TabIndex = 7;
             this.drawingSpace.Click += new System.EventHandler(this.drawingSpace_Click);
-            this.drawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingSpace_Paint);
             this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
             this.drawingSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseDown);
             this.drawingSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseUp);
