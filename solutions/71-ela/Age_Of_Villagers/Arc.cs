@@ -5,13 +5,21 @@ namespace Age_Of_Villagers
 {
     class Arc : IShapes
     {
+
+        Pen p;
+    
+        public Arc()
+        {
+            p = new Pen(Color.Black);
+        }
      
 
       
 
         public void Draw(Graphics g, int x, int y, int height, int width, int rotate)
         {
-            throw new NotImplementedException();
+            
+            g.DrawArc(p, new RectangleF(new PointF(x,y),new SizeF(new PointF(width,height))),0,360);
         }
 
         public Rectangle shape()

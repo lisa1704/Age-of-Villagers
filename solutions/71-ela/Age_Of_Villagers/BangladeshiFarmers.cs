@@ -10,6 +10,8 @@ namespace Age_Of_Villagers
         IShapes triangle;
         
         IShapes rectangle;
+
+        IShapes arc;
  
        
 
@@ -19,11 +21,14 @@ namespace Age_Of_Villagers
         {
             this.triangle = new Triangle();
             this.rectangle = new Rectangle();
+            this.arc = new Arc();
+
            
         }
 
         public override void DrawHouse(Graphics g,int x,int y)
         {
+
             triangle.Draw(g, x,y,house_height/2,house_width,0);
             rectangle.Draw(g, x, y+ house_height / 2, house_height / 2, house_width ,0);
 
@@ -34,7 +39,10 @@ namespace Age_Of_Villagers
 
         public override void DrawTree(Graphics g, int x, int y)
         {
-            throw new NotImplementedException();
+            arc.Draw(g, x, y, tree_height-4, tree_width,0);
+       
+            rectangle.Draw(g, x+(tree_width)-10, y+ (2)*tree_height-20,12 , tree_width/4, 0);
+            
         }
 
         public override void DrawWaterSource(Graphics g)
@@ -58,3 +66,4 @@ namespace Age_Of_Villagers
         }
     }
 }
+ 

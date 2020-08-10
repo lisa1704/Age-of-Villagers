@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="PoinTest.cs" />
     <Compile Include="SaveVillageTest.cs" />
+    <Compile Include="TestNation.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
