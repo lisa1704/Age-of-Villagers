@@ -13,11 +13,32 @@ namespace Age_Of_Villagers
     {
         string villageName;
         INations nation;
-        GraphicsState graphics;
+        public List<Point> housePosition;
+        public List<Point> treePosition;
+        public Village()
+        {
+            housePosition = new List<Point>();
+            treePosition = new List<Point>();
+        }
+
 
         public string VillageName { get => villageName; set => villageName = value; }
 
-        public GraphicsState Graphics { get => graphics; set => graphics = value; }
+       
         internal INations Nation { get => nation; set => nation = value; }
+    }
+
+    public class Point
+    {
+        public int x, y;
+
+        public Point(int x,int y)
+        {
+            this.x = x;
+            this.y = y;
+
+
+        }
+       
     }
 }
