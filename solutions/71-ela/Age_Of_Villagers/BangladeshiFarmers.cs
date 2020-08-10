@@ -47,7 +47,7 @@ namespace Age_Of_Villagers
             
         }
 
-        public override void DrawWaterSource(Graphics g)
+        public override void DrawWaterSource(Graphics g, int x, int y)
         {
             throw new NotImplementedException();
         }

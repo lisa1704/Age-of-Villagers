@@ -238,6 +238,11 @@ namespace Age_Of_Villagers
                 nation.DrawTree(g, X, y);
                 village.treePosition.Add(new Point(X, y));
             }
+            else if (waterSourceButton.Checked)
+            {
+                nation.DrawWaterSource(g, X, y);
+                
+            }
          
 
         }

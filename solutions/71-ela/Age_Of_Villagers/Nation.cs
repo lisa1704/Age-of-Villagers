@@ -24,7 +24,7 @@ namespace Age_Of_Villagers
         }
         public abstract void DrawTree(Graphics g,int x,int y);
        public abstract void DrawHouse(Graphics g,int x,int y);
-       public abstract void DrawWaterSource(Graphics g);
+       public abstract void DrawWaterSource(Graphics g,int x, int y);
        public abstract Color SetBackground();
         public abstract Size SetWaterSourceSize(int width, int height);
   

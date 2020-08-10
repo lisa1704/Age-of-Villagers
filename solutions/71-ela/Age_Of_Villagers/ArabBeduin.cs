@@ -48,9 +48,11 @@ namespace Age_Of_Villagers
             rectangle.Draw(g, x, y, tree_height/(2), tree_width /8 ,0);
         }
 
-        public override void DrawWaterSource(Graphics g)
+
+
+        public override void DrawWaterSource(Graphics g, int x, int y)
         {
-            
+            throw new NotImplementedException();
         }
 
         public override Color SetBackground()
