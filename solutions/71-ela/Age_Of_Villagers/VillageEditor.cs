@@ -38,16 +38,7 @@ namespace Age_Of_Villagers
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+     
 
 
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,13 +62,7 @@ namespace Age_Of_Villagers
 
 
 
-        private void treeButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-
-
-        }
+      
 
         private void drawingSpace_MouseDown(object sender, MouseEventArgs e)
         {
@@ -110,7 +95,33 @@ namespace Age_Of_Villagers
 
             var jsonVillage = JsonConvert.SerializeObject(village);
 
-            System.IO.File.WriteAllText(@"E:\path.json", jsonVillage);
+
+           SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                InitialDirectory = @"E:\",
+                Title = "Save a village (.json file)",
+
+               
+                CheckPathExists = true,
+
+                DefaultExt = "json",
+                Filter = "json files (*.json)|*.json",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+             
+            };
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = saveFileDialog1.FileName;
+                System.IO.File.WriteAllText(filePath, jsonVillage);
+
+
+
+
+            }
+
+           
 
         }
 
@@ -204,21 +215,6 @@ namespace Age_Of_Villagers
         }
 
       
-
-        private void drawHouse(int X,int Y)
-        {
-           
-            g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
-            g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
-            g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
-            g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
-            g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
-        }
-
-        private void drawingSpace_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {

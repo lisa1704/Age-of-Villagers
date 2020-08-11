@@ -74,7 +74,7 @@
             this.villageEditorPanel.Name = "villageEditorPanel";
             this.villageEditorPanel.Size = new System.Drawing.Size(299, 507);
             this.villageEditorPanel.TabIndex = 0;
-            this.villageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+        
             // 
             // waterSourceButton
             // 
@@ -111,7 +111,7 @@
             this.treeButton.TabStop = true;
             this.treeButton.Text = "Tree";
             this.treeButton.UseVisualStyleBackColor = true;
-            this.treeButton.CheckedChanged += new System.EventHandler(this.treeButton_CheckedChanged);
+          
             // 
             // selectNation
             // 
@@ -183,7 +183,7 @@
             // 
             // drawingSpace
             // 
-            this.drawingSpace.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.drawingSpace.BackColor = System.Drawing.Color.LavenderBlush;
             this.drawingSpace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.drawingSpace.Location = new System.Drawing.Point(11, 91);
             this.drawingSpace.MaximumSize = new System.Drawing.Size(600, 400);
@@ -192,8 +192,6 @@
             this.drawingSpace.Size = new System.Drawing.Size(600, 400);
             this.drawingSpace.TabIndex = 7;
            
-            this.drawingSpace.Click += new System.EventHandler(this.drawingSpace_Click);
-          
             this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
             this.drawingSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseDown);
             this.drawingSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseUp);
