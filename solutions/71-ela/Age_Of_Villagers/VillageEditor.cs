@@ -18,7 +18,7 @@ namespace Age_Of_Villagers
         int x, y, h, w;
 
         Nation drawingSpaceNation;
-        Village openVillage;
+    
         Village village;
         Pen p;
         public AgeOfVillagers()
@@ -29,7 +29,7 @@ namespace Age_Of_Villagers
             g = drawingSpace.CreateGraphics();
             p = new Pen(Color.Black);
             village = new Village();
-            openVillage = new Village();
+            
           
 
         }
@@ -49,18 +49,13 @@ namespace Age_Of_Villagers
             drawingSpaceNation = NationFactory(selectNation.Text);
 
             // clear the drawing space
-            if (drawingSpaceNation != null && village != null)
-            {
+         
                 g.Clear(drawingSpaceNation.SetBackground());
 
                 // open the village with selected nation
 
                 OpenVillage(village, drawingSpaceNation);
-            }
-           else
-            {
-
-            }
+         
 
 
 
@@ -111,7 +106,7 @@ namespace Age_Of_Villagers
         {
            //Get the village name from villageNameEditor
             village.VillageName = villageNameEditor.Text;
-            village.nationName = selectNation.Text;           
+           
             // connert the village object in Json 
             var jsonVillage = JsonConvert.SerializeObject(village);
 
@@ -172,11 +167,11 @@ namespace Age_Of_Villagers
                 var filePath = openFileDialog1.FileName;
 
                 // Convert the village.json file to village object
-                openVillage = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+                village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
 
                 // Open the uploaded village in the DrawingSpace 
 
-                OpenVillage(openVillage, NationFactory(openVillage.nationName));
+                OpenVillage(village, drawingSpaceNation);
 
 
 
@@ -190,24 +185,40 @@ namespace Age_Of_Villagers
         // Open a villege from village object and selected nation
         private void OpenVillage(Village village,Nation nation )
         {
-            drawingSpaceNation = nation;
-            g.Clear(nation.SetBackground());
+            try
+            {
+           
+                g.Clear(drawingSpaceNation.SetBackground());
+                
 
-  
-            // Draw village items from saved item position in the village object
 
-            foreach (Point p in village.housePosition)
-            {
-                drawingSpaceNation.DrawHouse(g, p.x, p.y);
+                // Draw village items from saved item position in the village object
+
+                foreach (Point p in village.housePosition)
+                {
+                    drawingSpaceNation.DrawHouse(g, p.x, p.y);
+                }
+                foreach (Point p in village.treePosition)
+                {
+                    drawingSpaceNation.DrawTree(g, p.x, p.y);
+                }
+                foreach (Point p in village.waterSoucePosition)
+                {
+                    drawingSpaceNation.DrawWaterSource(g, p.x, p.y);
+                }
             }
-            foreach (Point p in village.treePosition)
+            catch (Exception e)
             {
-                drawingSpaceNation.DrawTree(g, p.x, p.y);
+                string message = "Select Nation to Open The Village";
+                MessageBox.Show(message);
+
+
+               
+
+
             }
-            foreach (Point p in village.waterSoucePosition)
-            {
-                drawingSpaceNation.DrawWaterSource(g, p.x, p.y);
-            }
+           
+
 
 
 
