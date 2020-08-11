@@ -95,6 +95,8 @@ namespace Age_Of_Villagers
             treeButton.Checked = false;
             houseButton.Checked = false;
             waterSourceButton.Checked = false;
+            villageNameEditor.Text="Village name";
+          
 
             village = new Village();
             g.Clear(drawingSpace.BackColor);
@@ -170,6 +172,7 @@ namespace Age_Of_Villagers
                 village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
 
                 // Open the uploaded village in the DrawingSpace 
+                villageNameEditor.Text = village.villageName;
 
                 OpenVillage(village, drawingSpaceNation);
 
