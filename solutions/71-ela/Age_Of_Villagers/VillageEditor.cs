@@ -17,7 +17,7 @@ namespace Age_Of_Villagers
 
         int x, y, h, w;
 
-        Nation nation;
+        Nation drawingSpaceNation;
         Village openVillage;
         Village village;
         Pen p;
@@ -46,14 +46,14 @@ namespace Age_Of_Villagers
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
             // create nation based on selection
-            nation = NationFactory(selectNation.Text);
+            drawingSpaceNation = NationFactory(selectNation.Text);
              
             // clear the drawing space
-            g.Clear(nation.SetBackground());
+            g.Clear(drawingSpaceNation.SetBackground());
 
            // open the village with selected nation
 
-           OpenVillage(village,nation);
+           OpenVillage(village, drawingSpaceNation);
            
 
 
@@ -179,7 +179,7 @@ namespace Age_Of_Villagers
         // Open a villege from village object and selected nation
         private void OpenVillage(Village village,Nation nation )
         {
-
+            drawingSpaceNation = nation;
             g.Clear(nation.SetBackground());
 
   
@@ -187,15 +187,15 @@ namespace Age_Of_Villagers
 
             foreach (Point p in village.housePosition)
             {
-                nation.DrawHouse(g, p.x, p.y);
+                drawingSpaceNation.DrawHouse(g, p.x, p.y);
             }
             foreach (Point p in village.treePosition)
             {
-                nation.DrawTree(g, p.x, p.y);
+                drawingSpaceNation.DrawTree(g, p.x, p.y);
             }
             foreach (Point p in village.waterSoucePosition)
             {
-                nation.DrawWaterSource(g, p.x, p.y);
+                drawingSpaceNation.DrawWaterSource(g, p.x, p.y);
             }
 
 
@@ -251,7 +251,7 @@ namespace Age_Of_Villagers
             //draw house
             if(houseButton.Checked)
             {
-                nation.DrawHouse(g, X, y);
+                drawingSpaceNation.DrawHouse(g, X, y);
 
              // save the house postion in the village
 
@@ -261,15 +261,15 @@ namespace Age_Of_Villagers
             // draw tree 
             else if (treeButton.Checked)
             {
-             
-                nation.DrawTree(g, X, y);
+
+                drawingSpaceNation.DrawTree(g, X, y);
                 village.treePosition.Add(new Point(X, y));
             }
             //draw water source
 
             else if (waterSourceButton.Checked)
             {
-                nation.DrawWaterSource(g, X, y);
+                drawingSpaceNation.DrawWaterSource(g, X, y);
                 village.waterSoucePosition.Add(new Point(X, y));
 
             }
