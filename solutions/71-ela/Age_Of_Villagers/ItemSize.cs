@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class ItemSize
+    public class ItemSize
     {
-        int width, height;
+       public int width, height;
 
         public ItemSize(int width, int height)
         {

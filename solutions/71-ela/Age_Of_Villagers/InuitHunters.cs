@@ -17,6 +17,8 @@ namespace Age_Of_Villagers
         }
         public override void DrawHouse(Graphics g, int x, int y)
         {
+            int house_height = houseSize.height;
+            int house_width = houseSize.width;
             arc.Draw(g, x, y, house_height,house_width, -180);
             g.DrawLine(new Pen(Color.Black), x, y + house_height / 2, x + house_width, y + house_height / 2);
             arc.Draw(g, x+house_height/3, y+ house_height / 2- house_height / 8, house_height/4, house_width/4, -180);

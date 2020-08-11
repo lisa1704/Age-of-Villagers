@@ -8,18 +8,14 @@ namespace Age_Of_Villagers
 {
     public abstract class Nation
     {
-        public int house_width ;
-        public int house_height;
-        public int tree_width;
-        public  int tree_height;
+        public ItemSize houseSize, treeSize;
+       
         Pen pen;
 
         public Nation()
         {
-            this.house_width = 16;
-            this.house_height = 16;
-            this.tree_height = 24;
-            this.tree_width = 16;
+            this.houseSize = new ItemSize(16,16);
+            this.treeSize = new ItemSize(16,24);
             this.pen = new Pen(Color.Black);
         }
         public abstract void DrawTree(Graphics g,int x,int y);
