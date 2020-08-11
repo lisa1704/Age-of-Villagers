@@ -51,13 +51,14 @@ namespace Age_Of_Villagers
             int tree_height = treeSize.height;
             int tree_width = treeSize.width;
             g.DrawLine(p, x, y, x - tree_width/2, y - tree_height/2);
-            g.DrawLine(p, x - tree_width/2, y - tree_height/2, x - tree_width/2+ tree_width/4 , y - tree_height/2-tree_height-4);
-            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height);
-            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - 2 * tree_width, y - tree_height - tree_height / 4);
+            g.DrawLine(p, x - tree_width/2, y - tree_height/2, x - tree_width/2+ tree_width/4 , y - tree_height/2-tree_height/2);
+            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height/2);
+            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - (3/2)*tree_width ,   y - tree_height / 2 - tree_width / 4);
+
             g.DrawLine(p, x, y, x + tree_width/2, y - tree_height/2);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 + tree_width / 4, y - tree_height / 2 - tree_height - 4);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + 2 * tree_width, y - tree_height - tree_height / 4);
+            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 + tree_width / 4, y - tree_height / 2 - tree_height / 2);
+            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height / 2);
+            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + (3 / 2) * tree_width, y - tree_height / 2 - tree_width / 4);
 
 
 
