@@ -32,6 +32,7 @@
             this.pnlToolSide = new System.Windows.Forms.Panel();
             this.lblAgeOfVillagers = new System.Windows.Forms.Label();
             this.lblVillageName = new System.Windows.Forms.Label();
+            this.lblNationName = new System.Windows.Forms.Label();
             this.pnlDrawingSpace.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,11 +70,21 @@
             this.lblVillageName.TabIndex = 2;
             this.lblVillageName.Text = "VillageName";
             // 
+            // lblNationName
+            // 
+            this.lblNationName.AutoSize = true;
+            this.lblNationName.Location = new System.Drawing.Point(645, 75);
+            this.lblNationName.Name = "lblNationName";
+            this.lblNationName.Size = new System.Drawing.Size(94, 20);
+            this.lblNationName.TabIndex = 3;
+            this.lblNationName.Text = "NationName";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.lblNationName);
             this.Controls.Add(this.lblVillageName);
             this.Controls.Add(this.lblAgeOfVillagers);
             this.Controls.Add(this.pnlDrawingSpace);
@@ -91,6 +102,7 @@
         private System.Windows.Forms.Panel pnlToolSide;
         private System.Windows.Forms.Label lblAgeOfVillagers;
         private System.Windows.Forms.Label lblVillageName;
+        private System.Windows.Forms.Label lblNationName;
     }
 }
 
