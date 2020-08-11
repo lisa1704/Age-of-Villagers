@@ -14,8 +14,8 @@ namespace Age_Of_Villagers
 
 
         {
-         
-            Pen p = new Pen(Color.Green);
+
+            Pen p = new Pen(Color.Black);
             g.DrawLine(p, x , y ,x+width, y-rotate);
             g.DrawLine(p, x , y, x + (width / 2)-rotate, y - height-rotate);
             g.DrawLine(p, x + (width / 2) - rotate, y - height - rotate, x + width, y-rotate);

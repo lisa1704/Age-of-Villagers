@@ -15,13 +15,13 @@ namespace Age_Of_Villagers
 
 
 
-        Pen p;
+       
 
         public ArabBeduin()
         {
             this.triangle = new Triangle();
             this.rectangle = new Rectangle();
-            this.p = new Pen(Color.Green);
+            
 
         }
 
@@ -37,6 +37,7 @@ namespace Age_Of_Villagers
 
         public override void DrawTree(Graphics g, int x, int y)
         {
+            Pen p = new Pen(Color.Black);
 
             g.DrawLine(p, x + tree_width / 16, y- tree_height /2, x - tree_width / (3/2), y - tree_height );
             g.DrawLine(p, x + tree_width / 16, y - tree_height /  2, x + tree_width / (3 / 2), y - tree_height );
@@ -57,7 +58,7 @@ namespace Age_Of_Villagers
 
         public override Color SetBackground()
         {
-            return Color.Orange;
+            return Color.Yellow;
         }
 
         public override Size  SetWaterSourceSize(int width,int height)

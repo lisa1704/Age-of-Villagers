@@ -16,8 +16,8 @@ namespace Age_Of_Villagers
 
         public Nation()
         {
-            this.house_width = 100;
-            this.house_height = 100;
+            this.house_width = 16;
+            this.house_height = 16;
             this.tree_height = 24;
             this.tree_width = 16;
             this.pen = new Pen(Color.Black);
