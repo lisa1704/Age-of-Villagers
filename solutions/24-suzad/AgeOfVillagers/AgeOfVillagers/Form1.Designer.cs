@@ -28,31 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDrawingSpace = new System.Windows.Forms.Panel();
+            this.pnlToolSide = new System.Windows.Forms.Panel();
+            this.pnlDrawingSpace.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlDrawingSpace
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 0;
+            this.pnlDrawingSpace.Controls.Add(this.pnlToolSide);
+            this.pnlDrawingSpace.Location = new System.Drawing.Point(0, 0);
+            this.pnlDrawingSpace.Name = "pnlDrawingSpace";
+            this.pnlDrawingSpace.Size = new System.Drawing.Size(600, 400);
+            this.pnlDrawingSpace.TabIndex = 0;
+            // 
+            // pnlToolSide
+            // 
+            this.pnlToolSide.Location = new System.Drawing.Point(601, 0);
+            this.pnlToolSide.Name = "pnlToolSide";
+            this.pnlToolSide.Size = new System.Drawing.Size(195, 400);
+            this.pnlToolSide.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDrawingSpace);
             this.Name = "Form1";
             this.Text = "Age of Villagers";
+            this.pnlDrawingSpace.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDrawingSpace;
+        private System.Windows.Forms.Panel pnlToolSide;
     }
 }
 
