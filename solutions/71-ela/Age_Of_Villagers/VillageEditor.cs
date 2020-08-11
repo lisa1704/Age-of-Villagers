@@ -47,14 +47,20 @@ namespace Age_Of_Villagers
         {
             // create nation based on selection
             drawingSpaceNation = NationFactory(selectNation.Text);
-             
+
             // clear the drawing space
-            g.Clear(drawingSpaceNation.SetBackground());
+            if (drawingSpaceNation != null && village != null)
+            {
+                g.Clear(drawingSpaceNation.SetBackground());
 
-           // open the village with selected nation
+                // open the village with selected nation
 
-           OpenVillage(village, drawingSpaceNation);
-           
+                OpenVillage(village, drawingSpaceNation);
+            }
+           else
+            {
+
+            }
 
 
 
@@ -89,8 +95,13 @@ namespace Age_Of_Villagers
         // clear drawing space for creating new village
         private void buttonNewVillage_Click(object sender, EventArgs e)
         {
-            
+            drawingSpaceNation = null;
+            selectNation.Text="Select Nation";
+            treeButton.Checked = false;
+            houseButton.Checked = false;
+            waterSourceButton.Checked = false;
 
+            village = new Village();
             g.Clear(drawingSpace.BackColor);
         }
 
@@ -229,7 +240,7 @@ namespace Age_Of_Villagers
 
             }
 
-            else
+            else if (nationName == "Inuit Hunters")
             {
 
             }
@@ -249,28 +260,38 @@ namespace Age_Of_Villagers
             int y = e.Location.Y;
 
             //draw house
-            if(houseButton.Checked)
+            try
             {
-                drawingSpaceNation.DrawHouse(g, X, y);
+                if (houseButton.Checked)
+                {
+                    drawingSpaceNation.DrawHouse(g, X, y);
 
-             // save the house postion in the village
+                    // save the house postion in the village
 
-                village.housePosition.Add(new Point(X, y));
+                    village.housePosition.Add(new Point(X, y));
 
+                }
+                // draw tree 
+                else if (treeButton.Checked)
+                {
+
+
+                    drawingSpaceNation.DrawTree(g, X, y);
+                    village.treePosition.Add(new Point(X, y));
+                }
+                //draw water source
+
+                else if (waterSourceButton.Checked)
+                {
+                    drawingSpaceNation.DrawWaterSource(g, X, y);
+                    village.waterSoucePosition.Add(new Point(X, y));
+
+                }
             }
-            // draw tree 
-            else if (treeButton.Checked)
+            catch (Exception)
             {
-
-                drawingSpaceNation.DrawTree(g, X, y);
-                village.treePosition.Add(new Point(X, y));
-            }
-            //draw water source
-
-            else if (waterSourceButton.Checked)
-            {
-                drawingSpaceNation.DrawWaterSource(g, X, y);
-                village.waterSoucePosition.Add(new Point(X, y));
+                string message = "Select NAtion to Draw Items";
+                MessageBox.Show(message);
 
             }
          
