@@ -22,7 +22,9 @@ namespace Age_Of_Villagers
         Village village;
         Pen p;
         public AgeOfVillagers()
-        {
+        { 
+            // Initialize graphics, pen and village
+            
             InitializeComponent();
             g = drawingSpace.CreateGraphics();
             p = new Pen(Color.Black);
@@ -38,18 +40,20 @@ namespace Age_Of_Villagers
 
         }
 
-     
 
+        //  village looks different for different nations by selecting index
 
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // create nation based on selection
             nation = NationFactory(selectNation.Text);
-            
-
+             
+            // clear the drawing space
             g.Clear(nation.SetBackground());
-      
-            OpenVillage(village,nation);
+
+           // open the village with selected nation
+
+           OpenVillage(village,nation);
            
 
 
@@ -58,43 +62,49 @@ namespace Age_Of_Villagers
 
 
         }
-        
 
 
 
-      
 
+
+        //Adjust mouse position
         private void drawingSpace_MouseDown(object sender, MouseEventArgs e)
         {
+           
             x = e.X;
             y = e.Y;
 
         }
 
+        //Adjust mouse position
         private void drawingSpace_MouseUp(object sender, MouseEventArgs e)
         {
+           
+
             h = e.X - x;
             w = e.Y - y;
 
 
         }
-
+        // clear drawing space for creating new village
         private void buttonNewVillage_Click(object sender, EventArgs e)
         {
+            
 
             g.Clear(drawingSpace.BackColor);
         }
 
 
-
+        // save the village object 
         public void buttonSaveVillage_Click(object sender, EventArgs e)
         {
+           //Get the village name from villageNameEditor
             village.VillageName = villageNameEditor.Text;
-            village.NationName = selectNation.Text;
-
-
+            village.nationName = selectNation.Text;           
+            // connert the village object in Json 
             var jsonVillage = JsonConvert.SerializeObject(village);
 
+            // open savefileDialog to save the village in preferred location
 
            SaveFileDialog saveFileDialog1 = new SaveFileDialog
             {
@@ -112,7 +122,9 @@ namespace Age_Of_Villagers
             };
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
+            { 
+                //write the village.json in the selected location
+
                 var filePath = saveFileDialog1.FileName;
                 System.IO.File.WriteAllText(filePath, jsonVillage);
 
@@ -124,7 +136,7 @@ namespace Age_Of_Villagers
            
 
         }
-
+        //// open the village.json from the machine
         private void buttonOpenVillage_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog
@@ -147,7 +159,12 @@ namespace Age_Of_Villagers
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var filePath = openFileDialog1.FileName;
+
+                // Convert the village.json file to village object
                 openVillage = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+
+                // Open the uploaded village in the DrawingSpace 
+
                 OpenVillage(openVillage, NationFactory(openVillage.nationName));
 
 
@@ -159,12 +176,14 @@ namespace Age_Of_Villagers
 
         }
 
+        // Open a villege from village object and selected nation
         private void OpenVillage(Village village,Nation nation )
         {
 
             g.Clear(nation.SetBackground());
 
   
+            // Draw village items from saved item position in the village object
 
             foreach (Point p in village.housePosition)
             {
@@ -174,11 +193,16 @@ namespace Age_Of_Villagers
             {
                 nation.DrawTree(g, p.x, p.y);
             }
+            foreach (Point p in village.waterSoucePosition)
+            {
+                nation.DrawWaterSource(g, p.x, p.y);
+            }
 
 
 
         }
 
+        // Build Nation from selected nation name
         private Nation NationFactory(string nationName)
         {
             Nation nation = null;
@@ -215,25 +239,34 @@ namespace Age_Of_Villagers
         }
 
       
-
+        // draw items by clicking in the drawing space
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
             
-           
+           // mouse click location
+
             int X = e.Location.X;
             int y = e.Location.Y;
+
+            //draw house
             if(houseButton.Checked)
             {
                 nation.DrawHouse(g, X, y);
+
+             // save the house postion in the village
+
                 village.housePosition.Add(new Point(X, y));
 
             }
+            // draw tree 
             else if (treeButton.Checked)
             {
              
                 nation.DrawTree(g, X, y);
                 village.treePosition.Add(new Point(X, y));
             }
+            //draw water source
+
             else if (waterSourceButton.Checked)
             {
                 nation.DrawWaterSource(g, X, y);

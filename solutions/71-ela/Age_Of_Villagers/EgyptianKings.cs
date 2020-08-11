@@ -16,6 +16,7 @@ namespace Age_Of_Villagers
         IShapes rectangle;
 
         IShapes arc;
+        public ItemSize waterSource;
 
 
 
@@ -26,6 +27,7 @@ namespace Age_Of_Villagers
             this.triangle = new Triangle();
             this.rectangle = new Rectangle();
             this.arc = new Arc();
+            this.waterSource = new ItemSize(12, 12);
 
 
         }
@@ -68,7 +70,7 @@ namespace Age_Of_Villagers
 
         public override void DrawWaterSource(Graphics g,int x,int y)
         {
-            arc.Draw(g, x, y, 12, 12, 360);
+            arc.Draw(g, x, y, waterSource.width, waterSource.height, 360);
         }
 
         public override Color SetBackground()
@@ -78,14 +80,7 @@ namespace Age_Of_Villagers
 
    
 
-        public override Size SetWaterSourceSize(int width, int height)
-        {
-          Size size= new Size();
-            size.Width = 12;
-            size.Height = 12;
-                return size;
-
-        }
+       
     }
 }
     

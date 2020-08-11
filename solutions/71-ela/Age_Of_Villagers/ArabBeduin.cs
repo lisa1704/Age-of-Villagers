@@ -65,10 +65,7 @@ namespace Age_Of_Villagers
             return Color.LightYellow;
         }
 
-        public override Size  SetWaterSourceSize(int width,int height)
-        {
-            return new Size();
-        }
+       
 
       
     }
