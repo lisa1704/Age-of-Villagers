@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class InuitHunters : Nation
+    public class InuitHunters : Nation
     {
         IShapes arc;
         public InuitHunters()

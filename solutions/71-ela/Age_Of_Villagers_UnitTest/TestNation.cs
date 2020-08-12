@@ -5,52 +5,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Age_Of_Villagers.Tests
 {
     [TestClass()]
     public class TestNation
     {
+        List<Nation> nationList = new List<Nation> { new BangladeshiFarmers(), new ArabBeduin(), new EgyptianKings(), new InuitHunters() };
+        
+        
         [TestMethod()]
-        public void NationHouseSizeTest()
+        public void TreeSizeTest()
         {
-            Assert.Fail();
+           
+            ItemSize treeSize = new ItemSize(16, 24);
+            foreach(Nation n in nationList)
+            {
+                Assert.AreEqual(treeSize.width, n.treeSize.width);
+                Assert.AreEqual(treeSize.height, n.treeSize.height);
+
+            }
+             
         }
 
         [TestMethod()]
-        public void DrawTreeHouseSizeTest()
+        public void HouseSizeTest()
         {
-            Assert.Fail();
+
+            ItemSize houseSize = new ItemSize(16, 16);
+            foreach (Nation n in nationList)
+            {
+                Assert.AreEqual(houseSize.width, n.houseSize.width);
+                Assert.AreEqual(houseSize.height, n.houseSize.height);
+
+            }
+
         }
 
-        [TestMethod()]
-        public void DrawHouseHouseSizeTest()
-        {
-            Assert.Fail();
-        }
 
-        [TestMethod()]
-        public void DrawWaterSourceHouseSizeTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SetBackgroundHouseSizeTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void SetWaterSourceHouseSizeTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void getNationNameHouseSizeTest()
-        {
-            Assert.Fail();
-        }
     }
 }

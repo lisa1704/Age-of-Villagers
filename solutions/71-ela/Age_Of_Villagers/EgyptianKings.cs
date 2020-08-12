@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class EgyptianKings : Nation
+    public class EgyptianKings : Nation
     {
 
 
@@ -76,7 +76,7 @@ namespace Age_Of_Villagers
         public override Color SetBackground()
         {
             return Color.Yellow;
-        }
+        }            
 
    
 

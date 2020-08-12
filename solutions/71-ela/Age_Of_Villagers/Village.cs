@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Age_Of_Villagers
 {
-    class Village
+     public class Village
     {
         public string villageName;
      

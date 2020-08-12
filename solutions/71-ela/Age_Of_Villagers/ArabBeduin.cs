@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class ArabBeduin : Nation
+    public class ArabBeduin : Nation
     {
         IShapes triangle;
 
