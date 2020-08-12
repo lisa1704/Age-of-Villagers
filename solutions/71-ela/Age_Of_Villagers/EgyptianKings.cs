@@ -11,11 +11,11 @@ namespace Age_Of_Villagers
     {
 
 
-        IShapes triangle;
+        IShapes1 triangle;
 
-        IShapes rectangle;
+        IShapes1 rectangle;
 
-        IShapes arc;
+        IShapes1 arc;
         public ItemSize waterSource;
 
 
@@ -34,13 +34,12 @@ namespace Age_Of_Villagers
 
         public override void DrawHouse(Graphics g, int x, int y)
         {
-            int house_height = houseSize.height;
-            int house_width = houseSize.width;
+           
+            EgyptianKingsHouse house = new EgyptianKingsHouse(new Point(x,y),new Point(x-6,y+10),new Point(x,y+16),new Point(x+10,y+10));
+            house.Draw(g);
 
-            triangle.Draw(g, x, y, house_height, (house_width/2), 0);
+
             
-            triangle.Draw(g, x+ (house_width / 2), y, (house_height)- house_width / 2, house_width / 2, house_width/2);
-
 
 
         }

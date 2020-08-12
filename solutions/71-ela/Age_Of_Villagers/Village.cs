@@ -13,13 +13,13 @@ namespace Age_Of_Villagers
     {
         public string villageName;
      
-        public List<Point> housePosition,waterSoucePosition;
-        public List<Point> treePosition;
+        public List<Location> housePosition,waterSoucePosition;
+        public List<Location> treePosition;
         public Village()
         {
-            housePosition = new List<Point>();
-            treePosition = new List<Point>();
-            waterSoucePosition = new List<Point>();
+            housePosition = new List<Location>();
+            treePosition = new List<Location>();
+            waterSoucePosition = new List<Location>();
         }
 
 

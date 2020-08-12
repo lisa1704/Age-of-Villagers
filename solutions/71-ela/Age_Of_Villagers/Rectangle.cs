@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Age_Of_Villagers
 {
-    class Rectangle : IShapes
+    class Rectangle : IShapes1
     {
 
         public void Draw(Graphics g, int x, int y,  int height, int width, int rotate)

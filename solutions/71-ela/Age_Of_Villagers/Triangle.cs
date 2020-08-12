@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Age_Of_Villagers
 {
-    class Triangle : IShapes
+    class Triangle : IShapes1
     {
         public void Draw()
         {

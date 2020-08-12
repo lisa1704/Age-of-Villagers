@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Age_Of_Villagers
 {
-    class Arc : IShapes
+    class Arc : IShapes1
     {
 
      

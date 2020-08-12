@@ -14,6 +14,7 @@ namespace Age_Of_Villagers
     public partial class AgeOfVillagers : Form
     {
         Graphics g;
+        
 
         int x, y, h, w;
 
@@ -36,6 +37,7 @@ namespace Age_Of_Villagers
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
 
 
         }
@@ -197,15 +199,15 @@ namespace Age_Of_Villagers
 
                 // Draw village items from saved item position in the village object
 
-                foreach (Point p in village.housePosition)
+                foreach (Location p in village.housePosition)
                 {
                     drawingSpaceNation.DrawHouse(g, p.x, p.y);
                 }
-                foreach (Point p in village.treePosition)
+                foreach (Location p in village.treePosition)
                 {
                     drawingSpaceNation.DrawTree(g, p.x, p.y);
                 }
-                foreach (Point p in village.waterSoucePosition)
+                foreach (Location p in village.waterSoucePosition)
                 {
                     drawingSpaceNation.DrawWaterSource(g, p.x, p.y);
                 }
@@ -282,7 +284,7 @@ namespace Age_Of_Villagers
 
                     // save the house postion in the village
 
-                    village.housePosition.Add(new Point(X, y));
+                    village.housePosition.Add(new Location(X, y));
 
                 }
                 // draw tree 
@@ -291,14 +293,14 @@ namespace Age_Of_Villagers
 
 
                     drawingSpaceNation.DrawTree(g, X, y);
-                    village.treePosition.Add(new Point(X, y));
+                    village.treePosition.Add(new Location(X, y));
                 }
                 //draw water source
 
                 else if (waterSourceButton.Checked)
                 {
                     drawingSpaceNation.DrawWaterSource(g, X, y);
-                    village.waterSoucePosition.Add(new Point(X, y));
+                    village.waterSoucePosition.Add(new Location(X, y));
 
                 }
             }

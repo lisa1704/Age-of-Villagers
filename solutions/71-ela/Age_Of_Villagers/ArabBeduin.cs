@@ -9,9 +9,9 @@ namespace Age_Of_Villagers
 {
     public class ArabBeduin : Nation
     {
-        IShapes triangle;
+        IShapes1 triangle;
 
-        IShapes rectangle;
+        IShapes1 rectangle;
 
 
 

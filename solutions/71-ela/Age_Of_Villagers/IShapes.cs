@@ -6,9 +6,162 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    interface IShapes
+    public interface IShapes
     {
-        void Draw(Graphics g,int x, int y,int height,int width, int rotate);
-        Rectangle shape();
+        void Draw(Graphics g);
+        Rectangle1 GetBBox();
     }
+
+    public class Line : IShapes
+    {
+        Point point1, point2;
+
+        public Line(Point point1, Point point2)
+        {
+            this.point1 = point1;
+            this.point2 = point2;
+        }
+
+        public void Draw(Graphics g)
+        {
+            Pen pen = new Pen(Color.Black);
+            g.DrawLine(pen, point1, point2);
+        }
+
+       
+
+        public Rectangle1 GetBBox()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+    public class Rectangle1 : CompositeShape
+    {
+
+        
+      
+                                                                 
+
+        public Rectangle1(Point topLeft,Point bottomRight)
+        {
+            var topright = new Point(bottomRight.X, topLeft.Y);
+            var bottomLeft = new Point(topLeft.X, bottomRight.Y);
+
+
+            AddComponent(new Line(topLeft,topright));
+            AddComponent(new Line(topLeft,bottomLeft));
+            AddComponent(new Line(bottomLeft,bottomRight));
+            AddComponent(new Line(bottomRight,topright));
+
+        }
+
+        
+    }
+
+    public class Triangle1 : CompositeShape
+    {
+ 
+
+
+        public Triangle1(Point top, Point baseLeft,Point baseRight)
+        {
+           
+
+
+
+            AddComponent(new Line(top, baseRight));
+            AddComponent(new Line(top, baseLeft));
+            AddComponent(new Line(baseRight, baseLeft));
+        
+
+        }
+
+
+    }
+
+    public class BangladeshiFarmersHouse : CompositeShape
+    {
+
+
+
+        public BangladeshiFarmersHouse(Point top, Point baseTopLeft, Point baseBottomRight)
+        {
+
+            var baseTopRight = new Point(baseBottomRight.X,baseTopLeft.Y);
+            AddComponent(new Triangle1(top, baseTopLeft, baseTopRight));
+            AddComponent(new Rectangle1(baseTopLeft, baseBottomRight));
+       
+
+        }
+
+    }
+
+    public class BangladeshiFarmersTree : CompositeShape
+    {
+
+
+
+        public BangladeshiFarmersTree(Point top, Point baseTopLeft, Point baseBottomRight)
+        {
+
+            var baseTopRight = new Point(baseBottomRight.X, baseTopLeft.Y);
+        
+            AddComponent(new Rectangle1(baseTopLeft, baseBottomRight));
+
+
+        }
+
+    }
+    public class EgyptianKingsHouse: CompositeShape
+    {
+
+
+
+        public EgyptianKingsHouse(Point top,Point bottomleft, Point bottomMid, Point bottomRight)
+        {
+
+           
+
+            AddComponent(new Triangle1(top,bottomleft,bottomMid ));
+            AddComponent(new Triangle1(top, bottomRight, bottomMid));
+
+
+        }
+
+    }
+
+    public abstract class CompositeShape : IShapes
+    {
+        private List<IShapes> components;
+
+        protected CompositeShape()
+        {
+            components = new List<IShapes>();
+
+        }
+
+        protected void AddComponent( IShapes shape)
+        {
+            components.Add(shape);
+
+        }
+        public void Draw(Graphics g)
+        {
+            foreach (var c in components)
+            {
+                c.Draw(g);
+
+            }
+        }
+
+        public Rectangle1 GetBBox()
+        {
+            throw new System.NotImplementedException();
+        }
+
+       
+    }
+
+
+
 }

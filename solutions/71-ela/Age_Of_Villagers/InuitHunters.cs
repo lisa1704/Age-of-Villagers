@@ -9,7 +9,7 @@ namespace Age_Of_Villagers
 {
     public class InuitHunters : Nation
     {
-        IShapes arc;
+        IShapes1 arc;
         public InuitHunters()
         {
             this.arc = new Arc();

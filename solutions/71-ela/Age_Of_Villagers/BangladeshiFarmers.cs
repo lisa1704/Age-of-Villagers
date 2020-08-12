@@ -1,38 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace Age_Of_Villagers
 {
     public class BangladeshiFarmers : Nation
     {
-
-
-        IShapes triangle;
-        
-        IShapes rectangle;
-
-        IShapes arc;
- 
+        House house;
+        IShapes1 arc, rectangle;
        
-
-
-
-        public BangladeshiFarmers()
+  public BangladeshiFarmers()
         {
-            this.triangle = new Triangle();
-            this.rectangle = new Rectangle();
-            this.arc = new Arc();
+           
+           
 
            
         }
 
         public override void DrawHouse(Graphics g,int x,int y)
         {
-            int house_height = houseSize.height;
-            int house_width = houseSize.width;
 
-            triangle.Draw(g, x,y,house_height/2,house_width,0);
-            rectangle.Draw(g, x, y+ house_height / 2, house_height / 2, house_width ,0);
+            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(new Point (x,y),new Point(x-8,y+8),new Point(x+8,y+16));
+
+            house.Draw(g);
 
             
         }
