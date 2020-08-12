@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -10,12 +9,19 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class Form1 : Form
+    public partial class VillageForm : Form
     {
-        public Form1()
+        private Panel drawingPanel;
+        private Panel toolsPanel;
+        public VillageForm()
         {
             InitializeComponent();
         }
 
+    }
+
+    private void InitializeComponent ()
+    {
+        
     }
 }
