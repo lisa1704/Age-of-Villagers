@@ -42,16 +42,16 @@ namespace Age_Of_Villagers
       
                                                                  
 
-        public Rectangle1(Point topLeft,Point bottomRight)
+        public Rectangle1(Point topLeft,Point topRight, Point bottomLeft, Point bottomRight)
         {
-            var topright = new Point(bottomRight.X, topLeft.Y);
-            var bottomLeft = new Point(topLeft.X, bottomRight.Y);
+           
 
 
-            AddComponent(new Line(topLeft,topright));
+          
+            AddComponent(new Line(topLeft,topRight));
             AddComponent(new Line(topLeft,bottomLeft));
             AddComponent(new Line(bottomLeft,bottomRight));
-            AddComponent(new Line(bottomRight,topright));
+            AddComponent(new Line(bottomRight,topRight));
 
         }
 
@@ -88,8 +88,9 @@ namespace Age_Of_Villagers
         {
 
             var baseTopRight = new Point(baseBottomRight.X,baseTopLeft.Y);
+            var baseBottomLeft = new Point(baseTopLeft.X, baseBottomRight.Y);
             AddComponent(new Triangle1(top, baseTopLeft, baseTopRight));
-            AddComponent(new Rectangle1(baseTopLeft, baseBottomRight));
+            AddComponent(new Rectangle1(baseTopLeft,baseTopRight,baseBottomLeft, baseBottomRight));
        
 
         }
@@ -106,7 +107,7 @@ namespace Age_Of_Villagers
 
             var baseTopRight = new Point(baseBottomRight.X, baseTopLeft.Y);
         
-            AddComponent(new Rectangle1(baseTopLeft, baseBottomRight));
+           
 
 
         }
@@ -130,6 +131,23 @@ namespace Age_Of_Villagers
 
     }
 
+    public class ArabBeduinHouse : CompositeShape
+    {
+
+
+
+        public ArabBeduinHouse(Point topLeft, Point bottomleft, Point bottomMid, Point bottomRight,Point topRight)
+        {
+
+
+
+            AddComponent(new Triangle1(topLeft, bottomleft, bottomMid));
+            AddComponent(new Rectangle1(topLeft,topRight,bottomMid, bottomRight));
+
+
+        }
+
+    }
     public abstract class CompositeShape : IShapes
     {
         private List<IShapes> components;

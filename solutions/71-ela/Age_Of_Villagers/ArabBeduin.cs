@@ -27,12 +27,8 @@ namespace Age_Of_Villagers
 
         public override void DrawHouse(Graphics g, int x, int y)
         {
-            int house_height = houseSize.height;
-            int house_width = houseSize.width;
-            triangle.Draw(g, x, y, house_height / 2, house_width / 2,0);
-            
-
-            rectangle.Draw(g, x+ house_height / 2, y, house_height / 2, house_width / 2, house_width/4);
+            ArabBeduinHouse house = new ArabBeduinHouse(new Point(x, y), new Point(x - 6, y + 10), new Point(x, y + 14), new Point(x + 8, y + 10),new Point(x+8,y-2));
+            house.Draw(g);
 
 
         }
