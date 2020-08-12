@@ -85,9 +85,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(41, 101);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 21);
+            this.checkBox1.Size = new System.Drawing.Size(74, 24);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "House";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -95,9 +96,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.Location = new System.Drawing.Point(41, 129);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(60, 21);
+            this.checkBox2.Size = new System.Drawing.Size(60, 24);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Tree";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -105,9 +107,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.Location = new System.Drawing.Point(41, 157);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(117, 21);
+            this.checkBox3.Size = new System.Drawing.Size(121, 24);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Water Source";
             this.checkBox3.UseVisualStyleBackColor = true;
