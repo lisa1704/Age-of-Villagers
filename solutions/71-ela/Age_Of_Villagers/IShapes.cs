@@ -58,6 +58,37 @@ namespace Age_Of_Villagers
         
     }
 
+    public class Arc1 : IShapes
+    {
+        public int x ,y, width, height, startAngle, sweepAngle;
+
+
+
+
+        public Arc1(int x, int y, int width,int height,int startAngle,int sweepAngle)
+        {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.startAngle = startAngle;
+            this.sweepAngle = sweepAngle;
+
+        }
+
+        public void Draw(Graphics g)
+        {
+            Pen pen = new Pen(Color.Black);
+            g.DrawArc(pen, x, y, width, height, startAngle, sweepAngle);
+        }
+
+        public Rectangle1 GetBBox()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+
+
     public class Triangle1 : CompositeShape
     {
  
@@ -102,10 +133,15 @@ namespace Age_Of_Villagers
 
 
 
-        public BangladeshiFarmersTree(Point top, Point baseTopLeft, Point baseBottomRight)
+        public BangladeshiFarmersTree(Point top, Point baseTopLeft, Point baseBottomRight,int treeWidth,int treeHeight)
         {
 
             var baseTopRight = new Point(baseBottomRight.X, baseTopLeft.Y);
+            var baseBottomLeft = new Point(baseTopLeft.X, baseBottomRight.Y);
+            AddComponent(new Arc1(top.X,top.Y,treeWidth,16,0,360));
+            AddComponent(new Rectangle1(baseTopLeft, baseTopRight, baseBottomLeft, baseBottomRight));
+
+
         
            
 
@@ -131,6 +167,8 @@ namespace Age_Of_Villagers
 
     }
 
+
+
     public class ArabBeduinHouse : CompositeShape
     {
 
@@ -148,6 +186,24 @@ namespace Age_Of_Villagers
         }
 
     }
+    public class InuitHuntersHouse : CompositeShape
+    {
+
+
+
+        public InuitHuntersHouse(Point topLeft, Point bottomleft, Point bottomMid, Point bottomRight, Point topRight)
+        {
+
+
+
+            AddComponent(new Triangle1(topLeft, bottomleft, bottomMid));
+            AddComponent(new Rectangle1(topLeft, topRight, bottomMid, bottomRight));
+
+
+        }
+
+    }
+
     public abstract class CompositeShape : IShapes
     {
         private List<IShapes> components;

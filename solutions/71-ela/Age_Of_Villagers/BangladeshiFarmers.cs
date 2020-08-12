@@ -31,12 +31,8 @@ namespace Age_Of_Villagers
 
         public override void DrawTree(Graphics g, int x, int y)
         {
-            int tree_height = treeSize.height;
-            int tree_width =  treeSize.width;
-
-            arc.Draw(g, x, y, tree_height-4, tree_width,360);
-       
-            rectangle.Draw(g, x+(tree_width)-10, y+ (2)*tree_height-20,12 , tree_width/4, 0);
+            BangladeshiFarmersTree tree = new BangladeshiFarmersTree(new Point(x, y), new Point(x+6, y + 12), new Point(x + 10, y + 24), 16, 24);
+            tree.Draw(g);
             
             
         }
