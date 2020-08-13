@@ -48,18 +48,17 @@ namespace Age_Of_Villagers
 
         public override void DrawTree(Graphics g, int x, int y)
         {
-            Pen p = new Pen(Color.Black);
-            int tree_height = treeSize.height;
-            int tree_width = treeSize.width;
-            g.DrawLine(p, x, y, x - tree_width/2, y - tree_height/2);
-            g.DrawLine(p, x - tree_width/2, y - tree_height/2, x - tree_width/2+ tree_width/4 , y - tree_height/2-tree_height/2);
-            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height/2);
-            g.DrawLine(p, x - tree_width / 2, y - tree_height / 2, x - (3/2)*tree_width ,   y - tree_height / 2 - tree_width / 4);
+            
+           int tree_height = treeSize.height;
+           int tree_width = treeSize.width;
+           
 
-            g.DrawLine(p, x, y, x + tree_width/2, y - tree_height/2);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 + tree_width / 4, y - tree_height / 2 - tree_height / 2);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + tree_width / 2 - tree_width / 2, y - tree_height / 2 - tree_height / 2);
-            g.DrawLine(p, x + tree_width / 2, y - tree_height / 2, x + (3 / 2) * tree_width, y - tree_height / 2 - tree_width / 4);
+            Point midLeft = new Point(x - tree_width / 3, y+tree_height/2);
+            Point midRight = new Point(x + tree_width /3, y + tree_height/2);
+            Point bottom = new Point(x, y+tree_height);
+
+            EgyptianKingsTree tree = new EgyptianKingsTree(midLeft,midRight,bottom,tree_height/2,tree_width/2-tree_width/6);
+            tree.Draw(g);
 
 
 

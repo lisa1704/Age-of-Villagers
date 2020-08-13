@@ -167,6 +167,54 @@ namespace Age_Of_Villagers
 
     }
 
+    
+    public class EgyptianKingsTreePartSymmetric : CompositeShape
+    {
+
+
+
+        public EgyptianKingsTreePartSymmetric(Point bottom, Point mid, int leafHeight, int leafWidth)
+        {
+
+            var firstLeaf = new Point(mid.X - leafWidth, mid.Y - leafHeight);
+            var midLeaf = new Point(mid.X, mid.Y - leafHeight);
+            var lastLeaf = new Point(mid.X + leafWidth, mid.Y - leafHeight);
+
+
+
+            AddComponent(new Line(bottom, mid));
+            AddComponent(new Line(mid, firstLeaf));
+            AddComponent(new Line(mid, midLeaf));
+            AddComponent(new Line(mid, lastLeaf));
+
+
+
+
+        }
+
+    }
+    public class EgyptianKingsTree : CompositeShape
+    {
+
+
+
+        public EgyptianKingsTree(Point midLeft, Point midRight, Point bottom, int leafHeight, int leafWidth)
+        { 
+
+
+
+            AddComponent(new EgyptianKingsTreePartSymmetric(bottom,midRight,leafHeight,leafWidth));
+            AddComponent(new EgyptianKingsTreePartSymmetric(bottom, midLeft, leafHeight, leafWidth));
+        
+
+
+
+        }
+
+    }
+
+
+
 
 
     public class ArabBeduinHouse : CompositeShape
