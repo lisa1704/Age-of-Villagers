@@ -16,7 +16,7 @@ namespace Age_Of_Villagers
         Graphics g;
         
 
-        int x, y, h, w;
+        int x, y;
 
         Nation drawingSpaceNation;
     
@@ -52,7 +52,7 @@ namespace Age_Of_Villagers
 
             // clear the drawing space
          
-                g.Clear(drawingSpaceNation.SetBackground());
+               drawingSpaceNation.SetBackground(g);
 
                 // open the village with selected nation
 
@@ -70,25 +70,9 @@ namespace Age_Of_Villagers
 
 
 
-        //Adjust mouse position
-        private void drawingSpace_MouseDown(object sender, MouseEventArgs e)
-        {
-           
-            x = e.X;
-            y = e.Y;
+      
 
-        }
-
-        //Adjust mouse position
-        private void drawingSpace_MouseUp(object sender, MouseEventArgs e)
-        {
-           
-
-            h = e.X - x;
-            w = e.Y - y;
-
-
-        }
+    
         // clear drawing space for creating new village
         private void buttonNewVillage_Click(object sender, EventArgs e)
         {
@@ -193,23 +177,23 @@ namespace Age_Of_Villagers
             try
             {
            
-                g.Clear(drawingSpaceNation.SetBackground());
+                drawingSpaceNation.SetBackground(g);
                 
 
 
                 // Draw village items from saved item position in the village object
 
-                foreach (Location p in village.housePosition)
+                foreach (Point p in village.housePosition)
                 {
-                    drawingSpaceNation.DrawHouse(g, p.x, p.y);
+                    drawingSpaceNation.DrawHouse(g, p);
                 }
-                foreach (Location p in village.treePosition)
+                foreach (Point p in village.treePosition)
                 {
-                    drawingSpaceNation.DrawTree(g, p.x, p.y);
+                    drawingSpaceNation.DrawTree(g, p);
                 }
-                foreach (Location p in village.waterSoucePosition)
+                foreach (Point p in village.waterSoucePosition)
                 {
-                    drawingSpaceNation.DrawWaterSource(g, p.x, p.y);
+                    drawingSpaceNation.DrawWaterSource(g, p);
                 }
             }
             catch (Exception e)
@@ -274,18 +258,18 @@ namespace Age_Of_Villagers
 
        
 
-            Point Location = new Point(e.Location.X, e.Location.Y);
+            Point location = new Point(e.Location.X, e.Location.Y);
 
             //draw house
             try
             {
                 if (houseButton.Checked)
                 {
-                    drawingSpaceNation.DrawHouse(g, Location);
+                    drawingSpaceNation.DrawHouse(g, location);
 
                     // save the house postion in the village
 
-                    village.housePosition.Add(Location);
+                    village.housePosition.Add(location);
 
                 }
                 // draw tree 
@@ -293,15 +277,15 @@ namespace Age_Of_Villagers
                 {
 
 
-                    drawingSpaceNation.DrawTree(g, X, y);
-                    village.treePosition.Add(new Location(X, y));
+                    drawingSpaceNation.DrawTree(g,location);
+                    village.treePosition.Add(location);
                 }
                 //draw water source
 
                 else if (waterSourceButton.Checked)
                 {
-                    drawingSpaceNation.DrawWaterSource(g, X, y);
-                    village.waterSoucePosition.Add(new Location(X, y));
+                    drawingSpaceNation.DrawWaterSource(g, location);
+                    village.waterSoucePosition.Add(location);
 
                 }
             }

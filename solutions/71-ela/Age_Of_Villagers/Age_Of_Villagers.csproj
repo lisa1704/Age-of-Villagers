@@ -49,19 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArabBeduin.cs" />
-    <Compile Include="Arc.cs" />
-    <Compile Include="BangladeshiFarmers.cs" />
-    <Compile Include="EgyptianKings.cs" />
-    <Compile Include="House.cs" />
-    <Compile Include="InuitHunters.cs" />
-    <Compile Include="IShapes1.cs" />
+    <Compile Include="Items\ArabBeduinHouse.cs" />
+    <Compile Include="Items\ArabBeduinTree.cs" />
+    <Compile Include="Shapes\Arc.cs" />
+    <Compile Include="Items\BangladeshiFarmersHouse.cs" />
+    <Compile Include="Items\BangladeshiFarmersTree.cs" />
+    <Compile Include="Items\BangladeshiFarmersWaterSource.cs" />
+    <Compile Include="Shapes\CompositeShape.cs" />
+    <Compile Include="Items\EgyptianKingsHouse.cs" />
+    <Compile Include="Items\EgyptianKingsTree.cs" />
+    <Compile Include="Items\EgyptianKingsTreePartSymmetric.cs" />
+    <Compile Include="Items\EgyptianKingsWaterSource.cs" />
+    <Compile Include="Items\InuitHuntersHouse.cs" />
+    <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Nation\ArabBeduin.cs" />
+    <Compile Include="Nation\BangladeshiFarmers.cs" />
+    <Compile Include="Nation\EgyptianKings.cs" />
+    <Compile Include="Nation\InuitHunters.cs" />
     <Compile Include="ItemSize.cs" />
-    <Compile Include="Location.cs" />
-    <Compile Include="Nation.cs" />
-    <Compile Include="IShapes.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Triangle.cs" />
+    <Compile Include="Nation\Nation.cs" />
+    <Compile Include="Shapes\IShapes.cs" />
+    <Compile Include="Shapes\Rectangle.cs" />
+    <Compile Include="Shapes\Triangle.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageEditor.cs">
       <SubType>Form</SubType>
@@ -97,5 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

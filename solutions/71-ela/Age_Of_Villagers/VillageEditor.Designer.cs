@@ -193,8 +193,7 @@
             this.drawingSpace.TabIndex = 7;
            
             this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
-            this.drawingSpace.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseDown);
-            this.drawingSpace.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseUp);
+           
             // 
             // label1
             // 
