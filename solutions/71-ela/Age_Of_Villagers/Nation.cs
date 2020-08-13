@@ -18,10 +18,10 @@ namespace Age_Of_Villagers
             this.treeSize = new ItemSize(16,24);
             this.pen = new Pen(Color.Black);
         }
-        public abstract void DrawTree(Graphics g,int x,int y);
-       public abstract void DrawHouse(Graphics g,int x,int y);
-       public abstract void DrawWaterSource(Graphics g,int x, int y);
-       public abstract Color SetBackground();
+        public abstract void DrawTree(Graphics g,Point location);
+       public abstract void DrawHouse(Graphics g,Point location);
+       public abstract void DrawWaterSource(Graphics g,Point location);
+       public abstract void SetBackground(Graphics);
        
   
 

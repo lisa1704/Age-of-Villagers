@@ -11,22 +11,16 @@ namespace Age_Of_Villagers
     {
 
 
-        IShapes1 triangle;
-
-        IShapes1 rectangle;
-
-        IShapes1 arc;
+      
         public ItemSize waterSource;
-
+        Point p;
 
 
 
 
         public EgyptianKings()
         {
-            this.triangle = new Triangle();
-            this.rectangle = new Rectangle();
-            this.arc = new Arc();
+          
             this.waterSource = new ItemSize(12, 12);
 
 
@@ -68,7 +62,8 @@ namespace Age_Of_Villagers
 
         public override void DrawWaterSource(Graphics g,int x,int y)
         {
-            arc.Draw(g, x, y, waterSource.width, waterSource.height, 360);
+            Arc1 waterSource = new Arc1(x, y, waterSource.height,, waterSource.width, 0, 360);
+         
         }
 
         public override Color SetBackground()

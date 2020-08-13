@@ -6,7 +6,7 @@ namespace Age_Of_Villagers
 {
     public class BangladeshiFarmers : Nation
     {
-        House house;
+       
         IShapes1 arc, rectangle;
        
   public BangladeshiFarmers()
@@ -17,10 +17,10 @@ namespace Age_Of_Villagers
            
         }
 
-        public override void DrawHouse(Graphics g,int x,int y)
+        public override void DrawHouse(Graphics g, Point Location)
         {
 
-            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(new Point (x,y),new Point(x-8,y+8),new Point(x+8,y+16));
+            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(Location,houseSize);
 
             house.Draw(g);
 

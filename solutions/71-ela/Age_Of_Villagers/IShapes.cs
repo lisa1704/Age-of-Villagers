@@ -200,6 +200,7 @@ namespace Age_Of_Villagers
 
         public EgyptianKingsTree(Point midLeft, Point midRight, Point bottom, int leafHeight, int leafWidth)
         { 
+            
 
 
 

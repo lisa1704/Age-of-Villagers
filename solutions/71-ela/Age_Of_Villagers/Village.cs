@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing.Drawing2D;
+using System.Drawing;
 
 using System.Linq;
 using System.Text;
@@ -12,14 +12,15 @@ namespace Age_Of_Villagers
      public class Village
     {
         public string villageName;
+        
      
-        public List<Location> housePosition,waterSoucePosition;
-        public List<Location> treePosition;
+        public List<Point> housePosition,waterSoucePosition;
+        public List<Point> treePosition;
         public Village()
         {
-            housePosition = new List<Location>();
-            treePosition = new List<Location>();
-            waterSoucePosition = new List<Location>();
+            housePosition = new List<Point>();
+            treePosition = new List<Point>();
+            waterSoucePosition = new List<Point>();
         }
 
 

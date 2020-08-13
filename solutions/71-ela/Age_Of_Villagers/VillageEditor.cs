@@ -272,19 +272,20 @@ namespace Age_Of_Villagers
             
            // mouse click location
 
-            int X = e.Location.X;
-            int y = e.Location.Y;
+       
+
+            Point Location = new Point(e.Location.X, e.Location.Y);
 
             //draw house
             try
             {
                 if (houseButton.Checked)
                 {
-                    drawingSpaceNation.DrawHouse(g, X, y);
+                    drawingSpaceNation.DrawHouse(g, Location);
 
                     // save the house postion in the village
 
-                    village.housePosition.Add(new Location(X, y));
+                    village.housePosition.Add(Location);
 
                 }
                 // draw tree 
