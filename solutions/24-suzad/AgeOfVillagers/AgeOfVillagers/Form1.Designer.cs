@@ -36,6 +36,9 @@
             this.radiobtnTree = new System.Windows.Forms.RadioButton();
             this.radiobtnHouse = new System.Windows.Forms.RadioButton();
             this.radiobtnWaterSource = new System.Windows.Forms.RadioButton();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNewVillage = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlDrawingSpace.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,11 +118,41 @@
             this.radiobtnWaterSource.Text = "Water source";
             this.radiobtnWaterSource.UseVisualStyleBackColor = true;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(645, 273);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(109, 29);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnNewVillage
+            // 
+            this.btnNewVillage.Location = new System.Drawing.Point(645, 308);
+            this.btnNewVillage.Name = "btnNewVillage";
+            this.btnNewVillage.Size = new System.Drawing.Size(109, 29);
+            this.btnNewVillage.TabIndex = 2;
+            this.btnNewVillage.Text = "New village";
+            this.btnNewVillage.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(645, 343);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Open village";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNewVillage);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.radiobtnWaterSource);
             this.Controls.Add(this.radiobtnHouse);
             this.Controls.Add(this.radiobtnTree);
@@ -145,6 +178,9 @@
         private System.Windows.Forms.RadioButton radiobtnTree;
         private System.Windows.Forms.RadioButton radiobtnHouse;
         private System.Windows.Forms.RadioButton radiobtnWaterSource;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNewVillage;
+        private System.Windows.Forms.Button button1;
     }
 }
 
