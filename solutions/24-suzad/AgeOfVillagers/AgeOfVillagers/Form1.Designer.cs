@@ -33,6 +33,9 @@
             this.lblAgeOfVillagers = new System.Windows.Forms.Label();
             this.lblVillageName = new System.Windows.Forms.Label();
             this.lblNationName = new System.Windows.Forms.Label();
+            this.radiobtnTree = new System.Windows.Forms.RadioButton();
+            this.radiobtnHouse = new System.Windows.Forms.RadioButton();
+            this.radiobtnWaterSource = new System.Windows.Forms.RadioButton();
             this.pnlDrawingSpace.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,11 +82,47 @@
             this.lblNationName.TabIndex = 3;
             this.lblNationName.Text = "NationName";
             // 
+            // radiobtnTree
+            // 
+            this.radiobtnTree.AutoSize = true;
+            this.radiobtnTree.Location = new System.Drawing.Point(623, 138);
+            this.radiobtnTree.Name = "radiobtnTree";
+            this.radiobtnTree.Size = new System.Drawing.Size(58, 24);
+            this.radiobtnTree.TabIndex = 4;
+            this.radiobtnTree.TabStop = true;
+            this.radiobtnTree.Text = "Tree";
+            this.radiobtnTree.UseVisualStyleBackColor = true;
+            // 
+            // radiobtnHouse
+            // 
+            this.radiobtnHouse.AutoSize = true;
+            this.radiobtnHouse.Location = new System.Drawing.Point(623, 168);
+            this.radiobtnHouse.Name = "radiobtnHouse";
+            this.radiobtnHouse.Size = new System.Drawing.Size(72, 24);
+            this.radiobtnHouse.TabIndex = 5;
+            this.radiobtnHouse.TabStop = true;
+            this.radiobtnHouse.Text = "House";
+            this.radiobtnHouse.UseVisualStyleBackColor = true;
+            // 
+            // radiobtnWaterSource
+            // 
+            this.radiobtnWaterSource.AutoSize = true;
+            this.radiobtnWaterSource.Location = new System.Drawing.Point(623, 198);
+            this.radiobtnWaterSource.Name = "radiobtnWaterSource";
+            this.radiobtnWaterSource.Size = new System.Drawing.Size(116, 24);
+            this.radiobtnWaterSource.TabIndex = 6;
+            this.radiobtnWaterSource.TabStop = true;
+            this.radiobtnWaterSource.Text = "Water source";
+            this.radiobtnWaterSource.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.radiobtnWaterSource);
+            this.Controls.Add(this.radiobtnHouse);
+            this.Controls.Add(this.radiobtnTree);
             this.Controls.Add(this.lblNationName);
             this.Controls.Add(this.lblVillageName);
             this.Controls.Add(this.lblAgeOfVillagers);
@@ -103,6 +142,9 @@
         private System.Windows.Forms.Label lblAgeOfVillagers;
         private System.Windows.Forms.Label lblVillageName;
         private System.Windows.Forms.Label lblNationName;
+        private System.Windows.Forms.RadioButton radiobtnTree;
+        private System.Windows.Forms.RadioButton radiobtnHouse;
+        private System.Windows.Forms.RadioButton radiobtnWaterSource;
     }
 }
 
