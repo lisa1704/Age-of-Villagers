@@ -11,12 +11,7 @@ namespace Age_Of_Villagers
 
 
         {
-
-
-
-
-
-
+            AddComponent(new Arc(location.X, location.Y, waterSourceSize.width, waterSourceSize.height, 0, 360));
 
         }
 

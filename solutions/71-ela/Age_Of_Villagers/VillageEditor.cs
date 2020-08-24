@@ -8,27 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Newtonsoft.Json;
 namespace Age_Of_Villagers
 {
     public partial class AgeOfVillagers : Form
     {
         Graphics g;
-        
-
-        int x, y;
-
         Nation drawingSpaceNation;
-    
         Village village;
-        Pen p;
+        
+     
         public AgeOfVillagers()
         { 
             // Initialize graphics, pen and village
             
             InitializeComponent();
             g = drawingSpace.CreateGraphics();
-            p = new Pen(Color.Black);
+           
             village = new Village();
             
           
@@ -48,7 +45,8 @@ namespace Age_Of_Villagers
         private void selectNation_SelectedIndexChanged(object sender, EventArgs e)
         {
             // create nation based on selection
-            drawingSpaceNation = NationFactory(selectNation.Text);
+            NationFactory nationFactory = new NationFactory();
+            drawingSpaceNation = nationFactory.Build(selectNation.Text);
 
             // clear the drawing space
          
@@ -99,6 +97,7 @@ namespace Age_Of_Villagers
             var jsonVillage = JsonConvert.SerializeObject(village);
 
             // open savefileDialog to save the village in preferred location
+     
 
            SaveFileDialog saveFileDialog1 = new SaveFileDialog
             {
@@ -108,8 +107,8 @@ namespace Age_Of_Villagers
                
                 CheckPathExists = true,
 
-                DefaultExt = "json",
-                Filter = "json files (*.json)|*.json",
+                DefaultExt = "aov",
+                Filter = "aov files (*.aov)|*.aov",
                 FilterIndex = 2,
                 RestoreDirectory = true,
              
@@ -141,8 +140,8 @@ namespace Age_Of_Villagers
                 CheckFileExists = true,
                 CheckPathExists = true,
 
-                DefaultExt = "json",
-                Filter = "json files (*.json)|*.json",
+                DefaultExt = "aov",
+                Filter = "aov files (*.aov)|*.aov",
                 FilterIndex = 2,
                 RestoreDirectory = true,
 
@@ -178,23 +177,17 @@ namespace Age_Of_Villagers
             {
            
                 drawingSpaceNation.SetBackground(g);
-                
+
 
 
                 // Draw village items from saved item position in the village object
 
-                foreach (Point p in village.housePosition)
-                {
-                    drawingSpaceNation.DrawHouse(g, p);
-                }
-                foreach (Point p in village.treePosition)
-                {
-                    drawingSpaceNation.DrawTree(g, p);
-                }
-                foreach (Point p in village.waterSoucePosition)
-                {
-                    drawingSpaceNation.DrawWaterSource(g, p);
-                }
+           
+                village.housePosition.ForEach(house => drawingSpaceNation.DrawHouse(g, house));
+                village.treePosition.ForEach(tree => drawingSpaceNation.DrawTree(g, tree));
+                village.waterSoucePosition.ForEach(waterSource => drawingSpaceNation.DrawWaterSource(g, waterSource));
+
+               
             }
             catch (Exception e)
             {
@@ -214,40 +207,7 @@ namespace Age_Of_Villagers
         }
 
         // Build Nation from selected nation name
-        private Nation NationFactory(string nationName)
-        {
-            Nation nation = null;
-
-            if (nationName == "Arab Bedouin")
-            {
-                nation = new ArabBeduin();
-
-            }
-            else if (nationName == "Bangladeshi Farmers")
-            {
-                nation = new BangladeshiFarmers();
-
-            }
-
-            else if (nationName == "Egyptian Kings")
-            {
-                nation = new EgyptianKings();
-
-            }
-            else if (nationName == "Inuit Hunters")
-            {
-                nation = new InuitHunters();
-
-            }
-
-            else if (nationName == "Inuit Hunters")
-            {
-
-            }
-
-            return nation;
-
-        }
+        
 
       
         // draw items by clicking in the drawing space

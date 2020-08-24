@@ -7,13 +7,14 @@ namespace Age_Of_Villagers
 
 
 
-        public EgyptianKingsHouse(Point location, ItemSize waterSourceSize)
+        public EgyptianKingsHouse(Point location, ItemSize houseSize)
         {
-            var top = new Point();
-            var bottomleft = new Point();
-            var bottomMid = new Point();
-            var bottomRight = new Point();
-
+            var top = location;
+       
+            var bottomleft = new Point(location.X-houseSize.width/2,location.Y+(houseSize.height*3)/4);
+            var bottomMid = new Point(location.X,location.Y+houseSize.height);
+            var bottomRight = new Point(location.X+ (houseSize.height * 5) / houseSize.width, location.Y + (houseSize.height * 3) / 5 );
+          
 
 
             AddComponent(new Triangle(top,bottomleft,bottomMid ));

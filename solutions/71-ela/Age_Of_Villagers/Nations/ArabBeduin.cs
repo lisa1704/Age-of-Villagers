@@ -7,38 +7,36 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    public class InuitHunters : Nation
+    public class ArabBeduin : Nation
     {
-      
-        public InuitHunters()
-        {
-          
 
-        }
         public override void DrawHouse(Graphics g,Point location)
         {
-            InuitHuntersHouse house = new InuitHuntersHouse(location, houseSize);
+            ArabBeduinHouse house = new ArabBeduinHouse(location,houseSize);
             house.Draw(g);
+
+
         }
 
         public override void DrawTree(Graphics g, Point location)
         {
-            
+            ArabBeduinTree tree = new ArabBeduinTree(location, houseSize);
+            tree.Draw(g);
+
+
         }
 
-       
-       
 
-        public override void DrawWaterSource(Graphics g, Point location)
-        {
-            
-        }
+
+      
 
         public override void SetBackground(Graphics g)
         {
-            g.Clear(Color.White);
+            g.Clear(Color.LightYellow);
         }
 
        
+
+      
     }
 }

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Items\ArabBeduinHouse.cs" />
     <Compile Include="Items\ArabBeduinTree.cs" />
+    <Compile Include="Nations\NationFactory.cs" />
     <Compile Include="Shapes\Arc.cs" />
     <Compile Include="Items\BangladeshiFarmersHouse.cs" />
     <Compile Include="Items\BangladeshiFarmersTree.cs" />
@@ -62,12 +63,12 @@
     <Compile Include="Items\EgyptianKingsWaterSource.cs" />
     <Compile Include="Items\InuitHuntersHouse.cs" />
     <Compile Include="Shapes\Line.cs" />
-    <Compile Include="Nation\ArabBeduin.cs" />
-    <Compile Include="Nation\BangladeshiFarmers.cs" />
-    <Compile Include="Nation\EgyptianKings.cs" />
-    <Compile Include="Nation\InuitHunters.cs" />
+    <Compile Include="Nations\ArabBeduin.cs" />
+    <Compile Include="Nations\BangladeshiFarmers.cs" />
+    <Compile Include="Nations\EgyptianKings.cs" />
+    <Compile Include="Nations\InuitHunters.cs" />
     <Compile Include="ItemSize.cs" />
-    <Compile Include="Nation\Nation.cs" />
+    <Compile Include="Nations\Nation.cs" />
     <Compile Include="Shapes\IShapes.cs" />
     <Compile Include="Shapes\Rectangle.cs" />
     <Compile Include="Shapes\Triangle.cs" />

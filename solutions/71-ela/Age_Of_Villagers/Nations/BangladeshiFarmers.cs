@@ -6,10 +6,11 @@ namespace Age_Of_Villagers
 {
     public class BangladeshiFarmers : Nation
     {
+        ItemSize waterSourceSize;
        
   public BangladeshiFarmers()
         {
-           
+            this.waterSourceSize = new ItemSize(24, 16);
            
 
            
@@ -37,6 +38,8 @@ namespace Age_Of_Villagers
 
         public override void DrawWaterSource(Graphics g, Point location)
         {
+            BangladeshiFarmersWaterSource waterSource = new BangladeshiFarmersWaterSource(location, waterSourceSize);
+            waterSource.Draw(g);
           
         }
 

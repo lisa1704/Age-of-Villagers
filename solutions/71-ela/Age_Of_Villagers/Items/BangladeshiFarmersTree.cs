@@ -14,12 +14,12 @@ namespace Age_Of_Villagers
             var top = location;
            
 
-            var baseTopLeft = new Point(location.X,top.Y);
-            var baseBottomRight = new Point(treeSize.width/4, treeSize.height);
+            var baseTopLeft = new Point(top.X + treeSize.width / 2 - treeSize.width / 6, top.Y+ (treeSize.height / 2));
+            var baseBottomRight = new Point(top.X+ treeSize.width /2+treeSize.width/6,top.Y+treeSize.height);
             var baseTopRight = new Point(baseBottomRight.X, baseTopLeft.Y);
             var baseBottomLeft = new Point(baseTopLeft.X, baseBottomRight.Y);
 
-            AddComponent(new Arc(top.X,top.Y,treeSize.width,treeSize.height/(3*2),0,360));
+            AddComponent(new Arc(top.X,top.Y,treeSize.width,(treeSize.height*2)/3, 0,360));
             AddComponent(new Rectangle(baseTopLeft, baseTopRight, baseBottomLeft, baseBottomRight));
 
 

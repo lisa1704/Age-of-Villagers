@@ -18,10 +18,13 @@ namespace Age_Of_Villagers
             this.treeSize = new ItemSize(16,24);
 
         }
-        public abstract void DrawTree(Graphics g,Point location);
-       public abstract void DrawHouse(Graphics g,Point location);
-       public abstract void DrawWaterSource(Graphics g,Point location);
-       public abstract void SetBackground(Graphics g);
+
+        public abstract void DrawHouse(Graphics g, Point location);
+        public abstract void SetBackground(Graphics g);
+        public virtual void DrawTree(Graphics g, Point location) { }
+    
+        public virtual void DrawWaterSource(Graphics g, Point location) { }
+       
        
   
 

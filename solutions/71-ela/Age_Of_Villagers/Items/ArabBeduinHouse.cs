@@ -5,15 +5,15 @@ namespace Age_Of_Villagers
     public class ArabBeduinHouse : CompositeShape
     {
 
-
-
+        
         public ArabBeduinHouse(Point location, ItemSize houseSize)
         {
             var topLeft = location;
-            var topRight = new Point(); 
-            var bottomLeft= new Point(location.X - houseSize.width / 3,houseSize.width/3);
-            var bottomRight = new Point();
-            var bottomMid = new Point();
+            
+            var bottomLeft= new Point(location.X - houseSize.width /2- houseSize.width/6, location.Y+houseSize.height*2/3);
+            var bottomMid = new Point(location.X + houseSize.width / 2 + houseSize.width / 6, location.Y + houseSize.height * 2 / 3);
+            var bottomRight = new Point(location.X+ houseSize.width , bottomMid.Y-houseSize.width*3/8);
+            var topRight = new Point(location.X + houseSize.width / 2,location.Y-houseSize.height/4);
 
 
 
