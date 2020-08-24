@@ -714,17 +714,13 @@
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="mH2-O1-eD6">
                                         <rect key="frame" x="0.0" y="0.0" width="704" height="374"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-2V-Mbv">
-                                                <rect key="frame" x="262" y="189" width="105" height="16"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Village area here" id="M1p-Br-her">
-                                                    <font key="font" usesAppearanceFont="YES"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
+                                        <gestureRecognizers>
+                                            <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="U04-93-7iI">
+                                                <connections>
+                                                    <action selector="getPoint:" target="XfG-lQ-9wD" id="eQp-UG-2Hd"/>
+                                                </connections>
+                                            </clickGestureRecognizer>
+                                        </gestureRecognizers>
                                     </customView>
                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-BT-C1y">
                                         <rect key="frame" x="710" y="0.0" width="5" height="374"/>
@@ -804,6 +800,9 @@
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
+                                                                <connections>
+                                                                    <action selector="OnHouseClicked:" target="XfG-lQ-9wD" id="DgC-Ix-HDq"/>
+                                                                </connections>
                                                             </button>
                                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qyy-QY-qEY">
                                                                 <rect key="frame" x="-6" y="22" width="76" height="32"/>
@@ -811,6 +810,9 @@
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
+                                                                <connections>
+                                                                    <action selector="OnWaterClicked:" target="XfG-lQ-9wD" id="wf1-33-jyg"/>
+                                                                </connections>
                                                             </button>
                                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="186-a7-Wvo">
                                                                 <rect key="frame" x="-6" y="-7" width="67" height="32"/>
@@ -818,6 +820,9 @@
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
+                                                                <connections>
+                                                                    <action selector="OnTreeClicked:" target="XfG-lQ-9wD" id="r13-kf-Css"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <visibilityPriorities>
@@ -873,6 +878,9 @@
                                                         </customSpacing>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="163" id="kDV-dd-ZWh"/>
+                                                </constraints>
                                                 <visibilityPriorities>
                                                     <integer value="1000"/>
                                                     <integer value="1000"/>
@@ -927,10 +935,15 @@
                             <constraint firstItem="nSY-gB-ub0" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="geR-gZ-vs9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getPoint" destination="mH2-O1-eD6" id="BNo-7O-lZh"/>
+                        <outlet property="houseIn" destination="PCN-IB-58b" id="uxF-dJ-Wwd"/>
+                        <outlet property="villageArea" destination="mH2-O1-eD6" id="CHy-e9-MJ9"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="655"/>
+            <point key="canvasLocation" x="65" y="790"/>
         </scene>
     </scenes>
 </document>
