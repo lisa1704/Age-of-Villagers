@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95C0C28924F35E1600E44D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0C28824F35E1600E44D9A /* AppDelegate.swift */; };
+		95C0C28B24F35E1600E44D9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0C28A24F35E1600E44D9A /* ViewController.swift */; };
+		95C0C28E24F35E1600E44D9A /* AgeOfVillagers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C0C28C24F35E1600E44D9A /* AgeOfVillagers.xcdatamodeld */; };
+		95C0C29024F35E1700E44D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C0C28F24F35E1700E44D9A /* Assets.xcassets */; };
+		95C0C29324F35E1700E44D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C0C29124F35E1700E44D9A /* Main.storyboard */; };
+		95C0C29F24F35E1800E44D9A /* AgeOfVillagersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0C29E24F35E1800E44D9A /* AgeOfVillagersTests.swift */; };
+		95C0C2AA24F35E1800E44D9A /* AgeOfVillagersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0C2A924F35E1800E44D9A /* AgeOfVillagersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95C0C29B24F35E1800E44D9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C0C27D24F35E1600E44D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C0C28424F35E1600E44D9A;
+			remoteInfo = AgeOfVillagers;
+		};
+		95C0C2A624F35E1800E44D9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C0C27D24F35E1600E44D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C0C28424F35E1600E44D9A;
+			remoteInfo = AgeOfVillagers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95C0C28524F35E1600E44D9A /* AgeOfVillagers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeOfVillagers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C0C28824F35E1600E44D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95C0C28A24F35E1600E44D9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95C0C28D24F35E1600E44D9A /* AgeOfVillagers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AgeOfVillagers.xcdatamodel; sourceTree = "<group>"; };
+		95C0C28F24F35E1700E44D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95C0C29224F35E1700E44D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95C0C29424F35E1700E44D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C0C29524F35E1700E44D9A /* AgeOfVillagers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AgeOfVillagers.entitlements; sourceTree = "<group>"; };
+		95C0C29A24F35E1800E44D9A /* AgeOfVillagersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgeOfVillagersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C0C29E24F35E1800E44D9A /* AgeOfVillagersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeOfVillagersTests.swift; sourceTree = "<group>"; };
+		95C0C2A024F35E1800E44D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C0C2A524F35E1800E44D9A /* AgeOfVillagersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgeOfVillagersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C0C2A924F35E1800E44D9A /* AgeOfVillagersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeOfVillagersUITests.swift; sourceTree = "<group>"; };
+		95C0C2AB24F35E1800E44D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95C0C28224F35E1600E44D9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C29724F35E1800E44D9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C2A224F35E1800E44D9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95C0C27C24F35E1600E44D9A = {
+			isa = PBXGroup;
+			children = (
+				95C0C28724F35E1600E44D9A /* AgeOfVillagers */,
+				95C0C29D24F35E1800E44D9A /* AgeOfVillagersTests */,
+				95C0C2A824F35E1800E44D9A /* AgeOfVillagersUITests */,
+				95C0C28624F35E1600E44D9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95C0C28624F35E1600E44D9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95C0C28524F35E1600E44D9A /* AgeOfVillagers.app */,
+				95C0C29A24F35E1800E44D9A /* AgeOfVillagersTests.xctest */,
+				95C0C2A524F35E1800E44D9A /* AgeOfVillagersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95C0C28724F35E1600E44D9A /* AgeOfVillagers */ = {
+			isa = PBXGroup;
+			children = (
+				95C0C28824F35E1600E44D9A /* AppDelegate.swift */,
+				95C0C28A24F35E1600E44D9A /* ViewController.swift */,
+				95C0C28F24F35E1700E44D9A /* Assets.xcassets */,
+				95C0C29124F35E1700E44D9A /* Main.storyboard */,
+				95C0C29424F35E1700E44D9A /* Info.plist */,
+				95C0C29524F35E1700E44D9A /* AgeOfVillagers.entitlements */,
+				95C0C28C24F35E1600E44D9A /* AgeOfVillagers.xcdatamodeld */,
+			);
+			path = AgeOfVillagers;
+			sourceTree = "<group>";
+		};
+		95C0C29D24F35E1800E44D9A /* AgeOfVillagersTests */ = {
+			isa = PBXGroup;
+			children = (
+				95C0C29E24F35E1800E44D9A /* AgeOfVillagersTests.swift */,
+				95C0C2A024F35E1800E44D9A /* Info.plist */,
+			);
+			path = AgeOfVillagersTests;
+			sourceTree = "<group>";
+		};
+		95C0C2A824F35E1800E44D9A /* AgeOfVillagersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95C0C2A924F35E1800E44D9A /* AgeOfVillagersUITests.swift */,
+				95C0C2AB24F35E1800E44D9A /* Info.plist */,
+			);
+			path = AgeOfVillagersUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95C0C28424F35E1600E44D9A /* AgeOfVillagers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95C0C2AE24F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagers" */;
+			buildPhases = (
+				95C0C28124F35E1600E44D9A /* Sources */,
+				95C0C28224F35E1600E44D9A /* Frameworks */,
+				95C0C28324F35E1600E44D9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgeOfVillagers;
+			productName = AgeOfVillagers;
+			productReference = 95C0C28524F35E1600E44D9A /* AgeOfVillagers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95C0C29924F35E1800E44D9A /* AgeOfVillagersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95C0C2B124F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagersTests" */;
+			buildPhases = (
+				95C0C29624F35E1800E44D9A /* Sources */,
+				95C0C29724F35E1800E44D9A /* Frameworks */,
+				95C0C29824F35E1800E44D9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95C0C29C24F35E1800E44D9A /* PBXTargetDependency */,
+			);
+			name = AgeOfVillagersTests;
+			productName = AgeOfVillagersTests;
+			productReference = 95C0C29A24F35E1800E44D9A /* AgeOfVillagersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95C0C2A424F35E1800E44D9A /* AgeOfVillagersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95C0C2B424F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagersUITests" */;
+			buildPhases = (
+				95C0C2A124F35E1800E44D9A /* Sources */,
+				95C0C2A224F35E1800E44D9A /* Frameworks */,
+				95C0C2A324F35E1800E44D9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95C0C2A724F35E1800E44D9A /* PBXTargetDependency */,
+			);
+			name = AgeOfVillagersUITests;
+			productName = AgeOfVillagersUITests;
+			productReference = 95C0C2A524F35E1800E44D9A /* AgeOfVillagersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95C0C27D24F35E1600E44D9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Md Ariful Islam";
+				TargetAttributes = {
+					95C0C28424F35E1600E44D9A = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					95C0C29924F35E1800E44D9A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 95C0C28424F35E1600E44D9A;
+					};
+					95C0C2A424F35E1800E44D9A = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 95C0C28424F35E1600E44D9A;
+					};
+				};
+			};
+			buildConfigurationList = 95C0C28024F35E1600E44D9A /* Build configuration list for PBXProject "AgeOfVillagers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95C0C27C24F35E1600E44D9A;
+			productRefGroup = 95C0C28624F35E1600E44D9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95C0C28424F35E1600E44D9A /* AgeOfVillagers */,
+				95C0C29924F35E1800E44D9A /* AgeOfVillagersTests */,
+				95C0C2A424F35E1800E44D9A /* AgeOfVillagersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95C0C28324F35E1600E44D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0C29024F35E1700E44D9A /* Assets.xcassets in Resources */,
+				95C0C29324F35E1700E44D9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C29824F35E1800E44D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C2A324F35E1800E44D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95C0C28124F35E1600E44D9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0C28B24F35E1600E44D9A /* ViewController.swift in Sources */,
+				95C0C28924F35E1600E44D9A /* AppDelegate.swift in Sources */,
+				95C0C28E24F35E1600E44D9A /* AgeOfVillagers.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C29624F35E1800E44D9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0C29F24F35E1800E44D9A /* AgeOfVillagersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C0C2A124F35E1800E44D9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0C2AA24F35E1800E44D9A /* AgeOfVillagersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95C0C29C24F35E1800E44D9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C0C28424F35E1600E44D9A /* AgeOfVillagers */;
+			targetProxy = 95C0C29B24F35E1800E44D9A /* PBXContainerItemProxy */;
+		};
+		95C0C2A724F35E1800E44D9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95C0C28424F35E1600E44D9A /* AgeOfVillagers */;
+			targetProxy = 95C0C2A624F35E1800E44D9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95C0C29124F35E1700E44D9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95C0C29224F35E1700E44D9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95C0C2AC24F35E1800E44D9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95C0C2AD24F35E1800E44D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		95C0C2AF24F35E1800E44D9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AgeOfVillagers/AgeOfVillagers.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AgeOfVillagers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		95C0C2B024F35E1800E44D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AgeOfVillagers/AgeOfVillagers.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = AgeOfVillagers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		95C0C2B224F35E1800E44D9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				INFOPLIST_FILE = AgeOfVillagersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgeOfVillagers.app/Contents/MacOS/AgeOfVillagers";
+			};
+			name = Debug;
+		};
+		95C0C2B324F35E1800E44D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				INFOPLIST_FILE = AgeOfVillagersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgeOfVillagers.app/Contents/MacOS/AgeOfVillagers";
+			};
+			name = Release;
+		};
+		95C0C2B524F35E1800E44D9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				INFOPLIST_FILE = AgeOfVillagersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AgeOfVillagers;
+			};
+			name = Debug;
+		};
+		95C0C2B624F35E1800E44D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F54P9RGR8H;
+				INFOPLIST_FILE = AgeOfVillagersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ariful.AgeOfVillagersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = AgeOfVillagers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95C0C28024F35E1600E44D9A /* Build configuration list for PBXProject "AgeOfVillagers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95C0C2AC24F35E1800E44D9A /* Debug */,
+				95C0C2AD24F35E1800E44D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95C0C2AE24F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95C0C2AF24F35E1800E44D9A /* Debug */,
+				95C0C2B024F35E1800E44D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95C0C2B124F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95C0C2B224F35E1800E44D9A /* Debug */,
+				95C0C2B324F35E1800E44D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95C0C2B424F35E1800E44D9A /* Build configuration list for PBXNativeTarget "AgeOfVillagersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95C0C2B524F35E1800E44D9A /* Debug */,
+				95C0C2B624F35E1800E44D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95C0C28C24F35E1600E44D9A /* AgeOfVillagers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95C0C28D24F35E1600E44D9A /* AgeOfVillagers.xcdatamodel */,
+			);
+			currentVersion = 95C0C28D24F35E1600E44D9A /* AgeOfVillagers.xcdatamodel */;
+			path = AgeOfVillagers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95C0C27D24F35E1600E44D9A /* Project object */;
+}

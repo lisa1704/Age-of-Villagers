@@ -3,49 +3,106 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.Fixed fixed3;
+	private global::Gtk.UIManager UIManager;
 
-	private global::Gtk.Button button3;
+	private global::Gtk.Action FileAction;
 
-	private global::Gtk.Label label1;
+	private global::Gtk.Action EditAction;
+
+	private global::Gtk.Action networkAction;
+
+	private global::Gtk.Action undoAction;
+
+	private global::Gtk.Action redoAction;
+
+	private global::Gtk.Fixed fixed7;
+
+	private global::Gtk.Label labe;
+
+	private global::Gtk.Button home;
+
+	private global::Gtk.VSeparator vseparator1;
+
+	private global::Gtk.Toolbar toolbar1;
 
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
-		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
+		this.UIManager = new global::Gtk.UIManager();
+		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
+		this.FileAction = new global::Gtk.Action("FileAction", global::Mono.Unix.Catalog.GetString("File"), null, null);
+		this.FileAction.ShortLabel = global::Mono.Unix.Catalog.GetString("File");
+		w1.Add(this.FileAction, null);
+		this.EditAction = new global::Gtk.Action("EditAction", global::Mono.Unix.Catalog.GetString("Edit"), null, null);
+		this.EditAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Edit");
+		w1.Add(this.EditAction, null);
+		this.networkAction = new global::Gtk.Action("networkAction", null, null, "gtk-network");
+		w1.Add(this.networkAction, null);
+		this.undoAction = new global::Gtk.Action("undoAction", null, null, "gtk-undo");
+		w1.Add(this.undoAction, null);
+		this.redoAction = new global::Gtk.Action("redoAction", null, null, "gtk-redo");
+		w1.Add(this.redoAction, null);
+		this.UIManager.InsertActionGroup(w1, 0);
+		this.AddAccelGroup(this.UIManager.AccelGroup);
+		this.Name = "Age Of Villagers";
+		this.Title = global::Mono.Unix.Catalog.GetString("Age Of Villagers");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.fixed3 = new global::Gtk.Fixed();
-		this.fixed3.Name = "fixed3";
-		this.fixed3.HasWindow = false;
-		// Container child fixed3.Gtk.Fixed+FixedChild
-		this.button3 = new global::Gtk.Button();
-		this.button3.CanFocus = true;
-		this.button3.Name = "button3";
-		this.button3.UseUnderline = true;
-		this.button3.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
-		this.fixed3.Add(this.button3);
-		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed3[this.button3]));
-		w1.X = 192;
-		w1.Y = 114;
-		// Container child fixed3.Gtk.Fixed+FixedChild
-		this.label1 = new global::Gtk.Label();
-		this.label1.Name = "label1";
-		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString("label1");
-		this.fixed3.Add(this.label1);
-		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed3[this.label1]));
-		w2.X = 183;
-		w2.Y = 35;
-		this.Add(this.fixed3);
+		this.fixed7 = new global::Gtk.Fixed();
+		this.fixed7.Name = "fixed7";
+		this.fixed7.HasWindow = false;
+		// Container child fixed7.Gtk.Fixed+FixedChild
+		this.labe = new global::Gtk.Label();
+		this.labe.Name = "labe";
+		this.labe.LabelProp = global::Mono.Unix.Catalog.GetString("hi, Its a age of villagers");
+		this.labe.UseMarkup = true;
+		this.labe.UseUnderline = true;
+		this.labe.Wrap = true;
+		this.labe.Selectable = true;
+		this.fixed7.Add(this.labe);
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed7[this.labe]));
+		w2.X = 797;
+		w2.Y = 63;
+		// Container child fixed7.Gtk.Fixed+FixedChild
+		this.home = new global::Gtk.Button();
+		this.home.CanFocus = true;
+		this.home.Name = "home";
+		this.home.UseUnderline = true;
+		this.home.Label = global::Mono.Unix.Catalog.GetString("Home");
+		this.fixed7.Add(this.home);
+		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed7[this.home]));
+		w3.X = 849;
+		w3.Y = 161;
+		// Container child fixed7.Gtk.Fixed+FixedChild
+		this.vseparator1 = new global::Gtk.VSeparator();
+		this.vseparator1.Name = "vseparator1";
+		this.fixed7.Add(this.vseparator1);
+		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed7[this.vseparator1]));
+		w4.X = 700;
+		w4.Y = 300;
+       
+		// Container child fixed7.Gtk.Fixed+FixedChild
+		this.UIManager.AddUiFromString("<ui><toolbar name=\'toolbar1\'><toolitem name=\'networkAction\' action=\'networkAction" +
+				"\'/><toolitem name=\'undoAction\' action=\'undoAction\'/><toolitem name=\'redoAction\' " +
+				"action=\'redoAction\'/></toolbar></ui>");
+		this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget("/toolbar1")));
+		this.toolbar1.Name = "toolbar1";
+		this.toolbar1.ShowArrow = false;
+		this.fixed7.Add(this.toolbar1);
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed7[this.toolbar1]));
+		w5.X = 841;
+		w5.Y = 292;
+		this.Add(this.fixed7);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 1035;
+		this.DefaultHeight = 660;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.undoAction.Activated += new global::System.EventHandler(this.OnUndoActivate);
+		this.home.Clicked += new global::System.EventHandler(this.OnHomeClicked);
 	}
 }

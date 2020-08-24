@@ -13,4 +13,24 @@ public partial class MainWindow : Gtk.Window
         Application.Quit();
         a.RetVal = true;
     }
+
+    protected void OnHomeClicked(object sender, EventArgs e)
+    {
+        Console.WriteLine("ok");
+    }
+
+    protected void OnUndo(object o, ChangedArgs args)
+    {
+        Console.WriteLine("undo");
+    }
+
+    protected void OnUndoActivate(object sender, EventArgs e)
+    {
+        Console.WriteLine("undo Activated");
+    }
+
+    protected void OnUndoToggled(object sender, EventArgs e)
+    {
+        Console.WriteLine("undo toggled");
+    }
 }
