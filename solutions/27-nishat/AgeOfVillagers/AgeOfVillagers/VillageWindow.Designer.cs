@@ -69,8 +69,9 @@
             // 
             // lblnation
             // 
+            this.lblnation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblnation.AutoSize = true;
-            this.lblnation.Location = new System.Drawing.Point(74, 106);
+            this.lblnation.Location = new System.Drawing.Point(35, 106);
             this.lblnation.Name = "lblnation";
             this.lblnation.Size = new System.Drawing.Size(57, 21);
             this.lblnation.TabIndex = 5;
@@ -78,8 +79,9 @@
             // 
             // lblvillage
             // 
+            this.lblvillage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblvillage.AutoSize = true;
-            this.lblvillage.Location = new System.Drawing.Point(56, 70);
+            this.lblvillage.Location = new System.Drawing.Point(35, 69);
             this.lblvillage.Name = "lblvillage";
             this.lblvillage.Size = new System.Drawing.Size(103, 21);
             this.lblvillage.TabIndex = 4;
@@ -184,8 +186,8 @@
         private System.Windows.Forms.RadioButton rbtnwatersource;
         private System.Windows.Forms.RadioButton rbtnhouse;
         private System.Windows.Forms.Label lblgamename;
-        private System.Windows.Forms.Label lblnation;
-        private System.Windows.Forms.Label lblvillage;
+        public System.Windows.Forms.Label lblnation;
+        public System.Windows.Forms.Label lblvillage;
     }
 
 }
