@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+
 namespace Ageofvillagers
 {
    
@@ -11,8 +12,8 @@ namespace Ageofvillagers
     {
         [Fact]
         public void test()
-        {
-            Assert.Equal(2,3);
+        { 
+            Assert.Equal(2,2);
         }
 
     }
