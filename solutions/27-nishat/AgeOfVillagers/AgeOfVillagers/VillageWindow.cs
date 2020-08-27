@@ -56,7 +56,26 @@ namespace AgeOfVillagers
             
         }
 
-        
+        private void drawingpanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (village != null)
+            {
+                Point point = new Point(e.X,e.Y);
+                if (rbtntree.Checked)
+                {
+                    g.DrawLine(p, point, new Point(e.X, e.Y-50));
+                }
+                else if (rbtnhouse.Checked)
+                {
+                    g.DrawLine(p, point, new Point(e.X + 50, e.Y - 50));
+                }
+                else if(rbtnwatersource.Checked)
+                {
+                    g.DrawLine(p, point, new Point(e.X + 50, e.Y));
+                }
+            }
+            
+        }
     }
     
 }

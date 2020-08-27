@@ -49,6 +49,7 @@
             this.drawingpanel.Name = "drawingpanel";
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.drawingpanel.TabIndex = 0;
+            this.drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseClick);
             // 
             // toolpanel
             // 
