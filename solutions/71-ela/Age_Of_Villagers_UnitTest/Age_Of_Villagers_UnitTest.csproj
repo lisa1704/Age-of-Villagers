@@ -56,6 +56,7 @@
     <Compile Include="Items\BangladeshiFarmers_ItemSize_Tests.cs" />
     <Compile Include="Items\ArabBeduin_ItemSize_Tests.cs" />
     <Compile Include="Items\InuitHunters_ItemSize_Tests.cs" />
+    <Compile Include="Items\EgyptianKings_ItemSize_Tests.cs" />
     <Compile Include="SaveVillageTest.cs" />
     <Compile Include="Shapes\RectangleTest.cs" />
     <Compile Include="Shapes\BBoxTest.cs" />

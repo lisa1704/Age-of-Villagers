@@ -25,7 +25,20 @@ namespace Age_Of_Villagers.Tests
            
         }
 
-      
+        [TestMethod()]
+        public void GetBBox_Inuit_House_Test()
+        {
+            Point p = new Point(0, 0);
+            ItemSize isize = new ItemSize(32, 32);
+
+           InuitHuntersHouse ihouse = new InuitHuntersHouse(p, isize);
+            Rectangle r = ihouse.GetBBox();
+
+
+            Assert.AreEqual(16, r.GetWidth());
+            Assert.AreEqual(16, r.GetHeight());
+
+        }
 
 
     }
