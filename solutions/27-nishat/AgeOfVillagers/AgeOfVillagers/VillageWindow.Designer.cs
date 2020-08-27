@@ -73,9 +73,9 @@
             this.lblnation.AutoSize = true;
             this.lblnation.Location = new System.Drawing.Point(35, 106);
             this.lblnation.Name = "lblnation";
-            this.lblnation.Size = new System.Drawing.Size(57, 21);
+            this.lblnation.Size = new System.Drawing.Size(103, 21);
             this.lblnation.TabIndex = 5;
-            this.lblnation.Text = "Nation";
+            this.lblnation.Text = "Nation Name";
             // 
             // lblvillage
             // 
@@ -139,6 +139,7 @@
             this.btnsavevillage.TabIndex = 0;
             this.btnsavevillage.Text = "Save Village";
             this.btnsavevillage.UseVisualStyleBackColor = true;
+            this.btnsavevillage.Click += new System.EventHandler(this.btnsavevillage_Click);
             // 
             // btnopenvillage
             // 
@@ -148,6 +149,7 @@
             this.btnopenvillage.TabIndex = 0;
             this.btnopenvillage.Text = "Open Village";
             this.btnopenvillage.UseVisualStyleBackColor = true;
+            this.btnopenvillage.Click += new System.EventHandler(this.btnopenvillage_Click);
             // 
             // btnnewvillage
             // 

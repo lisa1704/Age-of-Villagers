@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +10,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace AgeOfVillagers
 {
@@ -38,7 +41,33 @@ namespace AgeOfVillagers
             selector.Show();
         }
 
+        private void btnopenvillage_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void btnsavevillage_Click(object sender, EventArgs e)
+        {
+            if (village != null)
+            {
+                IState state = village.GetState();
+                //String villagename = "a";
+                Savestate(state);
+            }
+        }
+
+        private void Savestate(IState state)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "save village|*.aov";
+            saveFileDialog1.Title = "Save village";
+            saveFileDialog1.ShowDialog();
+            if (saveFileDialog1.FileName != "")
+            {
+                var dataString = JsonConvert.SerializeObject(state, Formatting.Indented);
+                System.IO.File.WriteAllText(saveFileDialog1.FileName, dataString);
+            }
+        }
     }
     
 }
