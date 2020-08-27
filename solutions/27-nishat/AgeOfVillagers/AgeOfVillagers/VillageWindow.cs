@@ -18,7 +18,7 @@ namespace AgeOfVillagers
         List<INationFactory> nationlist = new List<INationFactory>();
         public Village village = null;
         public Graphics g;
-        Pen p;
+        public Pen p;
 
         public Villagewindow()
         {
@@ -63,14 +63,17 @@ namespace AgeOfVillagers
                 Point point = new Point(e.X,e.Y);
                 if (rbtntree.Checked)
                 {
+                    village.DrawTree(g, p, point);
                     g.DrawLine(p, point, new Point(e.X, e.Y-50));
                 }
                 else if (rbtnhouse.Checked)
                 {
+                    //village.DrawHouse(g, p, point);
                     g.DrawLine(p, point, new Point(e.X + 50, e.Y - 50));
                 }
                 else if(rbtnwatersource.Checked)
                 {
+                    //village.DrawWaterResource(g, p, point);
                     g.DrawLine(p, point, new Point(e.X + 50, e.Y));
                 }
             }

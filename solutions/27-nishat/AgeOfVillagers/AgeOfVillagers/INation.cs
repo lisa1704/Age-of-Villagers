@@ -7,6 +7,9 @@ namespace AgeOfVillagers
     {
         String GetNationName();
         Color GetTerrainColor();
+        VillageItem GetTree(Point point);
+        VillageItem GetHouse(Point point);
+        VillageItem GetWaterResource(Point point);
     }
 
     public interface INationFactory
@@ -23,6 +26,11 @@ namespace AgeOfVillagers
             this.nationname = nationname;
         }
 
+        public VillageItem GetHouse(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
         public string GetNationName()
         {
             return nationname;
@@ -31,6 +39,16 @@ namespace AgeOfVillagers
         public Color GetTerrainColor()
         {
             return Color.Green;
+        }
+
+        public VillageItem GetTree(Point point)
+        {
+            return new Sampletree(point);
+        }
+
+        public VillageItem GetWaterResource(Point point)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -42,6 +60,12 @@ namespace AgeOfVillagers
         {
             this.nationname = nationname;
         }
+
+        public VillageItem GetHouse(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
         public string GetNationName()
         {
             return nationname;
@@ -51,6 +75,15 @@ namespace AgeOfVillagers
             return Color.Blue;
         }
 
+        public VillageItem GetTree(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
+        public VillageItem GetWaterResource(Point point)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class Nation3 : INation
     {
@@ -60,6 +93,12 @@ namespace AgeOfVillagers
         {
             this.nationname = nationname;
         }
+
+        public VillageItem GetHouse(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
         public string GetNationName()
         {
             return nationname;
@@ -67,6 +106,16 @@ namespace AgeOfVillagers
         public Color GetTerrainColor()
         {
             return Color.Red;
+        }
+
+        public VillageItem GetTree(Point point)
+        {
+            throw new NotImplementedException();
+        }
+
+        public VillageItem GetWaterResource(Point point)
+        {
+            throw new NotImplementedException();
         }
     }
     public class Nationfactory3 : INationFactory

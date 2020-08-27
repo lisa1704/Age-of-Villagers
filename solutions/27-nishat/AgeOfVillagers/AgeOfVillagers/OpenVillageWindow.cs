@@ -44,7 +44,7 @@ namespace AgeOfVillagers
                 villagewindow.village.SetState(state);
                 villagewindow.lblnation.Text = nation.GetNationName();
                 villagewindow.lblvillage.Text = state.GetVillageName();
-                villagewindow.village.initiate(villagewindow.g);
+                villagewindow.village.initiate(villagewindow.g,villagewindow.p);
                 this.Dispose();
             }
         }
