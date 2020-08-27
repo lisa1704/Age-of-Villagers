@@ -23,10 +23,16 @@ namespace AgeOfVillagers
         {
             return new Villagestate(villagename);
         }
+
+        internal void SetState(IState state)
+        {
+            villagename = state.GetVillageName();
+        }
     }
     public interface IState
     {
         void SetVillageName(string villagename);
+        String GetVillageName();
     }
     public class Villagestate : IState
     {
@@ -35,6 +41,11 @@ namespace AgeOfVillagers
         public Villagestate(string villagename)
         {
             this.villagename = villagename;
+        }
+
+        public string GetVillageName()
+        {
+            return villagename;
         }
 
         public void SetVillageName(string villagename)

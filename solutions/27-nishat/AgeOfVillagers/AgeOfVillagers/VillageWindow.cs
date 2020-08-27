@@ -42,7 +42,8 @@ namespace AgeOfVillagers
 
         private void btnopenvillage_Click(object sender, EventArgs e)
         {
-            
+            var openwindow = new OpenVillageWindow(nationlist, this);
+            openwindow.Show();
         }
 
         private void btnsavevillage_Click(object sender, EventArgs e)

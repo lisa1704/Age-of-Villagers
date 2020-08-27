@@ -38,14 +38,18 @@ namespace AgeOfVillagers
         }
         private void Savestate(IState state)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "save village|*.aov";
-            saveFileDialog1.Title = "Save village";
-            saveFileDialog1.ShowDialog();
-            if (saveFileDialog1.FileName != "")
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "age of villagers file|*.aov";
+            saveFileDialog.Title = "Save village";
+            saveFileDialog.ShowDialog();
+            if (saveFileDialog.FileName != "")
             {
-                var dataString = JsonConvert.SerializeObject(state, Formatting.Indented);
-                System.IO.File.WriteAllText(saveFileDialog1.FileName, dataString);
+                var settings = new JsonSerializerSettings()
+                {
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                var dataString = JsonConvert.SerializeObject(state, Formatting.Indented, settings);
+                System.IO.File.WriteAllText(saveFileDialog.FileName, dataString);
             }
         }
 
