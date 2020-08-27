@@ -26,13 +26,18 @@ namespace AgeOfVillagers
     }
     public interface IState
     {
-        
+        void SetVillageName(string villagename);
     }
     public class Villagestate : IState
     {
         public string villagename;
 
         public Villagestate(string villagename)
+        {
+            this.villagename = villagename;
+        }
+
+        public void SetVillageName(string villagename)
         {
             this.villagename = villagename;
         }

@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design.Serialization;
@@ -50,24 +49,13 @@ namespace AgeOfVillagers
         {
             if (village != null)
             {
-                IState state = village.GetState();
-                //String villagename = "a";
-                Savestate(state);
+                var savewindow = new VillageSaveWindow(this);
+                savewindow.Show();
             }
+            
         }
 
-        private void Savestate(IState state)
-        {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "save village|*.aov";
-            saveFileDialog1.Title = "Save village";
-            saveFileDialog1.ShowDialog();
-            if (saveFileDialog1.FileName != "")
-            {
-                var dataString = JsonConvert.SerializeObject(state, Formatting.Indented);
-                System.IO.File.WriteAllText(saveFileDialog1.FileName, dataString);
-            }
-        }
+        
     }
     
 }
