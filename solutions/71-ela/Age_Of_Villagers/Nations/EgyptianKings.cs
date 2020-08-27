@@ -22,6 +22,8 @@ namespace Age_Of_Villagers
         {
           
             this.waterSourceSize = new ItemSize(12, 12);
+            hasTree = true;
+            hasWaterSource = true;
 
 
         }

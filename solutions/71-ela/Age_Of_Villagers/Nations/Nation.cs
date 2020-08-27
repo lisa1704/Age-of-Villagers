@@ -9,6 +9,7 @@ namespace Age_Of_Villagers
     public abstract class Nation
     {
         public ItemSize houseSize, treeSize;
+        public bool hasTree, hasWaterSource;
        
 
 

@@ -13,6 +13,9 @@ namespace Age_Of_Villagers
       
         public InuitHunters()
         {
+            hasTree = false;
+            hasWaterSource = false;
+
           
 
         }

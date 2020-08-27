@@ -11,9 +11,11 @@ namespace Age_Of_Villagers
   public BangladeshiFarmers()
         {
             this.waterSourceSize = new ItemSize(24, 16);
-           
+            hasTree = true;
+            hasWaterSource = true;
 
-           
+
+
         }
 
         public override void DrawHouse(Graphics g, Point location)

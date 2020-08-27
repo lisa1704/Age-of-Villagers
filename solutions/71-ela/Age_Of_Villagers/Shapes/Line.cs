@@ -22,10 +22,21 @@ namespace Age_Of_Villagers
 
         public Rectangle GetBBox()
         {
-            throw new System.NotImplementedException();
+            if ( point1.X<point2.X)
+            {
+                return new Rectangle(point1, point2, point1, point2);
+            }
+            else
+            {
+                return new Rectangle(point2, point1, point2, point1);
+
+            }
+
+        }
+            
         }
     }
 
 
 
-}
+

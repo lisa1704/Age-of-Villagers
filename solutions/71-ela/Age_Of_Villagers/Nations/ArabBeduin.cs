@@ -9,6 +9,11 @@ namespace Age_Of_Villagers
 {
     public class ArabBeduin : Nation
     {
+        public ArabBeduin()
+        {
+            hasTree = true;
+            hasWaterSource = false;
+        }
 
         public override void DrawHouse(Graphics g,Point location)
         {

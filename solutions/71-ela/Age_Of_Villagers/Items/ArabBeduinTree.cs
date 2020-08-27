@@ -9,11 +9,12 @@ namespace Age_Of_Villagers
 
         public ArabBeduinTree(Point location, ItemSize treeSize)
         {
-           var  x = location.X;
-           var  y = location.Y;
+           var  x = location.X+treeSize.width/2;
+           var  y = location.Y+treeSize.height;
            var  tree_width = treeSize.width;
            var tree_height = treeSize.height;
            Point p1, p2, p3, p4, p5, mid,p6,p7,p8,p9;
+
             p1 = new Point(x - tree_width / 2, y - tree_height/2-tree_height/4 );
             p2 = new Point(x + tree_width / (2), y - tree_height/2-tree_height/4);
             p3 = new Point(x + tree_width / (3), y - tree_height-tree_height/6);

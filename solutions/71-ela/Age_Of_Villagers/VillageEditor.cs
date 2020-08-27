@@ -233,7 +233,7 @@ namespace Age_Of_Villagers
 
                 }
                 // draw tree 
-                else if (treeButton.Checked)
+                else if (treeButton.Checked && drawingSpaceNation.hasTree)
                 {
 
 
@@ -242,7 +242,7 @@ namespace Age_Of_Villagers
                 }
                 //draw water source
 
-                else if (waterSourceButton.Checked)
+                else if (waterSourceButton.Checked && drawingSpaceNation.hasWaterSource )
                 {
                     drawingSpaceNation.DrawWaterSource(g, location);
                     village.waterSoucePosition.Add(location);
