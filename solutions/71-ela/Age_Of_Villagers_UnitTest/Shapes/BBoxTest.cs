@@ -8,20 +8,7 @@ namespace Age_Of_Villagers.Tests
     [TestClass()]
     public class BBoxTest
     {
-        [TestMethod()]
-        public void GetBBox_BangladeshiFarmer_HouseTest()
-        {
-            Point p = new Point(0, 0);
-            ItemSize isize = new ItemSize(16, 16);
-
-            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(p, isize);
-            Rectangle r = house.GetBBox();
-  
-            
-            Assert.AreEqual(16, r.GetWidth());
-            Assert.AreEqual(16, r.GetHeight());
-
-        }
+        
 
         [TestMethod()]
         public void GetBBox_BangladeshiFarmer_WaterSourceTest()
