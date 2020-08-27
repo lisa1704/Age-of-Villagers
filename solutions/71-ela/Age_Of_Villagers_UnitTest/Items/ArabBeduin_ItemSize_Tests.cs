@@ -27,7 +27,7 @@ namespace Age_Of_Villagers_UnitTest.Items
 
         }
         [TestMethod()]
-        public void ArabBeduin_HouseTest()
+        public void GetBBox_ArabBeduin_HouseTest()
         {
 
 
@@ -50,7 +50,7 @@ namespace Age_Of_Villagers_UnitTest.Items
             bBox = tree.GetBBox();
 
 
-            //Assert.AreEqual(16, bBox.GetWidth());
+            Assert.AreEqual(16, bBox.GetWidth());
             Assert.AreEqual(24, bBox.GetHeight());
 
         }
