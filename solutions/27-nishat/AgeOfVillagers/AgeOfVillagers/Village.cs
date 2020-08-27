@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AgeOfVillagers
 {
@@ -38,16 +40,21 @@ namespace AgeOfVillagers
 
         internal IState GetState()
         {
-            return new Villagestate(villagename, trees, houses, watersources);
+            List<Point> treepoints,housepoinits,watersourcepoints;
+            treepoints = trees.ConvertAll(x => x.GetPoint());
+            housepoinits = houses.ConvertAll(x => x.GetPoint());
+            watersourcepoints = watersources.ConvertAll(x => x.GetPoint());
+
+            return new Villagestate(villagename, treepoints, housepoinits, watersourcepoints);
         }
 
         internal void SetState(IState state)
         {
             Villagestate villagestate = (Villagestate)state;
             villagename = villagestate.GetVillageName();
-            trees = villagestate.trees;
-            houses = villagestate.houses;
-            watersources = villagestate.watersources;
+            trees = villagestate.trees.ConvertAll(x => nation.GetTree(x));
+            houses = villagestate.houses.ConvertAll(x => nation.GetHouse(x));
+            watersources = villagestate.watersources.ConvertAll(x => nation.GetWaterResource(x));
         }
 
         internal void DrawTree(Graphics g, Pen p, Point point)
@@ -79,9 +86,9 @@ namespace AgeOfVillagers
     public class Villagestate : IState
     {
         public string villagename;
-        public List<VillageItem> trees, houses, watersources;
+        public List<Point> trees, houses, watersources;
 
-        public Villagestate(string villagename, List<VillageItem> trees, List<VillageItem> houses, List<VillageItem> watersources)
+        public Villagestate(string villagename, List<Point> trees, List<Point> houses, List<Point> watersources)
         {
             this.villagename = villagename;
             this.watersources = watersources;
