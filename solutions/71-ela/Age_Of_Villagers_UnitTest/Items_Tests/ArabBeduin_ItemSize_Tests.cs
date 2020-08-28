@@ -14,7 +14,7 @@ namespace Age_Of_Villagers_UnitTest.Items
 
         Point location;
         Rectangle bBox;
-        ItemSize houseSize, treeSize, waterSourceSize;
+        ItemSize houseSize, treeSize;
 
 
         public ArabBeduin_ItemSize_Tests()
@@ -22,7 +22,7 @@ namespace Age_Of_Villagers_UnitTest.Items
             location = new Point(0, 0);
             houseSize = new ItemSize(16, 16);
             treeSize = new ItemSize(16, 24);
-            waterSourceSize = new ItemSize(24, 16);
+
 
 
         }

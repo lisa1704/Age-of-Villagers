@@ -7,19 +7,20 @@ namespace Age_Of_Villagers
 
 
 
-        public EgyptianKingsTreePartSymmetric(Point bottom, Point mid, int leafHeight, int leafWidth)
+        public EgyptianKingsTreePartSymmetric(Point bottom, Point mid,Point left,Point right, int leafHeight, int leafWidth)
         {
 
-            var firstLeaf = new Point(mid.X - leafWidth, mid.Y - leafHeight);
-            var midLeaf = new Point(mid.X, mid.Y - leafHeight);
-            var lastLeaf = new Point(mid.X + leafWidth, mid.Y - leafHeight);
+            
+       
+            var midPoint = new Point((bottom.X + mid.X) / 2, (bottom.Y + mid.Y) / 2);
+
 
 
 
             AddComponent(new Line(bottom, mid));
-            AddComponent(new Line(mid, firstLeaf));
-            AddComponent(new Line(mid, midLeaf));
-            AddComponent(new Line(mid, lastLeaf));
+            AddComponent(new Line(midPoint, left));
+            AddComponent(new Line(midPoint,right));
+           // AddComponent(new Line(mid, lastLeaf));
 
 
 

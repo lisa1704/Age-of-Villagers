@@ -19,7 +19,7 @@ namespace Age_Of_Villagers_UnitTest.Items
             location = new Point(0, 0);
             houseSize = new ItemSize(16, 16);
             treeSize = new ItemSize(16, 24);
-            waterSourceSize = new ItemSize(16, 16);
+            waterSourceSize = new ItemSize(12, 12);
 
 
         }
@@ -31,10 +31,10 @@ namespace Age_Of_Villagers_UnitTest.Items
             EgyptianKingsHouse house = new EgyptianKingsHouse(location, houseSize);
             bBox = house.GetBBox();
 
-
-           // Assert.AreEqual(16, bBox.GetWidth());
             Assert.AreEqual(16, bBox.GetHeight());
 
+            Assert.AreEqual(16, bBox.GetWidth());
+           
 
         }
         [TestMethod()]
@@ -45,8 +45,8 @@ namespace Age_Of_Villagers_UnitTest.Items
             bBox = waterSource.GetBBox();
 
 
-            Assert.AreEqual(16, bBox.GetWidth());
-            Assert.AreEqual(16, bBox.GetHeight());
+            Assert.AreEqual(12, bBox.GetWidth());
+            Assert.AreEqual(12, bBox.GetHeight());
 
         }
 
@@ -57,9 +57,9 @@ namespace Age_Of_Villagers_UnitTest.Items
             EgyptianKingsTree tree = new EgyptianKingsTree(location, treeSize);
             bBox = tree.GetBBox();
 
-
-            //Assert.AreEqual(16, bBox.GetWidth());
             Assert.AreEqual(24, bBox.GetHeight());
+            Assert.AreEqual(16, bBox.GetWidth());
+
 
         }
     }
