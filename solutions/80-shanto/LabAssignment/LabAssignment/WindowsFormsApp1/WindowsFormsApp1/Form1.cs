@@ -95,10 +95,10 @@ namespace WindowsFormsApp1
 
         
 
-        /*private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
             this.Width = 600;
             this.Height = 400;
-        }*/
+        }
     }
 }
