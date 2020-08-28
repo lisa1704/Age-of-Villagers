@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Age_Of_Villagers.FileManager;
 using Newtonsoft.Json;
 namespace Age_Of_Villagers
 {
@@ -17,6 +17,7 @@ namespace Age_Of_Villagers
         Graphics g;
         Nation drawingSpaceNation;
         Village village;
+        File_Manager fileManager;
         
      
         public AgeOfVillagers()
@@ -27,6 +28,7 @@ namespace Age_Of_Villagers
             g = drawingSpace.CreateGraphics();
            
             village = new Village();
+            fileManager = new File_Manager();
             
           
 
@@ -92,39 +94,10 @@ namespace Age_Of_Villagers
         {
            //Get the village name from villageNameEditor
             village.VillageName = villageNameEditor.Text;
-           
+
             // connert the village object in Json 
-            var jsonVillage = JsonConvert.SerializeObject(village);
-
-            // open savefileDialog to save the village in preferred location
-     
-
-           SaveFileDialog saveFileDialog1 = new SaveFileDialog
-            {
-                InitialDirectory = @"E:\",
-                Title = "Save a village (.json file)",
-
-               
-                CheckPathExists = true,
-
-                DefaultExt = "aov",
-                Filter = "aov files (*.aov)|*.aov",
-                FilterIndex = 2,
-                RestoreDirectory = true,
-             
-            };
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            { 
-                //write the village.json in the selected location
-
-                var filePath = saveFileDialog1.FileName;
-                System.IO.File.WriteAllText(filePath, jsonVillage);
-
-
-
-
-            }
+            fileManager.saveVillage(village);
+            
 
            
 

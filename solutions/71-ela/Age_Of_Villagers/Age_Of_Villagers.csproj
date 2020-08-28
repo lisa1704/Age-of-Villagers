@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileManager\File_Manager.cs" />
     <Compile Include="Items\ArabBeduinHouse.cs" />
     <Compile Include="Items\ArabBeduinTree.cs" />
     <Compile Include="Nations\NationFactory.cs" />
