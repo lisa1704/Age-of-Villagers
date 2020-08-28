@@ -8,29 +8,29 @@ namespace Age_Of_Villagers
 
         public Point topLeft, topRight, bottomLeft, bottomRight;
 
-        
-      
-                                                                 
 
-        public Rectangle(Point topLeft,Point topRight, Point bottomLeft, Point bottomRight)
+
+
+
+        public Rectangle(Point topLeft, Point topRight, Point bottomLeft, Point bottomRight)
         {
             this.topLeft = topLeft;
             this.topRight = topRight;
             this.bottomLeft = bottomLeft;
             this.bottomRight = bottomRight;
-           
 
 
-          
-            AddComponent(new Line(topLeft,topRight));
-            AddComponent(new Line(topLeft,bottomLeft));
-            AddComponent(new Line(bottomLeft,bottomRight));
-            AddComponent(new Line(bottomRight,topRight));
+
+
+            AddComponent(new Line(topLeft, topRight));
+            AddComponent(new Line(topLeft, bottomLeft));
+            AddComponent(new Line(bottomLeft, bottomRight));
+            AddComponent(new Line(bottomRight, topRight));
 
         }
 
 
-        public double  GetHeight()
+        public double GetHeight()
         {
             var height = Math.Sqrt(Math.Pow((topLeft.X - bottomLeft.X), 2) + Math.Pow((topLeft.Y - bottomLeft.Y), 2));
             return height;

@@ -15,9 +15,9 @@ namespace Age_Of_Villagers
             hasWaterSource = false;
         }
 
-        public override void DrawHouse(Graphics g,Point location)
+        public override void DrawHouse(Graphics g, Point location)
         {
-            ArabBeduinHouse house = new ArabBeduinHouse(location,houseSize);
+            ArabBeduinHouse house = new ArabBeduinHouse(location, houseSize);
             house.Draw(g);
 
 
@@ -33,15 +33,15 @@ namespace Age_Of_Villagers
 
 
 
-      
+
 
         public override void SetBackground(Graphics g)
         {
             g.Clear(Color.LightYellow);
         }
 
-       
 
-      
+
+
     }
 }

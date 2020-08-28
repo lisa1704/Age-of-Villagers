@@ -4,7 +4,7 @@ namespace Age_Of_Villagers
 {
     public class Arc : IShapes
     {
-        public int x ,y, width, height, startAngle, sweepAngle;
+        public int x, y, width, height, startAngle, sweepAngle;
         SizeF size;
         PointF point;
         RectangleF rectangle;
@@ -12,7 +12,7 @@ namespace Age_Of_Villagers
 
 
 
-        public Arc(int x, int y, int width,int height,int startAngle,int sweepAngle)
+        public Arc(int x, int y, int width, int height, int startAngle, int sweepAngle)
         {
             this.point = new PointF(x, y);
             this.size = new SizeF(width, height);
@@ -26,24 +26,24 @@ namespace Age_Of_Villagers
         {
             Pen pen = new Pen(Color.Black);
             g.DrawArc(pen, rectangle, startAngle, sweepAngle);
-         
+
         }
 
         public Rectangle GetBBox()
         {
-            Point topLeft = new Point((int)rectangle.Left,(int)rectangle.Top);
+            Point topLeft = new Point((int)rectangle.Left, (int)rectangle.Top);
             Point topRight = new Point((int)rectangle.Right, (int)rectangle.Top);
             Point bottomLeft = new Point((int)rectangle.Left, (int)rectangle.Bottom);
             Point bottomRight = new Point((int)rectangle.Right, (int)rectangle.Bottom);
 
 
-            Rectangle bbox = new Rectangle(topLeft,topRight,bottomLeft,bottomRight);
+            Rectangle bbox = new Rectangle(topLeft, topRight, bottomLeft, bottomRight);
             return bbox;
 
-           
+
         }
 
-    
+
     }
 
 

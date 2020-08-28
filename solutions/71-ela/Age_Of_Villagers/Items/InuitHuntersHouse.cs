@@ -10,7 +10,7 @@ namespace Age_Of_Villagers
         public InuitHuntersHouse(Point location, ItemSize houseSize)
         {
             Point baseLeft, baseRight;
-            baseLeft = new Point(location.X, location.Y + houseSize.width/ 2);
+            baseLeft = new Point(location.X, location.Y + houseSize.width / 2);
             baseRight = new Point(location.X + houseSize.width, location.Y + houseSize.width / 2);
 
 

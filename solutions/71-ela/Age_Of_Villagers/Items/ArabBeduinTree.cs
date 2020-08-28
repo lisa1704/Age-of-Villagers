@@ -32,7 +32,7 @@ namespace Age_Of_Villagers
             AddComponent(new Line(mid, p3));
             AddComponent(new Line(mid, p4));
             AddComponent(new Line(mid, p5));
-           AddComponent(new Rectangle(p6, p7, p8, p9));
+            AddComponent(new Rectangle(p6, p7, p8, p9));
     
 
 

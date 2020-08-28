@@ -11,7 +11,7 @@ namespace Age_Of_Villagers
     {
 
 
-      
+
         public ItemSize waterSourceSize;
 
 
@@ -20,7 +20,7 @@ namespace Age_Of_Villagers
 
         public EgyptianKings()
         {
-          
+
             this.waterSourceSize = new ItemSize(12, 12);
             hasTree = true;
             hasWaterSource = true;
@@ -28,26 +28,26 @@ namespace Age_Of_Villagers
 
         }
 
-        public override void DrawHouse(Graphics g,Point location)
+        public override void DrawHouse(Graphics g, Point location)
         {
-           
-            EgyptianKingsHouse house = new EgyptianKingsHouse(location,treeSize);
+
+            EgyptianKingsHouse house = new EgyptianKingsHouse(location, treeSize);
             house.Draw(g);
 
 
-            
+
 
 
         }
 
 
 
-        public override void DrawTree(Graphics g,Point location)
+        public override void DrawTree(Graphics g, Point location)
         {
-            
-           
 
-            EgyptianKingsTree tree = new EgyptianKingsTree(location,treeSize);
+
+
+            EgyptianKingsTree tree = new EgyptianKingsTree(location, treeSize);
             tree.Draw(g);
 
 
@@ -56,7 +56,7 @@ namespace Age_Of_Villagers
 
         }
 
-        public override void DrawWaterSource(Graphics g,Point location)
+        public override void DrawWaterSource(Graphics g, Point location)
         {
             EgyptianKingsWaterSource waterSource = new EgyptianKingsWaterSource(location, waterSourceSize);
             waterSource.Draw(g);
@@ -67,11 +67,10 @@ namespace Age_Of_Villagers
         public override void SetBackground(Graphics g)
         {
             g.Clear(Color.Yellow);
-        }            
+        }
 
-   
 
-       
+
+
     }
 }
-    

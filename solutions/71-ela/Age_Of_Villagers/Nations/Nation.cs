@@ -10,26 +10,26 @@ namespace Age_Of_Villagers
     {
         public ItemSize houseSize, treeSize;
         public bool hasTree, hasWaterSource;
-       
+
 
 
         public Nation()
         {
-            this.houseSize = new ItemSize(16,16);
-            this.treeSize = new ItemSize(16,24);
+            this.houseSize = new ItemSize(16, 16);
+            this.treeSize = new ItemSize(16, 24);
 
         }
 
         public abstract void DrawHouse(Graphics g, Point location);
         public abstract void SetBackground(Graphics g);
         public virtual void DrawTree(Graphics g, Point location) { }
-    
-        public virtual void DrawWaterSource(Graphics g, Point location) { }
-       
-       
-  
 
-      
+        public virtual void DrawWaterSource(Graphics g, Point location) { }
+
+
+
+
+
 
 
 

@@ -18,11 +18,11 @@ namespace Age_Of_Villagers
             g.DrawLine(pen, point1, point2);
         }
 
-       
+
 
         public Rectangle GetBBox()
         {
-            if ( point1.X<point2.X)
+            if (point1.X < point2.X)
             {
                 return new Rectangle(point1, point2, point1, point2);
             }
@@ -33,9 +33,9 @@ namespace Age_Of_Villagers
             }
 
         }
-            
-        }
+
     }
+}
 
 
 

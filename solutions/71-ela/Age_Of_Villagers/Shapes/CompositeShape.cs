@@ -13,7 +13,7 @@ namespace Age_Of_Villagers
 
         }
 
-        protected void AddComponent( IShapes shape)
+        protected void AddComponent(IShapes shape)
         {
             components.Add(shape);
 
@@ -32,26 +32,26 @@ namespace Age_Of_Villagers
             Rectangle r;
             Point topLeft = new Point(99999, 99999);
             Point topRight = new Point(-999999, 99999);
-            Point bottomLeft = new Point(999999,-999999);
-            Point bottomRight = new Point(-999999,-999999);
-             
-            
+            Point bottomLeft = new Point(999999, -999999);
+            Point bottomRight = new Point(-999999, -999999);
+
+
             foreach (var c in components)
             {
-               r= c.GetBBox();
+                r = c.GetBBox();
 
                 if (r.topLeft.X < topLeft.X)
                 {
                     topLeft.X = r.topLeft.X;
                     bottomLeft.X = r.topLeft.X;
                 }
-               if (r.topRight.X>topRight.X)
+                if (r.topRight.X > topRight.X)
                 {
                     topRight.X = r.topRight.X;
                     bottomRight.X = r.topRight.X;
                 }
 
-                if (r.topLeft.Y<topLeft.Y)
+                if (r.topLeft.Y < topLeft.Y)
                 {
                     topLeft.Y = r.topLeft.Y;
                     topRight.Y = r.topLeft.Y;
@@ -60,21 +60,21 @@ namespace Age_Of_Villagers
                 }
                 if (r.bottomLeft.Y > bottomLeft.Y)
                 {
-                   bottomLeft.Y = r.bottomLeft.Y;
-                   bottomRight.Y = r.bottomLeft.Y;
+                    bottomLeft.Y = r.bottomLeft.Y;
+                    bottomRight.Y = r.bottomLeft.Y;
                 }
 
 
 
             }
-            Rectangle bbox  =new Rectangle(topLeft,topRight,bottomLeft,bottomRight);
+            Rectangle bbox = new Rectangle(topLeft, topRight, bottomLeft, bottomRight);
 
             return bbox;
 
-            
+
         }
 
-       
+
     }
 
 

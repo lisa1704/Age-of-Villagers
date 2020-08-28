@@ -73,7 +73,7 @@
     <Compile Include="Shapes\IShapes.cs" />
     <Compile Include="Shapes\Rectangle.cs" />
     <Compile Include="Shapes\Triangle.cs" />
-    <Compile Include="Village.cs" />
+    <Compile Include="Village\Village.cs" />
     <Compile Include="VillageEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +82,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Village\ItemSize.cs" />
     <EmbeddedResource Include="VillageEditor.resx">
       <DependentUpon>VillageEditor.cs</DependentUpon>
     </EmbeddedResource>

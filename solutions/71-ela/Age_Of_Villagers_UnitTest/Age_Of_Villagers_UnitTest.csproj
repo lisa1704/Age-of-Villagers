@@ -58,10 +58,9 @@
     <Compile Include="Items_Tests\InuitHunters_ItemSize_Tests.cs" />
     <Compile Include="Items_Tests\EgyptianKings_ItemSize_Tests.cs" />
     <Compile Include="ShapeTest\RectangleTest.cs" />
-    <Compile Include="TestNation.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest2.cs" />
+    <Compile Include="Village,Nation Tests\TestNation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
