@@ -15,90 +15,78 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            this.Width = 600;
-            this.Height = 400;
+            //this.Width = 600;
+            //this.Height = 400;
          
         }
+     
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+      
+        private void splitter2_SplitterMoved(object sender, SplitterEventArgs e)
         {
-            Graphics g = e.Graphics;
-            Pen myPen = new Pen(Color.Black);
-            Brush myBrush = new SolidBrush(Color.Blue);
-
-            //g.DrawLine(myPen, 0, 0, 600, 400);
+            this.Width = 600;
+            this.Height = 400;
         }
 
-        
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        bool button7isClick = false;
 
-        }
-
-        
-
-        private void Form1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Move(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tree");
+            button7isClick = true;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
             MessageBox.Show("House");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Water Source");
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Save Village");
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
             MessageBox.Show("New Village");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Open Village");
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            // Bangladeshi Farmers
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            //age of villagers
+
         }
 
-        
 
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void splitter2_Paint(object sender, PaintEventArgs e)
         {
-            this.Width = 600;
-            this.Height = 400;
+            Graphics g = e.Graphics;
+            Pen myPen = new Pen(Color.Green);
+            Brush myBrush = new SolidBrush(Color.Blue);
+            g.DrawLine(myPen, 0, 0, 200, 200);
+
+            if (button7isClick) {
+                //action will be occur 
+            }
+            
         }
+
+       
     }
 }
