@@ -8,13 +8,5 @@ using Xunit;
 namespace Ageofvillagers
 {
    
-    public class Unittest
-    {
-        [Fact]
-        public void test()
-        { 
-            Assert.Equal(2,2);
-        }
-
-    }
+    
 }
