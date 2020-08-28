@@ -105,29 +105,8 @@ namespace Age_Of_Villagers
         //// open the village.json from the machine
         private void buttonOpenVillage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog
-            {
-                InitialDirectory = @"E:\",
-                Title = "Open a village (.json file)",
-
-                CheckFileExists = true,
-                CheckPathExists = true,
-
-                DefaultExt = "aov",
-                Filter = "aov files (*.aov)|*.aov",
-                FilterIndex = 2,
-                RestoreDirectory = true,
-
-                ReadOnlyChecked = true,
-                ShowReadOnly = true
-            };
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                var filePath = openFileDialog1.FileName;
-
-                // Convert the village.json file to village object
-                village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+            village= fileManager.openVillage();
+           
 
                 // Open the uploaded village in the DrawingSpace 
                 villageNameEditor.Text = village.villageName;
@@ -141,7 +120,7 @@ namespace Age_Of_Villagers
             }
 
 
-        }
+        
 
         // Open a villege from village object and selected nation
         private void OpenVillage(Village village,Nation nation )

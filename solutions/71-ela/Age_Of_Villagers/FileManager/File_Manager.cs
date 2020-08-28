@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,10 +48,45 @@ namespace Age_Of_Villagers.FileManager
 
         }
 
-        public void openVillage()
+        public Village openVillage()
         {
+            Village village;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                InitialDirectory = @"E:\",
+                Title = "Open a village (.json file)",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "aov",
+                Filter = "aov files (*.aov)|*.aov",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = openFileDialog1.FileName;
+
+                // Convert the village.json file to village object
+                village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+                return village;
+
+
+            }
+
+            else
+
+                return null;
+
+
+
 
         }
-
     }
 }
+
