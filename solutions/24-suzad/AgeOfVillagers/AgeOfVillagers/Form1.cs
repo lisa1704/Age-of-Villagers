@@ -26,7 +26,10 @@ namespace AgeOfVillagers
         {
             int x = e.X;
             int y = e.Y;
-            MessageBox.Show("X="+x+"; Y="+y);
+            Graphics graphics = pnlDrawingSpace.CreateGraphics();
+            Brush green = new SolidBrush(Color.Green);
+            Pen greenpen = new Pen(green, 10);
+            graphics.DrawLine(greenpen, x, y, 100, 100);
         }
     }
 }
