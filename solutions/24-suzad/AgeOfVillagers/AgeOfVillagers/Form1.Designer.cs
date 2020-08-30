@@ -49,6 +49,8 @@
             this.pnlDrawingSpace.Name = "pnlDrawingSpace";
             this.pnlDrawingSpace.Size = new System.Drawing.Size(600, 400);
             this.pnlDrawingSpace.TabIndex = 0;
+            this.pnlDrawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDrawingSpace_Paint);
+            this.pnlDrawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDrawingSpace_MouseClick);
             // 
             // pnlToolSide
             // 

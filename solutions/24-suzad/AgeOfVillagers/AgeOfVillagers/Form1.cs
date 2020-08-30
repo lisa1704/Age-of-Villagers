@@ -17,5 +17,16 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
+        private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
+        {
+            int x = e.X;
+            int y = e.Y;
+            MessageBox.Show("X="+x+"; Y="+y);
+        }
     }
 }
