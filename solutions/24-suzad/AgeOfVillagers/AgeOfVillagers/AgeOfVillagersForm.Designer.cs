@@ -1,6 +1,6 @@
 ﻿namespace AgeOfVillagers
 {
-    partial class Form1
+    partial class AgeOfVillagersForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -137,6 +137,7 @@
             this.btnNewVillage.TabIndex = 2;
             this.btnNewVillage.Text = "New village";
             this.btnNewVillage.UseVisualStyleBackColor = true;
+            this.btnNewVillage.Click += new System.EventHandler(this.btnNewVillage_Click);
             // 
             // button1
             // 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class Form1 : Form
+    public partial class AgeOfVillagersForm : Form
     {
-        public Form1()
+        public AgeOfVillagersForm()
         {
             InitializeComponent();
         }
@@ -30,6 +30,23 @@ namespace AgeOfVillagers
             Brush green = new SolidBrush(Color.Green);
             Pen greenpen = new Pen(green, 10);
             graphics.DrawLine(greenpen, x, y, 100, 100);
+        }
+
+        public void setVillageName(string name)
+        {
+            this.lblVillageName.Text = name;
+        }
+
+        public void setNationName(string name)
+        {
+            this.lblNationName.Text = name;
+        }
+
+        private void btnNewVillage_Click(object sender, EventArgs e)
+        {
+            NewVillageCreateForm newVillageCreateForm = new NewVillageCreateForm();
+            newVillageCreateForm.Show();
+            this.Hide();
         }
     }
 }
