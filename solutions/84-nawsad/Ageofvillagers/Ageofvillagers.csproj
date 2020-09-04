@@ -59,8 +59,10 @@
     </Compile>
     <Compile Include="Command.cs" />
     <Compile Include="Create_new_Village.cs" />
+    <Compile Include="OpenVillage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveVillage.cs" />
     <EmbeddedResource Include="AgeofVillagers.resx">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </EmbeddedResource>

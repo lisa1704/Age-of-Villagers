@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Ageofvillagers
 {
-    class leftclick : Command
+    class CreateNewVillage : Command
     {
-        public void execute_command(string action)
+        public void execute_command(Form e)
         {
+         
             throw new NotImplementedException();
         }
     }
