@@ -12,6 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
+        int x, y;
         public VillageWindow()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = DrawingPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
 
         }
 
@@ -51,6 +54,14 @@ namespace AgeOfVillagers
         private void Label_villName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point p = new Point(e.X, e.Y);
+            x = p.X;
+            y = p.Y;
+            DrawingPanel.Invalidate();
         }
     }
 }
