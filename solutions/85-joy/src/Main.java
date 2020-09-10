@@ -1,6 +1,19 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
     public static void main(String[] args ){
-        System.out.println("NIGGA!");
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("project/Views/VillageView.fxml"));
+        primaryStage.setTitle("Age of Villagers");
+        primaryStage.setScene(new Scene(root, 820, 400));
+        primaryStage.show();
     }
 }

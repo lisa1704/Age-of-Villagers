@@ -12,7 +12,7 @@ public class DogTest {
         String result = dog.bark();
         Assertions.assertEquals("GHEU!",result);
     }
-    
+
     @Test
     public void BarkTestDefault(){
         Dog dog = new Dog(85);

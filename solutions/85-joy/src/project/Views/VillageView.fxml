@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" />
+      <Pane prefHeight="400.0" prefWidth="223.0" style="-fx-background-color: #cfcfcf;">
+         <children>
+            <Text layoutX="29.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age of Villagers">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Text>
+            <TextField fx:id="Village_Name" alignment="CENTER" focusTraversable="false" layoutX="31.0" layoutY="72.0" prefHeight="26.0" prefWidth="164.0" promptText="Village Name" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
