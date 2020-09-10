@@ -19,7 +19,7 @@ namespace AgeOfVillagers
 
         internal void setObj(object sender)
         {
-            throw new NotImplementedException();
+            
         }
 
         internal void setPanel(Panel drawing_panel)
