@@ -22,6 +22,9 @@
             <Button layoutX="48.0" layoutY="209.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Tree" textFill="WHITE" />
             <Button layoutX="156.0" layoutY="209.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="House" textFill="WHITE" />
             <Button layoutX="102.0" layoutY="243.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Water Source" textFill="WHITE" />
+            <Button layoutX="46.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="New Village" textFill="WHITE" />
+            <Button layoutX="154.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Open Village" textFill="WHITE" />
+            <Button layoutX="100.0" layoutY="317.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Save Village" textFill="WHITE" />
          </children>
       </Pane>
    </children>
