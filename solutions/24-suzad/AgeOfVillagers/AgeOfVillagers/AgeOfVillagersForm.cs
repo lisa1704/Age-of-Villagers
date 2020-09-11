@@ -12,6 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class AgeOfVillagersForm : Form
     {
+        BdFarmerNation bdFarmerNation = new BdFarmerNation();
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -24,12 +25,9 @@ namespace AgeOfVillagers
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
             Graphics graphics = pnlDrawingSpace.CreateGraphics();
-            Brush green = new SolidBrush(Color.Green);
-            Pen greenpen = new Pen(green, 10);
-            graphics.DrawLine(greenpen, x, y, 100, 100);
+            Pen greenpen = new Pen(Color.Green);
+            bdFarmerNation.houseDrawing(e, graphics, greenpen);
         }
 
         public void setVillageName(string name)
