@@ -17,48 +17,16 @@ namespace AgeOfVillagers
         string NationName { get; set; }
         INation GetNation();
     }
-    public class Nation3 : INation
+
+    public class InuitHuntersNationfactory : INationFactory
     {
-        string nationname;
-
-        public Nation3(string nationname)
-        {
-            this.nationname = nationname;
-        }
-
-        public VillageItem GetHouse(Point point)
-        {
-            return new SampleHouse(point);
-        }
-
-        public string GetNationName()
-        {
-            return nationname;
-        }
-        public Color GetTerrainColor()
-        {
-            return Color.LightYellow;
-        }
-
-        public VillageItem GetTree(Point point)
-        {
-            return new Sampletree(point);
-        }
-
-        public VillageItem GetWaterResource(Point point)
-        {
-            return new SampleWaterResource(point);
-        }
-    }
-    public class Nationfactory3 : INationFactory
-    {
-        String Nationname = "nation 3 ";
+        String Nationname = "Inuit Hunters";
 
         public string NationName { get => Nationname; set => Nationname = value; }
 
         public INation GetNation()
         {
-            return new Nation3(Nationname);
+            return new InuitHunters(Nationname);
         }
     }
     public class EgyptianKingsNationfactory : INationFactory

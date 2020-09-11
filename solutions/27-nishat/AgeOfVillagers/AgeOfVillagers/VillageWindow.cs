@@ -32,7 +32,7 @@ namespace AgeOfVillagers
             nationlist.Add(new BangladeshiNationfactory());
             nationlist.Add(new ArabBedouinNationfactory());
             nationlist.Add(new EgyptianKingsNationfactory());
-            nationlist.Add(new Nationfactory3());
+            nationlist.Add(new InuitHuntersNationfactory());
         }
 
         private void btnnewvillage_Click(object sender, EventArgs e)
