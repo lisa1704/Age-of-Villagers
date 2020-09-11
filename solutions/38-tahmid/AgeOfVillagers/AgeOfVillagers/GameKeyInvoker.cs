@@ -6,5 +6,15 @@ namespace AgeOfVillagers
 {
     class GameKeyInvoker
     {
+        Command theCommand;
+        public GameKeyInvoker(Command theCommand)
+        {
+            this.theCommand = theCommand;
+        }
+
+        public void click()
+        {
+            theCommand.execute();
+        }
     }
 }

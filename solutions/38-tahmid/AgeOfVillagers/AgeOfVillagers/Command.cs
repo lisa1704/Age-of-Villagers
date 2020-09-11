@@ -6,5 +6,6 @@ namespace AgeOfVillagers
 {
     interface Command
     {
+        public void execute();
     }
 }

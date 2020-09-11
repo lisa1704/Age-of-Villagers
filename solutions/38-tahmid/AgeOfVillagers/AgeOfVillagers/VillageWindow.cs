@@ -44,18 +44,25 @@ namespace AgeOfVillagers
         practice pr = new practice();
         private void New_Village(object sender, EventArgs e)
         {
+            GameFactory gameFactory = new GameFactory();
+            Games game = gameFactory.getGame();
+            CommandFactory commandFactory = new CommandFactory();
+            Command onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name);
+            GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
+            gameKeyInvoker.click();
            
-            village_name.Text = "Okay";
-            pr.setName(village_name);
-            Graphics g = drawing_panel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-            g.DrawEllipse(p, 10, 10, 100, 100);
+      
 
         }
 
         private void Open_village(object sender, EventArgs e)
         {
-            pr.setPanel(drawing_panel);
+            village_name.Text = "Okay";
+            pr.setName(village_name);
+            Graphics g = drawing_panel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+            g.DrawEllipse(p, 10, 10, 100, 100);
+            //pr.setPanel(drawing_panel);
             
         }
 

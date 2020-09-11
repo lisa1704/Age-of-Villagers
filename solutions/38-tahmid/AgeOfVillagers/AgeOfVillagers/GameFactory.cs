@@ -6,5 +6,10 @@ namespace AgeOfVillagers
 {
     class GameFactory
     {
+        public Games getGame()
+        {
+            Console.WriteLine("xx");
+            return new AOV();
+        }
     }
 }
