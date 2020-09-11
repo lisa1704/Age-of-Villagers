@@ -27,7 +27,14 @@ namespace AgeOfVillagers
         {
             Graphics graphics = pnlDrawingSpace.CreateGraphics();
             Pen greenpen = new Pen(Color.Green);
-            bdFarmerNation.houseDrawing(e, graphics, greenpen);
+            if (radiobtnHouse.Checked == true)
+            {
+                bdFarmerNation.houseDrawing(e, graphics, greenpen);
+            }
+            else if (radiobtnTree.Checked == true)
+            {
+                bdFarmerNation.treeDrawing(e, graphics, greenpen);
+            }
         }
 
         public void setVillageName(string name)
