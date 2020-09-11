@@ -52,6 +52,7 @@
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 0;
             this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
+            this.drawing_space.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawing_space_MouseClick);
             // 
             // panel2
             // 
@@ -144,6 +145,7 @@
             this.radioButton_tree.TabStop = true;
             this.radioButton_tree.Text = "Tree";
             this.radioButton_tree.UseVisualStyleBackColor = true;
+           
             // 
             // radioButton_house
             // 
