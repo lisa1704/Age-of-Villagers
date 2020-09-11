@@ -35,6 +35,10 @@ namespace AgeOfVillagers
             {
                 bdFarmerNation.treeDrawing(e, graphics, greenpen);
             }
+            else if (radiobtnWaterSource.Checked == true)
+            {
+                bdFarmerNation.riverDrawing(e, graphics, greenpen);
+            }
         }
 
         public void setVillageName(string name)
