@@ -41,9 +41,9 @@ namespace AgeOfVillagers
             this.NewButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.watersource = new System.Windows.Forms.Button();
-            this.tree = new System.Windows.Forms.Button();
-            this.house = new System.Windows.Forms.Button();
+            this.watersource = new System.Windows.Forms.RadioButton();
+            this.tree = new System.Windows.Forms.RadioButton();
+            this.house = new System.Windows.Forms.RadioButton();
             this.villagename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -117,13 +117,15 @@ namespace AgeOfVillagers
             // 
             // watersource
             // 
+            this.watersource.AutoSize = true;
             this.watersource.Location = new System.Drawing.Point(53, 218);
             this.watersource.Name = "watersource";
             this.watersource.Size = new System.Drawing.Size(135, 32);
             this.watersource.TabIndex = 5;
+            this.watersource.TabStop = true;
             this.watersource.Text = "Water Source";
             this.watersource.UseVisualStyleBackColor = true;
-            this.watersource.Click += new System.EventHandler(this.Watersource_Click);
+            
             // 
             // tree
             // 
@@ -133,7 +135,7 @@ namespace AgeOfVillagers
             this.tree.TabIndex = 4;
             this.tree.Text = "Tree";
             this.tree.UseVisualStyleBackColor = true;
-            this.tree.Click += new System.EventHandler(this.Tree_Click);
+            
             // 
             // house
             // 
@@ -143,8 +145,7 @@ namespace AgeOfVillagers
             this.house.TabIndex = 3;
             this.house.Text = "House";
             this.house.UseVisualStyleBackColor = true;
-            this.house.Click += new System.EventHandler(this.House_Click);
-            // 
+            //
             // villagename
             // 
             this.villagename.Location = new System.Drawing.Point(23, 74);
@@ -208,9 +209,9 @@ namespace AgeOfVillagers
         private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Panel drawpanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button watersource;
-        private System.Windows.Forms.Button tree;
-        private System.Windows.Forms.Button house;
+        private System.Windows.Forms.RadioButton watersource;
+        private System.Windows.Forms.RadioButton tree;
+        private System.Windows.Forms.RadioButton house;
         private System.Windows.Forms.TextBox villagename;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button NewButton;

@@ -1,24 +1,11 @@
-﻿using System;
+﻿using AgeOfVillagers.Nations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Bangladeshi : INation
+    public class Bangladeshi : Nation
     {
-        public void DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DrawTree()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DrawWaterResource()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

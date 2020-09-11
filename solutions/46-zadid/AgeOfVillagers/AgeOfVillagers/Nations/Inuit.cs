@@ -1,20 +1,9 @@
-﻿namespace AgeOfVillagers
+﻿using AgeOfVillagers.Nations;
+
+namespace AgeOfVillagers
 {
-    class Inuit : INation
+    class Inuit : Nation
     {
-        public void DrawHouse()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void DrawTree()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void DrawWaterResource()
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

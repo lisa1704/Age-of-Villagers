@@ -47,21 +47,6 @@ namespace AgeOfVillagers
 
         }
 
-        private void House_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tree_Click(object sender, EventArgs e)
-        {
-            nation.DrawTree();
-        }
-
-        private void Watersource_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void NationtypeSelectedIndexChanged(object sender, EventArgs e)
         {
             villname = villagename.Text;

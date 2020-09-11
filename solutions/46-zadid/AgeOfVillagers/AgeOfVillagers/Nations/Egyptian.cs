@@ -1,24 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AgeOfVillagers.Nations;
 
 namespace AgeOfVillagers
 {
-    class Egyptian : INation
+    public class Egyptian : Nation
     {
-        public void DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DrawTree()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DrawWaterResource()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
