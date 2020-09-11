@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractHouse.cs" />
+    <Compile Include="BedouinHouse.cs" />
+    <Compile Include="IElement.cs" />
     <Compile Include="CreateEditVIllage.cs">
       <SubType>Form</SubType>
     </Compile>
