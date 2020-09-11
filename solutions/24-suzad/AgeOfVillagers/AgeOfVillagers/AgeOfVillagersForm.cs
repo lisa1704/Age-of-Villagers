@@ -12,46 +12,49 @@ namespace AgeOfVillagers
 {
     public partial class AgeOfVillagersForm : Form
     {
-        BdFarmerNation bdFarmerNation = new BdFarmerNation();
-        ArabBedouinNation arabBedouinNation = new ArabBedouinNation();
-        EgyptianKingNation egyptianKingNation = new EgyptianKingNation();
-        InuitHunterNation inuitHunterNation = new InuitHunterNation();
+        public string nationName;
+        public string villageName;
+        public string rdbtn;
         public AgeOfVillagersForm()
         {
             InitializeComponent();
         }
 
-        private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
-        {
-            Graphics graphics = pnlDrawingSpace.CreateGraphics();
-            Pen greenpen = new Pen(Color.Green);
-            if (radiobtnHouse.Checked)
-            {
-                inuitHunterNation.houseDrawing(e, graphics, greenpen);
-            }
-            else if (radiobtnTree.Checked)
-            {
-                egyptianKingNation.treeDrawing(e, graphics, greenpen);
-            }
-            else if (radiobtnWaterSource.Checked)
-            {
-                egyptianKingNation.riverDrawing(e, graphics, greenpen);
-            }
-        }
-
         public void setVillageName(string name)
         {
             this.lblVillageName.Text = name;
+            villageName = name;
         }
 
         public void setNationName(string name)
         {
             this.lblNationName.Text = name;
+            nationName = name;
+        }
+        public void setRadioButton()
+        {
+            if (radiobtnHouse.Checked)
+            {
+                rdbtn = radiobtnHouse.Text;
+            }
+            else if (radiobtnTree.Checked)
+            {
+                rdbtn = radiobtnTree.Text;
+            }
+            else if (radiobtnWaterSource.Checked)
+            {
+                rdbtn = radiobtnWaterSource.Text;
+            }
+        }
+
+        private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics graphics = pnlDrawingSpace.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+            setRadioButton();
+            VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
+            IVillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn);
+            villageComponent.drawComponent(e, graphics, pen);
         }
 
         private void btnNewVillage_Click(object sender, EventArgs e)
@@ -59,6 +62,15 @@ namespace AgeOfVillagers
             NewVillageCreateForm newVillageCreateForm = new NewVillageCreateForm();
             newVillageCreateForm.Show();
             this.Hide();
+        }
+
+        private void AgeOfVillagersForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

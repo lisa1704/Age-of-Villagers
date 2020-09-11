@@ -31,9 +31,9 @@
             this.lblVillageName = new System.Windows.Forms.Label();
             this.txtboxVillageName = new System.Windows.Forms.TextBox();
             this.lblNationName = new System.Windows.Forms.Label();
-            this.txtboxNationName = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.comboBoxNationName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblVillageName
@@ -63,13 +63,6 @@
             this.lblNationName.TabIndex = 0;
             this.lblNationName.Text = "Nation Name";
             // 
-            // txtboxNationName
-            // 
-            this.txtboxNationName.Location = new System.Drawing.Point(286, 101);
-            this.txtboxNationName.Name = "txtboxNationName";
-            this.txtboxNationName.Size = new System.Drawing.Size(316, 27);
-            this.txtboxNationName.TabIndex = 1;
-            // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -92,14 +85,27 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // comboBoxNationName
+            // 
+            this.comboBoxNationName.FormattingEnabled = true;
+            this.comboBoxNationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmer",
+            "Arab Bedouin",
+            "Egyptian King",
+            "Inuit Hunter"});
+            this.comboBoxNationName.Location = new System.Drawing.Point(286, 101);
+            this.comboBoxNationName.Name = "comboBoxNationName";
+            this.comboBoxNationName.Size = new System.Drawing.Size(316, 28);
+            this.comboBoxNationName.TabIndex = 3;
+            // 
             // NewVillageCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxNationName);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtboxNationName);
             this.Controls.Add(this.lblNationName);
             this.Controls.Add(this.txtboxVillageName);
             this.Controls.Add(this.lblVillageName);
@@ -115,8 +121,8 @@
         private System.Windows.Forms.Label lblVillageName;
         private System.Windows.Forms.TextBox txtboxVillageName;
         private System.Windows.Forms.Label lblNationName;
-        private System.Windows.Forms.TextBox txtboxNationName;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.ComboBox comboBoxNationName;
     }
 }

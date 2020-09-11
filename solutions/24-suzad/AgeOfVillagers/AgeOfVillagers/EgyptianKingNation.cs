@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class EgyptianKingNation
     {
-        public void houseDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
+        /*public void houseDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -36,6 +36,6 @@ namespace AgeOfVillagers
             int x = e.X;
             int y = e.Y;
             graphics.DrawArc(pen, x - 6, y - 6, 12, 12, 0, 360);
-        }
+        }*/
     }
 }

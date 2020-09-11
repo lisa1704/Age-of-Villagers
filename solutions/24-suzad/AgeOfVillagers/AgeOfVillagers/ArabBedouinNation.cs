@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class ArabBedouinNation
     {
-        public void houseDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
+        /*public void houseDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -18,8 +18,8 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 5, y - 10, x-10, y);
             graphics.DrawLine(pen, x - 5, y - 10, x, y);
             graphics.DrawLine(pen, x - 10, y, x, y);
-        }
-        public void treeDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
+        }*/
+        /*public void treeDrawing(MouseEventArgs e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -32,6 +32,6 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x, y, x, y-10);
             graphics.DrawLine(pen, x, y, x-4, y-10);
             graphics.DrawLine(pen, x - 1, y, x-8, y-10);
-        }
+        }*/
     }
 }

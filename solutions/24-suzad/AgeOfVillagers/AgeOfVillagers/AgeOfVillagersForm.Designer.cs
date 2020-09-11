@@ -148,7 +148,7 @@
             this.button1.Text = "Open village";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // AgeOfVillagersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,8 +163,9 @@
             this.Controls.Add(this.lblVillageName);
             this.Controls.Add(this.lblAgeOfVillagers);
             this.Controls.Add(this.pnlDrawingSpace);
-            this.Name = "Form1";
+            this.Name = "AgeOfVillagersForm";
             this.Text = "Age of Villagers";
+            this.Load += new System.EventHandler(this.AgeOfVillagersForm_Load);
             this.pnlDrawingSpace.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,7 +178,7 @@
         private System.Windows.Forms.Panel pnlToolSide;
         private System.Windows.Forms.Label lblAgeOfVillagers;
         private System.Windows.Forms.Label lblVillageName;
-        private System.Windows.Forms.Label lblNationName;
+        public System.Windows.Forms.Label lblNationName;
         private System.Windows.Forms.RadioButton radiobtnTree;
         private System.Windows.Forms.RadioButton radiobtnHouse;
         private System.Windows.Forms.RadioButton radiobtnWaterSource;
