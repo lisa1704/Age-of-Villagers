@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,63 +11,73 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
-        private String VillageName, NationName;
-
         public VillageWindow()
         {
             InitializeComponent();
         }
 
 
-        private void OnClickNewVillage(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            NewForm();
+
         }
 
-        private void OnClickOpenVillage(object sender, EventArgs e)
+        private void drawpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void OnClickSaveVillage(object sender, EventArgs e)
+        private void Draw_panel(object sender, PaintEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void OnClickWaterRadioButton(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void OnClickHouseRadioButton(object sender, EventArgs e)
+        private void Villagename_KeyDown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void OnClickTreeRadioButton(object sender, EventArgs e)
+        private void House_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void TextNation_TextChanged(object sender, EventArgs e)
+        private void Tree_Click(object sender, EventArgs e)
         {
-            NationName = NationNameText.Text;
+
         }
 
-        private void TextVillageName_TextChanged(object sender, EventArgs e)
+        private void Watersource_Click(object sender, EventArgs e)
         {
-            VillageName = VillageNameText.Text;
+
         }
 
-        private void NewForm()
+        private void Vallagetype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            VillageNameText.Text = "Name of the Village";
-            NationNameText.Text = "Name of the Nation";
-            HouseRadioButton.Checked = false;
-            TreeRadioButton.Checked = false;
-            WaterRadioButton.Checked = false;
-            this.Invalidate();
+
         }
-        
+
+        private void Side_panel(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RefreshForm(object sender, EventArgs e)
+        {
+            foreach (var item in sidepanel.Controls)
+                if(item.GetType().Equals(typeof(TextBox)))
+                {
+                    TextBox t = item as TextBox;
+                    t.Text = string.Empty;
+                }
+            villagetype.ResetText();
+            villagetype.Text = "Village type";
+            drawpanel.Invalidate();
+        }
     }
 }

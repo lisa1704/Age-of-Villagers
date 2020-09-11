@@ -36,190 +36,185 @@ namespace AgeOfVillagers
 
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.OpenVillageButton = new System.Windows.Forms.Button();
-            this.NewVillageButton = new System.Windows.Forms.Button();
-            this.SaveVillageButton = new System.Windows.Forms.Button();
-            this.WaterRadioButton = new System.Windows.Forms.RadioButton();
-            this.HouseRadioButton = new System.Windows.Forms.RadioButton();
-            this.TreeRadioButton = new System.Windows.Forms.RadioButton();
-            this.NationNameText = new System.Windows.Forms.TextBox();
-            this.VillageNameText = new System.Windows.Forms.TextBox();
-            this.Title = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.sidepanel = new System.Windows.Forms.Panel();
+            this.villagetype = new System.Windows.Forms.ComboBox();
+            this.NewButton = new System.Windows.Forms.Button();
+            this.OpenButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.watersource = new System.Windows.Forms.Button();
+            this.tree = new System.Windows.Forms.Button();
+            this.house = new System.Windows.Forms.Button();
+            this.villagename = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.drawpanel = new System.Windows.Forms.Panel();
+            this.sidepanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // sidepanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.OpenVillageButton);
-            this.panel1.Controls.Add(this.NewVillageButton);
-            this.panel1.Controls.Add(this.SaveVillageButton);
-            this.panel1.Controls.Add(this.WaterRadioButton);
-            this.panel1.Controls.Add(this.HouseRadioButton);
-            this.panel1.Controls.Add(this.TreeRadioButton);
-            this.panel1.Controls.Add(this.NationNameText);
-            this.panel1.Controls.Add(this.VillageNameText);
-            this.panel1.Controls.Add(this.Title);
-            this.panel1.Location = new System.Drawing.Point(592, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 364);
-            this.panel1.TabIndex = 0;
+            this.sidepanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.sidepanel.Controls.Add(this.villagetype);
+            this.sidepanel.Controls.Add(this.NewButton);
+            this.sidepanel.Controls.Add(this.OpenButton);
+            this.sidepanel.Controls.Add(this.SaveButton);
+            this.sidepanel.Controls.Add(this.watersource);
+            this.sidepanel.Controls.Add(this.tree);
+            this.sidepanel.Controls.Add(this.house);
+            this.sidepanel.Controls.Add(this.villagename);
+            this.sidepanel.Controls.Add(this.label2);
+            this.sidepanel.Controls.Add(this.label1);
+            this.sidepanel.Location = new System.Drawing.Point(600, 0);
+            this.sidepanel.Name = "sidepanel";
+            this.sidepanel.Size = new System.Drawing.Size(250, 400);
+            this.sidepanel.TabIndex = 0;
+            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Side_panel);
             // 
-            // OpenVillageButton
+            // villagetype
             // 
-            this.OpenVillageButton.BackColor = System.Drawing.Color.Black;
-            this.OpenVillageButton.FlatAppearance.BorderSize = 0;
-            this.OpenVillageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenVillageButton.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpenVillageButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OpenVillageButton.Location = new System.Drawing.Point(116, 317);
-            this.OpenVillageButton.Name = "OpenVillageButton";
-            this.OpenVillageButton.Size = new System.Drawing.Size(100, 25);
-            this.OpenVillageButton.TabIndex = 8;
-            this.OpenVillageButton.TabStop = false;
-            this.OpenVillageButton.Text = "Open Village";
-            this.OpenVillageButton.UseVisualStyleBackColor = false;
-            this.OpenVillageButton.Click += new System.EventHandler(this.OnClickOpenVillage);
+            this.villagetype.FormattingEnabled = true;
+            this.villagetype.Items.AddRange(new String[] {
+            "Bangladeshi",
+            "Egyptian",
+            "Arab",
+            "Inuit"
+            });
+            this.villagetype.Location = new System.Drawing.Point(23, 102);
+            this.villagetype.Name = "villagetype";
+            this.villagetype.Size = new System.Drawing.Size(185, 24);
+            this.villagetype.TabIndex = 10;
+            this.villagetype.Text = "Village type";
+            this.villagetype.SelectedIndexChanged += new System.EventHandler(this.Vallagetype_SelectedIndexChanged);
             // 
-            // NewVillageButton
+            // NewButton
             // 
-            this.NewVillageButton.BackColor = System.Drawing.Color.Black;
-            this.NewVillageButton.FlatAppearance.BorderSize = 0;
-            this.NewVillageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewVillageButton.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewVillageButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NewVillageButton.Location = new System.Drawing.Point(13, 317);
-            this.NewVillageButton.Name = "NewVillageButton";
-            this.NewVillageButton.Size = new System.Drawing.Size(100, 25);
-            this.NewVillageButton.TabIndex = 7;
-            this.NewVillageButton.TabStop = false;
-            this.NewVillageButton.Text = "New Village";
-            this.NewVillageButton.UseVisualStyleBackColor = false;
-            this.NewVillageButton.Click += new System.EventHandler(this.OnClickNewVillage);
+            this.NewButton.Location = new System.Drawing.Point(53, 346);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(134, 36);
+            this.NewButton.TabIndex = 8;
+            this.NewButton.Text = "New Village";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new EventHandler(this.RefreshForm);
             // 
-            // SaveVillageButton
+            // OpenButton
             // 
-            this.SaveVillageButton.BackColor = System.Drawing.Color.Black;
-            this.SaveVillageButton.FlatAppearance.BorderSize = 0;
-            this.SaveVillageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveVillageButton.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveVillageButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.SaveVillageButton.Location = new System.Drawing.Point(65, 288);
-            this.SaveVillageButton.Name = "SaveVillageButton";
-            this.SaveVillageButton.Size = new System.Drawing.Size(100, 25);
-            this.SaveVillageButton.TabIndex = 6;
-            this.SaveVillageButton.TabStop = false;
-            this.SaveVillageButton.Text = "Save Village";
-            this.SaveVillageButton.UseVisualStyleBackColor = false;
-            this.SaveVillageButton.Click += new System.EventHandler(this.OnClickSaveVillage);
+            this.OpenButton.Location = new System.Drawing.Point(52, 306);
+            this.OpenButton.Name = "OpenButton";
+            this.OpenButton.Size = new System.Drawing.Size(135, 34);
+            this.OpenButton.TabIndex = 7;
+            this.OpenButton.Text = "Open Village";
+            this.OpenButton.UseVisualStyleBackColor = true;
             // 
-            // WaterRadioButton
+            // SaveButton
             // 
-            this.WaterRadioButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WaterRadioButton.Location = new System.Drawing.Point(52, 215);
-            this.WaterRadioButton.Name = "WaterRadioButton";
-            this.WaterRadioButton.Size = new System.Drawing.Size(122, 20);
-            this.WaterRadioButton.TabIndex = 5;
-            this.WaterRadioButton.TabStop = true;
-            this.WaterRadioButton.Text = "Water Resource";
-            this.WaterRadioButton.UseVisualStyleBackColor = true;
-            this.WaterRadioButton.CheckedChanged += new System.EventHandler(this.OnClickWaterRadioButton);
+            this.SaveButton.Location = new System.Drawing.Point(52, 267);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(135, 33);
+            this.SaveButton.TabIndex = 6;
+            this.SaveButton.Text = "Save Village";
+            this.SaveButton.UseVisualStyleBackColor = true;
             // 
-            // HouseRadioButton
+            // watersource
             // 
-            this.HouseRadioButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HouseRadioButton.Location = new System.Drawing.Point(52, 192);
-            this.HouseRadioButton.Name = "HouseRadioButton";
-            this.HouseRadioButton.Size = new System.Drawing.Size(122, 20);
-            this.HouseRadioButton.TabIndex = 4;
-            this.HouseRadioButton.TabStop = true;
-            this.HouseRadioButton.Text = "House";
-            this.HouseRadioButton.UseVisualStyleBackColor = true;
-            this.HouseRadioButton.CheckedChanged += new System.EventHandler(this.OnClickHouseRadioButton);
+            this.watersource.Location = new System.Drawing.Point(53, 218);
+            this.watersource.Name = "watersource";
+            this.watersource.Size = new System.Drawing.Size(135, 32);
+            this.watersource.TabIndex = 5;
+            this.watersource.Text = "Water Source";
+            this.watersource.UseVisualStyleBackColor = true;
+            this.watersource.Click += new System.EventHandler(this.Watersource_Click);
             // 
-            // TreeRadioButton
+            // tree
             // 
-            this.TreeRadioButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TreeRadioButton.Location = new System.Drawing.Point(52, 169);
-            this.TreeRadioButton.Name = "TreeRadioButton";
-            this.TreeRadioButton.Size = new System.Drawing.Size(122, 20);
-            this.TreeRadioButton.TabIndex = 3;
-            this.TreeRadioButton.TabStop = true;
-            this.TreeRadioButton.Text = "Tree";
-            this.TreeRadioButton.UseVisualStyleBackColor = true;
-            this.TreeRadioButton.CheckedChanged += new System.EventHandler(this.OnClickTreeRadioButton);
+            this.tree.Location = new System.Drawing.Point(120, 181);
+            this.tree.Name = "tree";
+            this.tree.Size = new System.Drawing.Size(88, 32);
+            this.tree.TabIndex = 4;
+            this.tree.Text = "Tree";
+            this.tree.UseVisualStyleBackColor = true;
+            this.tree.Click += new System.EventHandler(this.Tree_Click);
             // 
-            // NationNameText
+            // house
             // 
-            this.NationNameText.BackColor = System.Drawing.Color.Gray;
-            this.NationNameText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NationNameText.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NationNameText.Location = new System.Drawing.Point(18, 108);
-            this.NationNameText.Name = "NationNameText";
-            this.NationNameText.Size = new System.Drawing.Size(186, 20);
-            this.NationNameText.TabIndex = 2;
-            this.NationNameText.Text = "Name of the Nation";
-            this.NationNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NationNameText.TextChanged += new System.EventHandler(this.TextNation_TextChanged);
+            this.house.Location = new System.Drawing.Point(23, 181);
+            this.house.Name = "house";
+            this.house.Size = new System.Drawing.Size(91, 31);
+            this.house.TabIndex = 3;
+            this.house.Text = "House";
+            this.house.UseVisualStyleBackColor = true;
+            this.house.Click += new System.EventHandler(this.House_Click);
             // 
-            // VillageNameText
+            // villagename
             // 
-            this.VillageNameText.BackColor = System.Drawing.Color.Gray;
-            this.VillageNameText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.VillageNameText.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VillageNameText.Location = new System.Drawing.Point(18, 86);
-            this.VillageNameText.Name = "VillageNameText";
-            this.VillageNameText.Size = new System.Drawing.Size(186, 20);
-            this.VillageNameText.TabIndex = 1;
-            this.VillageNameText.Text = "Name of the Village";
-            this.VillageNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VillageNameText.TextChanged += new System.EventHandler(this.TextVillageName_TextChanged);
+            this.villagename.Location = new System.Drawing.Point(23, 74);
+            this.villagename.Name = "villagename";
+            this.villagename.Size = new System.Drawing.Size(185, 22);
+            this.villagename.TabIndex = 2;
+            this.villagename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Villagename_KeyDown);
             // 
-            // Title
+            // label2
             // 
-            this.Title.BackColor = System.Drawing.Color.Gray;
-            this.Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Title.Enabled = false;
-            this.Title.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(18, 22);
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            this.Title.Size = new System.Drawing.Size(186, 30);
-            this.Title.TabIndex = 3;
-            this.Title.TabStop = false;
-            this.Title.Text = "Age of Villagers";
-            this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(75, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Village Name";
             // 
-            // CreateEditVIllage
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Age Of Villagers";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // drawpanel
+            // 
+            this.drawpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.drawpanel.Location = new System.Drawing.Point(2, 0);
+            this.drawpanel.Name = "drawpanel";
+            this.drawpanel.Size = new System.Drawing.Size(600, 400);
+            this.drawpanel.TabIndex = 1;
+            this.drawpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Draw_panel);
+            this.drawpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawpanel_MouseClick);
+            // 
+            // VillageWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(819, 361);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "CreateEditVIllage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Age Of Villagers";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(850, 400);
+            this.Controls.Add(this.drawpanel);
+            this.Controls.Add(this.sidepanel);
+            this.Name = "VillageWindow";
+            this.Text = "Village Window";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.sidepanel.ResumeLayout(false);
+            this.sidepanel.PerformLayout();
             this.ResumeLayout(false);
+
         }
+
+        
+
+
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox NationNameText;
-        private System.Windows.Forms.TextBox VillageNameText;
-        private System.Windows.Forms.RadioButton WaterRadioButton;
-        private System.Windows.Forms.RadioButton HouseRadioButton;
-        private System.Windows.Forms.RadioButton TreeRadioButton;
-        private System.Windows.Forms.Button OpenVillageButton;
-        private System.Windows.Forms.Button NewVillageButton;
-        private System.Windows.Forms.Button SaveVillageButton;
-        private System.Windows.Forms.TextBox Title;
+        private System.Windows.Forms.Panel sidepanel;
+        private System.Windows.Forms.Panel drawpanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button watersource;
+        private System.Windows.Forms.Button tree;
+        private System.Windows.Forms.Button house;
+        private System.Windows.Forms.TextBox villagename;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button NewButton;
+        private System.Windows.Forms.Button OpenButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.ComboBox villagetype;
     }
 }
