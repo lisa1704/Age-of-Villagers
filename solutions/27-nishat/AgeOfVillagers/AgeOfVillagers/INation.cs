@@ -18,76 +18,6 @@ namespace AgeOfVillagers
         INation GetNation();
     }
 
-    public class BalgladeshiFarmers : INation
-    {
-        private readonly string nationname;
-
-        public BalgladeshiFarmers(string nationname)
-        {
-            this.nationname = nationname;
-        }
-
-        public string GetNationName()
-        {
-            return nationname;
-        }
-
-        public Color GetTerrainColor()
-        {
-            return Color.Green;
-        }
-
-        public VillageItem GetHouse(Point point)
-        {
-            return new SampleHouse(point);
-        }
-
-        public VillageItem GetTree(Point point)
-        {
-            return new Sampletree(point);
-        }
-
-        public VillageItem GetWaterResource(Point point)
-        {
-            return new SampleWaterResource(point);
-        }
-    }
-
-    public class Nation1 : INation
-    {
-        string nationname;
-
-        public Nation1(string nationname)
-        {
-            this.nationname = nationname;
-        }
-
-        public VillageItem GetHouse(Point point)
-        {
-            return new SampleHouse(point);
-        }
-
-        public string GetNationName()
-        {
-            return nationname;
-        }
-
-        public Color GetTerrainColor()
-        {
-            return Color.Green;
-        }
-
-        public VillageItem GetTree(Point point)
-        {
-            return new Sampletree(point);
-        }
-
-        public VillageItem GetWaterResource(Point point)
-        {
-            return new SampleWaterResource(point);
-        }
-    }
-
     public class Nation2 : INation
     {
         string nationname;
@@ -141,7 +71,7 @@ namespace AgeOfVillagers
         }
         public Color GetTerrainColor()
         {
-            return Color.Red;
+            return Color.LightYellow;
         }
 
         public VillageItem GetTree(Point point)
@@ -176,15 +106,15 @@ namespace AgeOfVillagers
             return new Nation2(Nationname);
         }
     }
-    public class Nationfactory1 : INationFactory
+    public class ArabBedouinNationfactory : INationFactory
     {
-        String Nationname = "nation 1 ";
+        String Nationname = "Arab Bedouin";
 
         public string NationName { get => Nationname; set => Nationname = value; }
 
         public INation GetNation()
         {
-            return new Nation1(Nationname);
+            return new ArabBedouin(Nationname);
         }
     }
     public class BangladeshiNationfactory : INationFactory

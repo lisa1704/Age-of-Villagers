@@ -30,7 +30,7 @@ namespace AgeOfVillagers
         private void Villagewindow_Load(object sender, EventArgs e)
         {
             nationlist.Add(new BangladeshiNationfactory());
-            nationlist.Add(new Nationfactory1());
+            nationlist.Add(new ArabBedouinNationfactory());
             nationlist.Add(new Nationfactory2());
             nationlist.Add(new Nationfactory3());
         }
