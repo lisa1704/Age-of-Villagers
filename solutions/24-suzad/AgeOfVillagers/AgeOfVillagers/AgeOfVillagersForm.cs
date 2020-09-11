@@ -73,6 +73,7 @@ namespace AgeOfVillagers
             if(nationName=="Inuit Hunter")
             {
                 radiobtnTree.Enabled = false;
+                radiobtnWaterSource.Enabled = false;
             }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
