@@ -13,6 +13,7 @@ namespace AgeOfVillagers
     public partial class AgeOfVillagersForm : Form
     {
         BdFarmerNation bdFarmerNation = new BdFarmerNation();
+        ArabBedouinNation arabBedouinNation = new ArabBedouinNation();
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -29,11 +30,11 @@ namespace AgeOfVillagers
             Pen greenpen = new Pen(Color.Green);
             if (radiobtnHouse.Checked)
             {
-                bdFarmerNation.houseDrawing(e, graphics, greenpen);
+                arabBedouinNation.houseDrawing(e, graphics, greenpen);
             }
             else if (radiobtnTree.Checked)
             {
-                bdFarmerNation.treeDrawing(e, graphics, greenpen);
+                arabBedouinNation.treeDrawing(e, graphics, greenpen);
             }
             else if (radiobtnWaterSource.Checked)
             {
