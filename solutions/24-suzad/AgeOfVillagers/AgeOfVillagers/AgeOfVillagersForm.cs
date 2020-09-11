@@ -69,6 +69,7 @@ namespace AgeOfVillagers
             if(nationName=="Arab Bedouin")
             {
                 radiobtnWaterSource.Enabled = false;
+                pnlDrawingSpace.BackColor = Color.LightYellow;
             }
             if(nationName=="Inuit Hunter")
             {
