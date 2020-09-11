@@ -66,7 +66,10 @@ namespace AgeOfVillagers
 
         private void AgeOfVillagersForm_Load(object sender, EventArgs e)
         {
-
+            if(nationName=="Arab Bedouin")
+            {
+                radiobtnWaterSource.Enabled = false;
+            }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
         {
