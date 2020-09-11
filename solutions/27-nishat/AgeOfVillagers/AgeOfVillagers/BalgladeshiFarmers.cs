@@ -23,7 +23,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            return new SampleHouse(point);
+            return new BangladeshiHouse(point);
         }
 
         public VillageItem GetTree(Point point)
