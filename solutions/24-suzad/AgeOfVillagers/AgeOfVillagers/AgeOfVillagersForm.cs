@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         BdFarmerNation bdFarmerNation = new BdFarmerNation();
         ArabBedouinNation arabBedouinNation = new ArabBedouinNation();
         EgyptianKingNation egyptianKingNation = new EgyptianKingNation();
+        InuitHunterNation inuitHunterNation = new InuitHunterNation();
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace AgeOfVillagers
             Pen greenpen = new Pen(Color.Green);
             if (radiobtnHouse.Checked)
             {
-                egyptianKingNation.houseDrawing(e, graphics, greenpen);
+                inuitHunterNation.houseDrawing(e, graphics, greenpen);
             }
             else if (radiobtnTree.Checked)
             {
