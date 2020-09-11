@@ -76,6 +76,10 @@ namespace AgeOfVillagers
                 radiobtnWaterSource.Enabled = false;
                 pnlDrawingSpace.BackColor = Color.White;
             }
+            if(nationName=="Egyptian King")
+            {
+                pnlDrawingSpace.BackColor = Color.Yellow;
+            }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
         {
