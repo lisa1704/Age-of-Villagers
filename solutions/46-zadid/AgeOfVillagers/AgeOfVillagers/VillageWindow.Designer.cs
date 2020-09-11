@@ -68,7 +68,7 @@ namespace AgeOfVillagers
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(250, 400);
             this.sidepanel.TabIndex = 0;
-            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Side_panel);
+            
             // 
             // NationType
             // 
@@ -125,20 +125,24 @@ namespace AgeOfVillagers
             this.watersource.TabStop = true;
             this.watersource.Text = "Water Source";
             this.watersource.UseVisualStyleBackColor = true;
-            
+
             // 
             // tree
-            // 
+            //
+            this.tree.AutoSize = true;
+            this.tree.TabStop = true;
             this.tree.Location = new System.Drawing.Point(120, 181);
             this.tree.Name = "tree";
             this.tree.Size = new System.Drawing.Size(88, 32);
             this.tree.TabIndex = 4;
             this.tree.Text = "Tree";
             this.tree.UseVisualStyleBackColor = true;
-            
+
             // 
             // house
-            // 
+            //
+            this.house.AutoSize = true;
+            this.house.TabStop = true;
             this.house.Location = new System.Drawing.Point(23, 181);
             this.house.Name = "house";
             this.house.Size = new System.Drawing.Size(91, 31);
@@ -152,7 +156,7 @@ namespace AgeOfVillagers
             this.villagename.Name = "villagename";
             this.villagename.Size = new System.Drawing.Size(185, 22);
             this.villagename.TabIndex = 2;
-            this.villagename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Villagename_KeyDown);
+           
             // 
             // label2
             // 
@@ -172,7 +176,7 @@ namespace AgeOfVillagers
             this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Age Of Villagers";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            
             // 
             // drawpanel
             // 
@@ -181,8 +185,7 @@ namespace AgeOfVillagers
             this.drawpanel.Name = "drawpanel";
             this.drawpanel.Size = new System.Drawing.Size(600, 400);
             this.drawpanel.TabIndex = 1;
-            this.drawpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Draw_panel);
-            this.drawpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawpanel_MouseClick);
+            this.drawpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawpanel_MouseClick);
             // 
             // VillageWindow
             // 
@@ -199,10 +202,6 @@ namespace AgeOfVillagers
             this.ResumeLayout(false);
 
         }
-
-        
-
-
 
         #endregion
 

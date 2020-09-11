@@ -12,6 +12,7 @@ namespace AgeOfVillagers
     
     public partial class VillageWindow : Form
     {
+        readonly Graphics graphic;
         private string villname, villtype;
 
         private INation nation;
@@ -19,6 +20,7 @@ namespace AgeOfVillagers
         public VillageWindow()
         {
             InitializeComponent();
+            graphic = drawpanel.CreateGraphics();
         }
 
 
@@ -27,26 +29,25 @@ namespace AgeOfVillagers
             NationType.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void drawpanel_MouseClick(object sender, MouseEventArgs e)
+        private void Drawpanel_MouseClick(object sender, MouseEventArgs e)
         {
+            Point location = new Point(e.Location.X, e.Location.Y);
 
+            if(house.Checked)
+            {
+                nation.DrawHouse(graphic, location);
+            }
+            else if(tree.Checked)
+            {
+                nation.DrawTree(graphic, location);
+            }
+            else if(watersource.Checked)
+            {
+                nation.DrawWaterResource(graphic, location);
+            }
         }
 
-        private void Draw_panel(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Villagename_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
+        
         private void NationtypeSelectedIndexChanged(object sender, EventArgs e)
         {
             villname = villagename.Text;
@@ -58,11 +59,7 @@ namespace AgeOfVillagers
             NationCreator nationCreator = new NationCreator();
 
             nation = nationCreator.GetNation(villtype);
-        }
-
-        private void Side_panel(object sender, PaintEventArgs e)
-        {
-
+            nation.BackgoundColor(graphic);
         }
 
         private void RefreshForm(object sender, EventArgs e)
@@ -72,6 +69,12 @@ namespace AgeOfVillagers
                 {
                     TextBox t = item as TextBox;
                     t.Text = string.Empty;
+                }
+            foreach(var item in sidepanel.Controls)
+                if(item.GetType().Equals(typeof(RadioButton)))
+                {
+                    RadioButton rb = item as RadioButton;
+                    rb.Checked = false;
                 }
             NationType.ResetText();
             NationType.Text = "Village type";
