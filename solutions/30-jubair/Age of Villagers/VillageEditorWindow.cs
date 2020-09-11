@@ -13,9 +13,7 @@ namespace Age_of_Villagers
     public partial class VillageEditorWindow : Form
     {
 
-        private Panel drawingPanel;
-        private Panel toolsPanel;
-
+      
         public VillageEditorWindow()
         {
             InitializeComponent();
