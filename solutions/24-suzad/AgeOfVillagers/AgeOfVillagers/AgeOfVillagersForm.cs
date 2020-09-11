@@ -14,6 +14,7 @@ namespace AgeOfVillagers
     {
         BdFarmerNation bdFarmerNation = new BdFarmerNation();
         ArabBedouinNation arabBedouinNation = new ArabBedouinNation();
+        EgyptianKingNation egyptianKingNation = new EgyptianKingNation();
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -30,15 +31,15 @@ namespace AgeOfVillagers
             Pen greenpen = new Pen(Color.Green);
             if (radiobtnHouse.Checked)
             {
-                arabBedouinNation.houseDrawing(e, graphics, greenpen);
+                egyptianKingNation.houseDrawing(e, graphics, greenpen);
             }
             else if (radiobtnTree.Checked)
             {
-                arabBedouinNation.treeDrawing(e, graphics, greenpen);
+                egyptianKingNation.treeDrawing(e, graphics, greenpen);
             }
             else if (radiobtnWaterSource.Checked)
             {
-                bdFarmerNation.riverDrawing(e, graphics, greenpen);
+                egyptianKingNation.riverDrawing(e, graphics, greenpen);
             }
         }
 
