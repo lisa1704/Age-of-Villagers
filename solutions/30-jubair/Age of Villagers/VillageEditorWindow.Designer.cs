@@ -36,9 +36,9 @@
             this.button_save = new System.Windows.Forms.Button();
             this.button_open = new System.Windows.Forms.Button();
             this.button_new = new System.Windows.Forms.Button();
-            this.button_tree = new System.Windows.Forms.Button();
-            this.button_house = new System.Windows.Forms.Button();
-            this.button_water = new System.Windows.Forms.Button();
+            this.radioButton_tree = new System.Windows.Forms.RadioButton();
+            this.radioButton_house = new System.Windows.Forms.RadioButton();
+            this.radioButton_water = new System.Windows.Forms.RadioButton();
             this.drawing_space.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@
             this.label.TabIndex = 1;
             this.label.Text = "Age of Villagers";
             this.label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label.Click += new System.EventHandler(this.label1_Click);
+            this.label.Click += new System.EventHandler(this.label_Click);
             // 
             // label_village_name
             // 
@@ -84,7 +84,7 @@
             this.label_village_name.TabIndex = 1;
             this.label_village_name.Text = "KataKhali";
             this.label_village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_village_name.Click += new System.EventHandler(this.label1_Click);
+            this.label_village_name.Click += new System.EventHandler(this.label_Click);
             // 
             // label_nation_name
             // 
@@ -96,7 +96,7 @@
             this.label_nation_name.TabIndex = 1;
             this.label_nation_name.Text = "Bangladeshi Farmer";
             this.label_nation_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_nation_name.Click += new System.EventHandler(this.label1_Click);
+            this.label_nation_name.Click += new System.EventHandler(this.label_Click);
             // 
             // button_save
             // 
@@ -134,45 +134,49 @@
             this.button_new.Text = "New Village";
             this.button_new.UseVisualStyleBackColor = false;
             // 
-            // button_tree
+            // radioButton_tree
             // 
-            this.button_tree.Location = new System.Drawing.Point(659, 169);
-            this.button_tree.Name = "button_tree";
-            this.button_tree.Size = new System.Drawing.Size(112, 34);
-            this.button_tree.TabIndex = 1;
-            this.button_tree.Text = "Tree";
-            this.button_tree.UseVisualStyleBackColor = true;
-            this.button_tree.Click += new System.EventHandler(this.button4_Click);
+            this.radioButton_tree.AutoSize = true;
+            this.radioButton_tree.Location = new System.Drawing.Point(685, 160);
+            this.radioButton_tree.Name = "radioButton_tree";
+            this.radioButton_tree.Size = new System.Drawing.Size(68, 29);
+            this.radioButton_tree.TabIndex = 1;
+            this.radioButton_tree.TabStop = true;
+            this.radioButton_tree.Text = "Tree";
+            this.radioButton_tree.UseVisualStyleBackColor = true;
             // 
-            // button_house
+            // radioButton_house
             // 
-            this.button_house.Location = new System.Drawing.Point(777, 169);
-            this.button_house.Name = "button_house";
-            this.button_house.Size = new System.Drawing.Size(112, 34);
-            this.button_house.TabIndex = 2;
-            this.button_house.Text = "House";
-            this.button_house.UseVisualStyleBackColor = true;
-            this.button_house.Click += new System.EventHandler(this.button5_Click);
+            this.radioButton_house.AutoSize = true;
+            this.radioButton_house.Location = new System.Drawing.Point(685, 195);
+            this.radioButton_house.Name = "radioButton_house";
+            this.radioButton_house.Size = new System.Drawing.Size(88, 29);
+            this.radioButton_house.TabIndex = 2;
+            this.radioButton_house.TabStop = true;
+            this.radioButton_house.Text = "House";
+            this.radioButton_house.UseVisualStyleBackColor = true;
             // 
-            // button_water
+            // radioButton_water
             // 
-            this.button_water.Location = new System.Drawing.Point(708, 209);
-            this.button_water.Name = "button_water";
-            this.button_water.Size = new System.Drawing.Size(129, 40);
-            this.button_water.TabIndex = 3;
-            this.button_water.Text = "Water Source";
-            this.button_water.UseVisualStyleBackColor = true;
+            this.radioButton_water.AutoSize = true;
+            this.radioButton_water.Location = new System.Drawing.Point(685, 230);
+            this.radioButton_water.Name = "radioButton_water";
+            this.radioButton_water.Size = new System.Drawing.Size(142, 29);
+            this.radioButton_water.TabIndex = 3;
+            this.radioButton_water.TabStop = true;
+            this.radioButton_water.Text = "Water Source";
+            this.radioButton_water.UseVisualStyleBackColor = true;
             // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 434);
-            this.Controls.Add(this.button_water);
+            this.Controls.Add(this.radioButton_water);
             this.Controls.Add(this.button_new);
-            this.Controls.Add(this.button_house);
+            this.Controls.Add(this.radioButton_house);
             this.Controls.Add(this.button_open);
-            this.Controls.Add(this.button_tree);
+            this.Controls.Add(this.radioButton_tree);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.label_nation_name);
             this.Controls.Add(this.label_village_name);
@@ -180,7 +184,7 @@
             this.Controls.Add(this.drawing_space);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VillageEditorWindow";
-            this.Text = "Village Window";
+            this.Text = "Age of Villagers";
             this.drawing_space.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,9 +201,9 @@
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_open;
         private System.Windows.Forms.Button button_new;
-        private System.Windows.Forms.Button button_tree;
-        private System.Windows.Forms.Button button_house;
-        private System.Windows.Forms.Button button_water;
+        private System.Windows.Forms.RadioButton radioButton_tree;
+        private System.Windows.Forms.RadioButton radioButton_house;
+        private System.Windows.Forms.RadioButton radioButton_water;
     }
 }
 
