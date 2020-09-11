@@ -21,29 +21,25 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-        private void InitializeComponent()
+ 
+        private void label1_Click(object sender, EventArgs e)
         {
-            toolsPanel = new Panel();
-            SuspendLayout();
-            InitDrawingPanel();
-            //InitToolsPanel();
-            //InitWindow();
-            ResumeLayout(false);
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void InitDrawingPanel()
+        private void button5_Click(object sender, EventArgs e)
         {
-            drawingPanel = new Panel
-            {
-                Location = new Point(0, 0),
-                Name = "drawingPanel",
-                Size = new Size(600, 400),
-                TabIndex = 0,
-                BackColor = Color.Indigo
 
-            };
         }
 
+        private void drawing_space_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
