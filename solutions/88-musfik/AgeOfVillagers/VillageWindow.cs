@@ -31,6 +31,44 @@ namespace AgeOfVillagers
 
         }
 
-        
+        private void Village_name_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void new_village_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void save_village_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void open_village_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tree_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void water_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
