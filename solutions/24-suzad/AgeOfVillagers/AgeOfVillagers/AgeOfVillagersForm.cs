@@ -74,6 +74,7 @@ namespace AgeOfVillagers
             {
                 radiobtnTree.Enabled = false;
                 radiobtnWaterSource.Enabled = false;
+                pnlDrawingSpace.BackColor = Color.White;
             }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
