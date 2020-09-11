@@ -2,11 +2,11 @@
 
 namespace AgeOfVillagers
 {
-    public class ArabBedouin : INation
+    public class EgyptianKings : INation
     {
-        private readonly string nationname;
+        string nationname;
 
-        public ArabBedouin(string nationname)
+        public EgyptianKings(string nationname)
         {
             this.nationname = nationname;
         }
@@ -15,10 +15,9 @@ namespace AgeOfVillagers
         {
             return nationname;
         }
-
         public Color GetTerrainColor()
         {
-            return Color.Gold;
+            return Color.Yellow;
         }
 
         public VillageItem GetHouse(Point point)

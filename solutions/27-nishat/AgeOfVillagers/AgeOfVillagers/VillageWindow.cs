@@ -31,7 +31,7 @@ namespace AgeOfVillagers
         {
             nationlist.Add(new BangladeshiNationfactory());
             nationlist.Add(new ArabBedouinNationfactory());
-            nationlist.Add(new Nationfactory2());
+            nationlist.Add(new EgyptianKingsNationfactory());
             nationlist.Add(new Nationfactory3());
         }
 

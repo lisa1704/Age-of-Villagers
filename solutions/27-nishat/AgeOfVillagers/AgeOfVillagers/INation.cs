@@ -17,40 +17,6 @@ namespace AgeOfVillagers
         string NationName { get; set; }
         INation GetNation();
     }
-
-    public class Nation2 : INation
-    {
-        string nationname;
-
-        public Nation2(string nationname)
-        {
-            this.nationname = nationname;
-        }
-
-        public VillageItem GetHouse(Point point)
-        {
-            return new SampleHouse(point);
-        }
-
-        public string GetNationName()
-        {
-            return nationname;
-        }
-        public Color GetTerrainColor()
-        {
-            return Color.Blue;
-        }
-
-        public VillageItem GetTree(Point point)
-        {
-            return new Sampletree(point);
-        }
-
-        public VillageItem GetWaterResource(Point point)
-        {
-            return new SampleWaterResource(point);
-        }
-    }
     public class Nation3 : INation
     {
         string nationname;
@@ -95,15 +61,15 @@ namespace AgeOfVillagers
             return new Nation3(Nationname);
         }
     }
-    public class Nationfactory2 : INationFactory
+    public class EgyptianKingsNationfactory : INationFactory
     {
-        String Nationname = "nation 2 ";
+        String Nationname = "Egyptian Kings";
 
         public string NationName { get => Nationname; set => Nationname = value; }
 
         public INation GetNation()
         {
-            return new Nation2(Nationname);
+            return new EgyptianKings(Nationname);
         }
     }
     public class ArabBedouinNationfactory : INationFactory
