@@ -81,6 +81,10 @@ namespace AgeOfVillagers
             {
                 pnlDrawingSpace.BackColor = Color.Yellow;
             }
+            if(nationName=="Bangladeshi Farmer")
+            {
+                pnlDrawingSpace.BackColor = Color.Green;
+            }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
         {
