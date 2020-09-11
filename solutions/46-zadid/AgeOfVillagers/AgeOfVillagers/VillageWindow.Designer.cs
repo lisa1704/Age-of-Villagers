@@ -37,7 +37,7 @@ namespace AgeOfVillagers
         private void InitializeComponent()
         {
             this.sidepanel = new System.Windows.Forms.Panel();
-            this.villagetype = new System.Windows.Forms.ComboBox();
+            this.NationType = new System.Windows.Forms.ComboBox();
             this.NewButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@ namespace AgeOfVillagers
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.sidepanel.Controls.Add(this.villagetype);
+            this.sidepanel.Controls.Add(this.NationType);
             this.sidepanel.Controls.Add(this.NewButton);
             this.sidepanel.Controls.Add(this.OpenButton);
             this.sidepanel.Controls.Add(this.SaveButton);
@@ -70,21 +70,22 @@ namespace AgeOfVillagers
             this.sidepanel.TabIndex = 0;
             this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Side_panel);
             // 
-            // villagetype
+            // NationType
             // 
-            this.villagetype.FormattingEnabled = true;
-            this.villagetype.Items.AddRange(new String[] {
-            "Bangladeshi",
-            "Egyptian",
-            "Arab",
-            "Inuit"
+            this.NationType.FormattingEnabled = true;
+            this.NationType.Items.AddRange(new String[] {
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Arab Bedouin",
+            "Inuit Hunters"
             });
-            this.villagetype.Location = new System.Drawing.Point(23, 102);
-            this.villagetype.Name = "villagetype";
-            this.villagetype.Size = new System.Drawing.Size(185, 24);
-            this.villagetype.TabIndex = 10;
-            this.villagetype.Text = "Village type";
-            this.villagetype.SelectedIndexChanged += new System.EventHandler(this.Vallagetype_SelectedIndexChanged);
+            this.NationType.SelectedIndex = -1;
+            this.NationType.Location = new System.Drawing.Point(23, 102);
+            this.NationType.Name = "NationType";
+            this.NationType.Size = new System.Drawing.Size(185, 24);
+            this.NationType.TabIndex = 10;
+            this.NationType.Text = "Village type";
+            this.NationType.SelectedIndexChanged += new System.EventHandler(this.NationtypeSelectedIndexChanged);
             // 
             // NewButton
             // 
@@ -215,6 +216,6 @@ namespace AgeOfVillagers
         private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.Button OpenButton;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.ComboBox villagetype;
+        private System.Windows.Forms.ComboBox NationType;
     }
 }
