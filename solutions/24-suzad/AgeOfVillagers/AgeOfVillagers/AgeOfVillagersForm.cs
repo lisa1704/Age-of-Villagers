@@ -27,15 +27,15 @@ namespace AgeOfVillagers
         {
             Graphics graphics = pnlDrawingSpace.CreateGraphics();
             Pen greenpen = new Pen(Color.Green);
-            if (radiobtnHouse.Checked == true)
+            if (radiobtnHouse.Checked)
             {
                 bdFarmerNation.houseDrawing(e, graphics, greenpen);
             }
-            else if (radiobtnTree.Checked == true)
+            else if (radiobtnTree.Checked)
             {
                 bdFarmerNation.treeDrawing(e, graphics, greenpen);
             }
-            else if (radiobtnWaterSource.Checked == true)
+            else if (radiobtnWaterSource.Checked)
             {
                 bdFarmerNation.riverDrawing(e, graphics, greenpen);
             }
