@@ -29,6 +29,7 @@ namespace AgeOfVillagers
 
         private void Villagewindow_Load(object sender, EventArgs e)
         {
+            nationlist.Add(new BangladeshiNationfactory());
             nationlist.Add(new Nationfactory1());
             nationlist.Add(new Nationfactory2());
             nationlist.Add(new Nationfactory3());
@@ -64,17 +65,17 @@ namespace AgeOfVillagers
                 if (rbtntree.Checked)
                 {
                     village.DrawTree(g, p, point);
-                    g.DrawLine(p, point, new Point(e.X, e.Y-50));
+                    //g.DrawLine(p, point, new Point(e.X, e.Y-50));
                 }
                 else if (rbtnhouse.Checked)
                 {
-                    //village.DrawHouse(g, p, point);
-                    g.DrawLine(p, point, new Point(e.X + 50, e.Y - 50));
+                    village.DrawHouse(g, p, point);
+                    //g.DrawLine(p, point, new Point(e.X + 50, e.Y - 50));
                 }
                 else if(rbtnwatersource.Checked)
                 {
-                    //village.DrawWaterResource(g, p, point);
-                    g.DrawLine(p, point, new Point(e.X + 50, e.Y));
+                    village.DrawWaterResource(g, p, point);
+                    //g.DrawLine(p, point, new Point(e.X + 50, e.Y));
                 }
             }
             

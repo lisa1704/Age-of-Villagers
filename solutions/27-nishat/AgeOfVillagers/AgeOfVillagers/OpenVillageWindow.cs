@@ -41,9 +41,9 @@ namespace AgeOfVillagers
                 };
                 IState state = JsonConvert.DeserializeObject<IState>(dataString,settings);
                 villagewindow.village = new Village(nation, "");
-                villagewindow.village.SetState(state);
                 villagewindow.lblnation.Text = nation.GetNationName();
                 villagewindow.lblvillage.Text = state.GetVillageName();
+                villagewindow.village.SetState(state);
                 villagewindow.village.initiate(villagewindow.g,villagewindow.p);
                 this.Dispose();
             }

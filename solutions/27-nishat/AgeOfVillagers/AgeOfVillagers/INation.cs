@@ -17,6 +17,42 @@ namespace AgeOfVillagers
         string NationName { get; set; }
         INation GetNation();
     }
+
+    public class BalgladeshiFarmers : INation
+    {
+        private readonly string nationname;
+
+        public BalgladeshiFarmers(string nationname)
+        {
+            this.nationname = nationname;
+        }
+
+        public string GetNationName()
+        {
+            return nationname;
+        }
+
+        public Color GetTerrainColor()
+        {
+            return Color.Green;
+        }
+
+        public VillageItem GetHouse(Point point)
+        {
+            return new SampleHouse(point);
+        }
+
+        public VillageItem GetTree(Point point)
+        {
+            return new Sampletree(point);
+        }
+
+        public VillageItem GetWaterResource(Point point)
+        {
+            return new SampleWaterResource(point);
+        }
+    }
+
     public class Nation1 : INation
     {
         string nationname;
@@ -28,7 +64,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleHouse(point);
         }
 
         public string GetNationName()
@@ -48,7 +84,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetWaterResource(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleWaterResource(point);
         }
     }
 
@@ -63,7 +99,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleHouse(point);
         }
 
         public string GetNationName()
@@ -77,12 +113,12 @@ namespace AgeOfVillagers
 
         public VillageItem GetTree(Point point)
         {
-            throw new NotImplementedException();
+            return new Sampletree(point);
         }
 
         public VillageItem GetWaterResource(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleWaterResource(point);
         }
     }
     public class Nation3 : INation
@@ -96,7 +132,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleHouse(point);
         }
 
         public string GetNationName()
@@ -110,12 +146,12 @@ namespace AgeOfVillagers
 
         public VillageItem GetTree(Point point)
         {
-            throw new NotImplementedException();
+            return new Sampletree(point);
         }
 
         public VillageItem GetWaterResource(Point point)
         {
-            throw new NotImplementedException();
+            return new SampleWaterResource(point);
         }
     }
     public class Nationfactory3 : INationFactory
@@ -149,6 +185,17 @@ namespace AgeOfVillagers
         public INation GetNation()
         {
             return new Nation1(Nationname);
+        }
+    }
+    public class BangladeshiNationfactory : INationFactory
+    {
+        String Nationname = "Bangladeshi Farmers";
+
+        public string NationName { get => Nationname; set => Nationname = value; }
+
+        public INation GetNation()
+        {
+            return new BalgladeshiFarmers(Nationname);
         }
     }
 }
