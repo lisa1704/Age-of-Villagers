@@ -74,5 +74,15 @@ namespace AgeOfVillagers90
         {
 
         }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgeofVillagers_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

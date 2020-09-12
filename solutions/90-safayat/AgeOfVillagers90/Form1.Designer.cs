@@ -35,8 +35,9 @@
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
             this.VillageName = new System.Windows.Forms.Label();
-            this.Nation = new System.Windows.Forms.Label();
             this.DrawPanel = new System.Windows.Forms.Panel();
+            this.NationList = new System.Windows.Forms.ComboBox();
+            this.AgeofVillagers = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -103,22 +104,12 @@
             // VillageName
             // 
             this.VillageName.AutoSize = true;
-            this.VillageName.Location = new System.Drawing.Point(706, 92);
+            this.VillageName.Location = new System.Drawing.Point(697, 106);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(69, 13);
             this.VillageName.TabIndex = 11;
             this.VillageName.Text = "Village Name";
             this.VillageName.Click += new System.EventHandler(this.VillageName_Click);
-            // 
-            // Nation
-            // 
-            this.Nation.AutoSize = true;
-            this.Nation.Location = new System.Drawing.Point(718, 136);
-            this.Nation.Name = "Nation";
-            this.Nation.Size = new System.Drawing.Size(38, 13);
-            this.Nation.TabIndex = 12;
-            this.Nation.Text = "Nation";
-            this.Nation.Click += new System.EventHandler(this.Nation_Click);
             // 
             // DrawPanel
             // 
@@ -128,13 +119,40 @@
             this.DrawPanel.TabIndex = 13;
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
             // 
+            // NationList
+            // 
+            this.NationList.FormattingEnabled = true;
+            this.NationList.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egytian Kings",
+            "Iunit Hunters"});
+            this.NationList.Location = new System.Drawing.Point(675, 147);
+            this.NationList.Name = "NationList";
+            this.NationList.Size = new System.Drawing.Size(121, 21);
+            this.NationList.TabIndex = 0;
+            this.NationList.Text = "Nation";
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
+            // 
+            // AgeofVillagers
+            // 
+            this.AgeofVillagers.AutoSize = true;
+            this.AgeofVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeofVillagers.Location = new System.Drawing.Point(676, 63);
+            this.AgeofVillagers.Name = "AgeofVillagers";
+            this.AgeofVillagers.Size = new System.Drawing.Size(120, 20);
+            this.AgeofVillagers.TabIndex = 14;
+            this.AgeofVillagers.Text = "Age of Villagers";
+            this.AgeofVillagers.Click += new System.EventHandler(this.AgeofVillagers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 583);
+            this.ClientSize = new System.Drawing.Size(838, 435);
+            this.Controls.Add(this.AgeofVillagers);
+            this.Controls.Add(this.NationList);
             this.Controls.Add(this.DrawPanel);
-            this.Controls.Add(this.Nation);
             this.Controls.Add(this.VillageName);
             this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.OpenVillage);
@@ -158,8 +176,9 @@
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Label VillageName;
-        private System.Windows.Forms.Label Nation;
         private System.Windows.Forms.Panel DrawPanel;
+        private System.Windows.Forms.ComboBox NationList;
+        private System.Windows.Forms.Label AgeofVillagers;
     }
 }
 
