@@ -7,8 +7,8 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    interface IHouse
+    interface ITree
     {
-        void drawHouse(Axes axes, Panel drawingSpace);
+        void drawTree(Axes axes, Panel drawingSpace);
     }
 }

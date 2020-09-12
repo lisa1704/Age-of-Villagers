@@ -68,6 +68,7 @@
     <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitPainter.cs" />
     <Compile Include="IPainter.cs" />
+    <Compile Include="ITree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree.cs" />

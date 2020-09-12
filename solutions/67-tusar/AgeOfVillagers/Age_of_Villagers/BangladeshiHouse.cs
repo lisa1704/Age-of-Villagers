@@ -10,7 +10,7 @@ namespace Age_of_Villagers
 {
     class BangladeshiHouse : IHouse
     {
-        public void draw(Axes axes, Panel drawingSpace)
+        public void drawHouse(Axes axes, Panel drawingSpace)
         {
             Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
