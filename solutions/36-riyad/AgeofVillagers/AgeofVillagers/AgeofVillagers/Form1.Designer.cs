@@ -28,140 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tree_btn = new System.Windows.Forms.Button();
+            this.villageName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.waterSource_btn = new System.Windows.Forms.Button();
+            this.nation = new System.Windows.Forms.Label();
+            this.save_btn = new System.Windows.Forms.Button();
+            this.house_btn = new System.Windows.Forms.Button();
+            this.new_btn = new System.Windows.Forms.Button();
+            this.open_btn = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(478, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Open Village";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 400);
+            this.panel1.TabIndex = 0;
             // 
-            // button2
+            // panel2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(369, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 30);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "New Village";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel2.Controls.Add(this.tree_btn);
+            this.panel2.Controls.Add(this.villageName);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.waterSource_btn);
+            this.panel2.Controls.Add(this.nation);
+            this.panel2.Controls.Add(this.save_btn);
+            this.panel2.Controls.Add(this.house_btn);
+            this.panel2.Controls.Add(this.new_btn);
+            this.panel2.Controls.Add(this.open_btn);
+            this.panel2.Location = new System.Drawing.Point(600, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 400);
+            this.panel2.TabIndex = 1;
             // 
-            // button3
+            // tree_btn
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(414, 277);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 30);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Save Village";
-            this.button3.UseVisualStyleBackColor = true;
+            this.tree_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tree_btn.Location = new System.Drawing.Point(5, 181);
+            this.tree_btn.Name = "tree_btn";
+            this.tree_btn.Size = new System.Drawing.Size(99, 25);
+            this.tree_btn.TabIndex = 0;
+            this.tree_btn.Text = "Tree";
+            this.tree_btn.UseVisualStyleBackColor = true;
+            this.tree_btn.Click += new System.EventHandler(this.tree_btn_Click);
             // 
-            // button4
+            // villageName
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(478, 155);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 30);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "House";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(369, 155);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 30);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Tree";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(414, 191);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 30);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Water Source";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(392, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Age of Villagers";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.villageName.AutoSize = true;
+            this.villageName.Location = new System.Drawing.Point(82, 82);
+            this.villageName.Name = "villageName";
+            this.villageName.Size = new System.Drawing.Size(70, 20);
+            this.villageName.TabIndex = 2;
+            this.villageName.Text = "Katakhali";
+            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(446, 56);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(28, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Katakhali";
+            this.label2.Size = new System.Drawing.Size(163, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Age of Villagers";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // waterSource_btn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(401, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Bangladeshi Farmers";
+            this.waterSource_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.waterSource_btn.Location = new System.Drawing.Point(50, 217);
+            this.waterSource_btn.Name = "waterSource_btn";
+            this.waterSource_btn.Size = new System.Drawing.Size(125, 25);
+            this.waterSource_btn.TabIndex = 0;
+            this.waterSource_btn.Text = "Water Source";
+            this.waterSource_btn.UseVisualStyleBackColor = true;
+            this.waterSource_btn.Click += new System.EventHandler(this.waterSource_btn_Click);
+            // 
+            // nation
+            // 
+            this.nation.AutoSize = true;
+            this.nation.Location = new System.Drawing.Point(37, 115);
+            this.nation.Name = "nation";
+            this.nation.Size = new System.Drawing.Size(145, 20);
+            this.nation.TabIndex = 2;
+            this.nation.Text = "Bangladeshi Farmers";
+            this.nation.Click += new System.EventHandler(this.nation_Click);
+            // 
+            // save_btn
+            // 
+            this.save_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.save_btn.Location = new System.Drawing.Point(50, 303);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(125, 25);
+            this.save_btn.TabIndex = 0;
+            this.save_btn.Text = "Save Village";
+            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
+            // 
+            // house_btn
+            // 
+            this.house_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.house_btn.Location = new System.Drawing.Point(114, 181);
+            this.house_btn.Name = "house_btn";
+            this.house_btn.Size = new System.Drawing.Size(101, 25);
+            this.house_btn.TabIndex = 0;
+            this.house_btn.Text = "House";
+            this.house_btn.UseVisualStyleBackColor = true;
+            this.house_btn.Click += new System.EventHandler(this.house_btn_Click);
+            // 
+            // new_btn
+            // 
+            this.new_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.new_btn.Location = new System.Drawing.Point(5, 341);
+            this.new_btn.Name = "new_btn";
+            this.new_btn.Size = new System.Drawing.Size(99, 25);
+            this.new_btn.TabIndex = 0;
+            this.new_btn.Text = "New Village";
+            this.new_btn.UseVisualStyleBackColor = true;
+            this.new_btn.Click += new System.EventHandler(this.new_btn_Click);
+            // 
+            // open_btn
+            // 
+            this.open_btn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.open_btn.Location = new System.Drawing.Point(114, 341);
+            this.open_btn.Name = "open_btn";
+            this.open_btn.Size = new System.Drawing.Size(101, 25);
+            this.open_btn.TabIndex = 0;
+            this.open_btn.Text = "Open Village";
+            this.open_btn.UseVisualStyleBackColor = true;
+            this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(582, 353);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(822, 393);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Age of Villagers";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button tree_btn;
+        private System.Windows.Forms.Label villageName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button waterSource_btn;
+        private System.Windows.Forms.Label nation;
+        private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Button house_btn;
+        private System.Windows.Forms.Button new_btn;
+        private System.Windows.Forms.Button open_btn;
     }
 }

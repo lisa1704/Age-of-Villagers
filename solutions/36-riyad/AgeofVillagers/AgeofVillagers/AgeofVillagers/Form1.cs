@@ -15,12 +15,47 @@ namespace AgeofVillagers
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void villageName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tree_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void house_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void waterSource_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void new_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void open_btn_Click(object sender, EventArgs e)
         {
 
         }
