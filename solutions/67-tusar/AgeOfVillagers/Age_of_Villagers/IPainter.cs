@@ -8,6 +8,6 @@ namespace Age_of_Villagers
 {
     interface IPainter
     {
-        void draw();
+        void drawVillage();
     }
 }

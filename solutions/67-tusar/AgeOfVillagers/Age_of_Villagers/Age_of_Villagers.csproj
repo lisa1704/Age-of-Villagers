@@ -47,21 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractPainter.cs" />
-    <Compile Include="AbstractHouse.cs" />
-    <Compile Include="AbstractTree.cs" />
-    <Compile Include="AbstractWaterSource.cs" />
-    <Compile Include="ArabHouse.cs" />
     <Compile Include="ArabPainter.cs" />
-    <Compile Include="ArabTree.cs" />
-    <Compile Include="ArabWaterSource.cs" />
-    <Compile Include="BangladeshiHouse.cs" />
     <Compile Include="BangladeshiPainter.cs" />
-    <Compile Include="BangladeshiTree.cs" />
-    <Compile Include="BangladeshiWaterSource,cs.cs" />
-    <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianPainter.cs" />
-    <Compile Include="EgyptianTree.cs" />
-    <Compile Include="EgyptianWaterSource.cs" />
+    <Compile Include="House.cs" />
     <Compile Include="IElement.cs" />
     <Compile Include="CreateEditVIllage.cs">
       <SubType>Form</SubType>
@@ -71,13 +60,10 @@
     </Compile>
     <Compile Include="InuitPainter.cs" />
     <Compile Include="IPainter.cs" />
-    <Compile Include="InuitHouse.cs" />
-    <Compile Include="InuitTree.cs" />
-    <Compile Include="InuitWaterSource.cs" />
-    <Compile Include="NullTree.cs" />
-    <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="WaterSource.cs" />
     <EmbeddedResource Include="CreateEditVIllage.resx">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </EmbeddedResource>

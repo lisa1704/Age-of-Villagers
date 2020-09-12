@@ -40,6 +40,7 @@ namespace Age_of_Villagers
             this.textNation = new System.Windows.Forms.TextBox();
             this.textVillageName = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.TextBox();
+            this.drawingSpace = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,9 +56,9 @@ namespace Age_of_Villagers
             this.panel1.Controls.Add(this.textNation);
             this.panel1.Controls.Add(this.textVillageName);
             this.panel1.Controls.Add(this.title);
-            this.panel1.Location = new System.Drawing.Point(592, -1);
+            this.panel1.Location = new System.Drawing.Point(595, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 364);
+            this.panel1.Size = new System.Drawing.Size(247, 401);
             this.panel1.TabIndex = 0;
             // 
             // btnOpenVillage
@@ -67,7 +68,7 @@ namespace Age_of_Villagers
             this.btnOpenVillage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenVillage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenVillage.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnOpenVillage.Location = new System.Drawing.Point(116, 317);
+            this.btnOpenVillage.Location = new System.Drawing.Point(62, 349);
             this.btnOpenVillage.Name = "btnOpenVillage";
             this.btnOpenVillage.Size = new System.Drawing.Size(100, 25);
             this.btnOpenVillage.TabIndex = 8;
@@ -83,7 +84,7 @@ namespace Age_of_Villagers
             this.btnNewVillage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewVillage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewVillage.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNewVillage.Location = new System.Drawing.Point(13, 317);
+            this.btnNewVillage.Location = new System.Drawing.Point(62, 305);
             this.btnNewVillage.Name = "btnNewVillage";
             this.btnNewVillage.Size = new System.Drawing.Size(100, 25);
             this.btnNewVillage.TabIndex = 7;
@@ -99,7 +100,7 @@ namespace Age_of_Villagers
             this.btnSaveVillage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveVillage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveVillage.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSaveVillage.Location = new System.Drawing.Point(65, 288);
+            this.btnSaveVillage.Location = new System.Drawing.Point(62, 265);
             this.btnSaveVillage.Name = "btnSaveVillage";
             this.btnSaveVillage.Size = new System.Drawing.Size(100, 25);
             this.btnSaveVillage.TabIndex = 6;
@@ -111,38 +112,35 @@ namespace Age_of_Villagers
             // rbtnWaterResource
             // 
             this.rbtnWaterResource.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnWaterResource.Location = new System.Drawing.Point(52, 215);
+            this.rbtnWaterResource.Location = new System.Drawing.Point(52, 212);
             this.rbtnWaterResource.Name = "rbtnWaterResource";
             this.rbtnWaterResource.Size = new System.Drawing.Size(122, 20);
             this.rbtnWaterResource.TabIndex = 5;
             this.rbtnWaterResource.TabStop = true;
             this.rbtnWaterResource.Text = "Water Resource";
             this.rbtnWaterResource.UseVisualStyleBackColor = true;
-            this.rbtnWaterResource.CheckedChanged += new System.EventHandler(this.rbtnWaterResource_CheckedChanged);
             // 
             // rbtnHouse
             // 
             this.rbtnHouse.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnHouse.Location = new System.Drawing.Point(52, 192);
+            this.rbtnHouse.Location = new System.Drawing.Point(52, 189);
             this.rbtnHouse.Name = "rbtnHouse";
             this.rbtnHouse.Size = new System.Drawing.Size(122, 20);
             this.rbtnHouse.TabIndex = 4;
             this.rbtnHouse.TabStop = true;
             this.rbtnHouse.Text = "House";
             this.rbtnHouse.UseVisualStyleBackColor = true;
-            this.rbtnHouse.CheckedChanged += new System.EventHandler(this.rbtnHouse_CheckedChanged);
             // 
             // rbtnTree
             // 
             this.rbtnTree.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnTree.Location = new System.Drawing.Point(52, 169);
+            this.rbtnTree.Location = new System.Drawing.Point(52, 166);
             this.rbtnTree.Name = "rbtnTree";
             this.rbtnTree.Size = new System.Drawing.Size(122, 20);
             this.rbtnTree.TabIndex = 3;
             this.rbtnTree.TabStop = true;
             this.rbtnTree.Text = "Tree";
             this.rbtnTree.UseVisualStyleBackColor = true;
-            this.rbtnTree.CheckedChanged += new System.EventHandler(this.rbtnTree_CheckedChanged);
             // 
             // textNation
             // 
@@ -186,12 +184,21 @@ namespace Age_of_Villagers
             this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.title.TextChanged += new System.EventHandler(this.title_TextChanged);
             // 
+            // drawingSpace
+            // 
+            this.drawingSpace.Location = new System.Drawing.Point(1, 0);
+            this.drawingSpace.Name = "drawingSpace";
+            this.drawingSpace.Size = new System.Drawing.Size(600, 400);
+            this.drawingSpace.TabIndex = 1;
+            this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
+            // 
             // CreateEditVIllage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(819, 361);
+            this.ClientSize = new System.Drawing.Size(819, 400);
+            this.Controls.Add(this.drawingSpace);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -217,6 +224,7 @@ namespace Age_of_Villagers
         private System.Windows.Forms.Button btnNewVillage;
         private System.Windows.Forms.Button btnSaveVillage;
         private System.Windows.Forms.TextBox title;
+        private Panel drawingSpace;
     }
 }
 
