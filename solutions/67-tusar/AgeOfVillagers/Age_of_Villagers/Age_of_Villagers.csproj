@@ -46,16 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractPainter.cs" />
     <Compile Include="AbstractHouse.cs" />
     <Compile Include="AbstractTree.cs" />
     <Compile Include="AbstractWaterSource.cs" />
     <Compile Include="ArabHouse.cs" />
+    <Compile Include="ArabPainter.cs" />
     <Compile Include="ArabTree.cs" />
     <Compile Include="ArabWaterSource.cs" />
     <Compile Include="BangladeshiHouse.cs" />
+    <Compile Include="BangladeshiPainter.cs" />
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource,cs.cs" />
     <Compile Include="EgyptianHouse.cs" />
+    <Compile Include="EgyptianPainter.cs" />
     <Compile Include="EgyptianTree.cs" />
     <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="IElement.cs" />
@@ -65,6 +69,8 @@
     <Compile Include="CreateEditVIllage.Designer.cs">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InuitPainter.cs" />
+    <Compile Include="IPainter.cs" />
     <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitTree.cs" />
     <Compile Include="InuitWaterSource.cs" />
