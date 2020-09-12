@@ -15,7 +15,7 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            Pen pen = new Pen(Color.Red);
+            Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
             
             // Create start and sweep angles on ellipse. 
