@@ -5,6 +5,15 @@ namespace AgeOfVillagers
 {
     public class ArabBedouin : INation
     {
+        private readonly Color color;
+        private readonly String nation_name;
+
+        public ArabBedouin()
+        {
+            color = Color.LightYellow;
+            nation_name = "Arab Bedouin";
+        }
+
         public object getHouse(Point point)
         {
             throw new NotImplementedException();
@@ -12,12 +21,12 @@ namespace AgeOfVillagers
 
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return nation_name;
         }
 
         public Color getTerrainColor()
         {
-            throw new NotImplementedException();
+            return color;
         }
 
         public object getTree(Point point)
