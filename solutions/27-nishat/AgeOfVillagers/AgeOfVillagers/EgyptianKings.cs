@@ -22,17 +22,17 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            return new SampleHouse(point);
+            return new EgyptianHouse(point);
         }
 
         public VillageItem GetTree(Point point)
         {
-            return new Sampletree(point);
+            return new EgyptianTree(point);
         }
 
         public VillageItem GetWaterResource(Point point)
         {
-            return new SampleWaterResource(point);
+            return new EgyptianWell(point);
         }
     }
 }

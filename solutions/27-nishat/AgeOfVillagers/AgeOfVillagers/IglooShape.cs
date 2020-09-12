@@ -19,5 +19,4 @@ namespace AgeOfVillagers
             AddComponent(new HalfCircle(new Point((int)(_topleft.X + width * 0.3125), (int)(_topleft.Y + height * 0.8125)), new Point((int)(_topleft.X + width * 0.6875), (int)(_bottomright.Y))));
         }
     }
-
 }
