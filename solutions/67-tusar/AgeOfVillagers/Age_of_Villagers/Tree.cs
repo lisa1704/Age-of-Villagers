@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Tree : IElement
+    class Tree : IHouse
     {
         public int x, y;
         public Tree(int X, int Y)

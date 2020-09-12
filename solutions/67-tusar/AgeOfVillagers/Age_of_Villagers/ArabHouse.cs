@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class ArabHouse : IElement
+    class ArabHouse : IHouse
     {
         public void draw(Axes axes, Panel drawingSpace)
         {

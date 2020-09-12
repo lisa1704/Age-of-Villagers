@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    interface IElement
+    interface IHouse
     {
         void draw(Axes axes, Panel panel);
     }

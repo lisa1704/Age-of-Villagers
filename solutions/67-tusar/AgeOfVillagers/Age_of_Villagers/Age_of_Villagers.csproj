@@ -56,7 +56,7 @@
     <Compile Include="BangladeshiPainter.cs" />
     <Compile Include="EgyptianPainter.cs" />
     <Compile Include="House.cs" />
-    <Compile Include="IElement.cs" />
+    <Compile Include="IHouse.cs" />
     <Compile Include="CreateEditVIllage.cs">
       <SubType>Form</SubType>
     </Compile>
