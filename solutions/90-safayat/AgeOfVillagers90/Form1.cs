@@ -12,6 +12,10 @@ namespace AgeOfVillagers90
 {
     public partial class Form1 : Form
     {
+        int x;
+        int y;
+        Graphics g;
+        string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -32,17 +36,17 @@ namespace AgeOfVillagers90
 
         private void Tree_Click(object sender, EventArgs e)
         {
-
+            text = "Tree";
         }
 
         private void House_Click(object sender, EventArgs e)
         {
-
+            text = "House";
         }
 
         private void WaterSource_Click(object sender, EventArgs e)
         {
-
+            text = "WaterSource";
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
