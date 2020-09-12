@@ -65,6 +65,7 @@
     <Compile Include="CreateEditVIllage.Designer.cs">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitPainter.cs" />
     <Compile Include="IPainter.cs" />
     <Compile Include="Program.cs" />
