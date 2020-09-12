@@ -51,6 +51,7 @@
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="INationFactory.cs" />
+    <Compile Include="InuitHunters.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageWindow.cs">
       <SubType>Form</SubType>

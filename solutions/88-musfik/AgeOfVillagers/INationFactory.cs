@@ -28,4 +28,12 @@
             return new EgyptianKings();
         }
     }
+
+    public class InuitHunters_Factory : INationFactory
+    {
+        public INation getNation()
+        {
+            return new InuitHunters();
+        }
+    }
 }
