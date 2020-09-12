@@ -12,38 +12,100 @@ namespace age_of_villagers
 {
     public partial class Form1 : Form
     {
+        string item;
+        string vilName;
+        string nType;
+
+        List<Point> house_point = new List<Point>();
+        List<Point> tree_point = new List<Point>();
+        List<Point> water_point = new List<Point>();
         public Form1()
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e){}
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Panel1(object sender, PaintEventArgs e)
         {
-
-        }
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nation_Click(object sender, EventArgs e)
-        {
+            Graphics g = panel1.CreateGraphics();
+            Pen p = new Pen(Color.Blue);
+            foreach(Point pt in house_point)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 20, 20);
+            }
+            foreach (Point pt in tree_point)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 30, 25);
+            }
+            foreach (Point pt in water_point)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 50, 40);
+            }
 
         }
 
-        private void VillageName_Click(object sender, EventArgs e)
+        private void drawOnClick(object sender, MouseEventArgs e)
+        {
+            if(item=="house")
+            {
+                house_point.Add(e.Location);
+            }
+            else if(item=="tree")
+            {
+                tree_point.Add(e.Location);
+            }
+            else if(item=="water")
+            {
+                water_point.Add(e.Location);
+            }
+            panel1.Invalidate();
+        }
+
+        private void AgeOfVillagers_Click(object sender, EventArgs e){}
+
+        private void VillageName_Click(object sender, EventArgs e){}
+
+        private void villageName (object sender, EventArgs e)
+        {
+            vilName = village.Text;
+        }
+
+        private void Nation_Click(object sender, EventArgs e) { }
+
+        private void nationType(object sender, EventArgs e)
+        {
+            nType = nations.Text;
+        }
+
+        private void tree_Click(object sender, EventArgs e)
+        {
+            item = "tree";
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+            item = "house";
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
+        {
+            item = "water";
+        }
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
         {
 
         }
     }
+
 }
