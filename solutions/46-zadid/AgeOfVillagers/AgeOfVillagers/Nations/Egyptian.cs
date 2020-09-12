@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Text;
+using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
 
 namespace AgeOfVillagers
@@ -17,7 +18,12 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
-            
+            EgyptianHouse egyptianHouse = new EgyptianHouse();
+            HouseContext houseContext = new HouseContext(egyptianHouse, g, location, houseSize);
+
+            houseContext.HouseDrawing();
+
+            Debug.WriteLine("Drawing Egyptian House");
         }
 
         public override void DrawTree(Graphics g, Point location)
