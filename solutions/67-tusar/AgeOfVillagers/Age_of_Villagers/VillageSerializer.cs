@@ -1,26 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Newtonsoft.Json;
 
 namespace Age_of_Villagers
 {
     class VillageSerializer
     {
+        protected OpenFileDialog ofd = new OpenFileDialog();
+        protected SaveFileDialog sfd = new SaveFileDialog();
         protected Village villageState;
+        protected string fileName;
+        protected string savePath;
         public void saveState(Village village)
         {
-            villageState = village;
             string villageSerialized = JsonConvert.SerializeObject(village);
-            System.IO.File.WriteAllText(@"J:\" + village.getName() + ".aov", villageSerialized);
-            string json = System.IO.File.ReadAllText(@"J:\" + village.getName() + ".aov");
-            Console.WriteLine(villageSerialized);
+            sfd.Filter = "aov|*.aov";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (Stream s = File.Open(sfd.FileName, FileMode.CreateNew))
+                using (StreamWriter sw = new StreamWriter(s))
+                sw.Write(villageSerialized);
+            }
         }
-        public Village openState(string aovFile)
+        public Village restoreState()
         {
-            string json = System.IO.File.ReadAllText(aovFile);
+            ofd.Filter = "aov|*.aov";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                fileName = ofd.FileName;
+            }
+            string json = System.IO.File.ReadAllText(fileName);
             return JsonConvert.DeserializeObject<Village>(json);
         }
     }

@@ -52,5 +52,11 @@ namespace Age_of_Villagers
                 nation.drawWaterSource(ws);
             }
         }
+        public void RefreshVillage()
+        {
+            houses.Clear();
+            trees.Clear();
+            wSources.Clear();
+        }
     }
 }
