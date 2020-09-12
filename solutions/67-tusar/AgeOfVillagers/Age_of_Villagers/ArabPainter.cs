@@ -35,5 +35,10 @@ namespace Age_of_Villagers
         {
             throw new NotImplementedException();
         }
+
+        public override void paintTerrain()
+        {
+            base.drawingSpace.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+        }
     }
 }

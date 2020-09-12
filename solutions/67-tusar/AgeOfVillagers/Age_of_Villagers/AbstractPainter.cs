@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Age_of_Villagers
         public AbstractPainter(Panel panel)
         {
             drawingSpace = panel;
+            paintTerrain();
         }
         public void drawVillage()
         {
@@ -23,7 +25,6 @@ namespace Age_of_Villagers
             drawTrees();
             drawWaterSources();
         }
-
         public void drawHouses()
         {
             foreach(House house in houses)
@@ -45,7 +46,7 @@ namespace Age_of_Villagers
                 drawWaterSource(wSource.getX(), wSource.getY());
             }
         }
-
+        public abstract void paintTerrain();
         public abstract void drawHouse(int x, int y);
         public abstract void drawTree(int x, int y);
         public abstract void drawWaterSource(int x, int y);

@@ -31,13 +31,13 @@ namespace Age_of_Villagers
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nationList = new System.Windows.Forms.ComboBox();
             this.btnOpenVillage = new System.Windows.Forms.Button();
             this.btnNewVillage = new System.Windows.Forms.Button();
             this.btnSaveVillage = new System.Windows.Forms.Button();
             this.rbtnWaterResource = new System.Windows.Forms.RadioButton();
             this.rbtnHouse = new System.Windows.Forms.RadioButton();
             this.rbtnTree = new System.Windows.Forms.RadioButton();
-            this.textNation = new System.Windows.Forms.TextBox();
             this.textVillageName = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.TextBox();
             this.drawingSpace = new System.Windows.Forms.Panel();
@@ -47,19 +47,39 @@ namespace Age_of_Villagers
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.panel1.Controls.Add(this.nationList);
             this.panel1.Controls.Add(this.btnOpenVillage);
             this.panel1.Controls.Add(this.btnNewVillage);
             this.panel1.Controls.Add(this.btnSaveVillage);
             this.panel1.Controls.Add(this.rbtnWaterResource);
             this.panel1.Controls.Add(this.rbtnHouse);
             this.panel1.Controls.Add(this.rbtnTree);
-            this.panel1.Controls.Add(this.textNation);
             this.panel1.Controls.Add(this.textVillageName);
             this.panel1.Controls.Add(this.title);
             this.panel1.Location = new System.Drawing.Point(595, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 401);
             this.panel1.TabIndex = 0;
+            // 
+            // nationList
+            // 
+            this.nationList.AllowDrop = true;
+            this.nationList.BackColor = System.Drawing.Color.White;
+            this.nationList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nationList.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationList.FormattingEnabled = true;
+            this.nationList.Items.AddRange(new object[] {
+            "Arab Bedouin",
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.nationList.Location = new System.Drawing.Point(40, 108);
+            this.nationList.Name = "nationList";
+            this.nationList.Size = new System.Drawing.Size(145, 25);
+            this.nationList.Sorted = true;
+            this.nationList.TabIndex = 9;
+            this.nationList.TextChanged += new System.EventHandler(this.nationList_TextChanged);
+            this.nationList.SelectedIndex = nationList.Items.IndexOf(1);
             // 
             // btnOpenVillage
             // 
@@ -142,27 +162,14 @@ namespace Age_of_Villagers
             this.rbtnTree.Text = "Tree";
             this.rbtnTree.UseVisualStyleBackColor = true;
             // 
-            // textNation
-            // 
-            this.textNation.BackColor = System.Drawing.Color.PowderBlue;
-            this.textNation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNation.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNation.Location = new System.Drawing.Point(18, 108);
-            this.textNation.Name = "textNation";
-            this.textNation.Size = new System.Drawing.Size(186, 16);
-            this.textNation.TabIndex = 2;
-            this.textNation.Text = "Name of the Nation";
-            this.textNation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textNation.TextChanged += new System.EventHandler(this.textNation_TextChanged);
-            // 
             // textVillageName
             // 
             this.textVillageName.BackColor = System.Drawing.Color.PowderBlue;
             this.textVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textVillageName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textVillageName.Location = new System.Drawing.Point(18, 86);
+            this.textVillageName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textVillageName.Location = new System.Drawing.Point(18, 76);
             this.textVillageName.Name = "textVillageName";
-            this.textVillageName.Size = new System.Drawing.Size(186, 16);
+            this.textVillageName.Size = new System.Drawing.Size(186, 19);
             this.textVillageName.TabIndex = 1;
             this.textVillageName.Text = "Name of the Village";
             this.textVillageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -215,7 +222,6 @@ namespace Age_of_Villagers
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textNation;
         private System.Windows.Forms.TextBox textVillageName;
         private System.Windows.Forms.RadioButton rbtnWaterResource;
         private System.Windows.Forms.RadioButton rbtnHouse;
@@ -225,6 +231,7 @@ namespace Age_of_Villagers
         private System.Windows.Forms.Button btnSaveVillage;
         private System.Windows.Forms.TextBox title;
         private Panel drawingSpace;
+        private ComboBox nationList;
     }
 }
 

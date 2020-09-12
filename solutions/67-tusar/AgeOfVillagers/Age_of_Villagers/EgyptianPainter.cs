@@ -39,5 +39,9 @@ namespace Age_of_Villagers
             System.Drawing.Font font = new System.Drawing.Font(ff, 10);
             elem.DrawString("EgyptianWaterSource", font, brush, new PointF(x, y));
         }
+        public override void paintTerrain()
+        {
+            base.drawingSpace.BackColor = System.Drawing.Color.Yellow;
+        }
     }
 }
