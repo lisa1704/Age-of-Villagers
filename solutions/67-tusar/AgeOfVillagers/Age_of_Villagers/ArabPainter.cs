@@ -49,7 +49,7 @@ namespace Age_of_Villagers
 
         public override void drawWaterSource(int x, int y)
         {
-            
+            MessageBox.Show("Arab Bedouin do not have Water Sources", "Attention");
         }
 
         public override void paintTerrain()

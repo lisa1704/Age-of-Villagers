@@ -29,12 +29,12 @@ namespace Age_of_Villagers
         }
         public override void drawTree(int x, int y)
         {
-            
+            MessageBox.Show("Inuit Hunters do not have Trees", "Attention");
         }
 
         public override void drawWaterSource(int x, int y)
         {
-            
+            MessageBox.Show("Inuit Hunters do not have Water Sources", "Attention");
         }
         public override void paintTerrain()
         {
