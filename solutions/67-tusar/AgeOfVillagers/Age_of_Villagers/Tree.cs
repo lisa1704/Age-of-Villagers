@@ -9,6 +9,11 @@ namespace Age_of_Villagers
     class Tree : IElement
     {
         private int x, y;
+        public Tree(int X, int Y)
+        {
+            x = X;
+            y = Y;
+        }
         public int getX()
         {
             return y;

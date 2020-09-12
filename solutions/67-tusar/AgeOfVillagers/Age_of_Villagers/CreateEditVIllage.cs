@@ -12,6 +12,9 @@ namespace Age_of_Villagers
 {
     public partial class CreateEditVIllage : Form
     {
+        Village myVillage = new Village();
+        VillageSerializer myVS = new VillageSerializer();
+
         public CreateEditVIllage()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace Age_of_Villagers
 
         private void btnSaveVillage_Click(object sender, EventArgs e)
         {
-
+            myVS.saveState(myVillage);
         }
 
         private void btnNewVillage_Click(object sender, EventArgs e)
@@ -43,7 +46,7 @@ namespace Age_of_Villagers
 
         private void textVillageName_TextChanged(object sender, EventArgs e)
         {
-
+            myVillage.setName(textVillageName.Text);
         }
 
         private void textNation_TextChanged(object sender, EventArgs e)
@@ -60,14 +63,17 @@ namespace Age_of_Villagers
             if (rbtnHouse.Checked == true)
             {
                 painter.drawHouse(e.X, e.Y);
+                myVillage.addHouse(new House(e.X, e.Y));
             }
             else if(rbtnTree.Checked == true)
             {
                 painter.drawTree(e.X, e.Y);
+                myVillage.addTree(new Tree(e.X, e.Y));
             }
             else if(rbtnWaterResource.Checked == true)
             {
                 painter.drawWaterSource(e.X, e.Y);
+                myVillage.addWSource(new WaterSource(e.X, e.Y));
             }
         }
 
