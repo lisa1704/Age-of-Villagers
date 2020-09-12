@@ -1,4 +1,6 @@
-﻿namespace Age_of_Villagers
+﻿using System;
+
+namespace Age_of_Villagers
 {
     partial class VillageEditorWindow
     {
@@ -10,7 +12,7 @@
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        // <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -73,29 +75,28 @@
             this.label.TabIndex = 1;
             this.label.Text = "Age of Villagers";
             this.label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label.Click += new System.EventHandler(this.label_Click);
             // 
             // label_village_name
             // 
             this.label_village_name.AutoSize = true;
-            this.label_village_name.Location = new System.Drawing.Point(727, 72);
+            this.label_village_name.Location = new System.Drawing.Point(721, 72);
             this.label_village_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_village_name.Name = "label_village_name";
-            this.label_village_name.Size = new System.Drawing.Size(83, 25);
+            this.label_village_name.Size = new System.Drawing.Size(116, 25);
             this.label_village_name.TabIndex = 1;
-            this.label_village_name.Text = "KataKhali";
+            this.label_village_name.Text = "Village Name";
             this.label_village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_village_name.Click += new System.EventHandler(this.label_Click);
             // 
             // label_nation_name
             // 
             this.label_nation_name.AutoSize = true;
-            this.label_nation_name.Location = new System.Drawing.Point(685, 110);
+            this.label_nation_name.Location = new System.Drawing.Point(721, 106);
             this.label_nation_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_nation_name.Name = "label_nation_name";
-            this.label_nation_name.Size = new System.Drawing.Size(166, 25);
+            this.label_nation_name.Size = new System.Drawing.Size(117, 25);
             this.label_nation_name.TabIndex = 1;
-            this.label_nation_name.Text = "Bangladeshi Farmer";
+            this.label_nation_name.Text = "Nation Name";
             this.label_nation_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_nation_name.Click += new System.EventHandler(this.label_Click);
             // 
@@ -134,6 +135,7 @@
             this.button_new.TabIndex = 3;
             this.button_new.Text = "New Village";
             this.button_new.UseVisualStyleBackColor = false;
+            this.button_new.Click += new System.EventHandler(this.button_new_Click);
             // 
             // radioButton_tree
             // 
@@ -145,7 +147,8 @@
             this.radioButton_tree.TabStop = true;
             this.radioButton_tree.Text = "Tree";
             this.radioButton_tree.UseVisualStyleBackColor = true;
-           
+            this.radioButton_tree.Click += new System.EventHandler(this.radioButton_tree_Click);
+            this.radioButton_tree.Enter += new System.EventHandler(this.label_Click);
             // 
             // radioButton_house
             // 
@@ -157,6 +160,7 @@
             this.radioButton_house.TabStop = true;
             this.radioButton_house.Text = "House";
             this.radioButton_house.UseVisualStyleBackColor = true;
+            this.radioButton_house.Click += new System.EventHandler(this.radioButton_house_Click);
             // 
             // radioButton_water
             // 
@@ -168,6 +172,7 @@
             this.radioButton_water.TabStop = true;
             this.radioButton_water.Text = "Water Source";
             this.radioButton_water.UseVisualStyleBackColor = true;
+            this.radioButton_water.Click += new System.EventHandler(this.radioButton_water_Click);
             // 
             // VillageEditorWindow
             // 
@@ -187,11 +192,14 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VillageEditorWindow";
             this.Text = "Age of Villagers";
+            this.Load += new System.EventHandler(this.VillageEditorWindow_Load);
             this.drawing_space.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+       
 
         #endregion
 

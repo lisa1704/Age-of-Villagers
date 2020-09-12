@@ -12,17 +12,21 @@ namespace Age_of_Villagers
 {
     public partial class VillageEditorWindow : Form
     {
+        
+       
 
-      
         public VillageEditorWindow()
         {
             InitializeComponent();
         }
 
- 
+        string component;
+       
+
+
         private void label_Click(object sender, EventArgs e)
         {
-            
+            //MessageBox.Show(radioButton_tree.Text,"MouseClick Event");
         }
 
         
@@ -47,8 +51,40 @@ namespace Age_of_Villagers
             messageBoxCS.AppendLine();
             MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event");
 
+            
+
         }
 
         
+        private void VillageEditorWindow_Load(object sender, EventArgs e)
+        {
+            label_village_name.Text = NewVillageForm.SetValueForText1;
+            label_nation_name.Text = NewVillageForm.SetValueForText2;
+
+        }
+
+        private void radioButton_tree_Click(object sender, EventArgs e)
+        {
+            component = "Coconut Tree";
+            //MessageBox.Show(radioButton_tree.Text, "MouseClick Event");
+        }
+
+        private void radioButton_house_Click(object sender, EventArgs e)
+        {
+            component = "Duplex";
+            //MessageBox.Show(radioButton_tree.Text, "MouseClick Event");
+
+        }
+
+        private void radioButton_water_Click(object sender, EventArgs e)
+        {
+            component = "Fountain";
+        }
+
+        private void button_new_Click(object sender, EventArgs e)
+        {
+            NewVillageForm new_vill = new NewVillageForm();
+            new_vill.Show();
+        }
     }
 }
