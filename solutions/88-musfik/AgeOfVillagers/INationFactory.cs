@@ -20,4 +20,12 @@
             return new BangladeshiFarmers();
         }
     }
+
+    public class EgyptianKings_Factory : INationFactory
+    {
+        public INation getNation()
+        {
+            return new EgyptianKings();
+        }
+    }
 }
