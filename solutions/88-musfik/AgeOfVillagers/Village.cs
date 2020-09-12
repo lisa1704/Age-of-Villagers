@@ -1,24 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    public interface INation
-    {
-        Color getTerrainColor();
-        string getNationName();
-        Object getTree(Point point);
-        Object getHouse(Point point);
-        Object getWaterResource(Point point);
-    }
-    public interface INationFactory
-    {
-        INation getNation();
-    }
     public class Village
     {
         private string villageName;

@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="INation.cs" />
+    <Compile Include="INationFactory.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageWindow.cs">
       <SubType>Form</SubType>
