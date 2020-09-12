@@ -71,33 +71,32 @@
             // lblnation
             // 
             this.lblnation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblnation.AutoSize = true;
-            this.lblnation.Location = new System.Drawing.Point(35, 106);
+            this.lblnation.Location = new System.Drawing.Point(6, 102);
             this.lblnation.Name = "lblnation";
-            this.lblnation.Size = new System.Drawing.Size(103, 21);
+            this.lblnation.Size = new System.Drawing.Size(182, 29);
             this.lblnation.TabIndex = 5;
             this.lblnation.Text = "Nation Name";
+            this.lblnation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblvillage
             // 
             this.lblvillage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblvillage.AutoSize = true;
-            this.lblvillage.Location = new System.Drawing.Point(35, 69);
+            this.lblvillage.Location = new System.Drawing.Point(6, 68);
             this.lblvillage.Name = "lblvillage";
-            this.lblvillage.Size = new System.Drawing.Size(103, 21);
+            this.lblvillage.Size = new System.Drawing.Size(182, 29);
             this.lblvillage.TabIndex = 4;
             this.lblvillage.Text = "Village Name";
+            this.lblvillage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblgamename
             // 
-            this.lblgamename.AutoSize = true;
             this.lblgamename.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblgamename.Location = new System.Drawing.Point(6, 9);
+            this.lblgamename.Location = new System.Drawing.Point(0, 9);
             this.lblgamename.Name = "lblgamename";
-            this.lblgamename.Size = new System.Drawing.Size(188, 27);
+            this.lblgamename.Size = new System.Drawing.Size(200, 33);
             this.lblgamename.TabIndex = 3;
             this.lblgamename.Text = "Age of Villagers";
-            this.lblgamename.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblgamename.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rbtntree
             // 

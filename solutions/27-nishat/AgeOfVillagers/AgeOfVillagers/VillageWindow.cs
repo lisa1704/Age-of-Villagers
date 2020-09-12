@@ -54,7 +54,6 @@ namespace AgeOfVillagers
                 var savewindow = new VillageSaveWindow(this);
                 savewindow.Show();
             }
-            
         }
 
         private void drawingpanel_MouseClick(object sender, MouseEventArgs e)
@@ -65,22 +64,17 @@ namespace AgeOfVillagers
                 if (rbtntree.Checked)
                 {
                     village.DrawTree(g, p, point);
-                    //g.DrawLine(p, point, new Point(e.X, e.Y-50));
                 }
                 else if (rbtnhouse.Checked)
                 {
                     village.DrawHouse(g, p, point);
-                    //g.DrawLine(p, point, new Point(e.X + 50, e.Y - 50));
                 }
                 else if(rbtnwatersource.Checked)
                 {
                     village.DrawWaterResource(g, p, point);
-                    //g.DrawLine(p, point, new Point(e.X + 50, e.Y));
                 }
             }
-            
         }
     }
-    
 }
 
