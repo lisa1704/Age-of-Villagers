@@ -12,4 +12,12 @@
             return new ArabBedouin();
         }
     }
+
+    public class BangladeshiFarmer_Factory : INationFactory
+    {
+        public INation getNation()
+        {
+            return new BangladeshiFarmers();
+        }
+    }
 }
