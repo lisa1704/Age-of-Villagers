@@ -36,12 +36,16 @@
             this.NewVillagebtn = new System.Windows.Forms.Button();
             this.SaveVillagebtn = new System.Windows.Forms.Button();
             this.Openvillagebtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.VillageName = new System.Windows.Forms.Label();
+            this.NationName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DrawPanel
             // 
-            this.DrawPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.DrawPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.DrawPanel.Location = new System.Drawing.Point(13, 13);
             this.DrawPanel.MaximumSize = new System.Drawing.Size(1200, 800);
@@ -89,7 +93,7 @@
             // NameOfApp
             // 
             this.NameOfApp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NameOfApp.Location = new System.Drawing.Point(656, 23);
+            this.NameOfApp.Location = new System.Drawing.Point(656, 13);
             this.NameOfApp.Name = "NameOfApp";
             this.NameOfApp.Size = new System.Drawing.Size(147, 40);
             this.NameOfApp.TabIndex = 5;
@@ -128,11 +132,76 @@
             this.Openvillagebtn.Text = "Open Village";
             this.Openvillagebtn.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(619, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1, 400);
+            this.label2.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(619, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 1);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(619, 412);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(210, 1);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(828, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1, 400);
+            this.label4.TabIndex = 10;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // VillageName
+            // 
+            this.VillageName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageName.Location = new System.Drawing.Point(626, 69);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(196, 25);
+            this.VillageName.TabIndex = 5;
+            this.VillageName.Text = "villege name";
+            this.VillageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.VillageName.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // NationName
+            // 
+            this.NationName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NationName.Location = new System.Drawing.Point(626, 94);
+            this.NationName.Name = "NationName";
+            this.NationName.Size = new System.Drawing.Size(196, 25);
+            this.NationName.TabIndex = 5;
+            this.NationName.Text = "nation name";
+            this.NationName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NationName.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 427);
+            this.ClientSize = new System.Drawing.Size(838, 427);
+            this.Controls.Add(this.NationName);
+            this.Controls.Add(this.VillageName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Openvillagebtn);
             this.Controls.Add(this.SaveVillagebtn);
             this.Controls.Add(this.NewVillagebtn);
@@ -142,7 +211,7 @@
             this.Controls.Add(this.Houseradiobtn);
             this.Controls.Add(this.DrawPanel);
             this.MaximumSize = new System.Drawing.Size(1200, 800);
-            this.MinimumSize = new System.Drawing.Size(847, 466);
+            this.MinimumSize = new System.Drawing.Size(854, 466);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -160,6 +229,12 @@
         private System.Windows.Forms.Button NewVillagebtn;
         private System.Windows.Forms.Button SaveVillagebtn;
         private System.Windows.Forms.Button Openvillagebtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label VillageName;
+        private System.Windows.Forms.Label NationName;
     }
 }
 
