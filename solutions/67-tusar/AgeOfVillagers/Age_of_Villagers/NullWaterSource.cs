@@ -11,7 +11,7 @@ namespace Age_of_Villagers
     {
         public void drawWaterSource(Axes axes, Panel drawingSpace)
         {
-            MessageBox.Show("This Nation do not have Water Sources", "Attention");
+            //paint nothing
         }
     }
 }
