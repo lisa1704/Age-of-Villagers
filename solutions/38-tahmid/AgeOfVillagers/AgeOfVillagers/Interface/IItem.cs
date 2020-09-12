@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.AbstractClass
+namespace AgeOfVillagers.Interface
 {
-    class Village
+    interface IItem
     {
     }
 }
