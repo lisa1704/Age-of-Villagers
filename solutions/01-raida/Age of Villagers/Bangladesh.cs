@@ -26,7 +26,7 @@ namespace Age_of_Villagers
 
         public void draw_tree(Point p)
         {
-            tree = new circle(p,50);
+            tree = new Bdtree(p,50,50);
             tree.draw(g, pen);
         }
 

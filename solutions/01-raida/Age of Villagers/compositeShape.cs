@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
+
 
 namespace Age_of_Villagers
 {
     class compositeShape : IShape
     {
-        List<IShape> shapelist = new List<IShape>();
+        private List<IShape> shapelist = new List<IShape>();
+
         public void addShape(IShape shape)
         {
             shapelist.Add(shape);

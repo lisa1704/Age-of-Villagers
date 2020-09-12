@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="arc.cs" />
     <Compile Include="Bangladesh.cs" />
+    <Compile Include="Bdtree.cs" />
     <Compile Include="circle.cs" />
     <Compile Include="compositeShape.cs" />
     <Compile Include="INationFactory.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="IShape.cs" />
     <Compile Include="line.cs" />
     <Compile Include="Nationfactory.cs" />
+    <Compile Include="rectangle.cs" />
+    <Compile Include="tree.cs" />
     <Compile Include="VillagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
