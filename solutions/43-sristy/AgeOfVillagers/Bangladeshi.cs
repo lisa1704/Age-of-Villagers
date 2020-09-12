@@ -6,35 +6,21 @@ namespace Age_of_villagers
     public class Bangladeshi : INation
     {
         Pen p = new Pen(Color.Green);
-        public void Draw_house(Graphics g,int X, int Y)
+        
+        public void Draw_house(Graphics g,Point lptop)
         {
-            g.DrawLine(p, X, Y + 25, X + 25, Y);
-            g.DrawLine(p, X + 25, Y, X + 50, Y + 25);
-            g.DrawLine(p, X, Y + 25, X+50, Y +25);
-            g.DrawLine(p, X + 50, Y + 25, X +50, Y+50);
-            g.DrawLine(p, X + 50, Y + 50, X, Y+50);
-            g.DrawLine(p, X, Y + 50, X, Y + 25);
+            Compositeobj house = new Bangladeshi_house(lptop);
+            house.paint(p,g);
         }
-        public void Draw_tree(Graphics g,int X, int Y)
-        { 
-            g.DrawArc(p, X+25, Y, 50 ,50, 0, 360);
-
-            g.DrawLine(p, X + 48, Y + 50, X + 52, Y +50);
-            g.DrawLine(p, X + 52, Y + 50, X + 52, Y + 75);
-            g.DrawLine(p, X + 52, Y + 75, X + 48, Y + 75);
-            g.DrawLine(p, X + 48, Y + 75, X + 48, Y + 50);
+        public void Draw_tree(Graphics g,Point mptop)
+        {
+            Compositeobj tree = new Bangladeshi_tree(mptop);
+            tree.paint(p, g);
         }
-        public void Draw_watersource(Graphics g,int X, int Y)
-        { 
-            g.DrawLine(p, X, Y + 50, X + 25, Y + 25);
-            g.DrawLine(p, X + 25, Y + 25, X + 50, Y + 50);
-            g.DrawLine(p, X + 50, Y + 50, X + 75, Y);
-            g.DrawLine(p, X + 75, Y, X + 50, Y - 25);
-            g.DrawLine(p, X + 50, Y - 25, X + 25, Y);
-            g.DrawLine(p, X + 25, Y, X + 25, Y - 25);
-            g.DrawLine(p, X + 25, Y - 25, X, Y - 25);
-            g.DrawLine(p, X, Y - 25, X - 25, Y + 25);
-            g.DrawLine(p, X - 25, Y + 25, X, Y + 50);
+        public void Draw_watersource(Graphics g,Point p1)
+        {
+            Compositeobj watersource = new Bangladeshi_watersource(p1);
+            watersource.paint(p, g);
 
         }
     }

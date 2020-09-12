@@ -18,7 +18,7 @@ namespace Age_of_villagers
             {
                 return new Arab();
             }
-            else if (type=="Inuit")
+            else if (type == "Inuit")
             {
                 return new Inuit();
             }

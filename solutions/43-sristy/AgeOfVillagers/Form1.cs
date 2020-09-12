@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Age_of_villagers
 {
@@ -48,15 +49,15 @@ namespace Age_of_villagers
             Graphics g = drawpanel.CreateGraphics();
                 foreach (Point pt in h_points)
                 {
-                nationfactory.GetNation(type).Draw_house(g, pt.X - 50, pt.Y - 50);
+                nationfactory.GetNation(type).Draw_house(g, pt);
                 }
                 foreach (Point pt in t_points)
                 {
-                nationfactory.GetNation(type).Draw_tree(g, pt.X - 50, pt.Y - 50);
+                nationfactory.GetNation(type).Draw_tree(g, pt);
                 }
                 foreach (Point pt in w_points)
                 {
-                nationfactory.GetNation(type).Draw_watersource(g, pt.X - 50, pt.Y - 50);
+                nationfactory.GetNation(type).Draw_watersource(g, pt);
             }
         }
 
@@ -88,20 +89,25 @@ namespace Age_of_villagers
             nationfactory.GetNation(type);
         }
 
-        //private void drawpanel_MouseDoubleClick(object sender, MouseEventArgs e)
-        //{
-        //    if (item == "house")
-        //    {
-        //        h_points.Remove(h_points.Last());
-        //    }
-        //    if (item == "tree")
-        //    {
-        //        t_points.Remove(t_points.Last());
-        //    }
-        //    if (item == "water")
-        //    {
-        //        w_points.Remove(w_points.Last());
-        //    }
-        //}
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
+            sfd.RestoreDirectory = true;
+            sfd.FileName = "*.txt";
+            sfd.DefaultExt = "txt";
+            sfd.Filter = "AoV file(*.txt)| *.txt";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Stream fileStream = sfd.OpenFile();
+                StreamWriter sw = new StreamWriter(fileStream);
+
+                sw.WriteLine(villagename.Text);
+                sw.WriteLine(villagetype.Text);
+                sw.Close();
+                fileStream.Close();
+            }
+        }
     }
 }
