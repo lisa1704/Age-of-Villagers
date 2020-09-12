@@ -16,6 +16,8 @@ namespace Age_of_Villagers
         int y;
         Graphics g;
         string text = "";
+        readonly INationFactory nationfactory=new Nationfactory();
+        INation nation;
         public VillageWindow()
         {
             InitializeComponent();
@@ -54,12 +56,15 @@ namespace Age_of_Villagers
         private void saveButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(villageNameBox.Text);
+            nation.set_villagename(villageNameBox.Text);
         }
 
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
-            MessageBox.Show(selectedNation);
+            nation=nationfactory.GetNation(selectedNation);
         }
+
+        
     }
 }

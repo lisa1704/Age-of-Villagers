@@ -7,13 +7,18 @@ namespace Age_of_Villagers
     {
         List<Point> all_points = new List<Point>();
         Point mouse_point;
-        public Bangladesh(Point P)
+        string village_name;
+        public Bangladesh()
         {
-            mouse_point= P;
+            
         }
-        public void draw()
+        public void set_villagename(string name)
         {
-
+            village_name = name;
+        }
+        public void draw_tree()
+        {
+            
         }
     }
     
