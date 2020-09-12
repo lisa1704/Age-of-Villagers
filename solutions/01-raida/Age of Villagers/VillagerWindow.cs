@@ -33,9 +33,14 @@ namespace Age_of_Villagers
             x = e.X;
             y = e.Y;
             g = villagePanel.CreateGraphics();
-            Font fy = new Font("Helvetica", 10, FontStyle.Bold);
-            Brush br = new SolidBrush(System.Drawing.Color.Red);
-            g.DrawString(text, fy, br, new Point(x, y));
+            Pen myPen = new Pen(Color.Black);
+            nation.set_graphics(g);
+            nation.set_pen(myPen);
+            if (text == "Tree")
+            {
+                nation.draw_tree(new Point(x, y));
+            }
+
         }
 
         private void treeButton_Click(object sender, EventArgs e)
@@ -62,7 +67,7 @@ namespace Age_of_Villagers
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
-            nation=nationfactory.GetNation(selectedNation);
+            nation=nationfactory.GetNation("Bangladeshi Farmers");
         }
 
         

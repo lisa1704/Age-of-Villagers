@@ -7,8 +7,8 @@ namespace Age_of_Villagers
         INation nation;
         public INation GetNation(string nation_name)
         {
-            if(nation_name=="Bangledeshi Farmer")
-                return new Bangladesh();
+            if(nation_name=="Bangladeshi Farmers")
+                nation=new Bangladesh();
             return nation;
         }
 

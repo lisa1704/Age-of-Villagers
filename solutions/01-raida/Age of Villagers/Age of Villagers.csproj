@@ -55,7 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="arc.cs" />
     <Compile Include="Bangladesh.cs" />
+    <Compile Include="circle.cs" />
+    <Compile Include="compositeShape.cs" />
     <Compile Include="INationFactory.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="IShape.cs" />

@@ -5,12 +5,19 @@ namespace Age_of_Villagers
 {
     class Bangladesh :INation
     {
-        List<Point> all_points = new List<Point>();
-        Point mouse_point;
+        //List<Point> all_points = new List<Point>();
+        //Point mouse_point;
+        IShape tree;
         string village_name;
-        public Bangladesh()
+        Graphics g;
+        Pen pen;
+        public void set_graphics(Graphics g)
         {
-            
+            this.g = g;
+        }
+        public void set_pen(Pen pen)
+        {
+            this.pen = pen;
         }
         public void set_villagename(string name)
         {
@@ -19,7 +26,8 @@ namespace Age_of_Villagers
 
         public void draw_tree(Point p)
         {
-            throw new System.NotImplementedException();
+            tree = new circle(p,50);
+            tree.draw(g, pen);
         }
 
         public void draw_house(Point p)
