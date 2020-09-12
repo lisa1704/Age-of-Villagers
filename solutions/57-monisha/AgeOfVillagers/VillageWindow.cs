@@ -62,5 +62,15 @@ namespace AgeOfVillagers
         {
             //MessageBox.Show("Village is Saved");
         }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VillageNameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

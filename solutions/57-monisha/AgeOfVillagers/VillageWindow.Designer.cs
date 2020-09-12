@@ -36,6 +36,8 @@
             this.WaterSource = new System.Windows.Forms.Button();
             this.SaveVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
+            this.VillageNameBox = new System.Windows.Forms.TextBox();
+            this.NationList = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +46,8 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.NationList);
+            this.panel1.Controls.Add(this.VillageNameBox);
             this.panel1.Controls.Add(this.OpenVillage);
             this.panel1.Controls.Add(this.SaveVillage);
             this.panel1.Controls.Add(this.WaterSource);
@@ -61,7 +65,7 @@
             // 
             this.NewVbutton.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.NewVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewVbutton.Location = new System.Drawing.Point(41, 290);
+            this.NewVbutton.Location = new System.Drawing.Point(29, 308);
             this.NewVbutton.Name = "NewVbutton";
             this.NewVbutton.Size = new System.Drawing.Size(130, 23);
             this.NewVbutton.TabIndex = 7;
@@ -73,7 +77,7 @@
             // 
             this.gameTitle.AutoSize = true;
             this.gameTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameTitle.Location = new System.Drawing.Point(36, 38);
+            this.gameTitle.Location = new System.Drawing.Point(24, 19);
             this.gameTitle.Name = "gameTitle";
             this.gameTitle.Size = new System.Drawing.Size(172, 27);
             this.gameTitle.TabIndex = 0;
@@ -117,7 +121,7 @@
             // 
             this.SaveVillage.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.SaveVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveVillage.Location = new System.Drawing.Point(41, 251);
+            this.SaveVillage.Location = new System.Drawing.Point(29, 270);
             this.SaveVillage.Name = "SaveVillage";
             this.SaveVillage.Size = new System.Drawing.Size(130, 23);
             this.SaveVillage.TabIndex = 14;
@@ -129,13 +133,32 @@
             // 
             this.OpenVillage.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.OpenVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpenVillage.Location = new System.Drawing.Point(41, 329);
+            this.OpenVillage.Location = new System.Drawing.Point(29, 351);
             this.OpenVillage.Name = "OpenVillage";
             this.OpenVillage.Size = new System.Drawing.Size(130, 23);
             this.OpenVillage.TabIndex = 15;
             this.OpenVillage.Text = "OPEN VILLAGE";
             this.OpenVillage.UseVisualStyleBackColor = false;
             this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
+            // 
+            // VillageNameBox
+            // 
+            this.VillageNameBox.Location = new System.Drawing.Point(44, 49);
+            this.VillageNameBox.Name = "VillageNameBox";
+            this.VillageNameBox.Size = new System.Drawing.Size(100, 22);
+            this.VillageNameBox.TabIndex = 16;
+            this.VillageNameBox.TextChanged += new System.EventHandler(this.VillageNameBox_TextChanged);
+            // 
+            // NationList
+            // 
+            this.NationList.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NationList.FormattingEnabled = true;
+            this.NationList.ItemHeight = 16;
+            this.NationList.Location = new System.Drawing.Point(22, 177);
+            this.NationList.Name = "NationList";
+            this.NationList.Size = new System.Drawing.Size(103, 68);
+            this.NationList.TabIndex = 17;
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // VillageWindow
             // 
@@ -165,5 +188,7 @@
         private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button OpenVillage;
+        private System.Windows.Forms.ListBox NationList;
+        private System.Windows.Forms.TextBox VillageNameBox;
     }
 }
