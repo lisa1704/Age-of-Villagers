@@ -13,17 +13,15 @@ namespace Age_of_Villagers
     {
         protected OpenFileDialog ofd = new OpenFileDialog();
         protected SaveFileDialog sfd = new SaveFileDialog();
-        protected Village villageState;
         protected string fileName;
-        protected string savePath;
         public void saveState(Village village)
         {
             string villageSerialized = JsonConvert.SerializeObject(village);
             sfd.Filter = "aov|*.aov";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                using (Stream s = File.Open(sfd.FileName, FileMode.CreateNew))
-                using (StreamWriter sw = new StreamWriter(s))
+                Stream s = File.Open(sfd.FileName, FileMode.CreateNew);
+                StreamWriter sw = new StreamWriter(s);
                 sw.Write(villageSerialized);
             }
         }
