@@ -17,12 +17,60 @@ namespace AgeOfVillagers90
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VillageName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
