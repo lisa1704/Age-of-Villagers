@@ -59,7 +59,6 @@
             this.drawing_space.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.drawing_space.Location = new System.Drawing.Point(12, 12);
             this.drawing_space.Name = "drawing_space";
-            this.drawing_space.Padding = new System.Windows.Forms.Padding(5);
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 0;
             this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
@@ -84,6 +83,7 @@
             // 
             // water_btn
             // 
+            this.water_btn.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.water_btn.AutoSize = true;
             this.water_btn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.water_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -97,6 +97,7 @@
             // 
             // tree_btn
             // 
+            this.tree_btn.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.tree_btn.AutoSize = true;
             this.tree_btn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tree_btn.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -111,6 +112,7 @@
             // 
             // House_btn
             // 
+            this.House_btn.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.House_btn.AutoSize = true;
             this.House_btn.BackColor = System.Drawing.Color.Transparent;
             this.House_btn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

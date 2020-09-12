@@ -11,7 +11,9 @@ namespace AgeOfVillagers
     {
         Color getTerrainColor();
         string getNationName();
-
+        Object getTree(Point point);
+        Object getHouse(Point point);
+        Object getWaterResource(Point point);
     }
     public interface INationFactory
     {
@@ -21,11 +23,14 @@ namespace AgeOfVillagers
     {
         private string villageName;
         private INation nation;
-
+        private List<Object> Houses, Trees, waterResources;
         public Village(string villageName, INation nation)
         {
             this.villageName = villageName;
             this.nation = nation;
+            Trees = new List<Object>();
+            Houses = new List<Object>();
+            waterResources = new List<Object>();
         }
 
         public string GetVillageName()
