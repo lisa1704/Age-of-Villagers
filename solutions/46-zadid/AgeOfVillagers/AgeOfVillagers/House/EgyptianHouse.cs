@@ -7,7 +7,7 @@ namespace AgeOfVillagers.House
     {
         public void Draw(ElementSize sz, Graphics g, Point p)
         {
-            //throw new System.NotImplementedException();
+            
         }
     }
 }

@@ -24,7 +24,7 @@ namespace AgeOfVillagers
 
             houseContext.HouseDrawing();
 
-            Debug.WriteLine("Drawing House");
+            Debug.WriteLine("Drawing Bangladeshi House");
         }
 
         public override void DrawTree(Graphics g, Point location)
