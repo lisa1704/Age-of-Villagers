@@ -5,6 +5,15 @@ namespace AgeOfVillagers
 {
     public class InuitHunters : INation
     {
+        private readonly Color color;
+        private readonly String nation_name;
+
+        public InuitHunters()
+        {
+            color = Color.White;
+            nation_name = "Inuit Hunters";
+        }
+
         public object getHouse(Point point)
         {
             throw new NotImplementedException();
@@ -12,12 +21,12 @@ namespace AgeOfVillagers
 
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return nation_name;
         }
 
         public Color getTerrainColor()
         {
-            throw new NotImplementedException();
+            return color;
         }
 
         public object getTree(Point point)
