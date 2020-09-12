@@ -16,9 +16,20 @@ namespace Age_of_Villagers
         {
             village_name = name;
         }
-        public void draw_tree()
+
+        public void draw_tree(Point p)
         {
-            
+            throw new System.NotImplementedException();
+        }
+
+        public void draw_house(Point p)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void draw_river(Point P)
+        {
+            throw new System.NotImplementedException();
         }
     }
     
