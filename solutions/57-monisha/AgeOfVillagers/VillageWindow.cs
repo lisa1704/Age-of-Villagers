@@ -12,6 +12,11 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
+
+        int x;
+        int y;
+        Graphics g;
+        string text = "";
         public VillageWindow()
         {
             InitializeComponent();
@@ -26,20 +31,36 @@ namespace AgeOfVillagers
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
       
+        private void House_Click(object sender, EventArgs e)
+        {
+            text = "House";
+        }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void Tree_Click(object sender, EventArgs e)
+        {
+            text = "Tree";
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
+        {
+            text = "WaterSource";
+        }
+
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
         {
 
         }
 
-       
+        private void NewVbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
