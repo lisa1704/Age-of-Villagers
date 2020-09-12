@@ -33,11 +33,10 @@ namespace Age_of_Villagers
 
         public override void drawWaterSource(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Green);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("EgyptianWaterSource", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            elem.DrawEllipse(pen, x, y, 16, 16);
         }
         public override void paintTerrain()
         {
