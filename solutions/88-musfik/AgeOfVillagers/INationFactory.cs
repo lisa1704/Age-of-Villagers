@@ -4,4 +4,12 @@
     {
         INation getNation();
     }
+
+    public class ArabBedouin_Factory : INationFactory
+    {
+        public INation getNation()
+        {
+            return new ArabBedouin();
+        }
+    }
 }
