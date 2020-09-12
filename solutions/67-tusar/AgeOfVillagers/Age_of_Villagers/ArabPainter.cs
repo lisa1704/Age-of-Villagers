@@ -12,49 +12,10 @@ namespace Age_of_Villagers
     {
         public ArabPainter(Panel panel) : base(panel)
         {
-        }
-        public override void drawHouse(int x, int y)
-        {
-            Pen pen = new Pen(Color.Black);
-            Graphics elem = drawingSpace.CreateGraphics();
-            
-            //draw triangle
-            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 4, y - 8));
-            elem.DrawLine(pen, new PointF(x - 4, y - 8), new PointF(x - 8, y));
-            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 8, y));
-
-            //draw square
-            elem.DrawLine(pen, new PointF(x - 4, y - 8), new PointF(x - 8, y - 8));
-            elem.DrawLine(pen, new PointF(x - 8, y), new PointF(x - 12, y));
-            elem.DrawLine(pen, new PointF(x - 8, y - 8), new PointF(x - 12, y));
-        }
-
-        public override void drawTree(int x, int y)
-        {
-            Pen pen = new Pen(Color.Black);
-            Graphics elem = drawingSpace.CreateGraphics();
-
-            //drawing the rectangle
-            elem.DrawRectangle(pen, x, y, 2, 12);
-
-            //drawng the branches
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 1, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 4, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 6, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 8, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 3, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 5, y - 12));
-            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 7, y - 12));
-        }
-
-        public override void drawWaterSource(int x, int y)
-        {
-            MessageBox.Show("Arab Bedouin do not have Water Sources", "Attention");
-        }
-
-        public override void paintTerrain()
-        {
-            base.drawingSpace.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            base.house = new ArabHouse();
+            base.tree = new ArabTree();
+            base.wSource = new NullWaterSource();
+            base.color = System.Drawing.Color.LightGoldenrodYellow;
         }
     }
 }

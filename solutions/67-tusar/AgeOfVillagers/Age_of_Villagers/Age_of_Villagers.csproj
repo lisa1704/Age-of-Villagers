@@ -72,9 +72,9 @@
     </Compile>
     <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitPainter.cs" />
+    <Compile Include="IPainter.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="NullTree.cs" />
-    <Compile Include="IPainter.cs" />
     <Compile Include="ITree.cs" />
     <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />

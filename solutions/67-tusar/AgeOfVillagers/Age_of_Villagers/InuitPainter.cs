@@ -12,33 +12,10 @@ namespace Age_of_Villagers
     {
         public InuitPainter(Panel panel) : base(panel)
         {
-        }
-        public override void drawHouse(int x, int y)
-        {
-            Pen pen = new Pen(Color.Black);
-            Graphics elem = drawingSpace.CreateGraphics();
-            
-            // Create start and sweep angles on ellipse. 
-            float startAngle = 0.0F;
-            float sweepAngle = -180.0F;
-
-            // Draw to screen. 
-            elem.DrawArc(pen, x, y, 16, 16, startAngle, sweepAngle);
-            elem.DrawArc(pen, x + 4, y + 4, 8, 8, startAngle, sweepAngle);
-            elem.DrawLine(pen, new PointF(x, y + 8), new PointF(x + 16, y + 8));
-        }
-        public override void drawTree(int x, int y)
-        {
-            MessageBox.Show("Inuit Hunters do not have Trees", "Attention");
-        }
-
-        public override void drawWaterSource(int x, int y)
-        {
-            MessageBox.Show("Inuit Hunters do not have Water Sources", "Attention");
-        }
-        public override void paintTerrain()
-        {
-            base.drawingSpace.BackColor = System.Drawing.Color.White;
+            base.house = new InuitHouse();
+            base.tree = new NullTree();
+            base.wSource = new NullWaterSource();
+            base.color = System.Drawing.Color.White;
         }
     }
 }
