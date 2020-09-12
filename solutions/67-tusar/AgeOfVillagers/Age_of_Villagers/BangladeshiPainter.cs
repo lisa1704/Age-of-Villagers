@@ -36,6 +36,15 @@ namespace Age_of_Villagers
         {
             Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
+
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 3, y - 3));
+            elem.DrawLine(pen, new PointF(x-3, y-3), new PointF(x - 6, y + 5));
+            elem.DrawLine(pen, new PointF(x-6, y+5), new PointF(x - 12, y - 1));
+            elem.DrawLine(pen, new PointF(x-12, y-1), new PointF(x - 24, y + 6));
+            elem.DrawLine(pen, new PointF(x-24, y+6), new PointF(x - 13, y + 24));
+            elem.DrawLine(pen, new PointF(x-13, y+24), new PointF(x, y+10));
+            elem.DrawLine(pen, new PointF(x, y+10), new PointF(x, y));
+
         }
         public override void paintTerrain()
         {
