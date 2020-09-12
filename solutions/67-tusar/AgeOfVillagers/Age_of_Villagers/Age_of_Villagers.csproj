@@ -59,6 +59,7 @@
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianPainter.cs" />
+    <Compile Include="EgyptianTree.cs" />
     <Compile Include="House.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="CreateEditVIllage.cs">
