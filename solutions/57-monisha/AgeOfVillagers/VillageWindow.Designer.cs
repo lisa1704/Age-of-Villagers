@@ -156,11 +156,13 @@
             this.NationList.Items.AddRange(new object[] {
             "Bangladeshi",
             "Arab",
-            "Egyptian"});
+            "Egyptian",
+            "Inuit"});
             this.NationList.Location = new System.Drawing.Point(44, 167);
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(121, 24);
             this.NationList.TabIndex = 17;
+            this.NationList.Text = "Village List";
             this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
             // 
             // DrawPanel

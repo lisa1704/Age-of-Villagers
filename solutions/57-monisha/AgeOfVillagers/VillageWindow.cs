@@ -16,7 +16,14 @@ namespace AgeOfVillagers
         int x;
         int y;
         Graphics g;
-        string text = "";
+        string name = "";
+        string VType = "";
+        string Itemtext = "";
+        List<Point> h_points = new List<Point>();
+        List<Point> t_points = new List<Point>();
+        List<Point> w_points = new List<Point>();
+
+
         public VillageWindow()
         {
             InitializeComponent();
@@ -34,17 +41,17 @@ namespace AgeOfVillagers
       
         private void House_Click(object sender, EventArgs e)
         {
-            text = "House";
+            Itemtext = "House";
         }
 
         private void Tree_Click(object sender, EventArgs e)
         {
-            text = "Tree";
+            Itemtext = "Tree";
         }
 
         private void WaterSource_Click(object sender, EventArgs e)
         {
-            text = "WaterSource";
+            Itemtext = "WaterSource";
         }
 
 
@@ -63,14 +70,9 @@ namespace AgeOfVillagers
             //MessageBox.Show("Village is Saved");
         }
 
-        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
-
+            name = VillageNameBox.Text;
         }
 
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -80,12 +82,14 @@ namespace AgeOfVillagers
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = DrawPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
 
         }
 
         private void draw_panelMouseClick(object sender, MouseEventArgs e)
         {
-
+           
         }
     }
 }
