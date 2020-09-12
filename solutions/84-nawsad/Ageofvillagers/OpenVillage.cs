@@ -9,7 +9,7 @@ namespace Ageofvillagers
 {
     class OpenVillage : Command
     {
-        public void execute_command(Form e)
+        public void execute(Form e)
         {
             throw new NotImplementedException();
         }

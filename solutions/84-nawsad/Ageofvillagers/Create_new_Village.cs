@@ -9,10 +9,14 @@ namespace Ageofvillagers
 {
     class CreateNewVillage : Command
     {
-        public void execute_command(Form e)
+
+        public CreateNewVillage(Form ageofvillagers)
         {
          
-            throw new NotImplementedException();
+        }
+        public void execute(Form e)
+        {
+              throw new NotImplementedException();
         }
     }
 }

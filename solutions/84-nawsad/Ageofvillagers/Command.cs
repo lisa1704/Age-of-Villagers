@@ -9,6 +9,6 @@ namespace Ageofvillagers
 {
     interface Command
     {
-        void execute_command(Form e);
+        void execute(Form e);
     }
 }
