@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Nations;
+﻿using AgeOfVillagers.House;
+using AgeOfVillagers.Nations;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,6 +10,7 @@ namespace AgeOfVillagers
 {
     public class Bangladeshi : Nation
     {
+        
         public override void BackgoundColor(Graphics g)
         {
             g.Clear(Color.PaleGreen);
@@ -17,6 +19,11 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
+            BangladeshiHouse bangladeshiHouse = new BangladeshiHouse();
+            HouseContext houseContext = new HouseContext(bangladeshiHouse, g, location, houseSize);
+
+            houseContext.HouseDrawing();
+
             Debug.WriteLine("Drawing House");
         }
 
