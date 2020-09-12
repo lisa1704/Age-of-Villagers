@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,13 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
+        Color getTerrainColor();
+        string getNationName();
 
+    }
+    public interface INationFactory
+    {
+        INation getNation();
     }
     public class Village
     {
