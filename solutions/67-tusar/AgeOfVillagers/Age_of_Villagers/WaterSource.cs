@@ -8,7 +8,7 @@ namespace Age_of_Villagers
 {
     class WaterSource : IElement
     {
-        private int x, y;
+        public int x, y;
         public WaterSource(int X, int Y)
         {
             x = X;

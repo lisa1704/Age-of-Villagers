@@ -8,7 +8,7 @@ namespace Age_of_Villagers
 {
     class House : IElement
     {
-        private int x, y;
+        public int x, y;
         public House(int X, int Y)
         {
             x = X;

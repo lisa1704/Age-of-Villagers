@@ -8,10 +8,10 @@ namespace Age_of_Villagers
 {
     class Village
     {
-        protected string villageName;
-        protected List<House> houses = new List<House>();
-        protected List<Tree> trees = new List<Tree>();
-        protected List<WaterSource> wSources = new List<WaterSource>();
+        public string villageName;
+        public List<House> houses = new List<House>();
+        public List<Tree> trees = new List<Tree>();
+        public List<WaterSource> wSources = new List<WaterSource>();
 
         public string getName()
         {

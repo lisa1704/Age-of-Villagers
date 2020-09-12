@@ -14,6 +14,7 @@ namespace Age_of_Villagers
     {
         Village myVillage = new Village();
         VillageSerializer myVS = new VillageSerializer();
+        OpenFileDialog ofd = new OpenFileDialog();
 
         public CreateEditVIllage()
         {
@@ -34,7 +35,12 @@ namespace Age_of_Villagers
 
         private void btnOpenVillage_Click(object sender, EventArgs e)
         {
-
+            ofd.Filter = "aov|*.aov";
+            if (ofd.ShowDialog() == DialogResult.OK)    
+            {
+                string fileName = ofd.FileName;
+                myVillage = myVS.openState(fileName);
+            }
         }
 
         // text boxes
