@@ -83,5 +83,10 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void MousePointer(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
