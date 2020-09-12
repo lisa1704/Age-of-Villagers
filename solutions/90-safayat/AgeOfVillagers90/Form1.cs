@@ -31,7 +31,7 @@ namespace AgeOfVillagers90
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Village Saved");
         }
 
         private void Tree_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace AgeOfVillagers90
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Village opened");
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -59,10 +59,7 @@ namespace AgeOfVillagers90
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void VillageName_Click(object sender, EventArgs e)
         {
