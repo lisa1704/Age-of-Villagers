@@ -50,17 +50,17 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("Village is Saved");
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+          //  MessageBox.Show("Village is Saved");
         }
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
-
+            //MessageBox.Show("Village is Saved");
         }
     }
 }
