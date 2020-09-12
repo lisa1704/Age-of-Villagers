@@ -23,7 +23,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetHouse(Point point)
         {
-            return new SampleHouse(point);
+            return new ArabHouse(point);
         }
 
         public VillageItem GetTree(Point point)
@@ -33,7 +33,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetWaterResource(Point point)
         {
-            return new SampleWaterResource(point);
+            return new NoWaterResource(point);
         }
     }
 }
