@@ -33,12 +33,22 @@ namespace Age_of_Villagers
             x = e.X;
             y = e.Y;
             g = villagePanel.CreateGraphics();
-            Pen myPen = new Pen(Color.Black);
             nation.set_graphics(g);
+             Pen myPen = new Pen(Color.Black);
             nation.set_pen(myPen);
             if (text == "Tree")
             {
+                Pen gp = new Pen(Color.Green);
+                nation.set_pen(gp);
                 nation.draw_tree(new Point(x, y));
+            }
+            else if(text == "House")
+            {
+                nation.draw_house(new Point(x, y));
+            }
+            else if(text == "River")
+            {
+                nation.draw_river(new Point(x, y));
             }
 
         }
