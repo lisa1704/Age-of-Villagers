@@ -21,7 +21,6 @@ namespace age_of_villagers
         {
 
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
 
