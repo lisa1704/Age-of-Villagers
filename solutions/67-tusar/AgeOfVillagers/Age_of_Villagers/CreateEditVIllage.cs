@@ -41,18 +41,7 @@ namespace Age_of_Villagers
                 string fileName = ofd.FileName;
                 myVillage = myVS.openState(fileName);
                 textVillageName.Text = myVillage.getName();
-                foreach( House house in myVillage.houses)
-                {
-                    painter.drawHouse(house.x, house.y);
-                }
-                foreach (Tree tree in myVillage.trees)
-                {
-                    painter.drawTree(tree.x, tree.y);
-                }
-                foreach (WaterSource ws in myVillage.wSources)
-                {
-                    painter.drawHouse(ws.x, ws.y);
-                }
+                myVillage.repaint();
             }
         }
 
@@ -72,26 +61,19 @@ namespace Age_of_Villagers
         {
 
         }
-
-
-        //radio buttons
-        AbstractPainter painter;
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
             if (rbtnHouse.Checked == true)
             {
-                painter.drawHouse(e.X, e.Y);
-                myVillage.addHouse(new House(e.X, e.Y));
+                myVillage.addHouse(new Axes(e.X, e.Y));
             }
             else if(rbtnTree.Checked == true)
             {
-                painter.drawTree(e.X, e.Y);
-                myVillage.addTree(new Tree(e.X, e.Y));
+                myVillage.addTree(new Axes(e.X, e.Y));
             }
             else if(rbtnWaterResource.Checked == true)
             {
-                painter.drawWaterSource(e.X, e.Y);
-                myVillage.addWSource(new WaterSource(e.X, e.Y));
+                myVillage.addWSource(new Axes(e.X, e.Y));
             }
         }
 
@@ -99,19 +81,27 @@ namespace Age_of_Villagers
         {
             if (nationList.Text == "Arab Bedouin")
             {
-                painter = new ArabPainter(drawingSpace);
+                drawingSpace.Invalidate();
+                myVillage.setNation(new ArabPainter(drawingSpace));
+                myVillage.repaint();
             }
             else if (nationList.Text == "Bangladeshi Farmers")
             {
-                painter = new BangladeshiPainter(drawingSpace);
+                drawingSpace.Invalidate();
+                myVillage.setNation(new BangladeshiPainter(drawingSpace));
+                myVillage.repaint();
             }
             else if (nationList.Text == "Egyptian Kings")
             {
-                painter = new EgyptianPainter(drawingSpace);
+                drawingSpace.Invalidate();
+                myVillage.setNation(new EgyptianPainter(drawingSpace));
+                myVillage.repaint();
             }
             else if (nationList.Text == "Inuit Hunters")
             {
-                painter = new InuitPainter(drawingSpace);
+                drawingSpace.Invalidate();
+                myVillage.setNation(new InuitPainter(drawingSpace));
+                myVillage.repaint();
             }
         }
     }

@@ -16,6 +16,7 @@ namespace Age_of_Villagers
             base.tree = new BangladeshiTree();
             base.wSource = new BangladeshiWaterSource();
             base.color = System.Drawing.Color.LightSeaGreen;
+            paintTerrain();
         }
     }
 }

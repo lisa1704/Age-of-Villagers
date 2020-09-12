@@ -62,7 +62,6 @@
     <Compile Include="EgyptianPainter.cs" />
     <Compile Include="EgyptianTree.cs" />
     <Compile Include="EgyptianWaterSource.cs" />
-    <Compile Include="House.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="CreateEditVIllage.cs">
       <SubType>Form</SubType>
@@ -79,10 +78,8 @@
     <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageSerializer.cs" />
-    <Compile Include="WaterSource.cs" />
     <EmbeddedResource Include="CreateEditVIllage.resx">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </EmbeddedResource>
