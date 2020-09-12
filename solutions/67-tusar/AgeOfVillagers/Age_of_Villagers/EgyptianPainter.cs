@@ -49,7 +49,7 @@ namespace Age_of_Villagers
             Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
 
-            elem.DrawEllipse(pen, x, y, 16, 16);
+            elem.DrawEllipse(pen, x, y, 12, 12);
         }
         public override void paintTerrain()
         {
