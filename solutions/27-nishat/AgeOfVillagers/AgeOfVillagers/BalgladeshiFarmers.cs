@@ -33,7 +33,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetWaterResource(Point point)
         {
-            return new SampleWaterResource(point);
+            return new BangladeshiPond(point);
         }
     }
 }

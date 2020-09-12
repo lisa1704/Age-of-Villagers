@@ -167,7 +167,6 @@ namespace AgeOfVillagers
 
         public void Draw(Graphics g, Pen p)
         {
-            Console.WriteLine(height );
             g.DrawArc(p, x, y, width, height, startAngle, sweepAngle);
         }
     }
@@ -182,6 +181,35 @@ namespace AgeOfVillagers
             _topleft = topleft;
             _bottomright = bottomright;
             AddComponent(new MyArc(_topleft.X,_topleft.Y, _bottomright.X-_topleft.X , _bottomright.Y-_topleft.Y ,0,360));
+        }
+    }
+
+    public class HalfCircle : Shape
+    {
+        private readonly Point _topleft;
+        private readonly Point _bottomright;
+
+        public HalfCircle(Point topleft, Point bottomright)
+        {
+            _topleft = topleft;
+            _bottomright = bottomright;
+            AddComponent(new MyArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 180, 180));
+        }
+    }
+
+    public class VShape : Shape
+    {
+        private readonly Point _point1;
+        private readonly Point _middlepoint;
+        private readonly Point _point2;
+
+        public VShape(Point point1, Point middlepoint, Point point2)
+        {
+            _point1 = point1;
+            _middlepoint = middlepoint;
+            _point2 = point2;
+            AddComponent(new MyLine(_point1, _middlepoint));
+            AddComponent(new MyLine(_middlepoint, _point2));
         }
     }
 
