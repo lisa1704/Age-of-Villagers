@@ -44,20 +44,11 @@ namespace Age_of_Villagers
 
         // text boxes
 
-        private void title_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textVillageName_TextChanged(object sender, EventArgs e)
         {
             myVillage.setName(textVillageName.Text);
         }
 
-        private void textNation_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
             if (rbtnHouse.Checked == true)

@@ -188,7 +188,6 @@ namespace Age_of_Villagers
             this.title.TabStop = false;
             this.title.Text = "Age of Villagers";
             this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.title.TextChanged += new System.EventHandler(this.title_TextChanged);
             // 
             // drawingSpace
             // 
