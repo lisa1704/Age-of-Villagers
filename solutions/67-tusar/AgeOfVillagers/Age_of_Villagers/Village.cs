@@ -10,7 +10,6 @@ namespace Age_of_Villagers
     class Village
     {
         public string villageName;
-        public IPainter nation;
         public List<Axes> houses = new List<Axes>();
         public List<Axes> trees = new List<Axes>();
         public List<Axes> wSources = new List<Axes>();
@@ -23,30 +22,22 @@ namespace Age_of_Villagers
         {
             villageName = name;
         }
-        public IPainter getNation()
-        {
-            return nation;
-        }
-        public void setNation(IPainter newNation)
-        {
-            nation = newNation;
-        }
-        public void addHouse(Axes house)
+        public void addHouse(Axes house, IPainter nation)
         {
             houses.Add(house);
             nation.drawHouse(house);
         }
-        public void addTree(Axes tree)
+        public void addTree(Axes tree, IPainter nation)
         {
             trees.Add(tree);
             nation.drawTree(tree);
         }
-        public void addWSource(Axes wSource)
+        public void addWSource(Axes wSource, IPainter nation)
         {
             wSources.Add(wSource);
             nation.drawWaterSource(wSource);
         }
-        public void repaint()
+        public void repaint(IPainter nation)
         {
             foreach(Axes house in houses)
             {

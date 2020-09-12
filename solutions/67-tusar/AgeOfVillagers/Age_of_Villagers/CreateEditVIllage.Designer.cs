@@ -79,7 +79,6 @@ namespace Age_of_Villagers
             this.nationList.Sorted = true;
             this.nationList.TabIndex = 9;
             this.nationList.TextChanged += new System.EventHandler(this.nationList_TextChanged);
-            this.nationList.SelectedIndex = nationList.Items.IndexOf(1);
             // 
             // btnOpenVillage
             // 
