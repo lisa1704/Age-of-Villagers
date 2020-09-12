@@ -52,6 +52,7 @@
     <Compile Include="AbstractPainter.cs" />
     <Compile Include="ArabHouse.cs" />
     <Compile Include="ArabPainter.cs" />
+    <Compile Include="ArabTree.cs" />
     <Compile Include="Axes.cs" />
     <Compile Include="BangladeshiHouse.cs" />
     <Compile Include="BangladeshiPainter.cs" />
