@@ -57,9 +57,11 @@
     <Compile Include="BangladeshiHouse.cs" />
     <Compile Include="BangladeshiPainter.cs" />
     <Compile Include="BangladeshiTree.cs" />
+    <Compile Include="BangladeshiWaterSource.cs" />
     <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianPainter.cs" />
     <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="House.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="CreateEditVIllage.cs">
@@ -74,6 +76,7 @@
     <Compile Include="NullTree.cs" />
     <Compile Include="IPainter.cs" />
     <Compile Include="ITree.cs" />
+    <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree.cs" />
