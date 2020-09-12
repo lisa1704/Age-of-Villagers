@@ -28,7 +28,7 @@ namespace AgeOfVillagers
 
         public VillageItem GetTree(Point point)
         {
-            return new Sampletree(point);
+            return new ArabTree(point);
         }
 
         public VillageItem GetWaterResource(Point point)
