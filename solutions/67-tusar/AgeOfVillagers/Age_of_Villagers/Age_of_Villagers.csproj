@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AbstractPainter.cs" />
     <Compile Include="ArabPainter.cs" />
+    <Compile Include="Axes.cs" />
     <Compile Include="BangladeshiPainter.cs" />
     <Compile Include="EgyptianPainter.cs" />
     <Compile Include="House.cs" />
