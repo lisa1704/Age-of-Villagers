@@ -15,29 +15,27 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("BangladeshiHouse", font, brush, new PointF(x, y));
+
+            elem.DrawLine(pen, new PointF(x + 8, y - 8), new PointF(x, y));
+            elem.DrawLine(pen, new PointF(x + 8, y - 8), new PointF(x + 16, y));
+            elem.DrawRectangle(pen, x, y, 16, 8);
         }
 
         public override void drawTree(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("BangladeshiTree", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            elem.DrawEllipse(pen, x, y, 16, 16);
+            elem.DrawEllipse(pen, x + 7, y + 16, 2, 8);
         }
 
         public override void drawWaterSource(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("BangladeshiWaterSource", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
         }
         public override void paintTerrain()
         {
