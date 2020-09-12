@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         int x;
         int y;
         Graphics g;
-        string text = "";
+        string text = null;
         public VillageWindow()
         {
             InitializeComponent();
@@ -28,12 +28,13 @@ namespace AgeOfVillagers
 
         private void VillageWindow_Load(object sender, EventArgs e)
         {
-
+            g = drawing_space.CreateGraphics();
         }
 
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
         {
-
+            TextBox objTextBox = (TextBox)sender;
+            text = objTextBox.Text;
         }
 
         private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
