@@ -19,9 +19,9 @@ namespace AgeOfVillagers
         string name = "";
         string VType = "";
         string Itemtext = "";
-        List<Point> h_points = new List<Point>();
-        List<Point> t_points = new List<Point>();
-        List<Point> w_points = new List<Point>();
+        List<Point> HousePoints = new List<Point>();
+        List<Point> TreePoints = new List<Point>();
+        List<Point> WaterPoints = new List<Point>();
 
 
         public VillageWindow()
@@ -77,19 +77,48 @@ namespace AgeOfVillagers
 
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            VType = NationList.Text;
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = DrawPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
+            foreach (Point pt in HousePoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y , 100, 100);
+            }
+            foreach (Point pt in TreePoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y , 100, 100);
+            }
+            foreach (Point pt in WaterPoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            }
+            //g.DrawLine(p, 50, 50, 100, 100);
 
         }
 
         private void draw_panelMouseClick(object sender, MouseEventArgs e)
         {
-           
+            /* Point p = new Point(e.X, e.Y);
+             x = p.X;
+             y = p.Y;
+             DrawPanel.Invalidate();*/
+            if (Itemtext == "House")
+            {
+                HousePoints.Add(e.Location);
+            }
+            if (Itemtext == "Tree")
+            {
+                TreePoints.Add(e.Location);
+            }
+            if (Itemtext == "WaterSource")
+            {
+                WaterPoints.Add(e.Location);
+            }
+            DrawPanel.Invalidate();
         }
     }
 }
