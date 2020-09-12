@@ -27,7 +27,7 @@ namespace AgeOfVillagers90
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Tree_Click(object sender, EventArgs e)
@@ -81,6 +81,11 @@ namespace AgeOfVillagers90
         }
 
         private void AgeofVillagers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrawingPanel(object sender, MouseEventArgs e)
         {
 
         }

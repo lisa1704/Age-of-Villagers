@@ -113,11 +113,13 @@
             // 
             // DrawPanel
             // 
+            this.DrawPanel.BackColor = System.Drawing.Color.White;
             this.DrawPanel.Location = new System.Drawing.Point(25, 12);
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(605, 400);
             this.DrawPanel.TabIndex = 13;
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
+            this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel);
             // 
             // NationList
             // 
