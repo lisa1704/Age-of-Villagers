@@ -15,21 +15,26 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Red);
+            Pen pen = new Pen(Color.Red);
             Graphics elem = drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("InuitHouse", font, brush, new PointF(x, y));
-        }
+            
+            // Create start and sweep angles on ellipse. 
+            float startAngle = 0.0F;
+            float sweepAngle = -180.0F;
 
+            // Draw to screen. 
+            elem.DrawArc(pen, x, y, 16, 16, startAngle, sweepAngle);
+            elem.DrawArc(pen, x + 4, y + 4, 8, 8, startAngle, sweepAngle);
+            elem.DrawLine(pen, new PointF(x, y + 8), new PointF(x + 16, y + 8));
+        }
         public override void drawTree(int x, int y)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void drawWaterSource(int x, int y)
         {
-            throw new NotImplementedException();
+            
         }
         public override void paintTerrain()
         {

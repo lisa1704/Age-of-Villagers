@@ -40,6 +40,19 @@ namespace Age_of_Villagers
             {
                 string fileName = ofd.FileName;
                 myVillage = myVS.openState(fileName);
+                textVillageName.Text = myVillage.getName();
+                foreach( House house in myVillage.houses)
+                {
+                    painter.drawHouse(house.x, house.y);
+                }
+                foreach (Tree tree in myVillage.trees)
+                {
+                    painter.drawTree(tree.x, tree.y);
+                }
+                foreach (WaterSource ws in myVillage.wSources)
+                {
+                    painter.drawHouse(ws.x, ws.y);
+                }
             }
         }
 
@@ -63,7 +76,6 @@ namespace Age_of_Villagers
 
         //radio buttons
         AbstractPainter painter;
-
         private void drawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
             if (rbtnHouse.Checked == true)
