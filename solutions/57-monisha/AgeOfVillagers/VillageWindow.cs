@@ -72,5 +72,20 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrawPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void draw_panelMouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
