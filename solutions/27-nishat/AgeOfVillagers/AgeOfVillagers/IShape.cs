@@ -34,7 +34,7 @@ namespace AgeOfVillagers
     {
         public abstract void Draw(Graphics g, Pen p);
         public abstract Point GetPoint();
-        
+
     }
     public class Sampletree : VillageItem
     {
@@ -106,6 +106,26 @@ namespace AgeOfVillagers
         public override void Draw(Graphics g, Pen p)
         {
             
+        }
+
+        public override Point GetPoint()
+        {
+            return point;
+        }
+    }
+
+    public class NoTree : VillageItem
+    {
+        private readonly Point point;
+
+        public NoTree(Point point)
+        {
+            this.point = point;
+        }
+
+        public override void Draw(Graphics g, Pen p)
+        {
+
         }
 
         public override Point GetPoint()
@@ -213,7 +233,7 @@ namespace AgeOfVillagers
         {
             _topleft = topleft;
             _bottomright = bottomright;
-            AddComponent(new MyArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 180, 180));
+            AddComponent(new MyArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, (_bottomright.Y - _topleft.Y) * 2, 180, 180));
         }
     }
 
