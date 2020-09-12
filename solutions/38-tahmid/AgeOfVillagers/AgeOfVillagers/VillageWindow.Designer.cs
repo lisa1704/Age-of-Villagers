@@ -39,6 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.tbVillageName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.drawing_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +131,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(647, 258);
+            this.button1.Location = new System.Drawing.Point(647, 316);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 23);
             this.button1.TabIndex = 3;
@@ -139,7 +141,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(647, 316);
+            this.button2.Location = new System.Drawing.Point(647, 345);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 23);
             this.button2.TabIndex = 3;
@@ -157,11 +159,32 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.New_Village);
             // 
+            // tbVillageName
+            // 
+            this.tbVillageName.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.tbVillageName.Location = new System.Drawing.Point(692, 234);
+            this.tbVillageName.Name = "tbVillageName";
+            this.tbVillageName.Size = new System.Drawing.Size(95, 23);
+            this.tbVillageName.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(601, 237);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Village Name";
+            // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 401);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbVillageName);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -194,6 +217,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tbVillageName;
+        private System.Windows.Forms.Label label2;
     }
 }
 

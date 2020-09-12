@@ -5,8 +5,8 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    interface Games
+    interface IGames
     {
-        public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name);
+        public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName);
     }
 }

@@ -8,21 +8,23 @@ namespace AgeOfVillagers
 {
     class CreateVillage : Command
     {
-        public Games pressedKey;
+        public IGames pressedKey;
         Panel drawing_panel;
         System.Windows.Forms.Label village_name;
-        public CreateVillage(Games pressedKey, Panel drawing_panel, System.Windows.Forms.Label village_name)
+        string sVillageName;
+        public CreateVillage(IGames pressedKey, Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
             this.pressedKey = pressedKey;
             this.village_name = village_name;
             this.drawing_panel = drawing_panel;
+            this.sVillageName = sVillageName;
         }
 
         
 
         public void execute()
         {
-            pressedKey.createVillage(drawing_panel, village_name);
+            pressedKey.createVillage(drawing_panel, village_name,sVillageName);
         }
     }
 }
