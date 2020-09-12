@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace AgeOfVillagers
@@ -129,23 +130,6 @@ namespace AgeOfVillagers
 
     }
 
-    public class BangladeshiHouseShape : Shape
-    {
-        private readonly Point _top;
-        private readonly Point _middleleft;
-        private readonly Point _bottomright;
-
-        public BangladeshiHouseShape(Point top, Point middleleft, Point bottomright)
-        {
-            _top = top;
-            _bottomright = bottomright;
-            _middleleft = middleleft;
-            AddComponent(new MyTriangle(_top, _middleleft, new Point(_bottomright.X, _middleleft.Y)));
-            AddComponent(new MyRectangle(_middleleft, _bottomright));
-        }
-
-    }
-
     public class MyLine : IShape
     {
         private readonly Point point1;
@@ -164,15 +148,41 @@ namespace AgeOfVillagers
     }
     public class MyArc : IShape
     {
+        private readonly float x;
+        private readonly float y;
+        private readonly float width;
+        private readonly float height;
+        private readonly float startAngle;
+        private readonly float sweepAngle;
 
-        public MyArc()
+        public MyArc(float x, float y, float width, float height, float startAngle, float sweepAngle)
         {
-
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.startAngle = startAngle;
+            this.sweepAngle = sweepAngle;
         }
 
         public void Draw(Graphics g, Pen p)
         {
-            
+            Console.WriteLine(height );
+            g.DrawArc(p, x, y, width, height, startAngle, sweepAngle);
         }
     }
+
+    public class Ellipse : Shape
+    {
+        private readonly Point _topleft;
+        private readonly Point _bottomright;
+
+        public Ellipse(Point topleft, Point bottomright)
+        {
+            _topleft = topleft;
+            _bottomright = bottomright;
+            AddComponent(new MyArc(_topleft.X,_topleft.Y, _bottomright.X-_topleft.X , _bottomright.Y-_topleft.Y ,0,360));
+        }
+    }
+
 }
