@@ -12,6 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        //int x;
+       // int y;
+        string type;
+        bool button7isClick = false;
+        bool button8isClick = false;
+        bool button9isClick = false;
         public Form1()
         {
             InitializeComponent();
@@ -29,23 +35,33 @@ namespace WindowsFormsApp1
         }
 
 
-        bool button7isClick = false;
-
+        
+        //string type;
         private void button7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tree");
             button7isClick = true;
+            type = "tree";
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             MessageBox.Show("House");
+            button8isClick = true;
+            type = "house";
+
+
+
+
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Water Source");
+            button9isClick = true;
+            type = "waterSourse";
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -76,15 +92,35 @@ namespace WindowsFormsApp1
 
         private void splitter2_Paint(object sender, PaintEventArgs e)
         {
+            
+
             Graphics g = e.Graphics;
             Pen myPen = new Pen(Color.Green);
             Brush myBrush = new SolidBrush(Color.Blue);
             g.DrawLine(myPen, 0, 0, 200, 200);
-
-            if (button7isClick) {
+            //g.DrawRectangle(myPen, 0, 0, 50, 50);
+            //if(button9isClick==true)
+            if (button7isClick == true) {
                 //action will be occur 
+                //g.DrawLine(myPen, 0, 0, 200, 200);
+                g.DrawRectangle(myPen, 0, 0, 50, 50);
+
+
             }
-            
+            else if (button8isClick==true)
+            {
+                g.DrawLine(myPen, 0, 0, 200, 200);
+            }
+
+            else if(button9isClick == true)
+            {
+                g.DrawLine(myPen, 50, 50, 200, 200);
+            }
+
+
+
+           
+
         }
 
        
