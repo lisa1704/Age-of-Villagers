@@ -15,20 +15,33 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Green);
+            Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("EgyptianHouse", font, brush, new PointF(x, y));
+
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x + 8, y + 12));
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 8, y + 9));
+
+            elem.DrawLine(pen, new PointF(x + 8, y + 12), new PointF(x - 2, y + 16));
+            elem.DrawLine(pen, new PointF(x - 8, y + 9), new PointF(x - 2, y + 16));
+
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 2, y + 16));
         }
 
         public override void drawTree(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Green);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("EgyptianTree", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x + 4, y - 20));
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 4, y - 20));
+
+            elem.DrawLine(pen, new PointF(x + 4, y - 20), new PointF(x + 4, y - 24));
+            elem.DrawLine(pen, new PointF(x + 4, y - 20), new PointF(x + 8, y - 20));
+            elem.DrawLine(pen, new PointF(x + 4, y - 20), new PointF(x + 8, y - 24));
+
+            elem.DrawLine(pen, new PointF(x - 4, y - 20), new PointF(x - 4, y - 24));
+            elem.DrawLine(pen, new PointF(x - 4, y - 20), new PointF(x - 8, y - 20));
+            elem.DrawLine(pen, new PointF(x - 4, y - 20), new PointF(x - 8, y - 24));
         }
 
         public override void drawWaterSource(int x, int y)
