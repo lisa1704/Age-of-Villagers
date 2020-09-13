@@ -11,7 +11,7 @@ public class EgyptianKings : INation
         this.panel = panel;
     }
 
-    public void backgroundColor()
+    public void paintTerrain()
     {
         panel.BackColor = Color.Yellow ;
     }
