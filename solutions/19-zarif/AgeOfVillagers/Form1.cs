@@ -12,9 +12,17 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        Graphics g;
+        int x = -1;
+        int y = -1;
+        bool moving=false;
+        Pen pen;
         public Form1()
         {
             InitializeComponent();
+            g = DrawPanel.CreateGraphics();
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            pen = new Pen(Color.Black, 5);
         }
 
       
@@ -81,6 +89,29 @@ namespace AgeOfVillagers
 
         }
 
-       
+        private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            moving = true;
+            x = e.X;
+            y = e.Y;
+        }
+
+        private void DrawPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (moving && x != -1 && y != -1)
+            {
+                g.DrawLine(pen, new Point(x, y), e.Location);
+                x = e.X;
+                y = e.Y;
+            }
+
+        }
+
+        private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            moving = false;
+            x = -1;
+            y = -1;
+        }
     }
 }
