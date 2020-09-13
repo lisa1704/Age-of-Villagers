@@ -18,12 +18,26 @@ namespace AgeOfVillagers90
 
     internal class NationFactory
     {
-        /*public INation GetNation(string NationType)
+        public INation GetNation(string NationType)
         {
             if(NationType == "BangladeshiFarmers")
             {
                 return new BangladeshiFarmers();
             }
-        }*/
+            else if (NationType == "ArabBedouin")
+            {
+                return new ArabBedouin();
+            }
+            else if (NationType == "EgytianKings")
+            {
+                return new EgyptianKings();
+            }
+            else if(NationType == "InuitHUnters")
+            {
+                return new InuitHunters();
+            }
+            throw new Exception();
+        }
+
     }
 }
