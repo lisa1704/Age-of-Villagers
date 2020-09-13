@@ -11,6 +11,5 @@ namespace age_of_villagers
         void draw_house();
         void draw_tree();
         void draw_waterSource();
-
     }
 }
