@@ -33,10 +33,10 @@ namespace Age_of_Villagers
         {
             x = e.X;
             y = e.Y;
-            g = villagePanel.CreateGraphics();
-            nation.set_graphics(g);
-             Pen myPen = new Pen(Color.Black);
-            nation.set_pen(myPen);
+            //g = villagePanel.CreateGraphics();
+            //nation.set_graphics(g);
+            //Pen myPen = new Pen(Color.Black);
+            //nation.set_pen(myPen);
             if (text == "Tree")
             {
                 nation.draw_tree(new Point(x, y));
@@ -83,8 +83,21 @@ namespace Age_of_Villagers
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation=nationfactory.GetNation(selectedNation);
             nation.set_villagename(villageNameBox.Text);
+            g = villagePanel.CreateGraphics();
+            nation.set_graphics(g);
+            Pen myPen = new Pen(Color.Black);
+            nation.set_pen(myPen);
         }
 
-        
+        private void openButton_Click(object sender, EventArgs e)
+        {
+
+            IOpenVillage village = new OpenVillage();
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                village.open(open.FileName, nation);
+            }
+        }
     }
 }

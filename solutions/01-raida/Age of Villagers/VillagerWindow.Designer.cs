@@ -102,6 +102,7 @@
             this.openButton.TabIndex = 9;
             this.openButton.Text = "Open Village";
             this.openButton.UseVisualStyleBackColor = false;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // watersourceButton
             // 

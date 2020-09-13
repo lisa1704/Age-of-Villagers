@@ -86,7 +86,7 @@ namespace Age_of_Villagers
     class SaveVillage : ISaveVillage
     {
         village village;
-        private void set_state(INation nation)
+        private void get_state(INation nation)
         {
             village.name = nation.get_villagename();
             village.tree_points = nation.get_tree();
@@ -96,12 +96,43 @@ namespace Age_of_Villagers
 
         public void save(string path, INation nation)
         {
-            this.set_state(nation);
+            this.get_state(nation);
             using (StreamWriter file = File.CreateText(path))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, village);
             }
+        }
+    }
+
+    interface IOpenVillage
+    {
+        void open(string path, INation nation);
+    }
+
+    class OpenVillage : IOpenVillage
+    {
+        village village;
+        public void open(string path,INation nation)
+        {
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                village= JsonConvert.DeserializeObject<village>(json);
+            }
+            this.set_state(nation);
+        }
+
+        private void set_state(INation nation)
+        {
+             nation.set_villagename(village.name);
+            foreach (Point p in village.tree_points)
+                nation.draw_tree(p);
+            foreach (Point p in village.house_points)
+                nation.draw_house(p);
+            foreach (Point p in village.river_points)
+                nation.draw_river(p);
+            
         }
     }
 }
