@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+
 
 namespace Age_of_Villagers
 {
@@ -45,11 +48,60 @@ namespace Age_of_Villagers
             river = new Bdriver(p);
             river.draw(g, pen);
         }
+
+        public string get_villagename()
+        {
+            return village_name;
+        }
+
+        public List<Point> get_tree()
+        {
+            return tree_points;
+        }
+
+        public List<Point> get_house()
+        {
+            return house_points;
+        }
+
+        public List<Point> get_river()
+        {
+            return river_points;
+        }
     }
 
-    interface IMemento
+    interface ISaveVillage
     {
-
+        void save(string path, INation nation);
     }
 
+    struct village
+    {
+        public string name;
+        public List<Point> tree_points;
+        public List<Point> house_points;
+        public List<Point> river_points;
+    };
+
+    class SaveVillage : ISaveVillage
+    {
+        village village;
+        private void set_state(INation nation)
+        {
+            village.name = nation.get_villagename();
+            village.tree_points = nation.get_tree();
+            village.house_points = nation.get_house();
+            village.river_points = nation.get_river();
+        }
+
+        public void save(string path, INation nation)
+        {
+            this.set_state(nation);
+            using (StreamWriter file = File.CreateText(path))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, village);
+            }
+        }
+    }
 }

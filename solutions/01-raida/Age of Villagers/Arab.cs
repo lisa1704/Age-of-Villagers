@@ -44,6 +44,26 @@ namespace Age_of_Villagers
             tree = new Artree(p,50,20);
             tree.draw(g, pen);
         }
+
+        public string get_villagename()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Point> get_tree()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Point> get_house()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Point> get_river()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
 }

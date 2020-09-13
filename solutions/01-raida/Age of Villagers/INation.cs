@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace Age_of_Villagers
         void draw_tree(Point p);
         void draw_house(Point p);
         void draw_river(Point P);
+        string get_villagename();
+        List<Point> get_tree();
+        List<Point> get_house();
+        List<Point> get_river();
+
     }
     
 }
