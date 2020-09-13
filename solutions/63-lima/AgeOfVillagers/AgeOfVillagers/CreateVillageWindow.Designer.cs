@@ -194,7 +194,6 @@
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);
             this.drawing_panel.TabIndex = 1;
-            this.drawing_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_panel_paint);
             this.drawing_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawing_panel_MouseClick);
             // 
             // CreateVillageWindow

@@ -45,7 +45,7 @@ namespace AgeOfVillagers
 
         }
 
-        
+
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
             x = e.X;
@@ -54,7 +54,7 @@ namespace AgeOfVillagers
             Font fy = new Font("Arial", 10, FontStyle.Bold);
             Brush br = new SolidBrush(System.Drawing.Color.Red);
             g.DrawString(text, fy, br, new PointF(x, y));
-            
+
 
         }
 
@@ -72,10 +72,6 @@ namespace AgeOfVillagers
         {
             text = "Water Resource";
         }
-
-        private void drawing_panel_paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
+
 }
