@@ -17,10 +17,7 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -32,29 +29,31 @@ namespace AgeOfVillagers
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void houseradiobtn_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void treeradiobtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterRadiobtn_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
-
+            Form vlgname = new VillageNameInput();
+            vlgname.ShowDialog();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -71,5 +70,17 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void Openvillagebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveVillagebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

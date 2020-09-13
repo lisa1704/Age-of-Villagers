@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.DrawPanel = new System.Windows.Forms.Panel();
-            this.Houseradiobtn = new System.Windows.Forms.RadioButton();
             this.Treeradiobtn = new System.Windows.Forms.RadioButton();
             this.WaterRadiobtn = new System.Windows.Forms.RadioButton();
             this.NameOfApp = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.VillageName = new System.Windows.Forms.Label();
             this.NationName = new System.Windows.Forms.Label();
+            this.Houseradiobtn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // DrawPanel
@@ -55,18 +55,6 @@
             this.DrawPanel.TabIndex = 0;
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
             // 
-            // Houseradiobtn
-            // 
-            this.Houseradiobtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Houseradiobtn.Location = new System.Drawing.Point(628, 166);
-            this.Houseradiobtn.Name = "Houseradiobtn";
-            this.Houseradiobtn.Size = new System.Drawing.Size(95, 32);
-            this.Houseradiobtn.TabIndex = 2;
-            this.Houseradiobtn.TabStop = true;
-            this.Houseradiobtn.Text = "House";
-            this.Houseradiobtn.UseVisualStyleBackColor = true;
-            this.Houseradiobtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // Treeradiobtn
             // 
             this.Treeradiobtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -74,21 +62,20 @@
             this.Treeradiobtn.Name = "Treeradiobtn";
             this.Treeradiobtn.Size = new System.Drawing.Size(95, 30);
             this.Treeradiobtn.TabIndex = 3;
-            this.Treeradiobtn.TabStop = true;
             this.Treeradiobtn.Text = "Tree";
             this.Treeradiobtn.UseVisualStyleBackColor = true;
-            this.Treeradiobtn.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.Treeradiobtn.CheckedChanged += new System.EventHandler(this.treeradiobtn_CheckedChanged);
             // 
             // WaterRadiobtn
             // 
             this.WaterRadiobtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WaterRadiobtn.Location = new System.Drawing.Point(628, 242);
             this.WaterRadiobtn.Name = "WaterRadiobtn";
-            this.WaterRadiobtn.Size = new System.Drawing.Size(95, 24);
+            this.WaterRadiobtn.Size = new System.Drawing.Size(128, 24);
             this.WaterRadiobtn.TabIndex = 4;
-            this.WaterRadiobtn.TabStop = true;
             this.WaterRadiobtn.Text = "Water Source";
             this.WaterRadiobtn.UseVisualStyleBackColor = true;
+            this.WaterRadiobtn.CheckedChanged += new System.EventHandler(this.WaterRadiobtn_CheckedChanged);
             // 
             // NameOfApp
             // 
@@ -121,6 +108,7 @@
             this.SaveVillagebtn.TabIndex = 7;
             this.SaveVillagebtn.Text = "Save Village";
             this.SaveVillagebtn.UseVisualStyleBackColor = true;
+            this.SaveVillagebtn.Click += new System.EventHandler(this.SaveVillagebtn_Click);
             // 
             // Openvillagebtn
             // 
@@ -131,6 +119,7 @@
             this.Openvillagebtn.TabIndex = 8;
             this.Openvillagebtn.Text = "Open Village";
             this.Openvillagebtn.UseVisualStyleBackColor = true;
+            this.Openvillagebtn.Click += new System.EventHandler(this.Openvillagebtn_Click);
             // 
             // label2
             // 
@@ -176,7 +165,7 @@
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(196, 25);
             this.VillageName.TabIndex = 5;
-            this.VillageName.Text = "villege name";
+            this.VillageName.Text = "village name";
             this.VillageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.VillageName.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -191,11 +180,23 @@
             this.NationName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NationName.Click += new System.EventHandler(this.label1_Click);
             // 
+            // Houseradiobtn
+            // 
+            this.Houseradiobtn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Houseradiobtn.Location = new System.Drawing.Point(628, 168);
+            this.Houseradiobtn.Name = "Houseradiobtn";
+            this.Houseradiobtn.Size = new System.Drawing.Size(95, 30);
+            this.Houseradiobtn.TabIndex = 3;
+            this.Houseradiobtn.Text = "House";
+            this.Houseradiobtn.UseVisualStyleBackColor = true;
+            this.Houseradiobtn.CheckedChanged += new System.EventHandler(this.houseradiobtn_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 427);
+            this.Controls.Add(this.Houseradiobtn);
             this.Controls.Add(this.NationName);
             this.Controls.Add(this.VillageName);
             this.Controls.Add(this.label4);
@@ -208,7 +209,6 @@
             this.Controls.Add(this.NameOfApp);
             this.Controls.Add(this.WaterRadiobtn);
             this.Controls.Add(this.Treeradiobtn);
-            this.Controls.Add(this.Houseradiobtn);
             this.Controls.Add(this.DrawPanel);
             this.MaximumSize = new System.Drawing.Size(1200, 800);
             this.MinimumSize = new System.Drawing.Size(854, 466);
@@ -222,7 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Panel DrawPanel;
-        private System.Windows.Forms.RadioButton Houseradiobtn;
         private System.Windows.Forms.RadioButton Treeradiobtn;
         private System.Windows.Forms.RadioButton WaterRadiobtn;
         private System.Windows.Forms.Label NameOfApp;
@@ -235,6 +234,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label VillageName;
         private System.Windows.Forms.Label NationName;
+        private System.Windows.Forms.RadioButton Houseradiobtn;
     }
 }
 
