@@ -12,15 +12,33 @@ namespace AgeOfVillagers
         private readonly Point point1;
         private readonly Point point2;
 
-        public Line(Point pt1,Point pt2)
+        public Line(Point pt1, Point pt2)
         {
             point1 = pt1;
             point2 = pt2;
         }
         public void Paint(Graphics g)
         {
-            var pen = new Pen(Color.Black,1);
+            var pen = new Pen(Color.Black, 1);
             g.DrawLine(pen, point1, point2);
         }
     }
+
+    class Arc : IShapeItem
+    {
+        private readonly Point point1;
+        private readonly Point point2;
+        public int x, y, width, height, startAngle, sweepAngle;
+
+        public Arc()
+        {
+
+        }
+        public void Paint(Graphics g)
+        {
+            var pen = new Pen(Color.Black, 1);
+            g.DrawArc(pen,x, y, width, height, startAngle, sweepAngle);
+        }
+    }
 }
+
