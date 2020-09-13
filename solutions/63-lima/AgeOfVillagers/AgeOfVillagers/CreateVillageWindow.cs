@@ -10,10 +10,10 @@ namespace AgeOfVillagers
 {
     public partial class CreateVillageWindow : Form
     {
-        int x;
-        int y;
-        Graphics g;
-        string text = " ";
+        //int x;
+        //int y;
+        //Graphics g;
+        //string text = " ";
         public CreateVillageWindow()
         {
             InitializeComponent();
@@ -48,14 +48,19 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-            x = e.X;
-            y = e.Y;
-            g = drawing_panel.CreateGraphics();
-            Font fy = new Font("Arial", 10, FontStyle.Bold);
-            Brush br = new SolidBrush(System.Drawing.Color.Red);
-            g.DrawString(text, fy, br, new PointF(x, y));
+            //x = e.X;
+            //y = e.Y;
+            //g = drawing_panel.CreateGraphics();
+            //Font fy = new Font("Arial", 10, FontStyle.Bold);
+            //Brush br = new SolidBrush(System.Drawing.Color.Red);
+            //g.DrawString(text, fy, br, new PointF(x, y));
             EgyptianKings egyptianKings = new EgyptianKings(drawing_panel);
-            egyptianKings.
+            if (tree.Checked == true)
+            {
+                egyptianKings.drawTree(g, e.X, e.Y);
+            }
+
+            
         }
 
         private void tree_CheckedChanged(object sender, EventArgs e)
