@@ -27,6 +27,6 @@ public class InuitHunters : INation
 
     public void paintTerrain()
     {
-        throw new NotImplementedException();
+        panel.BackColor = Color.White;
     }
 }
