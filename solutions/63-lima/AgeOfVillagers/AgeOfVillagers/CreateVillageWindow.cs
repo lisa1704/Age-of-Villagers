@@ -122,6 +122,23 @@ namespace AgeOfVillagers
                     arabBedouin.drawWaterSource(g, e.X, e.Y);
                 }
             }
+            else if (select_nation.Text == "Inuit Hunters")
+            {
+                InuitHunters InuitHunters = new InuitHunters(drawing_panel);
+                InuitHunters.paintTerrain();
+                if (house.Checked == true)
+                {
+                    InuitHunters.drawHouse(g, e.X, e.Y);
+                }
+                else if (tree.Checked == true)
+                {
+                    InuitHunters.drawTree(g, e.X, e.Y);
+                }
+                else
+                {
+                    InuitHunters.drawWaterSource(g, e.X, e.Y);
+                }
+            }
 
         }
     }
