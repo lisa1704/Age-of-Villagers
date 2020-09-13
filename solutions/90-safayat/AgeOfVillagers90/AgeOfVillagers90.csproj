@@ -49,6 +49,7 @@
     <Compile Include="ArabBedouin.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="CompositeShape.cs" />
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,6 +65,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
+    <Compile Include="TAgle.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
