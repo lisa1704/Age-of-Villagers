@@ -24,17 +24,18 @@ namespace AgeOfVillagers
         }
     }
 
-    public class ShapeRectangle : IShapeItem
+    public class ShapeRectangle : CompositeShape
     {
-        private readonly Point topLeft;
-        private readonly Point bottomRight;
-        public ShapeRectangle(Point tLeft,Point bRight)
+       
+        public ShapeRectangle(Point topLeft,Point bottomRight)
         {
-            topLeft= tLeft;
-            bottomRight = bRight;
+            var topRight = new Point(bottomRight.X, topLeft.Y);
+            var bottomLeft = new Point(topLeft.X, bottomRight.Y);
+
+            AddComp(new Line(topLeft, topRight));
 
         }
-        public void Paint(Graphics g)
+       /* public void Paint(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
             g.DrawLine(pen, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
@@ -42,7 +43,7 @@ namespace AgeOfVillagers
             g.DrawLine(pen, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
             g.DrawLine(pen, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
 
-        }
+        }*/
     }
 
     class Arc : IShapeItem

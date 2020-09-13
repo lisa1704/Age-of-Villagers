@@ -21,7 +21,7 @@ namespace AgeOfVillagers
             SComponents = new List<IShapeItem>();
         }
 
-        protected void AddComp(IShapeItem shape)
+        public void AddComp(IShapeItem shape)
         {
             SComponents.Add(shape);
         }
