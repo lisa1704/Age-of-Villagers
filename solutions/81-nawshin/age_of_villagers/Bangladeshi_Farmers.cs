@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 namespace age_of_villagers
 {
     public class Bangladeshi_Farmers : INation
-    {
-        public void draw_house()
+    { 
+        public string draw_house()
         {
-            throw new NotImplementedException();
+            return "Bangladesh house";
         }
 
-        public void draw_tree()
+        public string draw_tree()
         {
-            throw new NotImplementedException();
+            return "Bangladesh tree";
         }
 
-        public void draw_waterSource()
+        public string draw_waterSource()
         {
-            throw new NotImplementedException();
+            return "Bangladesh watersource";
         }
     }
 }

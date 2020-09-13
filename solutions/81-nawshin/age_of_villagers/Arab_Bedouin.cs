@@ -8,17 +8,17 @@ namespace age_of_villagers
 {
     public class Arab_Bedouin : INation
     {
-        public void draw_house()
+        public string draw_house()
         {
             throw new NotImplementedException();
         }
 
-        public void draw_tree()
+        public string draw_tree()
         {
             throw new NotImplementedException();
         }
 
-        public void draw_waterSource()
+        public string draw_waterSource()
         {
             throw new NotImplementedException();
         }
