@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using VisioForge.Shared.MediaFoundation.OPM;
 
 namespace AgeOfVillagers
 {
@@ -12,7 +13,7 @@ namespace AgeOfVillagers
     {
         //int x;
         //int y;
-        //Graphics g;
+        Graphics g;
         //string text = " ";
         public CreateVillageWindow()
         {
@@ -48,34 +49,37 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-            //x = e.X;
-            //y = e.Y;
-            //g = drawing_panel.CreateGraphics();
-            //Font fy = new Font("Arial", 10, FontStyle.Bold);
-            //Brush br = new SolidBrush(System.Drawing.Color.Red);
-            //g.DrawString(text, fy, br, new PointF(x, y));
+            g = drawing_panel.CreateGraphics();
             EgyptianKings egyptianKings = new EgyptianKings(drawing_panel);
+            egyptianKings.backgroundColor();
             if (tree.Checked == true)
             {
-                egyptianKings.drawTree(g, e.X, e.Y);
+                egyptianKings.drawTree(g , e.X, e.Y);
             }
-
+            else if(house.Checked == true)
+            {
+                egyptianKings.drawHouse(g, e.X, e.Y);
+            }
+            else
+            {
+                egyptianKings.drawWaterSource(g, e.X, e.Y);
+            }
             
         }
 
         private void tree_CheckedChanged(object sender, EventArgs e)
         {
-            text = "Tree";
+            //text = "Tree";
         }
 
         private void house_CheckedChanged(object sender, EventArgs e)
         {
-            text = "House";
+            //text = "House";
         }
 
         private void water_resource_CheckedChanged(object sender, EventArgs e)
         {
-            text = "Water Resource";
+            //text = "Water Resource";
         }
     }
 
