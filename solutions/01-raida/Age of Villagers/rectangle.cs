@@ -6,20 +6,21 @@ namespace Age_of_Villagers
     {
         private readonly int length;
         private readonly int height;
-        private readonly Point p;
+        private readonly Point p1,p2,p3,p4;
         
         private compositeShape cs = new compositeShape();
-        public rectangle(Point p,int length,int height) {
-            this.length = length;
-            this.height = height;
-            this.p = p;
+        public rectangle(Point p1,Point p2,Point p3,Point p4) {
+            this.p1 = p1;
+            this.p2 = p2;
+            this.p3 = p3;
+            this.p4 = p4;
         }
         public void createRectangle()
         {
-            cs.addShape(new line(p, new Point(p.X + length, p.Y)));
-            cs.addShape(new line(p,new Point(p.X, p.Y + height)));
-            cs.addShape(new line(new Point(p.X, p.Y + height), new Point(p.X+length, p.Y + height)));
-            cs.addShape(new line(new Point(p.X + length, p.Y), new Point(p.X + length, p.Y + height)));
+            cs.addShape(new line(p1,p2));
+            cs.addShape(new line(p2,p3));
+            cs.addShape(new line(p3, p4));
+            cs.addShape(new line(p4, p1));
         }
 
         public void draw(Graphics g, Pen pen)

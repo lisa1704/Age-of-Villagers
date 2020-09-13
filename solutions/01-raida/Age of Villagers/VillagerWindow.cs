@@ -38,8 +38,6 @@ namespace Age_of_Villagers
             nation.set_pen(myPen);
             if (text == "Tree")
             {
-                Pen gp = new Pen(Color.Green);
-                nation.set_pen(gp);
                 nation.draw_tree(new Point(x, y));
             }
             else if(text == "House")
@@ -77,7 +75,7 @@ namespace Age_of_Villagers
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
-            nation=nationfactory.GetNation("Bangladeshi Farmers");
+            nation=nationfactory.GetNation(selectedNation);
         }
 
         
