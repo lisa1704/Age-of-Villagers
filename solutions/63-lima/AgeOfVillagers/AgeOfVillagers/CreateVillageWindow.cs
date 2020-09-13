@@ -32,7 +32,8 @@ namespace AgeOfVillagers
 
         private void village_name_TextChanged(object sender, EventArgs e)
         {
-
+            VillageName myvillage = new VillageName();
+            myvillage.Name = village_name.Text;
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)
