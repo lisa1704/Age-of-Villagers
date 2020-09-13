@@ -16,4 +16,14 @@ namespace AgeOfVillagers90
 
     }
 
+    internal class NationFactory
+    {
+        /*public INation GetNation(string NationType)
+        {
+            if(NationType == "BangladeshiFarmers")
+            {
+                return new BangladeshiFarmers();
+            }
+        }*/
+    }
 }
