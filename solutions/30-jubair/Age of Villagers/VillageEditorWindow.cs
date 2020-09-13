@@ -12,15 +12,21 @@ namespace Age_of_Villagers
 {
     public partial class VillageEditorWindow : Form
     {
-        
-       
+
+
+        int x, y;
+        Graphics graphics;
+        public static string setValueForText_Tree = "";
+        //public static string setValueForText_House = "";
+        //public static string setValueForText_Water = "";
+
 
         public VillageEditorWindow()
         {
             InitializeComponent();
         }
 
-        string component;
+        
        
 
 
@@ -38,9 +44,17 @@ namespace Age_of_Villagers
 
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
-            //int x = e.X;
-            //int y = e.Y;
-            //MessageBox.Show(" X = " + x + "; Y = " + y);
+             x = e.X;
+             y = e.Y;
+
+
+            graphics = drawing_space.CreateGraphics();
+            Font font = new Font("Calibri", 10, FontStyle.Regular);
+            Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            graphics.DrawString(setValueForText_Tree, font, brush, new Point(x, y));
+            //graphics.DrawString(setValueForText_House, font, brush, new Point(x, y));
+            //graphics.DrawString(setValueForText_Water, font, brush, new Point(x, y));
+
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);
@@ -58,33 +72,32 @@ namespace Age_of_Villagers
         
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
-            label_village_name.Text = NewVillageForm.SetValueForText1;
-            label_nation_name.Text = NewVillageForm.SetValueForText2;
+            label_village_name.Text = CreateNewVillageForm.SetValueForText1;
+            label_nation_name.Text = CreateNewVillageForm.SetValueForText2;
 
         }
 
         private void radioButton_tree_Click(object sender, EventArgs e)
         {
-            component = "Coconut Tree";
-            //MessageBox.Show(radioButton_tree.Text, "MouseClick Event");
+            setValueForText_Tree = "Coconut Tree";
+            
         }
 
         private void radioButton_house_Click(object sender, EventArgs e)
         {
-            component = "Duplex";
-            //MessageBox.Show(radioButton_tree.Text, "MouseClick Event");
+            //setValueForText_House = "Duplex House";
 
         }
 
         private void radioButton_water_Click(object sender, EventArgs e)
         {
-            component = "Fountain";
+            //setValueForText_Water = "River Water";
         }
 
         private void button_new_Click(object sender, EventArgs e)
         {
-            NewVillageForm new_vill = new NewVillageForm();
-            new_vill.Show();
+            CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();
+            new_villageform_object.Show();
         }
     }
 }
