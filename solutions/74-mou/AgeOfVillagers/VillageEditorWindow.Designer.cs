@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    partial class VillageWindow
+    partial class VillageEditorWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -47,6 +47,7 @@ namespace AgeOfVillagers
             this.savevillage.TabIndex = 0;
             this.savevillage.Text = "Save Village";
             this.savevillage.UseVisualStyleBackColor = true;
+            this.savevillage.Click += new System.EventHandler(this.savevillage_Click);
             // 
             // newvillage
             // 
@@ -56,6 +57,7 @@ namespace AgeOfVillagers
             this.newvillage.TabIndex = 1;
             this.newvillage.Text = "New Village";
             this.newvillage.UseVisualStyleBackColor = true;
+            this.newvillage.Click += new System.EventHandler(this.newvillage_Click);
             // 
             // openvillage
             // 
@@ -65,7 +67,7 @@ namespace AgeOfVillagers
             this.openvillage.TabIndex = 2;
             this.openvillage.Text = "Open Village";
             this.openvillage.UseVisualStyleBackColor = true;
-            this.openvillage.Click += new System.EventHandler(this.button3_Click);
+            this.openvillage.Click += new System.EventHandler(this.openvillage_Click);
             // 
             // treeradio
             // 
@@ -116,6 +118,7 @@ namespace AgeOfVillagers
             // 
             // toolpanel
             // 
+            this.toolpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolpanel.Controls.Add(this.nation);
             this.toolpanel.Controls.Add(this.villagename);
             this.toolpanel.Controls.Add(this.titlelabel);
@@ -145,31 +148,41 @@ namespace AgeOfVillagers
             this.nation.Size = new System.Drawing.Size(178, 24);
             this.nation.TabIndex = 10;
             this.nation.SelectedIndexChanged += new System.EventHandler(this.nation_SelectedIndexChanged);
+            this.nation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nation_KeyDown);
             // 
             // villagename
             // 
+            this.villagename.BackColor = System.Drawing.SystemColors.HighlightText;
             this.villagename.Location = new System.Drawing.Point(56, 64);
             this.villagename.Name = "villagename";
             this.villagename.Size = new System.Drawing.Size(178, 27);
             this.villagename.TabIndex = 5;
             this.villagename.TextChanged += new System.EventHandler(this.villagename_TextChanged);
+            this.villagename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.villagename_KeyDown);
             // 
             // drawingpanel
             // 
+            this.drawingpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.drawingpanel.Location = new System.Drawing.Point(12, 23);
             this.drawingpanel.Name = "drawingpanel";
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.drawingpanel.TabIndex = 10;
             this.drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingpanel_Paint);
+            this.drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseClick);
+            this.drawingpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseDown);
+            this.drawingpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseMove);
+            this.drawingpanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);
             // 
-            // VillageWindow
+            // VillageEditorWindow
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(956, 460);
             this.Controls.Add(this.drawingpanel);
             this.Controls.Add(this.toolpanel);
-            this.Name = "VillageWindow";
-            this.Text = "Village Window";
+            this.Name = "VillageEditorWindow";
+            this.Text = "Age of Villagers";
             this.Load += new System.EventHandler(this.VillageWindow_Load);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);
             this.toolpanel.ResumeLayout(false);
             this.toolpanel.PerformLayout();
             this.ResumeLayout(false);
