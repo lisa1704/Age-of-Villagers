@@ -13,7 +13,10 @@ namespace AgeOfVillagers
         public string DrawHouse(Graphics g,Point pt)
         {
             ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
+            Triangle tr = new Triangle(new Point(pt.X-5, pt.Y-10), new Point(pt.X, pt.Y),new Point(pt.X+10,pt.Y));
+
             r.Paint(g);
+            tr.Paint(g);
             //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             return "KureGhor";
         }

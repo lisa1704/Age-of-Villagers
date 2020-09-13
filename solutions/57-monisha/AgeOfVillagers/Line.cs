@@ -26,7 +26,6 @@ namespace AgeOfVillagers
 
     public class ShapeRectangle : CompositeShape
     {
-       
         public ShapeRectangle(Point topLeft,Point bottomRight)
         {
             var topRight = new Point(bottomRight.X, topLeft.Y);
@@ -36,17 +35,17 @@ namespace AgeOfVillagers
             AddComp(new Line(topLeft, bottomLeft));
             AddComp(new Line(bottomLeft, bottomRight));
             AddComp(new Line(bottomRight, topRight));
-
         }
-        /* public void Paint(Graphics g)
-         {
-             var pen = new Pen(Color.Black, 1);
-             g.DrawLine(pen, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
-             g.DrawLine(pen, topLeft.X, topLeft.Y, topLeft.X, bottomRight.Y);
-             g.DrawLine(pen, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
-             g.DrawLine(pen, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
+    }
+     public class Triangle : CompositeShape
+    {
+        public Triangle(Point pt1, Point pt2,Point pt3)
+        {
+            AddComp(new Line(pt1, pt2));
+            AddComp(new Line(pt2, pt3));
+            AddComp(new Line(pt1, pt3));
+        }
 
-         }*/
     }
 
     class Arc : IShapeItem
