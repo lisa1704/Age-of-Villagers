@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.open_village = new System.Windows.Forms.Button();
+            this.new_village = new System.Windows.Forms.Button();
+            this.save_village = new System.Windows.Forms.Button();
+            this.water_resource = new System.Windows.Forms.RadioButton();
+            this.house = new System.Windows.Forms.RadioButton();
+            this.tree = new System.Windows.Forms.RadioButton();
+            this.nation = new System.Windows.Forms.TextBox();
+            this.village_name = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.drawing_panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.open_village);
+            this.panel1.Controls.Add(this.new_village);
+            this.panel1.Controls.Add(this.save_village);
+            this.panel1.Controls.Add(this.water_resource);
+            this.panel1.Controls.Add(this.house);
+            this.panel1.Controls.Add(this.tree);
+            this.panel1.Controls.Add(this.nation);
+            this.panel1.Controls.Add(this.village_name);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(789, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -59,120 +60,135 @@
             this.panel1.Size = new System.Drawing.Size(303, 560);
             this.panel1.TabIndex = 0;
             // 
-            // button3
+            // open_village
             // 
-            this.button3.BackColor = System.Drawing.Color.PowderBlue;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(155, 488);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 38);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Open Village";
-            this.button3.UseVisualStyleBackColor = false;
+            this.open_village.BackColor = System.Drawing.Color.Teal;
+            this.open_village.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.open_village.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.open_village.Location = new System.Drawing.Point(155, 488);
+            this.open_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.open_village.Name = "open_village";
+            this.open_village.Size = new System.Drawing.Size(133, 38);
+            this.open_village.TabIndex = 8;
+            this.open_village.Text = "Open Village";
+            this.open_village.UseVisualStyleBackColor = false;
+            this.open_village.Click += new System.EventHandler(this.open_village_Click);
             // 
-            // button2
+            // new_village
             // 
-            this.button2.BackColor = System.Drawing.Color.PowderBlue;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(17, 488);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 38);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "New Village";
-            this.button2.UseVisualStyleBackColor = false;
+            this.new_village.BackColor = System.Drawing.Color.Teal;
+            this.new_village.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.new_village.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.new_village.Location = new System.Drawing.Point(17, 488);
+            this.new_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.new_village.Name = "new_village";
+            this.new_village.Size = new System.Drawing.Size(133, 38);
+            this.new_village.TabIndex = 7;
+            this.new_village.Text = "New Village";
+            this.new_village.UseVisualStyleBackColor = false;
+            this.new_village.Click += new System.EventHandler(this.new_village_Click);
             // 
-            // button1
+            // save_village
             // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(87, 443);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Save Village";
-            this.button1.UseVisualStyleBackColor = false;
+            this.save_village.BackColor = System.Drawing.Color.Teal;
+            this.save_village.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.save_village.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.save_village.Location = new System.Drawing.Point(87, 443);
+            this.save_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.save_village.Name = "save_village";
+            this.save_village.Size = new System.Drawing.Size(133, 38);
+            this.save_village.TabIndex = 6;
+            this.save_village.Text = "Save Village";
+            this.save_village.UseVisualStyleBackColor = false;
+            this.save_village.Click += new System.EventHandler(this.save_village_Click);
             // 
-            // radioButton3
+            // water_resource
             // 
-            this.radioButton3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton3.Location = new System.Drawing.Point(69, 331);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(163, 31);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Water Resource";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.water_resource.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.water_resource.Location = new System.Drawing.Point(69, 331);
+            this.water_resource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.water_resource.Name = "water_resource";
+            this.water_resource.Size = new System.Drawing.Size(163, 31);
+            this.water_resource.TabIndex = 5;
+            this.water_resource.TabStop = true;
+            this.water_resource.Text = "Water Resource";
+            this.water_resource.UseVisualStyleBackColor = true;
+            this.water_resource.CheckedChanged += new System.EventHandler(this.water_resource_CheckedChanged);
             // 
-            // radioButton2
+            // house
             // 
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton2.Location = new System.Drawing.Point(69, 295);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(163, 31);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "House";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.house.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.house.Location = new System.Drawing.Point(69, 295);
+            this.house.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.house.Name = "house";
+            this.house.Size = new System.Drawing.Size(163, 31);
+            this.house.TabIndex = 4;
+            this.house.TabStop = true;
+            this.house.Text = "House";
+            this.house.UseVisualStyleBackColor = true;
+            this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
             // 
-            // radioButton1
+            // tree
             // 
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.Location = new System.Drawing.Point(69, 260);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(163, 31);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tree";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.tree.Font = new System.Drawing.Font("Century Schoolbook", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tree.Location = new System.Drawing.Point(69, 260);
+            this.tree.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tree.Name = "tree";
+            this.tree.Size = new System.Drawing.Size(163, 31);
+            this.tree.TabIndex = 3;
+            this.tree.TabStop = true;
+            this.tree.Text = "Tree";
+            this.tree.UseVisualStyleBackColor = true;
+            this.tree.CheckedChanged += new System.EventHandler(this.tree_CheckedChanged);
             // 
-            // textBox3
+            // nation
             // 
-            this.textBox3.BackColor = System.Drawing.Color.PowderBlue;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(24, 166);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Bangladeshi Farmers";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nation.BackColor = System.Drawing.Color.LightBlue;
+            this.nation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nation.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nation.Location = new System.Drawing.Point(24, 166);
+            this.nation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nation.Name = "nation";
+            this.nation.Size = new System.Drawing.Size(248, 22);
+            this.nation.TabIndex = 2;
+            this.nation.Text = "Bangladeshi Farmers";
+            this.nation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // village_name
             // 
-            this.textBox2.BackColor = System.Drawing.Color.PowderBlue;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(24, 132);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Lamchori";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.village_name.BackColor = System.Drawing.Color.LightBlue;
+            this.village_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.village_name.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.village_name.Location = new System.Drawing.Point(24, 132);
+            this.village_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.village_name.Name = "village_name";
+            this.village_name.Size = new System.Drawing.Size(248, 22);
+            this.village_name.TabIndex = 1;
+            this.village_name.Text = "Katakhali";
+            this.village_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.village_name.TextChanged += new System.EventHandler(this.village_name_TextChanged);
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.PowderBlue;
+            this.textBox1.BackColor = System.Drawing.Color.LightBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(24, 34);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(248, 30);
+            this.textBox1.Size = new System.Drawing.Size(248, 33);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Age of Villagers";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // drawing_panel
+            // 
+            this.drawing_panel.Location = new System.Drawing.Point(87, 70);
+            this.drawing_panel.Name = "drawing_panel";
+            this.drawing_panel.Size = new System.Drawing.Size(600, 400);
+            this.drawing_panel.TabIndex = 1;
+            this.drawing_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_panel_Paint);
             // 
             // CreateVillageWindow
             // 
@@ -180,6 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1085, 555);
+            this.Controls.Add(this.drawing_panel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateVillageWindow";
@@ -193,14 +210,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox nation;
+        private System.Windows.Forms.TextBox village_name;
+        private System.Windows.Forms.RadioButton water_resource;
+        private System.Windows.Forms.RadioButton house;
+        private System.Windows.Forms.RadioButton tree;
+        private System.Windows.Forms.Button open_village;
+        private System.Windows.Forms.Button new_village;
+        private System.Windows.Forms.Button save_village;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel drawing_panel;
     }
 }
