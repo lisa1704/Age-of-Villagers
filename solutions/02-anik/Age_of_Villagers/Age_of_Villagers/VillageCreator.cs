@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    public partial class CreateVillage : Form
+    public partial class VillageCreator : Form
     {
-        public CreateVillage()
+        public VillageCreator()
         {
             InitializeComponent();
   

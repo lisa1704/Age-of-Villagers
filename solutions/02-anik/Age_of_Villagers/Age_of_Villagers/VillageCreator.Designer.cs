@@ -1,6 +1,6 @@
 ﻿namespace Age_of_Villagers
 {
-    partial class CreateVillage
+    partial class VillageCreator
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VillageCreator));
             this.SuspendLayout();
             // 
-            // CreateVillage
+            // VillageCreator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 353);
-            this.Name = "CreateVillage";
-            this.Text = "CreateVillage";
+            this.Name = "VillageCreator";
             this.ResumeLayout(false);
 
         }
