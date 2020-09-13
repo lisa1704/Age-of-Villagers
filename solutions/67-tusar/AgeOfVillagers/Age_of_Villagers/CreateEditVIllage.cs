@@ -33,6 +33,7 @@ namespace Age_of_Villagers
         {
             Refresh();
             myVillage.RefreshVillage();
+            myVS = new VillageSerializer();
         }
 
         private void btnOpenVillage_Click(object sender, EventArgs e)

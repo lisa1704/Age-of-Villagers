@@ -9,7 +9,7 @@ namespace Age_of_Villagers
 {
     class Village
     {
-        public string villageName;
+        public string villageName = "untitled";
         public List<Axes> houses = new List<Axes>();
         public List<Axes> trees = new List<Axes>();
         public List<Axes> wSources = new List<Axes>();
@@ -54,6 +54,7 @@ namespace Age_of_Villagers
         }
         public void RefreshVillage()
         {
+            villageName = "Untitled";
             houses.Clear();
             trees.Clear();
             wSources.Clear();

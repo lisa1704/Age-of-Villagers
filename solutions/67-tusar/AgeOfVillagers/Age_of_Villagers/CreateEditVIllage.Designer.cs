@@ -170,7 +170,7 @@ namespace Age_of_Villagers
             this.textVillageName.Name = "textVillageName";
             this.textVillageName.Size = new System.Drawing.Size(186, 19);
             this.textVillageName.TabIndex = 1;
-            this.textVillageName.Text = "Name of the Village";
+            this.textVillageName.Text = "untitled";
             this.textVillageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textVillageName.TextChanged += new System.EventHandler(this.textVillageName_TextChanged);
             // 
