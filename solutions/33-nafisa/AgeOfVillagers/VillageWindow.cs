@@ -10,26 +10,24 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class DrawingPanel : Form
+    public partial class VillageWindow : Form
     {
         private Panel drawingPanel;
-    
+        private Panel toolsPanel;
 
-        public DrawingPanel()
+        public VillageWindow()
         {
             InitializeComponent();
         }
 
         private void InitializeComponent()
-        {   
-            this.SuspendLayout();
-            // 
-            // DrawingPanel
-            // 
-            this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Name = "DrawingPanel";
-            this.Load += new System.EventHandler(this.DrawingPanel_Load);
-            this.ResumeLayout(false);
+        {
+            toolsPanel = new Panel();
+            SuspendLayout();
+            InitDrawingPanel();
+            InitToolsPanel();
+            InitVillageWindow();
+            ResumeLayout(false);
 
         }
         private void InitDrawingPanel()
@@ -37,16 +35,59 @@ namespace AgeOfVillagers
             drawingPanel = new Panel
             {
                 Location = new Point(0, 0),
-                Name = "DrawingVillagePanel",
+                Name = "DrawingPanel",
                 Size = new Size(600, 400),
                 TabIndex = 0,
                 BackColor =Color.White
             };
         }
-
-        private void DrawingPanel_Load(object sender, EventArgs e)
+        private void InitToolsPanel()
         {
+            toolsPanel = new TableLayoutPanel
+            {
+                Location = new Point(600, 0),
+                Name = "ToolsPanel",
+                Size = new Size(200, 400),
+                TabIndex = 1,
+                ColumnCount = 1,
+                Padding = new Padding(30)
+            };
+
+            Addlabel("Age Of Villagers");
+            Addlabel("KataKhali");
+            Addlabel("Bangladeshi Farmers");
+            Addlabel("");
+            
+            Addlabel("");
 
         }
+        private void InitVillageWindow()
+        {
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 400);
+            Controls.Add(drawingPanel);
+            Controls.Add(toolsPanel);
+            Name = "VillageWindow";
+            Text = "Age of Villagers";
+        
+        }
+
+        
+
+        private void Addlabel(string text)
+        {
+            var label = new Label
+            {
+                Text = text,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Width = int.MaxValue
+            };
+            toolsPanel.Controls.Add(label);
+
+            
+        }
+
+        
     }
 }
