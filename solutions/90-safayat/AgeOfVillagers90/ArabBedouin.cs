@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    interface INation
+    class ArabBedouin : INation
     {
 
     }
-
 }
