@@ -57,10 +57,16 @@ namespace AgeOfVillagers
             Addlabel("KataKhali");
             Addlabel("Bangladeshi Farmers");
             Addlabel("");
-            
+            AddRadioButton("Tree");
+            AddRadioButton("House");
+            AddRadioButton("WaterSource");
+
             Addlabel("");
 
         }
+
+       
+
         private void InitVillageWindow()
         {
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -73,7 +79,14 @@ namespace AgeOfVillagers
         
         }
 
-        
+        private void AddRadioButton(string text)
+        {
+            var radiobutton = new RadioButton
+            {
+                Text = text
+            };
+            toolsPanel.Controls.Add(radiobutton);
+        }
 
         private void Addlabel(string text)
         {
