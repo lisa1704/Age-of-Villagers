@@ -16,7 +16,6 @@ namespace Age_of_Villagers
         public VillageCreator()
         {
             InitializeComponent();
-  
         }
         private void VillageCreator_Load(object sender, EventArgs e)
         {
@@ -34,6 +33,21 @@ namespace Age_of_Villagers
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
         {
 
         }

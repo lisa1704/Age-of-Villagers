@@ -32,6 +32,9 @@
             this.NewVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.SaveVillage = new System.Windows.Forms.Button();
+            this.Tree = new System.Windows.Forms.Button();
+            this.House = new System.Windows.Forms.Button();
+            this.WaterSource = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewVillage
@@ -55,10 +58,34 @@
             this.SaveVillage.UseVisualStyleBackColor = true;
             this.SaveVillage.Click += new System.EventHandler(this.SaveVillage_Click);
             // 
+            // Tree
+            // 
+            resources.ApplyResources(this.Tree, "Tree");
+            this.Tree.Name = "Tree";
+            this.Tree.UseVisualStyleBackColor = true;
+            this.Tree.Click += new System.EventHandler(this.Tree_Click);
+            // 
+            // House
+            // 
+            resources.ApplyResources(this.House, "House");
+            this.House.Name = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.Click += new System.EventHandler(this.House_Click);
+            // 
+            // WaterSource
+            // 
+            resources.ApplyResources(this.WaterSource, "WaterSource");
+            this.WaterSource.Name = "WaterSource";
+            this.WaterSource.UseVisualStyleBackColor = true;
+            this.WaterSource.Click += new System.EventHandler(this.WaterSource_Click);
+            // 
             // VillageCreator
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.WaterSource);
+            this.Controls.Add(this.House);
+            this.Controls.Add(this.Tree);
             this.Controls.Add(this.SaveVillage);
             this.Controls.Add(this.OpenVillage);
             this.Controls.Add(this.NewVillage);
@@ -73,6 +100,9 @@
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button SaveVillage;
+        private System.Windows.Forms.Button Tree;
+        private System.Windows.Forms.Button House;
+        private System.Windows.Forms.Button WaterSource;
     }
 }
 
