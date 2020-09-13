@@ -13,7 +13,9 @@ namespace AgeOfVillagers90
         public void DrawHouse(Graphics g,Point pt)
         {
             Rectangle rec = new Rectangle(new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y + 25));
+            TAgle tri = new TAgle(new Point(pt.X - 5, pt.Y + 10), new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y));
             rec.Draw(g);
+            tri.Draw(g);
         }
 
         public void DrawTree()
