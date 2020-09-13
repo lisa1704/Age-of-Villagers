@@ -20,5 +20,4 @@ namespace AgeOfVillagers
             AddComponent(new VShape(new Point((int)(_topleft.X + width * 0.62), (int)(_topleft.Y + height * 0.05)), new Point((int)(_topleft.X + width * 0.66), (int)(_topleft.Y + height * 0.4)), new Point(_bottomright.X, (int)(_topleft.Y + height * 0.17))));
         }
     }
-
 }

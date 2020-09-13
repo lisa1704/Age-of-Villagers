@@ -14,5 +14,4 @@ namespace AgeOfVillagers
             AddComponent(new Ellipse(_topleft, _bottomright));
         }
     }
-
 }

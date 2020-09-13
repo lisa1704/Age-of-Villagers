@@ -14,5 +14,4 @@ namespace AgeOfVillagers
             AddComponent(new MyArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, (_bottomright.Y - _topleft.Y) * 2, 180, 180));
         }
     }
-
 }
