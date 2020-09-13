@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.Interface
+namespace AgeOfVillagers
 {
-    interface IShapes
+    class ItemFactory
     {
     }
 }
