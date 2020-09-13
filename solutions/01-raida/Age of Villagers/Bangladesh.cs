@@ -5,13 +5,12 @@ namespace Age_of_Villagers
 {
     class Bangladesh :INation
     {
-        private List<Point> house_points = new List<Point>();
-        private List<Point> tree_points = new List<Point>();
-        private List<Point> river_points = new List<Point>();
-        private IShape tree,house,river;
-        private string village_name;
-        private Graphics g;
-        private Pen pen;
+        List<Point> all_points = new List<Point>();
+        //Point mouse_point;
+        IShape tree,house,river;
+        string village_name;
+        Graphics g;
+        Pen pen;
         public void set_graphics(Graphics g)
         {
             this.g = g;
@@ -27,29 +26,21 @@ namespace Age_of_Villagers
 
         public void draw_tree(Point p)
         {
-            tree_points.Add(p);
             tree = new Bdtree(p,30,30);
             tree.draw(g, pen);
         }
 
         public void draw_house(Point p)
         {
-            house_points.Add(p);
             house = new Bdhouse(p,30,20);
             house.draw(g,pen);
         }
 
         public void draw_river(Point p)
         {
-            river_points.Add(p);
             river = new Bdriver(p);
             river.draw(g, pen);
         }
     }
-
-    interface IMemento
-    {
-
-    }
-
+    
 }

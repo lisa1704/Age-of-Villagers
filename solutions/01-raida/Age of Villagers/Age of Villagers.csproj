@@ -55,10 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arab.cs" />
     <Compile Include="arc.cs" />
-    <Compile Include="Arhouse.cs" />
-    <Compile Include="Artree.cs" />
     <Compile Include="Bangladesh.cs" />
     <Compile Include="Bdhouse.cs" />
     <Compile Include="Bdtree.cs" />
