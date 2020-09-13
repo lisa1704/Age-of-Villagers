@@ -36,6 +36,7 @@ namespace AgeOfVillagers
                 Savestate(state);
             }
         }
+
         private void Savestate(IState state)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
