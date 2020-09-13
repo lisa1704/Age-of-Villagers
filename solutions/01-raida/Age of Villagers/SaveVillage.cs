@@ -17,7 +17,9 @@ namespace Age_of_Villagers
 
         public void execute(string path, INation nation)
         {
-            this.get_state(nation);
+            
+                this.get_state(nation);
+            
             if (Path.GetExtension(path).Equals(".aov")) { }
             else
             {

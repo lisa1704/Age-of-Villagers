@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Drawing;
 using System.IO;
-
+using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
@@ -15,7 +15,14 @@ namespace Age_of_Villagers
                 string json = r.ReadToEnd();
                 village= JsonConvert.DeserializeObject<village>(json);
             }
-            this.set_state(nation);
+            if (nation != null)
+            {
+                this.set_state(nation);
+            }
+            else
+            {
+                MessageBox.Show("Must select a nation type");
+            }
         }
 
         private void set_state(INation nation)
