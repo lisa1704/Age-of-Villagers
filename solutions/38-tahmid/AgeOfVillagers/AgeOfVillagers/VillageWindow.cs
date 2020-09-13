@@ -78,15 +78,29 @@ namespace AgeOfVillagers
              g= drawing_panel.CreateGraphics();
             village_name.Text = "Okay";
             pr.setName(village_name,drawing_panel);
-            
+            double len = 160;
+            double x = 16;
             Pen p = new Pen(Color.Black);
-            g.DrawEllipse(p, 10, 10, 100, 100);
-            g.DrawLine(p, 150, 150, 300, 300);
+            Pen pe= new Pen(Color.Red);
+            SolidBrush blueBrush = new SolidBrush(Color.Blue);
+            Point p1 = new Point(100,100);
+            Point p3 = new Point(180, 0);
+            decimal angle = 60;
 
-            pr.openVillage(village_name);
+            double b = (240 * (Math.PI)) / 180;
+
+            Point p2 = new Point(260,100);//(int)(160 /Math.Tan(b)), 100+160);
+            //g.DrawEllipse(p, p1.X,p1.Y, 100, 100);
+
+            g.DrawRectangle(p, 100, 100, 160, 160);
+            g.DrawLine(pe, p1,p2);
+            g.DrawLine(pe, p2, p3);
+            g.DrawLine(pe, p3, p1);
+            g.DrawRectangle(pe, 260, 260, 20, 20);
+            //pr.openVillage(village_name);
             
             //pr.setPanel(drawing_panel);
-            
+
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
