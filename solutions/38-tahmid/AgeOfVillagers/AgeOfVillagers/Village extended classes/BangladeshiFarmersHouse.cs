@@ -9,17 +9,27 @@ namespace AgeOfVillagers.Village_extended_classes
     class BangladeshiFarmersHouse : IItem
     {
         Graphics g;
-        Point p1, p2;
-       public BangladeshiFarmersHouse (Graphics g,Point p1,Point p2)
+        Pen pen;
+        Point point;
+        int length, width;
+        ShapeFactory shapeFactory;
+       public BangladeshiFarmersHouse (Graphics g,Pen pen,Point point,int length,int width)
         {
+            this.pen = pen;
+            this.length = length;
+            this.width = width;
             this.g = g;
-            this.p1 = p1;
-            this.p2 = p2;
+            this.point = point;
+            shapeFactory = new ShapeFactory();
+
+            
         }
 
         public void placeItem()
         {
-            throw new NotImplementedException();
+            shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+
         }
     }
 }
