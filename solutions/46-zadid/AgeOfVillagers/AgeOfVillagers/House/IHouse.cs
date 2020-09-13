@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.House
 {
-    interface IHouse
+    public interface IHouse
     {
         public void Draw(ElementSize sz,Graphics g,Point p);
     }

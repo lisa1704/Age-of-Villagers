@@ -15,6 +15,8 @@ namespace AgeOfVillagers.House
             g.DrawLine(pen, p.X, p.Y + (sz.height - 6), p.X + sz.width, p.Y + (sz.height - 6));
             g.DrawLine(pen, p.X, p.Y, p.X + (sz.width / 2),p.Y-6);
             g.DrawLine(pen, p.X + (sz.width / 2), p.Y - 6, p.X + sz.width, p.Y);
+
+            
         }
     }
 }

@@ -114,6 +114,7 @@ namespace AgeOfVillagers
             this.SaveButton.TabIndex = 6;
             this.SaveButton.Text = "Save Village";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new EventHandler(this.SaveForm);
             // 
             // watersource
             // 
@@ -156,7 +157,7 @@ namespace AgeOfVillagers
             this.villagename.Name = "villagename";
             this.villagename.Size = new System.Drawing.Size(185, 22);
             this.villagename.TabIndex = 2;
-           
+            
             // 
             // label2
             // 
@@ -202,6 +203,8 @@ namespace AgeOfVillagers
             this.ResumeLayout(false);
 
         }
+
+        
 
         #endregion
 
