@@ -4,12 +4,12 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    class Bangladesh :INation
+    class Egypt : INation
     {
         private List<Point> house_points = new List<Point>();
         private List<Point> tree_points = new List<Point>();
         private List<Point> river_points = new List<Point>();
-        private IShape tree,house,river;
+        private IShape tree, house, river;
         private string village_name;
         private Graphics g;
         private Pen pen;
@@ -29,22 +29,21 @@ namespace Age_of_Villagers
         public void draw_tree(Point p)
         {
             tree_points.Add(p);
-            tree = new Bdtree(p,30,30);
-            pen = new Pen(Color.Green);
+            tree = new Egtree(p, 40, 20);
             tree.draw(g, pen);
         }
 
         public void draw_house(Point p)
         {
             house_points.Add(p);
-            house = new Bdhouse(p,30,20);
-            house.draw(g,pen);
+            house = new Eghouse(p, 40, 30);
+            house.draw(g, pen);
         }
 
         public void draw_river(Point p)
         {
             river_points.Add(p);
-            river = new Bdriver(p);
+            river = new circle(p,30);
             river.draw(g, pen);
         }
 
@@ -68,6 +67,4 @@ namespace Age_of_Villagers
             return river_points;
         }
     }
-
-    
 }

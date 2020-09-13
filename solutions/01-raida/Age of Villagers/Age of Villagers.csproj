@@ -67,6 +67,9 @@
     <Compile Include="Bdtree.cs" />
     <Compile Include="circle.cs" />
     <Compile Include="compositeShape.cs" />
+    <Compile Include="Eghouse.cs" />
+    <Compile Include="Egtree.cs" />
+    <Compile Include="Egypt.cs" />
     <Compile Include="house.cs" />
     <Compile Include="ICommandVillage.cs" />
     <Compile Include="INationFactory.cs" />
