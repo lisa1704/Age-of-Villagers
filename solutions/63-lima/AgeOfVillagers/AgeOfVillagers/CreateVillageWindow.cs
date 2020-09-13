@@ -54,8 +54,8 @@ namespace AgeOfVillagers
             Font fy = new Font("Arial", 10, FontStyle.Bold);
             Brush br = new SolidBrush(System.Drawing.Color.Red);
             g.DrawString(text, fy, br, new PointF(x, y));
-
-
+            EgyptianKings egyptianKings = new EgyptianKings(drawing_panel);
+            egyptianKings.
         }
 
         private void tree_CheckedChanged(object sender, EventArgs e)

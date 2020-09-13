@@ -190,6 +190,7 @@
             // 
             // drawing_panel
             // 
+            this.drawing_panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.drawing_panel.Location = new System.Drawing.Point(71, 56);
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);
