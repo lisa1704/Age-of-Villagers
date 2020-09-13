@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    public partial class Form1 : Form
+    public partial class CreateVillage : Form
     {
-        public Form1()
+        public CreateVillage()
         {
             InitializeComponent();
+  
         }
 
     }
