@@ -8,5 +8,19 @@ namespace AgeOfVillagers
 {
     interface INations
     {
+        void DrawHouse();
+        void DrawTree();
+        void DrawWaterSource();
+    }
+
+    internal class NationFactory
+    {
+        public INations GetNation(string NationType)
+        {
+           /* if (NationType == "BangladeshiFarmers")
+            {
+                return new BangladeshiFarmers();
+            }*/
+        }
     }
 }

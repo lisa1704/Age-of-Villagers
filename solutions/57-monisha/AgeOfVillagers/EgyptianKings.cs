@@ -8,5 +8,19 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INations
     {
+        public void DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
