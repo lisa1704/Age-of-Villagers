@@ -54,7 +54,6 @@ namespace AgeOfVillagers
             Itemtext = "WaterSource";
         }
 
-
         private void SaveVillage_Click(object sender, EventArgs e)
         {
             MessageBox.Show(VillageNameBox.Text+"Village saved");
@@ -86,18 +85,17 @@ namespace AgeOfVillagers
             Pen p = new Pen(Color.Black);
             foreach (Point pt in HousePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y , 100, 100);
+                g.DrawLine(p, pt.X, pt.Y , pt.X+16, pt.X + 16);
             }
             foreach (Point pt in TreePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y , 100, 100);
+                g.DrawLine(p, pt.X, pt.Y , pt.X +16, pt.X +24);
             }
             foreach (Point pt in WaterPoints)
             {
                 g.DrawLine(p, pt.X, pt.Y, 100, 100);
             }
-            //g.DrawLine(p, 50, 50, 100, 100);
-
+         
         }
 
         private void draw_panelMouseClick(object sender, MouseEventArgs e)
