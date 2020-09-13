@@ -72,6 +72,7 @@
     <Compile Include="Egypt.cs" />
     <Compile Include="house.cs" />
     <Compile Include="ICommandVillage.cs" />
+    <Compile Include="igloo.cs" />
     <Compile Include="INationFactory.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="IShape.cs" />

@@ -14,7 +14,7 @@ namespace Age_of_Villagers
             else if (nation_name == "Egyptian Kings")
                 nation = new Egypt();
             else if (nation_name == "Inuit Hunters")
-                nation = new Egypt();
+                nation = new Inuit();
             return nation;
         }
 
