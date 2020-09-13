@@ -8,6 +8,6 @@ namespace AgeOfVillagers90
 {
     interface IShapeIItem
     {
-
+        void Draw();
     }
 }
