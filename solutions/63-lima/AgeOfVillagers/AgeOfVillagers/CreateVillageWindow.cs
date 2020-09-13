@@ -13,7 +13,7 @@ namespace AgeOfVillagers
         int x;
         int y;
         Graphics g;
-        string text = "";
+        string text = " ";
         public CreateVillageWindow()
         {
             InitializeComponent();
@@ -45,14 +45,32 @@ namespace AgeOfVillagers
 
         }
 
-        private void drawing_panel_Paint(object sender, PaintEventArgs e)
+        
+        private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-
+            x = e.X;
+            y = e.Y;
             g = drawing_panel.CreateGraphics();
-            Font fy = new Font("Helvetica", 10, FontStyle.Bold);
+            Font fy = new Font("Arial", 10, FontStyle.Bold);
             Brush br = new SolidBrush(System.Drawing.Color.Red);
-            g.DrawString(text, fy, br, new Point(x, y));
+            g.DrawString(text, fy, br, new PointF(x, y));
+            
 
+        }
+
+        private void tree_CheckedChanged(object sender, EventArgs e)
+        {
+            text = "tree";
+        }
+
+        private void house_CheckedChanged(object sender, EventArgs e)
+        {
+            text = "house";
+        }
+
+        private void water_resource_CheckedChanged(object sender, EventArgs e)
+        {
+            text = "water_resource";
         }
     }
 }

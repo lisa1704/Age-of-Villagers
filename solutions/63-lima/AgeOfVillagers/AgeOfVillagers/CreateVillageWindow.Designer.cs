@@ -113,6 +113,7 @@
             this.water_resource.TabStop = true;
             this.water_resource.Text = "Water Resource";
             this.water_resource.UseVisualStyleBackColor = true;
+            this.water_resource.CheckedChanged += new System.EventHandler(this.water_resource_CheckedChanged);
             // 
             // house
             // 
@@ -125,6 +126,7 @@
             this.house.TabStop = true;
             this.house.Text = "House";
             this.house.UseVisualStyleBackColor = true;
+            this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
             // 
             // tree
             // 
@@ -137,6 +139,7 @@
             this.tree.TabStop = true;
             this.tree.Text = "Tree";
             this.tree.UseVisualStyleBackColor = true;
+            this.tree.CheckedChanged += new System.EventHandler(this.tree_CheckedChanged);
             // 
             // nation
             // 
@@ -185,7 +188,7 @@
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);
             this.drawing_panel.TabIndex = 1;
-            this.drawing_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_panel_Paint);
+            this.drawing_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawing_panel_MouseClick);
             // 
             // CreateVillageWindow
             // 
