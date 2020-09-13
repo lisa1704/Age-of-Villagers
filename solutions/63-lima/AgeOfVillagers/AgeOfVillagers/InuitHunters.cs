@@ -12,17 +12,19 @@ public class InuitHunters : INation
     }
     public void drawTree(Graphics g, int X, int Y)
     {
-        throw new NotImplementedException();
+        
     }
 
     public void drawHouse(Graphics g, int X, int Y)
     {
-        throw new NotImplementedException();
+        g.DrawArc(p, X + 25, Y + 25, 50, 50, 180, 180);
+        g.DrawArc(p, X - 25, Y - 25, 150, 150, 180, 180);
+        g.DrawLine(p, X - 25, Y + 50, X + 125, Y + 50);
     }
 
     public void drawWaterSource(Graphics g, int X, int Y)
     {
-        throw new NotImplementedException();
+        
     }
 
     public void paintTerrain()
