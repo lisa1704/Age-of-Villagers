@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nametextbx = new System.Windows.Forms.TextBox();
             this.vlgdemoname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nametextbx
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.nametextbx.Location = new System.Drawing.Point(115, 13);
+            this.nametextbx.Name = "nametextbx";
+            this.nametextbx.Size = new System.Drawing.Size(244, 23);
+            this.nametextbx.TabIndex = 0;
+            this.nametextbx.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // vlgdemoname
             // 
@@ -66,19 +66,16 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Arab Bedouin",
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.comboBox1.Location = new System.Drawing.Point(115, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.Items.AddRange(new object[]
-            {
-                "Arab Bedouin",
-                "Bangladeshi Farmers",
-                "Egyptian Kings",
-                "Inuit Hunters"
-
-            });
             // 
             // ConfirmButton
             // 
@@ -102,7 +99,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.vlgdemoname);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nametextbx);
             this.MaximumSize = new System.Drawing.Size(395, 170);
             this.MinimumSize = new System.Drawing.Size(395, 170);
             this.Name = "VillageNameInput";
@@ -115,7 +112,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nametextbx;
         private System.Windows.Forms.Label vlgdemoname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;

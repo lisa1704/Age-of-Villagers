@@ -163,18 +163,19 @@
             // 
             // VillageName
             // 
-            this.VillageName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VillageName.Location = new System.Drawing.Point(626, 69);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(196, 25);
             this.VillageName.TabIndex = 5;
             this.VillageName.Text = "village name";
             this.VillageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.VillageName.CausesValidationChanged += new System.EventHandler(this.Form1_Load);
             this.VillageName.Click += new System.EventHandler(this.label1_Click);
             // 
             // NationName
             // 
-            this.NationName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NationName.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NationName.Location = new System.Drawing.Point(626, 94);
             this.NationName.Name = "NationName";
             this.NationName.Size = new System.Drawing.Size(196, 25);
@@ -235,8 +236,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label VillageName;
-        private System.Windows.Forms.Label NationName;
+        public System.Windows.Forms.Label VillageName;
+        public System.Windows.Forms.Label NationName;
         private System.Windows.Forms.RadioButton Houseradiobtn;
     }
 }

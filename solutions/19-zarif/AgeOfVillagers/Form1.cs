@@ -17,16 +17,22 @@ namespace AgeOfVillagers
         int y = -1;
         bool moving=false;
         Pen pen;
+
         public Form1()
         {
             InitializeComponent();
+
+            
+          
             g = DrawPanel.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             pen = new Pen(Color.Black, 3);
+
         }
 
+                     
       
-
+        
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -34,7 +40,7 @@ namespace AgeOfVillagers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void houseradiobtn_CheckedChanged(object sender, EventArgs e)
@@ -45,7 +51,6 @@ namespace AgeOfVillagers
        
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void treeradiobtn_CheckedChanged(object sender, EventArgs e)
@@ -53,6 +58,13 @@ namespace AgeOfVillagers
 
         }
 
+        public void set_Label(string villagename,string nation)
+        {
+            VillageName.Text = villagename;
+            NationName.Text = nation;
+
+    
+        }
         private void WaterRadiobtn_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -60,15 +72,14 @@ namespace AgeOfVillagers
 
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
-            Form vlgname = new VillageNameInput();
+            Form vlgname = new VillageNameInput(this);
             DrawPanel.Invalidate();
-            vlgname.ShowDialog();
+            vlgname.Show();
 
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -88,7 +99,9 @@ namespace AgeOfVillagers
 
         private void SaveVillagebtn_Click(object sender, EventArgs e)
         {
-
+            VillageNameInput vilform = new VillageNameInput(this);
+            
+           
         }
 
         private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
@@ -108,6 +121,8 @@ namespace AgeOfVillagers
             }
 
         }
+
+        
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {

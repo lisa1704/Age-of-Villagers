@@ -10,28 +10,44 @@ namespace AgeOfVillagers
 {
     public partial class VillageNameInput : Form
     {
-        public VillageNameInput()
+        private readonly Form1 _parent;
+        
+        public VillageNameInput(Form1 form1)
         {
             InitializeComponent();
+            _parent = form1;
+
         }
 
         private void VillageNameInput_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Bangladeshi Farmers");
+            
+        }
+
+        public string GetvillageNames()
+        {
+            return nametextbx.Text;
+         }
+        public string GetNationeNames()
+        {
+            return nametextbx.Text;
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
+
+            _parent.VillageName.Text = nametextbx.Text;
+            _parent.NationName.Text = comboBox1.Text;
             this.Hide();
         }
     }
