@@ -12,14 +12,16 @@ namespace Age_of_Villagers
 {
     public partial class CreateEditVIllage : Form
     {
-        Village myVillage = new Village();
+        Village myVillage;
         IPainter nation;
-        VillageSerializer myVS = new VillageSerializer();
+        VillageSerializer myVS;
 
         public CreateEditVIllage()
         {
             InitializeComponent();
-            nation = new BangladeshiPainter(drawingSpace);
+            myVillage = new Village();
+            myVS = new VillageSerializer(myVillage);
+            nationList.SelectedIndex = 1;
         }
 
         // buttons
@@ -33,7 +35,6 @@ namespace Age_of_Villagers
         {
             Refresh();
             myVillage.RefreshVillage();
-            myVS = new VillageSerializer();
         }
 
         private void btnOpenVillage_Click(object sender, EventArgs e)

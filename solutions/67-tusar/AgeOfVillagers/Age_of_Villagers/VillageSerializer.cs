@@ -18,6 +18,11 @@ namespace Age_of_Villagers
         protected string savePath;
         protected string json;
         protected string villageSerialized;
+
+        public VillageSerializer(Village village)
+        {
+            villageState = village;
+        }
         public void saveState(Village village)
         {
             villageState = village;
