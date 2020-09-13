@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.VillageCanvas = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.saveVillageButton = new System.Windows.Forms.Button();
@@ -46,14 +46,17 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // VillageCanvas
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 2;
+            this.VillageCanvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VillageCanvas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.VillageCanvas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.VillageCanvas.Location = new System.Drawing.Point(12, 12);
+            this.VillageCanvas.Name = "VillageCanvas";
+            this.VillageCanvas.Size = new System.Drawing.Size(600, 400);
+            this.VillageCanvas.TabIndex = 2;
+            this.VillageCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.VillageCanvas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageCanvas_MouseClick);
             // 
             // panel2
             // 
@@ -132,6 +135,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Water Source";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.WaterSourceClick);
             // 
             // button2
             // 
@@ -151,7 +155,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Tree";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.treeButtonClick);
             // 
             // nationNameTextBox
             // 
@@ -198,8 +202,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 401);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.VillageCanvas);
             this.Name = "villageEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Village Editor";
             this.Load += new System.EventHandler(this.villageEditor_Load);
             this.panel2.ResumeLayout(false);
@@ -211,7 +216,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel VillageCanvas;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nationNameTextBox;
