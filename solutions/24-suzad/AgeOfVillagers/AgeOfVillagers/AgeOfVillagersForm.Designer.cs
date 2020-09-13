@@ -128,6 +128,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNewVillage
             // 
@@ -174,17 +175,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlDrawingSpace;
-        private System.Windows.Forms.Panel pnlToolSide;
-        private System.Windows.Forms.Label lblAgeOfVillagers;
-        private System.Windows.Forms.Label lblVillageName;
+        public System.Windows.Forms.Panel pnlDrawingSpace;
+        public System.Windows.Forms.Panel pnlToolSide;
+        public System.Windows.Forms.Label lblAgeOfVillagers;
+        public System.Windows.Forms.Label lblVillageName;
         public System.Windows.Forms.Label lblNationName;
-        private System.Windows.Forms.RadioButton radiobtnTree;
-        private System.Windows.Forms.RadioButton radiobtnHouse;
-        private System.Windows.Forms.RadioButton radiobtnWaterSource;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnNewVillage;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.RadioButton radiobtnTree;
+        public System.Windows.Forms.RadioButton radiobtnHouse;
+        public System.Windows.Forms.RadioButton radiobtnWaterSource;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnNewVillage;
+        public System.Windows.Forms.Button button1;
     }
 }
 
