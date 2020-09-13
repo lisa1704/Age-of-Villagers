@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         //int x;
        // int y;
-        string type;
+        //string type;
         bool button7isClick = false;
         bool button8isClick = false;
         bool button9isClick = false;
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Tree");
             button7isClick = true;
-            type = "tree";
+            //type = "tree";
 
         }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("House");
             button8isClick = true;
-            type = "house";
+            //type = "house";
 
 
 
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
         {
             MessageBox.Show("Water Source");
             button9isClick = true;
-            type = "waterSourse";
+            //type = "waterSourse";
             
         }
 
@@ -112,9 +112,8 @@ namespace WindowsFormsApp1
                 g.DrawLine(myPen, 0, 0, 200, 200);
             }
 
-            else if(button9isClick == true)
-            {
-                g.DrawLine(myPen, 50, 50, 200, 200);
+            else if(button9isClick == true) {
+                g.DrawLine(myPen, 0, 0, 200, 200);
             }
 
 
