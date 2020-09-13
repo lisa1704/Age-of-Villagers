@@ -60,17 +60,17 @@ namespace AgeOfVillagers
 
         private void tree_CheckedChanged(object sender, EventArgs e)
         {
-            text = "tree";
+            text = "Tree";
         }
 
         private void house_CheckedChanged(object sender, EventArgs e)
         {
-            text = "house";
+            text = "House";
         }
 
         private void water_resource_CheckedChanged(object sender, EventArgs e)
         {
-            text = "water_resource";
+            text = "Water Resource";
         }
     }
 }
