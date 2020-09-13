@@ -135,6 +135,11 @@ namespace AgeOfVillagers
             // 
             this.nation.FormattingEnabled = true;
             this.nation.ItemHeight = 20;
+            this.nation.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.nation.Location = new System.Drawing.Point(56, 114);
             this.nation.Name = "nation";
             this.nation.Size = new System.Drawing.Size(178, 24);
@@ -163,6 +168,7 @@ namespace AgeOfVillagers
             this.Controls.Add(this.drawingpanel);
             this.Controls.Add(this.toolpanel);
             this.Name = "VillageWindow";
+            this.Text = "Village Window";
             this.Load += new System.EventHandler(this.VillageWindow_Load);
             this.toolpanel.ResumeLayout(false);
             this.toolpanel.PerformLayout();
