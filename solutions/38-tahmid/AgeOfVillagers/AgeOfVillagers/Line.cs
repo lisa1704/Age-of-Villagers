@@ -10,24 +10,32 @@ namespace AgeOfVillagers
     {
         Point start,end;
         Graphics g;
-        Pen p;
-        public Line()
+        Pen pen;
+
+       
+
+        public Line(Point start, Point end,Graphics g, Pen pen)
         {
             
-        }
-
-        public void setDrawingElements(Graphics g, Pen p, Point start, Point end)
-        {
             this.start = start;
             this.end = end;
             this.g = g;
-            this.p = p;
+            this.pen = pen;
         }
+       
+
+
         public override void drawShape()
         {
-            g.DrawLine(p, start, end);
+            g.DrawLine(pen, start, end);
 
         }
-        
+
+       
+
+        internal override void makeShape()
+        {
+            drawShape();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,17 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
+        Graphics g;
+        Pen pen;
+        ItemFactory itemFactory;
         public VillageWindow()
         {
             InitializeComponent();
-            
+
+            g = drawing_panel.CreateGraphics();
+            pen = new Pen(Color.Black);
+            itemFactory = new ItemFactory();
+
 
         }
 
@@ -70,36 +78,13 @@ namespace AgeOfVillagers
 
 
         }
-        Graphics g;
+        
 
 
         private void Open_village(object sender, EventArgs e)
         {
-             g= drawing_panel.CreateGraphics();
-            village_name.Text = "Okay";
-            pr.setName(village_name,drawing_panel);
-            double len = 160;
-            double x = 16;
-            Pen p = new Pen(Color.Black);
-            Pen pe= new Pen(Color.Red);
-            SolidBrush blueBrush = new SolidBrush(Color.Blue);
-            Point p1 = new Point(100,100);
-            Point p3 = new Point(180, 0);
-            decimal angle = 60;
-
-            double b = (240 * (Math.PI)) / 180;
-
-            Point p2 = new Point(260,100);//(int)(160 /Math.Tan(b)), 100+160);
-            //g.DrawEllipse(p, p1.X,p1.Y, 100, 100);
-
-            g.DrawRectangle(p, 100, 100, 160, 160);
-            g.DrawLine(pe, p1,p2);
-            g.DrawLine(pe, p2, p3);
-            g.DrawLine(pe, p3, p1);
-            g.DrawRectangle(pe, 260, 260, 20, 20);
-            //pr.openVillage(village_name);
-            
-            //pr.setPanel(drawing_panel);
+             
+           
 
         }
 
@@ -111,37 +96,11 @@ namespace AgeOfVillagers
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            g = drawing_panel.CreateGraphics();
-            village_name.Text = "Okay";
-            pr.setName(village_name, drawing_panel);
-            double len = 160;
-            double x = 16;
-            Pen p = new Pen(Color.Black);
-            Pen pe = new Pen(Color.Red);
-            SolidBrush blueBrush = new SolidBrush(Color.Blue);
-            Point p1 = new Point(100, 100);
-            Point p3 = new Point(180, 0);
-            decimal angle = 60;
+            IItem villageItem = itemFactory.GetItem(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH, "BangladeshiHouse");
+            villageItem.placeItem();
 
-            double b = (240 * (Math.PI)) / 180;
-
-            Point p2 = new Point(260, 100);//(int)(160 /Math.Tan(b)), 100+160);
-            //g.DrawEllipse(p, p1.X,p1.Y, 100, 100);
-
-            g.DrawRectangle(p, 100, 100, 160, 160);
-            g.DrawLine(pe, p1, p2);
             
-            g.DrawLine(pe, p3, p1);
-            g.DrawRectangle(pe, 260, 260, 20, 20);
-            g.DrawArc(p, point.X,point.Y, 50,50,0, 360);
-
-            g.DrawLine(p, point.X+25,point.Y+25, point.X + 25, point.Y + 25+ 30);
-
-            g.DrawArc(p, 10,10, 100, 200, 0, 315);
-
-            g.DrawLine(p,
-                      60, 110, 110, 110);
-            //pr.openVillage(village_name);
+            
         }
     }
 }

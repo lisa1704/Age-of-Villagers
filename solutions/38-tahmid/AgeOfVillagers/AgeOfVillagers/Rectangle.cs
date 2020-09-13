@@ -12,7 +12,7 @@ namespace AgeOfVillagers
         Graphics g;
         Pen p;
         int height,width;
-        Shape line;
+        Shape upLine,downLine,leftLine,rightLine;
         public Rectangle(Graphics g, Pen p, Point start,int height, int width)
         {
             this.start = start;
@@ -20,23 +20,28 @@ namespace AgeOfVillagers
             this.width = width;
             this.g = g;
             this.p = p;
-            line = new Line(g, p);
+            
             
         }
         public override void drawShape()
         {
-            topRight = new Point(start.X + width, start.Y);
-            bottomLeft= new Point(start.X , start.Y+height);
-            bottomRight = new Point(start.X + width, start.Y+height);
-            line.setLinePoints( start, topRight);
-            line.drawShape();
-            line.setLinePoints( start, bottomLeft);
-            line.drawShape();
-            line.setLinePoints(  topRight,bottomRight);
-            line.drawShape();
-            line.setLinePoints( bottomLeft, topRight);
-            line.drawShape();
+            upLine.drawShape();
+            downLine.drawShape();
+            leftLine.drawShape();
+            rightLine.drawShape();
+        }
+      
 
+        internal override void makeShape()
+        {
+            topRight = new Point(start.X + width, start.Y);
+            bottomLeft = new Point(start.X, start.Y + height);
+            bottomRight = new Point(start.X + width, start.Y + height);
+            upLine = base.getLines(start, topRight, g, p);
+            downLine = base.getLines(bottomLeft, bottomRight, g, p);
+            rightLine = base.getLines(topRight, bottomRight, g, p);
+            leftLine = base.getLines(start, bottomLeft, g, p);
+            drawShape();
         }
     }
 }

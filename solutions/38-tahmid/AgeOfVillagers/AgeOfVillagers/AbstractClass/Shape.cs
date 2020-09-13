@@ -9,9 +9,17 @@ namespace AgeOfVillagers.AbstractClass
     {
         public abstract void drawShape();
 
-        internal void setLinePoints( Point start, Point end)
+        public void setDrawingElement( Graphics g, Pen p)
         {
             
         }
+
+
+        internal Shape getLines(Point start, Point end,Graphics g,Pen pen)
+        {
+            return new Line(start, end,g,pen);
+        }
+
+        internal abstract void makeShape();
     }
 }

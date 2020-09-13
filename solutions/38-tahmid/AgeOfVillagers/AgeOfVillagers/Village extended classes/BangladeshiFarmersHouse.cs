@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Interface;
+﻿using AgeOfVillagers.AbstractClass;
+using AgeOfVillagers.Interface;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -27,8 +28,10 @@ namespace AgeOfVillagers.Village_extended_classes
 
         public void placeItem()
         {
-            shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
-            shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            Shape base_shape=shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            base_shape.makeShape();
+            Shape roof_top=shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            roof_top.makeShape();
 
         }
     }
