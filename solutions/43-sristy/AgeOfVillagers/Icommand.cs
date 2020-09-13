@@ -12,7 +12,7 @@ namespace Age_of_villagers
 {
     public interface Icommand
     {
-        void execute(Stream stream,village vilage);
+        void execute();
     }
     public struct village
     {
@@ -23,15 +23,53 @@ namespace Age_of_villagers
     }
     public class Savevillage : Icommand
     {
-        public void execute(Stream stream, village village)
+        village village;
+        public Savevillage(village village)
         {
-            using(StreamWriter sw = new StreamWriter(stream))
+            this.village = village;
+        }
+        public void execute()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
+            sfd.RestoreDirectory = true;
+            sfd.FileName = "*.txt";
+            sfd.DefaultExt = "txt";
+            sfd.Filter = "AoV file(*.txt)| *.txt";
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(sw, village);
-                sw.Close();
+                Stream fileStream = sfd.OpenFile();
+                using (StreamWriter sw = new StreamWriter(fileStream))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(sw, village);
+                    sw.Close();
+                }
+                fileStream.Close();
             }
            
+        }
+    }
+    public class Openvillage : Icommand
+    {
+        village village;
+        public void execute()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Stream fileStream = ofd.OpenFile();
+                using (StreamReader sr = new StreamReader(fileStream))
+                {
+                    string json = sr.ReadToEnd();
+                    village = JsonConvert.DeserializeObject<village>(json);
+                }
+            }
+        }
+
+        public village get_village()
+        {
+            return this.village;
         }
     }
 }

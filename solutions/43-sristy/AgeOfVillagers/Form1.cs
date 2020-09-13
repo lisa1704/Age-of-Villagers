@@ -31,6 +31,23 @@ namespace Age_of_villagers
             village.waterresource_point = this.W_points;
         }
 
+        public void set_state(village village)
+        {
+            villagename.Text = village.name;
+            foreach(Point pt in village.house_point)
+            {
+                H_points.Add(pt);
+            }
+            foreach(Point pt in village.tree_point)
+            {
+                T_points.Add(pt);
+            }
+            foreach(Point pt in village.waterresource_point)
+            {
+                W_points.Add(pt);
+            }
+        }
+
 
         public Form1()
         {
@@ -103,25 +120,26 @@ namespace Age_of_villagers
 
         private void save_Click(object sender, EventArgs e)
         {
-            Icommand command = new Savevillage();
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
-            sfd.RestoreDirectory = true;
-            sfd.FileName = "*.txt";
-            sfd.DefaultExt = "txt";
-            sfd.Filter = "AoV file(*.txt)| *.txt";
             get_state();
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                Stream fileStream = sfd.OpenFile();
-                command.execute(fileStream,village);
-                fileStream.Close();
-            }
+            Savevillage command = new Savevillage(village);            
+            command.execute();
         }
 
         private void open_Click(object sender, EventArgs e)
-        {
-
+        {           
+            if (villagetype.Text != "")
+            {
+                Openvillage command = new Openvillage();
+                newvillage_Click(sender, e);
+                command.execute();
+                village=command.get_village();
+                set_state(village);
+                drawpanel.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("VillgeType is not selected");
+            }
         }
 
         private void newvillage_Click(object sender, EventArgs e)
@@ -134,27 +152,4 @@ namespace Age_of_villagers
         }
     }
 }
-/*Stream fileStream = sfd.OpenFile();
-StreamWriter sw = new StreamWriter(fileStream);
 
-sw.WriteLine("village name: ");
-                sw.WriteLine(villagename.Text);
-                sw.WriteLine("village Type: ");
-                sw.WriteLine(villagetype.Text);
-                sw.WriteLine("h_points: ");
-                foreach (Point pt in h_points)
-                {
-                    sw.WriteLine(pt);
-                }
-                sw.WriteLine("t_points: ");
-                foreach(Point pt in t_points)
-                {
-                    sw.WriteLine(pt);
-                }
-                sw.WriteLine("w_points: ");
-                foreach(Point pt in w_points)
-                {
-                    sw.WriteLine(pt);
-                }
-                sw.Close();
-                fileStream.Close();*/
