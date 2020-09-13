@@ -17,8 +17,8 @@ namespace Age_of_Villagers
         int x, y;
         Graphics graphics;
         public static string setValueForText_Tree = "";
-        //public static string setValueForText_House = "";
-        //public static string setValueForText_Water = "";
+        public static string setValueForText_House = "";
+        public static string setValueForText_Water = "";
 
 
         public VillageEditorWindow()
@@ -32,7 +32,7 @@ namespace Age_of_Villagers
 
         private void label_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(radioButton_tree.Text,"MouseClick Event");
+            
         }
 
         
@@ -41,6 +41,8 @@ namespace Age_of_Villagers
         {
 
         }
+
+        
 
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
@@ -51,9 +53,10 @@ namespace Age_of_Villagers
             graphics = drawing_space.CreateGraphics();
             Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
-            graphics.DrawString(setValueForText_Tree, font, brush, new Point(x, y));
-            //graphics.DrawString(setValueForText_House, font, brush, new Point(x, y));
-            //graphics.DrawString(setValueForText_Water, font, brush, new Point(x, y));
+
+
+            checkRadioButton(font,brush); // Set Radio Button and act accordingly
+           
 
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
@@ -69,34 +72,51 @@ namespace Age_of_Villagers
 
         }
 
-        
+        private void checkRadioButton(Font font, Brush brush)
+        {
+            if (radioButton_tree.Checked)
+            {
+                graphics.DrawString(setValueForText_Tree, font, brush, new Point(x, y));  // Tree string drawn on drawing panel for setting tree button
+            }
+            else if (radioButton_house.Checked)
+            {
+                graphics.DrawString(setValueForText_House, font, brush, new Point(x, y));  // House string drawn on drawing panel for setting House button
+            }
+            else if (radioButton_water.Checked)
+            {
+                graphics.DrawString(setValueForText_Water, font, brush, new Point(x, y));  // Water Source string drawn on drawing panel for setting Water button
+            }
+        }
+
+
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
-            label_village_name.Text = CreateNewVillageForm.SetValueForText1;
-            label_nation_name.Text = CreateNewVillageForm.SetValueForText2;
+            label_village_name.Text = CreateNewVillageForm.SetValueForText1;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
+            label_nation_name.Text = CreateNewVillageForm.SetValueForText2;    // Nation Name passing from CreateNewVillageForm to VillageEditorWindow Form
 
         }
 
         private void radioButton_tree_Click(object sender, EventArgs e)
         {
             setValueForText_Tree = "Coconut Tree";
+           
             
         }
 
         private void radioButton_house_Click(object sender, EventArgs e)
         {
-            //setValueForText_House = "Duplex House";
+            setValueForText_House = "Duplex House";
 
         }
 
         private void radioButton_water_Click(object sender, EventArgs e)
         {
-            //setValueForText_Water = "River Water";
+            setValueForText_Water = "River Water";
         }
 
-        private void button_new_Click(object sender, EventArgs e)
+        private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly
         {
-            CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();
+            CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();  
             new_villageform_object.Show();
         }
     }
