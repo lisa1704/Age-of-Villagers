@@ -27,7 +27,7 @@ namespace AgeOfVillagers
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            comboBox1.Items.Add("Bangladeshi Farmers");
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
