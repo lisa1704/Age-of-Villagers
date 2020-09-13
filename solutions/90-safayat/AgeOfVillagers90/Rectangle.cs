@@ -13,14 +13,18 @@ namespace AgeOfVillagers90
         private readonly Point BottomRight;
         public Rectangle(Point topLeft, Point BottomRight)
         {
-            TopLeft = topLeft;
-            BottomRight = BottomRight;
+            this.TopLeft = topLeft;
+            this.BottomRight = BottomRight;
         }
 
        
         public void Draw(Graphics g)
         {
-            throw new NotImplementedException();
+            var pen = new Pen(Color.Black, 1);
+            g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);
+            g.DrawLine(pen, TopLeft.X, TopLeft.Y, TopLeft.X, BottomRight.Y);
+            g.DrawLine(pen, TopLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
+            g.DrawLine(pen, BottomRight.X, TopLeft.Y, BottomRight.X, BottomRight.Y);
         }
     }
 }
