@@ -10,7 +10,7 @@ namespace Age_of_Villagers
             cs.addShape(new rectangle(p,length,width));
             Point p1 = p;
             Point p2 = new Point(p.X+length,p.Y);
-            Point p3 = new Point(p.X + length / 2, p.Y - width);
+            Point p3 = new Point(p.X + length / 2, p.Y - length/2);
             cs.addShape(new triangle(p1,p2,p3));
         }
         

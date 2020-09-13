@@ -68,6 +68,7 @@
     <Compile Include="line.cs" />
     <Compile Include="Nationfactory.cs" />
     <Compile Include="rectangle.cs" />
+    <Compile Include="river.cs" />
     <Compile Include="tree.cs" />
     <Compile Include="triangle.cs" />
     <Compile Include="VillagerWindow.cs">

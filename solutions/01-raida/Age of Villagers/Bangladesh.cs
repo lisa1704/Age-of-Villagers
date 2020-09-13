@@ -7,7 +7,7 @@ namespace Age_of_Villagers
     {
         List<Point> all_points = new List<Point>();
         //Point mouse_point;
-        IShape tree,house;
+        IShape tree,house,river;
         string village_name;
         Graphics g;
         Pen pen;
@@ -26,19 +26,20 @@ namespace Age_of_Villagers
 
         public void draw_tree(Point p)
         {
-            tree = new Bdtree(p,50,50);
+            tree = new Bdtree(p,30,30);
             tree.draw(g, pen);
         }
 
         public void draw_house(Point p)
         {
-            house = new Bdhouse(p,50,25);
+            house = new Bdhouse(p,30,20);
             house.draw(g,pen);
         }
 
-        public void draw_river(Point P)
+        public void draw_river(Point p)
         {
-            throw new System.NotImplementedException();
+            river = new Bdriver(p);
+            river.draw(g, pen);
         }
     }
     
