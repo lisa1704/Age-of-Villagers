@@ -11,4 +11,22 @@ namespace Age_of_Villagers
     {
         void draw(Graphics g, Pen pen);
     }
+
+    class nullshape : IShape
+    {
+        private static IShape _instance;
+        private nullshape()
+        { }
+        public void draw(Graphics g, Pen pen)
+        { }
+        public static IShape Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance= new nullshape();
+                return _instance;
+            }
+        }
+    }
 }
