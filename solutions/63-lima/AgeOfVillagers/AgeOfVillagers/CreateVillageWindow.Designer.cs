@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.select_nation = new System.Windows.Forms.ComboBox();
             this.open_village = new System.Windows.Forms.Button();
             this.new_village = new System.Windows.Forms.Button();
             this.save_village = new System.Windows.Forms.Button();
             this.water_resource = new System.Windows.Forms.RadioButton();
             this.house = new System.Windows.Forms.RadioButton();
             this.tree = new System.Windows.Forms.RadioButton();
-            this.nation = new System.Windows.Forms.TextBox();
             this.village_name = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.drawing_panel = new System.Windows.Forms.Panel();
@@ -45,13 +45,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.select_nation);
             this.panel1.Controls.Add(this.open_village);
             this.panel1.Controls.Add(this.new_village);
             this.panel1.Controls.Add(this.save_village);
             this.panel1.Controls.Add(this.water_resource);
             this.panel1.Controls.Add(this.house);
             this.panel1.Controls.Add(this.tree);
-            this.panel1.Controls.Add(this.nation);
             this.panel1.Controls.Add(this.village_name);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(789, -2);
@@ -59,6 +59,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 560);
             this.panel1.TabIndex = 0;
+            // 
+            // select_nation
+            // 
+            this.select_nation.AccessibleDescription = "";
+            this.select_nation.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.select_nation.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.select_nation.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.select_nation.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.select_nation.FormattingEnabled = true;
+            this.select_nation.Items.AddRange(new object[] {
+            "Egyptian Kings",
+            "Bangladeshi Farmers"});
+            this.select_nation.Location = new System.Drawing.Point(61, 171);
+            this.select_nation.Name = "select_nation";
+            this.select_nation.Size = new System.Drawing.Size(199, 29);
+            this.select_nation.TabIndex = 9;
+            this.select_nation.Text = "         Select Nations";
             // 
             // open_village
             // 
@@ -141,19 +158,6 @@
             this.tree.UseVisualStyleBackColor = true;
             this.tree.CheckedChanged += new System.EventHandler(this.tree_CheckedChanged);
             // 
-            // nation
-            // 
-            this.nation.BackColor = System.Drawing.Color.LightBlue;
-            this.nation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nation.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nation.Location = new System.Drawing.Point(24, 166);
-            this.nation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(248, 22);
-            this.nation.TabIndex = 2;
-            this.nation.Text = "Bangladeshi Farmers";
-            this.nation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // village_name
             // 
             this.village_name.BackColor = System.Drawing.Color.LightBlue;
@@ -212,7 +216,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox nation;
         private System.Windows.Forms.TextBox village_name;
         private System.Windows.Forms.RadioButton water_resource;
         private System.Windows.Forms.RadioButton house;
@@ -222,5 +225,6 @@
         private System.Windows.Forms.Button save_village;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel drawing_panel;
+        private System.Windows.Forms.ComboBox select_nation;
     }
 }
