@@ -26,5 +26,7 @@ namespace AgeOfVillagers90
             g.DrawLine(pen, TopLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
             g.DrawLine(pen, BottomRight.X, TopLeft.Y, BottomRight.X, BottomRight.Y);
         }
+
+
     }
 }
