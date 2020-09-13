@@ -123,5 +123,10 @@ namespace AgeOfVillagers90
             }
             DrawPanel.Invalidate();
         }
+
+        private void VillageNametextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
