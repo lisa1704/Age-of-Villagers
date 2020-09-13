@@ -22,7 +22,11 @@ namespace Age_of_villagers
             {
                 return new Inuit();
             }
-            throw new Exception();
+            else
+            {
+                return new NullNation();
+            }
         }
+
     }
 }

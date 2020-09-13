@@ -87,9 +87,10 @@ namespace Age_of_villagers
         {
             type = villagetype.Text;
             nationfactory.GetNation(type);
+            drawpanel.Refresh();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void save_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
@@ -105,9 +106,24 @@ namespace Age_of_villagers
 
                 sw.WriteLine(villagename.Text);
                 sw.WriteLine(villagetype.Text);
+                sw.WriteLine(h_points);
                 sw.Close();
                 fileStream.Close();
             }
+        }
+
+        private void open_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newvillage_Click(object sender, EventArgs e)
+        {
+            h_points.Clear();
+            t_points.Clear();
+            w_points.Clear();
+            drawpanel.Refresh();
+            
         }
     }
 }
