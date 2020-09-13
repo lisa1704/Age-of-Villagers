@@ -7,8 +7,28 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface IShapeItem
+    public interface IShapeItem
     {
         void Paint(Graphics g);
+    }
+
+    public abstract class CompositeShape : IShapeItem
+    {
+        private List<IShapeItem> SComponents;
+
+        protected CompositeShape()
+        {
+            SComponents = new List<IShapeItem>();
+        }
+
+        protected void AddComp(IShapeItem shape)
+        {
+            SComponents.Add(shape);
+        }
+        public void Paint(Graphics g)
+        {
+            foreach (var component in SComponents)
+                component.Paint(g);
+        }
     }
 }
