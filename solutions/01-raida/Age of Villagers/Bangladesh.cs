@@ -17,10 +17,7 @@ namespace Age_of_Villagers
         {
             this.g = g;
         }
-        public void set_pen(Pen pen)
-        {
-            this.pen = pen;
-        }
+        
         public void set_villagename(string name)
         {
             village_name = name;
@@ -38,6 +35,7 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Bdhouse(p,30,20);
+            pen = new Pen(Color.Black);
             house.draw(g,pen);
         }
 
@@ -45,6 +43,7 @@ namespace Age_of_Villagers
         {
             river_points.Add(p);
             river = new Bdriver(p);
+            pen = new Pen(Color.Black);
             river.draw(g, pen);
         }
 

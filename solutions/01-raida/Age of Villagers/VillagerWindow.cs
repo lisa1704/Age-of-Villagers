@@ -18,7 +18,8 @@ namespace Age_of_Villagers
         Graphics g;
         string text = "";
         readonly INationFactory nationfactory=new Nationfactory();
-        INation nation;
+        INation nation=null;
+        ICommandVillage command;
         public VillageWindow()
         {
             InitializeComponent();
@@ -26,17 +27,13 @@ namespace Age_of_Villagers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void villagePanel_MouseClick(object sender, MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
-            //g = villagePanel.CreateGraphics();
-            //nation.set_graphics(g);
-            //Pen myPen = new Pen(Color.Black);
-            //nation.set_pen(myPen);
             if (text == "Tree")
             {
                 nation.draw_tree(new Point(x, y));
@@ -69,11 +66,11 @@ namespace Age_of_Villagers
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            ICommandVillage village = new SaveVillage();
+            command = new SaveVillage();
             SaveFileDialog save = new SaveFileDialog();
             if(save.ShowDialog()==DialogResult.OK)
             {
-                village.execute(save.FileName, nation);
+                command.execute(save.FileName, nation);
             }
         }
 
@@ -84,19 +81,17 @@ namespace Age_of_Villagers
             nation.set_villagename(villageNameBox.Text);
             g = villagePanel.CreateGraphics();
             nation.set_graphics(g);
-            Pen myPen = new Pen(Color.Black);
-            nation.set_pen(myPen);
         }
 
         private void openButton_Click(object sender, EventArgs e)
         {
             villagePanel.Invalidate();
-            ICommandVillage village = new OpenVillage();
+            command = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
                 if (System.IO.Path.GetExtension(open.FileName).Equals(".aov"))
-                    village.execute(open.FileName, nation);
+                    command.execute(open.FileName, nation);
                 else
                     MessageBox.Show("Unsupported File type");
             }
@@ -104,7 +99,8 @@ namespace Age_of_Villagers
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            this.saveButton_Click(sender,e);
+            if(nation!=null)
+                this.saveButton_Click(sender, e);
             villagePanel.Invalidate();
         }
     }

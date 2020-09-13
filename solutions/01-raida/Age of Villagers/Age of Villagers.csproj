@@ -75,6 +75,7 @@
     <Compile Include="igloo.cs" />
     <Compile Include="INationFactory.cs" />
     <Compile Include="INation.cs" />
+    <Compile Include="Inuit.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="line.cs" />
     <Compile Include="Nationfactory.cs" />

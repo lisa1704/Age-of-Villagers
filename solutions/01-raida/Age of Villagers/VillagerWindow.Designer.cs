@@ -39,6 +39,8 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.houseBotton = new System.Windows.Forms.Button();
             this.villageNameBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +57,8 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.menuPanel.Controls.Add(this.label2);
+            this.menuPanel.Controls.Add(this.label1);
             this.menuPanel.Controls.Add(this.gameLabel);
             this.menuPanel.Controls.Add(this.nationList);
             this.menuPanel.Controls.Add(this.openButton);
@@ -87,7 +91,7 @@
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.nationList.Location = new System.Drawing.Point(42, 135);
+            this.nationList.Location = new System.Drawing.Point(42, 139);
             this.nationList.Name = "nationList";
             this.nationList.Size = new System.Drawing.Size(173, 56);
             this.nationList.TabIndex = 5;
@@ -107,7 +111,7 @@
             // watersourceButton
             // 
             this.watersourceButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.watersourceButton.Location = new System.Drawing.Point(85, 238);
+            this.watersourceButton.Location = new System.Drawing.Point(85, 240);
             this.watersourceButton.Name = "watersourceButton";
             this.watersourceButton.Size = new System.Drawing.Size(75, 38);
             this.watersourceButton.TabIndex = 3;
@@ -129,7 +133,7 @@
             // treeButton
             // 
             this.treeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.treeButton.Location = new System.Drawing.Point(35, 209);
+            this.treeButton.Location = new System.Drawing.Point(35, 211);
             this.treeButton.Name = "treeButton";
             this.treeButton.Size = new System.Drawing.Size(75, 23);
             this.treeButton.TabIndex = 1;
@@ -151,7 +155,7 @@
             // houseBotton
             // 
             this.houseBotton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.houseBotton.Location = new System.Drawing.Point(140, 209);
+            this.houseBotton.Location = new System.Drawing.Point(140, 211);
             this.houseBotton.Name = "houseBotton";
             this.houseBotton.Size = new System.Drawing.Size(75, 23);
             this.houseBotton.TabIndex = 2;
@@ -166,11 +170,28 @@
             this.villageNameBox.Size = new System.Drawing.Size(173, 20);
             this.villageNameBox.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Village Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(41, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nation:";
+            // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(872, 426);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.villagePanel);
@@ -196,6 +217,8 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button houseBotton;
         private System.Windows.Forms.TextBox villageNameBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -11,7 +11,6 @@ namespace Age_of_Villagers
     {
 
         void set_villagename(string name);
-        void set_pen(Pen pen);
         void set_graphics(Graphics g);
         void draw_tree(Point p);
         void draw_house(Point p);
