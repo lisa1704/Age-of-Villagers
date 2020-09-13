@@ -72,5 +72,10 @@ namespace AgeOfVillagers
         {
             text = "Water Resource";
         }
+
+        private void drawing_panel_paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
