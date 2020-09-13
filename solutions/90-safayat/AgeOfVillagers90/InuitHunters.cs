@@ -8,6 +8,19 @@ namespace AgeOfVillagers90
 {
     class InuitHunters : INation
     {
+        public void DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

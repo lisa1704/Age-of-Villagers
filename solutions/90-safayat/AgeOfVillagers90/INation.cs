@@ -8,6 +8,11 @@ namespace AgeOfVillagers90
 {
     interface INation
     {
+        void DrawHouse();
+
+        void DrawTree();
+
+        void DrawWaterSource();
 
     }
 
