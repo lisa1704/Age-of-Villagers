@@ -19,6 +19,8 @@ namespace age_of_villagers
         List<Point> house_point = new List<Point>();
         List<Point> tree_point = new List<Point>();
         List<Point> water_point = new List<Point>();
+
+        NationFactory n = new NationFactory();
         public Form1()
         {
             InitializeComponent();
@@ -31,15 +33,17 @@ namespace age_of_villagers
             Pen p = new Pen(Color.Blue);
             foreach(Point pt in house_point)
             {
-                g.DrawLine(p, pt.X, pt.Y, 20, 20);
+                n.CreateNation(nType).draw_house(g,pt);
             }
+
             foreach (Point pt in tree_point)
             {
-                g.DrawLine(p, pt.X, pt.Y, 30, 25);
+                n.CreateNation(nType).draw_tree(g, pt);
             }
+
             foreach (Point pt in water_point)
             {
-                g.DrawLine(p, pt.X, pt.Y, 50, 40);
+                n.CreateNation(nType).draw_watersource(g, pt);
             }
 
         }
@@ -75,6 +79,7 @@ namespace age_of_villagers
         private void nationType(object sender, EventArgs e)
         {
             nType = nations.Text;
+            n.CreateNation(nType);
         }
 
         private void tree_Click(object sender, EventArgs e)

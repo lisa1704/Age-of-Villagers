@@ -75,6 +75,11 @@
             // nations
             // 
             this.nations.FormattingEnabled = true;
+            this.nations.Items.AddRange(new object[] {
+            "Bangladesh",
+            "Arab",
+            "Egypt",
+            "Inuit"});
             this.nations.Location = new System.Drawing.Point(45, 115);
             this.nations.Name = "nations";
             this.nations.Size = new System.Drawing.Size(162, 24);
