@@ -78,7 +78,6 @@
             this.select_nation.Size = new System.Drawing.Size(199, 29);
             this.select_nation.TabIndex = 9;
             this.select_nation.Text = "         Select Nations";
-            this.select_nation.SelectedIndexChanged += new System.EventHandler(this.select_nation_SelectedIndexChanged);
             // 
             // open_village
             // 
@@ -133,7 +132,6 @@
             this.water_resource.TabStop = true;
             this.water_resource.Text = "Water Resource";
             this.water_resource.UseVisualStyleBackColor = true;
-            this.water_resource.CheckedChanged += new System.EventHandler(this.water_resource_CheckedChanged);
             // 
             // house
             // 
@@ -146,7 +144,6 @@
             this.house.TabStop = true;
             this.house.Text = "House";
             this.house.UseVisualStyleBackColor = true;
-            this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
             // 
             // tree
             // 

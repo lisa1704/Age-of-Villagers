@@ -45,6 +45,24 @@ namespace AgeOfVillagers
         {
 
         }
+        private void tree_CheckedChanged(object sender, EventArgs e)
+        {
+            //text = "tree";
+        }
+        private void house_checkedchanged(object sender, EventArgs e)
+        {
+           //ext = "house";
+        }
+
+        private void water_resource_checkedchanged(object sender, EventArgs e)
+        {
+            //xt = "water resource";
+        }
+
+        private void select_nation_selectedindexchanged(object sender, EventArgs e)
+        {
+
+        }
 
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
@@ -87,25 +105,24 @@ namespace AgeOfVillagers
                 }
             }
 
-            //private void tree_CheckedChanged(object sender, EventArgs e)
-            //{
-            //    //text = "Tree";
-            //}
+            else if (select_nation.Text == "Arab Bedouin")
+            {
+                ArabBedouin arabBedouin = new ArabBedouin(drawing_panel);
+                arabBedouin.paintTerrain();
+                if (tree.Checked == true)
+                {
+                    arabBedouin.drawTree(g, e.X, e.Y);
+                }
+                else if (house.Checked == true)
+                {
+                    arabBedouin.drawHouse(g, e.X, e.Y);
+                }
+                else
+                {
+                    arabBedouin.drawWaterSource(g, e.X, e.Y);
+                }
+            }
 
-            //private void house_CheckedChanged(object sender, EventArgs e)
-            //{
-            //    //text = "House";
-            //}
-
-            //private void water_resource_CheckedChanged(object sender, EventArgs e)
-            //{
-            //    //text = "Water Resource";
-            //}
-
-            //private void select_nation_SelectedIndexChanged(object sender, EventArgs e)
-            //{
-
-            //}
         }
     }
 }
