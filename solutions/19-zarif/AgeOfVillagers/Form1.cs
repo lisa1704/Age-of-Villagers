@@ -99,8 +99,8 @@ namespace AgeOfVillagers
 
         private void SaveVillagebtn_Click(object sender, EventArgs e)
         {
-            VillageNameInput vilform = new VillageNameInput(this);
-            
+            string bruh = VillageName.Text;
+            MessageBox.Show(bruh);
            
         }
 
