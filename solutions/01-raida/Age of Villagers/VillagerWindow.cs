@@ -69,12 +69,12 @@ namespace Age_of_Villagers
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            ISaveVillage village = new SaveVillage();
+            ICommandVillage village = new SaveVillage();
             MessageBox.Show(villageNameBox.Text);
             SaveFileDialog save = new SaveFileDialog();
             if(save.ShowDialog()==DialogResult.OK)
             {
-                village.save(save.FileName, nation);
+                village.execute(save.FileName, nation);
             }
         }
 
@@ -92,11 +92,11 @@ namespace Age_of_Villagers
         private void openButton_Click(object sender, EventArgs e)
         {
 
-            IOpenVillage village = new OpenVillage();
+            ICommandVillage village = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
-                village.open(open.FileName, nation);
+                village.execute(open.FileName, nation);
             }
         }
     }

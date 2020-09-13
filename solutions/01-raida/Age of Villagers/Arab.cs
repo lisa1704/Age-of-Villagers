@@ -47,22 +47,22 @@ namespace Age_of_Villagers
 
         public string get_villagename()
         {
-            throw new System.NotImplementedException();
+            return village_name;
         }
 
         public List<Point> get_tree()
         {
-            throw new System.NotImplementedException();
+            return tree_points;
         }
 
         public List<Point> get_house()
         {
-            throw new System.NotImplementedException();
+            return house_points;
         }
 
         public List<Point> get_river()
         {
-            throw new System.NotImplementedException();
+            return river_points;
         }
     }
 

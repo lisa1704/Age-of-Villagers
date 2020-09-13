@@ -68,15 +68,19 @@
     <Compile Include="circle.cs" />
     <Compile Include="compositeShape.cs" />
     <Compile Include="house.cs" />
+    <Compile Include="ICommandVillage.cs" />
     <Compile Include="INationFactory.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="line.cs" />
     <Compile Include="Nationfactory.cs" />
+    <Compile Include="OpenVillage.cs" />
     <Compile Include="rectangle.cs" />
     <Compile Include="river.cs" />
+    <Compile Include="SaveVillage.cs" />
     <Compile Include="tree.cs" />
     <Compile Include="triangle.cs" />
+    <Compile Include="village.cs" />
     <Compile Include="VillagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
