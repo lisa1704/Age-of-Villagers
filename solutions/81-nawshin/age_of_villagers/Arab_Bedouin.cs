@@ -10,17 +10,17 @@ namespace age_of_villagers
     {
         public string draw_house()
         {
-            throw new NotImplementedException();
+            return "Arab house";
         }
 
         public string draw_tree()
         {
-            throw new NotImplementedException();
+            return "Arab tree";
         }
 
         public string draw_waterSource()
         {
-            throw new NotImplementedException();
+            return "Arab watersource";
         }
     }
 }
