@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class Bangladeshi : INation
+    class BangladeshiFarmer : INation
     {
         string name;
         
-        public Bangladeshi(string name)
+        public BangladeshiFarmer(string name)
         {
             this.name = name;
         }

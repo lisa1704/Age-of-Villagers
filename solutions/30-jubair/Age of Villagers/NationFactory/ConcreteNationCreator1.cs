@@ -20,7 +20,7 @@ namespace Age_of_Villagers.NationFactory
 
         public override INation createNation()
         {
-            return new Bangladeshi(nation_name);
+            return new BangladeshiFarmer(nation_name);
             // Factory Method Implemented
         }
     }
