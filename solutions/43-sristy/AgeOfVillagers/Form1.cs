@@ -13,14 +13,25 @@ namespace Age_of_villagers
 {
     public partial class Form1 : Form
     {
-        string name;
         string type;
         string item;
-        List<Point> h_points = new List<Point>();
-        List<Point> t_points = new List<Point>();
-        List<Point> w_points = new List<Point>();
-
         Nationfactory nationfactory = new Nationfactory();
+        village village;
+        public string name;
+
+        public List<Point> W_points { get; set; } = new List<Point>();
+        public List<Point> T_points { get; set; } = new List<Point>();
+        public List<Point> H_points { get; set; } = new List<Point>();
+
+        public void get_state()
+        {
+            village.name = villagename.Text;
+            village.house_point = this.H_points;
+            village.tree_point = this.T_points;
+            village.waterresource_point = this.W_points;
+        }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -47,15 +58,15 @@ namespace Age_of_villagers
         private void draw_panel(object sender, PaintEventArgs e)
         {
             Graphics g = drawpanel.CreateGraphics();
-                foreach (Point pt in h_points)
+                foreach (Point pt in H_points)
                 {
                 nationfactory.GetNation(type).Draw_house(g, pt);
                 }
-                foreach (Point pt in t_points)
+                foreach (Point pt in T_points)
                 {
                 nationfactory.GetNation(type).Draw_tree(g, pt);
                 }
-                foreach (Point pt in w_points)
+                foreach (Point pt in W_points)
                 {
                 nationfactory.GetNation(type).Draw_watersource(g, pt);
             }
@@ -65,22 +76,22 @@ namespace Age_of_villagers
         {
             if (item == "house")
             {
-                h_points.Add(e.Location);
+                H_points.Add(e.Location);
             }
             if (item == "tree")
             {
-                t_points.Add(e.Location);
+                T_points.Add(e.Location);
             }
             if (item == "water")
             {
-                w_points.Add(e.Location);
+                W_points.Add(e.Location);
             }
             drawpanel.Invalidate();
         }
 
         private void villagename_KeyDown(object sender, KeyEventArgs e)
         {
-            name = villagename.Text;
+            name=villagename.Text;
         }
 
         private void vallagetype_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,22 +103,18 @@ namespace Age_of_villagers
 
         private void save_Click(object sender, EventArgs e)
         {
+            Icommand command = new Savevillage();
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
             sfd.RestoreDirectory = true;
             sfd.FileName = "*.txt";
             sfd.DefaultExt = "txt";
             sfd.Filter = "AoV file(*.txt)| *.txt";
-
+            get_state();
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 Stream fileStream = sfd.OpenFile();
-                StreamWriter sw = new StreamWriter(fileStream);
-
-                sw.WriteLine(villagename.Text);
-                sw.WriteLine(villagetype.Text);
-                sw.WriteLine(h_points);
-                sw.Close();
+                command.execute(fileStream,village);
                 fileStream.Close();
             }
         }
@@ -119,11 +126,35 @@ namespace Age_of_villagers
 
         private void newvillage_Click(object sender, EventArgs e)
         {
-            h_points.Clear();
-            t_points.Clear();
-            w_points.Clear();
+            H_points.Clear();
+            T_points.Clear();
+            W_points.Clear();
             drawpanel.Refresh();
             
         }
     }
 }
+/*Stream fileStream = sfd.OpenFile();
+StreamWriter sw = new StreamWriter(fileStream);
+
+sw.WriteLine("village name: ");
+                sw.WriteLine(villagename.Text);
+                sw.WriteLine("village Type: ");
+                sw.WriteLine(villagetype.Text);
+                sw.WriteLine("h_points: ");
+                foreach (Point pt in h_points)
+                {
+                    sw.WriteLine(pt);
+                }
+                sw.WriteLine("t_points: ");
+                foreach(Point pt in t_points)
+                {
+                    sw.WriteLine(pt);
+                }
+                sw.WriteLine("w_points: ");
+                foreach(Point pt in w_points)
+                {
+                    sw.WriteLine(pt);
+                }
+                sw.Close();
+                fileStream.Close();*/

@@ -30,9 +30,9 @@
         {
             this.sidepanel = new System.Windows.Forms.Panel();
             this.villagetype = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.newvillage = new System.Windows.Forms.Button();
+            this.open = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
             this.watersource = new System.Windows.Forms.Button();
             this.tree = new System.Windows.Forms.Button();
             this.house = new System.Windows.Forms.Button();
@@ -47,9 +47,9 @@
             // 
             this.sidepanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.sidepanel.Controls.Add(this.villagetype);
-            this.sidepanel.Controls.Add(this.button6);
-            this.sidepanel.Controls.Add(this.button5);
-            this.sidepanel.Controls.Add(this.button4);
+            this.sidepanel.Controls.Add(this.newvillage);
+            this.sidepanel.Controls.Add(this.open);
+            this.sidepanel.Controls.Add(this.save);
             this.sidepanel.Controls.Add(this.watersource);
             this.sidepanel.Controls.Add(this.tree);
             this.sidepanel.Controls.Add(this.house);
@@ -77,33 +77,35 @@
             this.villagetype.Text = "Village type";
             this.villagetype.SelectedIndexChanged += new System.EventHandler(this.vallagetype_SelectedIndexChanged);
             // 
-            // button6
+            // newvillage
             // 
-            this.button6.Location = new System.Drawing.Point(53, 346);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(134, 36);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "New Village";
-            this.button6.UseVisualStyleBackColor = true;
+            this.newvillage.Location = new System.Drawing.Point(53, 346);
+            this.newvillage.Name = "newvillage";
+            this.newvillage.Size = new System.Drawing.Size(134, 36);
+            this.newvillage.TabIndex = 8;
+            this.newvillage.Text = "New Village";
+            this.newvillage.UseVisualStyleBackColor = true;
+            this.newvillage.Click += new System.EventHandler(this.newvillage_Click);
             // 
-            // button5
+            // open
             // 
-            this.button5.Location = new System.Drawing.Point(52, 306);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 34);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Open Village";
-            this.button5.UseVisualStyleBackColor = true;
+            this.open.Location = new System.Drawing.Point(52, 306);
+            this.open.Name = "open";
+            this.open.Size = new System.Drawing.Size(135, 34);
+            this.open.TabIndex = 7;
+            this.open.Text = "Open Village";
+            this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.open_Click);
             // 
-            // button4
+            // save
             // 
-            this.button4.Location = new System.Drawing.Point(52, 267);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 33);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Save Village";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.save.Location = new System.Drawing.Point(52, 267);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(135, 33);
+            this.save.TabIndex = 6;
+            this.save.Text = "Save Village";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // watersource
             // 
@@ -199,9 +201,9 @@
         private System.Windows.Forms.Button house;
         private System.Windows.Forms.TextBox villagename;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button newvillage;
+        private System.Windows.Forms.Button open;
+        private System.Windows.Forms.Button save;
         private System.Windows.Forms.ComboBox villagetype;
     }
 }
