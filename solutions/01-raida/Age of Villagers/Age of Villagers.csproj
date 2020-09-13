@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="arc.cs" />
     <Compile Include="Bangladesh.cs" />
+    <Compile Include="Bdhouse.cs" />
     <Compile Include="Bdtree.cs" />
     <Compile Include="circle.cs" />
     <Compile Include="compositeShape.cs" />
