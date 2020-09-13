@@ -26,5 +26,4 @@ namespace AgeOfVillagers
             g.DrawArc(p, x, y, width, height, startAngle, sweepAngle);
         }
     }
-
 }

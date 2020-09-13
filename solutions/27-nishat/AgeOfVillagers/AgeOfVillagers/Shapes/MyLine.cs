@@ -18,5 +18,4 @@ namespace AgeOfVillagers
             g.DrawLine(p, point1, point2);
         }
     }
-
 }

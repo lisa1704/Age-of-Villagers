@@ -18,7 +18,5 @@ namespace AgeOfVillagers
             AddComponent(new Ellipse(_topleft, new Point(_bottomright.X, (int)(_topleft.Y+ellipseheight))));
             AddComponent(new MyRectangle(new Point((int)(_topleft.X + width/2 -1), (int)(_topleft.Y + height/2)), new Point((int)(_topleft.X + width / 2 + 1), _bottomright.Y)));
         }
-
     }
-
 }

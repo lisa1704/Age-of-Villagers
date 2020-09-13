@@ -6,10 +6,12 @@ namespace AgeOfVillagers
     public abstract class Shape : IShape
     {
         private readonly List<IShape> components;
+        
         protected Shape()
         {
             components = new List<IShape>();
         }
+
         protected void AddComponent(IShape shape)
         {
             components.Add(shape);
@@ -23,5 +25,4 @@ namespace AgeOfVillagers
             }
         }
     }
-
 }

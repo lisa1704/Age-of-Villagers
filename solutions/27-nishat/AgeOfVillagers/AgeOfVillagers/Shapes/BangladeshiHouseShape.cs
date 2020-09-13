@@ -16,7 +16,5 @@ namespace AgeOfVillagers
             AddComponent(new MyTriangle(_top, _middleleft, new Point(_bottomright.X, _middleleft.Y)));
             AddComponent(new MyRectangle(_middleleft, _bottomright));
         }
-
     }
-
 }

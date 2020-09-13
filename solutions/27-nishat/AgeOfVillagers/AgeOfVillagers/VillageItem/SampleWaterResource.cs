@@ -2,19 +2,18 @@
 
 namespace AgeOfVillagers
 {
-    public class EgyptianWell : VillageItem
+    public class SampleWaterResource : VillageItem
     {
         private readonly Point point;
 
-        public EgyptianWell(Point point)
+        public SampleWaterResource(Point point)
         {
             this.point = point;
         }
 
         public override void Draw(Graphics g, Pen p)
         {
-            Shape watersource = new WellShape(new Point(point.X - 6, point.Y - 6), new Point(point.X + 6, point.Y + 6));
-            watersource.Draw(g, p);
+            g.DrawLine(p, point, new Point(point.X + 50, point.Y));
         }
 
         public override Point GetPoint()

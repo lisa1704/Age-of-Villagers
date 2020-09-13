@@ -2,18 +2,19 @@
 
 namespace AgeOfVillagers
 {
-    public class SampleHouse : VillageItem
+    public class EgyptianHouse : VillageItem
     {
         private readonly Point point;
 
-        public SampleHouse(Point point)
+        public EgyptianHouse(Point point)
         {
             this.point = point;
         }
 
         public override void Draw(Graphics g, Pen p)
         {
-            g.DrawLine(p, point, new Point(point.X + 50, point.Y - 50));
+            Shape house = new EgyptianHouseShape(new Point(point.X - 8, point.Y - 8), new Point(point.X + 8, point.Y + 8));
+            house.Draw(g, p);
         }
 
         public override Point GetPoint()
@@ -21,5 +22,4 @@ namespace AgeOfVillagers
             return point;
         }
     }
-
 }

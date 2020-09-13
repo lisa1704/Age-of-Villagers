@@ -2,18 +2,18 @@
 
 namespace AgeOfVillagers
 {
-    public class SampleWaterResource : VillageItem
+    public class SampleHouse : VillageItem
     {
         private readonly Point point;
 
-        public SampleWaterResource(Point point)
+        public SampleHouse(Point point)
         {
             this.point = point;
         }
 
         public override void Draw(Graphics g, Pen p)
         {
-            g.DrawLine(p, point, new Point(point.X + 50, point.Y));
+            g.DrawLine(p, point, new Point(point.X + 50, point.Y - 50));
         }
 
         public override Point GetPoint()
@@ -21,5 +21,4 @@ namespace AgeOfVillagers
             return point;
         }
     }
-
 }

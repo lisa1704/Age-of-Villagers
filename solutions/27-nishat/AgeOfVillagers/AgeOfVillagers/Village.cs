@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -76,34 +75,6 @@ namespace AgeOfVillagers
             VillageItem watersource = nation.GetWaterResource(point);
             watersources.Add(watersource);
             watersource.Draw(g, p);
-        }
-    }
-    public interface IState
-    {
-        void SetVillageName(string villagename);
-        String GetVillageName();
-    }
-    public class Villagestate : IState
-    {
-        public string villagename;
-        public List<Point> trees, houses, watersources;
-
-        public Villagestate(string villagename, List<Point> trees, List<Point> houses, List<Point> watersources)
-        {
-            this.villagename = villagename;
-            this.watersources = watersources;
-            this.houses = houses;
-            this.trees = trees;
-        }
-
-        public string GetVillageName()
-        {
-            return villagename;
-        }
-
-        public void SetVillageName(string villagename)
-        {
-            this.villagename = villagename;
         }
     }
 }

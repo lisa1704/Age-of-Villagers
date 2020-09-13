@@ -16,8 +16,5 @@ namespace AgeOfVillagers
             AddComponent(new MyLine(new Point(_bottomright.X, _topleft.Y), _bottomright));
             AddComponent(new MyLine(new Point(_topleft.X, _bottomright.Y), _bottomright));
         }
-
-
     }
-
 }
