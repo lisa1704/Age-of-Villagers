@@ -20,7 +20,7 @@ namespace Age_of_Villagers
 
         private void set_state(INation nation)
         {
-             nation.set_villagename(village.name);
+            nation.set_villagename(village.name);
             foreach (Point p in village.tree_points)
                 nation.draw_tree(p);
             foreach (Point p in village.house_points)

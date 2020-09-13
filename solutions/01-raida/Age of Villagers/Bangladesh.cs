@@ -30,6 +30,7 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Bdtree(p,30,30);
+            pen = new Pen(Color.Green);
             tree.draw(g, pen);
         }
 

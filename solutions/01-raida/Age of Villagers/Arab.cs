@@ -31,6 +31,7 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Arhouse(p, 50, 20);
+            pen = new Pen(Color.Yellow);
             house.draw(g,pen);
         }
 
