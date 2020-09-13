@@ -17,10 +17,23 @@ namespace AgeOfVillagers
     {
         public INations GetNation(string NationType)
         {
-           /* if (NationType == "BangladeshiFarmers")
+            if (NationType == "BangladeshiFarmers")
             {
                 return new BangladeshiFarmers();
-            }*/
+            }
+            else if (NationType == "ArabBeduin")
+            {
+                return new ArabBedouin();
+            }
+            else if (NationType == "EgyptianKing")
+            {
+                return new EgyptianKings();
+            }
+            else if (NationType == "InuitHunters")
+            {
+                return new InuitHunters();
+            }
+            throw new Exception();
         }
     }
 }
