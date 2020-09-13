@@ -76,6 +76,8 @@
             // 
             this.ConfirmButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConfirmButton.Location = new System.Drawing.Point(283, 90);
+            this.ConfirmButton.MaximumSize = new System.Drawing.Size(75, 29);
+            this.ConfirmButton.MinimumSize = new System.Drawing.Size(75, 29);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(75, 29);
             this.ConfirmButton.TabIndex = 4;
@@ -93,6 +95,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.vlgdemoname);
             this.Controls.Add(this.textBox1);
+            this.MaximumSize = new System.Drawing.Size(395, 170);
+            this.MinimumSize = new System.Drawing.Size(395, 170);
             this.Name = "VillageNameInput";
             this.Text = "VillageNameInput";
             this.Load += new System.EventHandler(this.VillageNameInput_Load);
