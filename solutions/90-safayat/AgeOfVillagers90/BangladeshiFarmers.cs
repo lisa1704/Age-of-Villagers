@@ -12,7 +12,8 @@ namespace AgeOfVillagers90
         Pen p = new Pen(Color.Pink);
         public void DrawHouse(Graphics g,Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            Rectangle rec = new Rectangle(new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y + 25));
+            rec.Draw(g);
         }
 
         public void DrawTree()
