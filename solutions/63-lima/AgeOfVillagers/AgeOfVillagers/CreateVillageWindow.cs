@@ -22,7 +22,7 @@ namespace AgeOfVillagers
 
         private void new_village_Click(object sender, EventArgs e)
         {
-            Refresh();
+            drawing_panel.Refresh();
         }
 
         private void open_village_Click(object sender, EventArgs e)
@@ -32,26 +32,15 @@ namespace AgeOfVillagers
 
         private void village_name_TextChanged(object sender, EventArgs e)
         {
-            VillageName myvillage = new VillageName();
-            myvillage.Name = village_name.Text;
+
+        }
+
+        private void CreateVillageWindow_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tree_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void house_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void water_resource_CheckedChanged(object sender, EventArgs e)
         {
 
         }

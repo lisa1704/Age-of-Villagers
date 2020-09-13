@@ -113,7 +113,6 @@
             this.water_resource.TabStop = true;
             this.water_resource.Text = "Water Resource";
             this.water_resource.UseVisualStyleBackColor = true;
-            this.water_resource.CheckedChanged += new System.EventHandler(this.water_resource_CheckedChanged);
             // 
             // house
             // 
@@ -126,7 +125,6 @@
             this.house.TabStop = true;
             this.house.Text = "House";
             this.house.UseVisualStyleBackColor = true;
-            this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
             // 
             // tree
             // 
@@ -139,7 +137,6 @@
             this.tree.TabStop = true;
             this.tree.Text = "Tree";
             this.tree.UseVisualStyleBackColor = true;
-            this.tree.CheckedChanged += new System.EventHandler(this.tree_CheckedChanged);
             // 
             // nation
             // 
@@ -184,7 +181,7 @@
             // 
             // drawing_panel
             // 
-            this.drawing_panel.Location = new System.Drawing.Point(87, 70);
+            this.drawing_panel.Location = new System.Drawing.Point(71, 56);
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);
             this.drawing_panel.TabIndex = 1;
@@ -200,7 +197,8 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateVillageWindow";
-            this.Text = "Form1";
+            this.Text = "Age of Villagers";
+            this.Load += new System.EventHandler(this.CreateVillageWindow_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
