@@ -52,7 +52,7 @@ namespace AgeOfVillagers
         public BDHouse(Point top, Point topLeft, Point bottomRight)
         {
             AddComp(new ShapeRectangle(topLeft, bottomRight));
-            AddComp(new Triangle(top, topLeft, bottomRight));
+            AddComp(new Triangle(top, topLeft, new Point(bottomRight.X,topLeft.Y)));
         }
 
     }
