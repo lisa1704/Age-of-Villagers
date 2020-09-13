@@ -57,6 +57,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NewVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>409, 312</value>
+  </data>
+  <data name="NewVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>97, 29</value>
+  </data>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="NewVillage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="NewVillage.Text" xml:space="preserve">
+    <value>New Village</value>
+  </data>
+  <data name="OpenVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>512, 312</value>
+  </data>
+  <data name="OpenVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>110, 29</value>
+  </data>
+  <data name="OpenVillage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="OpenVillage.Text" xml:space="preserve">
+    <value>Open Village</value>
+  </data>
+  <data name="SaveVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>458, 258</value>
+  </data>
+  <data name="SaveVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>99, 29</value>
+  </data>
+  <data name="SaveVillage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="SaveVillage.Text" xml:space="preserve">
+    <value>Save Village</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>624, 353</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VillageCreator</value>
   </data>

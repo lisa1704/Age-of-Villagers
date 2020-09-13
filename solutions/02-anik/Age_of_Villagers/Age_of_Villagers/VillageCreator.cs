@@ -18,6 +18,24 @@ namespace Age_of_Villagers
             InitializeComponent();
   
         }
+        private void VillageCreator_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
