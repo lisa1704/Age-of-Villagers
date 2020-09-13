@@ -33,17 +33,20 @@ namespace AgeOfVillagers
             var bottomLeft = new Point(topLeft.X, bottomRight.Y);
 
             AddComp(new Line(topLeft, topRight));
+            AddComp(new Line(topLeft, bottomLeft));
+            AddComp(new Line(bottomLeft, bottomRight));
+            AddComp(new Line(bottomRight, topRight));
 
         }
-       /* public void Paint(Graphics g)
-        {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawLine(pen, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
-            g.DrawLine(pen, topLeft.X, topLeft.Y, topLeft.X, bottomRight.Y);
-            g.DrawLine(pen, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
-            g.DrawLine(pen, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
+        /* public void Paint(Graphics g)
+         {
+             var pen = new Pen(Color.Black, 1);
+             g.DrawLine(pen, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
+             g.DrawLine(pen, topLeft.X, topLeft.Y, topLeft.X, bottomRight.Y);
+             g.DrawLine(pen, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
+             g.DrawLine(pen, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
 
-        }*/
+         }*/
     }
 
     class Arc : IShapeItem
