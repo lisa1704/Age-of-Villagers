@@ -70,7 +70,9 @@
             this.select_nation.FormattingEnabled = true;
             this.select_nation.Items.AddRange(new object[] {
             "Egyptian Kings",
-            "Bangladeshi Farmers"});
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Inuit Hunters"});
             this.select_nation.Location = new System.Drawing.Point(61, 171);
             this.select_nation.Name = "select_nation";
             this.select_nation.Size = new System.Drawing.Size(199, 29);
