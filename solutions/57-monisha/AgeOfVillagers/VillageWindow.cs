@@ -78,7 +78,7 @@ namespace AgeOfVillagers
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             VType = NationList.Text;
-            string NName =nationFactory.GetNation(VType).DrawHouse();
+            //string NName =nationFactory.GetNation(VType).DrawHouse();
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
@@ -88,7 +88,8 @@ namespace AgeOfVillagers
 
             foreach (Point pt in HousePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y , pt.X+16, pt.X + 16);
+                //g.DrawLine(p, pt.X, pt.Y , pt.X+16, pt.X + 16);
+                nationFactory.GetNation(VType).DrawHouse( g, pt);
             }
             foreach (Point pt in TreePoints)
             {

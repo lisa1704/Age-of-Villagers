@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,10 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INations
     {
-        public string DrawHouse()
+        Pen p = new Pen(Color.Gray);
+        public string DrawHouse(Graphics g, Point pt)
         {
+            g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             return "Igloo";
         }
 

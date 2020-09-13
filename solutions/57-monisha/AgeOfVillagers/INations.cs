@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace AgeOfVillagers
 {
     interface INations
     {
-        string DrawHouse();
+        string DrawHouse(Graphics g,Point pt);
         void DrawTree();
         void DrawWaterSource();
     }
