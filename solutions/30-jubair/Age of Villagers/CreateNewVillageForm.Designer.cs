@@ -1,6 +1,6 @@
 ﻿namespace Age_of_Villagers
 {
-    partial class NewVillageForm
+    partial class CreateNewVillageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             // village_name
             // 
             this.village_name.AutoSize = true;
-            this.village_name.Location = new System.Drawing.Point(110, 82);
+            this.village_name.Location = new System.Drawing.Point(77, 77);
             this.village_name.Name = "village_name";
             this.village_name.Size = new System.Drawing.Size(116, 25);
             this.village_name.TabIndex = 0;
@@ -47,38 +47,37 @@
             // nation_name
             // 
             this.nation_name.AutoSize = true;
-            this.nation_name.Location = new System.Drawing.Point(110, 134);
+            this.nation_name.Location = new System.Drawing.Point(77, 201);
             this.nation_name.Name = "nation_name";
-            this.nation_name.Size = new System.Drawing.Size(113, 25);
+            this.nation_name.Size = new System.Drawing.Size(116, 25);
             this.nation_name.TabIndex = 1;
-            this.nation_name.Text = "nation_name";
+            this.nation_name.Text = "Nation_name";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 82);
+            this.textBox1.Location = new System.Drawing.Point(275, 77);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 31);
+            this.textBox1.Size = new System.Drawing.Size(150, 31);
             this.textBox1.TabIndex = 2;
-           
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(236, 128);
+            this.textBox2.Location = new System.Drawing.Point(275, 198);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 31);
+            this.textBox2.Size = new System.Drawing.Size(150, 31);
             this.textBox2.TabIndex = 3;
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(226, 211);
+            this.submit.Location = new System.Drawing.Point(313, 319);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(212, 38);
+            this.submit.Size = new System.Drawing.Size(112, 34);
             this.submit.TabIndex = 4;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
             this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // NewVillage
+            // CreateNewVillageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,8 +87,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nation_name);
             this.Controls.Add(this.village_name);
-            this.Name = "NewVillage";
-            this.Text = "NewVillage";
+            this.Name = "CreateNewVillageForm";
+            this.Text = "CreateNewVillageForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
