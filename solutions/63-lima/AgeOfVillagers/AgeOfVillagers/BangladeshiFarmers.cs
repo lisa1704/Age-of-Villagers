@@ -3,7 +3,7 @@ using System.Drawing;
 
 public class BangladeshiFarmers : INation
 {
-    public void backgroundColor()
+    public void paintTerrain()
     {
         throw new NotImplementedException();
     }

@@ -51,7 +51,7 @@ namespace AgeOfVillagers
         {
             g = drawing_panel.CreateGraphics();
             EgyptianKings egyptianKings = new EgyptianKings(drawing_panel);
-            egyptianKings.backgroundColor();
+            egyptianKings.paintTerrain();
             if (tree.Checked == true)
             {
                 egyptianKings.drawTree(g , e.X, e.Y);
