@@ -129,7 +129,7 @@
             "Bangladeshi Farmers",
             "Arab Bedouin",
             "Egytian Kings",
-            "Iunit Hunters"});
+            "Inuit HUnters"});
             this.NationList.Location = new System.Drawing.Point(675, 167);
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(121, 21);

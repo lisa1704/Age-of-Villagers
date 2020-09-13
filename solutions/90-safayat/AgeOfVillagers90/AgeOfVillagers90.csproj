@@ -60,6 +60,7 @@
     <Compile Include="InuitHunters.cs" />
     <Compile Include="IShapeIItem.cs" />
     <Compile Include="Line.cs" />
+    <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />

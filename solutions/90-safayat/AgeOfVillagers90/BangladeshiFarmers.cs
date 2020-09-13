@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,10 @@ namespace AgeOfVillagers90
 {
     class BangladeshiFarmers : INation
     {
-        public void DrawHouse()
+        Pen p = new Pen(Color.Pink);
+        public void DrawHouse(Graphics g,Point pt)
         {
-            throw new NotImplementedException();
+            g.DrawLine(p, pt.X, pt.Y, 100, 100);
         }
 
         public void DrawTree()
