@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EditorsVillageName = new System.Windows.Forms.Label();
             this.NationList = new System.Windows.Forms.ComboBox();
             this.VillageNameBox = new System.Windows.Forms.TextBox();
             this.OpenVillage = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.NewVbutton = new System.Windows.Forms.Button();
             this.gameTitle = new System.Windows.Forms.Label();
             this.DrawPanel = new System.Windows.Forms.Panel();
-            this.EditorsVillageName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.EditorsVillageName);
             this.panel1.Controls.Add(this.NationList);
             this.panel1.Controls.Add(this.VillageNameBox);
@@ -64,19 +66,28 @@
             this.panel1.Size = new System.Drawing.Size(242, 400);
             this.panel1.TabIndex = 0;
             // 
+            // EditorsVillageName
+            // 
+            this.EditorsVillageName.AutoSize = true;
+            this.EditorsVillageName.Location = new System.Drawing.Point(74, 97);
+            this.EditorsVillageName.Name = "EditorsVillageName";
+            this.EditorsVillageName.Size = new System.Drawing.Size(0, 17);
+            this.EditorsVillageName.TabIndex = 18;
+            this.EditorsVillageName.TextChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
+            // 
             // NationList
             // 
             this.NationList.FormattingEnabled = true;
             this.NationList.Items.AddRange(new object[] {
-            "Bangladeshi",
-            "Arab",
-            "Egyptian",
-            "Inuit"});
-            this.NationList.Location = new System.Drawing.Point(29, 215);
+            "BangladeshiFarmers",
+            "ArabBedouin",
+            "EgyptianKings",
+            "InuitHunters"});
+            this.NationList.Location = new System.Drawing.Point(56, 142);
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(121, 24);
             this.NationList.TabIndex = 17;
-            this.NationList.Text = "Village List";
+            this.NationList.Text = "Nation List";
             this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
             // 
             // VillageNameBox
@@ -115,7 +126,7 @@
             // 
             this.WaterSource.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.WaterSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.WaterSource.Location = new System.Drawing.Point(117, 175);
+            this.WaterSource.Location = new System.Drawing.Point(125, 231);
             this.WaterSource.Name = "WaterSource";
             this.WaterSource.Size = new System.Drawing.Size(103, 23);
             this.WaterSource.TabIndex = 13;
@@ -126,7 +137,7 @@
             // Tree
             // 
             this.Tree.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tree.Location = new System.Drawing.Point(8, 175);
+            this.Tree.Location = new System.Drawing.Point(16, 231);
             this.Tree.Name = "Tree";
             this.Tree.Size = new System.Drawing.Size(103, 23);
             this.Tree.TabIndex = 12;
@@ -137,7 +148,7 @@
             // House
             // 
             this.House.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.House.Location = new System.Drawing.Point(56, 135);
+            this.House.Location = new System.Drawing.Point(59, 192);
             this.House.Name = "House";
             this.House.Size = new System.Drawing.Size(103, 23);
             this.House.TabIndex = 11;
@@ -178,14 +189,15 @@
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
             this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
             // 
-            // EditorsVillageName
+            // label1
             // 
-            this.EditorsVillageName.AutoSize = true;
-            this.EditorsVillageName.Location = new System.Drawing.Point(74, 97);
-            this.EditorsVillageName.Name = "EditorsVillageName";
-            this.EditorsVillageName.Size = new System.Drawing.Size(0, 17);
-            this.EditorsVillageName.TabIndex = 18;
-            this.EditorsVillageName.TextChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "VillageName";
+            this.label1.TextChanged += new System.EventHandler(this.VillageNameBox_TextChanged);
             // 
             // VillageWindow
             // 
@@ -220,5 +232,6 @@
         private System.Windows.Forms.ComboBox NationList;
         private System.Windows.Forms.Panel DrawPanel;
         private System.Windows.Forms.Label EditorsVillageName;
+        private System.Windows.Forms.Label label1;
     }
 }

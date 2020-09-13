@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     interface INations
     {
-        void DrawHouse();
+        string DrawHouse();
         void DrawTree();
         void DrawWaterSource();
     }
@@ -21,11 +21,11 @@ namespace AgeOfVillagers
             {
                 return new BangladeshiFarmers();
             }
-            else if (NationType == "ArabBeduin")
+            else if (NationType == "ArabBedouin")
             {
                 return new ArabBedouin();
             }
-            else if (NationType == "EgyptianKing")
+            else if (NationType == "EgyptianKings")
             {
                 return new EgyptianKings();
             }

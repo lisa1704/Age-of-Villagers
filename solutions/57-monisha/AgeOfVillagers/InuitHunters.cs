@@ -8,9 +8,9 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INations
     {
-        public void DrawHouse()
+        public string DrawHouse()
         {
-            throw new NotImplementedException();
+            return "Igloo";
         }
 
         public void DrawTree()

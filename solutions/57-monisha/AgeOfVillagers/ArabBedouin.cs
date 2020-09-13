@@ -8,9 +8,9 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : INations
     {
-        public void DrawHouse()
+        public string DrawHouse()
         {
-            throw new NotImplementedException();
+            return "Stonehouse";
         }
 
         public void DrawTree()

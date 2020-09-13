@@ -8,9 +8,9 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INations
     {
-        public void DrawHouse()
+        public string DrawHouse()
         {
-            throw new NotImplementedException();
+            return "KureGhor";
         }
 
         public void DrawTree()

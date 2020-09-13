@@ -23,7 +23,7 @@ namespace AgeOfVillagers
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
 
-
+        NationFactory nationFactory = new NationFactory();
         public VillageWindow()
         {
             InitializeComponent();
@@ -72,17 +72,20 @@ namespace AgeOfVillagers
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
             name = VillageNameBox.Text;
+            
         }
 
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             VType = NationList.Text;
+            string NName =nationFactory.GetNation(VType).DrawHouse();
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = DrawPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
+
             foreach (Point pt in HousePoints)
             {
                 g.DrawLine(p, pt.X, pt.Y , pt.X+16, pt.X + 16);
