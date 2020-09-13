@@ -21,8 +21,8 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
             g = DrawPanel.CreateGraphics();
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            pen = new Pen(Color.Black, 5);
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            pen = new Pen(Color.Black, 3);
         }
 
       
@@ -61,7 +61,9 @@ namespace AgeOfVillagers
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
             Form vlgname = new VillageNameInput();
+            DrawPanel.Invalidate();
             vlgname.ShowDialog();
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
