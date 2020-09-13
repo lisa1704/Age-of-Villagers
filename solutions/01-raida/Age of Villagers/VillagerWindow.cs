@@ -70,7 +70,6 @@ namespace Age_of_Villagers
         private void saveButton_Click(object sender, EventArgs e)
         {
             ICommandVillage village = new SaveVillage();
-            MessageBox.Show(villageNameBox.Text);
             SaveFileDialog save = new SaveFileDialog();
             if(save.ShowDialog()==DialogResult.OK)
             {
@@ -91,13 +90,22 @@ namespace Age_of_Villagers
 
         private void openButton_Click(object sender, EventArgs e)
         {
-
+            villagePanel.Invalidate();
             ICommandVillage village = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
-                village.execute(open.FileName, nation);
+                if (System.IO.Path.GetExtension(open.FileName).Equals(".aov"))
+                    village.execute(open.FileName, nation);
+                else
+                    MessageBox.Show("Unsupported File type");
             }
+        }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            this.saveButton_Click(sender,e);
+            villagePanel.Invalidate();
         }
     }
 }

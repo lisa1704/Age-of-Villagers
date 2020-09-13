@@ -18,7 +18,8 @@ namespace Age_of_Villagers
         public void execute(string path, INation nation)
         {
             this.get_state(nation);
-            using (StreamWriter file = File.CreateText(path))
+
+            using (StreamWriter file = File.CreateText(path+".aov"))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, village);

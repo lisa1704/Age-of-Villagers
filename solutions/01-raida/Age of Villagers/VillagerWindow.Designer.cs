@@ -124,6 +124,7 @@
             this.newButton.TabIndex = 8;
             this.newButton.Text = "New Village";
             this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // treeButton
             // 
