@@ -12,6 +12,12 @@ namespace AgeOfVillagers
     public class Bangladeshi : Nation
     {
         
+        public Bangladeshi()
+        {
+            this.hasTree = true;
+            this.hasWaterSource = true;
+        }
+
         public override void BackgoundColor(Graphics g)
         {
             g.Clear(Color.PaleGreen);

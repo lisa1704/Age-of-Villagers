@@ -10,11 +10,12 @@ namespace AgeOfVillagers
     public class Village
     {
         public string villageName;
-        public List<Point> housePosition;
+        public List<Point> housePosition,treePosition;
 
         public Village()
         {
             housePosition = new List<Point>();
+            treePosition = new List<Point>();
         }
 
         public string getName()

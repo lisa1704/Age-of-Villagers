@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using AgeOfVillagers.Nations;
 
 namespace AgeOfVillagers
 {
@@ -13,9 +14,9 @@ namespace AgeOfVillagers
     public partial class VillageWindow : Form
     {
         readonly Graphics graphic;
-        private string villname, villtype;
+        public string villname, villtype;
 
-        private INation nation;
+        public Nation nation;
         Village myVillage;
         VillageSerializer myVillageSerializer;
 
@@ -43,9 +44,10 @@ namespace AgeOfVillagers
                 nation.DrawHouse(graphic, location);
                 myVillage.housePosition.Add(location);
             }
-            else if(tree.Checked)
+            else if(tree.Checked && nation.hasWaterSource==true)
             {
                 nation.DrawTree(graphic, location);
+                myVillage.treePosition.Add(location);
             }
             else if(watersource.Checked)
             {
@@ -63,7 +65,7 @@ namespace AgeOfVillagers
 
             NationCreator nationCreator = new NationCreator();
 
-            nation = nationCreator.GetNation(villtype);
+            nation = (Nation)nationCreator.GetNation(villtype);
             nation.BackgoundColor(graphic);
         }
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface INation
+    public interface INation
     {
         void DrawHouse(Graphics g, Point location);
         void DrawTree(Graphics g, Point location);
