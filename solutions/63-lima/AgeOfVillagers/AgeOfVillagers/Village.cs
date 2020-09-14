@@ -1,17 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public class Village
+namespace AgeOfVillagers
 {
-    private string name;
-    public string Name
+    class Village
     {
-        get
-        {
-            return this.name;
-        }
-        set
-        {
-            this.name = value;
-        }
+        public String VillageName;
+        public List<(int, int)> houses = new List<(int, int)>();
+        public List<(int, int)> trees = new List<(int, int)>();
+        public List<(int, int)> water_resources = new List<(int, int)>();
     }
 }
