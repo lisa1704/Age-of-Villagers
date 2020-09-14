@@ -13,6 +13,7 @@ namespace Age_Of_Villagers
     public partial class VillageEditorWindow : Form
     {
         string name;
+        string nation;
      
         public VillageEditorWindow()
         {
@@ -75,7 +76,8 @@ namespace Age_Of_Villagers
 
         private void nationCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            nation = nationCombo.Text;
+
 
         }
     }
