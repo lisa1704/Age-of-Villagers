@@ -13,7 +13,7 @@ public class BangladeshiFarmers : INation
     public void paintTerrain()
     {
         panel.BackColor = Color.Green;
-    }
+    }0
 
     public void drawHouse(Graphics g, int X, int Y)
     {
