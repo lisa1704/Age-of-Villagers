@@ -13,8 +13,7 @@ namespace Age_Of_Villagers
     public partial class VillageEditorWindow : Form
     {
         string name;
-        string VillageType;
-        string text;
+     
         public VillageEditorWindow()
         {
             InitializeComponent();
@@ -29,29 +28,21 @@ namespace Age_Of_Villagers
         {
 
         }
-
+/*
         private void house_Click(object sender, EventArgs e)
         {
             text = "House";
 
         }
 
-        private void tree_Click(object sender, EventArgs e)
-        {
-            text = "Tree";
+        
 
-        }
+    */
 
-        private void waterSource_Click(object sender, EventArgs e)
-        {
-            text = "Water Source";
+        
+       
 
-        }
-
-        private void nationList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            VillageType = nationList.Text;
-        }
+        
 
         private void saveVill_Click(object sender, EventArgs e)
         {
@@ -65,6 +56,8 @@ namespace Age_Of_Villagers
 
         private void Panel1_MouseClick(object sender, MouseEventArgs e)
         {
+            
+
 
         }
 
@@ -73,6 +66,17 @@ namespace Age_Of_Villagers
             newVill nv= new newVill();
             nv.Show();
             this.Hide();
+        }
+        
+        private void rdButtonHouse_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nationCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

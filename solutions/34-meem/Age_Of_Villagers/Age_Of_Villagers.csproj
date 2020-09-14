@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangladeshiHouse.cs" />
+    <Compile Include="BangladeshiItemFactory.cs" />
+    <Compile Include="BangladeshiTree.cs" />
+    <Compile Include="ItemFactory.cs" />
+    <Compile Include="IVillageItem.cs" />
+    <Compile Include="NationFactory.cs" />
     <Compile Include="newVill.cs">
       <SubType>Form</SubType>
     </Compile>

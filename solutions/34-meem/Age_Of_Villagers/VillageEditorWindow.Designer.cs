@@ -30,14 +30,14 @@
         {
             this.villNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.house = new System.Windows.Forms.Button();
-            this.tree = new System.Windows.Forms.Button();
-            this.waterSource = new System.Windows.Forms.Button();
             this.openVill = new System.Windows.Forms.Button();
             this.newVill = new System.Windows.Forms.Button();
             this.saveVill = new System.Windows.Forms.Button();
-            this.nationList = new System.Windows.Forms.ListBox();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.rdButtonHouse = new System.Windows.Forms.RadioButton();
+            this.rdButtonTree = new System.Windows.Forms.RadioButton();
+            this.rdButtonWaterSrc = new System.Windows.Forms.RadioButton();
+            this.nationCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // villNameBox
@@ -60,36 +60,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Age Of Villagers";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // house
-            // 
-            this.house.Location = new System.Drawing.Point(703, 205);
-            this.house.Name = "house";
-            this.house.Size = new System.Drawing.Size(75, 23);
-            this.house.TabIndex = 2;
-            this.house.Text = "House";
-            this.house.UseVisualStyleBackColor = true;
-            this.house.Click += new System.EventHandler(this.house_Click);
-            // 
-            // tree
-            // 
-            this.tree.Location = new System.Drawing.Point(811, 205);
-            this.tree.Name = "tree";
-            this.tree.Size = new System.Drawing.Size(75, 23);
-            this.tree.TabIndex = 3;
-            this.tree.Text = "Tree";
-            this.tree.UseVisualStyleBackColor = true;
-            this.tree.Click += new System.EventHandler(this.tree_Click);
-            // 
-            // waterSource
-            // 
-            this.waterSource.Location = new System.Drawing.Point(742, 250);
-            this.waterSource.Name = "waterSource";
-            this.waterSource.Size = new System.Drawing.Size(109, 23);
-            this.waterSource.TabIndex = 4;
-            this.waterSource.Text = "Water Source";
-            this.waterSource.UseVisualStyleBackColor = true;
-            this.waterSource.Click += new System.EventHandler(this.waterSource_Click);
             // 
             // openVill
             // 
@@ -120,20 +90,6 @@
             this.saveVill.UseVisualStyleBackColor = true;
             this.saveVill.Click += new System.EventHandler(this.saveVill_Click);
             // 
-            // nationList
-            // 
-            this.nationList.FormattingEnabled = true;
-            this.nationList.ItemHeight = 16;
-            this.nationList.Items.AddRange(new object[] {
-            "Bangladeshi",
-            "Arab",
-            "inuit"});
-            this.nationList.Location = new System.Drawing.Point(703, 125);
-            this.nationList.Name = "nationList";
-            this.nationList.Size = new System.Drawing.Size(168, 20);
-            this.nationList.TabIndex = 8;
-            this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
-            // 
             // Panel1
             // 
             this.Panel1.Location = new System.Drawing.Point(30, 25);
@@ -143,19 +99,66 @@
             this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.Panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseClick);
             // 
+            // rdButtonHouse
+            // 
+            this.rdButtonHouse.AutoSize = true;
+            this.rdButtonHouse.Location = new System.Drawing.Point(747, 201);
+            this.rdButtonHouse.Name = "rdButtonHouse";
+            this.rdButtonHouse.Size = new System.Drawing.Size(70, 21);
+            this.rdButtonHouse.TabIndex = 10;
+            this.rdButtonHouse.TabStop = true;
+            this.rdButtonHouse.Text = "House";
+            this.rdButtonHouse.UseVisualStyleBackColor = true;
+            this.rdButtonHouse.CheckedChanged += new System.EventHandler(this.rdButtonHouse_CheckedChanged);
+            // 
+            // rdButtonTree
+            // 
+            this.rdButtonTree.AutoSize = true;
+            this.rdButtonTree.Location = new System.Drawing.Point(747, 243);
+            this.rdButtonTree.Name = "rdButtonTree";
+            this.rdButtonTree.Size = new System.Drawing.Size(59, 21);
+            this.rdButtonTree.TabIndex = 11;
+            this.rdButtonTree.TabStop = true;
+            this.rdButtonTree.Text = "Tree";
+            this.rdButtonTree.UseVisualStyleBackColor = true;
+            // 
+            // rdButtonWaterSrc
+            // 
+            this.rdButtonWaterSrc.AutoSize = true;
+            this.rdButtonWaterSrc.Location = new System.Drawing.Point(747, 285);
+            this.rdButtonWaterSrc.Name = "rdButtonWaterSrc";
+            this.rdButtonWaterSrc.Size = new System.Drawing.Size(112, 21);
+            this.rdButtonWaterSrc.TabIndex = 12;
+            this.rdButtonWaterSrc.TabStop = true;
+            this.rdButtonWaterSrc.Text = "WaterSource";
+            this.rdButtonWaterSrc.UseVisualStyleBackColor = true;
+            // 
+            // nationCombo
+            // 
+            this.nationCombo.FormattingEnabled = true;
+            this.nationCombo.Items.AddRange(new object[] {
+            "Bangladeshi",
+            "Arabians",
+            "Inuits"});
+            this.nationCombo.Location = new System.Drawing.Point(730, 143);
+            this.nationCombo.Name = "nationCombo";
+            this.nationCombo.Size = new System.Drawing.Size(121, 24);
+            this.nationCombo.TabIndex = 13;
+            this.nationCombo.SelectedIndexChanged += new System.EventHandler(this.nationCombo_SelectedIndexChanged);
+            // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 586);
+            this.Controls.Add(this.nationCombo);
+            this.Controls.Add(this.rdButtonWaterSrc);
+            this.Controls.Add(this.rdButtonTree);
+            this.Controls.Add(this.rdButtonHouse);
             this.Controls.Add(this.Panel1);
-            this.Controls.Add(this.nationList);
             this.Controls.Add(this.saveVill);
             this.Controls.Add(this.newVill);
             this.Controls.Add(this.openVill);
-            this.Controls.Add(this.waterSource);
-            this.Controls.Add(this.tree);
-            this.Controls.Add(this.house);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.villNameBox);
             this.Name = "VillageEditorWindow";
@@ -169,13 +172,13 @@
 
         private System.Windows.Forms.TextBox villNameBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button house;
-        private System.Windows.Forms.Button tree;
-        private System.Windows.Forms.Button waterSource;
         private System.Windows.Forms.Button openVill;
         private System.Windows.Forms.Button newVill;
         private System.Windows.Forms.Button saveVill;
-        private System.Windows.Forms.ListBox nationList;
         private System.Windows.Forms.Panel Panel1;
+        private System.Windows.Forms.RadioButton rdButtonHouse;
+        private System.Windows.Forms.RadioButton rdButtonTree;
+        private System.Windows.Forms.RadioButton rdButtonWaterSrc;
+        private System.Windows.Forms.ComboBox nationCombo;
     }
 }
