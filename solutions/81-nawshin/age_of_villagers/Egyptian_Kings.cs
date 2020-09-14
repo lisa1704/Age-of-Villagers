@@ -23,22 +23,9 @@ namespace age_of_villagers
 
         public void draw_watersource(Graphics g, Point pt)
         {
-            
+            EgyptWatersource water = new EgyptWatersource(pt);
+            water.draw(g);
         }
 
-        /*public string draw_house()
-        {
-            return "Egypt house";
-        }
-
-        public string draw_tree()
-        {
-            return "Egypt tree";
-        }
-
-        public string draw_waterSource()
-        {
-            return "Egypt watersource";
-        }*/
     }
 }
