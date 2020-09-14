@@ -18,7 +18,8 @@ namespace age_of_villagers
 
         public void draw_tree(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 240, 240);
+            EgyptTree tree = new EgyptTree(pt);
+            tree.draw(g);
         }
 
         public void draw_watersource(Graphics g, Point pt)
