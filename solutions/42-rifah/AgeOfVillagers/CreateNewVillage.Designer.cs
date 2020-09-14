@@ -51,7 +51,7 @@ namespace AgeOfVillagers
             this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 546);
+            this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 1;
             // 
             // CreateNewVillage
@@ -59,7 +59,7 @@ namespace AgeOfVillagers
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(963, 547);
+            this.ClientSize = new System.Drawing.Size(945, 400);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
