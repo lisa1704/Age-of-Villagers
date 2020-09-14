@@ -56,13 +56,14 @@ namespace AgeOfVillagers
 
         public class NullTree : CompositeShape
         {
-            public NullTree(Point MPt)
+            public NullTree( )
             {
                 //No Tree
             }
 
-            internal void Paint()
+            internal void Paint(Graphics g, Pen p)
             {
+                //No Tree
                 throw new NotImplementedException();
             }
         }
