@@ -53,20 +53,20 @@
             this.OptionsBoard.Controls.Add(this.OpenVillage);
             this.OptionsBoard.Controls.Add(this.SaveVillage);
             this.OptionsBoard.Controls.Add(this.Nations);
-            this.OptionsBoard.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.OptionsBoard.Font = new System.Drawing.Font("Arial", 10F);
             this.OptionsBoard.Location = new System.Drawing.Point(609, 1);
             this.OptionsBoard.Name = "OptionsBoard";
             this.OptionsBoard.Size = new System.Drawing.Size(257, 400);
             this.OptionsBoard.TabIndex = 0;
             this.OptionsBoard.TabStop = false;
-            this.OptionsBoard.Text = "Options Here";
+            this.OptionsBoard.Text = "Age Of Villagers";
             this.OptionsBoard.Enter += new System.EventHandler(this.OptionsBoard_Enter);
             // 
             // VillageName
             // 
             this.VillageName.Location = new System.Drawing.Point(48, 63);
             this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(154, 22);
+            this.VillageName.Size = new System.Drawing.Size(154, 27);
             this.VillageName.TabIndex = 0;
             this.VillageName.Text = "Enter Village Name";
             this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
@@ -76,7 +76,7 @@
             this.WaterSourceButton.AutoSize = true;
             this.WaterSourceButton.Location = new System.Drawing.Point(60, 220);
             this.WaterSourceButton.Name = "WaterSourceButton";
-            this.WaterSourceButton.Size = new System.Drawing.Size(115, 20);
+            this.WaterSourceButton.Size = new System.Drawing.Size(132, 23);
             this.WaterSourceButton.TabIndex = 9;
             this.WaterSourceButton.TabStop = true;
             this.WaterSourceButton.Text = "Water Source";
@@ -88,7 +88,7 @@
             this.HouseButton.AutoSize = true;
             this.HouseButton.Location = new System.Drawing.Point(60, 194);
             this.HouseButton.Name = "HouseButton";
-            this.HouseButton.Size = new System.Drawing.Size(69, 20);
+            this.HouseButton.Size = new System.Drawing.Size(76, 23);
             this.HouseButton.TabIndex = 8;
             this.HouseButton.TabStop = true;
             this.HouseButton.Text = "House";
@@ -100,7 +100,7 @@
             this.TreeButton.AutoSize = true;
             this.TreeButton.Location = new System.Drawing.Point(60, 168);
             this.TreeButton.Name = "TreeButton";
-            this.TreeButton.Size = new System.Drawing.Size(58, 20);
+            this.TreeButton.Size = new System.Drawing.Size(62, 23);
             this.TreeButton.TabIndex = 7;
             this.TreeButton.TabStop = true;
             this.TreeButton.Text = "Tree";
@@ -109,10 +109,10 @@
             // 
             // NewVillage
             // 
-            this.NewVillage.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.NewVillage.Location = new System.Drawing.Point(15, 365);
+            this.NewVillage.Font = new System.Drawing.Font("Arial", 10F);
+            this.NewVillage.Location = new System.Drawing.Point(48, 301);
             this.NewVillage.Name = "NewVillage";
-            this.NewVillage.Size = new System.Drawing.Size(112, 25);
+            this.NewVillage.Size = new System.Drawing.Size(154, 35);
             this.NewVillage.TabIndex = 6;
             this.NewVillage.Text = "New Village";
             this.NewVillage.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             // 
             // OpenVillage
             // 
-            this.OpenVillage.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.OpenVillage.Location = new System.Drawing.Point(133, 365);
+            this.OpenVillage.Font = new System.Drawing.Font("Arial", 10F);
+            this.OpenVillage.Location = new System.Drawing.Point(48, 342);
             this.OpenVillage.Name = "OpenVillage";
-            this.OpenVillage.Size = new System.Drawing.Size(110, 25);
+            this.OpenVillage.Size = new System.Drawing.Size(154, 36);
             this.OpenVillage.TabIndex = 5;
             this.OpenVillage.Text = "Open Village";
             this.OpenVillage.UseVisualStyleBackColor = true;
@@ -131,10 +131,10 @@
             // 
             // SaveVillage
             // 
-            this.SaveVillage.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.SaveVillage.Location = new System.Drawing.Point(60, 334);
+            this.SaveVillage.Font = new System.Drawing.Font("Arial", 10F);
+            this.SaveVillage.Location = new System.Drawing.Point(48, 263);
             this.SaveVillage.Name = "SaveVillage";
-            this.SaveVillage.Size = new System.Drawing.Size(131, 25);
+            this.SaveVillage.Size = new System.Drawing.Size(154, 32);
             this.SaveVillage.TabIndex = 4;
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             "Inuit Hunters"});
             this.Nations.Location = new System.Drawing.Point(48, 104);
             this.Nations.Name = "Nations";
-            this.Nations.Size = new System.Drawing.Size(154, 24);
+            this.Nations.Size = new System.Drawing.Size(154, 27);
             this.Nations.TabIndex = 0;
             this.Nations.SelectedIndexChanged += new System.EventHandler(this.NationsName);
             // 
