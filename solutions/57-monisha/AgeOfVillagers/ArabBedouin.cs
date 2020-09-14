@@ -25,7 +25,7 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Graphics g, Point MPt)
         {
-            throw new NotImplementedException();
+            NullWater nullWater = new NullWater();
         }
 
         public void GetTerrainColor()

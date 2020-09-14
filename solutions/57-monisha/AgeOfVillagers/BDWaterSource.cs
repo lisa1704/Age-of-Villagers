@@ -35,5 +35,17 @@ namespace AgeOfVillagers
 
         }
     }
-    
+    public class NullWater : CompositeShape
+    {
+        public NullWater()
+        {
+            //No Paint
+        }
+
+        internal void Paint(Graphics g, Pen p)
+        {
+            //No Paint
+            throw new NotImplementedException();
+        }
+    }
 }
