@@ -31,17 +31,19 @@ namespace AgeOfVillagers
         {
             BDTree BDtree = new BDTree(pt);
             BDtree.Paint(g, p);
-
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point MPt)
         {
-            throw new NotImplementedException();
+            BDWaterSource BDWaterSource = new BDWaterSource(MPt);
+            BDWaterSource.Paint(g, p);
         }
 
         public void GetTerrainColor()
         {
             throw new NotImplementedException();
         }
+
+    
     }
 }

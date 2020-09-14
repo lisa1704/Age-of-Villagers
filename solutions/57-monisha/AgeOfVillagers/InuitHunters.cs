@@ -24,7 +24,7 @@ namespace AgeOfVillagers
             NullTree ntree = new NullTree();
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point MPt)
         {
             throw new NotImplementedException();
         }

@@ -23,7 +23,7 @@ namespace AgeOfVillagers
             EgyptTree.Paint(g, p);
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point MPt)
         {
             throw new NotImplementedException();
         }
