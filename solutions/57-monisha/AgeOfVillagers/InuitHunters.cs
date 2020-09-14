@@ -18,7 +18,7 @@ namespace AgeOfVillagers
             return "Igloo";
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point pt)
         {
             throw new NotImplementedException();
         }

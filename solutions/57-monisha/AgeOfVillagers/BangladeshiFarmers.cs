@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static AgeOfVillagers.Arc;
 
 namespace AgeOfVillagers
 {
@@ -26,9 +27,11 @@ namespace AgeOfVillagers
             return "KureGhor";
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            BDTree BDtree = new BDTree(pt);
+            BDtree.Paint(g, p);
+
         }
 
         public void DrawWaterSource()

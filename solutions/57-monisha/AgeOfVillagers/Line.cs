@@ -22,11 +22,7 @@ namespace AgeOfVillagers
             //var pen = new Pen(Color.Black, 1);
             g.DrawLine(p, point1, point2);
         }
-        public string test3()
-        {
-            return "test";
-        }
-
+        
     }
 
     public class ShapeRectangle : CompositeShape

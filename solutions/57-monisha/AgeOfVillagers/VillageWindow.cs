@@ -93,7 +93,8 @@ namespace AgeOfVillagers
             }
             foreach (Point pt in TreePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y , pt.X +16, pt.X +24);
+                nationFactory.GetNation(VType).DrawTree(g, pt);
+                //g.DrawLine(p, pt.X, pt.Y , pt.X +16, pt.X +24);
             }
             foreach (Point pt in WaterPoints)
             {

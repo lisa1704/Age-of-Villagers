@@ -16,7 +16,7 @@ namespace AgeOfVillagers
             return "Piramid";
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point pt)
         {
             throw new NotImplementedException();
         }

@@ -37,13 +37,15 @@ namespace AgeOfVillagers
         }
         public class BDTree : CompositeShape
         {
-            public BDTree(Point MPt, Point topLeft)
+            public BDTree(Point MPt)
             {
                 Point topRight = new Point(MPt.X +20, MPt.Y);
-                Point bottomRight = new Point(MPt.X + 50, MPt.Y+15);
+                Point bottomRight = new Point(MPt.X +25, MPt.Y+50);
+                Point topPt = new Point(MPt.X + 40, MPt.Y+40);
+                Point RTopLeft = new Point(MPt.X +20, MPt.Y +20);
 
-                AddComp(new ShapeRectangle(topLeft, bottomRight));
-                //AddComp(new ShapeEllipse(MPt,55, 50,0,360));
+                AddComp(new ShapeRectangle(RTopLeft, bottomRight));
+                AddComp(new ShapeEllipse(MPt,topPt));
             }
 
         }
