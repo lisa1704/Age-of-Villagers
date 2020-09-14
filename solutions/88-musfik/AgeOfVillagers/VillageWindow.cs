@@ -17,6 +17,7 @@ namespace AgeOfVillagers
         Graphics g;
         public Pen p; 
         string text = null;
+
         public VillageWindow()
         {
             InitializeComponent();
@@ -24,18 +25,24 @@ namespace AgeOfVillagers
 
         private void drawing_space_Paint(object sender, PaintEventArgs e)
         {
-
+         
         }
 
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.X, e.Y);
+            /*
+            Point point3 = new Point(e.X, e.Y);
+            Point point1 = new Point(e.X-30, e.Y+30);
+            Point point2 = new Point(e.X+30, e.Y+30);
+            VShape vShape = new VShape(point1,point3,point2);
+            vShape.Draw(g,p);
+            */
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
         {
             g = drawing_space.CreateGraphics();
-            p = new Pen(Color.Black);
+            p = new Pen(Color.Black);      
         }
 
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
