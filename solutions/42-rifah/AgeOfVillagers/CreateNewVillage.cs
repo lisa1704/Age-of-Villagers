@@ -12,6 +12,14 @@ namespace AgeOfVillagers
 {
     public partial class CreateNewVillage : Form
     {
+        int x;
+        int y;
+        Graphics g;
+        string text = "";
+        string village_name = "";
+        List<Point> tree_point = new List<Point>();
+        List<Point> house_point = new List<Point>();
+        List<Point> waterSource_point = new List<Point>();
         public CreateNewVillage()
         {
             InitializeComponent();
@@ -29,7 +37,8 @@ namespace AgeOfVillagers
 
         private void villageName_Click(object sender, EventArgs e)
         {
-
+            string text1 = villageName.Text;
+            village_name = text1;
         }
 
         private void nation_Click(object sender, EventArgs e)
@@ -39,17 +48,17 @@ namespace AgeOfVillagers
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "Tree";
         }
 
         private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "House";
         }
 
         private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "Water Source";
         }
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
@@ -69,6 +78,8 @@ namespace AgeOfVillagers
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = drawingPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
 
         }
     }
