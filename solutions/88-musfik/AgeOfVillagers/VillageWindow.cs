@@ -36,7 +36,7 @@ namespace AgeOfVillagers
             //Point point2 = new Point(e.X+30, e.Y+60);
 
             Point point = new Point(e.X, e.Y);
-            IShape bShape = new ArabBedouinHouse(point);
+            IShape bShape = new EgyptianKingsHouse(point);
 
             bShape.Draw(g, p);
             
