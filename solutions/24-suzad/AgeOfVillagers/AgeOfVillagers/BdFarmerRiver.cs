@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     class BdFarmerRiver : IVillageComponent
     {
+        public Point e;
+        public BdFarmerRiver(Point e)
+        {
+            this.e = e;
+        }
         public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
@@ -21,6 +26,11 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 9, y - 7, x - 13, y);
             graphics.DrawLine(pen, x - 13, y, x - 6, y + 5);
             graphics.DrawLine(pen, x - 6, y + 5, x, y);
+        }
+
+        public Point getPoint()
+        {
+            return e;
         }
     }
 }

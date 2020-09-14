@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     class ArabBedouinTree : IVillageComponent
     {
+        public Point e;
+        public ArabBedouinTree(Point e)
+        {
+            this.e = e;
+        }
         public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
@@ -21,6 +26,11 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x, y, x, y - 10);
             graphics.DrawLine(pen, x, y, x - 4, y - 10);
             graphics.DrawLine(pen, x - 1, y, x - 8, y - 10);
+        }
+
+        public Point getPoint()
+        {
+            return e;
         }
     }
 }

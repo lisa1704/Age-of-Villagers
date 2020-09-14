@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -7,19 +8,19 @@ namespace AgeOfVillagers
 {
     public class BdFarmerComponentFactory : VillageComponentFactory
     {
-        public override IVillageComponent getComponent(string radiobtn)
+        public override IVillageComponent getComponent(string radiobtn, Point e)
         {
             if (radiobtn=="House")
             {
-                return new BdFarmerHouse();
+                return new BdFarmerHouse(e);
             }
             else if (radiobtn=="Tree")
             {
-                return new BdFarmerTree();
+                return new BdFarmerTree(e);
             }
             else if(radiobtn=="Water source")
             {
-                return new BdFarmerRiver();
+                return new BdFarmerRiver(e);
             }
             return null;
         }

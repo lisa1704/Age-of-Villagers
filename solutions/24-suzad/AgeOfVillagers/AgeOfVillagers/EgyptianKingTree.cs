@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     class EgyptianKingTree : IVillageComponent
     {
+        public Point e;
+        public EgyptianKingTree(Point e)
+        {
+            this.e = e;
+        }
         public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
@@ -20,6 +25,11 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 2, y - 12, x - 8, y - 24);
             graphics.DrawLine(pen, x - 2, y - 12, x - 4, y - 24);
             graphics.DrawLine(pen, x - 2, y - 12, x - 1, y - 24);
+        }
+
+        public Point getPoint()
+        {
+            return e;
         }
     }
 }

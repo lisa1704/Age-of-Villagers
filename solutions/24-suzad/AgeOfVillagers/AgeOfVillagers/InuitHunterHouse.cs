@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     class InuitHunterHouse : IVillageComponent
     {
+        public Point e;
+        public InuitHunterHouse(Point e)
+        {
+            this.e = e;
+        }
         public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
@@ -15,6 +20,11 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x, y, x + 16, y);
             graphics.DrawArc(pen, x, y - 16, 16, 32, 180, 180);
             graphics.DrawArc(pen, x + 5, y - 6, 6, 12, 180, 180);
+        }
+
+        public Point getPoint()
+        {
+            return e;
         }
     }
 }

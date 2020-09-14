@@ -15,6 +15,10 @@ namespace AgeOfVillagers
         public string nationName;
         public string villageName;
         public string rdbtn;
+        public Point pt;
+        public List<Point> treePoints = new List<Point>();
+        public List<Point> housePoints = new List<Point>();
+        public List<Point> riverPoints = new List<Point>();
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -49,12 +53,34 @@ namespace AgeOfVillagers
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
+            //Point point = e.Location;
+            //MessageBox.Show("point" + point);
             Graphics graphics = pnlDrawingSpace.CreateGraphics();
             Pen pen = new Pen(Color.Black);
             setRadioButton();
             VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
-            IVillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn);
+            IVillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
             villageComponent.drawComponent(e.Location, graphics, pen);
+            pt = villageComponent.getPoint();
+            if (rdbtn == "House")
+            {
+                housePoints.Add(pt);
+                /*string str = "";
+                foreach (Point item in housePoints)
+                {
+                    str = str + item.X.ToString() + item.Y.ToString();
+                }*/
+                //MessageBox.Show(str);
+            }
+            else if (rdbtn == "Tree")
+            {
+                treePoints.Add(villageComponent.getPoint());
+            }
+            else if(rdbtn=="Water source")
+            {
+                riverPoints.Add(villageComponent.getPoint());
+            }
+
         }
 
         private void btnNewVillage_Click(object sender, EventArgs e)
@@ -96,8 +122,15 @@ namespace AgeOfVillagers
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             //VillageSave villageSave = new VillageSave();
             //villageSave.setFields();
-            Village village = new Village();
-            village.setFields();
+            Village village = new Village(nationName,villageName,treePoints,housePoints,riverPoints);
+            //village.setFields();
+            /*string str = "";
+            foreach (Point item in village.housePoints)
+            {
+                str = str + item.X.ToString() + item.Y.ToString();
+            }
+            MessageBox.Show(str);*/
+            //MessageBox.Show()
             VillageSave.saveVillage(filePath,village);
         }
     }
