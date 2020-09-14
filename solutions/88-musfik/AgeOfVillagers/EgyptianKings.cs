@@ -39,4 +39,12 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
     }
+
+    public class EgyptianKingsHouse : CompositeShape
+    {
+        public EgyptianKingsHouse(Point point)
+        {
+            
+        }
+    }
 }
