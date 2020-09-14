@@ -17,7 +17,8 @@ namespace AgeOfVillagers90
 
         public void DrawTree(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            ArabBedouinTree abtree = new ArabBedouinTree(pt);
+            abtree.Draw(g);
         }
 
         public void DrawWaterSource()
