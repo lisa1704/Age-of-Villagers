@@ -28,21 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.createButton = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nationLabel = new System.Windows.Forms.Label();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.nationBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // VillageWindow
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(150, 324);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(112, 34);
+            this.cancelButton.TabIndex = 0;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
+            // createButton
+            // 
+            this.createButton.Location = new System.Drawing.Point(327, 324);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(112, 34);
+            this.createButton.TabIndex = 0;
+            this.createButton.Text = "Create";
+            this.createButton.UseVisualStyleBackColor = true;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.nameLabel.Location = new System.Drawing.Point(86, 77);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(127, 27);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Village Name :";
+            // 
+            // nationLabel
+            // 
+            this.nationLabel.AutoSize = true;
+            this.nationLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.nationLabel.Location = new System.Drawing.Point(89, 160);
+            this.nationLabel.Name = "nationLabel";
+            this.nationLabel.Size = new System.Drawing.Size(118, 27);
+            this.nationLabel.TabIndex = 1;
+            this.nationLabel.Text = "Nation Type :";
+            // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(258, 77);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(181, 31);
+            this.nameBox.TabIndex = 2;
+            this.nameBox.Text = "Give a Name";
+            // 
+            // nationBox
+            // 
+            this.nationBox.FormattingEnabled = true;
+            this.nationBox.Location = new System.Drawing.Point(258, 160);
+            this.nationBox.Name = "nationBox";
+            this.nationBox.Size = new System.Drawing.Size(182, 33);
+            this.nationBox.TabIndex = 3;
+            this.nationBox.Text = "Select Nation";
+            // 
+            // CreateNewVillageWindow
             // 
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.nationBox);
+            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.nationLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.createButton);
+            this.Controls.Add(this.cancelButton);
             this.Name = "CreateNewVillageWindow";
-            this.Text ="Create new Village";
+            this.Text = "Create new Village";
             this.Load += new System.EventHandler(this.CreateVillageWindow_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
+
         #endregion
 
-
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.ComboBox nationBox;
+        private System.Windows.Forms.Label nationLabel;
+        private System.Windows.Forms.Button createButton;
     }
 }
 
