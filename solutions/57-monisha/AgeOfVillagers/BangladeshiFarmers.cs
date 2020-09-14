@@ -11,6 +11,7 @@ namespace AgeOfVillagers
    public class BangladeshiFarmers : INations
     {
         Pen p = new Pen(Color.Green);
+        
         public string DrawHouse(Graphics g,Point pt)
         {
            /* ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
@@ -39,8 +40,10 @@ namespace AgeOfVillagers
             BDWaterSource.Paint(g, p);
         }
 
-        public void GetTerrainColor()
+        public Color GetTerrainColor()
         {
+            //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            return System.Drawing.Color.Green;
             throw new NotImplementedException();
         }
 

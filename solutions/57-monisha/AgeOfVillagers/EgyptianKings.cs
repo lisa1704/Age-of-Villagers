@@ -29,7 +29,7 @@ namespace AgeOfVillagers
             EgyptWater.Paint(g, p);
         }
 
-        public void GetTerrainColor()
+        public Color GetTerrainColor()
         {
             throw new NotImplementedException();
         }

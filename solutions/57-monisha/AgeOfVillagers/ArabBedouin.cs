@@ -28,7 +28,7 @@ namespace AgeOfVillagers
             NullWater nullWater = new NullWater();
         }
 
-        public void GetTerrainColor()
+        public Color GetTerrainColor()
         {
             throw new NotImplementedException();
         }
