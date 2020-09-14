@@ -52,6 +52,7 @@
     <Compile Include="BangladeshFarmersTree.cs" />
     <Compile Include="BangladeshiFarmerHouse.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="BangladeshiFarmersWaterSource.cs" />
     <Compile Include="CompositeShape.cs" />
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="Form1.cs">
