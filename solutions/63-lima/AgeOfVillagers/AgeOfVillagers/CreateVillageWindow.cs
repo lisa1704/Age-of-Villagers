@@ -14,15 +14,17 @@ namespace AgeOfVillagers
         protected Nation nation;
         Graphics newg ;
         Village myvillage = new Village();
-        SaveVillage myvillageSaver = new SaveVillage();
+        SaveVillage myvillageSaver;
         public CreateVillageWindow()
         {
             InitializeComponent();
             newg = drawing_panel.CreateGraphics();
+            myvillageSaver = new SaveVillage(myvillage);
         }
 
         private void save_village_Click(object sender, EventArgs e)
         {
+            myvillageSaver.saveState(myvillage);
 
         }
 
@@ -33,7 +35,7 @@ namespace AgeOfVillagers
 
         private void open_village_Click(object sender, EventArgs e)
         {
-
+            myvillageSaver.openState();
         }
 
         private void village_name_TextChanged(object sender, EventArgs e)

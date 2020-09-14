@@ -6,19 +6,7 @@ namespace AgeOfVillagers
 {
     class Village
     {
-        private string name;
-        public String Name
-        {
-            get
-            {
-                return this.name;
-
-            }
-            set
-            {
-                this.name = value;
-            }
-        }
+        public string Name; 
         public List<(int, int)> houses = new List<(int, int)>();
         public List<(int, int)> trees = new List<(int, int)>();
         public List<(int, int)> water_resources = new List<(int, int)>();
@@ -33,6 +21,10 @@ namespace AgeOfVillagers
         public void addWater_Resource(int X, int Y)
         {
             water_resources.Add((X, Y));
+        }
+        public void paintAgain()
+        { 
+            
         }
     }
     
