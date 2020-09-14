@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             //w = 200;
 
             Graphics g = this.CreateGraphics();
-            Rectangle shape = new Rectangle(x, y, h, w);
+            //Rectangle shape = new Rectangle(x, y, h, w);
             if (radioButton1.Checked)
             {
                 g.DrawLine(myPen, x, y, x + 50, y);
