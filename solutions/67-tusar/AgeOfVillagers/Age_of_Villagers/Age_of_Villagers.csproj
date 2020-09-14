@@ -49,38 +49,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractPainter.cs" />
-    <Compile Include="ArabHouse.cs" />
-    <Compile Include="ArabPainter.cs" />
-    <Compile Include="ArabTree.cs" />
-    <Compile Include="Axes.cs" />
-    <Compile Include="BangladeshiHouse.cs" />
-    <Compile Include="BangladeshiPainter.cs" />
-    <Compile Include="BangladeshiTree.cs" />
-    <Compile Include="BangladeshiWaterSource.cs" />
-    <Compile Include="EgyptianHouse.cs" />
-    <Compile Include="EgyptianPainter.cs" />
-    <Compile Include="EgyptianTree.cs" />
-    <Compile Include="EgyptianWaterSource.cs" />
-    <Compile Include="IHouse.cs" />
+    <Compile Include="Nation\AbstractPainter.cs" />
+    <Compile Include="Elements\House\ArabHouse.cs" />
+    <Compile Include="Nation\ArabPainter.cs" />
+    <Compile Include="Elements\Tree\ArabTree.cs" />
+    <Compile Include="Data Classes\Axes.cs" />
+    <Compile Include="Elements\House\BangladeshiHouse.cs" />
+    <Compile Include="Nation\BangladeshiPainter.cs" />
+    <Compile Include="Elements\Tree\BangladeshiTree.cs" />
+    <Compile Include="Elements\Water Source\BangladeshiWaterSource.cs" />
+    <Compile Include="Elements\House\EgyptianHouse.cs" />
+    <Compile Include="Nation\EgyptianPainter.cs" />
+    <Compile Include="Elements\Tree\EgyptianTree.cs" />
+    <Compile Include="Elements\Water Source\EgyptianWaterSource.cs" />
+    <Compile Include="Elements\House\IHouse.cs" />
     <Compile Include="CreateEditVIllage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateEditVIllage.Designer.cs">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </Compile>
-    <Compile Include="InuitHouse.cs" />
-    <Compile Include="InuitPainter.cs" />
-    <Compile Include="IPainter.cs" />
-    <Compile Include="IWaterSource.cs" />
-    <Compile Include="NullTree.cs" />
-    <Compile Include="ITree.cs" />
-    <Compile Include="NullWaterSource.cs" />
+    <Compile Include="Elements\House\InuitHouse.cs" />
+    <Compile Include="Nation\InuitPainter.cs" />
+    <Compile Include="Nation\IPainter.cs" />
+    <Compile Include="Elements\Water Source\IWaterSource.cs" />
+    <Compile Include="Elements\Tree\NullTree.cs" />
+    <Compile Include="Elements\Tree\ITree.cs" />
+    <Compile Include="Elements\Water Source\NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectNation.cs" />
-    <Compile Include="Village.cs" />
-    <Compile Include="VillageSerializer.cs" />
+    <Compile Include="Form Helper\SelectNation.cs" />
+    <Compile Include="Village\Village.cs" />
+    <Compile Include="Village\VillageSerializer.cs" />
     <EmbeddedResource Include="CreateEditVIllage.resx">
       <DependentUpon>CreateEditVIllage.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,5 +107,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
