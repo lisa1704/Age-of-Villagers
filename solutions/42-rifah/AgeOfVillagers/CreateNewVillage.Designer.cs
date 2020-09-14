@@ -32,6 +32,8 @@ namespace AgeOfVillagers
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,12 +56,35 @@ namespace AgeOfVillagers
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(742, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 30);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Katakhali";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(696, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Bangladeshi Farmers";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // CreateNewVillage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(945, 400);
+            this.ClientSize = new System.Drawing.Size(949, 402);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -80,6 +105,8 @@ namespace AgeOfVillagers
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
