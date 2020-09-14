@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmers : INations
+   public class BangladeshiFarmers : INations
     {
         Pen p = new Pen(Color.Green);
         public string DrawHouse(Graphics g,Point pt)
@@ -19,6 +19,10 @@ namespace AgeOfVillagers
             tr.Paint(g);*/
             house.Paint(g,p);
             //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+            return "KureGhor";
+        }
+        public string testHouse()
+        {
             return "KureGhor";
         }
 

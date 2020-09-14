@@ -1,10 +1,12 @@
 using System;
 using Xunit;
 
+
 namespace AgeOfVillagersTest
 {
     public class UnitTest1
     {
+  
         [Fact]
         public void Test1()
         {
@@ -17,6 +19,15 @@ namespace AgeOfVillagersTest
         public void Test2()
         {
             string text = "Test Created";
+            Assert.Equal("Test Created", text);
+
+
+        }
+        [Fact]
+        public void Test3()
+        {
+            Line l = new Line()
+            string text = "Test;
             Assert.Equal("Test Created", text);
 
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Line : IShapeItem
+   public class Line : IShapeItem
     {
         private readonly Point point1;
         private readonly Point point2;
@@ -22,6 +22,11 @@ namespace AgeOfVillagers
             //var pen = new Pen(Color.Black, 1);
             g.DrawLine(p, point1, point2);
         }
+        public string test3()
+        {
+            return "test";
+        }
+
     }
 
     public class ShapeRectangle : CompositeShape
