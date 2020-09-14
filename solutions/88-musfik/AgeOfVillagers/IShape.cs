@@ -49,10 +49,10 @@ namespace AgeOfVillagers
         }
     }
 
-    public abstract class Shape : IShape
+    public abstract class CompositeShape : IShape
     {
         private readonly List<IShape> components;
-        protected Shape()
+        protected CompositeShape()
         {
             components = new List<IShape>();
         }
@@ -70,7 +70,7 @@ namespace AgeOfVillagers
         }
     }
 
-    public class Rectangle : Shape
+    public class Rectangle : CompositeShape
     {
         public Rectangle (Point topLeft, Point bottomRight)
         {
@@ -84,7 +84,7 @@ namespace AgeOfVillagers
         }
     }
 
-    public class VShape : Shape
+    public class VShape : CompositeShape
     {
         public VShape(Point p1, Point mid_p2, Point p3)
         {
