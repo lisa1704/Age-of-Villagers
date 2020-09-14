@@ -93,7 +93,12 @@ namespace AgeOfVillagers
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
+            //VillageSave villageSave = new VillageSave();
+            //villageSave.setFields();
+            Village village = new Village();
+            village.setFields();
+            VillageSave.saveVillage(filePath,village);
         }
     }
 }
