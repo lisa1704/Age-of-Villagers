@@ -14,6 +14,7 @@ namespace Age_Of_Villagers
     {
         string name;
         string nation;
+        string rdButton;
      
         public VillageEditorWindow()
         {
@@ -29,21 +30,37 @@ namespace Age_Of_Villagers
         {
 
         }
-/*
-        private void house_Click(object sender, EventArgs e)
+        /*
+                private void house_Click(object sender, EventArgs e)
+                {
+                    text = "House";
+
+                }
+
+
+
+            */
+
+        public void radioButton_Click()
         {
-            text = "House";
+            if (rdButtonHouse.Checked)
+            {
+                rdButton = rdButtonHouse.Text;
+            }
+            else if (rdButtonTree.Checked)
+            {
+                rdButton = rdButtonTree.Text;
+            }
+            else if (rdButtonWaterSrc.Checked)
+            {
+                rdButton = rdButtonWaterSrc.Text;
+            }
+
 
         }
 
-        
 
-    */
 
-        
-       
-
-        
 
         private void saveVill_Click(object sender, EventArgs e)
         {

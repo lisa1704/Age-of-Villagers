@@ -63,7 +63,7 @@
             // 
             // openVill
             // 
-            this.openVill.Location = new System.Drawing.Point(761, 380);
+            this.openVill.Location = new System.Drawing.Point(747, 383);
             this.openVill.Name = "openVill";
             this.openVill.Size = new System.Drawing.Size(110, 23);
             this.openVill.TabIndex = 5;
