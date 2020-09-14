@@ -49,6 +49,22 @@ namespace AgeOfVillagers
             }
 
         }
+        public class ArabTree : CompositeShape
+        {
+            public ArabTree(Point MPt)
+            {
+                Point topRight = new Point(MPt.X + 20, MPt.Y);
+                Point bottomRight = new Point(MPt.X + 25, MPt.Y + 50);
+                Point L1topPt = new Point(MPt.X , MPt.Y -35);
+                Point L2topPt = new Point(MPt.X, MPt.Y - 25);
+                Point RTopLeft = new Point(MPt.X + 20, MPt.Y + 20);
+
+                AddComp(new ShapeRectangle(RTopLeft, bottomRight));
+                AddComp(new Line(RTopLeft, L1topPt));
+                AddComp(new Line(topRight, L2topPt));
+            }
+
+        }
     }
 }
 
