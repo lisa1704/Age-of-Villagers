@@ -30,10 +30,10 @@ namespace AgeOfVillagers
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.AgeOfVillagers = new System.Windows.Forms.Label();
+            this.drawingPanel = new System.Windows.Forms.Panel();
+            this.villageName = new System.Windows.Forms.Label();
+            this.nation = new System.Windows.Forms.Label();
             this.saveVillagebutton = new System.Windows.Forms.Button();
             this.newVillagebutton = new System.Windows.Forms.Button();
             this.openVillagebutton = new System.Windows.Forms.Button();
@@ -42,47 +42,48 @@ namespace AgeOfVillagers
             this.waterSourceButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // label1
+            // AgeOfVillagers
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(672, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "AGE OF VILLAGERS";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.AgeOfVillagers.AutoSize = true;
+            this.AgeOfVillagers.Font = new System.Drawing.Font("Product Sans", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AgeOfVillagers.Location = new System.Drawing.Point(672, 18);
+            this.AgeOfVillagers.Name = "AgeOfVillagers";
+            this.AgeOfVillagers.Size = new System.Drawing.Size(241, 32);
+            this.AgeOfVillagers.TabIndex = 0;
+            this.AgeOfVillagers.Text = "AGE OF VILLAGERS";
+            this.AgeOfVillagers.Click += new System.EventHandler(this.AgeOfVillagers_Click);
             // 
-            // panel1
+            // drawingPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 1;
+            this.drawingPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.drawingPanel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.drawingPanel.Location = new System.Drawing.Point(3, 0);
+            this.drawingPanel.Name = "drawingPanel";
+            this.drawingPanel.Size = new System.Drawing.Size(600, 400);
+            this.drawingPanel.TabIndex = 1;
+            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
             // 
-            // label2
+            // villageName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(742, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 30);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Katakhali";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.villageName.AutoSize = true;
+            this.villageName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.villageName.Location = new System.Drawing.Point(742, 59);
+            this.villageName.Name = "villageName";
+            this.villageName.Size = new System.Drawing.Size(99, 30);
+            this.villageName.TabIndex = 2;
+            this.villageName.Text = "Katakhali";
+            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
-            // label3
+            // nation
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(696, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Bangladeshi Farmers";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.nation.AutoSize = true;
+            this.nation.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nation.Location = new System.Drawing.Point(696, 97);
+            this.nation.Name = "nation";
+            this.nation.Size = new System.Drawing.Size(186, 23);
+            this.nation.TabIndex = 3;
+            this.nation.Text = "Bangladeshi Farmers";
+            this.nation.Click += new System.EventHandler(this.nation_Click);
             // 
             // saveVillagebutton
             // 
@@ -162,10 +163,10 @@ namespace AgeOfVillagers
             this.Controls.Add(this.openVillagebutton);
             this.Controls.Add(this.newVillagebutton);
             this.Controls.Add(this.saveVillagebutton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nation);
+            this.Controls.Add(this.villageName);
+            this.Controls.Add(this.drawingPanel);
+            this.Controls.Add(this.AgeOfVillagers);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "CreateNewVillage";
             this.Text = "Age Of Villagers";
@@ -182,10 +183,10 @@ namespace AgeOfVillagers
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label AgeOfVillagers;
+        private System.Windows.Forms.Panel drawingPanel;
+        private System.Windows.Forms.Label villageName;
+        private System.Windows.Forms.Label nation;
         private System.Windows.Forms.Button saveVillagebutton;
         private System.Windows.Forms.Button newVillagebutton;
         private System.Windows.Forms.Button openVillagebutton;
