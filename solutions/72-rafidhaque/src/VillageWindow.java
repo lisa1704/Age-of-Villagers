@@ -58,6 +58,11 @@ public class VillageWindow extends JPanel {
 
         g.setColor(Color.BLACK);
         g.drawLine(600, 0, 600, 400);
+        g.drawLine(0, 0, 0, 400);
+        g.drawLine(0, 0, 800, 0);
+        g.drawLine(800, 0, 800, 400);
+        g.drawLine(0, 400, 800, 400);
+
 
     }
 
