@@ -11,17 +11,21 @@ namespace AgeOfVillagers90
     {
         private readonly Point point1;
         private readonly Point point2;
-        public int x, y, width, heigth, initialngle, sweepAngle;
-        public Arc(Point point1, Point point2)
+        public float x, y, width, heigth, initialangle, sweepAngle;
+        public Arc(float x, float y, float width, float heigth,float initialangle,float sweepAngle)
         {
-            this.point1 = point1;
-            this.point2 = point2;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.heigth = heigth;
+            this.initialangle = initialangle;
+            this.sweepAngle = sweepAngle;
         }
-
+            
         public void Draw(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen, x, y, width, heigth, initialngle, sweepAngle);
+            g.DrawArc(pen, x, y, width, heigth, initialangle, sweepAngle);
         }
     }
 }
