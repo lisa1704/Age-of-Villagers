@@ -9,8 +9,10 @@ namespace AgeOfVillagers
     class Village
     {
         public Nations village;
+        public string villagetype;
         public  Village(string villageType)
         {
+            this.villagetype = villagetype;
             if (villageType == "Bangladeshi Farmers")
                 village = new BangladeshiFarmers();
             if (villageType == "Arab Bedoiun")

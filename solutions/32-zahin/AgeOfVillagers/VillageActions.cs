@@ -33,6 +33,7 @@ namespace AgeOfVillagers
         private void NationsName(object sender, EventArgs e)
         {
             villageType = (string)Nations.SelectedItem;
+            Village village = new Village (villageType);
             //Console.WriteLine(villageType);
         }
 
