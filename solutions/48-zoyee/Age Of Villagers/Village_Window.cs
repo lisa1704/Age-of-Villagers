@@ -19,7 +19,12 @@ namespace Age_Of_Villagers
 
         private void InitializeComponent()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
