@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
+using AgeOfVillagers.Tree;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -29,7 +30,12 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            
+            BangladeshiTree bangladeshiTree = new BangladeshiTree();
+            TreeContext treeContext = new TreeContext(bangladeshiTree,g,location,treeSize);
+
+            treeContext.TreeDrawing();
+
+            Debug.WriteLine("Drawing Bangladeshi Tree");
         }
 
         public override void DrawWaterResource(Graphics g, Point location)
