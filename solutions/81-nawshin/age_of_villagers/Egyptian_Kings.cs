@@ -12,7 +12,8 @@ namespace age_of_villagers
         Pen p = new Pen(Color.Yellow);
         public void draw_house(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 40, 40);
+            EgyptHouse house = new EgyptHouse(pt);
+            house.draw(g);
         }
 
         public void draw_tree(Graphics g, Point pt)
