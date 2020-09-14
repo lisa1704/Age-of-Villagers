@@ -37,6 +37,7 @@
             this.TreeButton = new System.Windows.Forms.Button();
             this.WaterButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.VillageNation = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.VillageNation);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.WaterButton);
             this.panel2.Controls.Add(this.TreeButton);
@@ -127,7 +129,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9F);
+            this.textBox1.Font = new System.Drawing.Font("Arial", 8.5F);
             this.textBox1.Location = new System.Drawing.Point(87, 34);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -135,6 +137,25 @@
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Enter Village Name";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // VillageNation
+            // 
+            this.VillageNation.DisplayMember = "Enter Type";
+            this.VillageNation.Font = new System.Drawing.Font("Arial", 8.5F);
+            this.VillageNation.FormattingEnabled = true;
+            this.VillageNation.Items.AddRange(new object[] {
+            "Arab Bedouin",
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.VillageNation.Location = new System.Drawing.Point(87, 88);
+            this.VillageNation.Name = "VillageNation";
+            this.VillageNation.Size = new System.Drawing.Size(143, 24);
+            this.VillageNation.TabIndex = 9;
+            this.VillageNation.Text = "Enter Nation";
+            this.VillageNation.ValueMember = "Arab Bedouin";
+            this.VillageNation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // VillageActions
             // 
@@ -163,6 +184,7 @@
         private System.Windows.Forms.Button HouseButton;
         private System.Windows.Forms.Button WaterButton;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox VillageNation;
     }
 }
 
