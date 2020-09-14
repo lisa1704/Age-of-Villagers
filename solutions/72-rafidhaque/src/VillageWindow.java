@@ -55,6 +55,10 @@ public class VillageWindow extends JPanel {
         openbutton.setMargin(new Insets(1,1,1,1));
         openbutton.setBounds(700,300,70,30);
         f.add(openbutton);
+
+        g.setColor(Color.BLACK);
+        g.drawLine(600, 0, 600, 400);
+
     }
 
     public void showWindow() {
