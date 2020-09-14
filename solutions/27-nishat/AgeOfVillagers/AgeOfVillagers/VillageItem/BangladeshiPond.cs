@@ -4,22 +4,17 @@ namespace AgeOfVillagers
 {
     public class BangladeshiPond : VillageItem
     {
-        private readonly Point point;
+        private readonly Point _point;
 
         public BangladeshiPond(Point point)
         {
-            this.point = point;
-        }
-
-        public override void Draw(Graphics g, Pen p)
-        {
-            Shape watersource = new BangladeshiPondShape(new Point(point.X - 12, point.Y - 8), new Point(point.X + 12, point.Y + 8));
-            watersource.Draw(g, p);
+            _point = point;
+            villageItemShape = new BangladeshiPondShape(new Point(_point.X - 12, _point.Y - 8), new Point(_point.X + 12, _point.Y + 8));
         }
 
         public override Point GetPoint()
         {
-            return point;
+            return _point;
         }
     }
 }

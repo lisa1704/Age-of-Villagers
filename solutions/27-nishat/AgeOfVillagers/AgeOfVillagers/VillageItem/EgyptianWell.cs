@@ -4,22 +4,17 @@ namespace AgeOfVillagers
 {
     public class EgyptianWell : VillageItem
     {
-        private readonly Point point;
+        private readonly Point _point;
 
         public EgyptianWell(Point point)
         {
-            this.point = point;
-        }
-
-        public override void Draw(Graphics g, Pen p)
-        {
-            Shape watersource = new WellShape(new Point(point.X - 6, point.Y - 6), new Point(point.X + 6, point.Y + 6));
-            watersource.Draw(g, p);
+            _point = point;
+            villageItemShape = new WellShape(new Point(_point.X - 6, _point.Y - 6), new Point(_point.X + 6, _point.Y + 6));
         }
 
         public override Point GetPoint()
         {
-            return point;
+            return _point;
         }
     }
 }

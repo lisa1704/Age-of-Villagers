@@ -4,21 +4,16 @@ namespace AgeOfVillagers
 {
     public class NoTree : VillageItem
     {
-        private readonly Point point;
+        private readonly Point _point;
 
         public NoTree(Point point)
         {
-            this.point = point;
-        }
-
-        public override void Draw(Graphics g, Pen p)
-        {
-
+            _point = point;
         }
 
         public override Point GetPoint()
         {
-            return point;
+            return _point;
         }
     }
 }

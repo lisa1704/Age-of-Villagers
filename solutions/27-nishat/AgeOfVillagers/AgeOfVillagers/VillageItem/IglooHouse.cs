@@ -4,22 +4,17 @@ namespace AgeOfVillagers
 {
     public class IglooHouse : VillageItem
     {
-        private readonly Point point;
+        private readonly Point _point;
 
         public IglooHouse(Point point)
         {
-            this.point = point;
-        }
-
-        public override void Draw(Graphics g, Pen p)
-        {
-            Shape house = new IglooShape(new Point(point.X - 8, point.Y - 8), new Point(point.X + 8, point.Y + 8));
-            house.Draw(g, p);
+            _point = point;
+            villageItemShape = new IglooShape(new Point(_point.X - 8, _point.Y - 8), new Point(_point.X + 8, _point.Y + 8));
         }
 
         public override Point GetPoint()
         {
-            return point;
+            return _point;
         }
     }
 }

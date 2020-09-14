@@ -4,7 +4,12 @@ namespace AgeOfVillagers
 {
     public abstract class VillageItem : IShape
     {
-        public abstract void Draw(Graphics g, Pen p);
+        protected Shape villageItemShape = new NoShape();
+
+        public void Draw(Graphics g, Pen p)
+        {
+            villageItemShape.Draw(g, p);
+        }
 
         public abstract Point GetPoint();
     }
