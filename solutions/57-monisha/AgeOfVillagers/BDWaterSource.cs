@@ -23,4 +23,15 @@ namespace AgeOfVillagers
             AddComp(new Line(pt2, pt3));
         }
     }
+
+    class EgyptianWaterSource : CompositeShape
+    {
+        public EgyptianWaterSource(Point MPt)
+        {
+            Point pt1 = new Point(MPt.X - 24, MPt.Y + 50);
+            Point pt2 = new Point(MPt.X, MPt.Y + 75);
+        
+                    
+        }
+    }
 }
