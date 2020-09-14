@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ConfirmSaveVillage = new System.Windows.Forms.SaveFileDialog();
-            this.ConfirmOpenVillage = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.NewButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.SaveVillage = new System.Windows.Forms.Button();
-            this.OpenVIllage = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
-            this.tree = new System.Windows.Forms.Button();
-            this.Water = new System.Windows.Forms.Button();
+            this.OpenButton = new System.Windows.Forms.Button();
+            this.HouseButton = new System.Windows.Forms.Button();
+            this.TreeButton = new System.Windows.Forms.Button();
+            this.WaterButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,76 +46,82 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 402);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.Water);
-            this.panel2.Controls.Add(this.tree);
-            this.panel2.Controls.Add(this.House);
-            this.panel2.Controls.Add(this.OpenVIllage);
-            this.panel2.Controls.Add(this.SaveVillage);
+            this.panel2.Controls.Add(this.WaterButton);
+            this.panel2.Controls.Add(this.TreeButton);
+            this.panel2.Controls.Add(this.HouseButton);
+            this.panel2.Controls.Add(this.OpenButton);
             this.panel2.Controls.Add(this.SaveButton);
+            this.panel2.Controls.Add(this.NewButton);
             this.panel2.Location = new System.Drawing.Point(545, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 402);
             this.panel2.TabIndex = 1;
             // 
+            // NewButton
+            // 
+            this.NewButton.Location = new System.Drawing.Point(87, 305);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(143, 40);
+            this.NewButton.TabIndex = 2;
+            this.NewButton.Text = "New Village";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(87, 305);
+            this.SaveButton.Location = new System.Drawing.Point(87, 259);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(143, 40);
-            this.SaveButton.TabIndex = 2;
-            this.SaveButton.Text = "New Village";
+            this.SaveButton.TabIndex = 3;
+            this.SaveButton.Text = "Save Village";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // SaveVillage
+            // OpenButton
             // 
-            this.SaveVillage.Location = new System.Drawing.Point(87, 259);
-            this.SaveVillage.Name = "SaveVillage";
-            this.SaveVillage.Size = new System.Drawing.Size(143, 40);
-            this.SaveVillage.TabIndex = 3;
-            this.SaveVillage.Text = "Save Village";
-            this.SaveVillage.UseVisualStyleBackColor = true;
-            this.SaveVillage.Click += new System.EventHandler(this.button1_Click);
+            this.OpenButton.Location = new System.Drawing.Point(87, 351);
+            this.OpenButton.Name = "OpenButton";
+            this.OpenButton.Size = new System.Drawing.Size(143, 40);
+            this.OpenButton.TabIndex = 4;
+            this.OpenButton.Text = "Open Village";
+            this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new System.EventHandler(this.OpenVIllage_Click);
             // 
-            // OpenVIllage
+            // HouseButton
             // 
-            this.OpenVIllage.Location = new System.Drawing.Point(87, 351);
-            this.OpenVIllage.Name = "OpenVIllage";
-            this.OpenVIllage.Size = new System.Drawing.Size(143, 40);
-            this.OpenVIllage.TabIndex = 4;
-            this.OpenVIllage.Text = "Open Village";
-            this.OpenVIllage.UseVisualStyleBackColor = true;
+            this.HouseButton.Location = new System.Drawing.Point(128, 152);
+            this.HouseButton.Name = "HouseButton";
+            this.HouseButton.Size = new System.Drawing.Size(67, 31);
+            this.HouseButton.TabIndex = 5;
+            this.HouseButton.Text = "House";
+            this.HouseButton.UseVisualStyleBackColor = true;
+            this.HouseButton.Click += new System.EventHandler(this.House_Click);
             // 
-            // House
+            // TreeButton
             // 
-            this.House.Location = new System.Drawing.Point(128, 152);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(67, 31);
-            this.House.TabIndex = 5;
-            this.House.Text = "House";
-            this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.House_Click);
+            this.TreeButton.Location = new System.Drawing.Point(40, 152);
+            this.TreeButton.Name = "TreeButton";
+            this.TreeButton.Size = new System.Drawing.Size(62, 31);
+            this.TreeButton.TabIndex = 6;
+            this.TreeButton.Text = "Tree";
+            this.TreeButton.UseVisualStyleBackColor = true;
+            this.TreeButton.Click += new System.EventHandler(this.tree_Click);
             // 
-            // tree
+            // WaterButton
             // 
-            this.tree.Location = new System.Drawing.Point(40, 152);
-            this.tree.Name = "tree";
-            this.tree.Size = new System.Drawing.Size(62, 31);
-            this.tree.TabIndex = 6;
-            this.tree.Text = "Tree";
-            this.tree.UseVisualStyleBackColor = true;
-            // 
-            // Water
-            // 
-            this.Water.Location = new System.Drawing.Point(219, 152);
-            this.Water.Name = "Water";
-            this.Water.Size = new System.Drawing.Size(73, 31);
-            this.Water.TabIndex = 7;
-            this.Water.Text = "Water";
-            this.Water.UseVisualStyleBackColor = true;
+            this.WaterButton.Location = new System.Drawing.Point(219, 152);
+            this.WaterButton.Name = "WaterButton";
+            this.WaterButton.Size = new System.Drawing.Size(73, 31);
+            this.WaterButton.TabIndex = 7;
+            this.WaterButton.Text = "Water";
+            this.WaterButton.UseVisualStyleBackColor = true;
+            this.WaterButton.Click += new System.EventHandler(this.Water_Click);
             // 
             // VillageActions
             // 
@@ -136,16 +140,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.SaveFileDialog ConfirmSaveVillage;
-        private System.Windows.Forms.OpenFileDialog ConfirmOpenVillage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button OpenVIllage;
-        private System.Windows.Forms.Button SaveVillage;
+        private System.Windows.Forms.Button OpenButton;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button tree;
-        private System.Windows.Forms.Button House;
-        private System.Windows.Forms.Button Water;
+        private System.Windows.Forms.Button NewButton;
+        private System.Windows.Forms.Button TreeButton;
+        private System.Windows.Forms.Button HouseButton;
+        private System.Windows.Forms.Button WaterButton;
     }
 }
 

@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         string item;
         string villageName;
         string villageType;
+
         public VillageActions()
         {
             InitializeComponent();
@@ -30,9 +31,40 @@ namespace AgeOfVillagers
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
+
         private void House_Click(object sender, EventArgs e)
         {
+            item = "house";
+        }
 
+        private void tree_Click(object sender, EventArgs e)
+        {
+            item = "tree";
+        }
+
+        private void Water_Click(object sender, EventArgs e)
+        {
+            item = "water";
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVIllage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics g = panel1.CreateGraphics();
+            Pen p = new Pen(Color.Red);
+            Point pt = e.Location;
+            Point pt2 = new Point(100, 100);
+            g.DrawLine(p, pt, pt2);
         }
     }
 }
