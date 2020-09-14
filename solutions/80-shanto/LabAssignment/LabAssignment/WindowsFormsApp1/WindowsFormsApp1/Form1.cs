@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        //int x;
-       // int y;
-        string type;
-        bool button7isClick = false;
-        bool button8isClick = false;
-        bool button9isClick = false;
+        int x;
+        int y,h ,w;
+        Pen myPen = new Pen(Color.Green,3);
+
         public Form1()
         {
             InitializeComponent();
@@ -52,10 +51,14 @@ namespace WindowsFormsApp1
             MessageBox.Show("Open Village");
         }
 
+        
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -64,81 +67,47 @@ namespace WindowsFormsApp1
 
 
 
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show("Tree");
-            button7isClick = true;
-            //type = "tree";
-        }
+            x =e.X;
+            y = e.Y;
+            h = 100;
+            w = 200;
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            //MessageBox.Show("House");
-            button8isClick = true;
-            //type = "house";
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Water Source");
-            button9isClick = true;
-            //type = "waterSourse";
-        }
+            Graphics g = this.CreateGraphics();
+            Rectangle shape = new Rectangle(x, y, h, w);
+            if (radioButton1.Checked)
+            {
+                //action will be occur 
+                //g.DrawLine(myPen, shape);
+                g.DrawRectangle(myPen, shape);
 
 
-        private void radioButton1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Tree");
-            button7isClick = true;
-            type = "tree";
-        }
+            }
 
-        private void radioButton2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("House");
-        }
-
-        private void radioButton3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Water Source");
-        }
-
-
-
-        private void splitter2_Paint(object sender, PaintEventArgs e)
-        {
-            
-
-            Graphics g = e.Graphics;
-            Pen myPen = new Pen(Color.Green);
-            Brush myBrush = new SolidBrush(Color.Blue);
-            g.DrawLine(myPen, 0, 0, 200, 200);
-            //g.DrawRectangle(myPen, 0, 0, 50, 50);
-            //if(button9isClick==true)
-            if (button7isClick) {
+            if (radioButton2.Checked)
+            {
                 //action will be occur 
                 //g.DrawLine(myPen, 0, 0, 200, 200);
-                g.DrawRectangle(myPen, 0, 0, 50, 50);
+                g.DrawEllipse(myPen, shape);
 
 
             }
-            else if (button8isClick==true)
+            if (radioButton3.Checked)
             {
-                g.DrawLine(myPen, 0, 0, 200, 200);
-                g.DrawRectangle(myPen, 0, 0, 50, 50);
+                g.DrawLine(myPen, x, y, h, w);
             }
-
-            else if(button9isClick == true) {
-                g.DrawLine(myPen, 0, 0, 200, 200);
-            }
-
-
-
-           
-
         }
 
-        
+
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+             //x = e.X;
+             //y = e.Y;
+        }
+
+
+
+
     }
 }

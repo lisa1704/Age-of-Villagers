@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitter2 = new System.Windows.Forms.Splitter();
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -40,16 +39,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(0, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(600, 399);
-            this.splitter2.TabIndex = 0;
-            this.splitter2.TabStop = false;
-            this.splitter2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter2_SplitterMoved);
-            this.splitter2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitter2_Paint);
             // 
             // printDialog2
             // 
@@ -120,38 +109,35 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(655, 145);
+            this.radioButton1.Location = new System.Drawing.Point(665, 148);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
+            this.radioButton1.Size = new System.Drawing.Size(56, 17);
             this.radioButton1.TabIndex = 13;
-            this.radioButton1.Text = "Tree";
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "House";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(655, 180);
+            this.radioButton2.Location = new System.Drawing.Point(665, 187);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(56, 17);
+            this.radioButton2.Size = new System.Drawing.Size(47, 17);
             this.radioButton2.TabIndex = 14;
-            this.radioButton2.Text = "House";
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tree";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(655, 216);
+            this.radioButton3.Location = new System.Drawing.Point(665, 223);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(91, 17);
             this.radioButton3.TabIndex = 15;
+            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Water Source";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            this.radioButton3.Click += new System.EventHandler(this.radioButton3_Click);
             // 
             // Form1
             // 
@@ -165,8 +151,9 @@
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.splitter2);
             this.Name = "Form1";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +172,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.PrintDialog printDialog2;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
