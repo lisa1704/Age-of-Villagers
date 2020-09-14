@@ -11,7 +11,7 @@ namespace AgeOfVillagers.Nations
     {
         
         public bool hasTree, hasWaterSource;
-        public ElementSize houseSize, treeSize;
+        public ElementSize houseSize, treeSize,waterSourceSize;
 
         public Nation()
         {

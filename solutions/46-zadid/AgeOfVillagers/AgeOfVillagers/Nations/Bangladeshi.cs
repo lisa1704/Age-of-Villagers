@@ -1,6 +1,8 @@
-﻿using AgeOfVillagers.House;
+﻿using AgeOfVillagers.Data_Objects;
+using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
 using AgeOfVillagers.Tree;
+using AgeOfVillagers.WaterResource;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,6 +18,7 @@ namespace AgeOfVillagers
         {
             this.hasTree = true;
             this.hasWaterSource = true;
+            this.waterSourceSize = new ElementSize(24, 16);
         }
 
         public override void BackgoundColor(Graphics g)
@@ -46,7 +49,12 @@ namespace AgeOfVillagers
 
         public override void DrawWaterResource(Graphics g, Point location)
         {
-            
+            BangladeshiWaterSource bangladeshiWaterSource = new BangladeshiWaterSource();
+            WaterSourceContext waterSourceContext = new WaterSourceContext(bangladeshiWaterSource, g, location, waterSourceSize);
+
+            waterSourceContext.WaterSourceDrawing();
+
+            Debug.WriteLine("Drawing Bangladeshi Watersource");
         }
     }
 }

@@ -44,14 +44,15 @@ namespace AgeOfVillagers
                 nation.DrawHouse(graphic, location);
                 myVillage.housePosition.Add(location);
             }
-            else if(tree.Checked && nation.hasWaterSource==true)
+            else if(tree.Checked && nation.hasTree==true)
             {
                 nation.DrawTree(graphic, location);
                 myVillage.treePosition.Add(location);
             }
-            else if(watersource.Checked)
+            else if(watersource.Checked && nation.hasWaterSource==true)
             {
                 nation.DrawWaterResource(graphic, location);
+                myVillage.waterSourcePosition.Add(location);
             }
         }
 
