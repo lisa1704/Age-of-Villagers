@@ -154,6 +154,7 @@
             this.Nations.Name = "Nations";
             this.Nations.Size = new System.Drawing.Size(154, 27);
             this.Nations.TabIndex = 0;
+            this.Nations.Text = "Village Nation";
             this.Nations.SelectedIndexChanged += new System.EventHandler(this.NationsName);
             // 
             // ConfirmOpenVillage

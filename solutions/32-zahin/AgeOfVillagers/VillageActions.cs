@@ -32,7 +32,7 @@ namespace AgeOfVillagers
 
         private void NationsName(object sender, EventArgs e)
         {
-            villageType = (string)Nations.SelectedItem;
+            villageType = Nations.Text;
             Village village = new Village (villageType);
             //Console.WriteLine(villageType);
         }
@@ -40,7 +40,7 @@ namespace AgeOfVillagers
         private void NewVillage_Click(object sender, EventArgs e)
         {
             DrawingBoard.Refresh();
-            VillageName.Refresh();
+            OptionsBoard.Refresh();
             //InitializeComponent();
         }
 
@@ -86,18 +86,10 @@ namespace AgeOfVillagers
 
         private void DrawingBoard_Click(object sender, PaintEventArgs e) // this is where I will draw the shapes
         {
-            Point point = DrawingBoard.PointToClient(Cursor.Position);
-            MessageBox.Show(point.ToString());
         }
 
-        private void VillageName_TextChanged(object sender, EventArgs e)
-        {
+        private void VillageName_TextChanged(object sender, EventArgs e) {}
 
-        }
-
-        private void ConfirmOpenVillage_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
+        private void ConfirmOpenVillage_FileOk(object sender, CancelEventArgs e) {}
     }
 }
