@@ -1,6 +1,6 @@
 ﻿namespace AgeOfVillagers
 {
-    partial class VillageActions
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.Nations = new System.Windows.Forms.ComboBox();
             this.ConfirmSaveVillage = new System.Windows.Forms.SaveFileDialog();
             this.ConfirmOpenVillage = new System.Windows.Forms.OpenFileDialog();
-            this.DrawingBoard = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.OptionsBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,28 +154,31 @@
             this.Nations.Name = "Nations";
             this.Nations.Size = new System.Drawing.Size(154, 27);
             this.Nations.TabIndex = 0;
-            this.Nations.Text = "Village Nation";
             this.Nations.SelectedIndexChanged += new System.EventHandler(this.NationsName);
+            // 
+            // ConfirmSaveVillage
+            // 
+            this.ConfirmSaveVillage.FileOk += new System.ComponentModel.CancelEventHandler(this.ConfirmSaveVillage_FileOk);
             // 
             // ConfirmOpenVillage
             // 
             this.ConfirmOpenVillage.InitialDirectory = "D:\\3-1\\SWE 4502 (Design Pattern Lab)\\Assignment Test\\AgeOfVillagers";
             this.ConfirmOpenVillage.FileOk += new System.ComponentModel.CancelEventHandler(this.ConfirmOpenVillage_FileOk);
             // 
-            // DrawingBoard
+            // panel1
             // 
-            this.DrawingBoard.Location = new System.Drawing.Point(0, 0);
-            this.DrawingBoard.Name = "DrawingBoard";
-            this.DrawingBoard.Size = new System.Drawing.Size(603, 401);
-            this.DrawingBoard.TabIndex = 1;
-            this.DrawingBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingBoard_Click);
+            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 400);
+            this.panel1.TabIndex = 10;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // VillageActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 403);
-            this.Controls.Add(this.DrawingBoard);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.OptionsBoard);
             this.Font = new System.Drawing.Font("Arial", 7.8F);
             this.Name = "VillageActions";
@@ -200,7 +203,7 @@
         private System.Windows.Forms.RadioButton HouseButton;
         private System.Windows.Forms.RadioButton TreeButton;
         private System.Windows.Forms.TextBox VillageName;
-        private System.Windows.Forms.Panel DrawingBoard;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -10,20 +10,17 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class VillageActions : Form
+    public partial class Form1 : Form
     {
         string item;
         string villageName;
         string villageType;
-        public VillageActions()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void NewVillage_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void NewVillage_Load(object sender, EventArgs e) {}
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -33,13 +30,13 @@ namespace AgeOfVillagers
         private void NationsName(object sender, EventArgs e)
         {
             villageType = Nations.Text;
-            Village village = new Village (villageType);
+            Village village = new Village(villageType);
             //Console.WriteLine(villageType);
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-            DrawingBoard.Refresh();
+           // DrawingBoard.Refresh();
             OptionsBoard.Refresh();
             //InitializeComponent();
         }
@@ -83,13 +80,16 @@ namespace AgeOfVillagers
         }
 
         private void OptionsBoard_Enter(object sender, EventArgs e) {} // buttons stay inside this panel
-
-        private void DrawingBoard_Click(object sender, PaintEventArgs e) // this is where I will draw the shapes
-        {
-        }
-
         private void VillageName_TextChanged(object sender, EventArgs e) {}
 
         private void ConfirmOpenVillage_FileOk(object sender, CancelEventArgs e) {}
+
+        private void ConfirmSaveVillage_FileOk(object sender, CancelEventArgs e) {}
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point p = e.Location;
+        }
+
     }
 }

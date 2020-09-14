@@ -10,7 +10,7 @@ namespace AgeOfVillagers
     {
         public void execute()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
