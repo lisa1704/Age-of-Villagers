@@ -14,7 +14,7 @@ namespace AgeOfVillagers90
         {
             /*Rectangle rec = new Rectangle(new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y + 25));
             TAgle tri = new TAgle(new Point(pt.X - 5, pt.Y + 10), new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y));*/
-            BangladeshiFarmerHouse bdhouse = new BangladeshiFarmerHouse(new Point(pt.X, pt.Y),new Point(pt.X-50,pt.Y*5),new Point(pt.X + 100,pt.Y*10));
+            BangladeshiFarmerHouse bdhouse = new BangladeshiFarmerHouse(new Point(pt.X, pt.Y),new Point(pt.X-70,pt.Y+40),new Point(pt.X + 70,pt.Y+120));
             /*rec.Draw(g);
             tri.Draw(g);*/
             bdhouse.Draw(g);
