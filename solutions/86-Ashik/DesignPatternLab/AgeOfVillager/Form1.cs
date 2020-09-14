@@ -28,6 +28,14 @@ namespace AgeOfVillager
             {
                 g.DrawRectangle(myPen, rect);
             }
+            else if (radioButton2.Checked)
+            {
+                g.DrawEllipse(myPen, rect);
+            }
+            else if (radioButton3.Checked)
+            {
+                g.DrawLine(myPen, x, y, 20,50);
+            }
         }
 
         public Form1()
