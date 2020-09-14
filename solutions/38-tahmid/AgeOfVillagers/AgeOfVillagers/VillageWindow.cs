@@ -96,7 +96,7 @@ namespace AgeOfVillagers
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            IItem villageItem = itemFactory.GetItem(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH, "BangladeshiHouse");
+            IItem villageItem = itemFactory.GetItem(g, pen, point,Constants.BDTREE_HINT);
             villageItem.placeItem();
 
             

@@ -32,7 +32,7 @@ namespace AgeOfVillagers
 
         internal override void makeShape()
         {
-            throw new NotImplementedException();
+            drawShape();
         }
     }
 }

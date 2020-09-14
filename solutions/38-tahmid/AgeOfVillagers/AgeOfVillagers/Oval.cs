@@ -14,26 +14,29 @@ namespace AgeOfVillagers
         int startAng, endAng;
         int length, width;
         Pen pen;
-        public Oval(Graphics g, Pen pen, Point startPoint, int startAng, int endAng, int length, int width)
+        Shape arc;
+
+        public Oval(Graphics g, Pen pen, Point startingPoint, int startAng, int endAng, int length, int width)
         {
             this.pen = pen;
             this.length = length;
             this.width = width;
             this.g = g;
-            this.startingPoint = startPoint;
+            this.startingPoint = startingPoint;
             this.startAng = startAng;
             this.endAng = endAng;
-            shapeFactory = new ShapeFactory();
+            
 
         }
         public override void drawShape()
         {
-            
+            arc.drawShape();
         }
 
         internal override void makeShape()
         {
-            
+            arc = getArcs(g, pen, startingPoint, startAng, endAng, length, width);
+            drawShape();
         }
     }
 }
