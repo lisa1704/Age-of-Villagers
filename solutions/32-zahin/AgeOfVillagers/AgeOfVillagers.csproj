@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="ArabBedouin.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="NullValuesHandler.cs" />
     <Compile Include="OpenVillage.cs" />
     <Compile Include="NewVillage.cs" />
     <Compile Include="SaveVillage.cs" />
