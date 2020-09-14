@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static AgeOfVillagers.Arc;
 
 namespace AgeOfVillagers
 {
@@ -20,7 +21,8 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            NullTree nullTree = new NullTree();
+            nullTree.Paint();
         }
 
         public void DrawWaterSource()
