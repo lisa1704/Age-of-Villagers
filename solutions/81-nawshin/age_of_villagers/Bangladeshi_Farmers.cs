@@ -12,7 +12,10 @@ namespace age_of_villagers
         Pen p = new Pen(Color.Green);
         public void draw_house(Graphics g,Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 20, 20);
+            //g.DrawLine(p, pt.X, pt.Y, 20, 20);
+
+            BDHouse house = new BDHouse(pt);
+            house.draw(g);
         }
 
         public void draw_tree(Graphics g, Point pt)
@@ -32,7 +35,6 @@ namespace age_of_villagers
         public string draw_tree()
         {
             return "Bangladesh tree";
-            //DrawLine(p, pt.X, pt.Y, 20, 20);
         }
 
         public string draw_waterSource()
