@@ -82,6 +82,13 @@ namespace AgeOfVillagers
             AddComponent(new Line(bottomRight, bottomLeft));
             AddComponent(new Line(bottomLeft, topLeft));
         }
+        public Rectangle(Point topLeft, Point topRight ,Point bottomRight, Point bottomLeft)
+        {
+            AddComponent(new Line(topLeft, topRight));
+            AddComponent(new Line(topRight, bottomRight));
+            AddComponent(new Line(bottomRight, bottomLeft));
+            AddComponent(new Line(bottomLeft, topLeft));
+        }
     }
 
     public class VShape : CompositeShape
