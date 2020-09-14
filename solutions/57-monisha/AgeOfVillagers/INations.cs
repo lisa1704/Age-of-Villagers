@@ -12,6 +12,7 @@ namespace AgeOfVillagers
         string DrawHouse(Graphics g,Point pt);
         void DrawTree(Graphics g, Point pt);
         void DrawWaterSource();
+        void GetTerrainColor();
     }
 
     internal class NationFactory

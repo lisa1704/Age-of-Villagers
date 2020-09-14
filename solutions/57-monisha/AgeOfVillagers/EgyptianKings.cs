@@ -27,5 +27,10 @@ namespace AgeOfVillagers
         {
             throw new NotImplementedException();
         }
+
+        public void GetTerrainColor()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
