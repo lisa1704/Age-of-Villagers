@@ -78,6 +78,7 @@
             this.select_nation.Size = new System.Drawing.Size(199, 29);
             this.select_nation.TabIndex = 9;
             this.select_nation.Text = "         Select Nations";
+            this.select_nation.TextChanged += new System.EventHandler(this.selectNation_TextChanged);
             // 
             // open_village
             // 

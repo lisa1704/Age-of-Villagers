@@ -6,7 +6,7 @@ public class InuitHunters : Nation
 {
     public InuitHunters(Graphics newg , Panel panel) : base(newg , panel)
     {
-        base.color = Color.White
+        base.color = Color.White;
         g = newg;
         base.house = new InuitHuntersHouse();
         base.tree = new NullTree();

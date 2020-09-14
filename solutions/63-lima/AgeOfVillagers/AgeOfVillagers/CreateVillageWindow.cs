@@ -11,13 +11,12 @@ namespace AgeOfVillagers
 {
     public partial class CreateVillageWindow : Form
     {
-        //int x;
-        //int y;
-        Graphics g;
-        //string text = " ";
+        protected Nation nation;
+        Graphics newg ;
         public CreateVillageWindow()
         {
             InitializeComponent();
+            newg = drawing_panel.CreateGraphics();
         }
 
         private void save_village_Click(object sender, EventArgs e)
@@ -67,79 +66,39 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-            g = drawing_panel.CreateGraphics();
-            if (select_nation.Text == "Egyptian Kings")
+            if(tree.Checked == true)
             {
-                EgyptianKings egyptiankings = new EgyptianKings(drawing_panel);
-                egyptiankings.paintTerrain();
-                if (tree.Checked == true)
-                {
-                    egyptiankings.drawTree(g, e.X, e.Y);
-                }
-                else if (house.Checked == true)
-                {
-                    egyptiankings.drawHouse(g, e.X, e.Y);
-                }
-                else
-                {
-                    egyptiankings.drawWaterSource(g, e.X, e.Y);
-                }
+                nation.drawTree(e.X, e.Y);
+            }
+            else if(house.Checked == true)
+            {
+                nation.drawHouse(e.X, e.Y);
+            }
+            else if(water_resource.Checked == true)
+            {
+                nation.drawWaterSource(e.X, e.Y);
             }
 
+        }
 
-            else if (select_nation.Text == "Bangladeshi Farmers")
+        private void selectNation_TextChanged(object sender, EventArgs e)
+        {
+            if( select_nation.Text == "Egyptian Kings")
             {
-                BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawing_panel);
-                bangladeshiFarmers.paintTerrain();
-                if (tree.Checked == true)
-                {
-                    bangladeshiFarmers.drawTree(g, e.X, e.Y);
-                }
-                else if (house.Checked == true)
-                {
-                    bangladeshiFarmers.drawHouse(g, e.X, e.Y);
-                }
-                else
-                {
-                    bangladeshiFarmers.drawWaterSource(g, e.X, e.Y);
-                }
+                nation = new EgyptianKings(newg, drawing_panel);
             }
-
-            else if (select_nation.Text == "Arab Bedouin")
+            else if(select_nation.Text == "Bangladeshi Farmers")
             {
-                ArabBedouin arabBedouin = new ArabBedouin(drawing_panel);
-                arabBedouin.paintTerrain();
-                if (tree.Checked == true)
-                {
-                    arabBedouin.drawTree(g, e.X, e.Y);
-                }
-                else if (house.Checked == true)
-                {
-                    arabBedouin.drawHouse(g, e.X, e.Y);
-                }
-                else
-                {
-                    arabBedouin.drawWaterSource(g, e.X, e.Y);
-                }
+                nation = new BangladeshiFarmers(newg, drawing_panel);
             }
-            else if (select_nation.Text == "Inuit Hunters")
+            else if(select_nation.Text == "Arab Bedouin")
             {
-                InuitHunters InuitHunters = new InuitHunters(drawing_panel);
-                InuitHunters.paintTerrain();
-                if (house.Checked == true)
-                {
-                    InuitHunters.drawHouse(g, e.X, e.Y);
-                }
-                else if (tree.Checked == true)
-                {
-                    InuitHunters.drawTree(g, e.X, e.Y);
-                }
-                else
-                {
-                    InuitHunters.drawWaterSource(g, e.X, e.Y);
-                }
+                nation = new ArabBedouin(newg, drawing_panel);
             }
-
+            else if(select_nation.Text == "Inuit Hunters")
+            {
+                nation = new InuitHunters(newg, drawing_panel);
+            }
         }
     }
 }
