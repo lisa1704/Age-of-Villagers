@@ -26,7 +26,9 @@ namespace age_of_villagers
             {
                 return new Inuit_Hunters();
             }
-            throw new Exception();
+            //throw new Exception();
+            //return null;
+            return new NoNation();
         }
     }
 }
