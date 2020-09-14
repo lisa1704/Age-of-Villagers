@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         int x;
         int y,h ,w;
-        Pen myPen = new Pen(Color.Green,3);
+        Pen myPen = new Pen(Color.Green,2);
 
         public Form1()
         {
@@ -24,18 +24,6 @@ namespace WindowsFormsApp1
             //this.Height = 400;
          
         }
-     
-
-      
-        private void splitter2_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-            this.Width = 600;
-            this.Height = 400;
-        }
-
-
-       
-
         private void button10_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Save Village");
@@ -71,16 +59,19 @@ namespace WindowsFormsApp1
         {
             x =e.X;
             y = e.Y;
-            h = 100;
-            w = 200;
+            //h = 100;
+            //w = 200;
 
             Graphics g = this.CreateGraphics();
             Rectangle shape = new Rectangle(x, y, h, w);
             if (radioButton1.Checked)
             {
-                //action will be occur 
-                //g.DrawLine(myPen, shape);
-                g.DrawRectangle(myPen, shape);
+                g.DrawLine(myPen, x, y, x + 50, y);
+                g.DrawLine(myPen, x + 50, y, x + 50, y + 25);
+                g.DrawLine(myPen, x + 50, y + 25, x, y + 25);
+                g.DrawLine(myPen, x, y + 25, x, y);
+                g.DrawLine(myPen, x, y, x + 25, y - 25);
+                g.DrawLine(myPen, x + 25, y - 25, x + 50, y);
 
 
             }
@@ -89,13 +80,27 @@ namespace WindowsFormsApp1
             {
                 //action will be occur 
                 //g.DrawLine(myPen, 0, 0, 200, 200);
-                g.DrawEllipse(myPen, shape);
+                g.DrawArc(myPen, x - 25, y - 25, 50, 50, 0, 360);
+                g.DrawLine(myPen, x - 1, y, x + 1, y);
+                g.DrawLine(myPen, x + 1, y, x + 1, y + 50);
+                g.DrawLine(myPen, x + 1, y + 50, x - 1, y + 50);
+                g.DrawLine(myPen, x - 1, y + 50, x - 1, y);
 
 
             }
             if (radioButton3.Checked)
             {
-                g.DrawLine(myPen, x, y, h, w);
+                //g.DrawLine(myPen, x, y, h, w);
+                g.DrawLine(myPen, x, y, x + 20, y + 16);
+                g.DrawLine(myPen, x + 20, y + 16, x + 40, y - 24);
+                g.DrawLine(myPen, x + 40, y - 24, x + 8, y - 40);
+                g.DrawLine(myPen, x + 8, y - 40, x - 16, y - 24);
+                g.DrawLine(myPen, x - 16, y - 24, x - 24, y - 36);
+                g.DrawLine(myPen, x - 24, y - 36, x - 36, y - 28);
+                g.DrawLine(myPen, x - 36, y - 28, x - 36, y);
+                g.DrawLine(myPen, x - 36, y, x - 24, y + 20);
+                g.DrawLine(myPen, x - 23, y + 20, x, y);
+
             }
         }
 
