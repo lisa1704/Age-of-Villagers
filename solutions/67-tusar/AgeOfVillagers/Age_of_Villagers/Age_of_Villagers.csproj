@@ -78,6 +78,7 @@
     <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectNation.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageSerializer.cs" />
     <EmbeddedResource Include="CreateEditVIllage.resx">
