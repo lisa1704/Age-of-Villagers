@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Drawing;
 
-public class InuitHuntersTree : ITree
+public class NullTree : ITree
 {
-	public InuitHuntersTree()
-	{
-	}
 
-    public void draw(int x, int y)
+
+    public void drawTree(Graphics g, int X, int Y)
     {
-        throw new NotImplementedException();
+        
     }
 }

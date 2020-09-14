@@ -17,15 +17,6 @@ public class EgyptianKings : INation
         panel.BackColor = Color.Yellow ;
     }
 
-    public void drawHouse(Graphics g, int X, int Y)
-    {
-
-        g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
-        g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
-        g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
-        g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
-        g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
-    }
 
 
     public void drawTree(Graphics g, int X, int Y)
@@ -43,5 +34,14 @@ public class EgyptianKings : INation
     public void drawWaterSource(Graphics g, int X, int Y)
     {
         g.DrawArc(p, X + 25, Y, 50, 50, 0, 360);
+    }
+
+    public void drawHouse(Graphics g, int X, int Y)
+    {
+        g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
+        g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
+        g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
+        g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
+        g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
     }
 }
