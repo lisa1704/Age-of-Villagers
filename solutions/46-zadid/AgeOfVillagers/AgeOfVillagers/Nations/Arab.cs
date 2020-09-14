@@ -7,6 +7,11 @@ namespace AgeOfVillagers
 {
     public class Arab : Nation
     {
+        public Arab()
+        {
+            this.hasTree = true;
+            this.hasWaterSource = false;
+        }
         public override void BackgoundColor(Graphics g)
         {
             g.Clear(Color.LightYellow);
@@ -28,6 +33,7 @@ namespace AgeOfVillagers
             
         }
 
+        //Dead Code//
         public override void DrawWaterResource(Graphics g, Point location)
         {
             
