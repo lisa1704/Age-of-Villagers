@@ -10,7 +10,7 @@ namespace Age_of_Villagers.Nation
         String getName();
         Color getTerrainColor();
         Object getTree(Point point);
-        Object getHouse(Point point);
+        void GetHouse(Graphics graphics,Point _point);
         Object getWaterResource(Point point);
     }
 }

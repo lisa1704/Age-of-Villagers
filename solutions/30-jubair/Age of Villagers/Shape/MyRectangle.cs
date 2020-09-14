@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Shape
 {
-    class MyRectangle : CompositeShape
+    public class MyRectangle : CompositeShape
     {
        
 

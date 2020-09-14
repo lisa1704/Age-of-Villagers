@@ -25,7 +25,7 @@ namespace Age_of_Villagers.Nation
             throw new NotImplementedException();
         }
 
-        public Object getHouse(Point point)
+        public void GetHouse(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }

@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Age_of_Villagers.House;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class BangladeshiFarmer : INation
+    public class BangladeshiFarmer : INation
     {
         string name;
         
@@ -23,9 +24,12 @@ namespace Age_of_Villagers.Nation
             throw new NotImplementedException();
         }
 
-        public Object getHouse(Point point)
+        public void GetHouse(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            BangladeshiHouse bangladeshi_house = new BangladeshiHouse(new Point(_point.X, _point.Y-16), new Point(_point.X - 16, _point.Y), new Point(_point.X + 16, _point.Y +16 ));
+            bangladeshi_house.Paint(graphics);
+            
+            
         }
 
         public Object getTree(Point point)

@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers.Shape
 {
-    class MyTriangle : CompositeShape
+   public class MyTriangle : CompositeShape
     {
         public MyTriangle(Point top, Point baseLeft, Point baseRight)
         {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Age_of_Villagers.House;
+using Age_of_Villagers.Nation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,7 +58,8 @@ namespace Age_of_Villagers
 
 
             checkRadioButton(font,brush); // Set Radio Button and act accordingly
-           
+            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            bd.GetHouse(graphics,e.Location);
 
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
