@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class BdFarmerRiver : IVillageComponent
     {
-        public void drawComponent(MouseEventArgs e, Graphics graphics, Pen pen)
+        public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;

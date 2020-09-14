@@ -54,7 +54,7 @@ namespace AgeOfVillagers
             setRadioButton();
             VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
             IVillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn);
-            villageComponent.drawComponent(e, graphics, pen);
+            villageComponent.drawComponent(e.Location, graphics, pen);
         }
 
         private void btnNewVillage_Click(object sender, EventArgs e)

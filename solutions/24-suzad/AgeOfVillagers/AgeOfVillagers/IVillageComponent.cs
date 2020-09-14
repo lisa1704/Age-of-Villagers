@@ -8,6 +8,7 @@ namespace AgeOfVillagers
 {
     public interface IVillageComponent
     {
-        public void drawComponent(MouseEventArgs e, Graphics graphics, Pen pen);
+        //public void drawComponent(MouseEventArgs e, Graphics graphics, Pen pen);
+        public void drawComponent(Point e, Graphics graphics, Pen pen);
     }
 }
