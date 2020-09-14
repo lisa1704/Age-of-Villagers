@@ -13,6 +13,7 @@ namespace AgeOfVillagers
     {
         protected Nation nation;
         Graphics newg ;
+        Village myvillage = new Village();
         public CreateVillageWindow()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace AgeOfVillagers
 
         private void village_name_TextChanged(object sender, EventArgs e)
         {
-            Village myvillage = new Village();
+            
             myvillage.Name = village_name.Text;
         }
 
@@ -69,14 +70,17 @@ namespace AgeOfVillagers
             if(tree.Checked == true)
             {
                 nation.drawTree(e.X, e.Y);
+                myvillage.addTree(e.X,e.Y);
             }
             else if(house.Checked == true)
             {
                 nation.drawHouse(e.X, e.Y);
+                myvillage.addHouse(e.X, e.Y);
             }
             else if(water_resource.Checked == true)
             {
                 nation.drawWaterSource(e.X, e.Y);
+                myvillage.addWater_Resource(e.X, e.Y);
             }
 
         }
