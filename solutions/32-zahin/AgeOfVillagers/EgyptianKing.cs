@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,17 @@ namespace AgeOfVillagers
 
         }
 
-        public void DrawHouse()
+        public void DrawHouse(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
