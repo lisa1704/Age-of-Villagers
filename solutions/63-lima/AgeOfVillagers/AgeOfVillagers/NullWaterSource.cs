@@ -5,6 +5,6 @@ public class NullWaterSource : IWaterSource
 {
     public void drawWaterSource(Graphics g, int X, int Y)
     {
-        throw new NotImplementedException();
+        
     }
 }
