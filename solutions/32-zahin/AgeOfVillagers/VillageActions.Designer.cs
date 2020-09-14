@@ -39,7 +39,7 @@
             this.Nations = new System.Windows.Forms.ComboBox();
             this.ConfirmSaveVillage = new System.Windows.Forms.SaveFileDialog();
             this.ConfirmOpenVillage = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.DrawingBoard = new System.Windows.Forms.Panel();
             this.OptionsBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@
             this.VillageName.Size = new System.Drawing.Size(154, 22);
             this.VillageName.TabIndex = 0;
             this.VillageName.Text = "Enter Village Name";
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
             // 
             // WaterSourceButton
             // 
@@ -159,20 +160,20 @@
             // 
             this.ConfirmOpenVillage.InitialDirectory = "D:\\3-1\\SWE 4502 (Design Pattern Lab)\\Assignment Test\\AgeOfVillagers";
             // 
-            // panel1
+            // DrawingBoard
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(603, 401);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.MousePointer);
+            this.DrawingBoard.Location = new System.Drawing.Point(0, 0);
+            this.DrawingBoard.Name = "DrawingBoard";
+            this.DrawingBoard.Size = new System.Drawing.Size(603, 401);
+            this.DrawingBoard.TabIndex = 1;
+            this.DrawingBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingBoard_Click);
             // 
             // VillageActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 403);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DrawingBoard);
             this.Controls.Add(this.OptionsBoard);
             this.Font = new System.Drawing.Font("Arial", 7.8F);
             this.Name = "VillageActions";
@@ -197,7 +198,7 @@
         private System.Windows.Forms.RadioButton HouseButton;
         private System.Windows.Forms.RadioButton TreeButton;
         private System.Windows.Forms.TextBox VillageName;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel DrawingBoard;
     }
 }
 
