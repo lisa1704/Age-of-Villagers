@@ -9,6 +9,7 @@ public class EgyptianKings : INation
     public EgyptianKings(Panel panel)
     {
         this.panel = panel;
+        //paintTerrain();
     }
 
     public void paintTerrain()

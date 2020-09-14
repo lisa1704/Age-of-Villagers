@@ -37,7 +37,7 @@ namespace AgeOfVillagers
 
         private void village_name_TextChanged(object sender, EventArgs e)
         {
-            VillageName myvillage = new VillageName();
+            Village myvillage = new Village();
             myvillage.Name = village_name.Text;
         }
 
@@ -68,7 +68,7 @@ namespace AgeOfVillagers
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
             g = drawing_panel.CreateGraphics();
-            if (select_nation.Text == "egyptian kings")
+            if (select_nation.Text == "Egyptian Kings")
             {
                 EgyptianKings egyptiankings = new EgyptianKings(drawing_panel);
                 egyptiankings.paintTerrain();

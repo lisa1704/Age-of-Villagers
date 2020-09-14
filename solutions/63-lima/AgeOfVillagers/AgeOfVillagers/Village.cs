@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class VillageName
+public class Village
 {
     private string name;
     public string Name
