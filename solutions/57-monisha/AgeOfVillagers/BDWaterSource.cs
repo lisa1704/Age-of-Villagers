@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static AgeOfVillagers.Arc;
 
 namespace AgeOfVillagers
 {
@@ -28,10 +29,11 @@ namespace AgeOfVillagers
     {
         public EgyptianWaterSource(Point MPt)
         {
-            Point pt1 = new Point(MPt.X - 24, MPt.Y + 50);
-            Point pt2 = new Point(MPt.X, MPt.Y + 75);
-        
-                    
+            Point topPt = new Point(MPt.X + 12, MPt.Y + 12);
+
+            AddComp(new ShapeEllipse(MPt, topPt));
+
         }
     }
+    
 }
