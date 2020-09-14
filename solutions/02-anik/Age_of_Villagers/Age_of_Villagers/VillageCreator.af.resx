@@ -86,38 +86,38 @@
   <data name="SaveVillage.Text" xml:space="preserve">
     <value>Save Village</value>
   </data>
+  <data name="Tree.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
   <data name="Tree.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>412, 171</value>
+    <value>431, 177</value>
   </data>
   <data name="Tree.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>94, 29</value>
-  </data>
-  <data name="Tree.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>4</value>
+    <value>58, 24</value>
   </data>
   <data name="Tree.Text" xml:space="preserve">
     <value>Tree</value>
   </data>
+  <data name="House.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
   <data name="House.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>528, 171</value>
+    <value>540, 177</value>
   </data>
   <data name="House.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>94, 29</value>
-  </data>
-  <data name="House.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
+    <value>72, 24</value>
   </data>
   <data name="House.Text" xml:space="preserve">
     <value>House</value>
   </data>
+  <data name="WaterSource.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
   <data name="WaterSource.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>458, 206</value>
+    <value>450, 207</value>
   </data>
   <data name="WaterSource.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>109, 29</value>
-  </data>
-  <data name="WaterSource.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
+    <value>118, 24</value>
   </data>
   <data name="WaterSource.Text" xml:space="preserve">
     <value>Water Source</value>

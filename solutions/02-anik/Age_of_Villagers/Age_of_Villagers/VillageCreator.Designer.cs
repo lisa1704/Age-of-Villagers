@@ -32,9 +32,9 @@
             this.NewVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.SaveVillage = new System.Windows.Forms.Button();
-            this.Tree = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
-            this.WaterSource = new System.Windows.Forms.Button();
+            this.Tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
+            this.WaterSource = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // NewVillage
@@ -62,22 +62,25 @@
             // 
             resources.ApplyResources(this.Tree, "Tree");
             this.Tree.Name = "Tree";
+            this.Tree.TabStop = true;
             this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.Tree_Click);
+            this.Tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
             // 
             // House
             // 
             resources.ApplyResources(this.House, "House");
             this.House.Name = "House";
+            this.House.TabStop = true;
             this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.House_Click);
+            this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
             // 
             // WaterSource
             // 
             resources.ApplyResources(this.WaterSource, "WaterSource");
             this.WaterSource.Name = "WaterSource";
+            this.WaterSource.TabStop = true;
             this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.WaterSource_Click);
+            this.WaterSource.CheckedChanged += new System.EventHandler(this.WaterSource_CheckedChanged);
             // 
             // VillageCreator
             // 
@@ -92,6 +95,7 @@
             this.Name = "VillageCreator";
             this.Load += new System.EventHandler(this.VillageCreator_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,9 +104,9 @@
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button SaveVillage;
-        private System.Windows.Forms.Button Tree;
-        private System.Windows.Forms.Button House;
-        private System.Windows.Forms.Button WaterSource;
+        private System.Windows.Forms.RadioButton Tree;
+        private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.RadioButton WaterSource;
     }
 }
 
