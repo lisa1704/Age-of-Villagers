@@ -20,7 +20,10 @@ namespace age_of_villagers
 
         public void draw_tree(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 20, 20);
+            //g.DrawLine(p, pt.X, pt.Y, 20, 20);
+
+            BDTree tree = new BDTree(pt);
+            tree.draw(g);
         }
 
         public void draw_watersource(Graphics g, Point pt)
