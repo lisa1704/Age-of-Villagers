@@ -15,8 +15,13 @@ public class VillageWindow extends JPanel {
         super.paintComponent(g);
         this.setBackground(Color.WHITE);
 
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 10));
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 20));
         g.setColor(Color.BLACK);
+        g.drawString(gameName, 620, 50);
+
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 13));
+        g.drawString(this.villageName, 620, 90);
+        g.drawString(this.nationName, 620, 130);
     }
 
     public void showWindow() {
