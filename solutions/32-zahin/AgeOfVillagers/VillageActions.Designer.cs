@@ -38,6 +38,7 @@
             this.WaterButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.VillageNation = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.VillageNation);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.WaterButton);
@@ -62,10 +64,12 @@
             this.panel2.Controls.Add(this.OpenButton);
             this.panel2.Controls.Add(this.NewButton);
             this.panel2.Controls.Add(this.SaveButton2);
+            this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(545, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 402);
             this.panel2.TabIndex = 1;
+            this.panel2.UseWaitCursor = true;
             // 
             // SaveButton2
             // 
@@ -130,13 +134,14 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 8.5F);
-            this.textBox1.Location = new System.Drawing.Point(87, 34);
+            this.textBox1.Location = new System.Drawing.Point(87, 78);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 34);
+            this.textBox1.Size = new System.Drawing.Size(143, 27);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Enter Village Name";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.UseWaitCursor = true;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // VillageNation
@@ -149,13 +154,28 @@
             "Bangladeshi Farmers",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.VillageNation.Location = new System.Drawing.Point(87, 88);
+            this.VillageNation.Location = new System.Drawing.Point(87, 111);
             this.VillageNation.Name = "VillageNation";
             this.VillageNation.Size = new System.Drawing.Size(143, 24);
             this.VillageNation.TabIndex = 9;
             this.VillageNation.Text = "Enter Nation";
+            this.VillageNation.UseWaitCursor = true;
             this.VillageNation.ValueMember = "Arab Bedouin";
             this.VillageNation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(58, 36);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(206, 36);
+            this.textBox2.TabIndex = 10;
+            this.textBox2.Text = "AGE OF VILLAGERS";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.UseWaitCursor = true;
             // 
             // VillageActions
             // 
@@ -185,6 +205,7 @@
         private System.Windows.Forms.Button WaterButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox VillageNation;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

@@ -68,6 +68,7 @@ namespace AgeOfVillagers
         private void NewVillage_Click(object sender, EventArgs e)
         {
             panel1.Refresh();
+            panel2.Refresh();
 
         }
 
