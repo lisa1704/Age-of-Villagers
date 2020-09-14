@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Shape
 {
-    interface IShape
+    public interface IShape
     {
         void Paint(Graphics graphics);
 
