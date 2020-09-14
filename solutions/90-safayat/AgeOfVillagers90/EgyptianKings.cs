@@ -15,9 +15,9 @@ namespace AgeOfVillagers90
             g.DrawLine(p, pt.X, pt.Y, 100, 100);
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            g.DrawLine(p, pt.X, pt.Y, 100, 100);
         }
 
         public void DrawWaterSource()

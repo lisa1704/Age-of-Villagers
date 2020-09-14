@@ -12,9 +12,9 @@ namespace AgeOfVillagers90
     {
         public BangladeshFarmersTree(Point MainPoint)
         {
-            Point TopRight = new Point(MainPoint.X + 20, MainPoint.Y);
-            Point BottomRight = new Point(MainPoint.X + 25, MainPoint.Y+50);
-            Point TopPoint = new Point(MainPoint.X + 40, MainPoint.Y+40);
+            Point TopRight = new Point(MainPoint.X + 100, MainPoint.Y);
+            Point BottomRight = new Point(MainPoint.X + 30, MainPoint.Y+150);
+            Point TopPoint = new Point(MainPoint.X + 100, MainPoint.Y+90);
             Point TopLeft = new Point(MainPoint.X + 20, MainPoint.Y+20);
 
             AddComponent(new Rectangle(TopLeft, BottomRight));
