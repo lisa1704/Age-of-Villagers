@@ -159,6 +159,7 @@
             // ConfirmOpenVillage
             // 
             this.ConfirmOpenVillage.InitialDirectory = "D:\\3-1\\SWE 4502 (Design Pattern Lab)\\Assignment Test\\AgeOfVillagers";
+            this.ConfirmOpenVillage.FileOk += new System.ComponentModel.CancelEventHandler(this.ConfirmOpenVillage_FileOk);
             // 
             // DrawingBoard
             // 

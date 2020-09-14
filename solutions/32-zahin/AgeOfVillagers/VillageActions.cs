@@ -38,6 +38,8 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+            DrawingBoard.Refresh();
+            VillageName.Refresh();
             //InitializeComponent();
         }
 
@@ -79,12 +81,20 @@ namespace AgeOfVillagers
                 v.GetVillage().DrawWaterSource();
         }
 
-        private void OptionsBoard_Enter(object sender, EventArgs e)
+        private void OptionsBoard_Enter(object sender, EventArgs e) {} // buttons stay inside this panel
+
+        private void DrawingBoard_Click(object sender, PaintEventArgs e) // this is where I will draw the shapes
+        {
+            Point point = DrawingBoard.PointToClient(Cursor.Position);
+            MessageBox.Show(point.ToString());
+        }
+
+        private void VillageName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void MousePointer(object sender, PaintEventArgs e)
+        private void ConfirmOpenVillage_FileOk(object sender, CancelEventArgs e)
         {
 
         }
