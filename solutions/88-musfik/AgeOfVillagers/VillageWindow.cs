@@ -30,13 +30,15 @@ namespace AgeOfVillagers
 
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
-            /*
-            Point point3 = new Point(e.X, e.Y);
-            Point point1 = new Point(e.X-30, e.Y+30);
-            Point point2 = new Point(e.X+30, e.Y+30);
-            VShape vShape = new VShape(point1,point3,point2);
+            
+            //Point point3 = new Point(e.X, e.Y);
+            //Point point1 = new Point(e.X-30, e.Y+30);
+            //Point point2 = new Point(e.X+30, e.Y+60);
+
+            Point point = new Point(e.X, e.Y);
+            IShape vShape = new BangladeshiHouse(point);
             vShape.Draw(g,p);
-            */
+            
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
