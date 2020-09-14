@@ -58,8 +58,15 @@ namespace Age_of_Villagers
 
 
             checkRadioButton(font,brush); // Set Radio Button and act accordingly
-            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            bd.GetHouse(graphics,e.Location);
+
+
+            //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            //bd.GetHouse(graphics,e.Location);
+
+
+            EgyptianKings eg = new EgyptianKings("Egyptian Kings");
+            eg.GetHouse(graphics, e.Location);
+
 
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
