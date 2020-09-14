@@ -26,9 +26,10 @@ namespace AgeOfVillagers90
             bdtree.Draw(g);
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            BangladeshiFarmersWaterSource bdws = new BangladeshiFarmersWaterSource(pt);
+            bdws.Draw(g);
         }
     }
 }

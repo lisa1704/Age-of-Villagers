@@ -21,7 +21,7 @@ namespace AgeOfVillagers90
             abtree.Draw(g);
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point pt)
         {
             throw new NotImplementedException();
         }
