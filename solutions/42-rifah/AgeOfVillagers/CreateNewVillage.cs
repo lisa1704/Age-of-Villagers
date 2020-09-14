@@ -17,12 +17,17 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
+        private void CreateNewVillage_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void CreateNewVillage_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,24 +37,35 @@ namespace AgeOfVillagers
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void saveVillagebutton_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void newVillagebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openVillagebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
