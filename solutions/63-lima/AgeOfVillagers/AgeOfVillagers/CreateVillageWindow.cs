@@ -8,12 +8,13 @@ using System.Windows.Forms;
 using VisioForge.Shared.MediaFoundation.OPM;
 
 namespace AgeOfVillagers
-{
+{   
     public partial class CreateVillageWindow : Form
     {
         protected Nation nation;
         Graphics newg ;
         Village myvillage = new Village();
+        SaveVillage myvillageSaver = new SaveVillage();
         public CreateVillageWindow()
         {
             InitializeComponent();
