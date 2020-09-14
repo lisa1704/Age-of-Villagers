@@ -17,10 +17,10 @@ namespace AgeOfVillagers
             point1 = pt1;
             point2 = pt2;
         }
-        public void Paint(Graphics g)
+        public void Paint(Graphics g,Pen p)
         {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawLine(pen, point1, point2);
+            //var pen = new Pen(Color.Black, 1);
+            g.DrawLine(p, point1, point2);
         }
     }
 
@@ -47,6 +47,16 @@ namespace AgeOfVillagers
         }
 
     }
+   /* public abstract class House : CompositeShape
+    {
+        public House(Point top, Point topLeft, Point bottomRight)
+        {
+            AddComp(new ShapeRectangle(topLeft, bottomRight));
+            AddComp(new Triangle(top, topLeft, new Point(bottomRight.X, topLeft.Y)));
+        }
+
+    }*/
+
     public class BDHouse : CompositeShape
     {
         public BDHouse(Point top, Point topLeft, Point bottomRight)
@@ -55,24 +65,6 @@ namespace AgeOfVillagers
             AddComp(new Triangle(top, topLeft, new Point(bottomRight.X,topLeft.Y)));
         }
 
-    }
-
-
-    class Arc : IShapeItem
-    {
-        private readonly Point point1;
-        private readonly Point point2;
-        public int x, y, width, height, startAngle, sweepAngle;
-
-        public Arc()
-        {
-
-        }
-        public void Paint(Graphics g)
-        {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen,x, y, width, height, startAngle, sweepAngle);
-        }
     }
 }
 

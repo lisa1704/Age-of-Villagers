@@ -14,10 +14,10 @@ namespace AgeOfVillagers
         {
            /* ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
             Triangle tr = new Triangle(new Point(pt.X-5, pt.Y-10), new Point(pt.X, pt.Y),new Point(pt.X+10,pt.Y));*/
-            BDHouse house = new BDHouse(new Point(pt.X, pt.Y), new Point(pt.X-50, pt.Y*5), new Point(pt.X +50, pt.Y*10));
+           BDHouse house = new BDHouse(new Point(pt.X, pt.Y), new Point(pt.X-50, pt.Y*5), new Point(pt.X +50, pt.Y*10));
             /*r.Paint(g);
             tr.Paint(g);*/
-            house.Paint(g);
+            house.Paint(g,p);
             //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             return "KureGhor";
         }

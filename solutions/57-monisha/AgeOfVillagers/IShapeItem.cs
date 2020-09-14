@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     public interface IShapeItem
     {
-        void Paint(Graphics g);
+        void Paint(Graphics g, Pen p);
     }
 
     public abstract class CompositeShape : IShapeItem
@@ -25,10 +25,10 @@ namespace AgeOfVillagers
         {
             SComponents.Add(shape);
         }
-        public void Paint(Graphics g)
+        public void Paint(Graphics g,Pen p)
         {
             foreach (var component in SComponents)
-                component.Paint(g);
+                component.Paint(g,p);
         }
     }
 }
