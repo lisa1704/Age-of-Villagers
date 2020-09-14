@@ -63,7 +63,11 @@
   <ItemGroup>
     <Compile Include="ArabBedouin.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="OpenVillage.cs" />
+    <Compile Include="NewVillage.cs" />
+    <Compile Include="SaveVillage.cs" />
     <Compile Include="INation.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="EgyptianKing.cs" />
     <Compile Include="Village.cs" />

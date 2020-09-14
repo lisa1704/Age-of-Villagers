@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class OpenVillage
+    class OpenVillage : ICommand
     {
+        public void execute()
+        {
+        }
     }
 }

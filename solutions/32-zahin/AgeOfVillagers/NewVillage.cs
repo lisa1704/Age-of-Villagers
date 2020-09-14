@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Class1
+    class NewVillage : ICommand
     {
+        public void execute()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
