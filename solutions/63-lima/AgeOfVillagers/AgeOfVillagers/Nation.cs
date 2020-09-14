@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
 
 public abstract class Nation
 {
     protected Graphics g;
-
-    ITree tree;
-    IHouse house;
-    IWaterSource waterSource;
-    public Nation(Graphics newg)
+    protected Panel panel; 
+    protected Color color;
+    protected ITree tree;
+    protected IHouse house;
+    protected IWaterSource waterSource;
+    public Nation(Graphics newg , Panel panel)
     {
         g = newg;
+        this.panel = panel;
     }
 	public void drawTree(int X, int Y)
     {
@@ -26,5 +29,11 @@ public abstract class Nation
     {
         waterSource.drawWaterSource(g, X, Y);
 
+    }
+
+    // ei khane COlor.color na die ekta  panel ta ki korbo bolo -.-
+    public void paintTerrain()
+    {
+        panel.BackColor = color;
     }
 }
