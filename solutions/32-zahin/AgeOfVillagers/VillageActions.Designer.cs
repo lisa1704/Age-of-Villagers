@@ -30,12 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SaveButton2 = new System.Windows.Forms.Button();
             this.NewButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
             this.HouseButton = new System.Windows.Forms.Button();
             this.TreeButton = new System.Windows.Forms.Button();
             this.WaterButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,36 +53,37 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.WaterButton);
             this.panel2.Controls.Add(this.TreeButton);
             this.panel2.Controls.Add(this.HouseButton);
             this.panel2.Controls.Add(this.OpenButton);
-            this.panel2.Controls.Add(this.SaveButton);
             this.panel2.Controls.Add(this.NewButton);
+            this.panel2.Controls.Add(this.SaveButton2);
             this.panel2.Location = new System.Drawing.Point(545, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 402);
             this.panel2.TabIndex = 1;
+            // 
+            // SaveButton2
+            // 
+            this.SaveButton2.Location = new System.Drawing.Point(87, 259);
+            this.SaveButton2.Name = "SaveButton2";
+            this.SaveButton2.Size = new System.Drawing.Size(143, 40);
+            this.SaveButton2.TabIndex = 2;
+            this.SaveButton2.Text = "SaveVillage";
+            this.SaveButton2.UseVisualStyleBackColor = true;
+            this.SaveButton2.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // NewButton
             // 
             this.NewButton.Location = new System.Drawing.Point(87, 305);
             this.NewButton.Name = "NewButton";
             this.NewButton.Size = new System.Drawing.Size(143, 40);
-            this.NewButton.TabIndex = 2;
+            this.NewButton.TabIndex = 3;
             this.NewButton.Text = "New Village";
             this.NewButton.UseVisualStyleBackColor = true;
-            this.NewButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(87, 259);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(143, 40);
-            this.SaveButton.TabIndex = 3;
-            this.SaveButton.Text = "Save Village";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.button1_Click);
+            this.NewButton.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // OpenButton
             // 
@@ -123,6 +125,17 @@
             this.WaterButton.UseVisualStyleBackColor = true;
             this.WaterButton.Click += new System.EventHandler(this.Water_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 9F);
+            this.textBox1.Location = new System.Drawing.Point(87, 34);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(143, 34);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Enter Village Name";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // VillageActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -135,6 +148,7 @@
             this.Text = "VillageBoard";
             this.Load += new System.EventHandler(this.VillageActions_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -143,11 +157,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button OpenButton;
-        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button NewButton;
+        private System.Windows.Forms.Button SaveButton2;
         private System.Windows.Forms.Button TreeButton;
         private System.Windows.Forms.Button HouseButton;
         private System.Windows.Forms.Button WaterButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
