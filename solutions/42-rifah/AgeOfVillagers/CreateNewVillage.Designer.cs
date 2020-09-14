@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    partial class Form1
+    partial class CreateNewVillage
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,27 +31,41 @@ namespace AgeOfVillagers
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(652, 26);
+            this.label1.Font = new System.Drawing.Font("Product Sans", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(672, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 35);
+            this.label1.Size = new System.Drawing.Size(241, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Age Of Villagers";
+            this.label1.Text = "AGE OF VILLAGERS";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(605, 546);
+            this.panel1.TabIndex = 1;
+            // 
+            // CreateNewVillage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(963, 547);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "CreateNewVillage";
+            this.Text = "Age Of Villagers";
+            this.Load += new System.EventHandler(this.CreateNewVillage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,6 +79,7 @@ namespace AgeOfVillagers
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

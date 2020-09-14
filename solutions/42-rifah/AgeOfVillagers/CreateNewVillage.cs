@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class Form1 : Form
+    public partial class CreateNewVillage : Form
     {
-        public Form1()
+        public CreateNewVillage()
         {
             InitializeComponent();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateNewVillage_Load(object sender, EventArgs e)
         {
 
         }
