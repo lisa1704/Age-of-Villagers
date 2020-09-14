@@ -59,10 +59,12 @@ namespace AgeOfVillagers
         {
             
             Graphics g = panel1.CreateGraphics();
-            Pen p = new Pen(Color.Red);
-            Point pt = e.Location;
-            Point pt2 = new Point(100, 100);
-            g.DrawLine(p, pt, pt2);
+            Point point = e.Location;
+            Village newVillage = new Village(villageType);
+            if (item == "house") { newVillage.GetVillage(villageType).DrawHouse(g, point); }
+            if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
+            if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
+
         }
 
         private void NewVillage_Click(object sender, EventArgs e)

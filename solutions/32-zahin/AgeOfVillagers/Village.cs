@@ -22,7 +22,7 @@ namespace AgeOfVillagers
             if (villageType == "Inuit Hunters")
                 village = new InuitHunters();
         }
-        public Nations GetVillage()
+        public Nations GetVillage(string villageType)
         {
             return village;
         }
