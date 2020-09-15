@@ -27,6 +27,7 @@ namespace AgeOfVillagers
         public VillageWindow()
         {
             InitializeComponent();
+            
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
@@ -66,7 +67,8 @@ namespace AgeOfVillagers
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
-          
+            DrawPanel.Dispose();
+            //Graphics g = control.CreateGraphics();
             //MessageBox.Show("Village is Saved");
         }
 
