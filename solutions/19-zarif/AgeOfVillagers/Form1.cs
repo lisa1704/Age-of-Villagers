@@ -26,7 +26,7 @@ namespace AgeOfVillagers
           
             g = DrawPanel.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            pen = new Pen(Color.Black, 3);
+            pen = new Pen(Color.Green, 3);
 
         }
 
@@ -115,7 +115,7 @@ namespace AgeOfVillagers
         {
             if (moving && x != -1 && y != -1)
             {
-                g.DrawLine(pen, new Point(x, y), e.Location);
+                g.DrawLine(pen, new Point(x, y),e.Location);
                 x = e.X;
                 y = e.Y;
             }
