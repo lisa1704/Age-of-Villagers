@@ -58,16 +58,26 @@ namespace AgeOfVillagers
     {
         public InuitHouse(Point MPt)
         {
+            /*   Point Lpt1 = new Point(MPt.X , MPt.Y + 10);
+               Point Lpt2 = new Point(MPt.X + 100, MPt.Y +10);
+               Point Opt1 = new Point(MPt.X + 20, MPt.Y + 20);
+
+               Point topPt2 = new Point(MPt.X + 50, MPt.Y + 55);
+               Point topPt4 = new Point(MPt.X + 20, MPt.Y + 20);
+               AddComp(new Line(Lpt1, Lpt2));
+               AddComp(new ShapeArc(Opt1.X, Opt1.Y, Lpt2.X-Lpt1.X, 220, 0, -180.0F));
+               //AddComp(new ShapeArc(Opt1.X, Opt1.Y, topPt2.X - Opt1.X, topPt2.Y - Opt1.Y, 0, -180.0F));
+               //AddComp(new ShapeArc(MPt.X, MPt.Y, topPt4.X - topPt4.X, 220, 0, -180.0F));
+               AddComp(new ShapeArc(MPt.X, MPt.Y, topPt4.X - MPt.X, topPt4.Y - MPt.Y, 0, -180.0F));*/
             Point Lpt1 = new Point(MPt.X - 45, MPt.Y + 10);
-            Point Lpt2 = new Point(MPt.X + 50, MPt.Y +10);
+            Point Lpt2 = new Point(MPt.X + 50, MPt.Y + 10);
             Point Opt1 = new Point(MPt.X - 40, MPt.Y + -40);
-          
+
             Point topPt2 = new Point(MPt.X + 50, MPt.Y + 55);
             Point topPt4 = new Point(MPt.X + 20, MPt.Y + 20);
             AddComp(new Line(Lpt1, Lpt2));
             AddComp(new ShapeArc(Opt1.X, Opt1.Y, topPt2.X - Opt1.X, topPt2.Y - Opt1.Y, 0, -180.0F));
             AddComp(new ShapeArc(MPt.X, MPt.Y, topPt4.X - MPt.X, topPt4.Y - MPt.Y, 0, -180.0F));
-
         }
     }
 }
