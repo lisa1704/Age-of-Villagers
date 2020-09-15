@@ -12,10 +12,16 @@ namespace AgeOfVillagers
 {
     public partial class VillageEditor : Form
     {
-        int x;
-        int y;
+        private int x;
+        private int y;
         string s;
         string vName;
+
+        List<Point> tree_point = new List<Point>();
+        List<Point> house_point = new List<Point>();
+        List<Point> watersource_point = new List<Point>();
+    
+
         public VillageEditor()
         {
             InitializeComponent();
@@ -27,9 +33,21 @@ namespace AgeOfVillagers
             Graphics graphics = drawingPanel.CreateGraphics();
             Pen pen = new Pen(Color.Black);
 
-           
+            foreach (Point point in tree_point)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
+            foreach (Point point in house_point)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
+            foreach (Point point in watersource_point)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
 
-          
+
+
         }
 
         private void VillageEditor_Load(object sender, EventArgs e)
@@ -54,11 +72,19 @@ namespace AgeOfVillagers
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.X, e.Y);
-            x = point.X;
-            y = point.Y;
+           if(s == "Tree")
+            {
+                tree_point.Add(e.Location);
+            }
+           if (s == "House")
+            {
+                house_point.Add(e.Location);
+            }
+           if (s == "WaterSource")
+            {
+                watersource_point.Add(e.Location);
+            }
             drawingPanel.Invalidate();
-
         }
 
         private void mouseClick_NationList(object sender, MouseEventArgs e)
@@ -73,7 +99,7 @@ namespace AgeOfVillagers
 
         private void WaterSourceClick(object sender, EventArgs e)
         {
-            s = "Water Source";
+            s = "WaterSource";
         }
 
         private void HouseClick(object sender, EventArgs e)
@@ -83,7 +109,7 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(Text = "Your village has been saved");
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -97,10 +123,10 @@ namespace AgeOfVillagers
         }
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //string selectNation = NationBox.Items[NationBox.Items]
-                                           //.ToString();
+            
             string selectNation = NationBox.Text;
             MessageBox.Show(selectNation);
+            
         }
     
     }
