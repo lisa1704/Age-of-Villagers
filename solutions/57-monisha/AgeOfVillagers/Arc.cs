@@ -2,14 +2,14 @@
 
 namespace AgeOfVillagers
 {
-    partial class DrawArc : IShapeItem
+    partial class ShapeArc : IShapeItem
     {
         private readonly Point point1;
         private readonly Point point2;
         private float x, y, width, height, startAngle, sweepAngle;
         
 
-        public DrawArc(float x, float y, float width, float height, float startAngle, float sweepAngle)
+        public ShapeArc(float x, float y, float width, float height, float startAngle, float sweepAngle)
         {
             this.x = x;
             this.y = y;
@@ -32,7 +32,7 @@ namespace AgeOfVillagers
             {
                 _topleft = tLeft;
                 _bottomright = bRight;
-                AddComp(new DrawArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 0, 360));
+                AddComp(new ShapeArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 0, 360));
             }
         }
 
@@ -45,7 +45,7 @@ namespace AgeOfVillagers
             {
                 _topleft = tLeft;
                 _bottomright = bRight;
-                AddComp(new DrawArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 0, -180.0F));
+                AddComp(new ShapeArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 0, -180.0F));
             }
         }
 
