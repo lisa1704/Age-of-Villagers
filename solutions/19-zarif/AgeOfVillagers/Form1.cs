@@ -17,7 +17,7 @@ namespace AgeOfVillagers
         int y = -1;
         bool moving=false;
         Pen pen;
-
+        private string _villagename, _nationame;
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace AgeOfVillagers
           
             g = DrawPanel.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            pen = new Pen(Color.Green, 3);
+            pen = new Pen(Color.Black, 3);
 
         }
 
@@ -63,6 +63,7 @@ namespace AgeOfVillagers
             VillageName.Text = villagename;
             NationName.Text = nation;
 
+          
     
         }
         private void WaterRadiobtn_CheckedChanged(object sender, EventArgs e)
@@ -106,9 +107,25 @@ namespace AgeOfVillagers
 
         private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
         {
+            NationManager manager = new NationManager(NationName.Text,DrawPanel);
             moving = true;
             x = e.X;
             y = e.Y;
+
+            if(Houseradiobtn.Checked)
+            {
+                manager.getNation().DrawHouse(g,x,y);
+            }
+            else if (Treeradiobtn.Checked)
+            {
+
+            }
+            else if (WaterRadiobtn.Checked)
+            {
+
+            }
+
+
         }
 
         private void DrawPanel_MouseMove(object sender, MouseEventArgs e)
