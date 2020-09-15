@@ -22,7 +22,8 @@ namespace AgeOfVillagers90
 
         public void DrawWaterSource(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            EgytianWaterSource ekws = new EgytianWaterSource(pt);
+            ekws.Draw(g);
         }
     }
 }
