@@ -18,11 +18,20 @@ namespace AgeOfVillagers
             Point pt3 = new Point(MPt.X + 25, MPt.Y +50);
             Point pt4 = new Point(MPt.X + 50, MPt.Y + 75);
             Point pt5 = new Point(MPt.X + 75, MPt.Y + 25);
-            
+            Point pt6 = new Point(MPt.X + 50, MPt.Y );
+            Point pt7 = new Point(MPt.X + 25, MPt.Y + 25);
+            Point pt8 = new Point(MPt.X + 25, MPt.Y );
+
 
             AddComp(new Line(MPt, pt1));
             AddComp(new Line(pt1, pt2));
             AddComp(new Line(pt2, pt3));
+            AddComp(new Line(pt3, pt4));
+            AddComp(new Line(pt4, pt5));
+            AddComp(new Line(pt5, pt6));
+            AddComp(new Line(pt6, pt7));
+            AddComp(new Line(pt7, pt8));
+            AddComp(new Line(MPt, pt8));
         }
     }
 
