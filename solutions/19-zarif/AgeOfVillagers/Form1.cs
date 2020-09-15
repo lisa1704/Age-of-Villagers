@@ -111,9 +111,10 @@ namespace AgeOfVillagers
             x = e.X;
             y = e.Y;
 
+            Point _locatin = new Point(x, y); 
             if(Houseradiobtn.Checked)
             {
-                manager.getNation().DrawHouse(g,x,y);
+                manager.getNation().GetHouse().draw(g,_locatin);
             }
             else if (Treeradiobtn.Checked)
             {

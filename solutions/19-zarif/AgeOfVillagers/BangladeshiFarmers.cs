@@ -9,19 +9,21 @@ namespace AgeOfVillagers
     {
        Pen pen = new Pen(Color.Black, 3);
 
-        public void DrawHouse(Graphics g, int X, int Y)
+
+        public IGraphicShape GetHouse()
         {
-            g.DrawLine(pen, new Point(X, Y), new Point(X+100,Y));
+            return new BdFarmerHouse();
         }
 
-        public void DrawTrees(Graphics g, int X, int Y)
+        public IGraphicShape GetTrees()
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSources(Graphics g, int X, int Y)
+        public IGraphicShape GetWaterSources()
         {
             throw new NotImplementedException();
         }
+
     }
 }

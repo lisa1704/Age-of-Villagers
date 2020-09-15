@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface IGraphicShape
+   public interface IGraphicShape
     {
+        void draw(Graphics g,Point p);
     }
 }
