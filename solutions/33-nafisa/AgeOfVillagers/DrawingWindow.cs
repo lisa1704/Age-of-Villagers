@@ -8,8 +8,13 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
+    
     public partial class DrawingWindow : Form
     {
+        private String item;
+        public static String VillageName;
+        private String Nation;
+
         public DrawingWindow()
         {
             InitializeComponent();
@@ -45,9 +50,14 @@ namespace AgeOfVillagers
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Drawingpanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DrawingWindow_Load(object sender, EventArgs e)
+        {
+            label2.Text = Form1.VillageName;
         }
     }
 }
