@@ -1,4 +1,6 @@
-﻿namespace Age_Of_Villagers
+﻿using System;
+
+namespace Age_Of_Villagers
 {
     partial class VillageWindow
     {
@@ -63,7 +65,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(757, 363);
-            this.button1.Name = "button1";
+            this.button1.Name = "saveVillageButton";
             this.button1.Size = new System.Drawing.Size(103, 44);
             this.button1.TabIndex = 2;
             this.button1.Text = "Save Village";
@@ -75,7 +77,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(649, 425);
-            this.button2.Name = "button2";
+            this.button2.Name = "newVillageButton";
             this.button2.Size = new System.Drawing.Size(103, 44);
             this.button2.TabIndex = 2;
             this.button2.Text = "New Village";
@@ -87,13 +89,13 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Location = new System.Drawing.Point(867, 425);
-            this.button3.Name = "button3";
+            this.button3.Name = "openVillageButton";
             this.button3.Size = new System.Drawing.Size(103, 44);
             this.button3.TabIndex = 2;
             this.button3.Text = "Open Village";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // treeRadioButton
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -104,8 +106,9 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tree";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.treeRadioButton_Checked);
             // 
-            // radioButton2
+            // houseRadioButton
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -116,8 +119,9 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "House";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.houseRadioButton_Checked);
             // 
-            // radioButton3
+            // waterRadioButton
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -128,6 +132,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Water Source";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.waterRadioButton_Checked);
             // 
             // VillageWindow
             // 
