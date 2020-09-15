@@ -12,7 +12,8 @@ namespace AgeOfVillagers90
         Pen p = new Pen(Color.Yellow);
         public void DrawHouse(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            InuitHouse inhouse = new InuitHouse(pt);
+            inhouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point pt)
