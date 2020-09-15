@@ -108,7 +108,6 @@ namespace AgeOfVillagers
         private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
         {
             NationManager manager = new NationManager(NationName.Text,DrawPanel);
-            moving = true;
             x = e.X;
             y = e.Y;
 
@@ -125,6 +124,11 @@ namespace AgeOfVillagers
 
             }
 
+            else
+            {
+                MessageBox.Show("Please Select What You Want To Draw");
+            }
+
 
         }
 
@@ -139,7 +143,10 @@ namespace AgeOfVillagers
 
         }
 
-        
+        private void DrawPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {
