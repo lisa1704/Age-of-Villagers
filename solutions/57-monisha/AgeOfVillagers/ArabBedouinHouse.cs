@@ -23,7 +23,6 @@ namespace AgeOfVillagers
             AddComp(new ShapeRectangle(rpt1, rpt2));
            
         }
-
     }
     class ArabBedouinHouse : CompositeShape
     {

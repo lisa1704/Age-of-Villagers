@@ -43,7 +43,7 @@ namespace AgeOfVillagers
         public Color GetTerrainColor()
         {
             //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            return System.Drawing.Color.Green;
+            return System.Drawing.Color.LightGreen;
            //throw new NotImplementedException();
         }
 

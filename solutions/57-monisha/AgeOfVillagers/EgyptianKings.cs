@@ -33,7 +33,7 @@ namespace AgeOfVillagers
 
         public Color GetTerrainColor()
         {
-            return Color.Gold;
+            return Color.LightGoldenrodYellow;
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.EditorsVillageName = new System.Windows.Forms.Label();
             this.NationList = new System.Windows.Forms.ComboBox();
             this.VillageNameBox = new System.Windows.Forms.TextBox();
@@ -40,14 +41,13 @@
             this.NewVbutton = new System.Windows.Forms.Button();
             this.gameTitle = new System.Windows.Forms.Label();
             this.DrawPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.EditorsVillageName);
@@ -65,6 +65,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "VillageName";
+            this.label1.TextChanged += new System.EventHandler(this.VillageNameBox_TextChanged);
             // 
             // EditorsVillageName
             // 
@@ -181,23 +191,14 @@
             // 
             // DrawPanel
             // 
-            this.DrawPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DrawPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DrawPanel.Location = new System.Drawing.Point(3, 4);
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 1;
+            this.DrawPanel.BackColorChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
             this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "VillageName";
-            this.label1.TextChanged += new System.EventHandler(this.VillageNameBox_TextChanged);
             // 
             // VillageWindow
             // 

@@ -67,7 +67,7 @@ namespace AgeOfVillagers
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
-            DrawPanel.Dispose();
+            DrawPanel.Refresh();
             //Graphics g = control.CreateGraphics();
             //MessageBox.Show("Village is Saved");
         }
@@ -81,8 +81,8 @@ namespace AgeOfVillagers
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             VType = NationList.Text;
-            Color NName = nationFactory.GetNation(VType).GetTerrainColor();
-            DrawPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
+            //DrawPanel.ForeColor = Color.;
             /*nation = nationFactory(NationList.Text);
             g.Clear(Color.White);
             drawingSpace.BackColor = nation.SetBackground();*/
