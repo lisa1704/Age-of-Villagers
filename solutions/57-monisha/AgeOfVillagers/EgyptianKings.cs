@@ -13,7 +13,9 @@ namespace AgeOfVillagers
         Pen p = new Pen(Color.SkyBlue);
         public string DrawHouse(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+            EgyptianHouse EgyptHouse = new EgyptianHouse(pt);
+            EgyptHouse.Paint(g, p);
+            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             return "Piramid";
         }
 
