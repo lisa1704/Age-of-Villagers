@@ -13,7 +13,9 @@ namespace AgeOfVillagers
         Pen p = new Pen(Color.Gold);
         public string DrawHouse(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+            ArabBedouinHouse ArabHouse = new ArabBedouinHouse(pt);
+            ArabHouse.Paint(g, p);
+            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             return "Stonehouse";
         }
 
@@ -30,7 +32,7 @@ namespace AgeOfVillagers
 
         public Color GetTerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Gold;
         }
     }
 }

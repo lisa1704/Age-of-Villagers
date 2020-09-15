@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArabBedouin.cs" />
+    <Compile Include="ArabBedouinHouse.cs" />
     <Compile Include="ArabTree.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshiFarmers.cs" />

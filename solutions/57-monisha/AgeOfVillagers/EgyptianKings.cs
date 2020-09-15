@@ -31,7 +31,7 @@ namespace AgeOfVillagers
 
         public Color GetTerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Gold;
         }
     }
 }
