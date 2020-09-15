@@ -13,6 +13,8 @@ namespace AgeOfVillagers
         public static string RECT_HINT = "Rectangle";
         public static string TRIANGLE_HINT = "Tryangle";
         public static string OVAL_HINT = "OVAL";
+        public static string UNEQUAL_NONAGON_HINT = "Unequal Nonago";
+
 
         //Item hints
         public static string BDTREE_HINT = "Bangladeshi Farmer,Tree";

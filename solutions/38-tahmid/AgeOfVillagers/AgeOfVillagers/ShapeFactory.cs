@@ -14,16 +14,15 @@ namespace AgeOfVillagers
                 return new Rectangle(g, pen, point, height, width);
             else if (hint.Equals(Constants.TRIANGLE_HINT))
                 return new Triangle(g, pen, point, height, width);
-            return null;
-        }
-
-        public Shape GetShape(Graphics g, Pen pen, Point startingPoint, int startAng, int endAng, int length, int width,string hint)
-        {
-            if (hint.Equals(Constants.OVAL_HINT))
+            else if(hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
+                return new CrookedOctagon(g, pen, point, height, width);
+            else if (hint.Equals(Constants.OVAL_HINT))
             {
-                return new Oval(g, pen, startingPoint, startAng, endAng, length, width);
+                return new Oval(g, pen, point, height, width);
             }
             return null;
         }
+
+        
     }
 }
