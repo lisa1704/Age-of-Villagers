@@ -65,6 +65,7 @@ namespace Age_Of_Villagers
             this.drawingPanel.Size = new System.Drawing.Size(750, 500);
             this.drawingPanel.TabIndex = 1;
             this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
+            this.drawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseClick);
             // 
             // villageName
             // 
