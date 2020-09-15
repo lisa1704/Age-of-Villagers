@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         int x;
         int y;
         string s;
+        string vName;
         public VillageEditor()
         {
             InitializeComponent();
@@ -26,6 +27,9 @@ namespace AgeOfVillagers
             Graphics graphics = drawingPanel.CreateGraphics();
             Pen pen = new Pen(Color.Black);
 
+           
+
+          
         }
 
         private void VillageEditor_Load(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace AgeOfVillagers
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-            VillageName.Text = "Enter village name";
+            vName = VillageName.Text;
         }
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
@@ -64,17 +68,17 @@ namespace AgeOfVillagers
 
         private void TreeClick(object sender, EventArgs e)
         {
-
+            s = "Tree";
         }
 
         private void WaterSourceClick(object sender, EventArgs e)
         {
-
+            s = "Water Source";
         }
 
         private void HouseClick(object sender, EventArgs e)
         {
-
+            s = "House";
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
