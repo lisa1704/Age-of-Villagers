@@ -20,6 +20,7 @@ namespace Age_Of_Villagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
+
         public Village_Window()
         {
             InitializeComponent();
@@ -58,12 +59,12 @@ namespace Age_Of_Villagers
 
         private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
-            text = "Water Source";
+            text = "WaterSource";
         }
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(villageName.Text + "Village is saved");
         }
 
         private void newVillagebutton_Click(object sender, EventArgs e)
@@ -81,6 +82,40 @@ namespace Age_Of_Villagers
             Graphics g = drawingPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
 
+            foreach (Point point in tree_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+            }
+
+            foreach (Point point in house_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+            }
+
+            foreach (Point point in waterSource_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+            }
+        }
+
+        private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (text == "Tree")
+            {
+                tree_point.Add(e.Location);
+            }
+
+            if (text == "House")
+            {
+                house_point.Add(e.Location);
+            }
+
+            if (text == "WaterSource")
+            {
+                waterSource_point.Add(e.Location);
+            }
+
+            drawingPanel.Invalidate();
         }
     }
 }
