@@ -56,4 +56,12 @@ namespace AgeOfVillagers
             AddComponent(new Rectangle(FrontTop, baseFrontRight, baseBackRight, baseBackTop));
         }
     }
+
+    public class ArabBedouinTree : CompositeShape
+    {
+        public ArabBedouinTree(Point point)
+        {
+            
+        }
+    }
 }
