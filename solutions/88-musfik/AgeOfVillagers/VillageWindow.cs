@@ -37,11 +37,11 @@ namespace AgeOfVillagers
 
             Point point = new Point(e.X, e.Y);
             IShape bShape = new BangladeshiHouse(new Point(point.X+20, point.Y));
-            //IShape aShape = new ArabBedouinHouse(new Point(point.X - 20, point.Y));
+            IShape aShape = new ArabBedouinTree(new Point(point.X - 20, point.Y));
             IShape iShape = new BangladeshiTree(point);
 
-            bShape.Draw(g, p);
-            //aShape.Draw(g, p);
+            //bShape.Draw(g, p);
+            aShape.Draw(g, p);
             iShape.Draw(g, p);
 
 
