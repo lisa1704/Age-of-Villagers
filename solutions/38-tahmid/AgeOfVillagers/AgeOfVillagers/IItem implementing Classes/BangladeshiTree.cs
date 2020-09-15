@@ -29,7 +29,7 @@ namespace AgeOfVillagers.Shape_extended_classes
 
         public void placeItem()
         {
-            Shape leaf = shapeFactory.GetShape(g, pen, point, Constants.OVAL_STARTING_ANG, Constants.OVAL_ENDING_ANG, 3*(length/4), width, Constants.OVAL_HINT);
+            Shape leaf = shapeFactory.GetShape(g, pen, point,  3*(length/4), width, Constants.OVAL_HINT);
             leaf.makeShape();
             Shape root= shapeFactory.GetShape(g, pen, new Point(point.X+3*(width/8),point.Y+width/2), 5*(length / 8), width/4, Constants.RECT_HINT);
             root.makeShape();

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -21,24 +22,21 @@ namespace AgeOfVillagers
             this.pen = pen;
             this.startingPoint = startingPoint;
             this.unitHeight = unitHeight;
-            this.unitWidth = unitWidth;
+            this.unitWidth = uintWidth;
+
 
         }
         public override void drawShape()
         {
             topLeftLine.drawShape();
-            topMidLeftLine.drawShape();
-            topMidLine.drawShape();
-            topMidRightLine.drawShape();
-            topEndLine.drawShape();
-            bottomLeftLine.drawShape();
-            bottomMidLeftLine.drawShape();
-            bottomMidRightLine.drawShape();
-            bottomEndLine.drawShape();
+
+
         }
 
         internal override void makeShape()
         {
+            
+            
             topLeftPoint = new Point(startingPoint.X +3* unitWidth , startingPoint.Y - 2* unitHeight);
             topMidLeftPoint = new Point(topLeftPoint.X +  unitWidth, startingPoint.Y - 3 * unitHeight);
             topMidPoint = new Point(topMidLeftPoint.X, startingPoint.Y -  unitHeight);

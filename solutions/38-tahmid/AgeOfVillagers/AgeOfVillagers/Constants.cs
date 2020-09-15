@@ -18,6 +18,7 @@ namespace AgeOfVillagers
 
         //Item hints
         public static string BDTREE_HINT = "Bangladeshi Farmer,Tree";
+        public static string BDWATERSOURCE_HINT = "Bangladeshi Farmer,Water Source";
 
 
         //house pixell range
@@ -28,7 +29,11 @@ namespace AgeOfVillagers
         public static int TREE_HEIGHT = 24;
         public static int TREE_WIDTH = 16;
 
-        //bangladeshi tree angle range
+        //bangladeshi water source range
+        public static int BDWaterSource_HEIGHT = 24;
+        public static int BDWATERSOURCE_WIDTH = 16;
+
+        //angle range
         public static int OVAL_STARTING_ANG = 0;
         public static int OVAL_ENDING_ANG = 360;
 
