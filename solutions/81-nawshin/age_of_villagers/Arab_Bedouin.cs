@@ -12,31 +12,19 @@ namespace age_of_villagers
         Pen p = new Pen(Color.YellowGreen);
         public void draw_house(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 80, 80);
+            ArabHouse house = new ArabHouse(pt);
+            house.draw(g);
         }
 
         public void draw_tree(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 800, 800);
+            ArabTree tree = new ArabTree(pt);
+            tree.draw(g);
         }
 
         public void draw_watersource(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 220, 220);
-        }
-
-        /*public string draw_house()
-        {
-            return "Arab house";
-        }
-        public string draw_tree()
-        {
-            return "Arab tree";
-        }
-
-        public string draw_waterSource()
-        {
-            return "Arab watersource";
-        }*/
+            //do nothing
+        } 
     }
 }
