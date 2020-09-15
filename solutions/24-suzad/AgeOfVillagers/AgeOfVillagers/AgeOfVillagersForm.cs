@@ -37,7 +37,7 @@ namespace AgeOfVillagers
         }
         public void setRadioButton()
         {
-            if (radiobtnHouse.Checked)
+            /*if (radiobtnHouse.Checked)
             {
                 rdbtn = radiobtnHouse.Text;
             }
@@ -48,7 +48,9 @@ namespace AgeOfVillagers
             else if (radiobtnWaterSource.Checked)
             {
                 rdbtn = radiobtnWaterSource.Text;
-            }
+            }*/
+            RadioButton checkedButton = pnlComponentHolder.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            rdbtn = checkedButton.Text;
         }
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)

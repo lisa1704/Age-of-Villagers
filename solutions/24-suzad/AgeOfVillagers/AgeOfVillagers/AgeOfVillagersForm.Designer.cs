@@ -39,11 +39,15 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNewVillage = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlComponentHolder = new System.Windows.Forms.Panel();
             this.pnlDrawingSpace.SuspendLayout();
+            this.pnlComponentHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDrawingSpace
             // 
+            this.pnlDrawingSpace.Controls.Add(this.panel1);
             this.pnlDrawingSpace.Controls.Add(this.pnlToolSide);
             this.pnlDrawingSpace.Location = new System.Drawing.Point(0, 0);
             this.pnlDrawingSpace.Name = "pnlDrawingSpace";
@@ -90,7 +94,7 @@
             // radiobtnTree
             // 
             this.radiobtnTree.AutoSize = true;
-            this.radiobtnTree.Location = new System.Drawing.Point(623, 138);
+            this.radiobtnTree.Location = new System.Drawing.Point(43, 12);
             this.radiobtnTree.Name = "radiobtnTree";
             this.radiobtnTree.Size = new System.Drawing.Size(58, 24);
             this.radiobtnTree.TabIndex = 4;
@@ -101,7 +105,7 @@
             // radiobtnHouse
             // 
             this.radiobtnHouse.AutoSize = true;
-            this.radiobtnHouse.Location = new System.Drawing.Point(623, 168);
+            this.radiobtnHouse.Location = new System.Drawing.Point(43, 42);
             this.radiobtnHouse.Name = "radiobtnHouse";
             this.radiobtnHouse.Size = new System.Drawing.Size(72, 24);
             this.radiobtnHouse.TabIndex = 5;
@@ -112,7 +116,7 @@
             // radiobtnWaterSource
             // 
             this.radiobtnWaterSource.AutoSize = true;
-            this.radiobtnWaterSource.Location = new System.Drawing.Point(623, 198);
+            this.radiobtnWaterSource.Location = new System.Drawing.Point(43, 72);
             this.radiobtnWaterSource.Name = "radiobtnWaterSource";
             this.radiobtnWaterSource.Size = new System.Drawing.Size(116, 24);
             this.radiobtnWaterSource.TabIndex = 6;
@@ -149,17 +153,32 @@
             this.button1.Text = "Open village";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(606, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(185, 125);
+            this.panel1.TabIndex = 8;
+            // 
+            // pnlComponentHolder
+            // 
+            this.pnlComponentHolder.Controls.Add(this.radiobtnTree);
+            this.pnlComponentHolder.Controls.Add(this.radiobtnHouse);
+            this.pnlComponentHolder.Controls.Add(this.radiobtnWaterSource);
+            this.pnlComponentHolder.Location = new System.Drawing.Point(618, 116);
+            this.pnlComponentHolder.Name = "pnlComponentHolder";
+            this.pnlComponentHolder.Size = new System.Drawing.Size(170, 125);
+            this.pnlComponentHolder.TabIndex = 8;
+            // 
             // AgeOfVillagersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.pnlComponentHolder);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNewVillage);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.radiobtnWaterSource);
-            this.Controls.Add(this.radiobtnHouse);
-            this.Controls.Add(this.radiobtnTree);
             this.Controls.Add(this.lblNationName);
             this.Controls.Add(this.lblVillageName);
             this.Controls.Add(this.lblAgeOfVillagers);
@@ -168,6 +187,8 @@
             this.Text = "Age of Villagers";
             this.Load += new System.EventHandler(this.AgeOfVillagersForm_Load);
             this.pnlDrawingSpace.ResumeLayout(false);
+            this.pnlComponentHolder.ResumeLayout(false);
+            this.pnlComponentHolder.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +207,8 @@
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnNewVillage;
         public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlComponentHolder;
     }
 }
 
