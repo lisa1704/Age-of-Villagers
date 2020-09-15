@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Age_Of_Villagers
 {
-    public partial class Form1 : Form
+    public partial class VillageWindow : Form
     {
-        public Form1()
+        private Panel drawingPanel,toolsPanel;
+        public VillageWindow()
         {
             InitializeComponent();
         }
