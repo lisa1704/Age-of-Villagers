@@ -10,8 +10,7 @@ namespace AgeOfVillagers
 {
    public class BangladeshiFarmers : INations
     {
-        Pen p = new Pen(Color.Green);
-        
+        Pen p = new Pen(Color.Black);        
         public string DrawHouse(Graphics g,Point pt)
         {
            /* ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
@@ -33,13 +32,11 @@ namespace AgeOfVillagers
             BDTree BDtree = new BDTree(pt);
             BDtree.Paint(g, p);
         }
-
         public void DrawWaterSource(Graphics g, Point MPt)
         {
             BDWaterSource BDWaterSource = new BDWaterSource(MPt);
             BDWaterSource.Paint(g, p);
         }
-
         public Color GetTerrainColor()
         {
             //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;

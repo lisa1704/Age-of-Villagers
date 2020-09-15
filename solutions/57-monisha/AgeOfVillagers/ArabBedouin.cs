@@ -10,7 +10,7 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : INations
     {
-        Pen p = new Pen(Color.Gold);
+        Pen p = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point pt)
         {
             ArabBedouinHouse ArabHouse = new ArabBedouinHouse(pt);
