@@ -81,6 +81,23 @@ namespace Age_Of_Villagers
             Graphics g = drawingPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
 
+            foreach (Point point in tree_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+
+            }
+            foreach (Point point in house_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+            }
+
+            foreach (Point point in waterSource_point)
+            {
+                g.DrawLine(p, point.X, point.Y, 100, 100);
+            }
+
         }
+
+       
     }
 }
