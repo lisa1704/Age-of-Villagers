@@ -88,5 +88,10 @@ namespace Age_of_Villagers
             y = p.Y;
             panel1.Invalidate();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
