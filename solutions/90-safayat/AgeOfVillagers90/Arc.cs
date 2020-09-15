@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    class Arc : IShapeIItem
+    class ArcShape : IShapeIItem
     {
         private readonly Point point1;
         private readonly Point point2;
         public float x, y, width, heigth, initialangle, sweepAngle;
-        public Arc(float x, float y, float width, float heigth,float initialangle,float sweepAngle)
+        public ArcShape(float x, float y, float width, float heigth,float initialangle,float sweepAngle)
         {
             this.x = x;
             this.y = y;
