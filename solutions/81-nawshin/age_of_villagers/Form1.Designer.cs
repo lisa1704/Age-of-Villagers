@@ -76,8 +76,8 @@
             // 
             this.nations.FormattingEnabled = true;
             this.nations.Items.AddRange(new object[] {
-            "Bangladesh",
             "Arab",
+            "Bangladesh",
             "Egypt",
             "Inuit"});
             this.nations.Location = new System.Drawing.Point(45, 115);
