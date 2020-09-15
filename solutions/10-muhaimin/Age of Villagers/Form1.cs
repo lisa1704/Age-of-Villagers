@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    int x;
-    int y;
-
     public partial class Form1 : Form
     {
+        int x;
+        int y;
+        Graphics g;
         public Form1()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace Age_of_Villagers
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            g.Clear(Color.White);
         }
 
         private void button3_Click(object sender, EventArgs e)
