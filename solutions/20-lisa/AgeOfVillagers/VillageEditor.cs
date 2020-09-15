@@ -14,11 +14,13 @@ namespace AgeOfVillagers
     {
         int x;
         int y;
+        string s;
         public VillageEditor()
         {
             InitializeComponent();
+
         }
-    
+
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics graphics = drawingPanel.CreateGraphics();
@@ -43,7 +45,7 @@ namespace AgeOfVillagers
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-            VillageName.Text = VillageName.Text;
+            VillageName.Text = "Enter village name";
         }
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
@@ -91,8 +93,11 @@ namespace AgeOfVillagers
         }
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectNation = NationBox.Items[NationBox.Items].ToString();
+            //string selectNation = NationBox.Items[NationBox.Items]
+                                           //.ToString();
+            string selectNation = NationBox.Text;
             MessageBox.Show(selectNation);
         }
+    
     }
 }
