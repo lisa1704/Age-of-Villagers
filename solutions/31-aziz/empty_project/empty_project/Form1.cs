@@ -25,7 +25,7 @@ namespace empty_project
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Village Saved");
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
@@ -45,7 +45,7 @@ namespace empty_project
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Village Opened");
         }
 
         private void House_Click(object sender, EventArgs e)
