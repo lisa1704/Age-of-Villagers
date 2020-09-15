@@ -70,8 +70,12 @@ namespace Age_of_Villagers
             //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
             //arab.GetHouse(graphics, e.Location);
 
+            //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            //bd.GetTree(graphics,e.Location);
+
             BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            bd.GetTree(graphics,e.Location);
+            bd.GetWaterResource(graphics,e.Location);
+
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);
