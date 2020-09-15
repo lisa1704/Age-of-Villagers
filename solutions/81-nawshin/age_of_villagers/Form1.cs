@@ -45,6 +45,9 @@ namespace age_of_villagers
             {
                 n.CreateNation(nType).draw_watersource(g, pt);
             }
+            //n.CreateNation(nType).paint_terrian(panel1);
+            //n.CreateNation(nType).ClearColor(e);
+            //n.CreateNation(nType).BackColor();
 
         }
 
@@ -79,7 +82,9 @@ namespace age_of_villagers
         private void nationType(object sender, EventArgs e)
         {
             nType = nations.Text;
-            n.CreateNation(nType);
+            panel1.BackColor = n.CreateNation(nType).BackColor();
+            panel1.Refresh();
+            //n.CreateNation(nType);
         }
 
         private void tree_Click(object sender, EventArgs e)
