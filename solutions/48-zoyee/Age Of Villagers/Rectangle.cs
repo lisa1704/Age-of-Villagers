@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Age_Of_Villagers
 {
-    class Rectangle
+    class Rectangle : IShape
     {
+        public void Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
