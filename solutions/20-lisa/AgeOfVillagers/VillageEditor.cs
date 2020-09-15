@@ -55,42 +55,42 @@ namespace AgeOfVillagers
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void mouseClick_NationList(object sender, MouseEventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void TreeClick(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void WaterSourceClick(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void HouseClick(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveVillage_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NewVillage_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void OpenVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NayionListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

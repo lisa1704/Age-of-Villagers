@@ -87,7 +87,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Save Village";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.SaveVillage_Click);
             // 
             // button2
             // 
@@ -98,7 +98,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "New Village";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // button3
             // 
@@ -109,7 +109,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Open Village";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // radioButton1
             // 
@@ -124,7 +124,7 @@
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeClick);
             // 
             // radioButton2
             // 
@@ -139,7 +139,7 @@
             this.radioButton2.Text = "Water Source";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.WaterSourceClick);
             // 
             // radioButton3
             // 
@@ -154,7 +154,7 @@
             this.radioButton3.Text = "House";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.HouseClick);
             // 
             // listBox1
             // 
@@ -173,7 +173,7 @@
             this.listBox1.TabIndex = 5;
             this.listBox1.Tag = " ";
             this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick_NationList);
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.NayionListBox_SelectedIndexChanged);
             // 
             // VillageEditor
             // 
