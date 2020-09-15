@@ -29,30 +29,47 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.titleOfGame = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 64);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(12, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // titleOfGame
+            // 
+            this.titleOfGame.AutoSize = true;
+            this.titleOfGame.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titleOfGame.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.titleOfGame.Location = new System.Drawing.Point(649, 28);
+            this.titleOfGame.Name = "titleOfGame";
+            this.titleOfGame.Size = new System.Drawing.Size(321, 54);
+            this.titleOfGame.TabIndex = 1;
+            this.titleOfGame.Text = "Age of Villagers";
+         
             // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
+            this.Controls.Add(this.titleOfGame);
             this.Controls.Add(this.panel1);
             this.Name = "VillageWindow";
-            this.Text = "VillageWindow";
+            this.Text = "Age of Villagers";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label titleOfGame;
     }
 }
 

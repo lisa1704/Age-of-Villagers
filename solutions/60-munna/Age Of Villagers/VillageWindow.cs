@@ -13,6 +13,12 @@ namespace Age_Of_Villagers
     public partial class VillageWindow : Form
     {
         private Panel drawingPanel,toolsPanel;
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public VillageWindow()
         {
             InitializeComponent();
