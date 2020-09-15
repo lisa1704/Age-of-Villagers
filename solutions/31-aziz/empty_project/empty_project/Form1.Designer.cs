@@ -120,6 +120,7 @@
             this.DrawingPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawingPanel.TabIndex = 7;
             this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
+            this.DrawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseClick);
             // 
             // Form1
             // 

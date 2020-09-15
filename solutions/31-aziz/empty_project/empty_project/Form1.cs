@@ -13,10 +13,15 @@ namespace empty_project
     public partial class Form1 : Form
     {
         string element_text = "";
+
+        List<Point> treePoints = new List<Point>();
+        List<Point> housePoints = new List<Point>();
+        List<Point> watersourcePoints = new List<Point>();
         public Form1()
         {
             InitializeComponent();
         }
+
         private void DrawingPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -62,6 +67,20 @@ namespace empty_project
             element_text = "Water Source";
         }
 
-        
+        private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (element_text == "Tree")
+            {
+                treePoints.Add(e.Location);
+            }
+            if (element_text == "House")
+            {
+                housePoints.Add(e.Location);
+            }
+            if (element_text == "WaterSource")
+            {
+                watersourcePoints.Add(e.Location);
+            }
+        }
     }
 }
