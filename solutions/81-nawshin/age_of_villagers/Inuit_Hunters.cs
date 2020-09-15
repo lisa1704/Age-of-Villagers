@@ -12,31 +12,23 @@ namespace age_of_villagers
         Pen p = new Pen(Color.White);
         public void draw_house(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 200, 200);
+            InuitHouse house = new InuitHouse(pt);
+            house.draw(g);
         }
 
         public void draw_tree(Graphics g, Point pt)
         {
-            
+            //do nothing
         }
 
         public void draw_watersource(Graphics g, Point pt)
         {
-            
+            //do nothing
+        }
+        public Color BackColor()
+        {
+            return Color.Snow;
         }
 
-        /*public string draw_house()
-        {
-            return "Inuit house";
-        }
-        public string draw_tree()
-        {
-            return "Inuit tree";
-        }
-
-        public string draw_waterSource()
-        {
-            return "Inuit watersource";
-        }*/
     }
 }

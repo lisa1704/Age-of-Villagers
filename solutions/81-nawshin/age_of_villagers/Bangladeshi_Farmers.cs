@@ -28,6 +28,9 @@ namespace age_of_villagers
             BDWatersource water = new BDWatersource(pt);
             water.draw(g);
         }
-
+        public Color BackColor()
+        {
+            return Color.LightGreen;
+        }
     }
 }

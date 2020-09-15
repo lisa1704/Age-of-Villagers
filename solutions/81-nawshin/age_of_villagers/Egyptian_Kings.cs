@@ -27,6 +27,9 @@ namespace age_of_villagers
             EgyptWatersource water = new EgyptWatersource(pt);
             water.draw(g);
         }
-
+        public Color BackColor()
+        {
+            return Color.GreenYellow;
+        }
     }
 }

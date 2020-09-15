@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace age_of_villagers
 {
@@ -25,6 +26,22 @@ namespace age_of_villagers
         public void draw_watersource(Graphics g, Point pt)
         {
             //do nothing
-        } 
+        }
+
+        /*public void paint_terrian(Panel p)
+        {
+            ArabTerrian arab = new ArabTerrian(p);
+
+            //g.BackColor = Color.AliceBlue;
+        }*/
+        /*public void ClearColor(PaintEventArgs e)
+        {
+            e.Graphics.Clear(Color.Yellow);
+        }*/
+        public Color BackColor()
+        {
+            Color color = Color.Yellow;
+            return color;
+        }
     }
 }
