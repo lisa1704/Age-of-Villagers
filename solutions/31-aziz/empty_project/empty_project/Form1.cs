@@ -17,5 +17,9 @@ namespace empty_project
             InitializeComponent();
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
