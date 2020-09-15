@@ -22,6 +22,23 @@ namespace AgeOfVillagers
         }
         public void saveState(Village village)
         {
+            villageState = village;
+            villageSaved = JsonConvert.SerializeObject(villageState);
+            sfd.Filter = "aov|*.aov";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                savePath = sfd.FileName;
+            }
+            if (savePath != null)
+            {
+                using (Stream s = File.Open(savePath, FileMode.Create))
+                using (StreamWriter sw = new StreamWriter(s))
+                    sw.Write(villageSaved);
+            }
+            else
+            {
+                return;
+            }
 
         }
     }
