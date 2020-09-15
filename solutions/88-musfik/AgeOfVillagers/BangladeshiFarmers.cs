@@ -52,4 +52,12 @@ namespace AgeOfVillagers
             AddComponent(new Rectangle(baseTopLeft, baseBottomRight));
         }
     }
+
+    public class BangladeshiTree : CompositeShape
+    {
+        public BangladeshiTree(Point point)
+        {
+            
+        }
+    }
 }
