@@ -7,9 +7,9 @@ namespace AgeOfVillagers
 {
     interface INation
     {
+        void DrawTree(Graphics g, Point point);
         void DrawHouse(Graphics g, Point point);
-        void DrawTree();
-        void DrawWaterSource();
+        void DrawWaterSource(Graphics g, Point point);
     }
     internal class Factory_Nation
     {

@@ -8,15 +8,15 @@ namespace AgeOfVillagers
     class BangladeshiFarmers : INation
     {
         Pen p = new Pen(Color.Green);
+        public void DrawTree(Graphics g, Point point)
+        {
+            throw new NotImplementedException();
+        }
         public void DrawHouse(Graphics g, Point point)
         {
             g.DrawLine(p, point.X, point.Y, 100, 100);
         }
-        public void DrawTree()
-        {
-            throw new NotImplementedException();
-        }
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }

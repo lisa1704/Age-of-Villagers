@@ -85,7 +85,7 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationfactory.GetNation(village_type).DrawTree(g, point);
             }
 
             foreach (Point point in house_point)
@@ -95,7 +95,7 @@ namespace AgeOfVillagers
 
             foreach (Point point in waterSource_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationfactory.GetNation(village_type).DrawWaterSource(g, point);
             }
 
         }

@@ -149,6 +149,9 @@ namespace AgeOfVillagers
             this.NationName.Size = new System.Drawing.Size(200, 28);
             this.NationName.TabIndex = 14;
             this.NationName.SelectedIndexChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
+            this.NationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmers"
+             });
             // 
             // CreateNewVillage
             // 
