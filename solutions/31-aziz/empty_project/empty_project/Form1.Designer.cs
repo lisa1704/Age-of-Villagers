@@ -69,6 +69,7 @@
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(120, 94);
             this.NationList.TabIndex = 1;
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // NewVillage
             // 
@@ -78,6 +79,7 @@
             this.NewVillage.TabIndex = 2;
             this.NewVillage.Text = "New Village";
             this.NewVillage.UseVisualStyleBackColor = true;
+            this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // OpenVillage
             // 
@@ -87,6 +89,7 @@
             this.OpenVillage.TabIndex = 3;
             this.OpenVillage.Text = "Open Village";
             this.OpenVillage.UseVisualStyleBackColor = true;
+            this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // Tree
             // 
@@ -96,26 +99,27 @@
             this.Tree.TabIndex = 4;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = true;
+            this.Tree.Click += new System.EventHandler(this.Tree_Click);
             // 
             // House
             // 
-            this.House.Location = new System.Drawing.Point(606, 219);
+            this.House.Location = new System.Drawing.Point(606, 224);
             this.House.Name = "House";
             this.House.Size = new System.Drawing.Size(91, 23);
             this.House.TabIndex = 5;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.button4_Click);
+            this.House.Click += new System.EventHandler(this.House_Click);
             // 
             // WaterSource
             // 
-            this.WaterSource.Location = new System.Drawing.Point(703, 219);
+            this.WaterSource.Location = new System.Drawing.Point(703, 224);
             this.WaterSource.Name = "WaterSource";
             this.WaterSource.Size = new System.Drawing.Size(85, 23);
             this.WaterSource.TabIndex = 6;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.button5_Click);
+            this.WaterSource.Click += new System.EventHandler(this.WaterSource_Click);
             // 
             // Form1
             // 

@@ -27,17 +27,37 @@ namespace empty_project
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Tree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
         {
 
         }
