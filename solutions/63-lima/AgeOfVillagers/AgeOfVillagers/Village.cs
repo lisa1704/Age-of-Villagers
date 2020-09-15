@@ -22,7 +22,7 @@ namespace AgeOfVillagers
         {
             water_resources.Add((X, Y));
         }
-        public void paintAgain()
+        public void paint_Again()
         { 
             
         }
