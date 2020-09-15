@@ -74,4 +74,11 @@ namespace AgeOfVillagers
             AddComponent(new VShape(left_branch_left, left_branch_root, left_branch_right));
         }
     }
+
+    public class EgyptianKings_WaterResource : CompositeShape
+    {
+        public EgyptianKings_WaterResource(Point root)
+        {
+        }
+    }
 }
