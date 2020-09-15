@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.SaveVillage = new System.Windows.Forms.Button();
             this.NationList = new System.Windows.Forms.ListBox();
             this.NewVillage = new System.Windows.Forms.Button();
@@ -36,15 +35,8 @@
             this.Tree = new System.Windows.Forms.Button();
             this.House = new System.Windows.Forms.Button();
             this.WaterSource = new System.Windows.Forms.Button();
+            this.DrawingPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 400);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // SaveVillage
             // 
@@ -121,11 +113,20 @@
             this.WaterSource.UseVisualStyleBackColor = true;
             this.WaterSource.Click += new System.EventHandler(this.WaterSource_Click);
             // 
+            // DrawingPanel
+            // 
+            this.DrawingPanel.Location = new System.Drawing.Point(0, 0);
+            this.DrawingPanel.Name = "DrawingPanel";
+            this.DrawingPanel.Size = new System.Drawing.Size(600, 400);
+            this.DrawingPanel.TabIndex = 7;
+            this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DrawingPanel);
             this.Controls.Add(this.WaterSource);
             this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
@@ -133,7 +134,6 @@
             this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.NationList);
             this.Controls.Add(this.SaveVillage);
-            this.Controls.Add(this.panel2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
@@ -142,8 +142,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.ListBox NationList;
         private System.Windows.Forms.Button NewVillage;
@@ -151,6 +149,7 @@
         private System.Windows.Forms.Button Tree;
         private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button WaterSource;
+        private System.Windows.Forms.Panel DrawingPanel;
     }
 }
 

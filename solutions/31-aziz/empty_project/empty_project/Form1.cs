@@ -17,8 +17,7 @@ namespace empty_project
         {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -62,5 +61,7 @@ namespace empty_project
         {
             element_text = "Water Source";
         }
+
+        
     }
 }
