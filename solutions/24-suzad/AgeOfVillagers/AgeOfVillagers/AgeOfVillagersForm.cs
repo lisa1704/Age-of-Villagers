@@ -48,9 +48,21 @@ namespace AgeOfVillagers
             else if (radiobtnWaterSource.Checked)
             {
                 rdbtn = radiobtnWaterSource.Text;
+            }
+            else
+            {
+                rdbtn = "";
             }*/
             RadioButton checkedButton = pnlComponentHolder.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-            rdbtn = checkedButton.Text;
+            if (checkedButton != null)
+            {
+                rdbtn = checkedButton.Text;
+            }
+            else
+            {
+                rdbtn = "";
+            }
+            
         }
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
@@ -61,7 +73,7 @@ namespace AgeOfVillagers
             Pen pen = new Pen(Color.Black);
             setRadioButton();
             VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
-            IVillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
+            VillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
             villageComponent.drawComponent(e.Location, graphics, pen);
             pt = villageComponent.getPoint();
             if (rdbtn == "House")

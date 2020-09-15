@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKingTree : IVillageComponent
+    class EgyptianKingTree : VillageComponent
     {
         public Point e;
         public EgyptianKingTree(Point e)
         {
             this.e = e;
         }
-        public void drawComponent(Point e, Graphics graphics, Pen pen)
+        public override void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -27,7 +27,7 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 2, y - 12, x - 1, y - 24);
         }
 
-        public Point getPoint()
+        public override Point getPoint()
         {
             return e;
         }

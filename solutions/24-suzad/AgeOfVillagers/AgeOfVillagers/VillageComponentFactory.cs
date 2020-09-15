@@ -8,6 +8,6 @@ namespace AgeOfVillagers
 {
     public abstract class VillageComponentFactory
     {
-        public abstract IVillageComponent getComponent(string radiobtn, Point e);
+        public abstract VillageComponent getComponent(string radiobtn, Point e);
     }
 }

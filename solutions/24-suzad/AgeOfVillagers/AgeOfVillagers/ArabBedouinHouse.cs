@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouinHouse : IVillageComponent
+    public class ArabBedouinHouse : VillageComponent
     {
         public Point e;
 
@@ -14,7 +14,7 @@ namespace AgeOfVillagers
         {
             this.e = e;
         }
-        public void drawComponent(Point e, Graphics graphics, Pen pen)
+        public override void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -26,7 +26,7 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 10, y, x, y);
         }
 
-        public Point getPoint()
+        public override Point getPoint()
         {
             return e;
         }

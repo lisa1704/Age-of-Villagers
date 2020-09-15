@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BdFarmerRiver : IVillageComponent
+    class BdFarmerRiver : VillageComponent
     {
         public Point e;
         public BdFarmerRiver(Point e)
         {
             this.e = e;
         }
-        public void drawComponent(Point e, Graphics graphics, Pen pen)
+        public override void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -28,7 +28,7 @@ namespace AgeOfVillagers
             graphics.DrawLine(pen, x - 6, y + 5, x, y);
         }
 
-        public Point getPoint()
+        public override Point getPoint()
         {
             return e;
         }

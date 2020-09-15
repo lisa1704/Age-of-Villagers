@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunterHouse : IVillageComponent
+    class InuitHunterHouse : VillageComponent
     {
         public Point e;
         public InuitHunterHouse(Point e)
         {
             this.e = e;
         }
-        public void drawComponent(Point e, Graphics graphics, Pen pen)
+        public override void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;
@@ -22,7 +22,7 @@ namespace AgeOfVillagers
             graphics.DrawArc(pen, x + 5, y - 6, 6, 12, 180, 180);
         }
 
-        public Point getPoint()
+        public override Point getPoint()
         {
             return e;
         }

@@ -8,13 +8,13 @@ namespace AgeOfVillagers
 {
     class InuitHunterComponentFactory : VillageComponentFactory
     {
-        public override IVillageComponent getComponent(string radiobtn,Point e)
+        public override VillageComponent getComponent(string radiobtn,Point e)
         {
             if (radiobtn == "House")
             {
                 return new InuitHunterHouse(e);
             }
-            return null;
+            return new NullVillageComponent();
         }
     }
 }

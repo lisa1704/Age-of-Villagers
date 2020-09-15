@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     public class ArabBedouinComponentFactory : VillageComponentFactory
     {
-        public override IVillageComponent getComponent(string radiobtn,Point e)
+        public override VillageComponent getComponent(string radiobtn,Point e)
         {
             if(radiobtn=="House")
             {
@@ -18,7 +18,7 @@ namespace AgeOfVillagers
             {
                 return new ArabBedouinTree(e);
             }
-            return null;
+            return new NullVillageComponent();
         }
     }
 }

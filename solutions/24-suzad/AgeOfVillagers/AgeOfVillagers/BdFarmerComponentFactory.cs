@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     public class BdFarmerComponentFactory : VillageComponentFactory
     {
-        public override IVillageComponent getComponent(string radiobtn, Point e)
+        public override VillageComponent getComponent(string radiobtn, Point e)
         {
             if (radiobtn=="House")
             {
@@ -22,7 +22,7 @@ namespace AgeOfVillagers
             {
                 return new BdFarmerRiver(e);
             }
-            return null;
+            return new NullVillageComponent();
         }
     }
 }

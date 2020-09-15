@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public interface IVillageComponent
+    public abstract class VillageComponent
     {
         //public void drawComponent(MouseEventArgs e, Graphics graphics, Pen pen);
-        public void drawComponent(Point e, Graphics graphics, Pen pen);
-        public Point getPoint();
+        public abstract void drawComponent(Point e, Graphics graphics, Pen pen);
+        public abstract Point getPoint();
     }
 }
