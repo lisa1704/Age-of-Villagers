@@ -52,5 +52,16 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void VillageEditor_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void villageName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
