@@ -47,8 +47,7 @@ namespace Age_Of_Villagers
             this.AgeOfVillagers.AutoSize = true;
             this.AgeOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AgeOfVillagers.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.AgeOfVillagers.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.AgeOfVillagers.Location = new System.Drawing.Point(870, 23);
+            this.AgeOfVillagers.Location = new System.Drawing.Point(870, 28);
             this.AgeOfVillagers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AgeOfVillagers.Name = "AgeOfVillagers";
             this.AgeOfVillagers.Size = new System.Drawing.Size(247, 36);
@@ -93,7 +92,7 @@ namespace Age_Of_Villagers
             // 
             // saveVillagebutton
             // 
-            this.saveVillagebutton.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.saveVillagebutton.BackColor = System.Drawing.Color.Honeydew;
             this.saveVillagebutton.Location = new System.Drawing.Point(889, 381);
             this.saveVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveVillagebutton.Name = "saveVillagebutton";
@@ -105,7 +104,7 @@ namespace Age_Of_Villagers
             // 
             // newVillagebutton
             // 
-            this.newVillagebutton.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.newVillagebutton.BackColor = System.Drawing.Color.Honeydew;
             this.newVillagebutton.Location = new System.Drawing.Point(779, 426);
             this.newVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newVillagebutton.Name = "newVillagebutton";
@@ -117,7 +116,7 @@ namespace Age_Of_Villagers
             // 
             // openVillagebutton
             // 
-            this.openVillagebutton.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.openVillagebutton.BackColor = System.Drawing.Color.Honeydew;
             this.openVillagebutton.Location = new System.Drawing.Point(999, 426);
             this.openVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.openVillagebutton.Name = "openVillagebutton";
