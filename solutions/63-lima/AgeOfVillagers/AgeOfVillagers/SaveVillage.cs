@@ -44,6 +44,20 @@ namespace AgeOfVillagers
 
         public Village OpenState()
         {
+            ofd.Filter = "aov|*.aov";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                fileName = ofd.FileName;
+            }
+            if (fileName == null)
+            {
+                return villageState;
+            }
+            Stream s = File.Open(fileName, FileMode.Open);
+            StreamReader sr = new StreamReader(s);
+            json = sr.ReadLine();
+            sr.Close();
+            return JsonConvert.DeserializeObject<Village>(json);
 
         }
     }
