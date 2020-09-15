@@ -33,9 +33,9 @@ namespace Age_of_villagers
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
             sfd.RestoreDirectory = true;
-            sfd.FileName = "*.txt";
-            sfd.DefaultExt = "txt";
-            sfd.Filter = "AoV file(*.txt)| *.txt";
+            sfd.FileName = "*.aov";
+            sfd.DefaultExt = "aov";
+            sfd.Filter = "AoV file(*.aov)| *.aov";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 Stream fileStream = sfd.OpenFile();

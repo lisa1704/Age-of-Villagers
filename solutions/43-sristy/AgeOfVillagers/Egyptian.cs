@@ -23,5 +23,10 @@ namespace Age_of_villagers
             Compositeobj watersource = new Egyptian_watersource(mptop);
             watersource.paint(p, g);
         }
+
+        public Color get_backcolor()
+        {
+            return Color.LightYellow;
+        }
     }
 }

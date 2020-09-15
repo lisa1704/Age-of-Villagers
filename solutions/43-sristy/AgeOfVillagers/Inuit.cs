@@ -10,9 +10,6 @@ namespace Age_of_villagers
         {
             Compositeobj house = new Inuit_house(mptop);
             house.paint(p, g);
-            /*g.DrawArc(p, X + 25, Y+25, 50, 50, 180, 180);
-            g.DrawArc(p, X - 25, Y-25, 150, 150, 180, 180);
-            g.DrawLine(p, X - 25, Y+50, X + 125, Y+50);*/
 
         }
 
@@ -27,6 +24,11 @@ namespace Age_of_villagers
         {
             IObject waterresource = new null_obj();
             waterresource.paint(p, g);
+        }
+
+        public Color get_backcolor()
+        {
+            return Color.Snow;
         }
     }
 }

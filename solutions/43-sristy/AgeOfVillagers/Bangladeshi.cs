@@ -23,5 +23,10 @@ namespace Age_of_villagers
             watersource.paint(p, g);
 
         }
+
+        public Color get_backcolor()
+        {
+            return Color.LightGreen;
+        }
     }
 }

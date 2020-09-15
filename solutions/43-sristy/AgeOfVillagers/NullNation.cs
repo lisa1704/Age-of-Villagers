@@ -25,6 +25,11 @@ namespace Age_of_villagers
             warning();
         }
 
+        public Color get_backcolor()
+        {
+            return Color.White;
+        }
+
         public void warning()
         {
             DialogResult d;

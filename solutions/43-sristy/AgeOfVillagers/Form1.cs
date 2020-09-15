@@ -114,7 +114,7 @@ namespace Age_of_villagers
         private void vallagetype_SelectedIndexChanged(object sender, EventArgs e)
         {
             type = villagetype.Text;
-            nationfactory.GetNation(type);
+            drawpanel.BackColor=nationfactory.GetNation(type).get_backcolor();
             drawpanel.Refresh();
         }
 
@@ -144,6 +144,7 @@ namespace Age_of_villagers
 
         private void newvillage_Click(object sender, EventArgs e)
         {
+            villagename.Clear();
             H_points.Clear();
             T_points.Clear();
             W_points.Clear();
