@@ -48,6 +48,7 @@
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(600, 400);
             this.drawingPanel.TabIndex = 0;
+            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
             // 
             // toolPanel
             // 
@@ -182,6 +183,7 @@
             this.Controls.Add(this.toolPanel);
             this.Controls.Add(this.drawingPanel);
             this.Name = "VillageWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Age of Villagers";
             this.toolPanel.ResumeLayout(false);
             this.toolPanel.PerformLayout();
@@ -194,8 +196,8 @@
         private System.Windows.Forms.Panel drawingPanel;
         private System.Windows.Forms.Panel toolPanel;
         private System.Windows.Forms.Label gameLabel;
-        private System.Windows.Forms.Label nationLabel;
-        private System.Windows.Forms.Label villageLabel;
+        public System.Windows.Forms.Label nationLabel;
+        public System.Windows.Forms.Label villageLabel;
         private System.Windows.Forms.RadioButton waterButton;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton treeButton;

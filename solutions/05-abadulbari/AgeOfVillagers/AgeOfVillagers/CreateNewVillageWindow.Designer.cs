@@ -44,6 +44,7 @@
             this.cancelButton.TabIndex = 0;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // createButton
             // 
@@ -53,6 +54,7 @@
             this.createButton.TabIndex = 0;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // nameLabel
             // 
@@ -80,16 +82,23 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(181, 31);
             this.nameBox.TabIndex = 2;
-            this.nameBox.Text = "Give a Name";
+            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // nationBox
             // 
+            this.nationBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nationBox.FormattingEnabled = true;
+            this.nationBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.nationBox.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.nationBox.Location = new System.Drawing.Point(258, 160);
             this.nationBox.Name = "nationBox";
             this.nationBox.Size = new System.Drawing.Size(182, 33);
             this.nationBox.TabIndex = 3;
-            this.nationBox.Text = "Select Nation";
+            this.nationBox.SelectedIndexChanged += new System.EventHandler(this.nationBox_SelectedIndexChanged);
             // 
             // CreateNewVillageWindow
             // 
@@ -101,6 +110,7 @@
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.cancelButton);
             this.Name = "CreateNewVillageWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create new Village";
             this.Load += new System.EventHandler(this.CreateVillageWindow_Load);
             this.ResumeLayout(false);

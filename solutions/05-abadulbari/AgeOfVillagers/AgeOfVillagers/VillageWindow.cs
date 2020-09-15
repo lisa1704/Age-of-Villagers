@@ -49,7 +49,8 @@ namespace AgeOfVillagers
 
         private void newButton_Click(object sender, EventArgs e)
         {
-
+            Form f = new CreateNewVillageWindow(this);
+            f.Show();
         }
      
         private void houseRadioBtn_CheckedChanged(object sender, EventArgs e)
@@ -61,6 +62,10 @@ namespace AgeOfVillagers
         {
 
         }
-        
+
+        private void drawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
