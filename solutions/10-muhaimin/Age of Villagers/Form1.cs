@@ -71,13 +71,13 @@ namespace Age_of_Villagers
             Graphics g = panel1.CreateGraphics();
             Pen p = new Pen(Color.Black);
             Font fy = new Font("Helvetica", 10, FontStyle.Bold);
-            Brush br = new SolidBrush(System.Drawing.Color.Red);
+            Brush br = new SolidBrush(System.Drawing.Color.Black);
             g.DrawString(text, fy, br, new Point(x, y));
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            g.Clear(Color.White);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
