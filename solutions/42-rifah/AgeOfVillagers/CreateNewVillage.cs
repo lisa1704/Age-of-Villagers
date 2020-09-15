@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         int x;
         int y;
         Graphics g;
-        string text = "";
+        string ItemNames = "";
         string village_name = "";
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
@@ -37,8 +37,8 @@ namespace AgeOfVillagers
 
         private void villageName_Click(object sender, EventArgs e)
         {
-            string text1 = villageName.Text;
-            village_name = text1;
+            string vlgName = villageName.Text;
+            village_name = vlgName;
         }
 
         private void nation_Click(object sender, EventArgs e)
@@ -48,17 +48,17 @@ namespace AgeOfVillagers
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
-            text = "Tree";
+            ItemNames = "Tree";
         }
 
         private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
-            text = "House";
+            ItemNames = "House";
         }
 
         private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
-            text = "WaterSource";
+            ItemNames = "WaterSource";
         }
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
@@ -100,17 +100,17 @@ namespace AgeOfVillagers
 
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            if (text == "Tree")
+            if (ItemNames == "Tree")
             {
                 tree_point.Add(e.Location);
             }
 
-            if (text == "House")
+            if (ItemNames == "House")
             {
                 house_point.Add(e.Location);
             }
          
-            if (text == "WaterSource")
+            if (ItemNames == "WaterSource")
             {
                 waterSource_point.Add(e.Location);
             }
