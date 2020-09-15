@@ -52,18 +52,17 @@ namespace AgeOfVillagers
     {
         public InuitHouse(Point MPt)
         {
-            Point Lpt1 = new Point(MPt.X - 60, MPt.Y + 10);
-            Point Lpt2 = new Point(MPt.X + 60, MPt.Y +10);
-            Point Opt1 = new Point(MPt.X - 40, MPt.Y + -50);
-            Point topPt = new Point(MPt.X - 24, MPt.Y + 8);
-            Point topPt2 = new Point(MPt.X + 40, MPt.Y + 40);
-            Point topPt3 = new Point(MPt.X - 10, MPt.Y + 6);
-            Point topPt4 = new Point(MPt.X + 20, MPt.Y + 25);
+            Point Lpt1 = new Point(MPt.X - 45, MPt.Y + 10);
+            Point Lpt2 = new Point(MPt.X + 50, MPt.Y +10);
+            Point Opt1 = new Point(MPt.X - 40, MPt.Y + -40);
+          
+            Point topPt2 = new Point(MPt.X + 50, MPt.Y + 55);
+            Point topPt4 = new Point(MPt.X + 20, MPt.Y + 20);
             AddComp(new Line(Lpt1, Lpt2));
             //AddComp(new DrawArc(tpt1.X, tpt1.Y + 40, tpt2.X - tpt1.X, tpt2.Y - tpt1.Y, 0, 360));
             //AddComp(new ShapeHalfCircle(MPt, topPt));
-            AddComp(new ShapeHalfCircle(topPt, new Point(topPt2.X, (int)(topPt2.Y))));
-            AddComp(new ShapeHalfCircle(topPt3, new Point(topPt4.X, (int)(topPt4.Y))));
+            AddComp(new ShapeHalfCircle(Opt1, new Point(topPt2.X, (int)(topPt2.Y))));
+            AddComp(new ShapeHalfCircle(MPt, new Point(topPt4.X, (int)(topPt4.Y))));
 
         }
     }
