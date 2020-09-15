@@ -11,4 +11,9 @@ namespace Age_Of_Villagers
         void Draw_WaterSource();
 
     }
+
+    internal class FactoryNation
+    {
+
+    }
 }
