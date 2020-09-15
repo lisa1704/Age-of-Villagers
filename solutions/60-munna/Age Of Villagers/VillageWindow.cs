@@ -13,7 +13,23 @@ namespace Age_Of_Villagers
     public partial class VillageWindow : Form
     {
         private Panel drawingPanel,toolsPanel;
+        public VillageWindow()
+        {
+            InitializeComponent();
+        }
 
+        private void saveVillageButton_Checked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+        private void newVillageButton_Checked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+        private void openVillageButton_Checked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
 =       private void treeRadioButton_Checked(object sender, EventArgs e)
         {
@@ -28,12 +44,6 @@ namespace Age_Of_Villagers
         private void waterRadioButton_Checked(object sender, EventArgs e)
         {
             throw new NotImplementedException();
-        }
-
-
-        public VillageWindow()
-        {
-            InitializeComponent();
         }
 
     }
