@@ -31,11 +31,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.SaveVillage = new System.Windows.Forms.Button();
             this.NationList = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.NewVillage = new System.Windows.Forms.Button();
+            this.OpenVillage = new System.Windows.Forms.Button();
+            this.Tree = new System.Windows.Forms.Button();
+            this.House = new System.Windows.Forms.Button();
+            this.WaterSource = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel2
@@ -70,63 +70,63 @@
             this.NationList.Size = new System.Drawing.Size(120, 94);
             this.NationList.TabIndex = 1;
             // 
-            // button1
+            // NewVillage
             // 
-            this.button1.Location = new System.Drawing.Point(606, 377);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "New Village";
-            this.button1.UseVisualStyleBackColor = true;
+            this.NewVillage.Location = new System.Drawing.Point(606, 377);
+            this.NewVillage.Name = "NewVillage";
+            this.NewVillage.Size = new System.Drawing.Size(91, 23);
+            this.NewVillage.TabIndex = 2;
+            this.NewVillage.Text = "New Village";
+            this.NewVillage.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // OpenVillage
             // 
-            this.button2.Location = new System.Drawing.Point(703, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Open Village";
-            this.button2.UseVisualStyleBackColor = true;
+            this.OpenVillage.Location = new System.Drawing.Point(703, 377);
+            this.OpenVillage.Name = "OpenVillage";
+            this.OpenVillage.Size = new System.Drawing.Size(85, 23);
+            this.OpenVillage.TabIndex = 3;
+            this.OpenVillage.Text = "Open Village";
+            this.OpenVillage.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Tree
             // 
-            this.button3.Location = new System.Drawing.Point(659, 177);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Tree";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Tree.Location = new System.Drawing.Point(659, 177);
+            this.Tree.Name = "Tree";
+            this.Tree.Size = new System.Drawing.Size(83, 23);
+            this.Tree.TabIndex = 4;
+            this.Tree.Text = "Tree";
+            this.Tree.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // House
             // 
-            this.button4.Location = new System.Drawing.Point(606, 219);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "House";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.House.Location = new System.Drawing.Point(606, 219);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(91, 23);
+            this.House.TabIndex = 5;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // WaterSource
             // 
-            this.button5.Location = new System.Drawing.Point(703, 219);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Water Source";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.WaterSource.Location = new System.Drawing.Point(703, 219);
+            this.WaterSource.Name = "WaterSource";
+            this.WaterSource.Size = new System.Drawing.Size(85, 23);
+            this.WaterSource.TabIndex = 6;
+            this.WaterSource.Text = "Water Source";
+            this.WaterSource.UseVisualStyleBackColor = true;
+            this.WaterSource.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.WaterSource);
+            this.Controls.Add(this.House);
+            this.Controls.Add(this.Tree);
+            this.Controls.Add(this.OpenVillage);
+            this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.NationList);
             this.Controls.Add(this.SaveVillage);
             this.Controls.Add(this.panel2);
@@ -142,11 +142,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.ListBox NationList;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button NewVillage;
+        private System.Windows.Forms.Button OpenVillage;
+        private System.Windows.Forms.Button Tree;
+        private System.Windows.Forms.Button House;
+        private System.Windows.Forms.Button WaterSource;
     }
 }
 
