@@ -14,20 +14,22 @@ namespace Age_Of_Villagers
     {
         private Panel drawingPanel,toolsPanel;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
+=       private void treeRadioButton_Checked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void houseRadioButton_Checked(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void waterRadioButton_Checked(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
+
 
         public VillageWindow()
         {
