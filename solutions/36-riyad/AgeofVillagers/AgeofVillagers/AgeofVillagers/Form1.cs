@@ -16,9 +16,10 @@ namespace AgeofVillagers
         string Text = "";
         string Name = "";
         Graphics g;
+        string VType = "";
         Pen p;
-        List<Point> housePoints = new List<Point>();
-        List<Point> treePoints = new List<Point>();
+        List<Point> HousePoints = new List<Point>();
+        List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
 
         public Form1()
@@ -71,11 +72,31 @@ namespace AgeofVillagers
             MessageBox.Show("Village opened");
         }
 
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = DrawPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
+
+            foreach (Point pt in HousePoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            }
+            foreach (Point pt in TreePoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            }
+            foreach (Point pt in WaterPoints)
+            {
+                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            }
         }
+
+
+
+
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -84,12 +105,33 @@ namespace AgeofVillagers
 
         private void NationList_Select(object sender, EventArgs e)
         {
-
+            VType = nation.Text;
         }
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void draw_panelMouseClick(object sender, MouseEventArgs e)
+        {
+            {
+
+                if (Text == "House")
+                {
+                    HousePoints.Add(e.Location);
+                }
+                if (Text == "Tree")
+                {
+                    TreePoints.Add(e.Location);
+                }
+                if (Text == "WaterSource")
+                {
+                    WaterPoints.Add(e.Location);
+                }
+                DrawPanel.Invalidate();
+            }
         }
     }
 }
