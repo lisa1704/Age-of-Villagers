@@ -36,5 +36,10 @@ namespace empty_project
         {
 
         }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
