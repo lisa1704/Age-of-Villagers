@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-public abstract class Nation
+public abstract class NationAbstract
 {
     protected Graphics g;
     protected Panel panel; 
@@ -10,7 +10,7 @@ public abstract class Nation
     protected ITree tree;
     protected IHouse house;
     protected IWaterSource waterSource;
-    public Nation(Graphics newg , Panel panel)
+    public NationAbstract(Graphics newg , Panel panel)
     {
         g = newg;
         this.panel = panel;

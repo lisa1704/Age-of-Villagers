@@ -169,7 +169,7 @@
             this.village_name.Name = "village_name";
             this.village_name.Size = new System.Drawing.Size(248, 22);
             this.village_name.TabIndex = 1;
-            this.village_name.Text = "Katakhali";
+            this.village_name.Text = "Edit Village Name";
             this.village_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.village_name.TextChanged += new System.EventHandler(this.village_name_TextChanged);
             // 
@@ -189,7 +189,7 @@
             // 
             // drawing_panel
             // 
-            this.drawing_panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.drawing_panel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.drawing_panel.Location = new System.Drawing.Point(71, 56);
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);

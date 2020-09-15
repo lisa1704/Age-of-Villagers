@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-public class BangladeshiFarmers : Nation
+public class BangladeshiFarmers : NationAbstract
 {
     public BangladeshiFarmers(Graphics newg, Panel panel) : base(newg, panel)
     {

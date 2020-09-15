@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-public class EgyptianKings : Nation
+public class EgyptianKings : NationAbstract
 {
    
     public EgyptianKings(Graphics newg , Panel panel) : base(newg , panel)

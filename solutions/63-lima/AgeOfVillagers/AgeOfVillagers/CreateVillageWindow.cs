@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 {   
     public partial class CreateVillageWindow : Form
     {
-        protected Nation nation;
+        protected NationAbstract nation;
         Graphics newg ;
         Village myvillage = new Village();
         SaveVillage myvillageSaver;
@@ -54,12 +54,12 @@ namespace AgeOfVillagers
         }
         private void house_checkedchanged(object sender, EventArgs e)
         {
-           //ext = "house";
+           //text = "house";
         }
 
         private void water_resource_checkedchanged(object sender, EventArgs e)
         {
-            //xt = "water resource";
+            //text = "water resource";
         }
 
         private void select_nation_selectedindexchanged(object sender, EventArgs e)

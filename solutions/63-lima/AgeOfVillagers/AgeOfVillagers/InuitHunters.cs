@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-public class InuitHunters : Nation
+public class InuitHunters : NationAbstract
 {
     public InuitHunters(Graphics newg , Panel panel) : base(newg , panel)
     {

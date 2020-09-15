@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-public class ArabBedouin : Nation
+public class ArabBedouin : NationAbstract
 {
     public ArabBedouin(Graphics newg , Panel panel) : base(newg , panel)
 	{
