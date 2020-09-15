@@ -12,52 +12,79 @@ namespace AgeOfVillagers
     public partial class DrawingWindow : Form
     {
         private String item;
-        public static String VillageName;
+        public static string VillageName;
         private String Nation;
+        int x;
+        int y;
 
         public DrawingWindow()
         {
             InitializeComponent();
         }
+        private void DrawingWindow_Load(object sender, EventArgs e)
+        {
+            label2.Text = Form1.VillageName;
+        }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void TreeButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void HouseButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void WaterButton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveVillage_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NewVillage_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void OpenVillage_Click(object sender, EventArgs e)
         {
 
+        }
+
+ 
+
+        private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point p = new Point(e.X, e.Y);
+            x = p.X;
+            y = p.Y;
+            Drawingpanel.Invalidate();
         }
 
         private void Drawingpanel_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = Drawingpanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+            if (radioButton1.Checked == true)
+            {
 
-        }
+                g.DrawLine(p, x - 10, y - 20, x - 100, y - 100);
+            }
+            if (radioButton2.Checked == true)
+            {
 
-        private void DrawingWindow_Load(object sender, EventArgs e)
-        {
-            label2.Text = Form1.VillageName;
+                g.DrawRectangle(p, x - 50, y - 50, 100, 100);
+            }
+            if (radioButton3.Checked == true)
+            {
+
+                g.DrawEllipse(p, x - 50, y - 50, 100, 100);
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
             this.Drawingpanel.Size = new System.Drawing.Size(540, 446);
             this.Drawingpanel.TabIndex = 0;
             this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
+            this.Drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawingpanel_MouseClick);
             // 
             // ToolsPanel
             // 
@@ -84,7 +85,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(77, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 30);
+            this.label2.Size = new System.Drawing.Size(135, 30);
             this.label2.TabIndex = 8;
             this.label2.Text = "village name";
             // 
@@ -96,7 +97,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Open Village";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // button2
             // 
@@ -106,7 +107,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "New Village";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // button1
             // 
@@ -116,7 +117,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Save Village";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.SaveVillage_Click);
             // 
             // radioButton3
             // 
@@ -129,7 +130,7 @@
             this.radioButton3.Text = "WaterSource";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.WaterButton_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -142,7 +143,7 @@
             this.radioButton2.Text = "House";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.HouseButton_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -155,7 +156,7 @@
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeButton_CheckedChanged);
             // 
             // label1
             // 
@@ -178,7 +179,7 @@
             this.Controls.Add(this.ToolsPanel);
             this.Controls.Add(this.Drawingpanel);
             this.Name = "DrawingWindow";
-            this.Text = "DrawingWindow";
+            this.Text = "VillageEditor";
             this.Load += new System.EventHandler(this.DrawingWindow_Load);
             this.ToolsPanel.ResumeLayout(false);
             this.ToolsPanel.PerformLayout();
