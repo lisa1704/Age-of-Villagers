@@ -49,7 +49,8 @@
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(600, 400);
             this.drawingPanel.TabIndex = 0;
-            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
+            this.drawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick1_drawingPanel);
             // 
             // toolsPanel
             // 
@@ -86,6 +87,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Save Village";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -96,6 +98,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "New Village";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -106,6 +109,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Open Village";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // radioButton1
             // 
@@ -120,6 +124,7 @@
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -134,6 +139,7 @@
             this.radioButton2.Text = "Water Source";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -148,17 +154,26 @@
             this.radioButton3.Text = "House";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // listBox1
             // 
+            this.listBox1.AllowDrop = true;
             this.listBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.listBox1.Location = new System.Drawing.Point(621, 94);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(167, 20);
             this.listBox1.TabIndex = 5;
             this.listBox1.Tag = " ";
+            this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick_NationList);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // VillageEditor
             // 
@@ -187,7 +202,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+
         private System.Windows.Forms.Label aovLabel;
         private System.Windows.Forms.TextBox villageName;
         private System.Windows.Forms.Panel drawingPanel;
