@@ -11,10 +11,17 @@ namespace AgeOfVillagers
 {
     public class BDHouse : CompositeShape
     {
-        public BDHouse(Point top, Point topLeft, Point bottomRight)
+        public BDHouse(Point MPt)
         {
-            AddComp(new ShapeRectangle(topLeft, bottomRight));
-            AddComp(new Triangle(top, topLeft, new Point(bottomRight.X, topLeft.Y)));
+            // new Point(pt.X - 70, pt.Y + 40), new Point(pt.X + 70, pt.Y + 120)
+            Point tpt1 = new Point(MPt.X + 50, MPt.Y );
+            Point tpt2 = new Point(MPt.X + 24, MPt.Y -24);
+            Point rpt1 = new Point(tpt1.X , tpt1.Y);
+            Point rpt2 = new Point(MPt.X , MPt.Y + 30);
+
+            AddComp(new Triangle(tpt1, tpt2, MPt));
+            AddComp(new ShapeRectangle(rpt1, rpt2));
+           
         }
 
     }
