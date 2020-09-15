@@ -6,8 +6,8 @@ namespace AgeOfVillagers
 {
     class GameKeyInvoker
     {
-        Command theCommand;
-        public GameKeyInvoker(Command theCommand)
+        GameControlCommand theCommand;
+        public GameKeyInvoker(GameControlCommand theCommand)
         {
             this.theCommand = theCommand;
         }

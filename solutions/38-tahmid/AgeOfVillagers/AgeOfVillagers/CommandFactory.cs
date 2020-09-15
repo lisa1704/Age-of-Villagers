@@ -7,7 +7,7 @@ namespace AgeOfVillagers
 {
     class CommandFactory
     {
-        public Command CreateCommand(String hint, IGames pressedKey, Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
+        public GameControlCommand CreateCommand(String hint, IGames pressedKey, Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
 
             return new CreateVillage(pressedKey, drawing_panel, village_name,sVillageName);

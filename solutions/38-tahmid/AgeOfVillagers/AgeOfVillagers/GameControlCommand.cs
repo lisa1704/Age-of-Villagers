@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface Command
+    interface GameControlCommand
     {
         public void execute();
     }

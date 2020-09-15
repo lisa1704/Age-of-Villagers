@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class CreateVillage : Command
+    class CreateVillage : GameControlCommand
     {
         public IGames pressedKey;
         Panel drawing_panel;
