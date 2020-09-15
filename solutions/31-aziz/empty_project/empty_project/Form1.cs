@@ -67,19 +67,19 @@ namespace empty_project
             element_text = "Water Source";
         }
 
-        private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
+        private void DrawingPanel_MouseClick(object sender, MouseEventArgs click)
         {
             if (element_text == "Tree")
             {
-                treePoints.Add(e.Location);
+                treePoints.Add(click.Location);
             }
             if (element_text == "House")
             {
-                housePoints.Add(e.Location);
+                housePoints.Add(click.Location);
             }
             if (element_text == "WaterSource")
             {
-                watersourcePoints.Add(e.Location);
+                watersourcePoints.Add(click.Location);
             }
         }
     }
