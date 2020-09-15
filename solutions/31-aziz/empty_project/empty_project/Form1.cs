@@ -12,6 +12,7 @@ namespace empty_project
 {
     public partial class Form1 : Form
     {
+        string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace empty_project
 
         private void Tree_Click(object sender, EventArgs e)
         {
-
+            text = "Tree";
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace empty_project
 
         private void House_Click(object sender, EventArgs e)
         {
-
+            text = "House";
         }
 
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace empty_project
 
         private void WaterSource_Click(object sender, EventArgs e)
         {
-
+            text = "Water Source";
         }
     }
 }
