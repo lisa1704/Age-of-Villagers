@@ -105,12 +105,12 @@ namespace Age_of_Villagers
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            
+            text = "House";
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            
+            text = "Water";
         }
     }
 }
