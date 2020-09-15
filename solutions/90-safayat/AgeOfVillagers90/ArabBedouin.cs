@@ -12,7 +12,8 @@ namespace AgeOfVillagers90
         Pen p = new Pen(Color.Violet);
         public void DrawHouse(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            ArabBedouinHOuse abhouse = new ArabBedouinHOuse(pt);
+            abhouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point pt)
