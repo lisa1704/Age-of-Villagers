@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
+    int x;
+    int y;
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -64,7 +67,26 @@ namespace Age_of_Villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = panel1.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point p = new Point(e.X, e.Y);
+            x = p.X;
+            y = p.Y;
+            panel1.Invalidate();
         }
     }
 }
