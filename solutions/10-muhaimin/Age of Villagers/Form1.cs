@@ -15,6 +15,7 @@ namespace Age_of_Villagers
         int x;
         int y;
         Graphics g;
+        String text = "";
         public Form1()
         {
             InitializeComponent();
@@ -69,6 +70,9 @@ namespace Age_of_Villagers
         {
             Graphics g = panel1.CreateGraphics();
             Pen p = new Pen(Color.Black);
+            Font fy = new Font("Helvetica", 10, FontStyle.Bold);
+            Brush br = new SolidBrush(System.Drawing.Color.Red);
+            g.DrawString(text, fy, br, new Point(x, y));
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -92,6 +96,21 @@ namespace Age_of_Villagers
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            text = "Tree";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
