@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    partial class Arc
+    partial class DrawArc
     {
         public class BDTree : CompositeShape
         {
