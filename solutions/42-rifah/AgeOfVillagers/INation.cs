@@ -10,4 +10,10 @@ namespace AgeOfVillagers
         void DrawTree();
         void DrawWaterSource();
     }
+    internal class Factory_Nation
+    {
+
+    }
+
+
 }
