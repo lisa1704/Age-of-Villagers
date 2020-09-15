@@ -48,7 +48,7 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
+            Graphics g = this.Drawingpanel.CreateGraphics();
             g.Clear(Color.White);
 
         }
@@ -85,6 +85,6 @@ namespace AgeOfVillagers
             }
         }
 
-      
+        
     }
 }
