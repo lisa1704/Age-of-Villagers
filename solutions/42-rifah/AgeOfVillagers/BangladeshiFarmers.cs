@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
     {
-        public void DrawHouse()
+        Pen p = new Pen(Color.Green);
+        public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            g.DrawLine(p, point.X, point.Y, 100, 100);
         }
         public void DrawTree()
         {

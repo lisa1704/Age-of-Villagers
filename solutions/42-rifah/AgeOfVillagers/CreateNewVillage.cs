@@ -17,9 +17,12 @@ namespace AgeOfVillagers
         Graphics g;
         string ItemNames = "";
         string village_name = "";
+        string village_type = "";
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
+
+        Factory_Nation nationfactory = new Factory_Nation();
         public CreateNewVillage()
         {
             InitializeComponent();
@@ -87,7 +90,7 @@ namespace AgeOfVillagers
 
             foreach (Point point in house_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationfactory.GetNation(village_type).DrawHouse(g, point);
             }
 
             foreach (Point point in waterSource_point)
@@ -115,6 +118,11 @@ namespace AgeOfVillagers
             }
 
             drawingPanel.Invalidate();
+        }
+
+        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = NationName.Text;
         }
     }
 }
