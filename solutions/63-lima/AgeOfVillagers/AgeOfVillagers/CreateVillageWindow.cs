@@ -35,7 +35,7 @@ namespace AgeOfVillagers
 
         private void open_village_Click(object sender, EventArgs e)
         {
-            myvillageSaver.openState();
+            myvillageSaver.OpenState();
         }
 
         private void village_name_TextChanged(object sender, EventArgs e)

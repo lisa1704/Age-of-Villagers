@@ -41,5 +41,10 @@ namespace AgeOfVillagers
             }
 
         }
+
+        public Village OpenState()
+        {
+
+        }
     }
 }
