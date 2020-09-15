@@ -31,14 +31,14 @@
             this.drawingPanel = new System.Windows.Forms.Panel();
             this.toolsPanel = new System.Windows.Forms.Panel();
             this.aovLabel = new System.Windows.Forms.Label();
-            this.villageName = new System.Windows.Forms.TextBox();
+            this.VillageName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.NationBox = new System.Windows.Forms.ComboBox();
             this.drawingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,13 +70,13 @@
             this.aovLabel.Text = "Age of Villagers";
             this.aovLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // villageName
+            // VillageName
             // 
-            this.villageName.Location = new System.Drawing.Point(621, 64);
-            this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(167, 23);
-            this.villageName.TabIndex = 2;
-            this.villageName.TextChanged += new System.EventHandler(this.villageName_TextChanged);
+            this.VillageName.Location = new System.Drawing.Point(621, 64);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(167, 23);
+            this.VillageName.TabIndex = 2;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
             // 
             // button1
             // 
@@ -156,24 +156,22 @@
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.HouseClick);
             // 
-            // listBox1
+            // NationBox
             // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
+            this.NationBox.AllowDrop = true;
+            this.NationBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NationBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NationBox.FormattingEnabled = true;
+            this.NationBox.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.listBox1.Location = new System.Drawing.Point(621, 94);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 20);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.Tag = " ";
-            this.listBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick_NationList);
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.NayionListBox_SelectedIndexChanged);
+            this.NationBox.Location = new System.Drawing.Point(621, 103);
+            this.NationBox.Name = "NationBox";
+            this.NationBox.Size = new System.Drawing.Size(167, 24);
+            this.NationBox.TabIndex = 5;
+            this.NationBox.SelectedIndexChanged += new System.EventHandler(this.NationBox_SelectedIndexChanged);
             // 
             // VillageEditor
             // 
@@ -181,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 403);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.NationBox);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -189,7 +187,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.drawingPanel);
-            this.Controls.Add(this.villageName);
+            this.Controls.Add(this.VillageName);
             this.Controls.Add(this.aovLabel);
             this.Name = "VillageEditor";
             this.Text = "Form1";
@@ -204,7 +202,7 @@
 
 
         private System.Windows.Forms.Label aovLabel;
-        private System.Windows.Forms.TextBox villageName;
+        private System.Windows.Forms.TextBox VillageName;
         private System.Windows.Forms.Panel drawingPanel;
         private System.Windows.Forms.Panel toolsPanel;
         private System.Windows.Forms.Button button1;
@@ -213,7 +211,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox NationBox;
     }
 }
 

@@ -41,9 +41,9 @@ namespace AgeOfVillagers
 
         }
 
-        private void villageName_TextChanged(object sender, EventArgs e)
+        private void VillageName_TextChanged(object sender, EventArgs e)
         {
-
+            VillageName.Text = VillageName.Text;
         }
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
@@ -89,10 +89,10 @@ namespace AgeOfVillagers
         {
 
         }
-
-        private void NayionListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string selectNation = NationBox.Items[NationBox.Items].ToString();
+            MessageBox.Show(selectNation);
         }
     }
 }
