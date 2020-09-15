@@ -54,4 +54,11 @@ namespace AgeOfVillagers
             AddComponent(new Line(top, base_mid));
         }
     }
+    public class EgyptianKingsTree : CompositeShape
+    {
+        public EgyptianKingsTree(Point selectedPoint)
+        {
+            
+        }
+    }
 }
