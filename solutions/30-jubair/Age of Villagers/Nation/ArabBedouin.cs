@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.House;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -26,7 +27,10 @@ namespace Age_of_Villagers.Nation
 
         public void GetHouse(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            ArabHouse arab_house = new ArabHouse(new Point(_point.X - 8, _point.Y - 16), new Point(_point.X - 16, _point.Y ), new Point(_point.X , _point.Y), new Point(_point.X - 24, _point.Y - 16), new Point(_point.X-32, _point.Y));
+            arab_house.Paint(graphics);
+            //Point baseLeft , Point baseMedium , Point topOne, Point baseRight , Point topTwo
+            //new Point(_point.X - 4, _point.Y - 8), new Point(_point.X - 8, _point.Y ), new Point(_point.X , _point.Y), new Point(_point.X - 12, _point.Y - 8), new Point(_point.X-16, _point.Y)
         }
 
         public Object getTree(Point point)
