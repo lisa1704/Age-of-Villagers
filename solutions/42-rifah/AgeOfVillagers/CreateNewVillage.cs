@@ -37,8 +37,7 @@ namespace AgeOfVillagers
 
         private void villageName_Click(object sender, EventArgs e)
         {
-            string vlgName = villageName.Text;
-            village_name = vlgName;
+            village_name = villageName.Text; 
         }
 
         private void nation_Click(object sender, EventArgs e)
@@ -63,7 +62,7 @@ namespace AgeOfVillagers
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(villageName.Text + "Village is saved");
         }
 
         private void newVillagebutton_Click(object sender, EventArgs e)
@@ -73,7 +72,7 @@ namespace AgeOfVillagers
 
         private void openVillagebutton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Village is opened");
         }
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
