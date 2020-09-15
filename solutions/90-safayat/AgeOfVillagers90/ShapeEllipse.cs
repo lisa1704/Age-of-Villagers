@@ -11,7 +11,7 @@ namespace AgeOfVillagers90
         {
             this.topleft = topleft;
             this.bottomright = bottomright;
-            AddComponent(new Arc(topleft.X, topleft.Y, bottomright.X - topleft.X, bottomright.Y - topleft.Y, 0, 360));
+            AddComponent(new ArcShape(topleft.X, topleft.Y, bottomright.X - topleft.X, bottomright.Y - topleft.Y, 0, 360));
         }
     }
 }
