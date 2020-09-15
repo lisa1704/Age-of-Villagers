@@ -20,5 +20,13 @@ namespace age_of_villagers
             AddComponent(new Line(bottomRight, topRight));
         }
 
+        public Rectangle(Point p1,Point p2,Point p3,Point p4)
+        {
+            AddComponent(new Line(p1, p2));
+            AddComponent(new Line(p2, p3));
+            AddComponent(new Line(p3, p4));
+            AddComponent(new Line(p1, p4));
+        }
+
     }
 }
