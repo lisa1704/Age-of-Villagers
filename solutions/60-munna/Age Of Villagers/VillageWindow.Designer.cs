@@ -32,6 +32,7 @@
             this.titleOfGame = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +59,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(764, 354);
+            this.button1.Location = new System.Drawing.Point(758, 354);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 44);
             this.button1.TabIndex = 2;
@@ -77,11 +78,24 @@
             this.button2.Text = "New Village";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(867, 425);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 44);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Open Village";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.titleOfGame);
@@ -99,6 +113,7 @@
         private System.Windows.Forms.Label titleOfGame;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
