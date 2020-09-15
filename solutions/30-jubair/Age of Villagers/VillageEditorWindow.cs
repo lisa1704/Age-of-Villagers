@@ -67,8 +67,11 @@ namespace Age_of_Villagers
             //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
             //eg.GetHouse(graphics, e.Location);
 
-            ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            arab.GetHouse(graphics, e.Location);
+            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
+            //arab.GetHouse(graphics, e.Location);
+
+            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            bd.GetTree(graphics,e.Location);
 
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);

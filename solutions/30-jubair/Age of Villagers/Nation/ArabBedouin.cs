@@ -33,12 +33,12 @@ namespace Age_of_Villagers.Nation
             //new Point(_point.X - 4, _point.Y - 8), new Point(_point.X - 8, _point.Y ), new Point(_point.X , _point.Y), new Point(_point.X - 12, _point.Y - 8), new Point(_point.X-16, _point.Y)
         }
 
-        public Object getTree(Point point)
+        public void GetTree(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }
 
-        public Object getWaterResource(Point point)
+        public void GetWaterResource(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }

@@ -18,7 +18,7 @@ namespace Age_of_Villagers.Shape
 
         public void Paint(Graphics graphics)
         {
-            var pen = new Pen(Color.Red, 2);
+            var pen = new Pen(Color.Black, 1);
             graphics.DrawLine(pen, _point1, _point2);
         }
 

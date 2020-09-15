@@ -33,12 +33,12 @@ namespace Age_of_Villagers.Nation
             egyptian_house.Paint(graphics);
         }
 
-        public Object getTree(Point point)
+        public void GetTree(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }
 
-        public Object getWaterResource(Point point)
+        public void GetWaterResource(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }
