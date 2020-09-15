@@ -1,10 +1,15 @@
-﻿using System;
+﻿using AgeOfVillagers.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AgeOfVillagers.IItem_implementing_Classes
 {
-    class BangladeshiRiver
+    class BangladeshiWaterSource : IItem
     {
+        public void placeItem()
+        {
+            
+        }
     }
 }
