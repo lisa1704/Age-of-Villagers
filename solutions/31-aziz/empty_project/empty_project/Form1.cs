@@ -21,5 +21,10 @@ namespace empty_project
         {
 
         }
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
