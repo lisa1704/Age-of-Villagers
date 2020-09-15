@@ -36,18 +36,6 @@ namespace AgeOfVillagers
             }
         }
 
-        public class ShapeHalfCircle : CompositeShape
-        {
-            private readonly Point _topleft;
-            private readonly Point _bottomright;
-
-            public ShapeHalfCircle(Point tLeft, Point bRight)
-            {
-                _topleft = tLeft;
-                _bottomright = bRight;
-                AddComp(new ShapeArc(_topleft.X, _topleft.Y, _bottomright.X - _topleft.X, _bottomright.Y - _topleft.Y, 0, -180.0F));
-            }
-        }
 
 
     }

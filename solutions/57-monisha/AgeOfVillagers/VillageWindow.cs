@@ -83,15 +83,12 @@ namespace AgeOfVillagers
             VType = NationList.Text;
             DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
             //DrawPanel.ForeColor = Color.;
-            /*nation = nationFactory(NationList.Text);
-            g.Clear(Color.White);
-            drawingSpace.BackColor = nation.SetBackground();*/
+           
             //string NName =nationFactory.GetNation(VType).DrawHouse();
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)
         {
-           //Drawing.BackColor = Color.LightBlue;
             Graphics g = DrawPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
 
