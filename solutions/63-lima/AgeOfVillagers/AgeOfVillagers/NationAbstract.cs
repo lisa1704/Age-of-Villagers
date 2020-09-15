@@ -30,8 +30,6 @@ public abstract class NationAbstract
         waterSource.drawWaterSource(g, X, Y);
 
     }
-
-    // ei khane COlor.color na die ekta  panel ta ki korbo bolo -.-
     public void paintTerrain()
     {
         panel.BackColor = color;
