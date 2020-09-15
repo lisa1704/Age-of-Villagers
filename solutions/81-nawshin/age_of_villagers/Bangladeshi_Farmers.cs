@@ -10,39 +10,24 @@ namespace age_of_villagers
     public class Bangladeshi_Farmers : INation
     {
         Pen p = new Pen(Color.Green);
+        
         public void draw_house(Graphics g,Point pt)
         {
-            //g.DrawLine(p, pt.X, pt.Y, 20, 20);
-
             BDHouse house = new BDHouse(pt);
             house.draw(g);
         }
 
         public void draw_tree(Graphics g, Point pt)
         {
-            //g.DrawLine(p, pt.X, pt.Y, 20, 20);
-
             BDTree tree = new BDTree(pt);
             tree.draw(g);
         }
 
         public void draw_watersource(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 20, 20);
+            BDWatersource water = new BDWatersource(pt);
+            water.draw(g);
         }
 
-        /*public string draw_house()
-        {
-            return "Bangladesh house";
-        }
-        public string draw_tree()
-        {
-            return "Bangladesh tree";
-        }
-
-        public string draw_waterSource()
-        {
-            return "Bangladesh watersource";
-        }*/
     }
 }
