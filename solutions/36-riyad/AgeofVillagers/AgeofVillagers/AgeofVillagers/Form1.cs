@@ -15,8 +15,11 @@ namespace AgeofVillagers
         int y;
         string Text = "";
         string Name = "";
-        Graphics graphics;
-        Pen pen;
+        Graphics g;
+        Pen p;
+        List<Point> housePoints = new List<Point>();
+        List<Point> treePoints = new List<Point>();
+        List<Point> WaterPoints = new List<Point>();
 
         public Form1()
         {
@@ -55,12 +58,12 @@ namespace AgeofVillagers
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(villageName.Text + " Village saved");
         }
 
         private void new_btn_Click(object sender, EventArgs e)
         {
-
+            DrawPanel.Dispose();
         }
 
         private void open_btn_Click(object sender, EventArgs e)
@@ -70,10 +73,21 @@ namespace AgeofVillagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = DrawPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NationList_Select(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
 
         }
