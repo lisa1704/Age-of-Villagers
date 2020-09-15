@@ -98,7 +98,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.Location = new System.Drawing.Point(687, 238);
-            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Name = "treeRadioButton";
             this.radioButton1.Size = new System.Drawing.Size(51, 21);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
@@ -110,7 +110,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.Location = new System.Drawing.Point(687, 265);
-            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Name = "houseRadioButton";
             this.radioButton2.Size = new System.Drawing.Size(65, 21);
             this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
@@ -122,7 +122,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton3.Location = new System.Drawing.Point(687, 292);
-            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Name = "waterRadioButton";
             this.radioButton3.Size = new System.Drawing.Size(107, 21);
             this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
