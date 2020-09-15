@@ -82,5 +82,10 @@ namespace AgeOfVillagers
             Pen p = new Pen(Color.Black);
 
         }
+
+        private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
