@@ -1,5 +1,5 @@
-using System;
 using Xunit;
+using AgeOfVillagers90;
 
 namespace AgeOfVillagersTEST90
 {

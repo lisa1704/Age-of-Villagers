@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         Pen p = new Pen(Color.Pink);
         public void DrawHouse(Graphics g,Point pt)
@@ -30,6 +30,11 @@ namespace AgeOfVillagers90
         {
             BangladeshiFarmersWaterSource bdws = new BangladeshiFarmersWaterSource(pt);
             bdws.Draw(g);
+        }
+
+        public string BangladeshiFarmerTest()
+        {
+            return "Bangladeshi";
         }
     }
 }
