@@ -39,4 +39,12 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
     }
+
+    public class InuitHuntersHouse : CompositeShape
+    {
+        public InuitHuntersHouse(Point center)
+        {
+            
+        }
+    }
 }

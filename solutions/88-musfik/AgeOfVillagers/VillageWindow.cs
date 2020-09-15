@@ -36,11 +36,15 @@ namespace AgeOfVillagers
             //Point point2 = new Point(e.X+30, e.Y+60);
 
             Point point = new Point(e.X, e.Y);
-            IShape bShape = new EgyptianKingsHouse(point);
+            IShape bShape = new BangladeshiHouse(new Point(point.X+20, point.Y));
+            IShape aShape = new ArabBedouinHouse(new Point(point.X - 20, point.Y));
+            IShape iShape = new InuitHuntersHouse(point);
 
             bShape.Draw(g, p);
-            
-            
+            aShape.Draw(g, p);
+            iShape.Draw(g, p);
+
+
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
