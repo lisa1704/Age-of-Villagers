@@ -17,7 +17,7 @@ namespace AgeOfVillagers
         ArrayList listOfPoints;
         bool PencilDown;
         int x,y;
-        string vname;
+        string vname,item;
         public VillageEditorWindow()
         {
             InitializeComponent();
@@ -35,18 +35,18 @@ namespace AgeOfVillagers
             
         }
 
-        private void treeradio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         private void houseradio_CheckedChanged(object sender, EventArgs e)
         {
-
+            item = "House";
+        }
+        private void treeradio_CheckedChanged(object sender, EventArgs e)
+        {
+            item = "Tree";
         }
 
         private void waterradio_CheckedChanged(object sender, EventArgs e)
         {
-
+            item = "Water Resource";
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
