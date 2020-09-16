@@ -1,4 +1,6 @@
-﻿namespace AgeOfVillagers
+﻿using System.Windows.Forms;
+
+namespace AgeOfVillagers
 {
     partial class DrawingWindow
     {
@@ -189,7 +191,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel Drawingpanel;
+        private Panel Drawingpanel;
         private System.Windows.Forms.Panel ToolsPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
