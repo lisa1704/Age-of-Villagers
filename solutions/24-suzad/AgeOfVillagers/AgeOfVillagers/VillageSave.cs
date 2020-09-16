@@ -37,5 +37,10 @@ namespace AgeOfVillagers
                     //writer.Close();
             //}
         }
+        public static void openVillage(string filePath)
+        {
+            Village village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(@"D:\Suzad\Books & notes\3-1\S.aov"));
+            MessageBox.Show(village.village);
+        }
     }
 }

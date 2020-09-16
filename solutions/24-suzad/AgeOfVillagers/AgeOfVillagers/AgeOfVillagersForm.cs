@@ -145,7 +145,7 @@ namespace AgeOfVillagers
             }
             MessageBox.Show(str);*/
             //MessageBox.Show()
-            VillageSave.saveVillage(filePath,village);
+            VillageSave.openVillage(filePath);
         }
     }
 }
