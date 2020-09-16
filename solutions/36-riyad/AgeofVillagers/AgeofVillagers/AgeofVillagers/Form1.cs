@@ -81,11 +81,11 @@ namespace AgeofVillagers
 
             foreach (Point pt in HousePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+                g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
             }
             foreach (Point pt in TreePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+                g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 24);
             }
             foreach (Point pt in WaterPoints)
             {
