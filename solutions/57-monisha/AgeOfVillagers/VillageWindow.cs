@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +14,14 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
-
-        int x;
-        int y;
         Graphics g;
         string VName = "";
         string VType = "";
         string Itemtext = "";
         VillageProperties village;
-        List<Point> HousePoints { get; set; } = new List<Point>();
-        List<Point> TreePoints { get; set; } = new List<Point>();
-        List<Point> WaterPoints { get; set; } = new List<Point>();
+        public List<Point> HousePoints { get; set; } = new List<Point>();
+        public List<Point> TreePoints { get; set; } = new List<Point>();
+        public List<Point> WaterPoints { get; set; } = new List<Point>();
 
         NationFactory nationFactory = new NationFactory();
         public VillageWindow()
@@ -34,7 +32,6 @@ namespace AgeOfVillagers
 
         private void VillageWindow_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -56,28 +53,23 @@ namespace AgeOfVillagers
         {
             Itemtext = "WaterSource";
         }
+        public void GetVillageState()
+        {
+            village.name = VillageNameBox.Text;
+            village.House_point = this.HousePoints;
+            village.Tree_point = this.TreePoints;
+            village.Waterresource_point = this.WaterPoints;            
+        }
 
         private void SaveVillage_Click(object sender, EventArgs e)
-        {
+        {          
             MessageBox.Show(VillageNameBox.Text+"Village saved");
-            Stream myStream;
-            
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
-            saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.FileName = "*.txt";
-            saveFileDialog.DefaultExt = "txt";
-            saveFileDialog.Filter = "AoV file(*.txt)| *.txt";
+           
+            //Get the current state
+            GetVillageState();
 
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if ((myStream = saveFileDialog.OpenFile()) != null)
-                {
-                    // Code to write the stream goes here.
-                    
-                    myStream.Close();
-                }
-            }
+            SaveVillage SCommand = new SaveVillage(village);
+            SCommand.executeSave();          
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
@@ -87,6 +79,7 @@ namespace AgeOfVillagers
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
+            //VName.Clear();
             HousePoints.Clear();
             TreePoints.Clear();
             WaterPoints.Clear();
