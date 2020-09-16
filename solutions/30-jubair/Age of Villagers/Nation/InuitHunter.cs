@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.House;
+using Age_of_Villagers.Shape;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -33,12 +34,13 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            NullVillageComponent null_object = new NullVillageComponent(new Point(_point.X, _point.Y));
+            null_object.Paint(graphics);
         }
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            
         }
 
 
