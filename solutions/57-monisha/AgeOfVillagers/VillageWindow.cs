@@ -67,8 +67,10 @@ namespace AgeOfVillagers
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
+            HousePoints.Clear();
+            TreePoints.Clear();
+            WaterPoints.Clear();
             DrawPanel.Refresh();
-            //Graphics g = control.CreateGraphics();
             //MessageBox.Show("Village is Saved");
         }
 
