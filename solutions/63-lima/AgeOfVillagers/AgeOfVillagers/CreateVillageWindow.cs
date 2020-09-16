@@ -35,7 +35,8 @@ namespace AgeOfVillagers
 
         private void open_village_Click(object sender, EventArgs e)
         {
-            myvillageSaver.OpenState();
+            myvillage =  myvillageSaver.OpenState();
+            myvillage.paintAgain(nation);
         }
 
         private void village_name_TextChanged(object sender, EventArgs e)
@@ -50,16 +51,16 @@ namespace AgeOfVillagers
         }
         private void tree_CheckedChanged(object sender, EventArgs e)
         {
-            //text = "tree";
+            
         }
         private void house_checkedchanged(object sender, EventArgs e)
         {
-           //text = "house";
+           
         }
 
         private void water_resource_checkedchanged(object sender, EventArgs e)
         {
-            //text = "water resource";
+            
         }
 
         private void select_nation_selectedindexchanged(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace AgeOfVillagers
         {
             if( select_nation.Text == "Egyptian Kings")
             {
-                nation = new EgyptianKings(newg, drawing_panel);
+                nation = new EgyptianKings(newg, drawing_panel);   
             }
             else if(select_nation.Text == "Bangladeshi Farmers")
             {
@@ -100,11 +101,11 @@ namespace AgeOfVillagers
             }
             else if(select_nation.Text == "Arab Bedouin")
             {
-                nation = new ArabBedouin(newg, drawing_panel);
+                nation = new ArabBedouin(newg, drawing_panel);    
             }
             else if(select_nation.Text == "Inuit Hunters")
             {
-                nation = new InuitHunters(newg, drawing_panel);
+                nation = new InuitHunters(newg, drawing_panel);  
             }
         }
     }

@@ -6,7 +6,8 @@ namespace AgeOfVillagers
 {
     class Village
     {
-        public string Name; 
+        
+        public string Name;
         public List<(int, int)> houses = new List<(int, int)>();
         public List<(int, int)> trees = new List<(int, int)>();
         public List<(int, int)> water_resources = new List<(int, int)>();
@@ -22,9 +23,23 @@ namespace AgeOfVillagers
         {
             water_resources.Add((X, Y));
         }
-        public void paint_Again()
+        public void paintAgain(NationAbstract nation)
         { 
-            
+            for(int i = 0; i < houses.Count ; i++)
+            {
+                nation.drawHouse(houses[i].Item1, houses[i].Item1);
+
+            }
+            for (int i = 0; i < trees.Count; i++)
+            {
+                nation.drawHouse(trees[i].Item1, trees[i].Item1);
+
+            }
+            for (int i = 0; i < water_resources.Count; i++)
+            {
+                nation.drawHouse(water_resources[i].Item1, water_resources[i].Item1);
+
+            }
         }
     }
     
