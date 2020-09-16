@@ -77,7 +77,10 @@ namespace Age_of_Villagers
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            
+            refreshForm();
+            Refresh();
+            text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -111,6 +114,16 @@ namespace Age_of_Villagers
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             text = "Water";
+        }
+        private void refreshForm()
+        {
+            comboBox1.Text = "Village Name";
+            Nation.Text = "Nation Name";
+            radioButton2.Checked = false;
+            radioButton1.Checked = false;
+            radioButton3.Checked = false;
+            
+            this.Refresh();
         }
     }
 }
