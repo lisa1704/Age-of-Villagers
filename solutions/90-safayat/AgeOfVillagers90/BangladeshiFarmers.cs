@@ -39,7 +39,7 @@ namespace AgeOfVillagers90
 
         public Color BackGroundColor()
         {
-            throw new NotImplementedException();
+            return Color.ForestGreen;
         }
     }
 }
