@@ -66,4 +66,11 @@ namespace AgeOfVillagers
             AddComponent(new Rectangle(TopLeft, BottomRight));
         }
     }
+    public class Bangladeshi_WaterSource : CompositeShape
+    {
+        public Bangladeshi_WaterSource(Point point)
+        {
+            
+        }
+    }
 }
