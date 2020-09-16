@@ -74,8 +74,11 @@ namespace Age_of_Villagers
             //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
             //eg.GetHouse(graphics, e.Location);
 
+            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
+            //eg.GetTree(graphics, e.Location);
+
             EgyptianKings eg = new EgyptianKings("Egyptian Kings");
-            eg.GetTree(graphics, e.Location);
+            eg.GetWaterResource(graphics, e.Location);
 
             //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
             //arab.GetHouse(graphics, e.Location);
@@ -83,7 +86,7 @@ namespace Age_of_Villagers
             //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
             //arab.GetTree(graphics, e.Location);
 
-            
+
 
 
 

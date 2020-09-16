@@ -1,5 +1,6 @@
 ﻿using Age_of_Villagers.House;
 using Age_of_Villagers.Tree;
+using Age_of_Villagers.Water_Resource;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -42,7 +43,8 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+           EgyptianWell egyptian_well = new EgyptianWell(new Point(_point.X, _point.Y), new Point(_point.X+12, _point.Y+12));
+           egyptian_well.Paint(graphics);
         }
     }
  }
