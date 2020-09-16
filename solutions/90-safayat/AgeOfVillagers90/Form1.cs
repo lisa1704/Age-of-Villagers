@@ -67,6 +67,7 @@ namespace AgeOfVillagers90
             TreePoints.Clear();
             WaterPoints.Clear();
             DrawPanel.Refresh();
+
         }
 
 
