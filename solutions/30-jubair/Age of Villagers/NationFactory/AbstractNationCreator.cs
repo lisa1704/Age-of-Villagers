@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-   public abstract class NationCreator
+   public abstract class AbstractNationCreator
     {
-        string nation_name
+        string GetNationName
         {
             get;
             set;

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    public class ConcreteNationCreator1 : NationCreator
+    public class BangladeshiNationCreator : AbstractNationCreator
     {
        
         
@@ -20,7 +20,7 @@ namespace Age_of_Villagers.NationFactory
 
         public override INation CreateNation()
         {
-            return new BangladeshiFarmer(GetNationName);
+            return new BangladeshiFarmer(nationName);
             // Factory Method Implemented
         }
     }

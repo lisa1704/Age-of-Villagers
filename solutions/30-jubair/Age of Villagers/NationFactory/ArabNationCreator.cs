@@ -5,20 +5,22 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    class ConcreteNationCreator3 : NationCreator
+    class ArabNationCreator : AbstractNationCreator
     {
-        String n_name = "Egyptian Kings";
+        String nationName = "Arab Bedouin";
 
-        public string nation_name
+        public string GetNationName
         {
-            get => n_name;
-            set => n_name = value;
+            get => nationName;
+            set => nationName = value;
         }
 
         public override INation CreateNation()
         {
-            return new EgyptianKings(nation_name);
+            return new ArabBedouin(nationName);
             // Factory Method Implemented
         }
+
+
     }
 }

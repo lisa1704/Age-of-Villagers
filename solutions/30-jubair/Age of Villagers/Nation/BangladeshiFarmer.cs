@@ -16,6 +16,9 @@ namespace Age_of_Villagers.Nation
         {
             this.name = name;
         }
+
+       
+
         public String getName()
         {
             return name;
