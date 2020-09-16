@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace age_of_villagers
 {
-    public partial class Form1 : Form
+    public partial class VillageWindow : Form
     {
         string item;
         string vilName;
@@ -21,7 +21,7 @@ namespace age_of_villagers
         List<Point> water_point = new List<Point>();
 
         NationFactory n = new NationFactory();
-        public Form1()
+        public VillageWindow()
         {
             InitializeComponent();
         }
