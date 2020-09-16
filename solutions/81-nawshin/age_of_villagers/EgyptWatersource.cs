@@ -11,7 +11,7 @@ namespace age_of_villagers
     {
         public EgyptWatersource(Point pt)
         {
-            AddComponent(new Arc(pt, 30, 30, 0, 360));
+            AddComponent(new Arc(pt, 12, 12, 0, 360));
         }
     }
 }
