@@ -16,7 +16,7 @@ namespace AgeOfVillagers
 
         public object getHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new EgyptianKingsHouse(point);
         }
 
         public string getNationName()
@@ -31,12 +31,12 @@ namespace AgeOfVillagers
 
         public object getTree(Point point)
         {
-            throw new NotImplementedException();
+            return new EgyptianKingsTree(point);
         }
 
         public object getWaterResource(Point point)
         {
-            throw new NotImplementedException();
+            return new EgyptianKings_WaterResource(point);
         }
     }
 
