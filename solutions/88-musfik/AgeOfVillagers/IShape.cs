@@ -49,6 +49,19 @@ namespace AgeOfVillagers
         }
     }
 
+
+    public class NullShape : IShape
+    {
+        public NullShape(Point point)
+        {
+        }
+
+        public void Draw(Graphics g, Pen p)
+        {
+            //No drawing event       
+        }
+    }
+
     public abstract class CompositeShape : IShape
     {
         private readonly List<IShape> components;
