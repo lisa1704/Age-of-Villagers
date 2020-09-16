@@ -13,7 +13,7 @@ namespace AgeOfVillagers90
 
         public Color BackGroundColor()
         {
-            return Color.LightYellow;
+            return Color.YellowGreen;
         }
 
         public void DrawHouse(Graphics g, Point pt)
@@ -30,7 +30,8 @@ namespace AgeOfVillagers90
 
         public void DrawWaterSource(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            NullVillageItem abNullws = new NullVillageItem();
+            abNullws.paint();
         }
 
 

@@ -24,12 +24,14 @@ namespace AgeOfVillagers90
 
         public void DrawTree(Graphics g, Point pt)
         {
-            g.DrawLine(p, pt.X, pt.Y, 100, 100);
+            NullVillageItem InuitNulltree = new NullVillageItem();
+            InuitNulltree.paint();
         }
 
         public void DrawWaterSource(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            NullVillageItem InuitNullws = new NullVillageItem();
+            InuitNullws.paint();
         }
     }
 }
