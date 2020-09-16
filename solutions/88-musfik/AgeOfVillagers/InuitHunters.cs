@@ -16,7 +16,7 @@ namespace AgeOfVillagers
 
         public object getHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new InuitHuntersHouse(point);
         }
 
         public string getNationName()
@@ -31,12 +31,12 @@ namespace AgeOfVillagers
 
         public object getTree(Point point)
         {
-            throw new NotImplementedException();
+            return new NullShape(point);
         }
 
         public object getWaterResource(Point point)
         {
-            throw new NotImplementedException();
+            return new NullShape(point);
         }
     }
 
