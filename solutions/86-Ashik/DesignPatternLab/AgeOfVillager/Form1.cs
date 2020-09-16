@@ -37,7 +37,8 @@ namespace AgeOfVillager
             }
             else if (radioButton3.Checked)
             {
-                g.DrawLine(myPen, x, y, 20,50);
+                EgyptianKingsWaterSource ews = new EgyptianKingsWaterSource(g);
+                ews.draw(e);
             }
         }
 
