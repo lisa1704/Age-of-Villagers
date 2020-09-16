@@ -17,10 +17,12 @@ namespace Age_Of_Villagers
         Graphics g;
         string text = "";
         string village_name = "";
+        string village_type = "";
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
 
+        FactoryNation nationFactory = new FactoryNation();
         public Village_Window()
         {
             InitializeComponent();
@@ -73,7 +75,8 @@ namespace Age_Of_Villagers
 
         private void openVillagebutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(villageName.Text + "Village is Opened.");
+            //MessageBox.Show(villageName.Text + "Village is Opened.");
+            MessageBox.Show("Village is opened");
         }
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
@@ -83,17 +86,20 @@ namespace Age_Of_Villagers
 
             foreach (Point point in tree_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                //g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationFactory.GetNation(village_type).Draw_Tree(g, point);
             }
 
             foreach (Point point in house_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                //g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationFactory.GetNation(village_type).Draw_House(g, point);
             }
 
             foreach (Point point in waterSource_point)
             {
-                g.DrawLine(p, point.X, point.Y, 100, 100);
+                //g.DrawLine(p, point.X, point.Y, 100, 100);
+                nationFactory.GetNation(village_type).Draw_WaterSource(g, point);
             }
         }
 
@@ -115,6 +121,11 @@ namespace Age_Of_Villagers
             }
 
             drawingPanel.Invalidate();
+
+        }
+        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = NationName.Text;
         }
     }
 }

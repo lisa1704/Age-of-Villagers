@@ -33,13 +33,14 @@ namespace Age_Of_Villagers
             this.AgeOfVillagers = new System.Windows.Forms.Label();
             this.drawingPanel = new System.Windows.Forms.Panel();
             this.villageName = new System.Windows.Forms.Label();
-            this.nation = new System.Windows.Forms.Label();
+            //this.nation = new System.Windows.Forms.Label();
             this.saveVillagebutton = new System.Windows.Forms.Button();
             this.newVillagebutton = new System.Windows.Forms.Button();
             this.openVillagebutton = new System.Windows.Forms.Button();
             this.treeButton = new System.Windows.Forms.RadioButton();
             this.houseButton = new System.Windows.Forms.RadioButton();
             this.waterSourceButton = new System.Windows.Forms.RadioButton();
+            this.NationName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // AgeOfVillagers
@@ -78,19 +79,7 @@ namespace Age_Of_Villagers
             this.villageName.TabIndex = 2;
             this.villageName.Text = "Katakhali";
             this.villageName.Click += new System.EventHandler(this.villageName_Click);
-            // 
-            // nation
-            // 
-            this.nation.AutoSize = true;
-            this.nation.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nation.Location = new System.Drawing.Point(870, 121);
-            this.nation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(223, 30);
-            this.nation.TabIndex = 3;
-            this.nation.Text = "Bangladeshi Farmers";
-            this.nation.Click += new System.EventHandler(this.nation_Click);
-            // 
+            //
             // saveVillagebutton
             // 
             this.saveVillagebutton.BackColor = System.Drawing.Color.Honeydew;
@@ -166,19 +155,32 @@ namespace Age_Of_Villagers
             this.waterSourceButton.UseVisualStyleBackColor = true;
             this.waterSourceButton.CheckedChanged += new System.EventHandler(this.waterSourceButton_CheckedChanged);
             // 
+            // NationName
+            // 
+            this.NationName.FormattingEnabled = true;
+            this.NationName.Location = new System.Drawing.Point(689, 106);
+            this.NationName.Name = "NationName";
+            this.NationName.Size = new System.Drawing.Size(200, 28);
+            this.NationName.TabIndex = 14;
+            this.NationName.SelectedIndexChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
+            this.NationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmers"
+             });
+            // 
             // Village_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1230, 514);
+            this.Controls.Add(this.NationName);
             this.Controls.Add(this.waterSourceButton);
             this.Controls.Add(this.houseButton);
             this.Controls.Add(this.treeButton);
             this.Controls.Add(this.openVillagebutton);
             this.Controls.Add(this.newVillagebutton);
             this.Controls.Add(this.saveVillagebutton);
-            this.Controls.Add(this.nation);
+            //this.Controls.Add(this.nation);
             this.Controls.Add(this.villageName);
             this.Controls.Add(this.drawingPanel);
             this.Controls.Add(this.AgeOfVillagers);
@@ -209,5 +211,6 @@ namespace Age_Of_Villagers
         private System.Windows.Forms.RadioButton treeButton;
         private System.Windows.Forms.RadioButton houseButton;
         private System.Windows.Forms.RadioButton waterSourceButton;
+        private System.Windows.Forms.ComboBox NationName;
     }
 }
