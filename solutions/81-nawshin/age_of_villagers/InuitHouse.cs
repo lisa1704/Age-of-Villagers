@@ -11,14 +11,14 @@ namespace age_of_villagers
     {
         public InuitHouse(Point pt)
         {
-            Point left = new Point(pt.X - 20, pt.Y);
-            Point right = new Point(pt.X + 20, pt.Y);
+            Point left = new Point(pt.X - 5, pt.Y+1);
+            Point right = new Point(pt.X + 11, pt.Y+1);
             Point outcircle = new Point(pt.X + 5, pt.Y);
-            Point incircle= new Point(right.X-3 , pt.Y+15);
+            Point incircle = new Point(pt.X +9, pt.Y+5);
 
             AddComponent(new Line(left, right));
-            AddComponent(new Arc(outcircle, 40, 40, -192, 208));
-            AddComponent(new Arc(incircle, 15, 15, -192, 208));
+            AddComponent(new Arc(outcircle, 16, 16, -192, 208));
+            AddComponent(new Arc(incircle, 8, 8, -192, 208));
         }
     }
 }
