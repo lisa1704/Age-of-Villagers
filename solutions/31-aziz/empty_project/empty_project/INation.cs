@@ -4,7 +4,7 @@ using System.Text;
 
 namespace empty_project
 {
-    interface INation
+    public interface INation
     {
         void DrawTree();
         void DrawHouse();

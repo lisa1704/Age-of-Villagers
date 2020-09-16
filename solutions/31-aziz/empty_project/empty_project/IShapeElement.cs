@@ -4,7 +4,7 @@ using System.Text;
 
 namespace empty_project
 {
-    interface IShapeElement
+    public interface IShapeElement
     {
     }
 }
