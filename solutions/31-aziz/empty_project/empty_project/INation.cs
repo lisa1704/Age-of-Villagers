@@ -10,21 +10,5 @@ namespace empty_project
         void DrawHouse();
         void DrawWaterSource();
 
-        internal class SelectNation
-        {
-            public INation GetNation(string nation)
-            {
-                if (nation == "BangladeshiFarmers")
-                    return new BangladeshiFarmers();
-                else if (nation == "ArabBedouin")
-                    return new ArabBedouin();
-                else if (nation == "EgyptianKings")
-                    return new EgyptianKings();
-                else if (nation == "InuitHunters")
-                    return new InuitHunters();
-                throw new Exception();
-            }
-        }
-
     }
 }
