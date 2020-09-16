@@ -105,7 +105,7 @@
             // VillageName
             // 
             this.VillageName.AutoSize = true;
-            this.VillageName.Location = new System.Drawing.Point(697, 139);
+            this.VillageName.Location = new System.Drawing.Point(697, 137);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(69, 13);
             this.VillageName.TabIndex = 11;
@@ -150,7 +150,7 @@
             // 
             // VillageNametextBox
             // 
-            this.VillageNametextBox.Location = new System.Drawing.Point(680, 107);
+            this.VillageNametextBox.Location = new System.Drawing.Point(686, 104);
             this.VillageNametextBox.Name = "VillageNametextBox";
             this.VillageNametextBox.Size = new System.Drawing.Size(100, 20);
             this.VillageNametextBox.TabIndex = 0;
