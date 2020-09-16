@@ -5,14 +5,14 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    abstract class NationCreator
+   public abstract class NationCreator
     {
         string nation_name
         {
             get;
             set;
         }
-        public abstract INation createNation();
+        public abstract INation CreateNation();
         // Factory Method Implemented
 
     }

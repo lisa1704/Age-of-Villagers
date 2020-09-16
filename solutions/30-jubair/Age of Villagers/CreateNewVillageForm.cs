@@ -26,7 +26,11 @@ namespace Age_of_Villagers
 
             VillageEditorWindow village_window_object = new VillageEditorWindow();
             village_window_object.Show();
+            this.Hide();
+       
 
         }
+
+        
     }
 }

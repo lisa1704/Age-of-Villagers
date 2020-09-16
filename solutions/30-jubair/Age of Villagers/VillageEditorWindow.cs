@@ -156,6 +156,7 @@ namespace Age_of_Villagers
             CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();  
             new_villageform_object.Show();
             drawing_space.Invalidate();  // Clearing the Drawing Space when a new village is created
+    
         }
     }
 }

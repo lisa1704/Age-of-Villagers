@@ -44,11 +44,11 @@
             this.village_name.TabIndex = 0;
             this.village_name.Text = "Village Name";
             // 
-            // nation_name
+            // GetNationName
             // 
             this.nation_name.AutoSize = true;
             this.nation_name.Location = new System.Drawing.Point(77, 201);
-            this.nation_name.Name = "nation_name";
+            this.nation_name.Name = "GetNationName";
             this.nation_name.Size = new System.Drawing.Size(116, 25);
             this.nation_name.TabIndex = 1;
             this.nation_name.Text = "Nation_name";
@@ -59,6 +59,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 31);
             this.textBox1.TabIndex = 2;
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 

@@ -6,21 +6,21 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    class ConcreteNationCreator1 : NationCreator
+    public class ConcreteNationCreator1 : NationCreator
     {
        
         
-            String n_name = "Bangladeshi";
+            String nationName = "Bangladeshi Farmers";
 
-            public string nation_name
+            public string GetNationName
             {
-                get => n_name;
-                set => n_name = value;
+                get => nationName;
+                set => nationName = value;
             }
 
-        public override INation createNation()
+        public override INation CreateNation()
         {
-            return new BangladeshiFarmer(nation_name);
+            return new BangladeshiFarmer(GetNationName);
             // Factory Method Implemented
         }
     }
