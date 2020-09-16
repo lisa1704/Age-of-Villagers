@@ -1,6 +1,7 @@
 package main;
 
 import canvas.MyCanvas;
+import house.IHouse;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -27,8 +28,11 @@ import java.util.List;
 
 public class Controller {
     Canvas canvas;
-    ITerrain iTerrain;
     NationManager nationManager;
+    ITerrain iTerrain;
+    IHouse house;
+
+
 
     private String nation[] =
             {"Select Village Type","Bangladeshi Farmer", "Arab Bedouin", "Egyptian King", "Inuit Hunter"};
@@ -69,7 +73,6 @@ public class Controller {
         villageTypeList.setItems(FXCollections.observableArrayList(nation));
         villageTypeList.setValue(nation[0]);
 
-
         MyCanvas myCanvas = MyCanvas.getInstance();
         canvas = myCanvas.getCanvas();
 
@@ -79,7 +82,6 @@ public class Controller {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
-                System.out.println("sldfjsdkl");
             }
         });
 
@@ -89,12 +91,12 @@ public class Controller {
                 selectedVillage[0] = nation[Integer.parseInt(observableValue.getValue().toString())];
 
                 System.out.println(selectedVillage[0]);
-
-
-                System.out.println("village selected");
                 treeRB.setVisible(true);
                 houseRB.setVisible(true);
                 waterRB.setVisible(true);
+                houseRB.setSelected(true);
+                treeRB.setSelected(false);
+                waterRB.setSelected(false);
                 saveVillageBTN.setVisible(true);
 
                 houseRB.setSelected(true);
@@ -107,8 +109,28 @@ public class Controller {
                     iTerrain.draw();
             }
         });
+    }
 
-        
+    @FXML
+    void houseRBCon(ActionEvent actionEvent){
+        houseRB.setSelected(true);
+        treeRB.setSelected(false);
+        waterRB.setSelected(false);
+
+//        house = nationManager.getHouse();
+//        house.draw();
+    }
+    @FXML
+    void treeRBCon(ActionEvent actionEvent){
+        houseRB.setSelected(false);
+        treeRB.setSelected(true);
+        waterRB.setSelected(false);
+    }
+    @FXML
+    void waterRBCon(ActionEvent actionEvent){
+        houseRB.setSelected(false);
+        treeRB.setSelected(false);
+        waterRB.setSelected(true);
     }
 
     @FXML

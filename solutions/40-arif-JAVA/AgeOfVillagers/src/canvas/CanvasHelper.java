@@ -8,7 +8,6 @@ import javafx.scene.input.MouseEvent;
 public class CanvasHelper {
 
     private Canvas canvas;
-    private int i = 15;
 
     public CanvasHelper(javafx.scene.canvas.Canvas canvas) {
         this.canvas = canvas;

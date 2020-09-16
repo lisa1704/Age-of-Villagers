@@ -46,9 +46,9 @@
                   <Button fx:id="saveVillageBTN" layoutX="41.0" layoutY="446.0" mnemonicParsing="false" onAction="#saveVillageBTN" text="Save Village" visible="false" />
                   <ChoiceBox fx:id="villageTypeList" layoutX="9.0" layoutY="124.0" prefWidth="150.0" visible="false" />
                   <TextField fx:id="villageName" layoutX="3.0" layoutY="88.0" promptText="Enter Village Name" visible="false" />
-                  <RadioButton fx:id="houseRB" layoutX="11.0" layoutY="164.0" mnemonicParsing="false" text="House" visible="false" />
-                  <RadioButton fx:id="treeRB" layoutX="11.0" layoutY="190.0" mnemonicParsing="false" text="Tree" visible="false" />
-                  <RadioButton fx:id="waterRB" layoutX="12.0" layoutY="217.0" mnemonicParsing="false" text="Water Source" visible="false" />
+                  <RadioButton fx:id="houseRB" layoutX="11.0" layoutY="164.0" mnemonicParsing="false" onAction="#houseRBCon" text="House" visible="false" />
+                  <RadioButton fx:id="treeRB" layoutX="11.0" layoutY="190.0" mnemonicParsing="false" onAction="#treeRBCon" text="Tree" visible="false" />
+                  <RadioButton fx:id="waterRB" layoutX="12.0" layoutY="217.0" mnemonicParsing="false" onAction="#waterRBCon" text="Water Source" visible="false" />
                   <Button fx:id="openVillageBTN" layoutX="39.0" layoutY="82.0" mnemonicParsing="false" text="Open Village" />
                </children>
             </AnchorPane>

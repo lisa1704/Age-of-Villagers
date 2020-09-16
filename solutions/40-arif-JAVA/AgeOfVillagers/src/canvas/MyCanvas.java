@@ -16,6 +16,7 @@ public class MyCanvas {
         }
         return myCanvas;
     }
+
     public Canvas getCanvas(){
         return canvas;
     }

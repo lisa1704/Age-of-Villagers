@@ -8,11 +8,11 @@ public class NationFactory {
 
         if (nationType == "Bangladeshi Farmer")
             return new BDFarmers();
-        else if(nationType == "Arab Bedouin")
+        else if (nationType == "Arab Bedouin")
             return new ArabBedouins();
-        else if(nationType == "Egyptian King")
+        else if (nationType == "Egyptian King")
             return new EgyptianKings();
-        else if(nationType == "Inuit Hunter")
+        else if (nationType == "Inuit Hunter")
             return new InuitHunters();
         else {
             return new NoNations();

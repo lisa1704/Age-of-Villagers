@@ -1,6 +1,7 @@
 package terrain;
 
 import canvas.MyCanvas;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 

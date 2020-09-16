@@ -1,5 +1,6 @@
 package nation;
 
+import house.IHouse;
 import terrain.ITerrain;
 
 public class NationManager {
@@ -12,7 +13,10 @@ public class NationManager {
     }
 
     public ITerrain getTerrain() {
-
         return nation.getTerrain();
+    }
+
+    public IHouse getHouse(){
+        return nation.getHouse();
     }
 }
