@@ -6,5 +6,9 @@ namespace empty_project
 {
     class Line : IShapeElement
     {
+        void IShapeElement.Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

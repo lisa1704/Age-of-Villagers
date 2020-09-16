@@ -6,5 +6,6 @@ namespace empty_project
 {
     public interface IShapeElement
     {
+        void Draw();
     }
 }

@@ -6,5 +6,9 @@ namespace empty_project
 {
     class Arc : IShapeElement
     {
+        void IShapeElement.Draw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
