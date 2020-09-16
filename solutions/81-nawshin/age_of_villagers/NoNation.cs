@@ -14,19 +14,18 @@ namespace age_of_villagers
         {
             //do nothing
         }
-
         public void draw_tree(Graphics g, Point pt)
         {
             //do nothing
         }
-
         public void draw_watersource(Graphics g, Point pt)
         {
             //do nothing
         }
         public Color BackColor()
         {
-            return Color.White;
+            Color color = Color.White;
+            return color;
         }
     }
 }

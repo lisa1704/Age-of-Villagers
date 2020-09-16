@@ -29,7 +29,7 @@ namespace age_of_villagers
 
         public Color BackColor()
         {
-            Color color = Color.Yellow;
+            Color color = Color.YellowGreen;
             return color;
         }
     }

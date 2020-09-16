@@ -28,7 +28,8 @@ namespace age_of_villagers
         }
         public Color BackColor()
         {
-            return Color.GreenYellow;
+           Color color= Color.Yellow;
+           return color;
         }
     }
 }

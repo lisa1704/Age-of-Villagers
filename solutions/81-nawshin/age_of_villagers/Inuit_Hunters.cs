@@ -26,7 +26,8 @@ namespace age_of_villagers
         }
         public Color BackColor()
         {
-            return Color.Snow;
+            Color color = Color.Snow;
+            return color;
         }
 
     }
