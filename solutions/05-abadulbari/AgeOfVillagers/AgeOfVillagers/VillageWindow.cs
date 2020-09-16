@@ -12,6 +12,8 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
+        int x, y;
+        string text = "";
         public VillageWindow()
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace AgeOfVillagers
 
         private void waterRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "water";
         }
 
         private void openButton_Click(object sender, EventArgs e)
@@ -55,17 +57,36 @@ namespace AgeOfVillagers
      
         private void houseRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "house";
         }
 
         private void treeRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "tree";
         }
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = new Point(e.X, e.Y);
+            Graphics g = drawingPanel.CreateGraphics();
+            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            if (treeRadioBtn.Checked)
+            {
+                
+            }
+            else if (houseRadioBtn.Checked)
+            {
+                
+            }
+            else if (waterRadioBtn.Checked)
+            {
+                
+            }
         }
     }
 }
