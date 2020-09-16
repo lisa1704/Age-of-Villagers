@@ -16,7 +16,7 @@ namespace AgeOfVillagers90
         int y;
         Graphics g;
         string ItemText = "";
-        string name = "";
+        string NameofVillage = "";
         string Vtype = "";
         List<Point> HousePoints = new List<Point>();
         List<Point> TreePoints = new List<Point>();
@@ -70,14 +70,13 @@ namespace AgeOfVillagers90
             NationList.ResetText();
             Vtype = NationList.Text;
             DrawPanel.BackColor = nationfactory.GetNation(Vtype).BackGroundColor();
-
         }
 
 
 
-        private void VillageName_Click(object sender, EventArgs e)
+        private void VillageName_Click(object sender, EventArgs e) //show
         {
-            name = VillageName.Text;
+            
         }
 
         private void Nation_Click(object sender, EventArgs e)
@@ -134,9 +133,10 @@ namespace AgeOfVillagers90
             DrawPanel.Invalidate();
         }
 
-        private void VillageNametextBox_TextChanged(object sender, EventArgs e)
+        private void VillageNametextBox_TextChanged(object sender, EventArgs e) //input
         {
-
+            NameofVillage = VillageNametextBox.Text;
+            VillageName.Text = NameofVillage;
         }
     }
 }
