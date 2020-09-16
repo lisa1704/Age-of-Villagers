@@ -24,6 +24,5 @@ namespace AgeOfVillagers90
                 component.Draw(g);
             }
         }
-
     }
 }
