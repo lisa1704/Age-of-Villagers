@@ -22,9 +22,25 @@ namespace empty_project
             InitializeComponent();
         }
 
-        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        private void DrawingPanel_Paint(object sender, PaintEventArgs paint)
         {
+            Graphics graphics = DrawingPanel.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
 
+            foreach (Point point in treePoints)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
+
+            foreach (Point point in housePoints)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
+
+            foreach (Point point in watersourcePoints)
+            {
+                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            }
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
