@@ -33,7 +33,6 @@ namespace Age_Of_Villagers
             this.AgeOfVillagers = new System.Windows.Forms.Label();
             this.drawingPanel = new System.Windows.Forms.Panel();
             this.villageName = new System.Windows.Forms.Label();
-            //this.nation = new System.Windows.Forms.Label();
             this.saveVillagebutton = new System.Windows.Forms.Button();
             this.newVillagebutton = new System.Windows.Forms.Button();
             this.openVillagebutton = new System.Windows.Forms.Button();
@@ -79,7 +78,7 @@ namespace Age_Of_Villagers
             this.villageName.TabIndex = 2;
             this.villageName.Text = "Katakhali";
             this.villageName.Click += new System.EventHandler(this.villageName_Click);
-            //
+            // 
             // saveVillagebutton
             // 
             this.saveVillagebutton.BackColor = System.Drawing.Color.Honeydew;
@@ -158,14 +157,13 @@ namespace Age_Of_Villagers
             // NationName
             // 
             this.NationName.FormattingEnabled = true;
-            this.NationName.Location = new System.Drawing.Point(689, 106);
+            this.NationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmers"});
+            this.NationName.Location = new System.Drawing.Point(889, 141);
             this.NationName.Name = "NationName";
-            this.NationName.Size = new System.Drawing.Size(200, 28);
+            this.NationName.Size = new System.Drawing.Size(200, 33);
             this.NationName.TabIndex = 14;
             this.NationName.SelectedIndexChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
-            this.NationName.Items.AddRange(new object[] {
-            "Bangladeshi Farmers"
-             });
             // 
             // Village_Window
             // 
@@ -180,7 +178,6 @@ namespace Age_Of_Villagers
             this.Controls.Add(this.openVillagebutton);
             this.Controls.Add(this.newVillagebutton);
             this.Controls.Add(this.saveVillagebutton);
-            //this.Controls.Add(this.nation);
             this.Controls.Add(this.villageName);
             this.Controls.Add(this.drawingPanel);
             this.Controls.Add(this.AgeOfVillagers);
