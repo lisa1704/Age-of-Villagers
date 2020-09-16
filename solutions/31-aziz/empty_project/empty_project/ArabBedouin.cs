@@ -6,5 +6,19 @@ namespace empty_project
 {
     class ArabBedouin : INation
     {
+        void INation.DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        void INation.DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        void INation.DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

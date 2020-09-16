@@ -4,7 +4,21 @@ using System.Text;
 
 namespace empty_project
 {
-    class EgyptianKings: INation
+    class EgyptianKings : INation
     {
+        void INation.DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        void INation.DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        void INation.DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

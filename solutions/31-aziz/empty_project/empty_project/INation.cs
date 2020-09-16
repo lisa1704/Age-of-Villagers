@@ -6,5 +6,8 @@ namespace empty_project
 {
     interface INation
     {
+        void DrawTree();
+        void DrawHouse();
+        void DrawWaterSource();
     }
 }
