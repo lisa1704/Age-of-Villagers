@@ -11,13 +11,13 @@ namespace age_of_villagers
     {
         public ArabHouse(Point pt)
         {
-            Point bottomRight = new Point(pt.X + 26, pt.Y);
-            Point top = new Point(pt.X + 13, pt.Y - 29);
-            Point rec1 = new Point(pt.X + 26, pt.Y - 38);
-            Point rec2 = new Point(pt.X + 35, pt.Y - 15);
+            Point bottomRight = new Point(pt.X + 10, pt.Y);
+            Point top = new Point(pt.X + 5, pt.Y - 13);
+            Point rec1 = new Point(pt.X + 16, pt.Y - 3);
+            Point rec2 = new Point(pt.X + 11, pt.Y - 15);
 
             AddComponent(new Triangle(pt, bottomRight, top));
-            AddComponent(new Rectangle(bottomRight, top, rec1, rec2));
+            AddComponent(new Rectangle(top, bottomRight, rec1, rec2));
         }
     }
 }
