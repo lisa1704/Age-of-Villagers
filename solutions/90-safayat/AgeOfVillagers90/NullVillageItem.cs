@@ -2,6 +2,9 @@
 {
     public class NullVillageItem : CompositeShape
     {
-
+        void paint()
+        {
+            // do nothing
+        }
     }
 }
