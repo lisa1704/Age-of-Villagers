@@ -63,6 +63,7 @@ namespace AgeOfVillagers
         {
             Point P = new Point(e.X, e.Y);
             HouseShape house = new HouseShape(Drawingpanel);
+            TreeShape tree = new TreeShape(Drawingpanel);
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
@@ -73,7 +74,8 @@ namespace AgeOfVillagers
             if (radioButton1.Checked == true)
             {
 
-                //g.DrawArc(p, x, y, 100, 200, 45, 360);
+                tree.Draw(P, Drawingpanel);
+                
             }
             if (radioButton3.Checked == true)
             {
