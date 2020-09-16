@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    interface INation
+    public interface INation
     {
 
         void set_villagename(string name);
@@ -19,6 +19,8 @@ namespace Age_of_Villagers
         List<Point> get_tree();
         List<Point> get_house();
         List<Point> get_river();
+
+        Color set_background();
 
     }
     

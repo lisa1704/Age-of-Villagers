@@ -4,15 +4,15 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    class Inuit : INation
+    public class Inuit : INation
     {
-        private List<Point> house_points = new List<Point>();
-        private List<Point> tree_points = new List<Point>();
-        private List<Point> river_points = new List<Point>();
+        private readonly List<Point> house_points = new List<Point>();
+        private readonly List<Point> tree_points = new List<Point>();
+        private readonly List<Point> river_points = new List<Point>();
         private IShape tree, house, river;
         private string village_name;
         private Graphics g;
-        private Pen pen= new Pen(Color.Black);
+        private Pen pen = new Pen(Color.Black);
         public void draw_house(Point p)
         {
             house_points.Add(p);
@@ -50,6 +50,11 @@ namespace Age_of_Villagers
         public string get_villagename()
         {
             return village_name;
+        }
+
+        public Color set_background()
+        {
+            return Color.White;
         }
 
         public void set_graphics(Graphics g)

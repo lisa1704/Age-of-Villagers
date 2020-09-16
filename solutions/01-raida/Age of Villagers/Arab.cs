@@ -3,21 +3,19 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    class Arab : INation
+    public class Arab : INation
     {
-        private List<Point> house_points = new List<Point>();
-        private List<Point> tree_points = new List<Point>();
-        private List<Point> river_points = new List<Point>();
+        private readonly List<Point> house_points = new List<Point>();
+        private readonly List<Point> tree_points = new List<Point>();
+        private readonly List<Point> river_points = new List<Point>();
         private IShape tree, house, river;
         private string village_name;
         private Graphics g;
-        private Pen pen;
+        private Pen pen = new Pen(Color.Black);
         public void set_graphics(Graphics g)
         {
             this.g = g;
         }
-
-        
 
         public void set_villagename(string name)
         {
@@ -28,14 +26,12 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Arhouse(p, 50, 20);
-            pen = new Pen(Color.Yellow);
             house.draw(g,pen);
         }
 
         public void draw_river(Point P)
         {
-            river = nullshape.Instance;
-            pen = new Pen(Color.Black);
+            river = nullshape.Instance;            
             river.draw(g,pen);
         }
 
@@ -43,7 +39,6 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Artree(p,50,20);
-            pen = new Pen(Color.Black);
             tree.draw(g, pen);
         }
 
@@ -65,6 +60,11 @@ namespace Age_of_Villagers
         public List<Point> get_river()
         {
             return river_points;
+        }
+
+        public Color set_background()
+        {
+            return Color.LightYellow;
         }
     }
 

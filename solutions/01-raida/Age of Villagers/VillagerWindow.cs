@@ -16,6 +16,7 @@ namespace Age_of_Villagers
         int x;
         int y;
         Graphics g;
+        Boolean saved;
         string text = "";
         readonly INationFactory nationfactory=new Nationfactory();
         INation nation=null;
@@ -71,6 +72,7 @@ namespace Age_of_Villagers
             if(save.ShowDialog()==DialogResult.OK)
             {
                 command.execute(save.FileName, nation);
+                saved = true;
             }
         }
 
@@ -81,17 +83,24 @@ namespace Age_of_Villagers
             nation.set_villagename(villageNameBox.Text);
             g = villagePanel.CreateGraphics();
             nation.set_graphics(g);
+            villagePanel.BackColor = nation.set_background();
         }
 
         private void openButton_Click(object sender, EventArgs e)
         {
+
             villagePanel.Invalidate();
             command = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
                 if (System.IO.Path.GetExtension(open.FileName).Equals(".aov"))
+                {
                     command.execute(open.FileName, nation);
+                    villageNameBox.Text = nation.get_villagename();
+                }
+                    
+
                 else
                     MessageBox.Show("Unsupported File type");
             }
@@ -99,9 +108,11 @@ namespace Age_of_Villagers
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            if(nation!=null)
+            if(nation!=null && saved==false)
                 this.saveButton_Click(sender, e);
             villagePanel.Invalidate();
+            saved = false;
+            villageNameBox.Clear();
         }
     }
 }

@@ -4,15 +4,15 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    class Bangladesh :INation
+    public class Bangladesh :INation
     {
-        private List<Point> house_points = new List<Point>();
-        private List<Point> tree_points = new List<Point>();
-        private List<Point> river_points = new List<Point>();
+        private readonly List<Point> house_points = new List<Point>();
+        private readonly List<Point> tree_points = new List<Point>();
+        private readonly List<Point> river_points = new List<Point>();
         private IShape tree,house,river;
         private string village_name;
         private Graphics g;
-        private Pen pen;
+        private Pen pen = new Pen(Color.Black);
         public void set_graphics(Graphics g)
         {
             this.g = g;
@@ -27,7 +27,6 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Bdtree(p,30,30);
-            pen = new Pen(Color.Green);
             tree.draw(g, pen);
         }
 
@@ -35,7 +34,6 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Bdhouse(p,30,20);
-            pen = new Pen(Color.Black);
             house.draw(g,pen);
         }
 
@@ -43,7 +41,6 @@ namespace Age_of_Villagers
         {
             river_points.Add(p);
             river = new Bdriver(p);
-            pen = new Pen(Color.Black);
             river.draw(g, pen);
         }
 
@@ -65,6 +62,11 @@ namespace Age_of_Villagers
         public List<Point> get_river()
         {
             return river_points;
+        }
+
+        public Color set_background()
+        {
+            return Color.LightGreen;
         }
     }
 
