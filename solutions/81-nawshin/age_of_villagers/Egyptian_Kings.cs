@@ -9,7 +9,6 @@ namespace age_of_villagers
 {
     public class Egyptian_Kings : INation
     {
-        Pen p = new Pen(Color.Yellow);
         public void draw_house(Graphics g, Point pt)
         {
             EgyptHouse house = new EgyptHouse(pt);

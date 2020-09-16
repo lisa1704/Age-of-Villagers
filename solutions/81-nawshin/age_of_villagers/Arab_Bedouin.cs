@@ -10,7 +10,6 @@ namespace age_of_villagers
 {
     public class Arab_Bedouin : INation
     {
-        Pen p = new Pen(Color.YellowGreen);
         public void draw_house(Graphics g, Point pt)
         {
             ArabHouse house = new ArabHouse(pt);

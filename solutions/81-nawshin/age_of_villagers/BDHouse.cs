@@ -9,7 +9,6 @@ namespace age_of_villagers
 {
     public class BDHouse :CompositeShape
     {
-
         public BDHouse(Point pt)
         {
             //pt=topLeft

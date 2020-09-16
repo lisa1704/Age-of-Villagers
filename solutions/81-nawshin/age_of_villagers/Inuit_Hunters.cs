@@ -9,7 +9,6 @@ namespace age_of_villagers
 {
     public class Inuit_Hunters : INation
     {
-        Pen p = new Pen(Color.White);
         public void draw_house(Graphics g, Point pt)
         {
             InuitHouse house = new InuitHouse(pt);

@@ -9,8 +9,6 @@ namespace age_of_villagers
 {
     public class Bangladeshi_Farmers : INation
     {
-        Pen p = new Pen(Color.Green);
-        
         public void draw_house(Graphics g,Point pt)
         {
             BDHouse house = new BDHouse(pt);

@@ -30,7 +30,7 @@ namespace age_of_villagers
         private void Panel1(object sender, PaintEventArgs e)
         {
             Graphics g = panel1.CreateGraphics();
-            Pen p = new Pen(Color.Blue);
+            //Pen p = new Pen(Color.Blue);
             foreach(Point pt in house_point)
             {
                 n.CreateNation(nType).draw_house(g,pt);
