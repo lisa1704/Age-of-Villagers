@@ -8,7 +8,6 @@ namespace AgeOfVillagers
 {
     public class Village
     {
-        //AgeOfVillagersForm ageOfVillagersForm = new AgeOfVillagersForm();
         public string nation;
         public string village;
         public List<Point> treePoints;
@@ -22,15 +21,5 @@ namespace AgeOfVillagers
             this.housePoints = house;
             this.riverPoints = river;
         }
-        //public Panel drawingSpace;
-        /*public void setFields()
-        {
-            nation = ageOfVillagersForm.lblNationName.Text;
-            village = ageOfVillagersForm.lblVillageName.Text;
-            //drawingSpace = ageOfVillagersForm.pnlDrawingSpace;
-            treePoints = ageOfVillagersForm.treePoints;
-            housePoints= ageOfVillagersForm.housePoints;
-            riverPoints = ageOfVillagersForm.riverPoints;
-        }*/
     }
 }

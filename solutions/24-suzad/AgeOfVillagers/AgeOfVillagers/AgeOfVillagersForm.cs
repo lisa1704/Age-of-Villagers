@@ -37,22 +37,6 @@ namespace AgeOfVillagers
         }
         public void setRadioButton()
         {
-            /*if (radiobtnHouse.Checked)
-            {
-                rdbtn = radiobtnHouse.Text;
-            }
-            else if (radiobtnTree.Checked)
-            {
-                rdbtn = radiobtnTree.Text;
-            }
-            else if (radiobtnWaterSource.Checked)
-            {
-                rdbtn = radiobtnWaterSource.Text;
-            }
-            else
-            {
-                rdbtn = "";
-            }*/
             RadioButton checkedButton = pnlComponentHolder.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (checkedButton != null)
             {
@@ -67,8 +51,6 @@ namespace AgeOfVillagers
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
-            //Point point = e.Location;
-            //MessageBox.Show("point" + point);
             Graphics graphics = pnlDrawingSpace.CreateGraphics();
             Pen pen = new Pen(Color.Black);
             setRadioButton();
@@ -79,12 +61,6 @@ namespace AgeOfVillagers
             if (rdbtn == "House")
             {
                 housePoints.Add(pt);
-                /*string str = "";
-                foreach (Point item in housePoints)
-                {
-                    str = str + item.X.ToString() + item.Y.ToString();
-                }*/
-                //MessageBox.Show(str);
             }
             else if (rdbtn == "Tree")
             {
@@ -134,18 +110,8 @@ namespace AgeOfVillagers
         private void btnSave_Click(object sender, EventArgs e)
         {
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            //VillageSave villageSave = new VillageSave();
-            //villageSave.setFields();
             Village village = new Village(nationName,villageName,treePoints,housePoints,riverPoints);
-            //village.setFields();
-            /*string str = "";
-            foreach (Point item in village.housePoints)
-            {
-                str = str + item.X.ToString() + item.Y.ToString();
-            }
-            MessageBox.Show(str);*/
-            //MessageBox.Show()
-            VillageSave.openVillage(filePath);
+            VillageSave.saveVillage(filePath,village);
         }
     }
 }

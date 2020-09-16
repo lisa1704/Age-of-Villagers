@@ -13,7 +13,7 @@ namespace AgeOfVillagers
         {
             this.e = e;
         }
-        public override void drawComponent(Point e, Graphics graphics, Pen pen)
+        public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
             int x = e.X;
             int y = e.Y;

@@ -6,10 +6,24 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public abstract class VillageComponent
+    public abstract class VillageComponent:IShape
     {
-        //public void drawComponent(MouseEventArgs e, Graphics graphics, Pen pen);
-        public abstract void drawComponent(Point e, Graphics graphics, Pen pen);
+        public readonly List<IShape> _components;
+        public VillageComponent()
+        {
+            _components = new List<IShape>();
+        }
+        public void addComponent(IShape shape)
+        {
+            _components.Add(shape);
+        }
+        public void drawComponent(Point e, Graphics graphics, Pen pen)
+        {
+            foreach (var component in _components)
+            {
+                component.drawComponent( e,  graphics,  pen);
+            }
+        }
         public abstract Point getPoint();
     }
 }
