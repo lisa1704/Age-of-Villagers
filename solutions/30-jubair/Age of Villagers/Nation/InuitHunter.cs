@@ -40,7 +40,8 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            
+            NullVillageComponent null_object = new NullVillageComponent(new Point(_point.X, _point.Y));
+            null_object.Paint(graphics);
         }
 
 
