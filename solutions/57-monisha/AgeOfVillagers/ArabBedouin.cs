@@ -28,6 +28,7 @@ namespace AgeOfVillagers
         public void DrawWaterSource(Graphics g, Point MPt)
         {
             NullWater nullWater = new NullWater();
+            nullWater.Paint(g,p);
         }
 
         public Color GetTerrainColor()

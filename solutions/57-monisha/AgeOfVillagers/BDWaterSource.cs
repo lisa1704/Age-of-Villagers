@@ -55,7 +55,6 @@ namespace AgeOfVillagers
         internal void Paint(Graphics g, Pen p)
         {
             //No Paint
-            throw new NotImplementedException();
         }
     }
 }
