@@ -102,7 +102,7 @@ namespace AgeOfVillagers90
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Vtype = NationList.Text;
-
+            DrawPanel.BackColor = nationfactory.GetNation(Vtype).BackGroundColor();
         }
 
         private void AgeofVillagers_Click(object sender, EventArgs e)
