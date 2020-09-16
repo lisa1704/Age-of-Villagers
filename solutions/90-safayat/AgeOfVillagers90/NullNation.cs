@@ -6,7 +6,7 @@ namespace AgeOfVillagers90
     {
         public Color BackGroundColor()
         {
-            throw new System.NotImplementedException();
+            return Color.White;
         }
 
         public void DrawHouse(Graphics g, Point pt)

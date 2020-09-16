@@ -67,6 +67,9 @@ namespace AgeOfVillagers90
             TreePoints.Clear();
             WaterPoints.Clear();
             DrawPanel.Refresh();
+            NationList.ResetText();
+            Vtype = NationList.Text;
+            DrawPanel.BackColor = nationfactory.GetNation(Vtype).BackGroundColor();
 
         }
 
