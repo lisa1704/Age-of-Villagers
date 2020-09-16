@@ -48,6 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +67,7 @@
     <Compile Include="BangladeshiHouse.cs" />
     <Compile Include="BangladeshiItemFactory.cs" />
     <Compile Include="BangladeshiTree.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
     <Compile Include="NationFactory.cs" />
@@ -96,6 +100,7 @@
     <EmbeddedResource Include="VillageEditorWindow.resx">
       <DependentUpon>VillageEditorWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

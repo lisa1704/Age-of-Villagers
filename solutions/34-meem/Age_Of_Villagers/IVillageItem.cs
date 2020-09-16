@@ -10,7 +10,7 @@ namespace Age_Of_Villagers
 {
     public interface IVillageItem
     {
-         void Draw(Graphics g, Pen p);
+         void Draw(Point e,Graphics g, Pen p);
 
 
     }
