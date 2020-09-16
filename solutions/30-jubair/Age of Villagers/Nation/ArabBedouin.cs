@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.House;
+using Age_of_Villagers.Tree;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -35,7 +36,8 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            ArabTree arab_tree = new ArabTree(new Point(_point.X, _point.Y), new Point(_point.X+10, _point.Y-6), new Point(_point.X - 10, _point.Y - 6), new Point(_point.X + 6, _point.Y - 10), new Point(_point.X - 6, _point.Y - 10), new Point(_point.X, _point.Y-12), new Point(_point.X-1, _point.Y+8), new Point(_point.X+1, _point.Y));
+            arab_tree.Paint(graphics);        
         }
 
         public void GetWaterResource(Graphics graphics, Point _point)

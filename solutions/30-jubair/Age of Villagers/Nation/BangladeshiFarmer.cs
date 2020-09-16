@@ -36,8 +36,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            BangladeshiTree bangladeshi_tree = new BangladeshiTree(new Point(_point.X, _point.Y), new Point(_point.X+9, _point.Y+30),
-                new Point(_point.X+15, _point.Y+18), new Point(_point.X+7, _point.Y+12));
+            BangladeshiTree bangladeshi_tree = new BangladeshiTree(new Point(_point.X, _point.Y), new Point(_point.X+9, _point.Y+30), new Point(_point.X+15, _point.Y+18), new Point(_point.X+7, _point.Y+12));
             bangladeshi_tree.Paint(graphics);
             //Point mainPoint, Point topRight, Point bottomRight, Point topPoint, Point topLeft
             
@@ -45,11 +44,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            BangladeshiPond bangladeshi_pond = new BangladeshiPond(new Point(_point.X, _point.Y),
-                new Point(_point.X - 12, _point.Y + 24), new Point(_point.X , _point.Y + 36), 
-                new Point(_point.X + 18, _point.Y + 24), new Point(_point.X + 24, _point.Y + 36),
-                new Point(_point.X+36, _point.Y+12), new Point(_point.X+30, _point.Y-6), 
-                new Point(_point.X+12, _point.Y+12), new Point(_point.X+12, _point.Y-3));
+            BangladeshiPond bangladeshi_pond = new BangladeshiPond(new Point(_point.X, _point.Y),new Point(_point.X - 12, _point.Y + 24), new Point(_point.X , _point.Y + 36), new Point(_point.X + 18, _point.Y + 24), new Point(_point.X + 24, _point.Y + 36),new Point(_point.X+36, _point.Y+12), new Point(_point.X+30, _point.Y-6), new Point(_point.X+12, _point.Y+12), new Point(_point.X+12, _point.Y-3));
             bangladeshi_pond.Paint(graphics);
         }
 
