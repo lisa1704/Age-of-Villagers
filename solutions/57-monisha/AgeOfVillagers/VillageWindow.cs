@@ -17,12 +17,13 @@ namespace AgeOfVillagers
         int x;
         int y;
         Graphics g;
-        string name = "";
+        string VName = "";
         string VType = "";
         string Itemtext = "";
-        List<Point> HousePoints = new List<Point>();
-        List<Point> TreePoints = new List<Point>();
-        List<Point> WaterPoints = new List<Point>();
+        VillageProperties village;
+        List<Point> HousePoints { get; set; } = new List<Point>();
+        List<Point> TreePoints { get; set; } = new List<Point>();
+        List<Point> WaterPoints { get; set; } = new List<Point>();
 
         NationFactory nationFactory = new NationFactory();
         public VillageWindow()
@@ -60,17 +61,20 @@ namespace AgeOfVillagers
         {
             MessageBox.Show(VillageNameBox.Text+"Village saved");
             Stream myStream;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.FileName = "*.txt";
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.Filter = "AoV file(*.txt)| *.txt";
 
-            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                if ((myStream = saveFileDialog.OpenFile()) != null)
                 {
                     // Code to write the stream goes here.
+                    
                     myStream.Close();
                 }
             }
@@ -95,8 +99,8 @@ namespace AgeOfVillagers
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
-            name = VillageNameBox.Text;
-            
+            VName = VillageNameBox.Text;
+            UserVillageName.Text = VName;
         }
 
         private void NationList_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -132,11 +136,7 @@ namespace AgeOfVillagers
         }
 
         private void draw_panelMouseClick(object sender, MouseEventArgs e)
-        {
-            /* Point p = new Point(e.X, e.Y);
-             x = p.X;
-             y = p.Y;
-             DrawPanel.Invalidate();*/
+        {        
             if (Itemtext == "House")
             {
                 HousePoints.Add(e.Location);
@@ -150,6 +150,11 @@ namespace AgeOfVillagers
                 WaterPoints.Add(e.Location);
             }
             DrawPanel.Invalidate();
+        }
+
+        private void UserVillageName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
