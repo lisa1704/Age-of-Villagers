@@ -7,7 +7,7 @@ public class MyCanvas {
     private Canvas canvas;
 
     private MyCanvas(){
-        canvas = new Canvas(500,500);
+        canvas = new Canvas(525,500);
     }
 
     public static MyCanvas getInstance(){

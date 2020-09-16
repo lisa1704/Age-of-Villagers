@@ -11,7 +11,7 @@ public class EgyptianKingsTerrain implements ITerrain {
         MyCanvas myCanvas = MyCanvas.getInstance();
         GraphicsContext graphicsContext = myCanvas.getCanvas().getGraphicsContext2D();
         graphicsContext.setFill(Color.LIGHTYELLOW);
-        graphicsContext.fillRect(0, 0, 500, 400);
+        graphicsContext.fillRect(0,0,525,498);
 
 
     }

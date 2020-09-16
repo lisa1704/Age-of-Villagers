@@ -5,18 +5,24 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.ArcType;
+import javafx.stage.FileChooser;
 import nation.BDFarmers;
 import nation.NationManager;
 import terrain.BDFarmerTerrain;
 import terrain.ITerrain;
 
+import java.io.File;
 import java.util.List;
 
 public class Controller {
@@ -51,10 +57,6 @@ public class Controller {
 
 
 
-    private void initialize() {
-    }
-
-
     @FXML
     void newVillageBTN(ActionEvent event) {
         System.out.println("New Village Request");
@@ -70,6 +72,16 @@ public class Controller {
 
         MyCanvas myCanvas = MyCanvas.getInstance();
         canvas = myCanvas.getCanvas();
+
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<javafx.scene.input.MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
+                System.out.println("sldfjsdkl");
+            }
+        });
 
         villageTypeList.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -102,11 +114,17 @@ public class Controller {
     @FXML
     void saveVillageBTN(ActionEvent event) {
         System.out.println("village saved");
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(".aov file", "*.aov");
+        fileChooser.getExtensionFilters().add(extensionFilter);
+        File file  = fileChooser.showSaveDialog(null);
+
     }
 
     @FXML
     void canvas(ActionEvent event) {
         System.out.println("canvas Clicked");
+
     }
 
 }

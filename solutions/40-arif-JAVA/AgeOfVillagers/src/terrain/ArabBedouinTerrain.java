@@ -9,11 +9,12 @@ public class ArabBedouinTerrain implements ITerrain{
     public void draw() {
 
         MyCanvas myCanvas = MyCanvas.getInstance();
-        
+
         GraphicsContext graphicsContext = myCanvas.getCanvas().getGraphicsContext2D();
 
         graphicsContext.setFill(Color.ORANGE);
-        graphicsContext.fillRect(0,0,500,400);
+
+        graphicsContext.fillRect(0,0,525,498);
 
     }
 }

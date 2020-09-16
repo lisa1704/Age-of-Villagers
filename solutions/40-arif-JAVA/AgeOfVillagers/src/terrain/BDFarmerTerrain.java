@@ -13,7 +13,7 @@ public class BDFarmerTerrain implements ITerrain {
 
         graphicsContext.setFill(Color.GREENYELLOW);
 
-        graphicsContext.fillRect(0,0,500,400);
+        graphicsContext.fillRect(0,0,525,498);
 
     }
 }

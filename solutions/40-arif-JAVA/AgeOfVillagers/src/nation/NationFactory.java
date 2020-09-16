@@ -1,5 +1,7 @@
 package nation;
 
+import terrain.BlankTrerrain;
+
 public class NationFactory {
 
     public INation getNation(String nationType) {
@@ -12,7 +14,8 @@ public class NationFactory {
             return new EgyptianKings();
         else if(nationType == "Inuit Hunter")
             return new InuitHunters();
-
-        return null;
+        else {
+            return new NoNations();
+        }
     }
 }
