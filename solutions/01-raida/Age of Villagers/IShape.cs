@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    interface IShape
+    public interface IShape
     {
         void draw(Graphics g, Pen pen);
     }

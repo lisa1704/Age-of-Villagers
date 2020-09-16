@@ -1,6 +1,6 @@
 ﻿namespace Age_of_Villagers
 {
-    interface ICommandVillage
+    public interface ICommandVillage
     {
         void execute(string path, INation nation);
     }

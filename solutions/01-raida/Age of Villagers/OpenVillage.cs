@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class OpenVillage : ICommandVillage
+    public class OpenVillage : ICommandVillage
     {
         village village;
         public void execute(string path,INation nation)

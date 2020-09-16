@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Age_of_Villagers
 {
-    class SaveVillage : ICommandVillage
+    public class SaveVillage : ICommandVillage
     {
         village village;
         private void get_state(INation nation)

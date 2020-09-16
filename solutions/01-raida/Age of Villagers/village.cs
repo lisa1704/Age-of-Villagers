@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    struct village
+    public struct village
     {
         public string name;
         public List<Point> tree_points;

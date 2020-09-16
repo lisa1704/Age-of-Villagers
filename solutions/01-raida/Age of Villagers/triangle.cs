@@ -9,7 +9,7 @@ namespace Age_of_Villagers
 {
     class triangle:IShape
     {
-        private readonly int height;
+        
         private readonly Point point1,point2,point3;
 
         private compositeShape cs = new compositeShape();
