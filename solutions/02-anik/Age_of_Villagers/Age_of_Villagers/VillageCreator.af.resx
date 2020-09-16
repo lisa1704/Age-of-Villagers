@@ -59,10 +59,10 @@
   </resheader>
   <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="NewVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>409, 312</value>
+    <value>856, 394</value>
   </data>
   <data name="NewVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>97, 29</value>
+    <value>110, 28</value>
   </data>
   <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
   <data name="NewVillage.TabIndex" type="System.Int32, System.Private.CoreLib">
@@ -71,17 +71,20 @@
   <data name="NewVillage.Text" xml:space="preserve">
     <value>New Village</value>
   </data>
+  <data name="OpenVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>856, 348</value>
+  </data>
   <data name="OpenVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>110, 29</value>
+    <value>110, 28</value>
   </data>
   <data name="OpenVillage.Text" xml:space="preserve">
     <value>Open Village</value>
   </data>
   <data name="SaveVillage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>468, 277</value>
+    <value>856, 303</value>
   </data>
   <data name="SaveVillage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>99, 29</value>
+    <value>110, 28</value>
   </data>
   <data name="SaveVillage.Text" xml:space="preserve">
     <value>Save Village</value>
@@ -90,7 +93,7 @@
     <value>True</value>
   </data>
   <data name="Tree.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>431, 177</value>
+    <value>856, 192</value>
   </data>
   <data name="Tree.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>58, 24</value>
@@ -102,7 +105,7 @@
     <value>True</value>
   </data>
   <data name="House.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>540, 177</value>
+    <value>856, 222</value>
   </data>
   <data name="House.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>72, 24</value>
@@ -114,7 +117,7 @@
     <value>True</value>
   </data>
   <data name="WaterSource.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>450, 207</value>
+    <value>856, 252</value>
   </data>
   <data name="WaterSource.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>118, 24</value>
@@ -122,8 +125,84 @@
   <data name="WaterSource.Text" xml:space="preserve">
     <value>Water Source</value>
   </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>12, 12</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>600, 400</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="AgeOfVillagers.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="AgeOfVillagers.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 19.800001pt, style=Bold</value>
+  </data>
+  <data name="AgeOfVillagers.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>747, 32</value>
+  </data>
+  <data name="AgeOfVillagers.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>279, 46</value>
+  </data>
+  <data name="AgeOfVillagers.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>9</value>
+  </data>
+  <data name="AgeOfVillagers.Text" xml:space="preserve">
+    <value>Age Of Villagers</value>
+  </data>
+  <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>785, 130</value>
+  </data>
+  <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>151, 28</value>
+  </data>
+  <data name="comboBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>11</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>785, 93</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>147, 27</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>12</value>
+  </data>
+  <data name="VillageName.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="VillageName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>661, 96</value>
+  </data>
+  <data name="VillageName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>113, 20</value>
+  </data>
+  <data name="VillageName.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>13</value>
+  </data>
+  <data name="VillageName.Text" xml:space="preserve">
+    <value>Village Name =</value>
+  </data>
+  <data name="NationName.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="NationName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>661, 133</value>
+  </data>
+  <data name="NationName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>112, 20</value>
+  </data>
+  <data name="NationName.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>14</value>
+  </data>
+  <data name="NationName.Text" xml:space="preserve">
+    <value>Nation Name =</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>624, 353</value>
+    <value>1026, 477</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VillageCreator</value>
