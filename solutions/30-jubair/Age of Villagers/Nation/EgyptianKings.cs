@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.House;
+using Age_of_Villagers.Tree;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -35,7 +36,8 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            EgyptianTree egyptian_tree = new EgyptianTree(new Point(_point.X, _point.Y), new Point(_point.X-4, _point.Y-8), new Point(_point.X+4, _point.Y-8), new Point(_point.X-9, _point.Y-15), new Point(_point.X+7, _point.Y-17), new Point(_point.X-13, _point.Y-12), new Point(_point.X-5, _point.Y-17), new Point(_point.X+2, _point.Y-16), new Point(_point.X+13, _point.Y-16));
+            egyptian_tree.Paint(graphics);
         }
 
         public void GetWaterResource(Graphics graphics, Point _point)

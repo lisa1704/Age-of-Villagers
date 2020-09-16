@@ -63,22 +63,27 @@ namespace Age_of_Villagers
             //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
             //bd.GetHouse(graphics,e.Location);
 
-
-            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
-            //eg.GetHouse(graphics, e.Location);
-
-            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            //arab.GetHouse(graphics, e.Location);
-
-            ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            arab.GetTree(graphics, e.Location);
-
             //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
             //bd.GetTree(graphics,e.Location);
 
             //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
             //bd.GetWaterResource(graphics,e.Location);
 
+
+
+            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
+            //eg.GetHouse(graphics, e.Location);
+
+            EgyptianKings eg = new EgyptianKings("Egyptian Kings");
+            eg.GetTree(graphics, e.Location);
+
+            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
+            //arab.GetHouse(graphics, e.Location);
+
+            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
+            //arab.GetTree(graphics, e.Location);
+
+            
 
 
 
