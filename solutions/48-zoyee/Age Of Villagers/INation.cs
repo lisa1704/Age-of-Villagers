@@ -17,7 +17,7 @@ namespace Age_Of_Villagers
 
     internal class FactoryNation
     {
-        public string NationName { get; private set; }
+        //public string NationName { get; private set; }
 
         public INation GetNation(string NationName)
         {
