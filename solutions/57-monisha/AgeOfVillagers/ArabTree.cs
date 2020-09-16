@@ -18,7 +18,6 @@ namespace AgeOfVillagers
                 AddComp(new ShapeRectangle(RTopLeft, bottomRight));
                 AddComp(new ShapeEllipse(MPt, topPt));
             }
-
         }
         public class EgyptianTree : CompositeShape
         {
