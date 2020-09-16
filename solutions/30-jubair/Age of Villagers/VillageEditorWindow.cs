@@ -86,8 +86,12 @@ namespace Age_of_Villagers
             //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
             //arab.GetTree(graphics, e.Location);
 
-            InuitHunter inuit = new InuitHunter("Inuit Hunter");
-            inuit.GetHouse(graphics, e.Location);
+            ArabBedouin arab = new ArabBedouin("Arab Bedouin");
+            arab.GetWaterResource(graphics, e.Location);
+
+            //InuitHunter inuit = new InuitHunter("Inuit Hunter");
+            //inuit.GetHouse(graphics, e.Location);
+
 
 
 
