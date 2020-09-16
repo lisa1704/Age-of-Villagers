@@ -11,17 +11,20 @@ namespace AgeOfVillagers90
 
         public void DrawHouse(Graphics g, Point pt)
         {
-            throw new System.NotImplementedException();
+            NullVillageItem NullNationhouse = new NullVillageItem();
+            NullNationhouse.paint();
         }
 
         public void DrawTree(Graphics g, Point pt)
         {
-            throw new System.NotImplementedException();
+            NullVillageItem NullNationtree = new NullVillageItem();
+            NullNationtree.paint();
         }
 
         public void DrawWaterSource(Graphics g, Point pt)
         {
-            throw new System.NotImplementedException();
+            NullVillageItem NullNationws = new NullVillageItem();
+            NullNationws.paint();
         }
     }
 }
