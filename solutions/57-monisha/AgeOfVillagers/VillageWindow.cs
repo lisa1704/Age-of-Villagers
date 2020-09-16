@@ -70,6 +70,9 @@ namespace AgeOfVillagers
             HousePoints.Clear();
             TreePoints.Clear();
             WaterPoints.Clear();
+            NationList.ResetText();
+            VType = NationList.Text;
+            DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
             DrawPanel.Refresh();
             //MessageBox.Show("Village is Saved");
         }

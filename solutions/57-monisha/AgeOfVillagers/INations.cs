@@ -35,6 +35,10 @@ namespace AgeOfVillagers
             {
                 return new InuitHunters();
             }
+            else
+            {
+                return new NullNation();
+            }
             throw new Exception();
         }
     }
