@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.House;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -25,7 +26,9 @@ namespace Age_of_Villagers.Nation
 
         public void GetHouse(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            InuitHouse inuit_house = new InuitHouse(new Point(_point.X, _point.Y), new Point(_point.X+16, _point.Y ) );
+            inuit_house.Paint(graphics);
+            
         }
 
         public void GetTree(Graphics graphics, Point _point)
