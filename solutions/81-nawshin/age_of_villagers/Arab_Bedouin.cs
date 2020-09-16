@@ -27,16 +27,6 @@ namespace age_of_villagers
             //do nothing
         }
 
-        /*public void paint_terrian(Panel p)
-        {
-            ArabTerrian arab = new ArabTerrian(p);
-
-            //g.BackColor = Color.AliceBlue;
-        }*/
-        /*public void ClearColor(PaintEventArgs e)
-        {
-            e.Graphics.Clear(Color.Yellow);
-        }*/
         public Color BackColor()
         {
             Color color = Color.Yellow;
