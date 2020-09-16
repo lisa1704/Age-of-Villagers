@@ -63,7 +63,10 @@ namespace AgeOfVillagers90
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-
+            HousePoints.Clear();
+            TreePoints.Clear();
+            WaterPoints.Clear();
+            DrawPanel.Refresh();
         }
 
 

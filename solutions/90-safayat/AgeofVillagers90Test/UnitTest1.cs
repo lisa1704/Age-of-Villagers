@@ -13,7 +13,6 @@ namespace AgeofVillagers90Test
             BangladeshiFarmers bdfarmerTest = new BangladeshiFarmers();
             string s = bdfarmerTest.BangladeshiFarmerTest();
             Assert.AreEqual("Bangladeshi", s);
-            
         }
     }
 }
