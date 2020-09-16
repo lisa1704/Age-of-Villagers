@@ -19,11 +19,10 @@ namespace age_of_villagers
             this.a1 = a1;
             this.a2 = a2;
         }
-
         public void draw(Graphics g)
         {
             Pen p = new Pen(Color.DarkBlue);
-            g.DrawArc(p, pt.X - 25, pt.Y - 25, w, h, a1, a2);
+            g.DrawArc(p, pt.X - 10, pt.Y - 10, w, h, a1, a2);
         }
     }
 }
