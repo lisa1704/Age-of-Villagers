@@ -11,10 +11,10 @@ namespace age_of_villagers
     {
         public BDTree(Point pt)
         {
-            Point topLeft = new Point(pt.X - 1, pt.Y);
-            Point bottomRight = new Point(pt.X + 1, pt.Y + 50);
+            Point topLeft = new Point(pt.X - 2, pt.Y+1);
+            Point bottomRight = new Point(pt.X , pt.Y + 15);
 
-            AddComponent(new Arc(pt, 44, 50, 0, 360));
+            AddComponent(new Arc(pt, 16, 18, 0, 360));
             AddComponent(new Rectangle(topLeft, bottomRight));
         }
     }
