@@ -26,12 +26,11 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
-           
         }
 
-        private void villagePanel_MouseClick(object sender, MouseEventArgs e)
+        public void villagePanel_MouseClick(object sender, MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
@@ -50,22 +49,22 @@ namespace Age_of_Villagers
 
         }
 
-        private void treeButton_Click(object sender, EventArgs e)
+        public void treeButton_Click(object sender, EventArgs e)
         {
             text = "Tree";
         }
 
-        private void houseBotton_Click(object sender, EventArgs e)
+        public void houseBotton_Click(object sender, EventArgs e)
         {
             text = "House";
         }
 
-        private void watersourceButton_Click(object sender, EventArgs e)
+        public void watersourceButton_Click(object sender, EventArgs e)
         {
             text = "River";
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+        public void saveButton_Click(object sender, EventArgs e)
         {
             command = new SaveVillage();
             SaveFileDialog save = new SaveFileDialog();
@@ -76,7 +75,7 @@ namespace Age_of_Villagers
             }
         }
 
-        private void nationList_SelectedIndexChanged(object sender, EventArgs e)
+        public void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation=nationfactory.GetNation(selectedNation);
@@ -86,7 +85,7 @@ namespace Age_of_Villagers
             villagePanel.BackColor = nation.set_background();
         }
 
-        private void openButton_Click(object sender, EventArgs e)
+        public void openButton_Click(object sender, EventArgs e)
         {
 
             villagePanel.Invalidate();
@@ -106,7 +105,7 @@ namespace Age_of_Villagers
             }
         }
 
-        private void newButton_Click(object sender, EventArgs e)
+        public void newButton_Click(object sender, EventArgs e)
         {
             if(nation!=null && saved==false)
                 this.saveButton_Click(sender, e);
