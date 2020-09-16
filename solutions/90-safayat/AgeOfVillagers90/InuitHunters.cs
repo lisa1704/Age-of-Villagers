@@ -10,6 +10,12 @@ namespace AgeOfVillagers90
     class InuitHunters : INation
     {
         Pen p = new Pen(Color.Yellow);
+
+        public Color BackGroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point pt)
         {
             InuitHouse inhouse = new InuitHouse(pt);

@@ -14,5 +14,6 @@ namespace AgeOfVillagers90
 
         void DrawWaterSource(Graphics g, Point pt);
 
+        Color BackGroundColor(); 
     }
 }

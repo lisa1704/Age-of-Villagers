@@ -38,7 +38,7 @@ namespace AgeOfVillagers90
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(VillageName.Text+"Village Saved");
+            MessageBox.Show(VillageName.Text +" Village Saved");
         }
 
         private void Tree_Click(object sender, EventArgs e)
@@ -102,6 +102,7 @@ namespace AgeOfVillagers90
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Vtype = NationList.Text;
+
         }
 
         private void AgeofVillagers_Click(object sender, EventArgs e)

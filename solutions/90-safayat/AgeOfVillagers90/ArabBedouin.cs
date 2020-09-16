@@ -10,6 +10,12 @@ namespace AgeOfVillagers90
     class ArabBedouin : INation
     {
         Pen p = new Pen(Color.Violet);
+
+        public Color BackGroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point pt)
         {
             ArabBedouinHOuse abhouse = new ArabBedouinHOuse(pt);
@@ -26,5 +32,7 @@ namespace AgeOfVillagers90
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

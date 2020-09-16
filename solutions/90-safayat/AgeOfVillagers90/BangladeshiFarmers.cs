@@ -36,5 +36,10 @@ namespace AgeOfVillagers90
         {
             return "Bangladeshi";
         }
+
+        public Color BackGroundColor()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

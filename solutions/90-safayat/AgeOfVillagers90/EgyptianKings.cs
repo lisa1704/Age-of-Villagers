@@ -10,6 +10,12 @@ namespace AgeOfVillagers90
     class EgyptianKings : INation
     {
         Pen p = new Pen(Color.Red);
+
+        public Color BackGroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point pt)
         {
             EgyptianHouse ekh = new EgyptianHouse(pt);
