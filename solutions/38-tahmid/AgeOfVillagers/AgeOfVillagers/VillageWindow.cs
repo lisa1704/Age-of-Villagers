@@ -104,48 +104,43 @@ namespace AgeOfVillagers
 
        
 
-        private void ClickTree(object sender, EventArgs e)
-        {
+        
 
-            selectedItem = Constants.TREE_ITEM;
-            
-        }
-
-        private void ClickHouse(object sender, EventArgs e)
-        {
-            selectedItem = Constants.HOUSE_ITEM;
-            
-        }
-
-        private void ClickWaterSource(object sender, EventArgs e)
-        {
-            selectedItem = Constants.WATER_SOURCE_ITEM;
-            
-        }
-
-        private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Click_Inuit_Hunters(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Click_Egyptian_Kings(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Click_Arab_Bedouin(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void Mouse_Click_Inuit_Hunters(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Mouse_Click_Egyptian_Kings(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Mouse_ClickTree(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Mouse_ClickHouse(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Mouse_ClickWaterSource(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Mouse_Click_Arab_Bedouin(object sender, MouseEventArgs e)
+        {
+
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)

@@ -9,6 +9,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
     class InuitEnvironment : Environment
     {
         private Label nation_Name;
+        private RadioButton firstNation;
         private RadioButton secondNation;
         private RadioButton thirdNation;
         private RadioButton fourthNation;

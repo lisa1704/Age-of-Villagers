@@ -91,7 +91,8 @@
             this.Tree.TabStop = true;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.ClickTree);
+            
+            this.Tree.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickTree);
             // 
             // label1
             // 
@@ -185,7 +186,7 @@
             this.BD.TabStop = true;
             this.BD.Text = "Bangladeshi Farmers";
             this.BD.UseVisualStyleBackColor = true;
-            this.BD.Click += new System.EventHandler(this.Click_Bangladeshi_Farmers);
+           
             this.BD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Bangladeshi_Farmer);
             // 
             // Hunters
@@ -198,7 +199,8 @@
             this.Hunters.TabStop = true;
             this.Hunters.Text = "Inuit Hunters";
             this.Hunters.UseVisualStyleBackColor = true;
-            this.Hunters.Click += new System.EventHandler(this.Click_Inuit_Hunters);
+           
+            this.Hunters.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Inuit_Hunters);
             // 
             // Egyptians
             // 
@@ -210,7 +212,8 @@
             this.Egyptians.TabStop = true;
             this.Egyptians.Text = "Egyptian Kings";
             this.Egyptians.UseVisualStyleBackColor = true;
-            this.Egyptians.Click += new System.EventHandler(this.Click_Egyptian_Kings);
+            
+            this.Egyptians.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Egyptian_Kings);
             // 
             // Arabians
             // 
@@ -222,7 +225,8 @@
             this.Arabians.TabStop = true;
             this.Arabians.Text = "Arab Bedouin";
             this.Arabians.UseVisualStyleBackColor = true;
-            this.Arabians.Click += new System.EventHandler(this.Click_Arab_Bedouin);
+           
+            this.Arabians.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Arab_Bedouin);
             // 
             // groupBox1
             // 
@@ -259,7 +263,8 @@
             this.WaterSource.TabStop = true;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.ClickWaterSource);
+           
+            this.WaterSource.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickWaterSource);
             // 
             // House
             // 
@@ -271,7 +276,8 @@
             this.House.TabStop = true;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.ClickHouse);
+            
+            this.House.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickHouse);
             // 
             // VillageWindow
             // 
