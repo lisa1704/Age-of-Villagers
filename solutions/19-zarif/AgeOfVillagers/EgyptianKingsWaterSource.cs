@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKingsWaterSource
+    public class EgyptianKingsWaterSource : CompositeShape
     {
+        public EgyptianKingsWaterSource(Point point)
+        {
+            addShape(new BaseCircle(point, 24, 24));
+        }
     }
 }
