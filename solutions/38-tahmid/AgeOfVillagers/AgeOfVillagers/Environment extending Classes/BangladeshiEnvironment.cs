@@ -9,21 +9,26 @@ namespace AgeOfVillagers.Environment_extending_Classes
     public class BangladeshiEnvironment : Environment
     {
         private Label nation_Name;
-        private RadioButton egyptians;
-        private RadioButton arabians;
-        private RadioButton hunters;
+        private RadioButton seconNation1;
+        private RadioButton thirdNation;
+        private RadioButton fourthNation;
+        private RadioButton tree;
+        private RadioButton house;
+        private RadioButton waterSource;
         private Graphics graphics;
-        private string selectedNation;
+        private RadioButton seconNation2;
 
-        public BangladeshiEnvironment(Label nation_Name, RadioButton egyptians, RadioButton arabians, RadioButton hunters, Graphics graphics, string selectedNation
-            )
+        public BangladeshiEnvironment(Label nation_Name, RadioButton seconNation1, RadioButton thirdNation, RadioButton fourthNation, RadioButton tree, RadioButton house, RadioButton waterSource, Graphics graphics, RadioButton seconNation2)
         {
             this.nation_Name = nation_Name;
-            this.egyptians = egyptians;
-            this.arabians = arabians;
-            this.hunters = hunters;
+            this.seconNation1 = seconNation1;
+            this.thirdNation = thirdNation;
+            this.fourthNation = fourthNation;
+            this.tree = tree;
+            this.house = house;
+            this.waterSource = waterSource;
             this.graphics = graphics;
-            this.selectedNation = selectedNation;
+            this.seconNation2 = seconNation2;
         }
 
         public override void showNationName()
