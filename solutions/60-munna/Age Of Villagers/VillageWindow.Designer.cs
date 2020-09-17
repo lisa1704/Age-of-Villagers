@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Age_Of_Villagers
 {
-    partial class VillageWindow
+    public partial class VillageWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +31,7 @@ namespace Age_Of_Villagers
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.drawingSpace = new System.Windows.Forms.Panel();
             this.titleOfGame = new System.Windows.Forms.Label();
             this.saveVillage_Button = new System.Windows.Forms.Button();
             this.newVillage_Button = new System.Windows.Forms.Button();
@@ -40,13 +41,14 @@ namespace Age_Of_Villagers
             this.waterRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // panel1
+            // drawingSpace
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(12, 45);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 0;
+            this.drawingSpace.BackColor = System.Drawing.Color.White;
+            this.drawingSpace.Location = new System.Drawing.Point(12, 45);
+            this.drawingSpace.Name = "drawingSpace";
+            this.drawingSpace.Size = new System.Drawing.Size(600, 400);
+            this.drawingSpace.TabIndex = 0;
+            this.drawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingSpace_Paint);
             // 
             // titleOfGame
             // 
@@ -70,7 +72,7 @@ namespace Age_Of_Villagers
             this.saveVillage_Button.TabIndex = 2;
             this.saveVillage_Button.Text = "Save Village";
             this.saveVillage_Button.UseVisualStyleBackColor = false;
-            this.saveVillage_Button.Click += new System.EventHandler(this.saveVillageButton_Checked);
+            this.saveVillage_Button.Click += new System.EventHandler(this.saveVillage_Button_Click);
             // 
             // newVillage_Button
             // 
@@ -83,7 +85,7 @@ namespace Age_Of_Villagers
             this.newVillage_Button.TabIndex = 2;
             this.newVillage_Button.Text = "New Village";
             this.newVillage_Button.UseVisualStyleBackColor = false;
-            this.newVillage_Button.Click += new System.EventHandler(this.newVillageButton_Checked);
+            this.newVillage_Button.Click += new System.EventHandler(this.newVillage_Button_Click);
             // 
             // openVillage_Button
             // 
@@ -96,7 +98,7 @@ namespace Age_Of_Villagers
             this.openVillage_Button.TabIndex = 2;
             this.openVillage_Button.Text = "Open Village";
             this.openVillage_Button.UseVisualStyleBackColor = false;
-            this.newVillage_Button.Click += new System.EventHandler(this.openVillageButton_Checked);
+            this.openVillage_Button.Click += new System.EventHandler(this.openVillage_Button_Click);
             // 
             // treeRadioButton
             // 
@@ -122,7 +124,7 @@ namespace Age_Of_Villagers
             this.houseRadioButton.TabStop = true;
             this.houseRadioButton.Text = "House";
             this.houseRadioButton.UseVisualStyleBackColor = true;
-            this.houseRadioButton.Click += new System.EventHandler(this.houseRadioButton_Checked);
+            this.houseRadioButton.Click += new System.EventHandler(this.waterRadioButton_Checked);
             // 
             // waterRadioButton
             // 
@@ -135,7 +137,6 @@ namespace Age_Of_Villagers
             this.waterRadioButton.TabStop = true;
             this.waterRadioButton.Text = "Water Source";
             this.waterRadioButton.UseVisualStyleBackColor = true;
-            this.houseRadioButton.Click += new System.EventHandler(this.waterRadioButton_Checked);
             // 
             // VillageWindow
             // 
@@ -149,7 +150,7 @@ namespace Age_Of_Villagers
             this.Controls.Add(this.newVillage_Button);
             this.Controls.Add(this.saveVillage_Button);
             this.Controls.Add(this.titleOfGame);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.drawingSpace);
             this.Name = "VillageWindow";
             this.Text = "Age of Villagers";
             this.ResumeLayout(false);
@@ -157,9 +158,11 @@ namespace Age_Of_Villagers
 
         }
 
+
+
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel drawingSpace;
         private System.Windows.Forms.Label titleOfGame;
         private System.Windows.Forms.Button saveVillage_Button;
         private System.Windows.Forms.Button newVillage_Button;

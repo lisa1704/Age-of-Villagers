@@ -13,22 +13,28 @@ namespace Age_Of_Villagers
     public partial class VillageWindow : Form
     {
         private Panel drawingPanel,toolsPanel;
+        public string text;
         public VillageWindow()
         {
             InitializeComponent();
         }
 
-        private void saveVillageButton_Checked(object sender, EventArgs e)
+        private void DrawingSpace_Paint(object sender, PaintEventArgs e)
         {
             throw new NotImplementedException();
         }
-        private void newVillageButton_Checked(object sender, EventArgs e)
+
+        public void saveVillage_Button_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            text = "save";
         }
-        private void openVillageButton_Checked(object sender, EventArgs e)
+        public void newVillage_Button_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            text = "new";
+        }
+        private void openVillage_Button_Click(object sender, EventArgs e)
+        {
+            text = "open";
         }
 
 =       private void treeRadioButton_Checked(object sender, EventArgs e)

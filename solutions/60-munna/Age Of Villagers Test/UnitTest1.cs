@@ -1,14 +1,27 @@
-using System;
 using Xunit;
 
 namespace Age_Of_Villagers_Test
 {
     public class UnitTest1
     {
+        
         [Fact]
-        public void Test1()
+        public void Test_saveVillageButton()
         {
-            Assert.Equal(2, 2);
+            //arrange
+            /*string expected = "save";
+            
+
+            //act
+            int actual;
+
+            Vi
+            
+            c.button3.PerformClick();
+            actual = c.k;
+
+            //assert
+            Assert.AreEqual(expected, actual);*/
 
         }
     }
