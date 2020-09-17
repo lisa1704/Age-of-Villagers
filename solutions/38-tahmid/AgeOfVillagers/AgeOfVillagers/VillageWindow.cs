@@ -17,14 +17,14 @@ namespace AgeOfVillagers
         Graphics g;
         Pen pen;
         String item, nation;
-        ItemFactory itemFactory;
+        ShapeFactory itemFactory;
         public VillageWindow()
         {
             InitializeComponent();
 
             g = drawing_panel.CreateGraphics();
             pen = new Pen(Color.Black);
-            itemFactory = new ItemFactory();
+            itemFactory = new ShapeFactory();
 
 
         }
@@ -87,7 +87,7 @@ namespace AgeOfVillagers
         {
             Point point = new Point(e.X, e.Y);
             
-            IItem villageItem = itemFactory.GetItem(g, pen, point,Constants.BDWATERSOURCE_HINT);
+            IItem villageItem = itemFactory.GetShape(g, pen, point,Constants.BDWATERSOURCE_HINT);
             villageItem.placeItem();
 
             

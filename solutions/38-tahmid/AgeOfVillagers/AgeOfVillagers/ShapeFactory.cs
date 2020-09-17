@@ -9,9 +9,9 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class ItemFactory
+    class ShapeFactory
     {
-        public  IItem GetItem(Graphics g, Pen pen, Point point,string hint)
+        public  Shapes GetShape(Graphics g, Pen pen, Point point,string hint)
         {
 
             
