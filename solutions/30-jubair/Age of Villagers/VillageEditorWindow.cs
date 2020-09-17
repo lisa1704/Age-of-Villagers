@@ -80,7 +80,7 @@ namespace Age_of_Villagers
             iNation = abstractNationCreator.CreateNation();
 
 
-            //checkRadioButton(font, brush, e);
+            checkRadioButton(font, brush, e);
 
             foreach (Point pt in HouseLists)
             {
@@ -161,24 +161,21 @@ namespace Age_of_Villagers
 
         }
 
-        /*private void checkRadioButton(Font font, Brush brush,MouseEventArgs e)
+        private void checkRadioButton(Font font, Brush brush,MouseEventArgs e)
         {
             if (radioButton_tree.Checked)
             {
-                
                 iNation.GetTree(graphics, e.Location);
             }
             else if (radioButton_house.Checked)
-            {
-                
+            { 
                 iNation.GetHouse(graphics, e.Location);
             }
             else if (radioButton_water.Checked)
-            {
-                
+            {  
                 iNation.GetWaterResource(graphics, e.Location);
             }
-        }*/
+        }
 
 
         private void VillageEditorWindow_Load(object sender, EventArgs e)
