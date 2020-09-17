@@ -12,9 +12,9 @@ namespace age_of_villagers
         public EgyptHouse(Point pt)
         {
             //pt=bottomLeft
-            Point bottomMid = new Point(pt.X+60,pt.Y+15);
-            Point top = new Point(pt.X+45,pt.Y-80);
-            Point bottomRight = new Point(pt.X + 85, pt.Y - 20);
+            Point bottomMid = new Point(pt.X+10,pt.Y+4);
+            Point top = new Point(pt.X + 8, pt.Y - 12);
+            Point bottomRight = new Point(pt.X + 16, pt.Y - 3);
 
             AddComponent(new Triangle(pt, top, bottomMid));
             AddComponent(new Triangle(top, bottomMid, bottomRight));
