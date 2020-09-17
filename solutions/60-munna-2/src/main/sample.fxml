@@ -55,5 +55,10 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
+      <Label fx:id="village_name" layoutX="773.0" layoutY="132.0" text="Village Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
