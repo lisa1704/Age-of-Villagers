@@ -98,6 +98,7 @@ namespace Age_of_Villagers
             this.button_save.TabIndex = 3;
             this.button_save.Text = "Save Village";
             this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_open
             // 
@@ -110,6 +111,7 @@ namespace Age_of_Villagers
             this.button_open.TabIndex = 3;
             this.button_open.Text = "Open Village";
             this.button_open.UseVisualStyleBackColor = false;
+            this.button_open.Click += new System.EventHandler(this.button_open_Click);
             // 
             // button_new
             // 

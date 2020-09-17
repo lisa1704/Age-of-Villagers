@@ -1,15 +1,19 @@
 ﻿using Age_of_Villagers.House;
 using Age_of_Villagers.Nation;
 using Age_of_Villagers.NationFactory;
+using Age_of_Villagers.Village_Saving;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Age_of_Villagers
 {
@@ -32,7 +36,13 @@ namespace Age_of_Villagers
 
         NationFactoryApplication nationFactory = new NationFactoryApplication();
 
+
         INation iNation;
+
+        VillageSave villageSave = new VillageSave();
+
+
+        //VillageEditorWindow villageWindow = new VillageEditorWindow();
 
 
 
@@ -209,6 +219,61 @@ namespace Age_of_Villagers
             
             nation_type = nationList.Text;
             //drawing_space.BackColor = iNation.getTerrainColor();
+
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = ".aov|*.aov";
+            sfd.Title = "Save AOV File";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                /*string path = sfd.FileName;
+                BinaryWriter bw = new BinaryWriter(File.Create(path));
+                bw.Dispose();*/
+
+                // Serialize.
+                XmlSerializer xml_serializer =
+                    new XmlSerializer(villageSave.GetType());
+                using (StreamWriter stream_writer =
+                    new StreamWriter(sfd.FileName))
+                {
+                    xml_serializer.Serialize(stream_writer, villageSave);
+                    stream_writer.Close();
+                }
+
+            }
+        }
+
+        private void button_open_Click(object sender, EventArgs e)
+        {
+           /* OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = ".aov|*.aov";
+            ofd.Title = "Save AOV File";
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                try
+                {
+                    XmlSerializer xml_serializer =
+                        new XmlSerializer(villageSave.GetType());
+                    using (FileStream file_stream =
+                        new FileStream(ofd.FileName, FileMode.Open))
+                    {
+                        VillageSave new_villageSave =
+                            (VillageSave)xml_serializer.Deserialize(file_stream);
+                        villageSave = new_villageSave;
+                       //villageWindow.Refresh();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+            }*/
 
         }
 
