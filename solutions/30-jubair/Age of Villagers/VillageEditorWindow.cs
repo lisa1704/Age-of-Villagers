@@ -79,6 +79,7 @@ namespace Age_of_Villagers
 
             iNation = abstractNationCreator.CreateNation();
 
+            drawing_space.BackColor = iNation.getTerrainColor();
 
             checkRadioButton(font, brush, e);
 
@@ -205,8 +206,10 @@ namespace Age_of_Villagers
 
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             nation_type = nationList.Text;
-            //drawing_space.BackColor = nationFactory.GetNation(nation_type).BackGroundColor();
+            //drawing_space.BackColor = iNation.getTerrainColor();
+
         }
 
         private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly

@@ -171,7 +171,7 @@ namespace Age_of_Villagers
             "Inuit Hunters"});
             this.nationList.Location = new System.Drawing.Point(675, 126);
             this.nationList.Name = "nationList";
-            this.nationList.Size = new System.Drawing.Size(182, 33);
+            this.nationList.Size = new System.Drawing.Size(205, 33);
             this.nationList.TabIndex = 4;
             this.nationList.Text = "Nation Name";
             this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
