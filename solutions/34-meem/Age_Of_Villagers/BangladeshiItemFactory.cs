@@ -11,7 +11,20 @@ namespace Age_Of_Villagers
     {
         public override IVillageItem getItem(string button)
         {
-            
+            if (button=="House")
+            {
+                return new BangladeshiHouse();
+            }
+            else if(button == "Tree")
+            {
+                return new BangladeshiTree();
+            }
+            else if (button == "WaterSource")
+            {
+                return new BangladeshiWaterSource();
+            }
+
+            return null;
 
         }
     }
