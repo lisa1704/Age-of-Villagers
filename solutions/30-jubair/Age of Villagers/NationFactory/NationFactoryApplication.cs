@@ -7,7 +7,7 @@ namespace Age_of_Villagers.NationFactory
 {
     public class NationFactoryApplication
     {
-        public AbstractNationCreator GetNation(string nation_name)
+        public AbstractNationCreator GetNation(string nation_name)  
         {
             if(nation_name == "Bangladeshi Farmers")
             {
@@ -19,12 +19,12 @@ namespace Age_of_Villagers.NationFactory
                 return new ArabNationCreator();
             }
 
-            else if (nation_name == "Egyptian King")
+            else if (nation_name == "Egyptian Kings")
             {
                 return new EgyptianNationCreator();
             }
 
-            else if (nation_name == "Inuit Hunter")
+            else if (nation_name == "Inuit Hunters")
             {
                 return new InuitNationCreator();
             }

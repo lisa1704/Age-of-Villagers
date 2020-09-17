@@ -34,13 +34,14 @@ namespace Age_of_Villagers
             this.panel2 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.label_village_name = new System.Windows.Forms.Label();
-            this.label_nation_name = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
             this.button_open = new System.Windows.Forms.Button();
             this.button_new = new System.Windows.Forms.Button();
             this.radioButton_tree = new System.Windows.Forms.RadioButton();
             this.radioButton_house = new System.Windows.Forms.RadioButton();
             this.radioButton_water = new System.Windows.Forms.RadioButton();
+            this.label_nation_name = new System.Windows.Forms.Label();
+            this.nationList = new System.Windows.Forms.ComboBox();
             this.drawing_space.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace Age_of_Villagers
             this.drawing_space.Name = "drawing_space";
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 0;
-            this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
+            //this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
             this.drawing_space.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawing_space_MouseClick);
             // 
             // panel2
@@ -87,18 +88,6 @@ namespace Age_of_Villagers
             this.label_village_name.Text = "Village Name";
             this.label_village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_village_name.Click += new System.EventHandler(this.label_Click);
-            // 
-            // label_nation_name
-            // 
-            this.label_nation_name.AutoSize = true;
-            this.label_nation_name.Location = new System.Drawing.Point(721, 106);
-            this.label_nation_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_nation_name.Name = "label_nation_name";
-            this.label_nation_name.Size = new System.Drawing.Size(117, 25);
-            this.label_nation_name.TabIndex = 1;
-            this.label_nation_name.Text = "Nation Name";
-            this.label_nation_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_nation_name.Click += new System.EventHandler(this.label_Click);
             // 
             // button_save
             // 
@@ -140,7 +129,7 @@ namespace Age_of_Villagers
             // radioButton_tree
             // 
             this.radioButton_tree.AutoSize = true;
-            this.radioButton_tree.Location = new System.Drawing.Point(685, 160);
+            this.radioButton_tree.Location = new System.Drawing.Point(687, 185);
             this.radioButton_tree.Name = "radioButton_tree";
             this.radioButton_tree.Size = new System.Drawing.Size(68, 29);
             this.radioButton_tree.TabIndex = 1;
@@ -153,7 +142,7 @@ namespace Age_of_Villagers
             // radioButton_house
             // 
             this.radioButton_house.AutoSize = true;
-            this.radioButton_house.Location = new System.Drawing.Point(685, 195);
+            this.radioButton_house.Location = new System.Drawing.Point(675, 220);
             this.radioButton_house.Name = "radioButton_house";
             this.radioButton_house.Size = new System.Drawing.Size(88, 29);
             this.radioButton_house.TabIndex = 2;
@@ -165,7 +154,7 @@ namespace Age_of_Villagers
             // radioButton_water
             // 
             this.radioButton_water.AutoSize = true;
-            this.radioButton_water.Location = new System.Drawing.Point(685, 230);
+            this.radioButton_water.Location = new System.Drawing.Point(687, 255);
             this.radioButton_water.Name = "radioButton_water";
             this.radioButton_water.Size = new System.Drawing.Size(142, 29);
             this.radioButton_water.TabIndex = 3;
@@ -174,11 +163,39 @@ namespace Age_of_Villagers
             this.radioButton_water.UseVisualStyleBackColor = true;
             this.radioButton_water.Click += new System.EventHandler(this.radioButton_water_Click);
             // 
+            // label_nation_name
+            // 
+            this.label_nation_name.AutoSize = true;
+            this.label_nation_name.Location = new System.Drawing.Point(611, 85);
+            this.label_nation_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_nation_name.Name = "label_nation_name";
+            this.label_nation_name.Size = new System.Drawing.Size(117, 25);
+            this.label_nation_name.TabIndex = 1;
+            this.label_nation_name.Text = "Nation Name";
+            this.label_nation_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_nation_name.Click += new System.EventHandler(this.label_Click);
+            // 
+            // nationList
+            // 
+            this.nationList.FormattingEnabled = true;
+            this.nationList.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.nationList.Location = new System.Drawing.Point(675, 123);
+            this.nationList.Name = "nationList";
+            this.nationList.Size = new System.Drawing.Size(182, 33);
+            this.nationList.TabIndex = 4;
+            this.nationList.Text = "Nation List";
+            this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
+            // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 434);
+            this.Controls.Add(this.nationList);
             this.Controls.Add(this.radioButton_water);
             this.Controls.Add(this.button_new);
             this.Controls.Add(this.radioButton_house);
@@ -207,13 +224,14 @@ namespace Age_of_Villagers
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label_village_name;
-        private System.Windows.Forms.Label label_nation_name;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_open;
         private System.Windows.Forms.Button button_new;
         private System.Windows.Forms.RadioButton radioButton_tree;
         private System.Windows.Forms.RadioButton radioButton_house;
         private System.Windows.Forms.RadioButton radioButton_water;
+        private System.Windows.Forms.Label label_nation_name;
+        private System.Windows.Forms.ComboBox nationList;
     }
 }
 

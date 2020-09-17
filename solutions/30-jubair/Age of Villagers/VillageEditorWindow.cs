@@ -1,5 +1,6 @@
 ﻿using Age_of_Villagers.House;
 using Age_of_Villagers.Nation;
+using Age_of_Villagers.NationFactory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,18 @@ namespace Age_of_Villagers
         public static string setValueForText_House = "";
         public static string setValueForText_Water = "";
 
+        string nation_type = "";
+
+        List<Point> HouseLists = new List<Point>();
+        List<Point> TreeLists = new List<Point>();
+        List<Point> WaterLists = new List<Point>();
+
+
+        NationFactoryApplication nationFactory = new NationFactoryApplication();
+
+        INation iNation;
+
+
 
         public VillageEditorWindow()
         {
@@ -41,6 +54,10 @@ namespace Age_of_Villagers
 
         private void drawing_space_Paint(object sender, PaintEventArgs e)
         {
+            Graphics graphics = drawing_space.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+
+            
 
         }
 
@@ -56,8 +73,42 @@ namespace Age_of_Villagers
             Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
 
+            //nationFactory.GetNation(nation_type);
 
-            checkRadioButton(font,brush); // Set Radio Button and act accordingly
+            AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
+
+            iNation = abstractNationCreator.CreateNation();
+
+
+            //checkRadioButton(font, brush, e);
+
+            foreach (Point pt in HouseLists)
+            {
+
+                //iNation.GetHouse(graphics, pt);
+                HouseLists.Add(pt);
+
+            }
+            /*foreach (Point pt in TreeLists)
+            {
+                //iNation.GetTree(graphics, pt);
+                TreeLists.Add(pt);
+            }
+            foreach (Point pt in WaterLists)
+            {
+                //iNation.GetWaterResource(graphics, pt);
+                WaterLists.Add(pt);
+            }*/
+
+
+            
+            
+            
+            
+            
+            
+            
+            // Set Radio Button and act accordingly
 
 
             //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
@@ -86,8 +137,8 @@ namespace Age_of_Villagers
             //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
             //arab.GetTree(graphics, e.Location);
 
-            ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            arab.GetWaterResource(graphics, e.Location);
+            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
+            //arab.GetWaterResource(graphics, e.Location);
 
             //InuitHunter inuit = new InuitHunter("Inuit Hunter");
             //inuit.GetHouse(graphics, e.Location);
@@ -96,34 +147,37 @@ namespace Age_of_Villagers
 
 
 
-            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+            /*System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);
             messageBoxCS.AppendLine();
             messageBoxCS.AppendFormat("{0} = {1}", "Y", e.Y);
             messageBoxCS.AppendLine();
             messageBoxCS.AppendFormat("{0} = {1}", "Location", e.Location);
             messageBoxCS.AppendLine();
-            MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event");
+            MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event");*/
 
             
 
         }
 
-        private void checkRadioButton(Font font, Brush brush)
+        /*private void checkRadioButton(Font font, Brush brush,MouseEventArgs e)
         {
             if (radioButton_tree.Checked)
             {
-                graphics.DrawString(setValueForText_Tree, font, brush, new Point(x, y));  // Tree string drawn on drawing panel for setting tree button
+                
+                iNation.GetTree(graphics, e.Location);
             }
             else if (radioButton_house.Checked)
             {
-                graphics.DrawString(setValueForText_House, font, brush, new Point(x, y));  // House string drawn on drawing panel for setting House button
+                
+                iNation.GetHouse(graphics, e.Location);
             }
             else if (radioButton_water.Checked)
             {
-                graphics.DrawString(setValueForText_Water, font, brush, new Point(x, y));  // Water Source string drawn on drawing panel for setting Water button
+                
+                iNation.GetWaterResource(graphics, e.Location);
             }
-        }
+        }*/
 
 
         private void VillageEditorWindow_Load(object sender, EventArgs e)
@@ -149,6 +203,12 @@ namespace Age_of_Villagers
         private void radioButton_water_Click(object sender, EventArgs e)
         {
             setValueForText_Water = "River Water";
+        }
+
+        private void nationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nation_type = nationList.Text;
+            //drawing_space.BackColor = nationFactory.GetNation(nation_type).BackGroundColor();
         }
 
         private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly
