@@ -17,6 +17,29 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+
+
+            NationFactory nationFactory = new NationFactory();
+
+            
+            INation nation1 = nationFactory.GetNation("BangladeshiFarmers");
+
+            
+           // nation1.DrawHouse(Point e, Graphics g, Pen mypen);
+
+            //get an object of Rectangle and call its draw method.
+            INation nation2 = nationFactory.GetNation("ArabBedouin");
+
+           
+            //nation2.draw();
+
+            
+            INation nation3 = nationFactory.GetNation("EgyptianKing");
+
+            
+            //ation2.draw();
         }
+        
     }
 }

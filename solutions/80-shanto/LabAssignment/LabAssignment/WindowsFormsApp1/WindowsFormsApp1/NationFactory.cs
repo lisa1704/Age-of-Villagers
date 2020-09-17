@@ -9,19 +9,19 @@ namespace WindowsFormsApp1
         {
             if (NationType == "BangladeshiFarmers")
             {
-                return new BangladeshiFarmers();
+               // return new BangladeshiFarmers(g);
             }
             else if (NationType == "ArabBedouin")
             {
-                return new ArabBedouin();
+                //return new ArabBedouin();
             }
             else if (NationType == "EgyptianKing")
             {
-                return new EgyptianKing();
+                //return new EgyptianKing();
             }
             else if (NationType == "InuitHunters")
             {
-                return new InuitHunters();
+                //return new InuitHunters();
             }
             throw new Exception();
 

@@ -66,40 +66,32 @@ namespace WindowsFormsApp1
             //Rectangle shape = new Rectangle(x, y, h, w);
             if (radioButton1.Checked)
             {
-                g.DrawLine(myPen, x, y, x + 50, y);
-                g.DrawLine(myPen, x + 50, y, x + 50, y + 25);
-                g.DrawLine(myPen, x + 50, y + 25, x, y + 25);
-                g.DrawLine(myPen, x, y + 25, x, y);
-                g.DrawLine(myPen, x, y, x + 25, y - 25);
-                g.DrawLine(myPen, x + 25, y - 25, x + 50, y);
-
-
+                BangladeshiFarmers bdh = new BangladeshiFarmers(g);
+                bdh.DrawHouse(e);
+                
             }
 
             if (radioButton2.Checked)
             {
-                //action will be occur 
-                //g.DrawLine(myPen, 0, 0, 200, 200);
-                g.DrawArc(myPen, x - 25, y - 25, 50, 50, 0, 360);
-                g.DrawLine(myPen, x - 1, y, x + 1, y);
-                g.DrawLine(myPen, x + 1, y, x + 1, y + 50);
-                g.DrawLine(myPen, x + 1, y + 50, x - 1, y + 50);
-                g.DrawLine(myPen, x - 1, y + 50, x - 1, y);
+                BangladeshiFarmers bdt = new BangladeshiFarmers(g);
+                bdt.DrawTree(e);
+
+
+                //EgyptianKing ekt = new EgyptianKing(g);
+                //ekt.DrawTree(e);
+
+                
+
+
 
 
             }
             if (radioButton3.Checked)
             {
                 //g.DrawLine(myPen, x, y, h, w);
-                g.DrawLine(myPen, x, y, x + 20, y + 16);
-                g.DrawLine(myPen, x + 20, y + 16, x + 40, y - 24);
-                g.DrawLine(myPen, x + 40, y - 24, x + 8, y - 40);
-                g.DrawLine(myPen, x + 8, y - 40, x - 16, y - 24);
-                g.DrawLine(myPen, x - 16, y - 24, x - 24, y - 36);
-                g.DrawLine(myPen, x - 24, y - 36, x - 36, y - 28);
-                g.DrawLine(myPen, x - 36, y - 28, x - 36, y);
-                g.DrawLine(myPen, x - 36, y, x - 24, y + 20);
-                g.DrawLine(myPen, x - 23, y + 20, x, y);
+
+                BangladeshiFarmers bds = new BangladeshiFarmers(g);
+                bds.DrawWaterSource(e);
 
             }
         }
