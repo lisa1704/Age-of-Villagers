@@ -5,7 +5,11 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class INation
+    public interface INation
     {
+        IShape DrawHouse();
+        IShape DrawTree();
+        IShape DrawWaterSource();
+
     }
 }

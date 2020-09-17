@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    interface IShape
+    public interface IShape
     {
         void Draw(Point point, Panel Drawingpanel);
     }
