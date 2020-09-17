@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.FactoryClasses;
+﻿using AgeOfVillagers.Environment_extending_Classes;
+using AgeOfVillagers.FactoryClasses;
 using AgeOfVillagers.Interface;
 using System;
 using System.Collections.Generic;
@@ -93,6 +94,7 @@ namespace AgeOfVillagers
             IItem item = itemFactory.GetItem(point, selectedItem);
             Shapes nationShapedItem = shapeFactory.GetShape(g, pen, point,selectedNation+selectedItem);
             item.placeItem(nationShapedItem);
+            
 
             
             
@@ -123,14 +125,12 @@ namespace AgeOfVillagers
 
         private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
         {
-            string s = "Red";
-            SolidBrush sb = new SolidBrush(Color.Red);
-            g.FillRectangle(sb,0,0,600,400);
+            
         }
 
         private void Click_Inuit_Hunters(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Click_Egyptian_Kings(object sender, EventArgs e)
@@ -141,6 +141,11 @@ namespace AgeOfVillagers
         private void Click_Arab_Bedouin(object sender, EventArgs e)
         {
 
+        }
+
+        private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
+        {
+            
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)

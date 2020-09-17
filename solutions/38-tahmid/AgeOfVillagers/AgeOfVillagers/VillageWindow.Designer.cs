@@ -186,6 +186,7 @@
             this.BD.Text = "Bangladeshi Farmers";
             this.BD.UseVisualStyleBackColor = true;
             this.BD.Click += new System.EventHandler(this.Click_Bangladeshi_Farmers);
+            this.BD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Bangladeshi_Farmer);
             // 
             // Hunters
             // 

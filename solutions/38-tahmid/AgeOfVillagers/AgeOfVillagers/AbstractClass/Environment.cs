@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.AbstractClass
+namespace AgeOfVillagers
 {
-    abstract class Environment
+    public abstract class Environment
     {
         public abstract void showNationName();
         public abstract void InvalidateOtherNations();
