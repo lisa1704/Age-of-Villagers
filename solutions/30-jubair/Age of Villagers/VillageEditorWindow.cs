@@ -93,12 +93,12 @@ namespace Age_of_Villagers
             {
                 //iNation.GetTree(graphics, pt);
                 TreeLists.Add(pt);
-            }
+            }*/
             foreach (Point pt in WaterLists)
             {
                 //iNation.GetWaterResource(graphics, pt);
                 WaterLists.Add(pt);
-            }*/
+            }
 
 
             
