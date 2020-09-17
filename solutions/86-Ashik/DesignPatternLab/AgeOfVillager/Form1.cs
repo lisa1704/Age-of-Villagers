@@ -42,8 +42,10 @@ namespace AgeOfVillager
                 //EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
                 //BDFarmersHouse bdh = new BDFarmersHouse(g);
                 //bdh.draw(e);
-                ArabBedouinsHouse abh = new ArabBedouinsHouse(g);
-                abh.draw(e);
+                //ArabBedouinsHouse abh = new ArabBedouinsHouse(g);
+                //abh.draw(e);
+                InuitHuntersHouse ihh = new InuitHuntersHouse(g);
+                ihh.draw(e);
             }
             //water source
             else if (radioButton3.Checked)
