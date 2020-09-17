@@ -71,7 +71,7 @@ namespace AgeOfVillagers
         }
         public void draw(AgeOfVillagersForm ageOfVillagersForm, Village village)
         {
-            ageOfVillagersForm.villageComponentFactory = NationFactory.getNation(village.nation);
+            ageOfVillagersForm.villageComponentFactory = NationComponentFactory.getNation(village.nation);
             foreach (Point point in village.treePoints)
             {
                 VillageComponent villageComponent = ageOfVillagersForm.villageComponentFactory.getComponent("Tree", point);

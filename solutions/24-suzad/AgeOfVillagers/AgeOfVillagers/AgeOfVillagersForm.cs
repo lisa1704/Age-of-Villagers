@@ -23,6 +23,9 @@ namespace AgeOfVillagers
         public Pen pen;
         public VillageComponentFactory villageComponentFactory =null;
         public VillageSave villageSave = null;
+        NationFactory nationFactory = new NationFactory();
+        INation iNation;
+
         public AgeOfVillagersForm()
         {
             InitializeComponent();
@@ -37,12 +40,17 @@ namespace AgeOfVillagers
             villageName = name;
         }
 
-        public void setNationName(string name)
+        public void setNationProperty(string name)
         {
             this.lblNationName.Text = name;
             nationName = name;
-            villageComponentFactory = NationFactory.getNation(nationName);
+            villageComponentFactory = NationComponentFactory.getNation(nationName);
+            
+            iNation = nationFactory.getNation(lblNationName.Text);
+            iNation.setRadioButtonOption(this);
+            iNation.setTerrain(this);
         }
+
         public void setRadioButton()
         {
             RadioButton checkedButton = pnlComponentHolder.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
@@ -54,15 +62,11 @@ namespace AgeOfVillagers
             {
                 rdbtn = "";
             }
-            
         }
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
-            //Graphics graphics = pnlDrawingSpace.CreateGraphics();
-            //Pen pen = new Pen(Color.Black);
             setRadioButton();
-            //VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
             VillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
             villageComponent.drawComponent(e.Location, graphics, pen);
             pt = villageComponent.getPoint();
@@ -90,25 +94,6 @@ namespace AgeOfVillagers
 
         private void AgeOfVillagersForm_Load(object sender, EventArgs e)
         {
-            if(nationName=="Arab Bedouin")
-            {
-                radiobtnWaterSource.Enabled = false;
-                pnlDrawingSpace.BackColor = Color.LightYellow;
-            }
-            if(nationName=="Inuit Hunter")
-            {
-                radiobtnTree.Enabled = false;
-                radiobtnWaterSource.Enabled = false;
-                pnlDrawingSpace.BackColor = Color.White;
-            }
-            if(nationName=="Egyptian King")
-            {
-                pnlDrawingSpace.BackColor = Color.Yellow;
-            }
-            if(nationName=="Bangladeshi Farmer")
-            {
-                pnlDrawingSpace.BackColor = Color.Green;
-            }
         }
         private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
         {
@@ -124,10 +109,7 @@ namespace AgeOfVillagers
 
         private void btnOpenVillage_Click(object sender, EventArgs e)
         {
-            //Graphics graphics = pnlDrawingSpace.CreateGraphics();
-            //Pen pen = new Pen(Color.Black);
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            //Village village = new Village(nationName, villageName, treePoints, housePoints, riverPoints);
             Village village=villageSave.openVillage(filePath, this);
             villageSave.draw(this, village);
         }

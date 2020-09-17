@@ -6,23 +6,23 @@ namespace AgeOfVillagers
 {
     public class NationFactory
     {
-        public static VillageComponentFactory getNation(string nationName)
+        public INation getNation(string nation)
         {
-            if(nationName=="Bangladeshi Farmer")
+            if(nation=="Bangladeshi Farmer")
             {
-                return new BdFarmerComponentFactory();
+                return new BdFarmerNation();
             }
-            else if(nationName=="Arab Bedouin")
+            else if(nation=="Egyptian King")
             {
-                return new ArabBedouinComponentFactory();
+                return new EgyptianKingNation();
             }
-            else if(nationName=="Egyptian King")
+            else if(nation=="Arab Bedouin")
             {
-                return new EgyptianKingComponentFactory();
+                return new ArabBedouinNation();
             }
-            else if (nationName == "Inuit Hunter")
+            else if(nation=="Inuit Hunter")
             {
-                return new InuitHunterComponentFactory();
+                return new InuitHunterNation();
             }
             return null;
         }

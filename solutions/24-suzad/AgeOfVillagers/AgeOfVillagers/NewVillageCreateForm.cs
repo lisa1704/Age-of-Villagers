@@ -20,7 +20,7 @@ namespace AgeOfVillagers
             string villageName = txtboxVillageName.Text;
             string nationName = comboBoxNationName.SelectedItem.ToString();
             AgeOfVillagersForm ageOfVillagersForm = new AgeOfVillagersForm();
-            ageOfVillagersForm.setNationName(nationName);
+            ageOfVillagersForm.setNationProperty(nationName);
             ageOfVillagersForm.setVillageName(villageName);
             ageOfVillagersForm.Show();
             this.Hide();
