@@ -14,9 +14,11 @@ namespace AgeOfVillagers
     {
         int x, y;
         string text = "";
+        public Graphics g;
         public VillageWindow()
         {
             InitializeComponent();
+            g = drawingPanel.CreateGraphics();
         }
 
         private void gameLabel_Click(object sender, EventArgs e)
@@ -73,20 +75,8 @@ namespace AgeOfVillagers
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            Graphics g = drawingPanel.CreateGraphics();
+            
             g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
-            if (treeRadioBtn.Checked)
-            {
-                
-            }
-            else if (houseRadioBtn.Checked)
-            {
-                
-            }
-            else if (waterRadioBtn.Checked)
-            {
-                
-            }
         }
     }
 }

@@ -39,7 +39,8 @@ namespace AgeOfVillagers
             vw.nationLabel.Text = nationBox.Text;
             NationFactory nFactory = new NationFactory(nationBox.Text);
             INation nation = nFactory.getNation();
-            vw.drawingPanel.BackColor = nation.getTerrainColor();
+            //vw.drawingPanel.BackColor = nation.getTerrainColor();
+            vw.g.Clear(nation.getTerrainColor());
             this.Dispose();
 
         }
