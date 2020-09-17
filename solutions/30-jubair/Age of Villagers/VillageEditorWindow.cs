@@ -89,11 +89,12 @@ namespace Age_of_Villagers
                 HouseLists.Add(pt);
 
             }
-            /*foreach (Point pt in TreeLists)
+            foreach (Point pt in TreeLists)
             {
                 //iNation.GetTree(graphics, pt);
                 TreeLists.Add(pt);
-            }*/
+            }
+
             foreach (Point pt in WaterLists)
             {
                 //iNation.GetWaterResource(graphics, pt);
