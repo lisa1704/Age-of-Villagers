@@ -35,9 +35,9 @@ namespace AgeOfVillagers
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = @"E:\IUT CLASS\Design Pattern Lab\AOVSaveFiles\";
             saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.FileName = "*.txt";
-            saveFileDialog.DefaultExt = "txt";
-            saveFileDialog.Filter = "AoV file(*.txt)| *.txt";
+            saveFileDialog.FileName = "*.aov";
+            saveFileDialog.DefaultExt = "aov";
+            saveFileDialog.Filter = "AoV file(*.aov)| *.aov";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

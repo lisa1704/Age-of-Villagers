@@ -62,14 +62,14 @@ namespace AgeOfVillagers
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
-        {          
-            MessageBox.Show(VillageNameBox.Text+"Village saved");
-           
+        {                               
             //Get the current state
             GetVillageState();
 
             SaveVillage SCommand = new SaveVillage(village);
-            SCommand.executeSave();          
+            SCommand.executeSave();
+            //MessagBox Show 
+            MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
