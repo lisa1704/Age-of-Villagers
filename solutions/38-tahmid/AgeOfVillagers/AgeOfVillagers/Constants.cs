@@ -56,6 +56,9 @@ namespace AgeOfVillagers
         public static string BDTREE_HINT = "Bangladeshi_Farmer" + "TREE";
         public static string BDWATERSOURCE_HINT = "Bangladeshi_Farmer" + "WATER SOURCE";
 
+        //Default Nation
+
+        public static string DEFAULT_NATION = "Default Nation";
 
     }
 }

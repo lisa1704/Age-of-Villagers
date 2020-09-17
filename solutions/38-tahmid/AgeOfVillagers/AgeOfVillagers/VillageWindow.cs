@@ -21,6 +21,9 @@ namespace AgeOfVillagers
         String selectedItem, selectedNation;
         ShapeFactory shapeFactory;
         ItemFactory itemFactory;
+
+        EnvironmentFactory environmentFactory;
+        Environment environment;
         public VillageWindow()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace AgeOfVillagers
             pen = new Pen(Color.Black);
             shapeFactory = new ShapeFactory();
             itemFactory = new ItemFactory();
-
+            environmentFactory = new EnvironmentFactory();
 
         }
 
@@ -67,18 +70,22 @@ namespace AgeOfVillagers
             GameControlCommand onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
-           
+            
+            environment=environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION);
+            environment.setEnvironment();
 
 
-
-        }
+    }
         
 
 
         private void Open_village(object sender, EventArgs e)
         {
-             
-           
+            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION);
+            environment.setEnvironment();
+
+
+
 
         }
 
@@ -110,37 +117,47 @@ namespace AgeOfVillagers
 
         private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
         {
-            
+            selectedNation = Constants.BD_NATION;
+            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, selectedNation);
+            environment.setEnvironment();
+
         }
 
         private void Mouse_Click_Inuit_Hunters(object sender, MouseEventArgs e)
         {
+            selectedNation = Constants.INUIT_NATION;
+            environment = environmentFactory.getEnvironment(Nation_Name, Hunters, BD, Egyptians, Arabians, Tree, House, WaterSource, g, selectedNation);
+            environment.setEnvironment();
 
         }
 
         private void Mouse_Click_Egyptian_Kings(object sender, MouseEventArgs e)
         {
-
+            selectedNation = Constants.EGYPT_NATION;
+            environment = environmentFactory.getEnvironment(Nation_Name, Egyptians, Hunters, BD, Arabians, Tree, House, WaterSource, g, selectedNation);
+            environment.setEnvironment();
         }
 
         private void Mouse_ClickTree(object sender, MouseEventArgs e)
         {
-
+            selectedItem = Constants.TREE_ITEM;
         }
 
         private void Mouse_ClickHouse(object sender, MouseEventArgs e)
         {
-
+            selectedItem = Constants.HOUSE_ITEM;
         }
 
         private void Mouse_ClickWaterSource(object sender, MouseEventArgs e)
         {
-
+            selectedItem = Constants.WATER_SOURCE_ITEM;
         }
 
         private void Mouse_Click_Arab_Bedouin(object sender, MouseEventArgs e)
         {
-
+            selectedNation = Constants.ARAB_NATION;
+            environment = environmentFactory.getEnvironment(Nation_Name, Arabians, Egyptians, Hunters, BD, Tree, House, WaterSource, g, selectedNation);
+            environment.setEnvironment();
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)
