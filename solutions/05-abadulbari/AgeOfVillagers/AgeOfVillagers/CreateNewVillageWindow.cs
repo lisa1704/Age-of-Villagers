@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AgeOfVillagers.Factories;
+using AgeOfVillagers.Nation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +37,9 @@ namespace AgeOfVillagers
         {
             vw.villageLabel.Text = nameBox.Text;
             vw.nationLabel.Text = nationBox.Text;
+            NationFactory nFactory = new NationFactory(nationBox.Text);
+            INation nation = nFactory.getNation();
+            vw.drawingPanel.BackColor = nation.getTerrainColor();
             this.Dispose();
 
         }
