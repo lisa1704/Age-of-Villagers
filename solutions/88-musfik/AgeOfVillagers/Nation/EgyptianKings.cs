@@ -5,24 +5,26 @@ namespace AgeOfVillagers
 {
     public class EgyptianKings : INation
     {
-        private readonly Color color;
-        private readonly String nation_name;
+        private readonly Color color = Color.Yellow;
+        private String nation_name = "Egyptian Kings";
 
         public EgyptianKings()
         {
-            color = Color.Yellow;
-            nation_name = "Egyptian Kings";
+            
         }
+
+        public string nationName { get => nation_name; set => nation_name = value; }
 
         public object getHouse(Point point)
         {
             return new EgyptianHouseShape(point);
         }
-
+        
         public string getNationName()
         {
             return nation_name;
         }
+        
 
         public Color getTerrainColor()
         {

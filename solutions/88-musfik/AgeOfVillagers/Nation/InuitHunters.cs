@@ -5,24 +5,27 @@ namespace AgeOfVillagers
 {
     public class InuitHunters : INation
     {
-        private readonly Color color;
-        private readonly String nation_name;
+        private readonly Color color = Color.White;
+        private String nation_name = "Inuit Hunters";
 
         public InuitHunters()
         {
-            color = Color.White;
-            nation_name = "Inuit Hunters";
+        
         }
+
+        public string nationName { get => nation_name; set => nation_name = value; }
 
         public object getHouse(Point point)
         {
             return new InuitHuntersHouseShape(point);
         }
 
+       
         public string getNationName()
         {
             return nation_name;
         }
+       
 
         public Color getTerrainColor()
         {

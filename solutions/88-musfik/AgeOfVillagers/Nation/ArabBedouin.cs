@@ -5,24 +5,27 @@ namespace AgeOfVillagers
 {
     public class ArabBedouin : INation
     {
-        private readonly Color color;
-        private readonly String nation_name;
+        private readonly Color color = Color.LightYellow;
+        private String nation_name = "Arab Bedouin";
 
         public ArabBedouin()
         {
-            color = Color.LightYellow;
-            nation_name = "Arab Bedouin";
+            
         }
+
+        public string nationName { get => nation_name; set => nation_name = value; }
 
         public object getHouse(Point point)
         {
-            return new ArabBedouinHouse(point);
+            return new ArabHouseShape(point);
         }
 
+        
         public string getNationName()
         {
             return nation_name;
         }
+        
 
         public Color getTerrainColor()
         {

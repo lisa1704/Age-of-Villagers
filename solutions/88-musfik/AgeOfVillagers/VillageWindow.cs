@@ -12,8 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
-        int x;
-        int y;
+        List<INation> nationlist = new List<INation>();
         Graphics g;
         public Pen p; 
         string text = null;
@@ -50,7 +49,17 @@ namespace AgeOfVillagers
         private void VillageWindow_Load(object sender, EventArgs e)
         {
             g = drawing_space.CreateGraphics();
-            p = new Pen(Color.Black);      
+            p = new Pen(Color.Black);
+
+            nationlist.Add(new BangladeshiFarmers());
+            nationlist.Add(new ArabBedouin());
+            nationlist.Add(new EgyptianKings());
+            nationlist.Add(new InuitHunters());
+
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = nationlist;
+            NationlistBox.DataSource = nationlist;
+            NationlistBox.DisplayMember = "nationName";
         }
 
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
@@ -61,7 +70,8 @@ namespace AgeOfVillagers
 
         private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            INation nation = (INation)NationlistBox.SelectedItem;
+            Village_name_textBox.Text = nation.getNationName();
         }
 
         private void new_village_btn_Click(object sender, EventArgs e)

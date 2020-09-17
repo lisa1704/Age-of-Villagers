@@ -5,24 +5,27 @@ namespace AgeOfVillagers
 {
     public class BangladeshiFarmers : INation
     {
-        private readonly Color color;
-        private readonly String nation_name;
+        private readonly Color color = Color.Green;
+        private String nation_name = "Bangladeshi Farmers";
 
         public BangladeshiFarmers()
         {
-            color = Color.GreenYellow;
-            nation_name = "Bangladeshi Farmers";
+            
         }
+
+        public string nationName { get => nation_name; set => nation_name = value; }
 
         public object getHouse(Point point)
         {
             return new BangladeshiHouseShape(point);
         }
 
+        
         public string getNationName()
         {
             return nation_name;
         }
+        
 
         public Color getTerrainColor()
         {
