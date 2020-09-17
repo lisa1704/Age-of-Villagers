@@ -89,6 +89,7 @@
             this.saveVill.Text = "Save Village";
             this.saveVill.UseVisualStyleBackColor = true;
             this.saveVill.Click += new System.EventHandler(this.saveVill_Click);
+            this.saveVill.MouseClick += new System.Windows.Forms.MouseEventHandler(this.saveVill_MouseClick);
             // 
             // Panel1
             // 
@@ -137,9 +138,10 @@
             // 
             this.nationCombo.FormattingEnabled = true;
             this.nationCombo.Items.AddRange(new object[] {
-            "Bangladeshi",
-            "Arabians",
-            "Inuits"});
+            "Bangladeshi Farmers",
+            "Arab Bedouins",
+            "Inuit Hunters",
+            "Egyptian King"});
             this.nationCombo.Location = new System.Drawing.Point(730, 143);
             this.nationCombo.Name = "nationCombo";
             this.nationCombo.Size = new System.Drawing.Size(121, 24);
