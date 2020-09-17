@@ -3,6 +3,8 @@ package main;
 import com.sun.prism.shader.Solid_ImagePattern_Loader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,6 +12,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
     @FXML
@@ -59,14 +63,14 @@ public class Controller {
     private Label village_name;
 
     @FXML
-    void newVillage_Button_Clicked(ActionEvent event) {
-
-
-
-
-
-
-
+    void newVillage_Button_Clicked(ActionEvent event) throws IOException {
+        Stage stage = (Stage) newVillage_Button.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("InputTakeWindow.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Age of Villagers");
+        stage.setScene(new Scene(root, 600, 310));
+        stage.setResizable(false);
+        stage.show();
     }
 
 

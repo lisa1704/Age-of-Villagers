@@ -19,5 +19,7 @@ public class InputTakeWindowController {
     @FXML
     void CreateNewVillage(ActionEvent event) {
 
+
+
     }
 }
