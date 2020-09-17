@@ -9,17 +9,17 @@ namespace AgeOfVillagers.FactoryClasses
 {
     class EnvironmentFactory
     {
-        public Environment getEnvironment(Label nation_Name, RadioButton seconNation, RadioButton thirdNation, RadioButton fourthNation,RadioButton tree,RadioButton house,RadioButton waterSource, Graphics graphics, string selectedNation)
+        public Environment getEnvironment(Label nation_Name, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation,RadioButton tree,RadioButton house,RadioButton waterSource, Graphics graphics, string selectedNation)
         {
             if (selectedNation.Equals(Constants.BD_NATION))
-                return new BangladeshiEnvironment(nation_Name, seconNation, thirdNation, fourthNation, tree, house, waterSource, graphics, seconNation);
+                return new BangladeshiEnvironment(nation_Name, secondNation, thirdNation, fourthNation, tree, house, waterSource, graphics,selectedNation);
             else if(selectedNation.Equals(Constants.ARAB_NATION))
-                return new ArabianEnvironmet(nation_Name, seconNation, thirdNation, fourthNation, tree, house, waterSource, graphics, seconNation);
+                return new ArabianEnvironmet(nation_Name, secondNation, thirdNation, fourthNation, tree, house, waterSource, graphics,selectedNation);
             else if(selectedNation.Equals(Constants.EGYPT_NATION))
-                return new EgyptianEnvironment(nation_Name, seconNation, thirdNation, fourthNation, tree, house, waterSource, graphics, seconNation);
+                return new EgyptianEnvironment(nation_Name, secondNation, thirdNation, fourthNation, tree, house, waterSource, graphics,selectedNation);
             else if(selectedNation.Equals(Constants.INUIT_NATION))
-                return new InuitEnvironment(nation_Name, seconNation, thirdNation, fourthNation, tree, house, waterSource, graphics, seconNation);
-            return null;
+                return new InuitEnvironment(nation_Name, secondNation, thirdNation, fourthNation, tree, house, waterSource, graphics, selectedNation);
+            return new DefaultEnvironment(nation_Name, secondNation, thirdNation, fourthNation, tree, house, waterSource, graphics,selectedNation); ;
 
         }
     }
