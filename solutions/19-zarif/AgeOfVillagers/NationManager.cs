@@ -35,9 +35,13 @@ namespace AgeOfVillagers
 
             }
 
+            else if (_nationtype.Equals("Inuit Hunters"))
+            {
+                return new InuitHunters();
+            }
             else
             {
-                throw new Exception();
+                return new InuitHunters();
             }
 
         }

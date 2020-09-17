@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         private List<IGraphicShape> shapes = new List<IGraphicShape>();
 
-        public void addShape(IGraphicShape shape)
+        public void addShape(IGraphicShape  shape)
         {
             shapes.Add(shape);
         }
