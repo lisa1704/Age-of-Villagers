@@ -7,9 +7,10 @@ namespace empty_project
 {
     class InuitHunters : INation
     {
-        void INation.DrawHouse(Graphics graphics, Point point)
+        Pen pen = new Pen(Color.Blue);
+        public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            graphics.DrawLine(pen, point.X, point.Y, 100, 100);
         }
 
         void INation.DrawTree()
