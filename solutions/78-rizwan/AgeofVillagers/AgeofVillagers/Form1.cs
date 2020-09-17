@@ -12,14 +12,15 @@ namespace AgeofVillagers
 {
     public partial class Form1 : Form
     {
+        bool drawing = false;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void newvillage_Click(object sender, EventArgs e)
         {
-
+            panel1.Refresh();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -28,6 +29,19 @@ namespace AgeofVillagers
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelDrawingBoard_MouseUp(object sender, MouseEventArgs e)
+        {
+            
+        }
+        private void panelDrawingBoard_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+        private void panelDrawingBoard_MouseDown(object sender, MouseEventArgs e)
         {
 
         }

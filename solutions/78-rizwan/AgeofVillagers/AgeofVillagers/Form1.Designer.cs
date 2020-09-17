@@ -32,7 +32,7 @@
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.newvillage = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,14 +77,14 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // newvillage
             // 
-            this.button7.Location = new System.Drawing.Point(852, 560);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(158, 39);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "New Village";
-            this.button7.UseVisualStyleBackColor = true;
+            this.newvillage.Location = new System.Drawing.Point(852, 560);
+            this.newvillage.Name = "newvillage";
+            this.newvillage.Size = new System.Drawing.Size(158, 39);
+            this.newvillage.TabIndex = 8;
+            this.newvillage.Text = "New Village";
+            this.newvillage.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -163,7 +163,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.newvillage);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.splitter2);
@@ -180,7 +180,7 @@
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button newvillage;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
