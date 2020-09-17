@@ -16,6 +16,8 @@ namespace Age_of_Villagers
         int y;
         Graphics g;
         String text = "";
+        Village myVillage = new Village();
+        VillageSerializer myVS = new VillageSerializer();
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace Age_of_Villagers
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            myVS.saveState(myVillage);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -121,6 +123,11 @@ namespace Age_of_Villagers
             radioButton1.Checked = false;
             radioButton3.Checked = false;
             this.Invalidate();
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
