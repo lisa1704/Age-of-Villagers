@@ -10,10 +10,23 @@ namespace AgeOfVillagers
 {
     public class VillageSave
     {
-        public void saveVillage <Village> (string filePath, Village objectToWrite, bool append = false)
+        public void saveVillage <Village> ( Village objectToWrite, bool append = false)
         {
-            var contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite,Formatting.Indented);
-            System.IO.File.WriteAllText(filePath, contentsToWriteToFile);
+            var contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite, Formatting.Indented);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Save aov file";
+            saveFileDialog.AddExtension = true;
+            saveFileDialog.DefaultExt = "aov";
+            saveFileDialog.OverwritePrompt = true;
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string path = saveFileDialog.FileName;
+                
+                System.IO.File.WriteAllText(path, contentsToWriteToFile);
+            }
+
+            //var contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite,Formatting.Indented);
+            //System.IO.File.WriteAllText(saveFileDialog.FileName, contentsToWriteToFile);
         }
         public Village openVillage(string filePath,AgeOfVillagersForm ageOfVillagersForm)
         {

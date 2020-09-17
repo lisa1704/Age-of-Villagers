@@ -92,19 +92,11 @@ namespace AgeOfVillagers
             this.Hide();
         }
 
-        private void AgeOfVillagersForm_Load(object sender, EventArgs e)
-        {
-        }
-        private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
+            //string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             Village village = new Village(nationName,villageName,treePoints,housePoints,riverPoints);
-            villageSave.saveVillage(filePath,village);
+            villageSave.saveVillage(village);
         }
 
         private void btnOpenVillage_Click(object sender, EventArgs e)
@@ -112,6 +104,14 @@ namespace AgeOfVillagers
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             Village village=villageSave.openVillage(filePath, this);
             villageSave.draw(this, village);
+        }
+
+
+        private void AgeOfVillagersForm_Load(object sender, EventArgs e)
+        {
+        }
+        private void pnlDrawingSpace_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
