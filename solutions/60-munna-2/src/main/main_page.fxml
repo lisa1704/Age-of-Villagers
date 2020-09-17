@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #b2ccdb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.java">
+<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #b2ccdb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
    <children>
       <AnchorPane fx:id="drawing_space" layoutX="45.0" layoutY="43.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" />
       <Label layoutX="279.0" layoutY="454.0" text="600 X 400 DrawingSpace">
@@ -15,7 +15,7 @@
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Label>
-      <Button fx:id="newVillage_Button" layoutX="667.0" layoutY="436.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="115.0" text="New Village">
+      <Button fx:id="newVillage_Button" layoutX="667.0" layoutY="436.0" mnemonicParsing="false" onAction="#newVillage_Button_Clicked" prefHeight="37.0" prefWidth="115.0" text="New Village">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
