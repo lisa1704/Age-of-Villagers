@@ -122,9 +122,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.ComboBox nationBox;
         private System.Windows.Forms.Label nationLabel;

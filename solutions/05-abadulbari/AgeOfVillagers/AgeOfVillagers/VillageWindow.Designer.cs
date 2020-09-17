@@ -206,7 +206,6 @@
         private System.Windows.Forms.RadioButton treeRadioBtn;
         private System.Windows.Forms.RadioButton houseRadioBtn;
         private System.Windows.Forms.RadioButton waterRadioBtn;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button openButton;
