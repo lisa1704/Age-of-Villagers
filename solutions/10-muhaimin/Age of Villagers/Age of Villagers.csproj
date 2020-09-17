@@ -50,9 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractHouse.cs" />
+    <Compile Include="AbstractTree.cs" />
+    <Compile Include="AbstractWaterSource.cs" />
+    <Compile Include="ArabTree.cs" />
+    <Compile Include="ArabWaterSource.cs" />
     <Compile Include="BangladeshiHouse.cs" />
-    <Compile Include="BedouinHouse.cs" />
+    <Compile Include="ArabHouse.cs" />
+    <Compile Include="BangladeshiTree.cs" />
+    <Compile Include="BangladeshiWaterSource.cs" />
     <Compile Include="EgyptianHouse.cs" />
+    <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +69,8 @@
     </Compile>
     <Compile Include="IElement.cs" />
     <Compile Include="InuitHouse.cs" />
+    <Compile Include="InuitTree.cs" />
+    <Compile Include="InuitWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
