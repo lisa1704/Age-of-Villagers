@@ -7,32 +7,33 @@ using System.Text;
 
 namespace AgeOfVillagers.Village_extended_classes
 {
-    class BangladeshiFarmersHouse : IItem
+    class BangladeshiShapedHouse : Shapes
     {
         Graphics g;
         Pen pen;
         Point point;
         int length, width;
-        BasicShapeFactory shapeFactory;
-       public BangladeshiFarmersHouse (Graphics g,Pen pen,Point point,int length,int width)
+        BasicShapeFactory basicShapeFactory;
+       public BangladeshiShapedHouse (Graphics g,Pen pen,Point point,int length,int width)
         {
             this.pen = pen;
             this.length = length;
             this.width = width;
             this.g = g;
             this.point = point;
-            shapeFactory = new BasicShapeFactory();
+            basicShapeFactory = new BasicShapeFactory();
 
             
         }
 
-        public void placeItem()
+        public void makeShape()
         {
-            BasicShapes base_shape=shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            BasicShapes base_shape = basicShapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
             base_shape.makeShape();
-            BasicShapes roof_top=shapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            BasicShapes roof_top = basicShapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
             roof_top.makeShape();
-
         }
+
+       
     }
 }

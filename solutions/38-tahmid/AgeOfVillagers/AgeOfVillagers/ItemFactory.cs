@@ -25,7 +25,7 @@ namespace AgeOfVillagers
                 return new BangladeshiWaterSource(g, pen, point, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
             }
             else
-                return new BangladeshiFarmersHouse(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+                return new BangladeshiShapedHouse(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
             return null;
         }
 
