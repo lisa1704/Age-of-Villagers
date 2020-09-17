@@ -16,13 +16,13 @@ namespace Age_of_Villagers
         }
 
         public static string SetValueForText1 = "";
-        public static string SetValueForText2 = "";
+      
        
 
         private void submit_Click(object sender, EventArgs e)
         {
             SetValueForText1 = textBox1.Text;
-            SetValueForText2 = textBox2.Text;
+           
 
             VillageEditorWindow village_window_object = new VillageEditorWindow();
             village_window_object.Show();
