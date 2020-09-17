@@ -11,13 +11,13 @@ namespace age_of_villagers
     {
         public ArabTree(Point pt)
         {
-            Point bottomRight = new Point(pt.X - 2, pt.Y - 20);
-            Point mid = new Point(pt.X - 1, pt.Y - 20);
-            Point top = new Point(mid.X, mid.Y - 26);
-            Point rmid = new Point(pt.X + 14, mid.Y - 20);
-            Point lmid = new Point(pt.X - 14, mid.Y - 20);
-            Point rright = new Point(pt.X + 20, mid.Y - 10);
-            Point lleft = new Point(pt.X - 20, mid.Y - 10);
+            Point bottomRight = new Point(pt.X - 2, pt.Y - 11);
+            Point mid = new Point(pt.X - 1, pt.Y - 11);
+            Point top = new Point(mid.X, mid.Y - 12);
+            Point rmid = new Point(mid.X + 6, mid.Y - 10);
+            Point lmid = new Point(mid.X - 6, mid.Y - 10);
+            Point rright = new Point(mid.X + 8, mid.Y - 4);
+            Point lleft = new Point(mid.X - 8, mid.Y - 4);
 
             AddComponent(new Rectangle(pt, bottomRight));
             AddComponent(new Line(mid, top));
