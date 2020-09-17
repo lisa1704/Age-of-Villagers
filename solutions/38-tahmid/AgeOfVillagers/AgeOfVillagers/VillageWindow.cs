@@ -102,7 +102,24 @@ namespace AgeOfVillagers
 
        
 
-       
+        private void ClickTree(object sender, EventArgs e)
+        {
+
+            selectedItem = Constants.TREE_ITEM;
+            
+        }
+
+        private void ClickHouse(object sender, EventArgs e)
+        {
+            selectedItem = Constants.HOUSE_ITEM;
+            
+        }
+
+        private void ClickWaterSource(object sender, EventArgs e)
+        {
+            selectedItem = Constants.WATER_SOURCE_ITEM;
+            
+        }
 
         private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
         {
