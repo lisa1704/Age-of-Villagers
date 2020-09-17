@@ -18,8 +18,7 @@ namespace AgeOfVillagers
             addShape(new BaseTriangle(_toppoint, _topLeft,_topRight ));
             addShape(new BaseRectangle(_topLeft,new Point(_topLeft.X,_bottomRight.Y), _bottomRight,_topRight));
 
-            /*AddComponent(new VShape(baseTopLeft, top, new Point(baseBottomRight.X, baseTopLeft.Y)));
-            AddComponent(new Rectangle(baseTopLeft, baseBottomRight));*/
+          
         }
 
        

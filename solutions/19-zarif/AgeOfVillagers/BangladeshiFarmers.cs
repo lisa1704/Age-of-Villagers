@@ -7,11 +7,12 @@ namespace AgeOfVillagers
 {
     public class BangladeshiFarmers : INation
     {
-       Pen pen = new Pen(Color.Black, 3);
+      
 
         public IGraphicShape GetHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new BdFarmerHouse(point);
+
         }
 
         public IGraphicShape GetTrees(Point point)

@@ -26,7 +26,7 @@ namespace AgeOfVillagers
           
             g = DrawPanel.CreateGraphics();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            pen = new Pen(Color.Black, 3);
+            pen = new Pen(Color.Black, 2);
 
         }
 
