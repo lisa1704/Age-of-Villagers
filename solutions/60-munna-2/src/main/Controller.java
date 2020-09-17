@@ -39,12 +39,28 @@ public class Controller {
     @FXML
     private Label country_name;
 
+    public String getCountry_name() {
+        return country_name.getText().toString();
+    }
+
+    public void setCountry_name(String country_name) {
+        country_name = country_name;
+    }
+
+    public Label getVillage_name() {
+        return village_name;
+    }
+
+    public void setVillage_name(Label village_name) {
+        this.village_name = village_name;
+    }
+
     @FXML
     private Label village_name;
 
     @FXML
     void newVillage_Button_Clicked(ActionEvent event) {
-        Stage stage = (Stage) newVillage_Button.getScene().getWindow();
+
 
 
 
