@@ -25,7 +25,8 @@ namespace AgeOfVillagers
             }
             else
             {
-                throw new NotImplementedException();
+
+                return new ArabBedouin();
             }
 
         }

@@ -24,8 +24,6 @@ namespace AgeOfVillagers
             Point nin_point = new Point(eig_point.X - 16, sev_point.Y + 8);
             Point ten_point = new Point(nin_point.X - 20, sev_point.Y + 16);
 
-
-
             addShape(new BaseLine(_point,sec_point));
             addShape(new BaseLine(sec_point,th_point));
             addShape(new BaseLine( th_point,fou_point));
