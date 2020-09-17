@@ -16,7 +16,7 @@ namespace AgeOfVillagers
 
         public object getHouse(Point point)
         {
-            return new InuitHuntersHouse(point);
+            return new InuitHuntersHouseShape(point);
         }
 
         public string getNationName()

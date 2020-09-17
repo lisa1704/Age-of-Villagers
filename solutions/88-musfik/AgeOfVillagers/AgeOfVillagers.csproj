@@ -47,15 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Nation\ArabBedouin.cs" />
-    <Compile Include="Shape\HouseShapes\InuitHuntersHouse.cs" />
-    <Compile Include="Shape\HouseShapes\EgyptianKingsHouse.cs" />
-    <Compile Include="Shape\TreeShapes\EgyptianKingsTree.cs" />
-    <Compile Include="Shape\WaterResource Shapes\EgyptianKings_WaterResource.cs" />
-    <Compile Include="Shape\HouseShapes\BangladeshiHouse.cs" />
-    <Compile Include="Shape\TreeShapes\BangladeshiTree.cs" />
-    <Compile Include="Shape\WaterResource Shapes\Bangladeshi_WaterSource.cs" />
-    <Compile Include="Shape\TreeShapes\ArabBedouinTree.cs" />
-    <Compile Include="Shape\HouseShapes\ArabBedouinHouse.cs" />
+    <Compile Include="Shape\HouseShapes\InuitHuntersHouseShape.cs" />
+    <Compile Include="Shape\HouseShapes\EgyptianHouseShape.cs" />
+    <Compile Include="Shape\TreeShapes\EgyptianTreeShape.cs" />
+    <Compile Include="Shape\WaterResource Shapes\EgyptianWaterSourceShape.cs" />
+    <Compile Include="Shape\HouseShapes\BangladeshiHouseShape.cs" />
+    <Compile Include="Shape\TreeShapes\BangladeshiTreeShape.cs" />
+    <Compile Include="Shape\WaterResource Shapes\BangladeshiWaterSourceShape.cs" />
+    <Compile Include="Shape\TreeShapes\ArabTreeShape.cs" />
+    <Compile Include="Shape\HouseShapes\ArabHouseShape.cs" />
     <Compile Include="Nation\BangladeshiFarmers.cs" />
     <Compile Include="Nation\EgyptianKings.cs" />
     <Compile Include="Nation\INation.cs" />

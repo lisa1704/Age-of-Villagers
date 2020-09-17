@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class ArabBedouinHouse : CompositeShape
+    public class ArabHouseShape : CompositeShape
     {
-        public ArabBedouinHouse(Point point)
+        public ArabHouseShape(Point point)
         {
             Point FrontTop = new Point(point.X - 0, point.Y + 6);
             Point baseFrontLeft = new Point(point.X - 8, point.Y + 6);

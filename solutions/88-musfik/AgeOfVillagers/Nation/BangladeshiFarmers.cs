@@ -16,7 +16,7 @@ namespace AgeOfVillagers
 
         public object getHouse(Point point)
         {
-            return new BangladeshiHouse(point);
+            return new BangladeshiHouseShape(point);
         }
 
         public string getNationName()
@@ -31,12 +31,12 @@ namespace AgeOfVillagers
 
         public object getTree(Point point)
         {
-            return new BangladeshiTree(point);
+            return new BangladeshiTreeShape(point);
         }
 
         public object getWaterResource(Point point)
         {
-            return new Bangladeshi_WaterSource(point);
+            return new BangladeshiWaterSourceShape(point);
         }
     }
 }

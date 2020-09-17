@@ -36,9 +36,9 @@ namespace AgeOfVillagers
             //Point point2 = new Point(e.X+30, e.Y+60);
 
             Point point = new Point(e.X, e.Y);
-            IShape bShape = new Bangladeshi_WaterSource(new Point(point.X+20, point.Y));
-            IShape aShape = new ArabBedouinTree(new Point(point.X - 20, point.Y));
-            IShape iShape = new EgyptianKings_WaterResource(point);
+            IShape bShape = new BangladeshiWaterSourceShape(new Point(point.X+20, point.Y));
+            IShape aShape = new ArabTreeShape(new Point(point.X - 20, point.Y));
+            IShape iShape = new EgyptianWaterSourceShape(point);
 
             bShape.Draw(g, p);
             aShape.Draw(g, p);

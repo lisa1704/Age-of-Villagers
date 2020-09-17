@@ -16,7 +16,7 @@ namespace AgeOfVillagers
 
         public object getHouse(Point point)
         {
-            return new EgyptianKingsHouse(point);
+            return new EgyptianHouseShape(point);
         }
 
         public string getNationName()
@@ -31,12 +31,12 @@ namespace AgeOfVillagers
 
         public object getTree(Point point)
         {
-            return new EgyptianKingsTree(point);
+            return new EgyptianTreeShape(point);
         }
 
         public object getWaterResource(Point point)
         {
-            return new EgyptianKings_WaterResource(point);
+            return new EgyptianWaterSourceShape(point);
         }
     }
 }

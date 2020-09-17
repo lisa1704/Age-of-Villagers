@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class EgyptianKingsHouse : CompositeShape
+    public class EgyptianHouseShape : CompositeShape
     {
-        public EgyptianKingsHouse(Point selectedPoint)
+        public EgyptianHouseShape(Point selectedPoint)
         {
             Point top = new Point(selectedPoint.X - 4, selectedPoint.Y - 6);
             Point base_left = new Point(selectedPoint.X - 10, selectedPoint.Y + 8);

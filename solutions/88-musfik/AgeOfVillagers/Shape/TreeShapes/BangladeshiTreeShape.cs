@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class BangladeshiTree : CompositeShape
+    public class BangladeshiTreeShape : CompositeShape
     {
-        public BangladeshiTree(Point point)
+        public BangladeshiTreeShape(Point point)
         {  
             Point TopLeft = new Point(point.X - 1, point.Y + 4);
             Point BottomRight = new Point(point.X + 1, point.Y + 16);

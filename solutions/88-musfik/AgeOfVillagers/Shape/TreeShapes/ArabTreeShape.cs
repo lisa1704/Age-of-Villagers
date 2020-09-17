@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class ArabBedouinTree : CompositeShape
+    public class ArabTreeShape : CompositeShape
     {
-        public ArabBedouinTree(Point point)
+        public ArabTreeShape(Point point)
         {
             Point TopLeft = new Point(point.X - 1, point.Y);
             Point BottomRight = new Point(point.X + 1, point.Y + 12);

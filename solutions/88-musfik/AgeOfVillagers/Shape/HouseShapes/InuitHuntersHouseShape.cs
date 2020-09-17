@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class InuitHuntersHouse : CompositeShape
+    public class InuitHuntersHouseShape : CompositeShape
     {
-        public InuitHuntersHouse(Point center)
+        public InuitHuntersHouseShape(Point center)
         {
             Point innerCircle_topLeft = new Point(center.X - 3, center.Y - 6);
             Point innerCircle_bottomRight = new Point(center.X + 3, center.Y + 6);

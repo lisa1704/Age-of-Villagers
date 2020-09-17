@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class Bangladeshi_WaterSource : CompositeShape
+    public class BangladeshiWaterSourceShape : CompositeShape
     {
-        public Bangladeshi_WaterSource(Point point)
+        public BangladeshiWaterSourceShape(Point point)
         {
             Point one = new Point(point.X - 13, point.Y );
             Point two = new Point(point.X - 7, point.Y - 10);

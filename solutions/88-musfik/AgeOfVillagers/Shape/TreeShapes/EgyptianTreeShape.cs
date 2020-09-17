@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class EgyptianKingsTree : CompositeShape
+    public class EgyptianTreeShape : CompositeShape
     {
-        public EgyptianKingsTree(Point root)
+        public EgyptianTreeShape(Point root)
         {
             Point TopLeft = new Point(root.X - 6, root.Y - 20);
             Point TopRight = new Point(root.X + 5, root.Y - 22);

@@ -31,7 +31,7 @@ namespace AgeOfVillagers
 
         public object getTree(Point point)
         {
-            return new ArabBedouinTree(point);
+            return new ArabTreeShape(point);
         }
 
         public object getWaterResource(Point point)

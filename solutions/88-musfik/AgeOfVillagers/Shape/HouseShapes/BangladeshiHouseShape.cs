@@ -2,9 +2,9 @@
 
 namespace AgeOfVillagers
 {
-    public class BangladeshiHouse : CompositeShape
+    public class BangladeshiHouseShape : CompositeShape
     {
-        public BangladeshiHouse(Point point)
+        public BangladeshiHouseShape(Point point)
         {
             Point top = point;
             Point baseTopLeft = new Point(top.X - 8, top.Y + 8);
