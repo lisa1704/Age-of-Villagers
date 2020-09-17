@@ -6,6 +6,6 @@ namespace AgeOfVillagers.Interface
 {
     interface IItem
     {
-        public void placeItem();
+        public void placeItem(Shapes shape);
     }
 }
