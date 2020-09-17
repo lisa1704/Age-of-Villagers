@@ -12,11 +12,12 @@ namespace AgeOfVillagers
 
             Point _toppoint = point;
             Point _topRight = new Point(_toppoint.X + 16, _toppoint.Y);
+            Point _bottomLeft = new Point(_toppoint.X, _toppoint.Y + 8);
+            Point _bottomRight = new Point(_toppoint.X + 16, _toppoint.Y + 8);
+            
+            addShape(new BaseCircle(_toppoint,12,12));
 
-
-            addShape(new BaseCircle(_toppoint,12,24));
-
-            addShape(new BaseRectangle(_toppoint,);
+            addShape(new BaseRectangle(_toppoint,_bottomLeft,_bottomRight,_topRight));
 
 
             /*circleShape = new arc(point, radius, 0, 360);

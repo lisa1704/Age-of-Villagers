@@ -17,7 +17,8 @@ namespace AgeOfVillagers
 
         public IGraphicShape GetTrees(Point point)
         {
-            throw new NotImplementedException();
+            return new BdFarmerTree(point);
+
         }
 
         public IGraphicShape GetWaterSources(Point point)

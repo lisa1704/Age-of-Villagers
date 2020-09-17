@@ -119,7 +119,7 @@ namespace AgeOfVillagers
             }
             else if (Treeradiobtn.Checked)
             {
-
+                manager.getNation().GetTrees(_location).draw(g,pen);
             }
             else if (WaterRadiobtn.Checked)
             {
