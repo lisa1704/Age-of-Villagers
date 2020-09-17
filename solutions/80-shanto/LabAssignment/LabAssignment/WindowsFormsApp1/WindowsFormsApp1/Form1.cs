@@ -57,43 +57,85 @@ namespace WindowsFormsApp1
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+
+
             x =e.X;
             y = e.Y;
             //h = 100;
             //w = 200;
-
             Graphics g = this.CreateGraphics();
-            //Rectangle shape = new Rectangle(x, y, h, w);
-            if (radioButton1.Checked)
+
+            if (comboBox1.SelectedItem == "Bangladeshi Farmers")
             {
-                BangladeshiFarmers bdh = new BangladeshiFarmers(g);
-                bdh.DrawHouse(e);
-                
+
+
+                //EgyptianKing ekh = new EgyptianKing(g);
+                //ekh.DrawHouse(e);
+                if (radioButton1.Checked)
+                {
+                    BangladeshiFarmers bdh = new BangladeshiFarmers(g);
+                    bdh.DrawHouse(e);
+
+                    //EgyptianKing ekh = new EgyptianKing(g);
+                    //ekh.DrawHouse(e);
+
+                }
+
+                if (radioButton2.Checked)
+                {
+                    BangladeshiFarmers bdt = new BangladeshiFarmers(g);
+                    bdt.DrawTree(e);
+
+
+                    //EgyptianKing ekt = new EgyptianKing(g);
+                    //ekt.DrawTree(e);
+
+                }
+                if (radioButton3.Checked)
+                {
+                    //g.DrawLine(myPen, x, y, h, w);
+
+                    BangladeshiFarmers bds = new BangladeshiFarmers(g);
+                    bds.DrawWaterSource(e);
+
+
+                    //EgyptianKing eks = new EgyptianKing(g);
+                    //eks.DrawWaterSource(e);
+
+                }
             }
 
-            if (radioButton2.Checked)
+            else if (comboBox1.SelectedItem == "Egypt Kings")
             {
-                BangladeshiFarmers bdt = new BangladeshiFarmers(g);
-                bdt.DrawTree(e);
 
 
-                //EgyptianKing ekt = new EgyptianKing(g);
-                //ekt.DrawTree(e);
+                //EgyptianKing ekh = new EgyptianKing(g);
+                //ekh.DrawHouse(e);
+                if (radioButton1.Checked)
+                {
 
-                
+                    EgyptianKing ekh = new EgyptianKing(g);
+                    ekh.DrawHouse(e);
+
+                }
+
+                if (radioButton2.Checked)
+                {
+                    EgyptianKing ekt = new EgyptianKing(g);
+                    ekt.DrawTree(e);
+
+                }
+                if (radioButton3.Checked)
+                {
 
 
+                    EgyptianKing eks = new EgyptianKing(g);
+                    eks.DrawWaterSource(e);
 
-
+                }
             }
-            if (radioButton3.Checked)
-            {
-                //g.DrawLine(myPen, x, y, h, w);
 
-                BangladeshiFarmers bds = new BangladeshiFarmers(g);
-                bds.DrawWaterSource(e);
 
-            }
         }
 
 
