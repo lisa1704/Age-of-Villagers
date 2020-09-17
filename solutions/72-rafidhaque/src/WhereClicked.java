@@ -18,4 +18,6 @@ public class WhereClicked {
         int y=this.e.getY();
         return y;
     }
+
+
 }
