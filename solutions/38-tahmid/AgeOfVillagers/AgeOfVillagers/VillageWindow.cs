@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -62,8 +63,9 @@ namespace AgeOfVillagers
                 return;
             }
 
-            
-            
+            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+            environment.setEnvironment();
+
             GameFactory gameFactory = new GameFactory();
             IGames game = gameFactory.getGame();
             CommandFactory commandFactory = new CommandFactory();
@@ -71,8 +73,7 @@ namespace AgeOfVillagers
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             
-            environment=environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION);
-            environment.setEnvironment();
+           
 
 
     }
@@ -81,7 +82,7 @@ namespace AgeOfVillagers
 
         private void Open_village(object sender, EventArgs e)
         {
-            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION);
+            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
 
 
@@ -118,7 +119,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.BD_NATION;
-            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, selectedNation);
+            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, selectedNation,Constants.BANGLADESHI_COLOR);
             environment.setEnvironment();
 
         }
@@ -126,7 +127,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Inuit_Hunters(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.INUIT_NATION;
-            environment = environmentFactory.getEnvironment(Nation_Name, Hunters, BD, Egyptians, Arabians, Tree, House, WaterSource, g, selectedNation);
+            environment = environmentFactory.getEnvironment(Nation_Name, Hunters, BD, Egyptians, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.INUIT_COLOR);
             environment.setEnvironment();
 
         }
@@ -134,7 +135,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Egyptian_Kings(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.EGYPT_NATION;
-            environment = environmentFactory.getEnvironment(Nation_Name, Egyptians, Hunters, BD, Arabians, Tree, House, WaterSource, g, selectedNation);
+            environment = environmentFactory.getEnvironment(Nation_Name, Egyptians, Hunters, BD, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.EGYPTIAN_COLOR);
             environment.setEnvironment();
         }
 
@@ -156,7 +157,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Arab_Bedouin(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.ARAB_NATION;
-            environment = environmentFactory.getEnvironment(Nation_Name, Arabians, Egyptians, Hunters, BD, Tree, House, WaterSource, g, selectedNation);
+            environment = environmentFactory.getEnvironment(Nation_Name, Arabians, Egyptians, Hunters, BD, Tree, House, WaterSource, g, selectedNation, Constants.ARABIAN_COLOR);
             environment.setEnvironment();
         }
 

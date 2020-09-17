@@ -9,6 +9,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
     class ArabianEnvironmet : Environment
     {
         private Label nation_Name;
+        private Color color;
         private RadioButton firstNation;
         private RadioButton secondNation;
         private RadioButton thirdNation;
@@ -19,7 +20,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
         private Graphics graphics;
         private string selectedNation;
 
-        public ArabianEnvironmet(Label nation_Name, RadioButton firstNation, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation, RadioButton tree, RadioButton house, RadioButton waterSource, Graphics graphics, string selectedNation)
+        public ArabianEnvironmet(Label nation_Name, RadioButton firstNation, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation, RadioButton tree, RadioButton house, RadioButton waterSource, Graphics graphics, string selectedNation,Color color)
         {
             this.nation_Name = nation_Name;
             this.firstNation = firstNation;
@@ -31,6 +32,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
             this.waterSource = waterSource;
             this.graphics = graphics;
             this.selectedNation = selectedNation;
+            this.color = color;
         }
 
         public override void ValidateOtherGameElements()
@@ -43,7 +45,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
 
         public override void setTerrainColor()
         {
-            SolidBrush sb = new SolidBrush(Constants.ARABIAN_COLOR);
+            SolidBrush sb = new SolidBrush(color);
             graphics.FillRectangle(sb, Constants.PANEL_STARTING_POINT_X, Constants.PANEL_STARTING_POINT_y, Constants.PANEL_HEIGHT, Constants.PANEL_WIDTH);
         }
 

@@ -68,8 +68,8 @@ namespace AgeOfVillagers
         public static Color BANGLADESHI_COLOR = Color.Green;
         public static Color EGYPTIAN_COLOR = Color.Yellow;
         public static Color INUIT_COLOR = Color.White;
-        public static Color ARABIAN_COLOR = Color.YellowGreen;
-        public static Color DEFAULT_COLOR = Color.YellowGreen;
+        public static Color ARABIAN_COLOR = Color.LightYellow;
+        public static Color DEFAULT_COLOR = Color.White;
 
     }
 }
