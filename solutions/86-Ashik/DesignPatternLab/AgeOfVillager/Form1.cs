@@ -26,16 +26,20 @@ namespace AgeOfVillager
             w = 75;
             Graphics g = this.CreateGraphics();
             Rectangle rect = new Rectangle(x, y, h, w);
+            //tree
             if (radioButton1.Checked)
             {
                 EgyptianKingsTree et = new EgyptianKingsTree(g);
                 et.draw(e);
             }
+            //house
             else if (radioButton2.Checked)
             {
-                EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
-                eh.draw(e);
+                //EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
+                BDFarmersHouse bdh = new BDFarmersHouse(g);
+                bdh.draw(e);
             }
+            //water source
             else if (radioButton3.Checked)
             {
                 EgyptianKingsWaterSource ews = new EgyptianKingsWaterSource(g);
