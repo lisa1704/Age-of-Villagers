@@ -31,8 +31,11 @@ namespace AgeOfVillagers.Environment_extending_Classes
             this.selectedNation = selectedNation;
         }
 
-        public override void InvalidateOtherNations()
+        public override void ValidateOtherGameElements()
         {
+            secondNation.Hide();
+            thirdNation.Hide();
+            fourthNation.Hide();
             
         }
 
@@ -43,7 +46,7 @@ namespace AgeOfVillagers.Environment_extending_Classes
 
         public override void showNationName()
         {
-            
+            nation_Name.Text = selectedNation;
         }
     }
 }

@@ -7,14 +7,14 @@ namespace AgeOfVillagers
     public abstract class Environment
     {
         public abstract void showNationName();
-        public abstract void InvalidateOtherNations();
+        public abstract void ValidateOtherGameElements();
 
         public abstract void setTerrainColor();
 
         public void setEnvironment()
         {
             showNationName();
-            InvalidateOtherNations();
+            ValidateOtherGameElements();
             setTerrainColor();
         }
 
