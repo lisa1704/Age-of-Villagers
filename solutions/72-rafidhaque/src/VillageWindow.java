@@ -6,6 +6,7 @@ public class VillageWindow extends JPanel {
     private String villageName;
     private String nationName;
     private JFrame f = new JFrame("Title");
+    private JPanel p = new JPanel();
 
     public VillageWindow(String villageName, String nationName) {
         this.villageName = villageName;
@@ -67,11 +68,15 @@ public class VillageWindow extends JPanel {
     }
 
     public void showWindow() {
+        p.setPreferredSize(new Dimension(600, 400));
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.add(this);
+        f.add(this.p, BorderLayout.WEST);
         f.setSize(800, 400);
         f.setVisible(true);
     }
+
+
 
 }
 
