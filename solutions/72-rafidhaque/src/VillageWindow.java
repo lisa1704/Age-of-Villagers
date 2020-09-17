@@ -12,17 +12,8 @@ public class VillageWindow extends JPanel {
     int mouseX;
     int mouseY;
 
-
-    public int getMouseX() {
-        return mouseX;
-    }
-
     public void setMouseX(int mouseX) {
         this.mouseX = mouseX;
-    }
-
-    public int getMouseY() {
-        return mouseY;
     }
 
     public void setMouseY(int mouseY) {
@@ -130,7 +121,8 @@ public class VillageWindow extends JPanel {
     public void whenClicked(MouseEvent e) {
         int x=e.getX();
         int y=e.getY();
-        System.out.println(x+","+y);
+        setMouseX(x);
+        setMouseY(y);
     }
 
 
