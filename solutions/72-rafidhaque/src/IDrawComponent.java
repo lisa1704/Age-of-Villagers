@@ -1,4 +1,5 @@
 public interface IDrawComponent {
-    void drawComponent(int x, int y);
+    void drawComponent();
+    void drawOuterRect(int width, int height);
 }
 
