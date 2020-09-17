@@ -13,6 +13,9 @@ namespace AgeOfVillagers.IItem_Implementing_Classes
         {
             this.point = point;
         }
-       
+        public void placeItem(Shapes shape)
+        {
+            shape.makeShape();
+        }
     }
 }
