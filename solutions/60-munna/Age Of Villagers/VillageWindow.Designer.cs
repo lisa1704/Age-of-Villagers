@@ -31,6 +31,7 @@ namespace Age_Of_Villagers
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label CountryName;
             this.drawingSpace = new System.Windows.Forms.Panel();
             this.titleOfGame = new System.Windows.Forms.Label();
             this.saveVillage_Button = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@ namespace Age_Of_Villagers
             this.treeRadioButton = new System.Windows.Forms.RadioButton();
             this.houseRadioButton = new System.Windows.Forms.RadioButton();
             this.waterRadioButton = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            CountryName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // drawingSpace
@@ -138,11 +141,37 @@ namespace Age_Of_Villagers
             this.waterRadioButton.Text = "Water Source";
             this.waterRadioButton.UseVisualStyleBackColor = true;
             // 
+            // CountryName
+            // 
+            CountryName.AutoSize = true;
+            CountryName.Font = new System.Drawing.Font("Siyam Rupali", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            CountryName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            CountryName.Location = new System.Drawing.Point(719, 185);
+            CountryName.Name = "CountryName";
+            CountryName.Size = new System.Drawing.Size(179, 25);
+            CountryName.TabIndex = 5;
+            CountryName.Text = "Bangladeshi Farmers";
+            CountryName.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Siyam Rupali", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Location = new System.Drawing.Point(757, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Katakhali";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(CountryName);
             this.Controls.Add(this.waterRadioButton);
             this.Controls.Add(this.houseRadioButton);
             this.Controls.Add(this.treeRadioButton);
@@ -170,6 +199,8 @@ namespace Age_Of_Villagers
         private System.Windows.Forms.RadioButton treeRadioButton;
         private System.Windows.Forms.RadioButton houseRadioButton;
         private System.Windows.Forms.RadioButton waterRadioButton;
+        private Label CountryName;
+        private Label label2;
     }
 }
 

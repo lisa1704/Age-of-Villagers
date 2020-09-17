@@ -47,6 +47,11 @@ namespace Age_Of_Villagers
             throw new NotImplementedException();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void waterRadioButton_Checked(object sender, EventArgs e)
         {
             throw new NotImplementedException();
