@@ -16,6 +16,7 @@ namespace AgeOfVillagers
     {
         Graphics g;
         Pen pen;
+        String item, nation;
         ItemFactory itemFactory;
         public VillageWindow()
         {
@@ -33,20 +34,9 @@ namespace AgeOfVillagers
 
         }
 
-        private void House(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void Tree(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WaterSource(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Save_Village(object sender, EventArgs e)
         {
@@ -70,7 +60,7 @@ namespace AgeOfVillagers
             GameFactory gameFactory = new GameFactory();
             IGames game = gameFactory.getGame();
             CommandFactory commandFactory = new CommandFactory();
-            Command onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
+            GameControlCommand onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
            
@@ -102,6 +92,51 @@ namespace AgeOfVillagers
 
             
             
+        }
+
+       
+
+       
+
+        private void ClickTree(object sender, EventArgs e)
+        {
+            
+                MessageBox.Show("La");
+        }
+
+        private void ClickHouse(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClickWaterSource(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Click_Inuit_Hunters(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Click_Egyptian_Kings(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Click_Arab_Bedouin(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drawing_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

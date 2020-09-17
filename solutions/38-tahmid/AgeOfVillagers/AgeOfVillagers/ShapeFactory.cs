@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class ShapeFactory
     {
-        public Shape GetShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
+        public BasicShapes GetShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
         {
             if (hint.Equals(Constants.RECT_HINT))
                 return new Rectangle(g, pen, point, height, width);

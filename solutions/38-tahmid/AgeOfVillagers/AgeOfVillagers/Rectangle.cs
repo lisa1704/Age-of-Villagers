@@ -6,13 +6,13 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Rectangle : Shape
+    class Rectangle : BasicShapes
     {
         Point start,topRight,bottomRight,bottomLeft;
         Graphics g;
         Pen p;
         int height,width;
-        Shape upLine,downLine,leftLine,rightLine;
+        BasicShapes upLine,downLine,leftLine,rightLine;
         public Rectangle(Graphics g, Pen p, Point start,int height, int width)
         {
             this.start = start;

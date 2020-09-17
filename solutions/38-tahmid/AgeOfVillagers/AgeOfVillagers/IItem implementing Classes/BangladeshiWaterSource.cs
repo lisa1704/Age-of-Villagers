@@ -25,7 +25,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
         }
         public void placeItem()
         {
-            Shape nonagon = shapeFactory.GetShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
+            BasicShapes nonagon = shapeFactory.GetShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
     }

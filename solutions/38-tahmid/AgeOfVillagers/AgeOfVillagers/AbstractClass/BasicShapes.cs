@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.AbstractClass
 {
-    abstract class Shape
+    abstract class BasicShapes
     {
         public abstract void drawShape();
 
@@ -15,12 +15,12 @@ namespace AgeOfVillagers.AbstractClass
         }
 
 
-        internal Shape getLines(Point start, Point end,Graphics g,Pen pen)
+        internal BasicShapes getLines(Point start, Point end,Graphics g,Pen pen)
         {
             return new Line(start, end,g,pen);
         }
 
-        internal Shape getArcs(Graphics g, Pen pen, Point point, int startAng, int endAng, int lenght, int width)
+        internal BasicShapes getArcs(Graphics g, Pen pen, Point point, int startAng, int endAng, int lenght, int width)
         {
             return new Arc(g,pen,point,startAng,endAng,lenght,width);
         }

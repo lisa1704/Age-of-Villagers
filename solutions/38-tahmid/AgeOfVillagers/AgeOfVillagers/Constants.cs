@@ -37,6 +37,18 @@ namespace AgeOfVillagers
         public static int OVAL_STARTING_ANG = 0;
         public static int OVAL_ENDING_ANG = 360;
 
+        //Items
+        public static string HOUSE_ITEM = "HOUSE";
+        public static string TREE_ITEM = "TREE";
+        public static string WATER_SOURCE_ITEM = "WATER SOURCE";
+
+        //Nations
+
+        public static string BD_NATION = "Bangladeshi_Farmer";
+        public static string ARAB_NATION = "ARAB BEDOUIN";
+        public static string EGYPT_NATION = "EGYPTIAN KING";
+        public static string INUIT_NATION = "Inuit Hunters";
+
 
     }
 }
