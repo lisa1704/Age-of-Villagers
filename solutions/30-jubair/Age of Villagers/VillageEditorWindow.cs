@@ -109,14 +109,14 @@ namespace Age_of_Villagers
             
             
             
-            // Set Radio Button and act accordingly
+            /* Set Radio Button and act accordingly
 
 
-            //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            //bd.GetHouse(graphics,e.Location);
+            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            bd.GetHouse(graphics,e.Location);
 
-            //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            //bd.GetTree(graphics,e.Location);
+            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
+            bd.GetTree(graphics,e.Location);
 
             //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
             //bd.GetWaterResource(graphics,e.Location);
@@ -148,7 +148,7 @@ namespace Age_of_Villagers
 
 
 
-            /*System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);
             messageBoxCS.AppendLine();
             messageBoxCS.AppendFormat("{0} = {1}", "Y", e.Y);
@@ -181,7 +181,7 @@ namespace Age_of_Villagers
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
             label_village_name.Text = CreateNewVillageForm.SetValueForText1;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
-            label_nation_name.Text = CreateNewVillageForm.SetValueForText2;    // Nation Name passing from CreateNewVillageForm to VillageEditorWindow Form
+             
 
         }
 
