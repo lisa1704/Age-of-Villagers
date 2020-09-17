@@ -19,9 +19,16 @@ namespace AgeOfVillagers
         public List<Point> treePoints = new List<Point>();
         public List<Point> housePoints = new List<Point>();
         public List<Point> riverPoints = new List<Point>();
+        public Graphics graphics;
+        public Pen pen;
+        public VillageComponentFactory villageComponentFactory =null;
+        public VillageSave villageSave = null;
         public AgeOfVillagersForm()
         {
             InitializeComponent();
+            graphics = pnlDrawingSpace.CreateGraphics();
+            pen = new Pen(Color.Black);
+            villageSave = new VillageSave();
         }
 
         public void setVillageName(string name)
@@ -34,6 +41,7 @@ namespace AgeOfVillagers
         {
             this.lblNationName.Text = name;
             nationName = name;
+            villageComponentFactory = NationFactory.getNation(nationName);
         }
         public void setRadioButton()
         {
@@ -51,10 +59,10 @@ namespace AgeOfVillagers
 
         private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
-            Graphics graphics = pnlDrawingSpace.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
+            //Graphics graphics = pnlDrawingSpace.CreateGraphics();
+            //Pen pen = new Pen(Color.Black);
             setRadioButton();
-            VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
+            //VillageComponentFactory villageComponentFactory = NationFactory.getNation(nationName);
             VillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
             villageComponent.drawComponent(e.Location, graphics, pen);
             pt = villageComponent.getPoint();
@@ -111,7 +119,17 @@ namespace AgeOfVillagers
         {
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             Village village = new Village(nationName,villageName,treePoints,housePoints,riverPoints);
-            VillageSave.saveVillage(filePath,village);
+            villageSave.saveVillage(filePath,village);
+        }
+
+        private void btnOpenVillage_Click(object sender, EventArgs e)
+        {
+            //Graphics graphics = pnlDrawingSpace.CreateGraphics();
+            //Pen pen = new Pen(Color.Black);
+            string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
+            //Village village = new Village(nationName, villageName, treePoints, housePoints, riverPoints);
+            Village village=villageSave.openVillage(filePath, this);
+            villageSave.draw(this, village);
         }
     }
 }

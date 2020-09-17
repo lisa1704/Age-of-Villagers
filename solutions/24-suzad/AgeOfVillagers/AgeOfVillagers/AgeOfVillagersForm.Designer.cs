@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlDrawingSpace = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlToolSide = new System.Windows.Forms.Panel();
             this.lblAgeOfVillagers = new System.Windows.Forms.Label();
             this.lblVillageName = new System.Windows.Forms.Label();
@@ -38,8 +39,7 @@
             this.radiobtnWaterSource = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNewVillage = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOpenVillage = new System.Windows.Forms.Button();
             this.pnlComponentHolder = new System.Windows.Forms.Panel();
             this.pnlDrawingSpace.SuspendLayout();
             this.pnlComponentHolder.SuspendLayout();
@@ -55,6 +55,13 @@
             this.pnlDrawingSpace.TabIndex = 0;
             this.pnlDrawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDrawingSpace_Paint);
             this.pnlDrawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlDrawingSpace_MouseClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(606, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(185, 125);
+            this.panel1.TabIndex = 8;
             // 
             // pnlToolSide
             // 
@@ -144,21 +151,15 @@
             this.btnNewVillage.UseVisualStyleBackColor = true;
             this.btnNewVillage.Click += new System.EventHandler(this.btnNewVillage_Click);
             // 
-            // button1
+            // btnOpenVillage
             // 
-            this.button1.Location = new System.Drawing.Point(645, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Open village";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(606, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 125);
-            this.panel1.TabIndex = 8;
+            this.btnOpenVillage.Location = new System.Drawing.Point(645, 343);
+            this.btnOpenVillage.Name = "btnOpenVillage";
+            this.btnOpenVillage.Size = new System.Drawing.Size(109, 29);
+            this.btnOpenVillage.TabIndex = 2;
+            this.btnOpenVillage.Text = "Open village";
+            this.btnOpenVillage.UseVisualStyleBackColor = true;
+            this.btnOpenVillage.Click += new System.EventHandler(this.btnOpenVillage_Click);
             // 
             // pnlComponentHolder
             // 
@@ -176,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.pnlComponentHolder);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOpenVillage);
             this.Controls.Add(this.btnNewVillage);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblNationName);
@@ -206,7 +207,7 @@
         public System.Windows.Forms.RadioButton radiobtnWaterSource;
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnNewVillage;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnOpenVillage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlComponentHolder;
     }
