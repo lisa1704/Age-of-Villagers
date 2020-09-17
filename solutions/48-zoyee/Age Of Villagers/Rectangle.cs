@@ -1,26 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class Rectangle : IShape
+    class Rectangle : CompositeShape
     {
         private readonly Point TopLeft;
         private readonly Point BottomRight;
         public Rectangle(Point topLeft, Point bottomRight)
         {
-            this.TopLeft = topLeft;
-            this.BottomRight = bottomRight;
+            var TopRight = new Point(BottomRight.X, topLeft.Y);
+            var BottomLeft = new Point(topLeft.X, BottomRight.Y);
+
+            AddComponent(new Line(topLeft, BottomLeft));
+            AddComponent(new Line(topLeft, TopRight));
+            AddComponent(new Line(BottomLeft, BottomRight));
+            AddComponent(new Line(BottomRight, TopRight)); ;
         }
-        public void Draw(Graphics g)
+        public new void Draw(Graphics g)
         {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);
-            g.DrawLine(pen, TopLeft.X, TopLeft.Y, TopLeft.X, BottomRight.Y);
-            g.DrawLine(pen, TopLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
-            g.DrawLine(pen, BottomRight.X, TopLeft.Y, BottomRight.X, BottomRight.Y);
+            //var pen = new Pen(Color.Black, 1);
+            //g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);
+            //g.DrawLine(pen, TopLeft.X, TopLeft.Y, TopLeft.X, BottomRight.Y);
+            //g.DrawLine(pen, TopLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
+            //g.DrawLine(pen, BottomRight.X, TopLeft.Y, BottomRight.X, BottomRight.Y);
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Age_Of_Villagers
         private readonly Point point1;
         private readonly Point point2;
 
-
         public Arc(Point point1, Point point2)
         {
             this.point1 = point1;
