@@ -16,9 +16,9 @@ namespace AgeOfVillagers
         public static string UNEQUAL_NONAGON_HINT = "Unequal Nonago";
 
 
-        //Item hints
-        public static string BDTREE_HINT = "Bangladeshi Farmer,Tree";
-        public static string BDWATERSOURCE_HINT = "Bangladeshi Farmer,Water Source";
+        //Shape hints
+        public static string BDTREE_HINT = BD_NATION+TREE_ITEM;
+        public static string BDWATERSOURCE_HINT = BD_NATION+WATER_SOURCE_ITEM;
 
 
         //house pixell range
