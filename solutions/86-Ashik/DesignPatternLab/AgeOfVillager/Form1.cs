@@ -31,8 +31,10 @@ namespace AgeOfVillager
             {
                 //EgyptianKingsTree et = new EgyptianKingsTree(g);
                 //et.draw(e);
-                BDFarmersTree bdt = new BDFarmersTree(g);
-                bdt.draw(e);
+                //BDFarmersTree bdt = new BDFarmersTree(g);
+                //bdt.draw(e);
+                ArabBedouinsTree abt = new ArabBedouinsTree(g);
+                abt.draw(e);
             }
             //house
             else if (radioButton2.Checked)
