@@ -33,7 +33,8 @@ namespace AgeOfVillager
             }
             else if (radioButton2.Checked)
             {
-                g.DrawEllipse(myPen, rect);
+                EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
+                eh.draw(e);
             }
             else if (radioButton3.Checked)
             {
