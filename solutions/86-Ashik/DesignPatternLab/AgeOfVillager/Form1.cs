@@ -19,7 +19,6 @@ namespace AgeOfVillager
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            
             x = e.X;
             y = e.Y;
             h = 50;
