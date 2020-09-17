@@ -123,7 +123,7 @@ namespace AgeOfVillagers
             }
             else if (WaterRadiobtn.Checked)
             {
-
+                manager.getNation().GetWaterSources(_location).draw(g, pen);
             }
 
             else
