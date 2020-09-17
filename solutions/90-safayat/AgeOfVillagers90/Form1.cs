@@ -18,9 +18,9 @@ namespace AgeOfVillagers90
         string ItemText = "";
         string NameofVillage = "";
         string Vtype = "";
-        List<Point> HousePoints = new List<Point>();
-        List<Point> TreePoints = new List<Point>();
-        List<Point> WaterPoints = new List<Point>();
+        public List<Point> HousePoints { get; set; } = new List<Point>();
+        public List<Point> TreePoints { get; set; } = new List<Point>();
+        public List<Point> WaterPoints { get; set; } = new List<Point>();
 
         NationFactory nationfactory = new NationFactory();
         public Form1()
@@ -38,6 +38,7 @@ namespace AgeOfVillagers90
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
+            
             MessageBox.Show(VillageName.Text +" Village Saved");
         }
 
