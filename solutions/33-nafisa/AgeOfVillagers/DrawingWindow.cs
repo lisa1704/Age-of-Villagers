@@ -56,14 +56,13 @@ namespace AgeOfVillagers
         {
 
         }
-
- 
-
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
             HouseShape house = new HouseShape(Drawingpanel);
             TreeShape tree = new TreeShape(Drawingpanel);
+            WaterSourceShape wsource = new WaterSourceShape(Drawingpanel);
+
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
@@ -80,7 +79,7 @@ namespace AgeOfVillagers
             if (radioButton3.Checked == true)
             {
 
-                //g.DrawEllipse(p, x - 50, y - 50, 100, 100);
+                wsource.Draw(P, Drawingpanel);
             }
         }
 
