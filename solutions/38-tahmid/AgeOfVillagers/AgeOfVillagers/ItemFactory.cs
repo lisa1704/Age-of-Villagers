@@ -17,12 +17,12 @@ namespace AgeOfVillagers
             
             if (hint.Equals(Constants.BDTREE_HINT))
             {
-                return new BangladeshiTree(g, pen, point,  Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
+                return new BangladeshiShapedTree(g, pen, point,  Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
             }
             else if (hint.Equals(Constants.BDWATERSOURCE_HINT))
             {
 
-                return new BangladeshiWaterSource(g, pen, point, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
+                return new BangladeshiShapedWaterSource(g, pen, point, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
             }
             else
                 return new BangladeshiShapedHouse(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);

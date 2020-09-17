@@ -26,13 +26,10 @@ namespace AgeOfVillagers.IItem_implementing_Classes
 
         public void makeShape()
         {
-            throw new NotImplementedException();
-        }
-
-        public void placeItem()
-        {
             BasicShapes nonagon = basicShapeFactory.GetShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
+
+       
     }
 }
