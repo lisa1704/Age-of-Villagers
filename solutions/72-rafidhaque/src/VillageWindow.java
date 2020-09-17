@@ -8,6 +8,7 @@ public class VillageWindow extends JPanel {
     private JFrame f = new JFrame("Title");
     private JPanel p = new JPanel();
 
+
     public VillageWindow(String villageName, String nationName) {
         this.villageName = villageName;
         this.nationName = nationName;
@@ -19,11 +20,11 @@ public class VillageWindow extends JPanel {
 
         g.setFont(new Font("TimesRoman", Font.PLAIN, 20));
         g.setColor(Color.BLACK);
-        g.drawString(gameName, 620, 50);
+        g.drawString(this.gameName, 20, 50);
 
         g.setFont(new Font("TimesRoman", Font.PLAIN, 13));
-        g.drawString(this.villageName, 620, 90);
-        g.drawString(this.nationName, 620, 130);
+        g.drawString(this.villageName, 20, 90);
+        g.drawString(this.nationName, 20, 130);
 
         JButton treebutton=new JButton("Tree");
         treebutton.setFont(new Font("Arial", Font.PLAIN, 10));
