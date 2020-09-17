@@ -16,31 +16,10 @@ namespace AgeOfVillagers
         public static string UNEQUAL_NONAGON_HINT = "Unequal Nonago";
 
 
-        //Shape hints
-        public static string BDTREE_HINT = BD_NATION+TREE_ITEM;
-        public static string BDWATERSOURCE_HINT = BD_NATION+WATER_SOURCE_ITEM;
+       
 
 
-        //house pixell range
-        public static int HOUSE_HEIGHT = 16;
-        public static int HOUSE_WIDTH = 16;
-
-        //tree pixell range
-        public static int TREE_HEIGHT = 24;
-        public static int TREE_WIDTH = 16;
-
-        //bangladeshi water source range
-        public static int BDWaterSource_HEIGHT = 24;
-        public static int BDWATERSOURCE_WIDTH = 16;
-
-        //angle range
-        public static int OVAL_STARTING_ANG = 0;
-        public static int OVAL_ENDING_ANG = 360;
-
-        //Items
-        public static string HOUSE_ITEM = "HOUSE";
-        public static string TREE_ITEM = "TREE";
-        public static string WATER_SOURCE_ITEM = "WATER SOURCE";
+     
 
         //Nations
 
@@ -48,6 +27,10 @@ namespace AgeOfVillagers
         public static string ARAB_NATION = "ARAB BEDOUIN";
         public static string EGYPT_NATION = "EGYPTIAN KING";
         public static string INUIT_NATION = "Inuit Hunters";
+
+        //Shape hints
+        public static string BDTREE_HINT = "Bangladeshi_Farmer" + "TREE";
+        public static string BDWATERSOURCE_HINT = "Bangladeshi_Farmer" + "WATER SOURCE";
 
 
     }

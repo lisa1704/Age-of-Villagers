@@ -29,11 +29,20 @@ namespace AgeOfVillagers
         public override void drawShape()
         {
             topLeftLine.drawShape();
+            topMidLeftLine.drawShape();
+            topMidLine.drawShape();
+            topMidRightLine.drawShape();
+            topEndLine.drawShape();
+            bottomLeftLine.drawShape();
+            bottomMidLeftLine.drawShape();
+            bottomMidRightLine.drawShape();
+            bottomEndLine.drawShape();
+            
 
 
         }
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             
             

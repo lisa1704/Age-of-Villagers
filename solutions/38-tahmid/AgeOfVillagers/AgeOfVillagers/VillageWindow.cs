@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Interface;
+﻿using AgeOfVillagers.FactoryClasses;
+using AgeOfVillagers.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,15 +17,17 @@ namespace AgeOfVillagers
     {
         Graphics g;
         Pen pen;
-        String item, nation;
-        ShapeFactory itemFactory;
+        String selectedItem, selectedNation;
+        ShapeFactory shapeFactory;
+        ItemFactory itemFactory;
         public VillageWindow()
         {
             InitializeComponent();
 
             g = drawing_panel.CreateGraphics();
             pen = new Pen(Color.Black);
-            itemFactory = new ShapeFactory();
+            shapeFactory = new ShapeFactory();
+            itemFactory = new ItemFactory();
 
 
         }
@@ -85,10 +88,11 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
+            selectedNation = Constants.BD_NATION;
             Point point = new Point(e.X, e.Y);
-            
-            IItem villageItem = itemFactory.GetShape(g, pen, point,Constants.BDWATERSOURCE_HINT);
-            villageItem.placeItem();
+            IItem item = itemFactory.GetItem(point, selectedItem);
+            Shapes nationShapedItem = shapeFactory.GetShape(g, pen, point,selectedNation+selectedItem);
+            item.placeItem(nationShapedItem);
 
             
             
@@ -98,21 +102,7 @@ namespace AgeOfVillagers
 
        
 
-        private void ClickTree(object sender, EventArgs e)
-        {
-            
-                MessageBox.Show("La");
-        }
-
-        private void ClickHouse(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ClickWaterSource(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
         {
