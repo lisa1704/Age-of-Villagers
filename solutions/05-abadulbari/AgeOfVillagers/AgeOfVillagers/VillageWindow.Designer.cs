@@ -201,7 +201,6 @@
         public System.Windows.Forms.Label nationLabel;
         public System.Windows.Forms.Label villageLabel;
         private System.Windows.Forms.RadioButton waterButton;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton treeButton;
         private System.Windows.Forms.RadioButton houseButton;
         private System.Windows.Forms.RadioButton treeRadioBtn;

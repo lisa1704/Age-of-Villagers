@@ -10,16 +10,4 @@ namespace AgeOfVillagers.Nation
         string getNationName();
         Color getTerrainColor();
     }
-    public class BangladeshiFarmers : INation
-    {
-        public string getNationName()
-        {
-            return "Bangladeshi Farmers";
-        }
-
-        public Color getTerrainColor()
-        {
-            return Color.Green;
-        }
-    }
 }
