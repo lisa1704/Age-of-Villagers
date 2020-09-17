@@ -8,6 +8,6 @@ namespace AgeOfVillagers90
 {
     interface ISaveNation
     {
-
+        void saved();
     }
 }
