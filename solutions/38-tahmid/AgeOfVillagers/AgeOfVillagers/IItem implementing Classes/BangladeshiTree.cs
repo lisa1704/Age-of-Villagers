@@ -14,7 +14,7 @@ namespace AgeOfVillagers.Shape_extended_classes
         Pen pen;
         Point point;
         int length, width;
-        ShapeFactory shapeFactory;
+        BasicShapeFactory shapeFactory;
    
         public BangladeshiTree(Graphics g, Pen pen, Point point, int length, int width)
         {
@@ -24,7 +24,7 @@ namespace AgeOfVillagers.Shape_extended_classes
             this.g = g;
             this.point = point;
             
-            shapeFactory = new ShapeFactory();
+            shapeFactory = new BasicShapeFactory();
         }
 
         public void placeItem()

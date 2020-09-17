@@ -13,7 +13,7 @@ namespace AgeOfVillagers.Village_extended_classes
         Pen pen;
         Point point;
         int length, width;
-        ShapeFactory shapeFactory;
+        BasicShapeFactory shapeFactory;
        public BangladeshiFarmersHouse (Graphics g,Pen pen,Point point,int length,int width)
         {
             this.pen = pen;
@@ -21,7 +21,7 @@ namespace AgeOfVillagers.Village_extended_classes
             this.width = width;
             this.g = g;
             this.point = point;
-            shapeFactory = new ShapeFactory();
+            shapeFactory = new BasicShapeFactory();
 
             
         }
