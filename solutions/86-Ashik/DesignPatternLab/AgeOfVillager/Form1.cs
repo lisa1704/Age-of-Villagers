@@ -29,8 +29,10 @@ namespace AgeOfVillager
             //tree
             if (radioButton1.Checked)
             {
-                EgyptianKingsTree et = new EgyptianKingsTree(g);
-                et.draw(e);
+                //EgyptianKingsTree et = new EgyptianKingsTree(g);
+                //et.draw(e);
+                BDFarmersTree bdt = new BDFarmersTree(g);
+                bdt.draw(e);
             }
             //house
             else if (radioButton2.Checked)
