@@ -14,12 +14,12 @@ namespace AgeOfVillagers.Nation
     {
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return "Bangladeshi Farmers";
         }
 
         public Color getTerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Green;
         }
     }
 }

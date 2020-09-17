@@ -44,6 +44,7 @@
             // 
             // drawingPanel
             // 
+            this.drawingPanel.BackColor = System.Drawing.SystemColors.Control;
             this.drawingPanel.Location = new System.Drawing.Point(0, 0);
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(600, 400);
@@ -194,7 +195,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel drawingPanel;
+        public System.Windows.Forms.Panel drawingPanel;
         private System.Windows.Forms.Panel toolPanel;
         private System.Windows.Forms.Label gameLabel;
         public System.Windows.Forms.Label nationLabel;
