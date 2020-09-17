@@ -71,7 +71,7 @@
     <Compile Include="INation.cs" />
     <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitHunters.cs" />
-    <Compile Include="IVillageSave.cs" />
+    <Compile Include="IVillageSaveOpen.cs" />
     <Compile Include="IShapeIItem.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="NationFactory.cs" />
@@ -82,6 +82,7 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="ShapeEllipse.cs" />
     <Compile Include="TAgle.cs" />
+    <Compile Include="VillageOpen.cs" />
     <Compile Include="VillageSave.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

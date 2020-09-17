@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    interface IVillageSave
+    interface IVillageSaveOpen
     {
-        void saved();
+        void execute();
     }
 
     public struct VillageItem

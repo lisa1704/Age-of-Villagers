@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers90
 {
-    public class VillageSave : IVillageSave
+    public class VillageSave : IVillageSaveOpen
     {
         private VillageItem villageItem;
 
@@ -16,7 +16,7 @@ namespace AgeOfVillagers90
 
         public object JsonSerializer { get; private set; }
 
-        public void saved()
+        public void execute()
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"F:\Soft Studies\S 3.1\Design Pattern Materials\SavePictureAOV\";
