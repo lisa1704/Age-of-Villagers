@@ -19,7 +19,7 @@ namespace AgeOfVillagers
 
         public IGraphicShape GetWaterSources(Point point)
         {
-            throw new NotImplementedException();
+            return new NullHandler();
         }
     }
 }
