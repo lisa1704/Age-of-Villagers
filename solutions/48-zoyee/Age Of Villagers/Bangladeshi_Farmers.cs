@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmers : INation
+    class Bangladeshi_Farmers : INation
     {
         Pen p = new Pen(Color.Green);
         public void Draw_Tree(Graphics g, Point point)
