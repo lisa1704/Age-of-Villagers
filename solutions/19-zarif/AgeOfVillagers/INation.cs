@@ -7,8 +7,8 @@ namespace AgeOfVillagers
 {
    public interface INation
     {
-        IGraphicShape GetHouse();
-        IGraphicShape GetTrees();
-        IGraphicShape GetWaterSources();
+        IGraphicShape GetHouse(Point point);
+        IGraphicShape GetTrees(Point point);
+        IGraphicShape GetWaterSources(Point point);
     }
 }
