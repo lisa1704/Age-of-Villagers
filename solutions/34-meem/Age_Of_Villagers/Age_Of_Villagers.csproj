@@ -68,6 +68,10 @@
     <Compile Include="BangladeshiItemFactory.cs" />
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource.cs" />
+    <Compile Include="EgyptianHouse.cs" />
+    <Compile Include="EgyptianItemFactory.cs" />
+    <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />

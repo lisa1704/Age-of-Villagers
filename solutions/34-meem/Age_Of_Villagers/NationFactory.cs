@@ -10,10 +10,23 @@ namespace Age_Of_Villagers
     {
         public static ItemFactory getNation(string nation)
         {
-            if(nation== "Bangladeshi")
+            if(nation== "Bangladeshi Farmers")
             {
                 return new BangladeshiItemFactory();
             }
+            else if (nation == "Inuit Hunters")
+            {
+                return new BangladeshiItemFactory();
+            }
+            else if (nation == "Egyptian King")
+            {
+                return new EgyptianItemFactory();
+            }
+            else if (nation == "Arab Bedouins")
+            {
+                return new BangladeshiItemFactory();
+            }
+
             return null;
         }
 
