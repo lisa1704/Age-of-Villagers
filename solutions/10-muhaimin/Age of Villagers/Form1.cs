@@ -79,8 +79,6 @@ namespace Age_of_Villagers
         {
             
             refreshForm();
-            Refresh();
-            text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -122,8 +120,7 @@ namespace Age_of_Villagers
             radioButton2.Checked = false;
             radioButton1.Checked = false;
             radioButton3.Checked = false;
-            
-            this.Refresh();
+            this.Invalidate();
         }
     }
 }
