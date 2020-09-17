@@ -66,15 +66,24 @@ namespace AgeOfVillagers
             //Get the current state
             GetVillageState();
 
-            SaveVillage SCommand = new SaveVillage(village);
-            SCommand.executeSave();
+            SaveVillage saveVillage = new SaveVillage(village);
+            saveVillage.executeSave();
             //MessagBox Show 
             MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-          //  MessageBox.Show("Village is Saved");
+           
+                /*OpenVillage openVillage = new OpenVillage();
+                NewVbutton_Click(sender, e);
+                openVillage.executeSave();
+                village = openVillage.get_village()();
+                set_state(village);
+                DrawPanel.Refresh();*/
+            
+            
+            //  MessageBox.Show("Village is Saved");
         }
 
         private void NewVbutton_Click(object sender, EventArgs e)
@@ -87,7 +96,7 @@ namespace AgeOfVillagers
             VType = NationList.Text;
             DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
             DrawPanel.Refresh();
-            //MessageBox.Show("Village is Saved");
+            
         }
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
