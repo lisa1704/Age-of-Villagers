@@ -151,7 +151,6 @@ namespace Age_Of_Villagers
             CountryName.Size = new System.Drawing.Size(179, 25);
             CountryName.TabIndex = 5;
             CountryName.Text = "Bangladeshi Farmers";
-            CountryName.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -163,7 +162,6 @@ namespace Age_Of_Villagers
             this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Katakhali";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // VillageWindow
             // 

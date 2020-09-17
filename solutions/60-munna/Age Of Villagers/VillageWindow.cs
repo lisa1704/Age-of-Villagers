@@ -30,7 +30,7 @@ namespace Age_Of_Villagers
         }
         public void newVillage_Button_Click(object sender, EventArgs e)
         {
-            text = "new";
+            
         }
         private void openVillage_Button_Click(object sender, EventArgs e)
         {
@@ -45,11 +45,6 @@ namespace Age_Of_Villagers
         private void houseRadioButton_Checked(object sender, EventArgs e)
         {
             throw new NotImplementedException();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void waterRadioButton_Checked(object sender, EventArgs e)
