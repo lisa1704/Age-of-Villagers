@@ -46,13 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArabBedouin.cs" />
-    <Compile Include="BangladeshiFarmers.cs" />
-    <Compile Include="EgyptianKings.cs" />
-    <Compile Include="INation.cs" />
+    <Compile Include="Nation\ArabBedouin.cs" />
+    <Compile Include="Shape\HouseShapes\InuitHuntersHouse.cs" />
+    <Compile Include="Shape\HouseShapes\EgyptianKingsHouse.cs" />
+    <Compile Include="Shape\TreeShapes\EgyptianKingsTree.cs" />
+    <Compile Include="Shape\WaterResource Shapes\EgyptianKings_WaterResource.cs" />
+    <Compile Include="Shape\HouseShapes\BangladeshiHouse.cs" />
+    <Compile Include="Shape\TreeShapes\BangladeshiTree.cs" />
+    <Compile Include="Shape\WaterResource Shapes\Bangladeshi_WaterSource.cs" />
+    <Compile Include="Shape\TreeShapes\ArabBedouinTree.cs" />
+    <Compile Include="Shape\HouseShapes\ArabBedouinHouse.cs" />
+    <Compile Include="Nation\BangladeshiFarmers.cs" />
+    <Compile Include="Nation\EgyptianKings.cs" />
+    <Compile Include="Nation\INation.cs" />
     <Compile Include="INationFactory.cs" />
-    <Compile Include="InuitHunters.cs" />
-    <Compile Include="IShape.cs" />
+    <Compile Include="Nation\InuitHunters.cs" />
+    <Compile Include="Shape\CompositeShapes\CompositeShape.cs" />
+    <Compile Include="Shape\IShape.cs" />
+    <Compile Include="Shape\CompositeShapes\Rectangle.cs" />
+    <Compile Include="Shape\CompositeShapes\VShape.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageWindow.cs">
       <SubType>Form</SubType>
