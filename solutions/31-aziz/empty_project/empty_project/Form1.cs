@@ -13,10 +13,12 @@ namespace empty_project
     public partial class Form1 : Form
     {
         string element_text = "";
-
+        string nation = "";
         List<Point> treePoints = new List<Point>();
         List<Point> housePoints = new List<Point>();
         List<Point> watersourcePoints = new List<Point>();
+
+        SelectNation selectNation = new SelectNation();
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace empty_project
 
             foreach (Point point in housePoints)
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                selectNation.GetNation(nation).DrawHouse(graphics, point);
             }
 
             foreach (Point point in watersourcePoints)

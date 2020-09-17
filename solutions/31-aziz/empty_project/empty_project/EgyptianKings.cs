@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace empty_project
 {
     class EgyptianKings : INation
     {
-        void INation.DrawHouse()
+        void INation.DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
