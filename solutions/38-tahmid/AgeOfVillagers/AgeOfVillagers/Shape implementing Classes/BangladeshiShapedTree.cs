@@ -8,15 +8,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace AgeOfVillagers.Shape_extended_classes
 {
-    class BangladeshiTree : IItem
+    class BangladeshiShapedTree : Shapes
     {
         Graphics g;
         Pen pen;
         Point point;
         int length, width;
-        BasicShapeFactory shapeFactory;
+        BasicShapeFactory basicShapeFactory;
    
-        public BangladeshiTree(Graphics g, Pen pen, Point point, int length, int width)
+        public BangladeshiShapedTree(Graphics g, Pen pen, Point point, int length, int width)
         {
             this.pen = pen;
             this.length = length;
@@ -24,15 +24,17 @@ namespace AgeOfVillagers.Shape_extended_classes
             this.g = g;
             this.point = point;
             
-            shapeFactory = new BasicShapeFactory();
+            basicShapeFactory = new BasicShapeFactory();
         }
 
-        public void placeItem()
+        public void makeShape()
         {
-            BasicShapes leaf = shapeFactory.GetShape(g, pen, point,  3*(length/4), width, Constants.OVAL_HINT);
+            BasicShapes leaf = basicShapeFactory.GetShape(g, pen, point, 3 * (length / 4), width, Constants.OVAL_HINT);
             leaf.makeShape();
-            BasicShapes root= shapeFactory.GetShape(g, pen, new Point(point.X+3*(width/8),point.Y+width/2), 5*(length / 8), width/4, Constants.RECT_HINT);
+            BasicShapes root = basicShapeFactory.GetShape(g, pen, new Point(point.X + 3 * (width / 8), point.Y + width / 2), 5 * (length / 8), width / 4, Constants.RECT_HINT);
             root.makeShape();
         }
+
+       
     }
 }
