@@ -21,7 +21,7 @@ namespace Age_Of_Villagers
             AddComponent(new Line(BottomLeft, BottomRight));
             AddComponent(new Line(BottomRight, TopRight)); ;
         }
-        public new void Draw(Graphics g)
+        public void Draw(Graphics g)
         {
             //var pen = new Pen(Color.Black, 1);
             //g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);

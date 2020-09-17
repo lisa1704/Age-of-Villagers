@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
@@ -15,7 +17,8 @@ namespace AgeOfVillagers
         }
         public void Draw_House(Graphics g, Point point)
         {
-            g.DrawLine(p, point.X, point.Y, 100, 100);
+            System.Drawing.Rectangle rec = new System.Drawing.Rectangle(new Point(point.X, point.Y), (Size)new Point(point.X + 15, point.Y + 25));
+            rec.Draw(g);
         }
         public void Draw_WaterSource(Graphics g, Point point)
         {
