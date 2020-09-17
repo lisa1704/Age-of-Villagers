@@ -23,6 +23,7 @@ namespace Age_Of_Villagers
             g.DrawLine(p, x, y, x + 25, y - 25);
             g.DrawLine(p, x + 50, y, x + 25, y - 25);
 
+
         }
     }
 }
