@@ -169,7 +169,6 @@
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(196, 25);
             this.VillageName.TabIndex = 5;
-            this.VillageName.Text = "village name";
             this.VillageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.VillageName.CausesValidationChanged += new System.EventHandler(this.Form1_Load);
             this.VillageName.Click += new System.EventHandler(this.label1_Click);
@@ -181,7 +180,6 @@
             this.NationName.Name = "NationName";
             this.NationName.Size = new System.Drawing.Size(196, 25);
             this.NationName.TabIndex = 5;
-            this.NationName.Text = "nation name";
             this.NationName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NationName.Click += new System.EventHandler(this.label1_Click);
             // 
