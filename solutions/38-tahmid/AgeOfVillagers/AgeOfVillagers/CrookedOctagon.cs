@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class CrookedOctagon : Shape
+    class CrookedOctagon : BasicShapes
     {
         Graphics graphics;
         Pen pen;
         Point startingPoint;
         int unitHeight, unitWidth;
-        Shape topLeftLine, topMidLeftLine, topMidRightLine, topRightLine, bottomLeftLine, bottomMidLeftLine, bottomMidRightLine, bottomRightLine,topMidLine,topEndLine,bottomEndLine;
+        BasicShapes topLeftLine, topMidLeftLine, topMidRightLine, topRightLine, bottomLeftLine, bottomMidLeftLine, bottomMidRightLine, bottomRightLine,topMidLine,topEndLine,bottomEndLine;
         Point topLeftPoint, topMidLeftPoint, topMidRightPoint,  bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint,endPoint,topMidPoint;
 
         public CrookedOctagon(Graphics graphics,Pen pen,Point startingPoint,int unitHeight,int uintWidth)

@@ -13,7 +13,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
         Pen pen;
         Point point;
         int length, width;
-        ShapeFactory shapeFactory;
+        BasicShapeFactory shapeFactory;
         public BangladeshiWaterSource(Graphics g, Pen pen, Point point, int length, int width)
         {
             this.pen = pen;
@@ -21,7 +21,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
             this.width = width;
             this.g = g;
             this.point = point;
-            shapeFactory = new ShapeFactory();
+            shapeFactory = new BasicShapeFactory();
         }
         public void placeItem()
         {

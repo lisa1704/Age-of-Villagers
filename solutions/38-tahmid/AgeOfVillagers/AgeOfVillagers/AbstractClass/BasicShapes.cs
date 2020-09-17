@@ -1,11 +1,12 @@
-﻿using System;
+﻿using AgeOfVillagers.Interface;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers.AbstractClass
 {
-    abstract class BasicShapes
+    abstract class BasicShapes : Shapes
     {
         public abstract void drawShape();
 
@@ -25,6 +26,9 @@ namespace AgeOfVillagers.AbstractClass
             return new Arc(g,pen,point,startAng,endAng,lenght,width);
         }
 
-        internal abstract void makeShape();
+        
+
+        public abstract void makeShape();
+        
     }
 }

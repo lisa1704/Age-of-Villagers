@@ -33,7 +33,7 @@ namespace AgeOfVillagers
 
        
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             drawShape();
         }

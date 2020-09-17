@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class ShapeFactory
+    class BasicShapeFactory
     {
         public BasicShapes GetShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
         {

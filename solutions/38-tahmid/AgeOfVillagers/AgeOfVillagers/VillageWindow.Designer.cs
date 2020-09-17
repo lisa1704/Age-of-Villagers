@@ -34,7 +34,7 @@
             this.Tree = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.village_name = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Nation_Name = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -115,16 +115,16 @@
             this.village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.village_name.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label3
+            // Nation_Name
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(639, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Bangladeshi Farmer";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+            this.Nation_Name.AutoSize = true;
+            this.Nation_Name.Location = new System.Drawing.Point(671, 60);
+            this.Nation_Name.Name = "Nation_Name";
+            this.Nation_Name.Size = new System.Drawing.Size(43, 15);
+            this.Nation_Name.TabIndex = 1;
+            this.Nation_Name.Text = "Nation";
+            this.Nation_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nation_Name.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -185,7 +185,6 @@
             this.BD.TabStop = true;
             this.BD.Text = "Bangladeshi Farmers";
             this.BD.UseVisualStyleBackColor = true;
-            
             this.BD.Click += new System.EventHandler(this.Click_Bangladeshi_Farmers);
             // 
             // Hunters
@@ -198,7 +197,6 @@
             this.Hunters.TabStop = true;
             this.Hunters.Text = "Inuit Hunters";
             this.Hunters.UseVisualStyleBackColor = true;
-            
             this.Hunters.Click += new System.EventHandler(this.Click_Inuit_Hunters);
             // 
             // Egyptians
@@ -211,7 +209,6 @@
             this.Egyptians.TabStop = true;
             this.Egyptians.Text = "Egyptian Kings";
             this.Egyptians.UseVisualStyleBackColor = true;
-            
             this.Egyptians.Click += new System.EventHandler(this.Click_Egyptian_Kings);
             // 
             // Arabians
@@ -224,7 +221,6 @@
             this.Arabians.TabStop = true;
             this.Arabians.Text = "Arab Bedouin";
             this.Arabians.UseVisualStyleBackColor = true;
-            
             this.Arabians.Click += new System.EventHandler(this.Click_Arab_Bedouin);
             // 
             // groupBox1
@@ -288,7 +284,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Nation_Name);
             this.Controls.Add(this.village_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.drawing_panel);
@@ -311,7 +307,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label village_name;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Nation_Name;
         
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

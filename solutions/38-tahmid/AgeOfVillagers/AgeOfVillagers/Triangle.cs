@@ -30,7 +30,7 @@ namespace AgeOfVillagers
             baseLine.drawShape();
         }
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             right = new Point(start.X + base_length, start.Y);
             top = new Point(start.X + (base_length / 2), start.Y - height);

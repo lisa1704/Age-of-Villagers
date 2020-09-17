@@ -32,7 +32,7 @@ namespace AgeOfVillagers
         }
       
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             topRight = new Point(start.X + width, start.Y);
             bottomLeft = new Point(start.X, start.Y + height);

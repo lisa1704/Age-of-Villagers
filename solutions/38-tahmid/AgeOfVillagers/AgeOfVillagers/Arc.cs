@@ -30,7 +30,7 @@ namespace AgeOfVillagers
             g.DrawArc(p, start.X, start.Y, width,lenght, startAng,endAng);
         }
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             drawShape();
         }

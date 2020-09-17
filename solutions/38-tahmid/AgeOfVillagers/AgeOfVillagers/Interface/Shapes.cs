@@ -6,5 +6,6 @@ namespace AgeOfVillagers.Interface
 {
     interface Shapes
     {
+        public void makeShape();
     }
 }

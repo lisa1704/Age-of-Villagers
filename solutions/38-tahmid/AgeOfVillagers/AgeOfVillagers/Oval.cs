@@ -32,7 +32,7 @@ namespace AgeOfVillagers
             arc.drawShape();
         }
 
-        internal override void makeShape()
+        public override void makeShape()
         {
             arc = getArcs(g, pen, startingPoint, startAng, endAng, length, width);
             drawShape();
