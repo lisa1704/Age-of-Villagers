@@ -18,9 +18,10 @@ namespace AgeOfVillagers.Environment_extending_Classes
         private Graphics graphics;
         private string selectedNation;
 
-        public InuitEnvironment(Label nation_Name, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation, RadioButton tree, RadioButton house, RadioButton waterSource, Graphics graphics, string selectedNation)
+        public InuitEnvironment(Label nation_Name, RadioButton firstNation, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation, RadioButton tree, RadioButton house, RadioButton waterSource, Graphics graphics, string selectedNation)
         {
             this.nation_Name = nation_Name;
+            this.firstNation = firstNation;
             this.secondNation = secondNation;
             this.thirdNation = thirdNation;
             this.fourthNation = fourthNation;
