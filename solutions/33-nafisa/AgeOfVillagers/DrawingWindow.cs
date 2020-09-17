@@ -23,6 +23,7 @@ namespace AgeOfVillagers
         private void DrawingWindow_Load(object sender, EventArgs e)
         {
             label2.Text = Form1.VillageName;
+            label3.Text = Form1.NationName;
         }
 
         private void TreeButton_CheckedChanged(object sender, EventArgs e)
