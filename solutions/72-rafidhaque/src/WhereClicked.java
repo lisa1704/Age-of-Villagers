@@ -1,23 +1,16 @@
-import java.awt.event.MouseEvent;
+import javax.swing.*;
+import java.awt.event.MouseListener;
 
 public class WhereClicked {
-    MouseEvent e;
+    int x, y;
+    JPanel p;
+    MouseListener mouseListener;
 
-    public WhereClicked(MouseEvent e, int x, int y) {
-        this.e = e;
-        x = mouseClickedx();
-        y = mouseClickedy();
+    public WhereClicked(JPanel p, MouseListener mouseListener) {
+        this.p = p;
+        this.mouseListener = mouseListener;
     }
 
-    public int mouseClickedx() {
-        int x=this.e.getX();
-        return x;
-    }
-
-    public int mouseClickedy() {
-        int y=this.e.getY();
-        return y;
-    }
 
 
 }

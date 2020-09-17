@@ -9,6 +9,25 @@ public class VillageWindow extends JPanel {
     private String nationName;
     private JFrame f = new JFrame("Title");
     private JPanel p = new JPanel();
+    int mouseX;
+    int mouseY;
+
+
+    public int getMouseX() {
+        return mouseX;
+    }
+
+    public void setMouseX(int mouseX) {
+        this.mouseX = mouseX;
+    }
+
+    public int getMouseY() {
+        return mouseY;
+    }
+
+    public void setMouseY(int mouseY) {
+        this.mouseY = mouseY;
+    }
 
 
     public VillageWindow(String villageName, String nationName) {
@@ -67,34 +86,36 @@ public class VillageWindow extends JPanel {
         g.drawLine(800, 0, 800, 400);
         g.drawLine(0, 400, 800, 400);
 
+
+
         p.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                int x=e.getX();
-                int y=e.getY();
-                System.out.println(x+","+y);
-            }
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    whenClicked(e);
+                }
 
-            @Override
-            public void mousePressed(MouseEvent e) {
+                @Override
+                public void mousePressed(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseReleased(MouseEvent e) {
+                @Override
+                public void mouseReleased(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
+                @Override
+                public void mouseEntered(MouseEvent e) {
 
-            }
+                }
 
-            @Override
-            public void mouseExited(MouseEvent e) {
+                @Override
+                public void mouseExited(MouseEvent e) {
 
             }
         });
+
+
     }
 
     public void showWindow() {
@@ -106,6 +127,11 @@ public class VillageWindow extends JPanel {
         f.setVisible(true);
     }
 
+    public void whenClicked(MouseEvent e) {
+        int x=e.getX();
+        int y=e.getY();
+        System.out.println(x+","+y);
+    }
 
 
 }
