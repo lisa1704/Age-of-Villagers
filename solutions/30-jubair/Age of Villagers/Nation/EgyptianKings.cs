@@ -25,7 +25,7 @@ namespace Age_of_Villagers.Nation
         public Color getTerrainColor()
         {
 
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
 
         public void GetHouse(Graphics graphics, Point _point)
