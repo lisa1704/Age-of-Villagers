@@ -40,8 +40,10 @@ namespace AgeOfVillager
             else if (radioButton2.Checked)
             {
                 //EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
-                BDFarmersHouse bdh = new BDFarmersHouse(g);
-                bdh.draw(e);
+                //BDFarmersHouse bdh = new BDFarmersHouse(g);
+                //bdh.draw(e);
+                ArabBedouinsHouse abh = new ArabBedouinsHouse(g);
+                abh.draw(e);
             }
             //water source
             else if (radioButton3.Checked)
