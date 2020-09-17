@@ -7,25 +7,31 @@ using System.Text;
 
 namespace AgeOfVillagers.IItem_implementing_Classes
 {
-    class BangladeshiWaterSource : IItem
+    class BangladeshiShapedWaterSource : Shapes
     {
         Graphics g;
         Pen pen;
         Point point;
         int length, width;
-        BasicShapeFactory shapeFactory;
-        public BangladeshiWaterSource(Graphics g, Pen pen, Point point, int length, int width)
+        BasicShapeFactory basicShapeFactory;
+        public BangladeshiShapedWaterSource(Graphics g, Pen pen, Point point, int length, int width)
         {
             this.pen = pen;
             this.length = length;
             this.width = width;
             this.g = g;
             this.point = point;
-            shapeFactory = new BasicShapeFactory();
+            basicShapeFactory = new BasicShapeFactory();
         }
+
+        public void makeShape()
+        {
+            throw new NotImplementedException();
+        }
+
         public void placeItem()
         {
-            BasicShapes nonagon = shapeFactory.GetShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
+            BasicShapes nonagon = basicShapeFactory.GetShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
     }
