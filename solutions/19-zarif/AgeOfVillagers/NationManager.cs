@@ -23,10 +23,21 @@ namespace AgeOfVillagers
 
                 return new BangladeshiFarmers();
             }
-            else
+            else if (_nationtype.Equals("Arab Bedouin"))
             {
 
                 return new ArabBedouin();
+            }
+
+            else if (_nationtype.Equals("Egyptian Kings"))
+            {
+                return new EgyptianKings();
+
+            }
+
+            else
+            {
+                throw new Exception();
             }
 
         }
