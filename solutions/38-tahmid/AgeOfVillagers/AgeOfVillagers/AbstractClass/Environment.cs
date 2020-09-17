@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.Interface
+namespace AgeOfVillagers.AbstractClass
 {
-    interface IEnvironment
+    abstract class Environment
     {
+
     }
 }

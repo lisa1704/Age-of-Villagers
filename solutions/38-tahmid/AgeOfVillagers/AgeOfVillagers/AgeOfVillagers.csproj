@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IEnvironment Implementing Classes\" />
+    <Folder Include="Environment extending Classes\" />
   </ItemGroup>
 
 </Project>

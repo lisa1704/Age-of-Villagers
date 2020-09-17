@@ -123,7 +123,9 @@ namespace AgeOfVillagers
 
         private void Click_Bangladeshi_Farmers(object sender, EventArgs e)
         {
-
+            string s = "Red";
+            SolidBrush sb = new SolidBrush(Color.Red);
+            g.FillRectangle(sb,0,0,600,400);
         }
 
         private void Click_Inuit_Hunters(object sender, EventArgs e)
