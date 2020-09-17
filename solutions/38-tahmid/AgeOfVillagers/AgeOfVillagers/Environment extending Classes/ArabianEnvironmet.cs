@@ -43,7 +43,8 @@ namespace AgeOfVillagers.Environment_extending_Classes
 
         public override void setTerrainColor()
         {
-            
+            SolidBrush sb = new SolidBrush(Constants.ARABIAN_COLOR);
+            graphics.FillRectangle(sb, Constants.PANEL_STARTING_POINT_X, Constants.PANEL_STARTING_POINT_y, Constants.PANEL_HEIGHT, Constants.PANEL_WIDTH);
         }
 
         public override void showNationName()

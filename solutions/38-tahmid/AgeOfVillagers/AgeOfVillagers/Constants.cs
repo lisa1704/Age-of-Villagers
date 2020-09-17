@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
@@ -51,14 +52,24 @@ namespace AgeOfVillagers
         public static string ARAB_NATION = "ARAB BEDOUIN";
         public static string EGYPT_NATION = "EGYPTIAN KING";
         public static string INUIT_NATION = "Inuit Hunters";
+        public static string DEFAULT_NATION = "Default Nation";
 
         //Shape hints
         public static string BDTREE_HINT = "Bangladeshi_Farmer" + "TREE";
         public static string BDWATERSOURCE_HINT = "Bangladeshi_Farmer" + "WATER SOURCE";
 
-        //Default Nation
+        //Panel Size
+        public static int PANEL_HEIGHT = 600;
+        public static int PANEL_WIDTH = 400;
+        public static int PANEL_STARTING_POINT_X = 0;
+        public static int PANEL_STARTING_POINT_y = 0;
 
-        public static string DEFAULT_NATION = "Default Nation";
+        //Color
+        public static Color BANGLADESHI_COLOR = Color.Green;
+        public static Color EGYPTIAN_COLOR = Color.Yellow;
+        public static Color INUIT_COLOR = Color.White;
+        public static Color ARABIAN_COLOR = Color.YellowGreen;
+        public static Color DEFAULT_COLOR = Color.YellowGreen;
 
     }
 }

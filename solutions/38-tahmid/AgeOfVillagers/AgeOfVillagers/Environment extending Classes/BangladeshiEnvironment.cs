@@ -47,8 +47,8 @@ namespace AgeOfVillagers.Environment_extending_Classes
 
         public override void setTerrainColor()
         {
-            SolidBrush sb = new SolidBrush(Color.Green);
-            graphics.FillRectangle(sb, 0, 0, 600, 400);
+            SolidBrush sb = new SolidBrush(Constants.INUIT_COLOR);
+            graphics.FillRectangle(sb, Constants.PANEL_STARTING_POINT_X, Constants.PANEL_STARTING_POINT_y, Constants.PANEL_HEIGHT, Constants.PANEL_WIDTH);
         }
     }
 }
