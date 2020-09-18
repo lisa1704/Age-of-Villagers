@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers
+namespace AgeOfVillagers.InuitHunters
+
 {
     class InuitHunters
     {

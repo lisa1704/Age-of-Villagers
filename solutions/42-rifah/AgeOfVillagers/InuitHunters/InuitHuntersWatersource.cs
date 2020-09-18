@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.Arab_Bedouin
+namespace AgeOfVillagers.InuitHunters
 {
-    class ArabBedouin
+    class InuitHuntersWatersource
     {
     }
 }

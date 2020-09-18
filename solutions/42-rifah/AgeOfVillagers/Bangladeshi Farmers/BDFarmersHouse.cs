@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace AgeOfVillagers
+namespace AgeOfVillagers.Bangladeshi_Farmers
 {
     class BDFarmersHouse : Composite
     {
