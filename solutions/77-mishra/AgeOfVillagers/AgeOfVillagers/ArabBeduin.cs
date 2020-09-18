@@ -6,9 +6,15 @@ namespace AgeOfVillagers
 {
 	public class ArabBeduin : INation
 	{
+        string name;
 		public ArabBeduin()
 		{
-		}
+#pragma warning disable CS1717 // Assignment made to same variable
+            name = name;
+#pragma warning restore CS1717 // Assignment made to same variable
+
+
+        }
 
         public void DrawHouse(Point p, Panel drawingBoard)
         {
