@@ -8,5 +8,9 @@ namespace empty_project
 {
     class InuitHuntersTree : ITree
     {
+        public void drawTree(Axis axis, Panel panel)
+        {
+            //No Tree
+        }
     }
 }
