@@ -25,6 +25,11 @@ namespace AgeOfVillagers
             Point p = new Point(e.X, e.Y);
             x = p.X;
             y = p.Y;
+
+            if (tree_changed.Checked == true)
+            {
+                
+            }
             
         }
         private void drawingBoard_Paint(object sender, PaintEventArgs e)
