@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.VillageViewController">
    <children>
       <Pane fx:id="DrawPane" prefHeight="400.0" prefWidth="600.0" />
@@ -53,12 +53,12 @@
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button layoutX="64.0" layoutY="295.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #7c7d80;" text="Save Village" textFill="WHITE">
+            <Button fx:id="SaveVillageButton" layoutX="64.0" layoutY="295.0" mnemonicParsing="false" onAction="#SaveVillage" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #7c7d80;" text="Save Village" textFill="WHITE">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <ChoiceBox fx:id="NationDropDown" value="Nation" layoutX="32.0" layoutY="110.0" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: White" >
+            <ChoiceBox fx:id="NationDropDown" layoutX="32.0" layoutY="110.0" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: White" value="Nation">
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <String fx:value="Bangladeshi Farmers" />
