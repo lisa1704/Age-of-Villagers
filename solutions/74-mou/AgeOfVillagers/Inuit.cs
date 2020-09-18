@@ -6,6 +6,7 @@ namespace AgeOfVillagers
 {
     class Inuit : INation
     {
+
         void draw_house()
         {
 
