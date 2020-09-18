@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmers : Nations
+    class BangladeshiFarmers : INation
     {
         private string item;
 

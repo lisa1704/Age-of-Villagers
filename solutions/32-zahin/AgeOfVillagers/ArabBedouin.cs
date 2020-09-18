@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouin : Nations
+    class ArabBedouin : INation
     {
         private string item;
 
@@ -27,7 +27,9 @@ namespace AgeOfVillagers
         }
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            //NullValuesHandler nullArab = new NullValuesHandler();
+            //nullArab.execute();
+            System.Windows.Forms.MessageBox.Show("Invalid!!");
         }
     }
 }
