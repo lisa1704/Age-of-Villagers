@@ -121,7 +121,7 @@ namespace age_of_villagers
         private void OpenVillage_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            if(open.ShowDialog()==DialogResult.OK)
+            if (open.ShowDialog() == DialogResult.OK)
             {
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
 
