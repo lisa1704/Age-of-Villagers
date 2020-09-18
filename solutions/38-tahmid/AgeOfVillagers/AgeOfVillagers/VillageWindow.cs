@@ -27,6 +27,9 @@ namespace AgeOfVillagers
         EnvironmentFactory environmentFactory;
         Environment environment;
 
+        IElementDisplay villageName, villageItem;
+        ElementDisplayFactoryClass stateElementsFactory;
+
        
         public VillageWindow()
         {
@@ -37,6 +40,7 @@ namespace AgeOfVillagers
             shapeFactory = new ShapeFactory();
             itemFactory = new ItemFactory();
             environmentFactory = new EnvironmentFactory();
+            stateElementsFactory = new ElementDisplayFactoryClass();
 
         }
 
@@ -57,6 +61,7 @@ namespace AgeOfVillagers
         Dummy pr = new Dummy();
         private void New_Village(object sender, EventArgs e)
         {
+            
             Regex pattern = new Regex(@"^[a-zA-Z]+$");
 
             string sVillageName = tbVillageName.Text;
@@ -75,9 +80,11 @@ namespace AgeOfVillagers
             GameControlCommand onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
-           
-            
-           
+            villageName = stateElementsFactory.GetStateElements(Constants.VILLAGE_NAME_ELEMENT_HINT, tbVillageName, sVillageName)
+
+
+
+
 
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Interface
 {
-    interface IStateElements
+    interface IElementDisplay
     {
         public void displayElements();
     }

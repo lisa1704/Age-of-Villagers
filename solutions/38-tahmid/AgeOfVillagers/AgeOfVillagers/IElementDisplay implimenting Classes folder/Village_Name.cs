@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.IStateElements_implimentinf_folder
 {
-    class Village_Name : IStateElements
+    class Village_Name : IElementDisplay
     {
         private Label villageNameLabel;
         private string villageName;
