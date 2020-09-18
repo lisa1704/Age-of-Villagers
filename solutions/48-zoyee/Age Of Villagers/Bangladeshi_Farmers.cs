@@ -17,10 +17,11 @@ namespace AgeOfVillagers
         }
         public void Draw_House(Graphics g, Point point)
         {
-            System.Drawing.Rectangle rec = new System.Drawing.Rectangle(new Point(point.X, point.Y), (Size)new Point(point.X + 15, point.Y + 25));
-            rec.Draw(g);
-            System.Drawing.Triangle triangle = new System.Drawing.Triangle(new Point(point.X - 5, point.Y + 10), new Point(point.X, point.Y), new Point(point.X + 15, point.Y));
-            Triangle.Draw(g);
+            //System.Drawing.Rectangle rec = new System.Drawing.Rectangle(new Point(point.X, point.Y), (Size)new Point(point.X + 15, point.Y + 25));
+            //rec.Draw(g);
+            //System.Drawing.Triangle triangle = new System.Drawing.Triangle(new Point(point.X - 5, point.Y + 10), new Point(point.X, point.Y), new Point(point.X + 15, point.Y));
+            //Triangle.Draw(g);
+            BagladeshiFarmer_House bdhouse = new BagladeshiFarmer_House(new Point(point.X, point.Y), new Point(point.X - 50, point.Y * 10), new Point(point.X + 100, point.Y * 10));
         }
         public void Draw_WaterSource(Graphics g, Point point)
         {
