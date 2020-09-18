@@ -11,7 +11,7 @@ namespace AgeOfVillagers.Model_Class_Folder
         
 
         public string VillageName { get; set; }
-        public List<IItem> itemList { get; set; }
+        public List<IItem> ItemList { get; set; }
 
 
     }
