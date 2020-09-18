@@ -54,7 +54,7 @@
     <Compile Include="ArabTree.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
-    <Compile Include="BDWaterSource.cs" />
+    <Compile Include="BangladeshiWaterSource.cs" />
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="IStatesVillage.cs" />
     <Compile Include="INations.cs" />
