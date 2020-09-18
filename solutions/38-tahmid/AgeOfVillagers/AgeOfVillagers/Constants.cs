@@ -74,5 +74,11 @@ namespace AgeOfVillagers
         public static Color ARABIAN_COLOR = Color.LightYellow;
         public static Color DEFAULT_COLOR = Color.White;
 
+        //Key Hints
+        public static string NEW_KEY = "New";
+        public static string OPEN_KEY = "Open";
+        public static string SAVE_KEY = "Save";
+
+
     }
 }
