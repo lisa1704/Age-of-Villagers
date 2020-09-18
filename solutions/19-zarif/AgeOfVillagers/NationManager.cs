@@ -19,7 +19,7 @@ namespace AgeOfVillagers
         {
             if (_nationtype.Equals("Bangladeshi Farmers"))
             {
-                _Drawpanel.BackColor = System.Drawing.Color.Red;
+                
 
                 return new BangladeshiFarmers();
             }

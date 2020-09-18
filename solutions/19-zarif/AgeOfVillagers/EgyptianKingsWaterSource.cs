@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         public EgyptianKingsWaterSource(Point point)
         {
-            addShape(new BaseCircle(point, 24, 24));
+            addShape(new BaseCircle(point, 12, 12));
         }
     }
 }
