@@ -16,7 +16,8 @@ namespace AgeOfVillager
 
         public void drawHouse(MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            ArabBedouinsHouse arabBedouinsHouse = new ArabBedouinsHouse(g);
+            arabBedouinsHouse.draw(e);
         }
 
         public void drawTree(MouseEventArgs e)
