@@ -16,6 +16,14 @@ namespace AgeOfVillageTest
             Color t = Color.LightGreen;
             Assert.AreEqual(s, t);
         }
-      
+        [TestMethod]
+        public void TestArabBackColor()
+        {
+            ArabBedouin ArabColor = new ArabBedouin();
+            Color s = ArabColor.GetTerrainColor();
+            Color t = Color.PaleGoldenrod;
+            Assert.AreEqual(s, t);
+        }
+
     }
 }
