@@ -12,13 +12,12 @@ namespace AgeOfVillagers90
     {
         public BangladeshFarmersTree(Point MainPoint)
         {
-            Point TopRight = new Point(MainPoint.X + 100, MainPoint.Y);
-            Point BottomRight = new Point(MainPoint.X + 30, MainPoint.Y+150);
-            Point TopPoint = new Point(MainPoint.X + 100, MainPoint.Y+90);
-            Point TopLeft = new Point(MainPoint.X + 20, MainPoint.Y+20);
+            Point rootPoint = new Point(MainPoint.X + 3, MainPoint.Y + 16);
+            Point TopPoint1 = new Point(MainPoint.X - 8, MainPoint.Y - 10);
+            Point TopPoint2 = new Point(MainPoint.X + 8, MainPoint.Y + 8);
 
-            AddComponent(new Rectangle(TopLeft, BottomRight));
-            AddComponent(new ShapeEllipse(MainPoint, TopPoint));
+            AddComponent(new Rectangle(MainPoint, rootPoint));
+            AddComponent(new ShapeEllipse(TopPoint1, TopPoint2));
         }
     }
 }

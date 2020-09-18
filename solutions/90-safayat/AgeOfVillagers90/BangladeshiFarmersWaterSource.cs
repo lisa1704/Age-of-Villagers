@@ -23,7 +23,7 @@ namespace AgeOfVillagers90
             AddComponent(new Line(point5, point6));
             AddComponent(new Line(point6, point7));
             AddComponent(new Line(point7, point8));
-           AddComponent(new Line(point8, mainPoint));
+            AddComponent(new Line(point8, mainPoint));
         }
     }
 }
