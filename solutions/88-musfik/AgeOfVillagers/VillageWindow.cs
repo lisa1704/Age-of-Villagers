@@ -34,7 +34,7 @@ namespace AgeOfVillagers
 
             nationlist.Add(new BangladeshiFarmers());
             nationlist.Add(new ArabBedouin());
-            nationlist.Add(new EgyptianKings());
+            nationlist.Add(new EgyptianKings());    
             nationlist.Add(new InuitHunters());
 
             BindingSource bindingSource = new BindingSource();

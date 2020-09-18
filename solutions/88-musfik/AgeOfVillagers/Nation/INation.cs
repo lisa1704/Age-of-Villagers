@@ -8,8 +8,8 @@ namespace AgeOfVillagers
         string nationName { get; set; }
         Color getTerrainColor();
         string getNationName();
-        Object getTree(Point point);
-        Object getHouse(Point point);
-        Object getWaterResource(Point point);
+        Tree getTree(Point point);
+        House getHouse(Point point);
+        WaterResource getWaterResource(Point point);
     }
 }

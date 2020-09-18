@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,12 @@ namespace AgeOfVillagers
     {
         private string villageName;
         private INation nation;
-        private List<Object> Houses, Trees, waterResources;
+        private List<IVillageItem> village_items;
         public Village(string villageName, INation nation)
         {
             this.villageName = villageName;
             this.nation = nation;
-            Trees = new List<Object>();
-            Houses = new List<Object>();
-            waterResources = new List<Object>();
+            village_items = new List<IVillageItem>();
         }
 
         public string GetVillageName()
@@ -29,5 +28,7 @@ namespace AgeOfVillagers
         {
             villageName = value;
         }
+
+
     }
 }
