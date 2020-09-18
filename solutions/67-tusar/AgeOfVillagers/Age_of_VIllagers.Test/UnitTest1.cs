@@ -9,7 +9,7 @@ namespace Age_of_VIllagers.Test
         [TestMethod]
         public void InitialTest()
         {
-            Assert.AreEqual(2, 2);
+            
         }
     }
 }
