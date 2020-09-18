@@ -22,7 +22,8 @@ namespace AgeOfVillagers
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            BangladeshiTree tree = new BangladeshiTree(Drawingpanel);
+            tree.Draw(point, Drawingpanel);
         }
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)

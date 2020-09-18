@@ -62,21 +62,21 @@ namespace AgeOfVillagers
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
-            BangladeshiFarmers bdhouse = new BangladeshiFarmers(Drawingpanel);
-            TreeShape tree = new TreeShape(Drawingpanel);
+            BangladeshiFarmers bd = new BangladeshiFarmers(Drawingpanel);
+            
             WaterSourceShape wsource = new WaterSourceShape(Drawingpanel);
 
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
             {
-                bdhouse.DrawHouse(P, Drawingpanel);
+                bd.DrawHouse(P, Drawingpanel);
 
             }
             if (radioButton1.Checked == true)
             {
 
-                tree.Draw(P, Drawingpanel);
+                bd.DrawTree(P, Drawingpanel);
                 
             }
             if (radioButton3.Checked == true)

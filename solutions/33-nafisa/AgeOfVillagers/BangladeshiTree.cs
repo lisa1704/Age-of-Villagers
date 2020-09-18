@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class TreeShape : IShape
+    class BangladeshiTree : IShape
     {
         private Panel Drawingpanel;
-        public TreeShape(Panel Drawingpanel)
+        public BangladeshiTree(Panel Drawingpanel)
         {
             this.Drawingpanel = Drawingpanel;
         }
