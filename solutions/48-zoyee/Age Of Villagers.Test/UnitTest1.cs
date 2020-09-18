@@ -1,5 +1,7 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Xunit;
+using Age_Of_Villagers;
 
 namespace Age_Of_Villagers.Test
 {
@@ -8,7 +10,17 @@ namespace Age_Of_Villagers.Test
         [Fact]
         public void Test1()
         {
-            Assert.Equal(2, 2);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(2, 2);
+        }
+    }
+    public class UnitTest2
+    {
+        [TestMethod]
+        public void TestMethod1()
+        {
+            Bangladeshi_Farmers bdfarmerTest = new Bangladeshi_Farmers();
+            string s = bdfarmerTest.BangladeshiFarmerTest();
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual("Bangladeshi", s);
         }
     }
 }
