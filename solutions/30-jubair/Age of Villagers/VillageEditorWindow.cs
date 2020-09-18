@@ -35,7 +35,7 @@ namespace Age_of_Villagers
 
         NationFactoryApplication nationFactory = new NationFactoryApplication();
         INation iNation;
-        VillageState newVillage;
+        VillageEdit newVillageEdit;
         VillageSave villageSave;
         VillageOpen villageOpen;
         
@@ -48,9 +48,9 @@ namespace Age_of_Villagers
         public VillageEditorWindow()
         {
             InitializeComponent();
-            newVillage = new VillageState(CreateNewVillageForm.village_naaam);
-            villageSave = new VillageSave(newVillage);
-            villageOpen = new VillageOpen(newVillage);
+            newVillageEdit = new VillageEdit(CreateNewVillageForm.village_naaam);
+            villageSave = new VillageSave(newVillageEdit);
+            villageOpen = new VillageOpen(newVillageEdit);
 
         }
 
@@ -166,18 +166,18 @@ namespace Age_of_Villagers
             if (radioButton_tree.Checked)
             {
                 iNation.GetTree(graphics, e.Location);
-                newVillage.AddTree(graphics,e.Location,iNation);
+                newVillageEdit.AddTree(graphics,e.Location,iNation);
 
             }
             else if (radioButton_house.Checked)
             { 
                 iNation.GetHouse(graphics, e.Location);
-                newVillage.AddHouse(graphics, e.Location, iNation);
+                newVillageEdit.AddHouse(graphics, e.Location, iNation);
             }
             else if (radioButton_water.Checked)
             {  
                 iNation.GetWaterResource(graphics, e.Location);
-                newVillage.AddWaterResource(graphics, e.Location, iNation);
+                newVillageEdit.AddWaterResource(graphics, e.Location, iNation);
             }
         }
 
@@ -207,19 +207,21 @@ namespace Age_of_Villagers
             
             nation_type = nationList.Text;
             //drawing_space.BackColor = iNation.getTerrainColor();
-            //newVillage.repaint(graphics,iNation);
+            //newVillageEdit.ReDrawVillage(graphics,iNation);
 
         }
 
         private void button_save_Click(object sender, EventArgs e)
         {
             
-            this.villageSave.SaveVillage(newVillage);
+            this.villageSave.SaveVillage(newVillageEdit);
         }
 
         private void button_open_Click(object sender, EventArgs e)
         {
-            newVillage = villageOpen.ReformVillage();
+            newVillageEdit = villageOpen.ReformVillage();
+            Refresh();
+            newVillageEdit.ReDrawVillage(graphics, iNation);
         }
 
         private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly

@@ -11,19 +11,19 @@ namespace Age_of_Villagers.Village_Saving
     {
 
         OpenFileDialog ofd = new OpenFileDialog();
-        VillageState newVillageState;
+        VillageEdit newVillageEdit;
         string fileName;
         string json;
 
-        public VillageOpen(VillageState villageState)
+        public VillageOpen(VillageEdit villageEdit)
         {
-            newVillageState = villageState;
+            newVillageEdit = villageEdit;
         }
         public void ExecuteCommand()
         {
         }
 
-        public VillageState ReformVillage()
+        public VillageEdit ReformVillage()
         {
             ofd.Filter = ".aov|*.aov";
             ofd.Title = "Open an AOV File";
@@ -36,7 +36,7 @@ namespace Age_of_Villagers.Village_Saving
             StreamReader stream_reader = new StreamReader(stream);
             json = stream_reader.ReadLine();
             stream_reader.Close();
-            return JsonConvert.DeserializeObject<VillageState>(json);
+            return JsonConvert.DeserializeObject<VillageEdit>(json);
         }
 
     }
