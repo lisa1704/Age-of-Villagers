@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class ArabWaterSource : AbstractWaterSource
+    class ArabWaterSource : WaterSource
     {
     }
 }
