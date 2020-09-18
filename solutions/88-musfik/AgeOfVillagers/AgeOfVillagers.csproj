@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Shape\CompositeShapes\NoShape.cs" />
+    <Compile Include="VillageItem\House.cs" />
     <Compile Include="VillageItem\IVillageItem.cs" />
     <Compile Include="Nation\ArabBedouin.cs" />
     <Compile Include="Shape\HouseShapes\InuitHuntersHouseShape.cs" />
@@ -67,6 +69,8 @@
     <Compile Include="Shape\CompositeShapes\Rectangle.cs" />
     <Compile Include="Shape\CompositeShapes\VShape.cs" />
     <Compile Include="Village.cs" />
+    <Compile Include="VillageItem\Tree.cs" />
+    <Compile Include="VillageItem\WaterResource.cs" />
     <Compile Include="VillageWindow.cs">
       <SubType>Form</SubType>
     </Compile>
