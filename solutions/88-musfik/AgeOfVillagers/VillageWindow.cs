@@ -13,13 +13,34 @@ namespace AgeOfVillagers
     public partial class VillageWindow : Form
     {
         List<INation> nationlist = new List<INation>();
+        INation nation = null;
         Graphics g;
         public Pen p; 
-        string text = null;
+        string villageName = null;
+        string selectedItem = null;
 
         public VillageWindow()
         {
             InitializeComponent();
+        }
+
+        private void VillageWindow_Load(object sender, EventArgs e)
+        {
+            nation = null;
+            villageName = null;
+            selectedItem = null;
+            g = drawing_space.CreateGraphics();
+            p = new Pen(Color.Black);
+
+            nationlist.Add(new BangladeshiFarmers());
+            nationlist.Add(new ArabBedouin());
+            nationlist.Add(new EgyptianKings());
+            nationlist.Add(new InuitHunters());
+
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = nationlist;
+            NationlistBox.DataSource = nationlist;
+            NationlistBox.DisplayMember = "nationName";
         }
 
         private void drawing_space_Paint(object sender, PaintEventArgs e)
@@ -35,48 +56,47 @@ namespace AgeOfVillagers
             //Point point2 = new Point(e.X+30, e.Y+60);
 
             Point point = new Point(e.X, e.Y);
-            IShape bShape = new BangladeshiWaterSourceShape(new Point(point.X+20, point.Y));
-            IShape aShape = new ArabTreeShape(new Point(point.X - 20, point.Y));
-            IShape iShape = new EgyptianWaterSourceShape(point);
+            //IShape aShape = new ArabTreeShape(new Point(point.X - 20, point.Y));
+            //IShape iShape = new EgyptianWaterSourceShape(point);
 
-            bShape.Draw(g, p);
-            aShape.Draw(g, p);
+            //bShape.Draw(g, p);
+            //aShape.Draw(g, p);
             //iShape.Draw(g, p);
 
 
         }
 
-        private void VillageWindow_Load(object sender, EventArgs e)
-        {
-            g = drawing_space.CreateGraphics();
-            p = new Pen(Color.Black);
-
-            nationlist.Add(new BangladeshiFarmers());
-            nationlist.Add(new ArabBedouin());
-            nationlist.Add(new EgyptianKings());
-            nationlist.Add(new InuitHunters());
-
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = nationlist;
-            NationlistBox.DataSource = nationlist;
-            NationlistBox.DisplayMember = "nationName";
-        }
-
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
         {
             TextBox objTextBox = (TextBox)sender;
-            text = objTextBox.Text;
+            villageName = objTextBox.Text;
         }
 
         private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            INation nation = (INation)NationlistBox.SelectedItem;
+            nation = (INation)NationlistBox.SelectedItem;
             Village_name_textBox.Text = nation.getNationName();
+        }
+
+        private void House_btn_CheckedChanged(object sender, EventArgs e)
+        {
+            selectedItem = House_btn.Text;
+            
+        }
+
+        private void tree_btn_CheckedChanged(object sender, EventArgs e)
+        {
+            selectedItem = tree_btn.Text;
+        }
+
+        private void water_btn_CheckedChanged(object sender, EventArgs e)
+        {
+            selectedItem = water_btn.Text;
         }
 
         private void new_village_btn_Click(object sender, EventArgs e)
         {
-
+            this.Refresh();
         }
 
         private void save_village_btn_Click(object sender, EventArgs e)
@@ -89,19 +109,5 @@ namespace AgeOfVillagers
 
         }
 
-        private void House_btn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tree_btn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void water_btn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
