@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using AgeOfVillagers.Shape.CompositeShapes;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
@@ -16,7 +17,41 @@ namespace AgeOfVillagers
         }
         public abstract CompositeShape getItemShape(Point point);
     }
-    
 
+    public class BangladeshiWaterResource : WaterResource
+    {
+        public BangladeshiWaterResource(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new BangladeshiWaterSourceShape(point);
+        }
+    }
+
+    public class EgyptianWaterResource : WaterResource
+    {
+        public EgyptianWaterResource(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new EgyptianWaterSourceShape(point);
+        }
+    }
+
+    public class NoWaterResource : WaterResource
+    {
+        public NoWaterResource(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new NoShape();
+        }
+    }
 
 }
