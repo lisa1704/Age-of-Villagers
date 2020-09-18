@@ -81,7 +81,14 @@ namespace Age_Of_Villagers
 
         private void Panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            Graphics graphics = Panel1.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+
+            radioButton_Click();
+            ItemFactory itemFactory = NationFactory.getNation(nation);
+            IVillageItem item = itemFactory.getItem(rdButton);
+            item.Draw(e.Location, graphics, pen);
+
 
 
 
