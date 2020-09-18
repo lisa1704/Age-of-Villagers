@@ -40,6 +40,7 @@ namespace AgeOfVillagers
             this.houseButton = new System.Windows.Forms.RadioButton();
             this.waterSourceButton = new System.Windows.Forms.RadioButton();
             this.NationName = new System.Windows.Forms.ComboBox();
+            this.VillageNametextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AgeOfVillagers
@@ -67,12 +68,12 @@ namespace AgeOfVillagers
             // villageName
             // 
             this.villageName.AutoSize = true;
-            this.villageName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.villageName.Location = new System.Drawing.Point(742, 59);
+            this.villageName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.villageName.Location = new System.Drawing.Point(721, 61);
             this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(99, 30);
+            this.villageName.Size = new System.Drawing.Size(128, 28);
             this.villageName.TabIndex = 2;
-            this.villageName.Text = "Katakhali";
+            this.villageName.Text = "Village Name";
             this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // saveVillagebutton
@@ -108,7 +109,7 @@ namespace AgeOfVillagers
             // treeButton
             // 
             this.treeButton.AutoSize = true;
-            this.treeButton.Location = new System.Drawing.Point(759, 168);
+            this.treeButton.Location = new System.Drawing.Point(759, 192);
             this.treeButton.Name = "treeButton";
             this.treeButton.Size = new System.Drawing.Size(58, 24);
             this.treeButton.TabIndex = 11;
@@ -120,7 +121,7 @@ namespace AgeOfVillagers
             // houseButton
             // 
             this.houseButton.AutoSize = true;
-            this.houseButton.Location = new System.Drawing.Point(759, 198);
+            this.houseButton.Location = new System.Drawing.Point(759, 222);
             this.houseButton.Name = "houseButton";
             this.houseButton.Size = new System.Drawing.Size(72, 24);
             this.houseButton.TabIndex = 12;
@@ -132,7 +133,7 @@ namespace AgeOfVillagers
             // waterSourceButton
             // 
             this.waterSourceButton.AutoSize = true;
-            this.waterSourceButton.Location = new System.Drawing.Point(759, 228);
+            this.waterSourceButton.Location = new System.Drawing.Point(759, 252);
             this.waterSourceButton.Name = "waterSourceButton";
             this.waterSourceButton.Size = new System.Drawing.Size(118, 24);
             this.waterSourceButton.TabIndex = 13;
@@ -144,14 +145,22 @@ namespace AgeOfVillagers
             // NationName
             // 
             this.NationName.FormattingEnabled = true;
-            this.NationName.Location = new System.Drawing.Point(689, 106);
+            this.NationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmers"});
+            this.NationName.Location = new System.Drawing.Point(689, 146);
             this.NationName.Name = "NationName";
             this.NationName.Size = new System.Drawing.Size(200, 28);
             this.NationName.TabIndex = 14;
             this.NationName.SelectedIndexChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
-            this.NationName.Items.AddRange(new object[] {
-            "Bangladeshi Farmers"
-             });
+            // 
+            // VillageNametextBox
+            // 
+            this.VillageNametextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageNametextBox.Location = new System.Drawing.Point(711, 92);
+            this.VillageNametextBox.Name = "VillageNametextBox";
+            this.VillageNametextBox.Size = new System.Drawing.Size(160, 30);
+            this.VillageNametextBox.TabIndex = 15;
+            this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
             // 
             // CreateNewVillage
             // 
@@ -159,6 +168,7 @@ namespace AgeOfVillagers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 411);
+            this.Controls.Add(this.VillageNametextBox);
             this.Controls.Add(this.NationName);
             this.Controls.Add(this.waterSourceButton);
             this.Controls.Add(this.houseButton);
@@ -195,6 +205,7 @@ namespace AgeOfVillagers
         private System.Windows.Forms.RadioButton houseButton;
         private System.Windows.Forms.RadioButton waterSourceButton;
         private System.Windows.Forms.ComboBox NationName;
+        private System.Windows.Forms.TextBox VillageNametextBox;
     }
 }
 
