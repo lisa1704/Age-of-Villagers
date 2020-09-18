@@ -23,7 +23,7 @@ namespace AgeOfVillagers
             public EgyptianTree(Point MPt)
             {               
                 Point L1topPt = new Point(MPt.X +25, MPt.Y - 50);
-                Point L2topPt = new Point(MPt.X - 25, MPt.Y - 50);
+                Point L2topPt = new Point(MPt.X - 25, MPt.Y - 45);
              
                 Point RTopLeft = new Point(MPt.X , MPt.Y );
                 Point ULpoint3 = new Point(MPt.X + 15, MPt.Y - 30);
@@ -31,7 +31,7 @@ namespace AgeOfVillagers
                 Point ULpoint5 = new Point(MPt.X + 10, MPt.Y - 50);
                 Point URpoint6 = new Point(MPt.X - 16, MPt.Y - 30);
                 Point URpoint7 = new Point(MPt.X - 10, MPt.Y - 50);
-                Point URpoint8 = new Point(MPt.X - 35, MPt.Y - 50);
+                Point URpoint8 = new Point(MPt.X - 35, MPt.Y - 40);
 
                 AddComp(new Line(RTopLeft, L1topPt));
                 AddComp(new Line(RTopLeft, L2topPt));
