@@ -19,25 +19,7 @@ namespace AgeOfVillager
 
         public void Draw(MouseEventArgs e)
         {
-            if(myNation == "Bangladeshi Farmers")
-            {
-                BDFarmersTree bdt = new BDFarmersTree(g);
-                bdt.draw(e);
-            }
-            else if(myNation == "Egyptian Kings")
-            {
-                EgyptianKingsTree ekt = new EgyptianKingsTree(g);
-                ekt.draw(e);
-            }
-            else if(myNation == "Arab Bedouins")
-            {
-                ArabBedouinsTree abt = new ArabBedouinsTree(g);
-                abt.draw(e);
-            }
-            else if(myNation == "Inuit Hunters")
-            {
-                MessageBox.Show("Can not plant trees");
-            }
+            
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillager
 {
-    class ArabBedouin
+    class ArabBedouin : INation
     {
     }
 }
