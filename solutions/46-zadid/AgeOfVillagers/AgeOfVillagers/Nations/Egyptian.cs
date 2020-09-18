@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Text;
+using AgeOfVillagers.Data_Objects;
 using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
 using AgeOfVillagers.Tree;
+using AgeOfVillagers.WaterResource;
 
 namespace AgeOfVillagers
 {
     public class Egyptian : Nation
     {
+        public Egyptian()
+        {
+            this.hasTree = true;
+            this.hasWaterSource = true;
+            this.waterSourceSize = new ElementSize(12, 12);
+        }
         public override void BackgoundColor(Graphics g)
         {
             g.Clear(Color.Yellow);
@@ -39,7 +47,9 @@ namespace AgeOfVillagers
 
         public override void DrawWaterResource(Graphics g, Point location)
         {
-            
+            EgyptianWaterSource egyptianWaterSource = new EgyptianWaterSource();
+            WaterSourceContext waterSourceContext = new WaterSourceContext(egyptianWaterSource,g,location,waterSourceSize);
+
         }
     }
 }
