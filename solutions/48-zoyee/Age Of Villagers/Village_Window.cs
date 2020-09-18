@@ -71,6 +71,7 @@ namespace Age_Of_Villagers
         private void newVillagebutton_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void openVillagebutton_Click(object sender, EventArgs e)
