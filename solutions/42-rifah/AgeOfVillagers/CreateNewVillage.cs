@@ -12,9 +12,6 @@ namespace AgeOfVillagers
 {
     public partial class CreateNewVillage : Form
     {
-        int x;
-        int y;
-        Graphics g;
         string ItemNames = "";
         string village_name = "";
         string village_type = "";
