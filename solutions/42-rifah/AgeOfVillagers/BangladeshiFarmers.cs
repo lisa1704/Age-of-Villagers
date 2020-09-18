@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         public void DrawHouse(Graphics g, Point point)
         {
             BDFarmersHouse bdFarmersHouse = 
-                new BDFarmersHouse(new Point(point.X,point.Y), new Point(point.X-50,point.Y*10), new Point(point.X+100,point.Y*10));
+                new BDFarmersHouse(new Point(point.X,point.Y), new Point(point.X-70,point.Y + 40), new Point(point.X+70,point.Y + 120));
             bdFarmersHouse.Draw(g);
             /*g.DrawLine(p, point.X, point.Y, 100, 100);
             Rectangle rectangle = new Rectangle(new Point(point.X, point.Y), new Point(point.X + 15, point.Y + 25));

@@ -25,4 +25,17 @@ namespace AgeOfVillagers
             g.DrawArc(pen, x, y, width, height, angle_1, angle_2);
         }
     }
+
+    public class Ellipse : Composite
+    {
+        private readonly Point TopLeft;
+        private readonly Point BottomRight;
+
+        public Ellipse(Point TopLeft, Point BottomRight)
+        {
+            this.TopLeft = TopLeft;
+            this.BottomRight = BottomRight;
+            AddComponent(new Arc(TopLeft.X, TopLeft.Y, BottomRight.X-TopLeft.X, BottomRight.Y-TopLeft.Y, 0, 360));
+        }
+    }
 }
