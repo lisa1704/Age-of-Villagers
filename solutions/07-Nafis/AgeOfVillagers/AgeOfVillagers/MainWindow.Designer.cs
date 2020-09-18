@@ -49,6 +49,7 @@
             this.drawingAreaPanel.Name = "drawingAreaPanel";
             this.drawingAreaPanel.Size = new System.Drawing.Size(600, 400);
             this.drawingAreaPanel.TabIndex = 12;
+            this.drawingAreaPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingAreaPanel_MouseClick);
             // 
             // menuPanel
             // 
@@ -112,6 +113,7 @@
             this.waterButton.TabIndex = 3;
             this.waterButton.Text = "Water Source";
             this.waterButton.UseVisualStyleBackColor = true;
+            this.waterButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.waterButton_MouseClick);
             // 
             // houseButton
             // 
@@ -123,6 +125,7 @@
             this.houseButton.TabIndex = 3;
             this.houseButton.Text = "House";
             this.houseButton.UseVisualStyleBackColor = true;
+            this.houseButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.houseButton_MouseClick);
             // 
             // TreeButton
             // 
@@ -134,6 +137,7 @@
             this.TreeButton.TabIndex = 3;
             this.TreeButton.Text = "Tree";
             this.TreeButton.UseVisualStyleBackColor = true;
+            this.TreeButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TreeButton_MouseClick);
             // 
             // nationListbox
             // 
