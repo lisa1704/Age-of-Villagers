@@ -8,7 +8,7 @@ namespace AgeOfVillagers.WaterResource
     {
         public void Draw(ElementSize sz, Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

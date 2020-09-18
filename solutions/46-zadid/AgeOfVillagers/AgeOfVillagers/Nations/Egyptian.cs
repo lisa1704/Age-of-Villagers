@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Text;
 using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
+using AgeOfVillagers.Tree;
 
 namespace AgeOfVillagers
 {
@@ -28,7 +29,12 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            
+            EgyptianTree egyptianTree = new EgyptianTree();
+            TreeContext treeContext = new TreeContext(egyptianTree, g, location, treeSize);
+
+            treeContext.TreeDrawing();
+
+            Debug.WriteLine("Drawing Egyptian Tree");
         }
 
         public override void DrawWaterResource(Graphics g, Point location)
