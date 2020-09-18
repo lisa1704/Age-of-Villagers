@@ -52,6 +52,7 @@
             this.villageNameBox.Name = "villageNameBox";
             this.villageNameBox.Size = new System.Drawing.Size(186, 22);
             this.villageNameBox.TabIndex = 1;
+            this.villageNameBox.TextChanged += new System.EventHandler(this.villageNameBox_TextChanged);
             // 
             // New
             // 
@@ -93,6 +94,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(217, 24);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // house_rb
             // 
