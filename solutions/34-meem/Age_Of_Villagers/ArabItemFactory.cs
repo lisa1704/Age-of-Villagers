@@ -18,10 +18,7 @@ namespace Age_Of_Villagers
             {
                 return new ArabBedouinTree();
             }
-            else if (button == "WaterSource")
-            {
-                return new ArabBedouinWaterSource();
-            }
+           
 
             return null;
         }
