@@ -11,17 +11,17 @@ namespace AgeOfVillagers.FactoryClasses
 {
     class ItemFactory
     {
-        public IItem GetItem(Point point,string hint)
+        public IItem GetItem(Point point,string hint,Graphics graphics,Pen pen)
         {
            
             if (hint.Equals(Constants.TREE_ITEM))
             {
-                return new Tree(point);
+                return new Tree(point,graphics,pen);
             }
             else if (hint.Equals(Constants.HOUSE_ITEM))
-                return new House(point);
+                return new House(point, graphics, pen);
             else if (hint.Equals(Constants.WATER_SOURCE_ITEM))
-                return new WaterSource(point);
+                return new WaterSource(point, graphics, pen);
             return null;
         }
     }

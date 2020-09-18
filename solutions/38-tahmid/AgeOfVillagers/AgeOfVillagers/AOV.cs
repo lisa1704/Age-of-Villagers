@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.Interface;
 using AgeOfVillagers.Model_Class_Folder;
+using AgeOfVillagers.Shape_extended_classes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace AgeOfVillagers
 
         public void saveVillage(List<IItem> itemList, string villageName)
         {
+
             StateModel stateModel = new StateModel()
             {
                 VillageName = villageName,

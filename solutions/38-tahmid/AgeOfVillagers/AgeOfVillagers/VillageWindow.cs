@@ -24,8 +24,13 @@ namespace AgeOfVillagers
         ShapeFactory shapeFactory;
         ItemFactory itemFactory;
 
+        CommandFactory commandFactory;
+        GameFactory gameFactory;
+
         EnvironmentFactory environmentFactory;
         Environment environment;
+
+        IGames game;
 
         List<IItem> itemList;
 
@@ -36,10 +41,13 @@ namespace AgeOfVillagers
 
             g = drawing_panel.CreateGraphics();
             pen = new Pen(Color.Black);
+
             shapeFactory = new ShapeFactory();
             itemFactory = new ItemFactory();
             environmentFactory = new EnvironmentFactory();
-           
+            commandFactory = new CommandFactory();
+            gameFactory = new GameFactory();
+
 
         }
 
@@ -54,7 +62,7 @@ namespace AgeOfVillagers
 
         private void Save_Village(object sender, EventArgs e)
         {
-            pr.setObj(village_name, drawing_panel,g);
+           
 
         }
         Dummy pr = new Dummy();
@@ -73,10 +81,10 @@ namespace AgeOfVillagers
             environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
 
-            GameFactory gameFactory = new GameFactory();
-            IGames game = gameFactory.getGame();
-            CommandFactory commandFactory = new CommandFactory();
-            GameControlCommand onCommand = commandFactory.GetCommand("New", game, drawing_panel, village_name,sVillageName);
+            
+            game = gameFactory.getGame();
+           
+            GameControlCommand onCommand = commandFactory.GetCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             itemList = new List<IItem>();
