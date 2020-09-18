@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="310.0" prefWidth="600.0" style="-fx-background-color: #b2ccdb;;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.InputTakeWindowController">
+<AnchorPane prefHeight="310.0" prefWidth="600.0" style="-fx-background-color: #b2ccdb;;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.InputTakeWindow_Controller">
    <children>
       <Label layoutX="36.0" layoutY="71.0" text="Type the Village Name:">
          <font>

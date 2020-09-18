@@ -4,6 +4,7 @@ import com.sun.prism.shader.Solid_ImagePattern_Loader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,8 +15,10 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
     private Pane main_pane;
 
@@ -43,24 +46,13 @@ public class Controller {
     @FXML
     private Label country_name;
 
-    public String getCountry_name() {
-        return country_name.getText().toString();
-    }
-
-    public void setCountry_name(String country_name) {
-        country_name = country_name;
-    }
-
-    public Label getVillage_name() {
-        return village_name;
-    }
-
-    public void setVillage_name(Label village_name) {
-        this.village_name = village_name;
-    }
-
     @FXML
     private Label village_name;
+
+    public static Label vn_label,cn_label;
+
+
+
 
     @FXML
     void newVillage_Button_Clicked(ActionEvent event) throws IOException {
@@ -74,4 +66,9 @@ public class Controller {
     }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        cn_label = country_name;
+        vn_label = village_name;
+    }
 }
