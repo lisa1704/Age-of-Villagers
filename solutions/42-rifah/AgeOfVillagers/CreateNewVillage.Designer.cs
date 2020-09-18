@@ -146,7 +146,10 @@ namespace AgeOfVillagers
             // 
             this.NationName.FormattingEnabled = true;
             this.NationName.Items.AddRange(new object[] {
-            "Bangladeshi Farmers"});
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.NationName.Location = new System.Drawing.Point(689, 146);
             this.NationName.Name = "NationName";
             this.NationName.Size = new System.Drawing.Size(200, 28);

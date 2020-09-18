@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgeOfVillagers.InuitHunters
+namespace AgeOfVillagers.Inuit_Hunters
 {
-    class InuitHuntersTrees : Composite
+    class InuitHuntersWatersource : Composite
     {
     }
 }
