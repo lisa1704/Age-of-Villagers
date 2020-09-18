@@ -72,8 +72,16 @@ public class ControlPanel extends Application {
 
         Group drawSpace = new Group();
 
+        Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
+        rectangle2.draw();
+
         DrawHouse house = new DrawHouse(drawSpace, 10, 10);
-        houseButton.setOnAction(event -> house.draw());
+        DrawTree tree = new DrawTree(drawSpace, 10, 10);
+        DrawWater water = new DrawWater(drawSpace, 10, 10);
+
+        houseButton.setOnAction(event -> house.drawOuterLayer());
+        treeButton.setOnAction(event -> tree.drawOuterLayer());
+        waterSourceButton.setOnAction(event -> water.drawOuterLayer());
 
         BorderPane layout = new BorderPane();
         layout.setRight(gridPane);
