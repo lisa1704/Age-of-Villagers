@@ -8,4 +8,20 @@ namespace AgeOfVillagers
 {
     class Circle : IShapes
     {
+        private Point p;
+        private int radius;
+        private IShapes circles;
+        public Circle(Point p, int r)
+        {
+            this.p = p;
+            this.radius = r;
+        }
+
+        public void draw_shapes(Graphics gr, Pen pen)
+        {
+            circles = new Arc(p, radius, 0, 360);
+            circles.draw_shapes(gr, pen);
+        }
+    }
+}
 
