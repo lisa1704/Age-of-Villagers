@@ -30,6 +30,9 @@
         {
             this.VillageDrawing = new System.Windows.Forms.Panel();
             this.MenuBar = new System.Windows.Forms.Panel();
+            this.NationList = new System.Windows.Forms.ListBox();
+            this.VillageTextbox = new System.Windows.Forms.TextBox();
+            this.GameLabel = new System.Windows.Forms.Label();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
             this.SaveVillage = new System.Windows.Forms.Button();
@@ -50,6 +53,9 @@
             // MenuBar
             // 
             this.MenuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MenuBar.Controls.Add(this.NationList);
+            this.MenuBar.Controls.Add(this.VillageTextbox);
+            this.MenuBar.Controls.Add(this.GameLabel);
             this.MenuBar.Controls.Add(this.OpenVillage);
             this.MenuBar.Controls.Add(this.NewVillage);
             this.MenuBar.Controls.Add(this.SaveVillage);
@@ -62,6 +68,45 @@
             this.MenuBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MenuBar.Size = new System.Drawing.Size(150, 400);
             this.MenuBar.TabIndex = 1;
+            // 
+            // NationList
+            // 
+            this.NationList.AccessibleName = "NationList";
+            this.NationList.AllowDrop = true;
+            this.NationList.ForeColor = System.Drawing.SystemColors.Window;
+            this.NationList.FormattingEnabled = true;
+            this.NationList.ItemHeight = 20;
+            this.NationList.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Arab Bedouin",
+            "Inuit Hunters"});
+            this.NationList.Location = new System.Drawing.Point(23, 80);
+            this.NationList.Name = "NationList";
+            this.NationList.Size = new System.Drawing.Size(103, 24);
+            this.NationList.TabIndex = 8;
+            // 
+            // VillageTextbox
+            // 
+            this.VillageTextbox.Font = new System.Drawing.Font("Calisto MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageTextbox.Location = new System.Drawing.Point(23, 49);
+            this.VillageTextbox.Name = "VillageTextbox";
+            this.VillageTextbox.Size = new System.Drawing.Size(103, 25);
+            this.VillageTextbox.TabIndex = 7;
+            this.VillageTextbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // GameLabel
+            // 
+            this.GameLabel.AccessibleName = "GameLabel";
+            this.GameLabel.AutoSize = true;
+            this.GameLabel.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameLabel.Location = new System.Drawing.Point(17, 17);
+            this.GameLabel.Name = "GameLabel";
+            this.GameLabel.Size = new System.Drawing.Size(124, 20);
+            this.GameLabel.TabIndex = 6;
+            this.GameLabel.Text = "Age of Villagers";
+            this.GameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GameLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // OpenVillage
             // 
@@ -127,12 +172,13 @@
             // VillageWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.ClientSize = new System.Drawing.Size(608, 432);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
             this.Text = "Age of Villagers";
             this.MenuBar.ResumeLayout(false);
+            this.MenuBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -147,6 +193,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button Tree;
+        private System.Windows.Forms.Label GameLabel;
+        private System.Windows.Forms.TextBox VillageTextbox;
+        private System.Windows.Forms.ListBox NationList;
     }
 }
 
