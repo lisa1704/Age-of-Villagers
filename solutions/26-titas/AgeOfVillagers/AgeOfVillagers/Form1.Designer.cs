@@ -32,6 +32,12 @@
             this.villageName = new System.Windows.Forms.Label();
             this.nation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonTree = new System.Windows.Forms.RadioButton();
+            this.radioButtonHouse = new System.Windows.Forms.RadioButton();
+            this.radioButtonWaterSource = new System.Windows.Forms.RadioButton();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonNew = new System.Windows.Forms.Button();
+            this.buttonOpen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gameName
@@ -73,11 +79,86 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // radioButtonTree
+            // 
+            this.radioButtonTree.AutoSize = true;
+            this.radioButtonTree.Location = new System.Drawing.Point(626, 167);
+            this.radioButtonTree.Name = "radioButtonTree";
+            this.radioButtonTree.Size = new System.Drawing.Size(58, 24);
+            this.radioButtonTree.TabIndex = 4;
+            this.radioButtonTree.TabStop = true;
+            this.radioButtonTree.Text = "Tree";
+            this.radioButtonTree.UseVisualStyleBackColor = true;
+            this.radioButtonTree.CheckedChanged += new System.EventHandler(this.radioButtonTree_CheckedChanged);
+            // 
+            // radioButtonHouse
+            // 
+            this.radioButtonHouse.AutoSize = true;
+            this.radioButtonHouse.Location = new System.Drawing.Point(690, 167);
+            this.radioButtonHouse.Name = "radioButtonHouse";
+            this.radioButtonHouse.Size = new System.Drawing.Size(72, 24);
+            this.radioButtonHouse.TabIndex = 5;
+            this.radioButtonHouse.TabStop = true;
+            this.radioButtonHouse.Text = "House";
+            this.radioButtonHouse.UseVisualStyleBackColor = true;
+            this.radioButtonHouse.CheckedChanged += new System.EventHandler(this.radioButtonHouse_CheckedChanged);
+            // 
+            // radioButtonWaterSource
+            // 
+            this.radioButtonWaterSource.AutoSize = true;
+            this.radioButtonWaterSource.Location = new System.Drawing.Point(644, 208);
+            this.radioButtonWaterSource.Name = "radioButtonWaterSource";
+            this.radioButtonWaterSource.Size = new System.Drawing.Size(118, 24);
+            this.radioButtonWaterSource.TabIndex = 6;
+            this.radioButtonWaterSource.TabStop = true;
+            this.radioButtonWaterSource.Text = "Water Source";
+            this.radioButtonWaterSource.UseVisualStyleBackColor = true;
+            this.radioButtonWaterSource.CheckedChanged += new System.EventHandler(this.radioButtonWaterSource_CheckedChanged);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSave.Location = new System.Drawing.Point(644, 279);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(94, 29);
+            this.buttonSave.TabIndex = 7;
+            this.buttonSave.Text = "Save Village";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonNew
+            // 
+            this.buttonNew.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonNew.Location = new System.Drawing.Point(644, 323);
+            this.buttonNew.Name = "buttonNew";
+            this.buttonNew.Size = new System.Drawing.Size(94, 29);
+            this.buttonNew.TabIndex = 8;
+            this.buttonNew.Text = "New Village";
+            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            // 
+            // buttonOpen
+            // 
+            this.buttonOpen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonOpen.Location = new System.Drawing.Point(644, 373);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(94, 29);
+            this.buttonOpen.TabIndex = 9;
+            this.buttonOpen.Text = "Open Village";
+            this.buttonOpen.UseVisualStyleBackColor = true;
+            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonOpen);
+            this.Controls.Add(this.buttonNew);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.radioButtonWaterSource);
+            this.Controls.Add(this.radioButtonHouse);
+            this.Controls.Add(this.radioButtonTree);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.nation);
             this.Controls.Add(this.villageName);
@@ -95,6 +176,12 @@
         private System.Windows.Forms.Label villageName;
         private System.Windows.Forms.Label nation;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButtonTree;
+        private System.Windows.Forms.RadioButton radioButtonHouse;
+        private System.Windows.Forms.RadioButton radioButtonWaterSource;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonNew;
+        private System.Windows.Forms.Button buttonOpen;
     }
 }
 

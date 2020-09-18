@@ -36,5 +36,35 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void radioButtonTree_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonHouse_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonWaterSource_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonOpen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
