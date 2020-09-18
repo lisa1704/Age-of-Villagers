@@ -7,9 +7,18 @@ namespace AgeOfVillagers
 {
     class Composite : IShape
     {
+        protected List<IShape> My_components = new List<IShape>();
+
+        protected void AddComponent(IShape myshape)
+        {
+            My_components.Add(myshape);
+        }
         public void Draw(Graphics g)
         {
-            throw new NotImplementedException();
+            foreach (var c in My_components)
+            {
+                c.Draw(g);
+            }
         }
     }
 }
