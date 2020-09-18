@@ -75,7 +75,6 @@ namespace AgeOfVillagers
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            
             g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
         }
     }
