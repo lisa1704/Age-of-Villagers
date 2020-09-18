@@ -132,6 +132,7 @@ namespace AgeOfVillagers
             this.radioButton3.Text = "WaterSource";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
+            
             //this.radioButton3.CheckedChanged += new System.EventHandler(this.WaterButton_CheckedChanged);
             // 
             // radioButton2

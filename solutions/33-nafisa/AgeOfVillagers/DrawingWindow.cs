@@ -24,6 +24,10 @@ namespace AgeOfVillagers
         {
             label2.Text = Form1.VillageName;
             label3.Text = Form1.NationName;
+            if (Form1.NationName == "Arab Beduins")
+            {
+                radioButton3.Visible = false;
+            }
             //nation.getNation();
 
         }
