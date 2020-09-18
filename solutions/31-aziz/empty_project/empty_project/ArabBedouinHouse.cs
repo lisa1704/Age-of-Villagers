@@ -10,7 +10,16 @@ namespace empty_project
     {
         public void drawHouse(Axis axis, Panel panel)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+            Graphics graphics = panel.CreateGraphics();
+
+            graphics.DrawLine(pen, new PointF(axis.X, axis.Y), new PointF(axis.X - 5, axis.Y -10));
+            graphics.DrawLine(pen, new PointF(axis.X - 5, axis.Y -10), new PointF(axis.X -10, axis.Y));
+            graphics.DrawLine(pen, new PointF(axis.X, axis.Y), new PointF(axis.X -10, axis.Y));
+
+            graphics.DrawLine(pen, new PointF(axis.X - 5, axis.Y -10), new PointF(axis.X -10,axis.Y -10));
+            graphics.DrawLine(pen, new PointF(axis.X -10, axis.Y), new PointF(axis.X - 15, axis.Y));
+            graphics.DrawLine(pen, new PointF(axis.X -10, axis.Y -10), new PointF(axis.X - 15, axis.Y));
         }
     }
 }
