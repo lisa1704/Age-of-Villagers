@@ -67,7 +67,7 @@ namespace AgeOfVillagers
             GetVillageState();
 
             SaveVillage saveVillage = new SaveVillage(village);
-            saveVillage.executeAction();
+            saveVillage.ExecuteAction();
             //MessagBox Show 
             MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
@@ -109,7 +109,6 @@ namespace AgeOfVillagers
         {
             VType = NationList.Text;
             DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
-            //DrawPanel.ForeColor = Color.;
            
             //string NName =nationFactory.GetNation(VType).DrawHouse();
         }
@@ -121,18 +120,15 @@ namespace AgeOfVillagers
 
             foreach (Point pt in HousePoints)
             {
-                //g.DrawLine(p, pt.X, pt.Y , pt.X+16, pt.X + 16);
                 nationFactory.GetNation(VType).DrawHouse( g, pt);
             }
             foreach (Point pt in TreePoints)
             {
                 nationFactory.GetNation(VType).DrawTree(g, pt);
-                //g.DrawLine(p, pt.X, pt.Y , pt.X +16, pt.X +24);
             }
             foreach (Point pt in WaterPoints)
             {
                 nationFactory.GetNation(VType).DrawWaterSource(g, pt);
-                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
             }
          
         }

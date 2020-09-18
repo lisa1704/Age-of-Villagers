@@ -54,15 +54,7 @@ namespace AgeOfVillagers
         }
 
     }
-   /* public abstract class House : CompositeShape
-    {
-        public House(Point top, Point topLeft, Point bottomRight)
-        {
-            AddComp(new ShapeRectangle(topLeft, bottomRight));
-            AddComp(new Triangle(top, topLeft, new Point(bottomRight.X, topLeft.Y)));
-        }
-
-    }*/
+  
 
 
 }

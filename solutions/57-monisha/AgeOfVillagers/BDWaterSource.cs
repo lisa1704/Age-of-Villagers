@@ -9,9 +9,9 @@ using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-    class BDWaterSource : CompositeShape
+    class BangladeshiWaterSource : CompositeShape
     {
-        public BDWaterSource(Point MPt)
+        public BangladeshiWaterSource(Point MPt)
         {
             Point pt1 = new Point(MPt.X - 24, MPt.Y + 50);
             Point pt2 = new Point(MPt.X , MPt.Y + 75);
@@ -21,7 +21,6 @@ namespace AgeOfVillagers
             Point pt6 = new Point(MPt.X + 50, MPt.Y );
             Point pt7 = new Point(MPt.X + 25, MPt.Y + 25);
             Point pt8 = new Point(MPt.X + 25, MPt.Y );
-
 
             AddComp(new Line(MPt, pt1));
             AddComp(new Line(pt1, pt2));

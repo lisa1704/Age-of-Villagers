@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         {
            /* ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
             Triangle tr = new Triangle(new Point(pt.X-5, pt.Y-10), new Point(pt.X, pt.Y),new Point(pt.X+10,pt.Y));*/
-           BDHouse house = new BDHouse(new Point(pt.X, pt.Y));
+           BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
             /*r.Paint(g);
             tr.Paint(g);*/
             house.Paint(g,p);
@@ -29,12 +29,12 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point pt)
         {
-            BDTree BDtree = new BDTree(pt);
+            BangladeshiTree BDtree = new BangladeshiTree(pt);
             BDtree.Paint(g, p);
         }
         public void DrawWaterSource(Graphics g, Point MPt)
         {
-            BDWaterSource BDWaterSource = new BDWaterSource(MPt);
+            BangladeshiWaterSource BDWaterSource = new BangladeshiWaterSource(MPt);
             BDWaterSource.Paint(g, p);
         }
         public Color GetTerrainColor()

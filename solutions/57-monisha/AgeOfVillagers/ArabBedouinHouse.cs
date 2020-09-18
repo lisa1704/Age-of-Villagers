@@ -9,18 +9,17 @@ using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-    public class BDHouse : CompositeShape
+    public class BangladeshiHouse : CompositeShape
     {
-        public BDHouse(Point MPt)
+        public BangladeshiHouse(Point MPt)
         {            
-            Point tpt1 = new Point(MPt.X + 50, MPt.Y );
-            Point tpt2 = new Point(MPt.X + 24, MPt.Y -24);
+            Point tpt1 = new Point(MPt.X + 16, MPt.Y );
+            Point tpt2 = new Point(MPt.X + 8, MPt.Y -8);
             Point rpt1 = new Point(tpt1.X , tpt1.Y);
-            Point rpt2 = new Point(MPt.X , MPt.Y + 30);
+            Point rpt2 = new Point(MPt.X , MPt.Y + 8);
 
             AddComp(new Triangle(tpt1, tpt2, MPt));
-            AddComp(new ShapeRectangle(rpt1, rpt2));
-           
+            AddComp(new ShapeRectangle(rpt1, rpt2));           
         }
     }
     class ArabBedouinHouse : CompositeShape
@@ -29,7 +28,7 @@ namespace AgeOfVillagers
         {
             Point tpt1 = new Point(MPt.X - 28, MPt.Y + 50);
             Point tpt2 = new Point(MPt.X + 28, MPt.Y + 50);
-            Point rpt1 = new Point(tpt2.X+25, tpt2.Y -15);
+            Point rpt1 = new Point(tpt2.X + 25, tpt2.Y -15);
             Point rpt2 = new Point(MPt.X + 25, MPt.Y - 15);          
 
             AddComp(new Triangle(tpt2, tpt1, MPt));

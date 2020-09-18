@@ -56,7 +56,7 @@
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="BDWaterSource.cs" />
     <Compile Include="EgyptianKings.cs" />
-    <Compile Include="IStatesSave.cs" />
+    <Compile Include="IStatesVillage.cs" />
     <Compile Include="INations.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="IShapeItem.cs" />

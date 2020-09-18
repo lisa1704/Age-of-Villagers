@@ -6,13 +6,13 @@ namespace AgeOfVillagers
 {
     partial class DrawArc
     {
-        public class BDTree : CompositeShape
+        public class BangladeshiTree : CompositeShape
         {
-            public BDTree(Point MPt)
+            public BangladeshiTree(Point MPt)
             {               
                 Point bottomRight = new Point(MPt.X + 8, MPt.Y + 24);
                 Point topPt = new Point(MPt.X + 16, MPt.Y + 18);
-                Point RTopLeft = new Point(MPt.X + 6, MPt.Y+12);
+                Point RTopLeft = new Point(MPt.X + 6, MPt.Y+8);
 
                 AddComp(new ShapeRectangle(RTopLeft, bottomRight));
                 AddComp(new ShapeEllipse(MPt, topPt));
@@ -60,7 +60,7 @@ namespace AgeOfVillagers
                 Point L1topPt = new Point(RecMid.X - 5, MPt.Y - 9);
                 Point L2topPt = new Point(RecMid.X + 5, MPt.Y - 9);
                 Point L3topPt = new Point(RecMid.X , MPt.Y - 12);
-                Point L4topPt = new Point(RecMid.X + 8, MPt.Y - 5);
+                Point L4topPt = new Point(RecMid.X + 8, MPt.Y - 6);
                 Point L5topPt = new Point(RecMid.X - 8, MPt.Y - 5);
              
                 AddComp(new ShapeRectangle(RTopLeft, bottomRight));

@@ -19,7 +19,7 @@ namespace AgeOfVillagers
         {
             this.village = village;
         }
-        public void executeAction()
+        public void ExecuteAction()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = @"E:\IUT CLASS\Design Pattern Lab\AOVSaveFiles\";

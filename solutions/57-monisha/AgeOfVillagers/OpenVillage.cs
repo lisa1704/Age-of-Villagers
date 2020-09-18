@@ -12,7 +12,7 @@ namespace AgeOfVillagers
    public class OpenVillage : IStatesVillage
     {
         VillageProperties villageproperties;
-        public void executeAction()
+        public void ExecuteAction()
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)

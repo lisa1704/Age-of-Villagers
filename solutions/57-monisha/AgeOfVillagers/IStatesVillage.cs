@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     public interface IStatesVillage
     {
-        void executeAction();
+        void ExecuteAction();
     }
 
     public struct VillageProperties
