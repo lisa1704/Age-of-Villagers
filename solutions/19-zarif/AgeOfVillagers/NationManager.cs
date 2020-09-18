@@ -19,8 +19,7 @@ namespace AgeOfVillagers
         {
             if (_nationtype.Equals("Bangladeshi Farmers"))
             {
-                
-
+               
                 return new BangladeshiFarmers();
             }
             else if (_nationtype.Equals("Arab Bedouin"))

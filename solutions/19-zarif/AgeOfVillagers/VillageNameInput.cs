@@ -48,6 +48,8 @@ namespace AgeOfVillagers
 
             _parent.VillageName.Text = nametextbx.Text;
             _parent.NationName.Text = comboBox1.Text;
+
+
             this.Hide();
         }
     }
