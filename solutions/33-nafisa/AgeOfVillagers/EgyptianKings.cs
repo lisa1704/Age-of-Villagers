@@ -8,10 +8,16 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INation
     {
-       
+        private Panel Drawingpanel;
+
+        public EgyptianKings(Panel Drawingpanel)
+        {
+            this.Drawingpanel = Drawingpanel;
+        }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            EgyptianHouse ehouse = new EgyptianHouse(Drawingpanel);
+            ehouse.Draw(point, Drawingpanel);
         }
 
         

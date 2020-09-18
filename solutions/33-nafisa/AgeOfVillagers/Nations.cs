@@ -29,8 +29,8 @@ namespace AgeOfVillagers
             }
             else if (Nationtype == "Egyptian Kings")
             {
-                Drawingpanel.BackColor = System.Drawing.Color.PaleVioletRed;
-                nation = new EgyptianKings();
+                Drawingpanel.BackColor = System.Drawing.Color.Yellow;
+                nation = new EgyptianKings(Drawingpanel);
             }
             else if (Nationtype == "Inuit Hunters")
             {
