@@ -8,5 +8,6 @@ namespace empty_project
 {
     interface ITree
     {
+        void drawTree(Axis axis, Panel panel);
     }
 }
