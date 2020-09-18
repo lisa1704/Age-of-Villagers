@@ -17,14 +17,11 @@ namespace AgeOfVillagers
         {
             BDFarmersHouse bdFarmersHouse = new BDFarmersHouse(point);
             bdFarmersHouse.Draw(g);
-            /*g.DrawLine(p, point.X, point.Y, 100, 100);
-            Rectangle rectangle = new Rectangle(new Point(point.X, point.Y), new Point(point.X + 15, point.Y + 25));
-            rectangle.Draw(g);*/
         }
         public void DrawWaterSource(Graphics g, Point point)
         {
-            BDFarmersWatersource bdFarmersWS = new BDFarmersWatersource(point);
-            bdFarmersWS.Draw(g);
+            BDFarmersWatersource bdFarmersWaterSource = new BDFarmersWatersource(point);
+            bdFarmersWaterSource.Draw(g);
         }
     }
 }
