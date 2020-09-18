@@ -7,12 +7,20 @@ namespace Age_of_Villagers.NationFactory
 {
     class EgyptianNationCreator : AbstractNationCreator
     {
-        String nationName = "Egyptian Kings";
+        private String nationName = "Egyptian Kings";
 
         public string GetNationName
         {
-            get => nationName;
-            set => nationName = value;
+            get
+            {
+                return nationName;
+            }
+
+            set
+            {
+                if (value == "Egyptian Kings")
+                    nationName = value;
+            }
         }
 
         public override INation CreateNation()
