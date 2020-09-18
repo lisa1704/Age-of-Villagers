@@ -156,7 +156,7 @@
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Location = new System.Drawing.Point(583, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 398);
+            this.panel1.Size = new System.Drawing.Size(300, 400);
             this.panel1.TabIndex = 18;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
@@ -166,6 +166,7 @@
             this.ClientSize = new System.Drawing.Size(885, 399);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             this.panel1.ResumeLayout(false);

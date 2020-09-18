@@ -31,7 +31,9 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("New Village");
+            //MessageBox.Show("New Village");
+            Refresh();
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -56,6 +58,11 @@ namespace WindowsFormsApp1
 
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -69,16 +76,12 @@ namespace WindowsFormsApp1
             if (comboBox1.SelectedItem == "Bangladeshi Farmers")
             {
 
-
-                //EgyptianKing ekh = new EgyptianKing(g);
-                //ekh.DrawHouse(e);
                 if (radioButton1.Checked)
                 {
                     BangladeshiFarmers bdh = new BangladeshiFarmers(g);
                     bdh.DrawHouse(e);
 
-                    //EgyptianKing ekh = new EgyptianKing(g);
-                    //ekh.DrawHouse(e);
+
 
                 }
 
