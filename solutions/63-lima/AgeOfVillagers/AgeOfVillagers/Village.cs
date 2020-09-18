@@ -27,17 +27,17 @@ namespace AgeOfVillagers
         { 
             for(int i = 0; i < houses.Count ; i++)
             {
-                nation.drawHouse(houses[i].Item1, houses[i].Item1);
+                nation.drawHouse(houses[i].Item1, houses[i].Item2);
 
             }
             for (int i = 0; i < trees.Count; i++)
             {
-                nation.drawHouse(trees[i].Item1, trees[i].Item1);
+                nation.drawTree(trees[i].Item1, trees[i].Item2);
 
             }
             for (int i = 0; i < water_resources.Count; i++)
             {
-                nation.drawHouse(water_resources[i].Item1, water_resources[i].Item1);
+                nation.drawWaterSource(water_resources[i].Item1, water_resources[i].Item2);
 
             }
         }

@@ -66,7 +66,7 @@
             this.select_nation.BackColor = System.Drawing.Color.Orchid;
             this.select_nation.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.select_nation.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.select_nation.ForeColor = System.Drawing.SystemColors.Window;
+            this.select_nation.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.select_nation.FormattingEnabled = true;
             this.select_nation.Items.AddRange(new object[] {
             "Egyptian Kings",
@@ -84,7 +84,7 @@
             // 
             this.open_village.BackColor = System.Drawing.Color.DarkOrchid;
             this.open_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.open_village.ForeColor = System.Drawing.SystemColors.Window;
+            this.open_village.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.open_village.Location = new System.Drawing.Point(155, 488);
             this.open_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.open_village.Name = "open_village";
@@ -98,7 +98,7 @@
             // 
             this.new_village.BackColor = System.Drawing.Color.DarkOrchid;
             this.new_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.new_village.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.new_village.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.new_village.Location = new System.Drawing.Point(17, 488);
             this.new_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.new_village.Name = "new_village";
@@ -112,7 +112,7 @@
             // 
             this.save_village.BackColor = System.Drawing.Color.DarkOrchid;
             this.save_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.save_village.ForeColor = System.Drawing.SystemColors.Window;
+            this.save_village.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.save_village.Location = new System.Drawing.Point(87, 443);
             this.save_village.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.save_village.Name = "save_village";
@@ -125,7 +125,7 @@
             // water_resource
             // 
             this.water_resource.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.water_resource.ForeColor = System.Drawing.SystemColors.Window;
+            this.water_resource.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.water_resource.Location = new System.Drawing.Point(69, 331);
             this.water_resource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.water_resource.Name = "water_resource";
@@ -138,7 +138,7 @@
             // house
             // 
             this.house.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.house.ForeColor = System.Drawing.SystemColors.Window;
+            this.house.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.house.Location = new System.Drawing.Point(69, 295);
             this.house.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.house.Name = "house";
@@ -151,7 +151,7 @@
             // tree
             // 
             this.tree.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tree.ForeColor = System.Drawing.SystemColors.Window;
+            this.tree.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.tree.Location = new System.Drawing.Point(69, 260);
             this.tree.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tree.Name = "tree";
@@ -167,7 +167,7 @@
             this.village_name.BackColor = System.Drawing.Color.Orchid;
             this.village_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.village_name.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.village_name.ForeColor = System.Drawing.SystemColors.Window;
+            this.village_name.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.village_name.Location = new System.Drawing.Point(28, 119);
             this.village_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.village_name.Name = "village_name";
@@ -182,7 +182,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Orchid;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBox1.Location = new System.Drawing.Point(24, 57);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
@@ -213,6 +213,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CreateVillageWindow";
             this.Text = "Age of Villagers";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.CreateVillageWindow_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
