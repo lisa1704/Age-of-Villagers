@@ -13,10 +13,14 @@ namespace Age_Of_Villagers
         private readonly Point point1;
         private readonly Point point2;
 
-        public Arc(Point point1, Point point2)
+        public Arc(float x, float y, float width, float heigth, float i_angle, float s_angle)
         {
-            this.point1 = point1;
-            this.point2 = point2;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = heigth;
+            this.i_angle = i_angle;
+            this.s_angle = s_angle;
         }
         public void Draw(Graphics g)
         {
