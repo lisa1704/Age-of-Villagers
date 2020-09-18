@@ -8,34 +8,29 @@ namespace AgeOfVillagers
 {
     class ArabBeduins : INation
     {
-        public IShape DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             throw new NotImplementedException();
         }
 
-        public IShape DrawTree()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
             throw new NotImplementedException();
         }
 
-        public IShape DrawWaterSource()
+    
+        public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource(Point point, Panel Drawingpanel)
+        public void PaintTerrain(Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            //Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
         }
     }
 }

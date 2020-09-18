@@ -46,7 +46,7 @@ namespace AgeOfVillagers
             // 
             // Drawingpanel
             // 
-            this.Drawingpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+           // this.Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
             this.Drawingpanel.Location = new System.Drawing.Point(3, 3);
             this.Drawingpanel.Name = "Drawingpanel";
             this.Drawingpanel.Size = new System.Drawing.Size(540, 446);

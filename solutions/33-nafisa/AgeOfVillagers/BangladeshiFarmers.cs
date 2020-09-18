@@ -31,5 +31,10 @@ namespace AgeOfVillagers
             BangladeshiWaterSource ws = new BangladeshiWaterSource(Drawingpanel);
             ws.Draw(point, Drawingpanel);
         }
+
+        public void PaintTerrain(Panel Drawingpanel)
+        {
+           // Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
+        }
     }
 }

@@ -8,17 +8,8 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
-        public IShape DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
 
         public void DrawHouse(Point point, Panel Drawingpanel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IShape DrawTree()
         {
             throw new NotImplementedException();
         }
@@ -28,12 +19,13 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
-        public IShape DrawWaterSource()
+
+        public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource(Point point, Panel Drawingpanel)
+        public void PaintTerrain(Panel Drawingpanel)
         {
             throw new NotImplementedException();
         }

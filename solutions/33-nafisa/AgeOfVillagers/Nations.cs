@@ -18,13 +18,25 @@ namespace AgeOfVillagers
             this.Nationtype = Nationtype;
 
             if (Nationtype == "Bangladeshi Farmers")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
                 nation = new BangladeshiFarmers(Drawingpanel);
+            }
             else if (Nationtype == "Arab Beduins")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
                 nation = new ArabBeduins();
+            }
             else if (Nationtype == "Egyptian Kings")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.PaleVioletRed;
                 nation = new EgyptianKings();
+            }
             else if (Nationtype == "Inuit Hunters")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.LightSkyBlue;
                 nation = new InuitHunters();
+            }
         }
         public INation getNation()
         {
