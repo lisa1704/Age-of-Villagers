@@ -13,14 +13,14 @@ namespace Age_of_Villagers
 {
     public partial class VillageWindow : Form
     {
-        int x;
-        int y;
-        Graphics g;
+        public int x;
+        public int y;
+        public Graphics g;
         Boolean saved;
         string text = "";
         readonly INationFactory nationfactory=new Nationfactory();
-        INation nation=null;
-        ICommandVillage command;
+        public INation nation=null;
+        public ICommandVillage command;
         public VillageWindow()
         {
             InitializeComponent();
@@ -78,16 +78,26 @@ namespace Age_of_Villagers
         public void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
-            nation=nationfactory.GetNation(selectedNation);
-            nation.set_villagename(villageNameBox.Text);
+            nation_create(selectedNation);
+            village_name();
             g = villagePanel.CreateGraphics();
             nation.set_graphics(g);
             villagePanel.BackColor = nation.set_background();
         }
 
+       public void nation_create(string selectedNation)
+        {
+            nation = nationfactory.GetNation(selectedNation);
+        }
+
+        public void village_name() {
+            if(nation!=null)
+                nation.set_villagename(villageNameBox.Text);
+        }
+
         public void openButton_Click(object sender, EventArgs e)
         {
-
+            
             villagePanel.Invalidate();
             command = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
@@ -112,6 +122,11 @@ namespace Age_of_Villagers
             villagePanel.Invalidate();
             saved = false;
             villageNameBox.Clear();
+        }
+
+        private void villageNameBox_TextChanged(object sender, EventArgs e)
+        {
+            village_name();
         }
     }
 }

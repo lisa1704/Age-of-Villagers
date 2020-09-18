@@ -30,6 +30,8 @@
         {
             this.villagePanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gameLabel = new System.Windows.Forms.Label();
             this.nationList = new System.Windows.Forms.ListBox();
             this.openButton = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.houseBotton = new System.Windows.Forms.Button();
             this.villageNameBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,24 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(254, 439);
             this.menuPanel.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(41, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nation:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Village Name:";
             // 
             // gameLabel
             // 
@@ -169,24 +187,7 @@
             this.villageNameBox.Name = "villageNameBox";
             this.villageNameBox.Size = new System.Drawing.Size(173, 20);
             this.villageNameBox.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Village Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Nation:";
+            this.villageNameBox.TextChanged += new System.EventHandler(this.villageNameBox_TextChanged);
             // 
             // VillageWindow
             // 
