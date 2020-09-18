@@ -13,7 +13,6 @@ namespace AgeOfVillagers
         Pen p = new Pen(Color.Green);
         public void Draw_Tree(Graphics g, Point point)
         {
-            //throw new NotImplementedException();
             BangladeshFarmer_Tree bdtree = new BangladeshFarmer_Tree(point);
             bdtree.Draw(g);
         }
@@ -26,8 +25,7 @@ namespace AgeOfVillagers
             BagladeshiFarmer_House bd_house = new BagladeshiFarmer_House(new Point(point.X, point.Y), new Point(point.X - 50, point.Y * 10), new Point(point.X + 100, point.Y * 10));
         }
         public void Draw_WaterSource(Graphics g, Point point)
-        {
-            //throw new NotImplementedException();
+        { 
             BangladeshiFarmer_WaterSource bd_ws = new BangladeshiFarmer_WaterSource(point);
             bd_ws.Draw(g);
         }
