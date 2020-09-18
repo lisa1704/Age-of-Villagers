@@ -72,19 +72,6 @@ namespace AgeOfVillagers
                 AddComp(new Line(RecMid, L5topPt));
             }
         }
-
-        public class NullTree : CompositeShape
-        {
-            public NullTree( )
-            {
-                //No Tree
-            }
-
-            internal void Paint(Graphics g, Pen p)
-            {
-                //No Tree
-            }
-        }
     }
 }
 

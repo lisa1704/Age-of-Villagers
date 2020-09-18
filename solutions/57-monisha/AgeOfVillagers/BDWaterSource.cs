@@ -44,9 +44,9 @@ namespace AgeOfVillagers
 
         }
     }
-    public class NullWater : CompositeShape
+    public class NullVillageItem : CompositeShape
     {
-        public NullWater()
+        public NullVillageItem()
         {
             //No Paint
         }

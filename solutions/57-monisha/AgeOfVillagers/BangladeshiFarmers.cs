@@ -41,7 +41,6 @@ namespace AgeOfVillagers
         {
             //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             return System.Drawing.Color.LightGreen;
-           //throw new NotImplementedException();
         }
 
     

@@ -21,13 +21,13 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point pt)
         {
-            NullTree ntree = new NullTree();
+            NullVillageItem ntree = new NullVillageItem();
             ntree.Paint(g, p);
         }
 
         public void DrawWaterSource(Graphics g, Point MPt)
         {
-            NullWater nullWater = new NullWater();
+            NullVillageItem nullWater = new NullVillageItem();
             nullWater.Paint(g, p);
         }
 
