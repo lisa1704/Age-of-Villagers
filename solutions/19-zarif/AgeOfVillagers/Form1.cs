@@ -54,7 +54,7 @@ namespace AgeOfVillagers
             Point _location = new Point(x, y);
 
             NationManager manager = new NationManager(NationName.Text);
-            
+             
 
             if (Houseradiobtn.Checked)
             {
