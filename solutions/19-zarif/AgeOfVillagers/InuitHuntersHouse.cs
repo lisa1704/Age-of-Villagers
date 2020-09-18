@@ -14,8 +14,7 @@ namespace AgeOfVillagers
             addShape(new BaseArc(point, 30, 30,0,-180));
             addShape(new BaseArc(new Point(point.X+10, point.Y + 10), 10, 10, 0, -180));
             addShape(new BaseLine(new Point(point.X, point.Y + 15), new Point(point.X + 30, point.Y + 15)));
-        
-        
+
         }
     }
 }

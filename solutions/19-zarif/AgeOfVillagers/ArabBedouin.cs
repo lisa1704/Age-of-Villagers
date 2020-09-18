@@ -12,6 +12,11 @@ namespace AgeOfVillagers
             return new ArabBedouinHouse(point);
         }
 
+        public Color GetTerritoryColor()
+        {
+            return Color.GreenYellow;
+        }
+
         public IGraphicShape GetTrees(Point point)
         {
             return new ArabBedouinTree(point);

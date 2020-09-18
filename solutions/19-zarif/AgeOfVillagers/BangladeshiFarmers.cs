@@ -15,6 +15,12 @@ namespace AgeOfVillagers
 
         }
 
+        public Color GetTerritoryColor()
+        {
+            return Color.Green;
+
+        }
+
         public IGraphicShape GetTrees(Point point)
         {
             return new BdFarmerTree(point);

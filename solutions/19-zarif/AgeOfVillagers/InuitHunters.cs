@@ -12,6 +12,11 @@ namespace AgeOfVillagers
             return new InuitHuntersHouse(point);
         }
 
+        public Color GetTerritoryColor()
+        {
+            return Color.White;
+        }
+
         public IGraphicShape GetTrees(Point point)
         {
             return new NullHandler();

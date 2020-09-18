@@ -12,6 +12,11 @@ namespace AgeOfVillagers
             return new EgyptianKingsHouse(point);
         }
 
+        public Color GetTerritoryColor()
+        {
+            return Color.Yellow;
+        }
+
         public IGraphicShape GetTrees(Point point)
         {
             return new EgyptianKingsTree(point);

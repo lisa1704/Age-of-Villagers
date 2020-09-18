@@ -10,5 +10,7 @@ namespace AgeOfVillagers
         IGraphicShape GetHouse(Point point);
         IGraphicShape GetTrees(Point point);
         IGraphicShape GetWaterSources(Point point);
+        Color GetTerritoryColor();
+
     }
 }
