@@ -67,7 +67,12 @@ namespace AgeOfVillagers
 
         private void newVillagebutton_Click(object sender, EventArgs e)
         {
-
+            house_point.Clear();
+            tree_point.Clear();
+            waterSource_point.Clear();
+            drawingPanel.Refresh();
+            NationName.ResetText();
+            MessageBox.Show("Panel is ready for new village to be created");
         }
 
         private void openVillagebutton_Click(object sender, EventArgs e)
