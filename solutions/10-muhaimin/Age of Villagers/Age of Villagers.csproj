@@ -77,6 +77,8 @@
     <Compile Include="InuitTree.cs" />
     <Compile Include="InuitWaterSource.cs" />
     <Compile Include="IPainter.cs" />
+    <Compile Include="NullTree.cs" />
+    <Compile Include="NullWaterSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
