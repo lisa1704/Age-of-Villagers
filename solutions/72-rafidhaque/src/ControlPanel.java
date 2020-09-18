@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 public class ControlPanel extends Application {
     public Stage window;
     public IDrawComponent nowDrawing;
+    public MouseClickManager mouseClickManager = new MouseClickManager();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -106,22 +107,11 @@ public class ControlPanel extends Application {
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                onMousePressed(event, nowDrawing);
+                mouseClickManager.onMousePressed(event, nowDrawing);
             }
         });
 
         window.setScene(scene);
         window.show();
-    }
-
-    private void onMousePressed( MouseEvent mouseEvent, IDrawComponent drawComponent ) {
-        double x = mouseEvent.getX();
-        double y = mouseEvent.getY();
-        System.out.println(x+" "+y);
-        if (x + 24 <= 600 && y + 24 <= 400) {
-            drawComponent.setX(x);
-            drawComponent.setY(y);
-            drawComponent.drawOuterLayer();
-        }
     }
 }
