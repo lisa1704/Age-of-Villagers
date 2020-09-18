@@ -7,6 +7,25 @@ namespace AgeOfVillagers
 {
     class Egyptian : INation
     {
+        private string vname;
+        private Graphics gr;
+        private Pen pen;
+        void set_graphics(Graphics gr)
+        {
+            this.gr = gr;
+        }
+        void set_pen(Pen pen)
+        {
+            this.pen = pen;
+        }
+        void set_villagename(string vname)
+        {
+            this.vname = vname;
+        }
+        string get_villagename()
+        {
+            return vname;
+        }
         void draw_house()
         {
 
