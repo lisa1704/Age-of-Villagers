@@ -7,11 +7,11 @@ using System.Windows.Forms;
 namespace AgeOfVillagers
 {
 
-    class WaterSourceShape : IShape
+    class BangladeshiWaterSource : IShape
     {
         private Panel Drawingpanel;
 
-        public WaterSourceShape(Panel Drawingpanel)
+        public BangladeshiWaterSource(Panel Drawingpanel)
         {
             this.Drawingpanel = Drawingpanel;
         }

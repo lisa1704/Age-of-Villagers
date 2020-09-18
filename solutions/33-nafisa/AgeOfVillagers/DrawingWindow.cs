@@ -64,7 +64,6 @@ namespace AgeOfVillagers
             Point P = new Point(e.X, e.Y);
             BangladeshiFarmers bd = new BangladeshiFarmers(Drawingpanel);
             
-            WaterSourceShape wsource = new WaterSourceShape(Drawingpanel);
 
             //Drawingpanel.Invalidate();
 
@@ -82,7 +81,7 @@ namespace AgeOfVillagers
             if (radioButton3.Checked == true)
             {
 
-                wsource.Draw(P, Drawingpanel);
+                bd.DrawWaterSource(P, Drawingpanel);
             }
         }
 

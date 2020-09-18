@@ -28,7 +28,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            BangladeshiWaterSource ws = new BangladeshiWaterSource(Drawingpanel);
+            ws.Draw(point, Drawingpanel);
         }
     }
 }
