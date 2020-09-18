@@ -65,7 +65,7 @@ namespace AgeOfVillagers
             }
         }
 
-        private void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
+        public void pnlDrawingSpace_MouseClick(object sender, MouseEventArgs e)
         {
             setRadioButton();
             VillageComponent villageComponent = villageComponentFactory.getComponent(rdbtn,e.Location);
@@ -86,29 +86,37 @@ namespace AgeOfVillagers
 
         }
 
-        private void btnNewVillage_Click(object sender, EventArgs e)
+        public void btnNewVillage_Click(object sender, EventArgs e)
         {
             NewVillageCreateForm newVillageCreateForm = new NewVillageCreateForm();
             newVillageCreateForm.Show();
             this.Hide();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             //string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            Village village = new Village(nationName,villageName,treePoints,housePoints,riverPoints);
+            Village village = new Village(villageName,treePoints,housePoints,riverPoints);
             villageSave.saveVillage(village);
         }
 
-        private void btnOpenVillage_Click(object sender, EventArgs e)
+        public void btnOpenVillage_Click(object sender, EventArgs e)
         {
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            Village village=villageSave.openVillage(this, filePath);
-            villageSave.draw(this, village);
+            //Village village=villageSave.openVillage(this, filePath);
+            //villageSave.draw(this, village);
             /*Thread a = new Thread(new ThreadStart(villageSave.openVillage));
             a.Start();
             Thread b = new Thread(new ThreadStart(villageSave.draw));
             b.Start();*/
+
+            nationName ="Bangladeshi Farmer";
+            Village village = villageSave.openVillage(this, filePath, nationName);
+            villageSave.draw(this, village, nationName);
+
+            /*OpenVillageForm openVillageForm = new OpenVillageForm(this);
+            openVillageForm.Show();
+            this.Hide();*/
         }
 
 

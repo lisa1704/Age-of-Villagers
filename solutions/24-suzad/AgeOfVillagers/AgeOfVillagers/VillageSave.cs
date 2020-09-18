@@ -26,7 +26,7 @@ namespace AgeOfVillagers
                 System.IO.File.WriteAllText(path, contentsToWriteToFile);
             }
         }
-        public Village openVillage(AgeOfVillagersForm ageOfVillagersForm, string filePath)
+        public Village openVillage(AgeOfVillagersForm ageOfVillagersForm, string filePath, string nation)
         {
             //Color color=Color.White;
             Village village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
@@ -54,13 +54,13 @@ namespace AgeOfVillagers
             ageOfVillagersForm.pnlDrawingSpace.BackColor = color;
             //draw(ageOfVillagersForm, village);
             //return village;*/
-            ageOfVillagersForm.setNationProperty(village.nation);
+            ageOfVillagersForm.setNationProperty(nation);
             ageOfVillagersForm.setVillageName(village.village);
             return village;
         }
-        public void draw(AgeOfVillagersForm ageOfVillagersForm, Village village)
+        public void draw(AgeOfVillagersForm ageOfVillagersForm, Village village, string nation)
         {
-            ageOfVillagersForm.villageComponentFactory = NationComponentFactory.getNation(village.nation);
+            ageOfVillagersForm.villageComponentFactory = NationComponentFactory.getNation(nation);
             foreach (Point point in village.treePoints)
             {
                 VillageComponent villageComponent = ageOfVillagersForm.villageComponentFactory.getComponent("Tree", point);
