@@ -15,9 +15,9 @@ namespace AgeOfVillagers
 
         public string nationName { get => nation_name; set => nation_name = value; }
 
-        public object getHouse(Point point)
+        public House getHouse(Point point)
         {
-            return new InuitHuntersHouseShape(point);
+            return new InuitHuntersHouse(point);
         }
 
        
@@ -32,14 +32,14 @@ namespace AgeOfVillagers
             return color;
         }
 
-        public object getTree(Point point)
+        public Tree getTree(Point point)
         {
-            return new NullShape(point);
+            return new NoTree(point);
         }
 
-        public object getWaterResource(Point point)
+        public WaterResource getWaterResource(Point point)
         {
-            return new NullShape(point);
+            return new NoWaterResource(point);
         }
     }
 }
