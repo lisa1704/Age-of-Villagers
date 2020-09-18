@@ -39,7 +39,7 @@ namespace Age_of_Villagers
         
 
 
-        //VillageEditorWindow villageWindow = new VillageEditorWindow();
+        
 
 
 
@@ -83,7 +83,7 @@ namespace Age_of_Villagers
             Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
 
-            //nationFactory.GetNation(nation_type);
+            
 
             AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
 
@@ -94,25 +94,12 @@ namespace Age_of_Villagers
             checkRadioButton(font, brush, e);
 
 
-            /*foreach (Point pt in HouseLists)
-            {
 
-                //iNation.GetHouse(graphics, pt);
-                HouseLists.Add(pt);
+            
 
-            }
-            foreach (Point pt in TreeLists)
-            {
-                //iNation.GetTree(graphics, pt);
-                TreeLists.Add(pt);
-            }
 
-            foreach (Point pt in WaterLists)
-            {
-                //iNation.GetWaterResource(graphics, pt);
-                WaterLists.Add(pt);
-            }*/
 
+           
 
 
             
@@ -157,19 +144,11 @@ namespace Age_of_Villagers
             //InuitHunter inuit = new InuitHunter("Inuit Hunter");
             //inuit.GetHouse(graphics, e.Location);
 
+            */
 
 
 
-
-            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
-            messageBoxCS.AppendFormat("{0} = {1}", "X", e.X);
-            messageBoxCS.AppendLine();
-            messageBoxCS.AppendFormat("{0} = {1}", "Y", e.Y);
-            messageBoxCS.AppendLine();
-            messageBoxCS.AppendFormat("{0} = {1}", "Location", e.Location);
-            messageBoxCS.AppendLine();
-            MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event");*/
-
+            
 
 
         }
@@ -180,6 +159,8 @@ namespace Age_of_Villagers
             {
                 iNation.GetTree(graphics, e.Location);
                 newVillage.AddTree(graphics,e.Location,iNation);
+
+
 
             }
             else if (radioButton_house.Checked)
@@ -231,37 +212,6 @@ namespace Age_of_Villagers
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            VillageState villageSave = new VillageState();
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = ".aov|*.aov";
-            sfd.Title = "Save AOV File";
-            
-            //if (sfd.ShowDialog() == DialogResult.OK)
-            //{
-            //string path = sfd.FileName;
-            //BinaryWriter bw = new BinaryWriter(File.Create(path));
-            //bw.Dispose();
-
-            //Serialize.
-            XmlSerializer xml_serializer =
-                new XmlSerializer(villageSave.GetType());
-            using (StreamWriter stream_writer =
-                new StreamWriter(sfd.FileName))
-            {
-
-                xml_serializer.Serialize(stream_writer, villageSave);
-                //System.IO.File.WriteAllText(path, xml_serializer);
-                stream_writer.Close();
-            }
-
-
-            //JsonSerializer.Serialize(villageSave);
-            //string jsonString = JsonSerializer.Serialize(villageSave);
-            //File.WriteAllText(path, jsonString);
-
-
-            // }
-
             this.villageSave.saveState(newVillage);
         }
 
