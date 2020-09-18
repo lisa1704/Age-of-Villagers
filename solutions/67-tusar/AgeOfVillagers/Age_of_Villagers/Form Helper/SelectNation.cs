@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class SelectNation
+    public class SelectNation
     {
         protected Panel panel;
         public SelectNation(Panel panel)

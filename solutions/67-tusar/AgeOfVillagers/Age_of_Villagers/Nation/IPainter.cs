@@ -7,11 +7,14 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    interface IPainter
+    public interface IPainter
     {
         void drawHouse(Axes axes);
         void drawTree(Axes axes);
         void drawWaterSource(Axes axes);
         void paintTerrain();
+        IHouse getHouseType();
+        ITree getTreeType();
+        IWaterSource getWSourceType();
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    abstract class AbstractPainter : IPainter
+    public abstract class AbstractPainter : IPainter
     {
         protected Panel drawingSpace;
         protected IHouse house;
@@ -32,6 +32,21 @@ namespace Age_of_Villagers
         public  void drawWaterSource(Axes axes)
         {
             wSource.drawWaterSource(axes, drawingSpace);
+        }
+
+        public IHouse getHouseType()
+        {
+            return this.house;
+        }
+
+        public ITree getTreeType()
+        {
+            return this.tree;
+        }
+
+        public IWaterSource getWSourceType()
+        {
+            return this.wSource;
         }
 
         public  void paintTerrain()

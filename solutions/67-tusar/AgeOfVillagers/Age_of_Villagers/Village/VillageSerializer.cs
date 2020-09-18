@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Age_of_Villagers
 {
-    class VillageSerializer
+    public class VillageSerializer
     {
         protected OpenFileDialog ofd = new OpenFileDialog();
         protected SaveFileDialog sfd = new SaveFileDialog();

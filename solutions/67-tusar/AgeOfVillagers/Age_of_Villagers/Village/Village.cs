@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class Village
+    public class Village
     {
         public string villageName = "untitled";
         public List<Axes> houses = new List<Axes>();

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    interface IWaterSource
+    public interface IWaterSource
     {
         void drawWaterSource(Axes axes, Panel drawingSpace);
     }
