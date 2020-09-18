@@ -10,7 +10,7 @@ namespace AgeOfVillagers
 		public ArabBeduin()
 		{
 #pragma warning disable CS1717 // Assignment made to same variable
-            name = name;
+            //name = name;
 #pragma warning restore CS1717 // Assignment made to same variable
 
 
