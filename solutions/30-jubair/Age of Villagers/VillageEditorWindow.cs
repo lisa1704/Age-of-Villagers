@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Age_of_Villagers
 {
@@ -239,7 +240,33 @@ namespace Age_of_Villagers
                  {
                      MessageBox.Show(ex.Message);
                  }*/
+           /* newVillage = villageSave.restoreState();
+            Refresh();
+            newVillage.repaint(graphics,iNation);*/
 
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            //VillageState newVillage = new VillageState(CreateNewVillageForm.village_naaam);
+            string fileName;
+            string json;
+            string path;
+
+            ofd.Filter = "aov|*.aov";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                fileName = ofd.FileName;
+                VillageState newVillage = new VillageState(CreateNewVillageForm.village_naaam);
+
+
+                Stream stream = File.Open(fileName, FileMode.Open);
+                StreamReader stream_reader = new StreamReader(stream);
+                json = stream_reader.ReadLine();
+                stream_reader.Close();
+                JsonConvert.DeserializeObject<VillageState>(json);
+                Refresh();
+                newVillage.repaint(graphics, iNation);
+
+            }
 
         }
 
