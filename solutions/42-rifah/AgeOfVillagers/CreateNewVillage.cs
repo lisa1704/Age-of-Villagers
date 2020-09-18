@@ -83,7 +83,6 @@ namespace AgeOfVillagers
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = drawingPanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
 
             foreach (Point point in tree_point)
             {
