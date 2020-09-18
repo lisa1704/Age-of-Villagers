@@ -25,7 +25,7 @@ namespace AgeOfVillagers
             else if (Nationtype == "Arab Beduins")
             {
                 Drawingpanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-                nation = new ArabBeduins();
+                nation = new ArabBeduins(Drawingpanel);
             }
             else if (Nationtype == "Egyptian Kings")
             {

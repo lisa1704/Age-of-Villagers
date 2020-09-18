@@ -8,14 +8,18 @@ namespace AgeOfVillagers
 {
     class ArabBeduins : INation
     {
-       
+        private Panel Drawingpanel;
+
+        public ArabBeduins(Panel Drawingpanel)
+        {
+            this.Drawingpanel = Drawingpanel;
+        }
 
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            ArabHouse ab = new ArabHouse(Drawingpanel);
+            ab.Draw(point, Drawingpanel);
         }
-
-       
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
