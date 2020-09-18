@@ -10,7 +10,20 @@ namespace Age_Of_Villagers
     {
         public override IVillageItem getItem(string button)
         {
-            throw new NotImplementedException();
+            if (button == "House")
+            {
+                return new ArabBedouinHouse();
+            }
+            else if (button == "Tree")
+            {
+                return new ArabBedouinTree();
+            }
+            else if (button == "WaterSource")
+            {
+                return new ArabBedouinWaterSource();
+            }
+
+            return null;
         }
     }
 }
