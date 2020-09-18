@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers.InuitHunters
 {
-    class InuitHuntersHouse
+    class InuitHuntersHouse : Composite
     {
     }
 }

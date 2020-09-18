@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Arab_Bedouin
 {
-    class ArabBedouinHouse
+    class ArabBedouinHouse : Composite
     {
     }
 }
