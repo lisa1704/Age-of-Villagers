@@ -30,11 +30,21 @@
         {
             this.drawingAreaPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.openButton = new System.Windows.Forms.Button();
+            this.newButton = new System.Windows.Forms.Button();
+            this.waterButton = new System.Windows.Forms.Button();
+            this.houseButton = new System.Windows.Forms.Button();
+            this.TreeButton = new System.Windows.Forms.Button();
+            this.nationListbox = new System.Windows.Forms.ListBox();
+            this.villageNameBox = new System.Windows.Forms.TextBox();
+            this.gameHeaderLabel = new System.Windows.Forms.Label();
+            this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // drawingAreaPanel
             // 
-            this.drawingAreaPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.drawingAreaPanel.BackColor = System.Drawing.SystemColors.Window;
             this.drawingAreaPanel.Location = new System.Drawing.Point(12, 12);
             this.drawingAreaPanel.Name = "drawingAreaPanel";
             this.drawingAreaPanel.Size = new System.Drawing.Size(600, 400);
@@ -42,20 +52,132 @@
             // 
             // menuPanel
             // 
-            this.menuPanel.Location = new System.Drawing.Point(618, 12);
-            this.menuPanel.Name = "panel1";
-            this.menuPanel.Size = new System.Drawing.Size(242, 400);
+            this.menuPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.menuPanel.Controls.Add(this.saveButton);
+            this.menuPanel.Controls.Add(this.openButton);
+            this.menuPanel.Controls.Add(this.newButton);
+            this.menuPanel.Controls.Add(this.waterButton);
+            this.menuPanel.Controls.Add(this.houseButton);
+            this.menuPanel.Controls.Add(this.TreeButton);
+            this.menuPanel.Controls.Add(this.nationListbox);
+            this.menuPanel.Controls.Add(this.villageNameBox);
+            this.menuPanel.Controls.Add(this.gameHeaderLabel);
+            this.menuPanel.Location = new System.Drawing.Point(612, 12);
+            this.menuPanel.Name = "menuPanel";
+            this.menuPanel.Size = new System.Drawing.Size(248, 400);
             this.menuPanel.TabIndex = 13;
+            // 
+            // saveButton
+            // 
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveButton.Location = new System.Drawing.Point(76, 322);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.saveButton.Size = new System.Drawing.Size(107, 34);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.Text = "Save Village";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // openButton
+            // 
+            this.openButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.openButton.Location = new System.Drawing.Point(131, 362);
+            this.openButton.Name = "openButton";
+            this.openButton.Size = new System.Drawing.Size(107, 34);
+            this.openButton.TabIndex = 3;
+            this.openButton.Text = "Open Village";
+            this.openButton.UseVisualStyleBackColor = true;
+            // 
+            // newButton
+            // 
+            this.newButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.newButton.Location = new System.Drawing.Point(18, 362);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(107, 34);
+            this.newButton.TabIndex = 3;
+            this.newButton.Text = "New Village";
+            this.newButton.UseVisualStyleBackColor = true;
+            // 
+            // waterButton
+            // 
+            this.waterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.waterButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.waterButton.Location = new System.Drawing.Point(76, 218);
+            this.waterButton.Name = "waterButton";
+            this.waterButton.Size = new System.Drawing.Size(107, 34);
+            this.waterButton.TabIndex = 3;
+            this.waterButton.Text = "Water Source";
+            this.waterButton.UseVisualStyleBackColor = true;
+            // 
+            // houseButton
+            // 
+            this.houseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.houseButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.houseButton.Location = new System.Drawing.Point(131, 178);
+            this.houseButton.Name = "houseButton";
+            this.houseButton.Size = new System.Drawing.Size(107, 34);
+            this.houseButton.TabIndex = 3;
+            this.houseButton.Text = "House";
+            this.houseButton.UseVisualStyleBackColor = true;
+            // 
+            // TreeButton
+            // 
+            this.TreeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TreeButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TreeButton.Location = new System.Drawing.Point(18, 178);
+            this.TreeButton.Name = "TreeButton";
+            this.TreeButton.Size = new System.Drawing.Size(107, 34);
+            this.TreeButton.TabIndex = 3;
+            this.TreeButton.Text = "Tree";
+            this.TreeButton.UseVisualStyleBackColor = true;
+            // 
+            // nationListbox
+            // 
+            this.nationListbox.BackColor = System.Drawing.SystemColors.Info;
+            this.nationListbox.FormattingEnabled = true;
+            this.nationListbox.ItemHeight = 20;
+            this.nationListbox.Location = new System.Drawing.Point(55, 108);
+            this.nationListbox.Name = "nationListbox";
+            this.nationListbox.Size = new System.Drawing.Size(150, 44);
+            this.nationListbox.TabIndex = 2;
+            this.nationListbox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // villageNameBox
+            // 
+            this.villageNameBox.BackColor = System.Drawing.SystemColors.Info;
+            this.villageNameBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.villageNameBox.Location = new System.Drawing.Point(48, 66);
+            this.villageNameBox.Name = "villageNameBox";
+            this.villageNameBox.Size = new System.Drawing.Size(157, 27);
+            this.villageNameBox.TabIndex = 1;
+            this.villageNameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gameHeaderLabel
+            // 
+            this.gameHeaderLabel.Font = new System.Drawing.Font("Arial", 14.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gameHeaderLabel.Location = new System.Drawing.Point(18, 11);
+            this.gameHeaderLabel.Name = "gameHeaderLabel";
+            this.gameHeaderLabel.Size = new System.Drawing.Size(210, 52);
+            this.gameHeaderLabel.TabIndex = 0;
+            this.gameHeaderLabel.Text = "Age of Villagers";
+            this.gameHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameHeaderLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 426);
+            this.ClientSize = new System.Drawing.Size(868, 420);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.drawingAreaPanel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.menuPanel.ResumeLayout(false);
+            this.menuPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -64,6 +186,15 @@
 
         private System.Windows.Forms.Panel drawingAreaPanel;
         private System.Windows.Forms.Panel menuPanel;
+        private System.Windows.Forms.Label gameHeaderLabel;
+        private System.Windows.Forms.TextBox villageNameBox;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button openButton;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Button waterButton;
+        private System.Windows.Forms.Button houseButton;
+        private System.Windows.Forms.Button TreeButton;
+        private System.Windows.Forms.ListBox nationListbox;
     }
 }
 
