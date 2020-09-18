@@ -11,5 +11,7 @@ namespace AgeOfVillagers.Nation
         string getNationName();
         Color getTerrainColor();
         IShape getHouse(Point p);
+        IShape getTree(Point p);
+        IShape getWaterSource(Point p);
     }
 }

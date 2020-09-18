@@ -83,7 +83,7 @@ namespace AgeOfVillagers
             Point point = new Point(e.X, e.Y);
             if (treeRadioBtn.Checked)
             {
-                g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+                nation.getTree(point).draw(g, p);
 
             }
             else if (houseRadioBtn.Checked)

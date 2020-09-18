@@ -19,5 +19,15 @@ namespace AgeOfVillagers.Nation
         {
             return new BangladeshiHouse(point);
         }
+
+        public IShape getTree(Point point)
+        {
+            return new BangladeshiTree(point);
+        }
+
+        public IShape getWaterSource(Point point)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
