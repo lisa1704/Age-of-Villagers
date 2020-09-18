@@ -15,8 +15,8 @@ namespace AgeOfVillager
         }
         public void drawTree(MouseEventArgs e)
         {
-            BDFarmersTree tree = new BDFarmersTree(g);
-            tree.draw(e);
+            BDFarmersTree bDFarmersTree = new BDFarmersTree(g);
+            bDFarmersTree.draw(e);
         }
     }
 }

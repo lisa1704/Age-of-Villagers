@@ -26,7 +26,7 @@ namespace AgeOfVillager
             }
             else if (myNation == "Arab Bedouins")
             {
-                return new ArabBedouin();
+                return new ArabBedouin(g);
             }
             else if (myNation == "Inuit Hunters")
             {
