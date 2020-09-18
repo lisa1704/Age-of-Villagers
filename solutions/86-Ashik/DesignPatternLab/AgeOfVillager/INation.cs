@@ -9,5 +9,6 @@ namespace AgeOfVillager
     {
         //A nation has a terrain, house, tree, water resource and so on
         void drawTree(MouseEventArgs e);
+        void drawHouse(MouseEventArgs e);
     }
 }
