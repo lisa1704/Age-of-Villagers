@@ -12,7 +12,6 @@ namespace AgeOfVillagers
     public partial class DrawingWindow : Form
     {
         public static string VillageName;
-        //private HouseShape house;
         Nations nation;
         
         public DrawingWindow()
@@ -24,12 +23,23 @@ namespace AgeOfVillagers
         {
             label2.Text = Form1.VillageName;
             label3.Text = Form1.NationName;
-            if (Form1.NationName == "Arab Beduins")
+            if (Form1.NationName == "Bangladeshi Farmers")
             {
+                Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            else if (Form1.NationName == "Arab Beduins")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
                 radioButton3.Visible = false;
             }
-            if (Form1.NationName == "Inuit Hunters")
+            else if (Form1.NationName == "Egyptian Kings")
             {
+                Drawingpanel.BackColor = System.Drawing.Color.Yellow;
+            }
+            
+            else if (Form1.NationName == "Inuit Hunters")
+            {
+                Drawingpanel.BackColor = System.Drawing.Color.White;
                 radioButton3.Visible = false;
                 radioButton1.Visible = false;
             }
@@ -55,7 +65,7 @@ namespace AgeOfVillagers
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
-            //BangladeshiFarmers bd = new BangladeshiFarmers(Drawingpanel);
+           
             Nations nation = new Nations(Form1.NationName, Drawingpanel);
 
             //Drawingpanel.Invalidate();
