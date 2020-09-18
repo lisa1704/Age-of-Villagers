@@ -10,9 +10,9 @@ namespace AgeOfVillagers
         {
             public BDTree(Point MPt)
             {               
-                Point bottomRight = new Point(MPt.X + 24, MPt.Y + 65);
-                Point topPt = new Point(MPt.X + 40, MPt.Y + 45);
-                Point RTopLeft = new Point(MPt.X + 20, MPt.Y+25);
+                Point bottomRight = new Point(MPt.X + 8, MPt.Y + 24);
+                Point topPt = new Point(MPt.X + 16, MPt.Y + 18);
+                Point RTopLeft = new Point(MPt.X + 6, MPt.Y+12);
 
                 AddComp(new ShapeRectangle(RTopLeft, bottomRight));
                 AddComp(new ShapeEllipse(MPt, topPt));
@@ -22,16 +22,16 @@ namespace AgeOfVillagers
         {
             public EgyptianTree(Point MPt)
             {               
-                Point L1topPt = new Point(MPt.X +25, MPt.Y - 50);
-                Point L2topPt = new Point(MPt.X - 25, MPt.Y - 45);
+                Point L1topPt = new Point(MPt.X +6, MPt.Y - 22);
+                Point L2topPt = new Point(MPt.X - 7, MPt.Y - 23);
              
                 Point RTopLeft = new Point(MPt.X , MPt.Y );
-                Point ULpoint3 = new Point(MPt.X + 15, MPt.Y - 30);
-                Point ULpoint4 = new Point(MPt.X + 40, MPt.Y - 45);
-                Point ULpoint5 = new Point(MPt.X + 10, MPt.Y - 50);
-                Point URpoint6 = new Point(MPt.X - 16, MPt.Y - 30);
-                Point URpoint7 = new Point(MPt.X - 10, MPt.Y - 50);
-                Point URpoint8 = new Point(MPt.X - 35, MPt.Y - 40);
+                Point ULpoint3 = new Point(MPt.X + 4, MPt.Y - 15);
+                Point ULpoint4 = new Point(MPt.X + 8, MPt.Y - 20);
+                Point ULpoint5 = new Point(MPt.X + 2, MPt.Y - 20);
+                Point URpoint6 = new Point(MPt.X - 4, MPt.Y - 15);
+                Point URpoint7 = new Point(MPt.X - 2, MPt.Y - 22);
+                Point URpoint8 = new Point(MPt.X - 8, MPt.Y - 20);
 
                 AddComp(new Line(RTopLeft, L1topPt));
                 AddComp(new Line(RTopLeft, L2topPt));
