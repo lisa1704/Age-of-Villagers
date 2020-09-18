@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using AgeOfVillagers.Shapes;
+using AgeOfVillagers.VillegeItems;
+using System.Drawing;
 
 namespace AgeOfVillagers.Nation
 {
@@ -12,6 +14,10 @@ namespace AgeOfVillagers.Nation
         public Color getTerrainColor()
         {
             return Color.Green;
+        }
+        public IShape getHouse(Point point)
+        {
+            return new BangladeshiHouse(point);
         }
     }
 }

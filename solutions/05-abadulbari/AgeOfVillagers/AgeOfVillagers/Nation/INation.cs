@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -9,5 +10,6 @@ namespace AgeOfVillagers.Nation
     {
         string getNationName();
         Color getTerrainColor();
+        IShape getHouse();
     }
 }
