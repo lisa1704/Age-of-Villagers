@@ -15,14 +15,7 @@ namespace Age_of_Villagers
                 string json = r.ReadToEnd();
                 village= JsonConvert.DeserializeObject<village>(json);
             }
-            if (nation != null)
-            {
                 this.set_state(nation);
-            }
-            else
-            {
-                MessageBox.Show("Must select a nation type");
-            }
         }
 
         private void set_state(INation nation)

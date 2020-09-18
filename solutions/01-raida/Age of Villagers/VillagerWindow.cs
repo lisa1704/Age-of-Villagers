@@ -24,6 +24,7 @@ namespace Age_of_Villagers
         public VillageWindow()
         {
             InitializeComponent();
+            g = villagePanel.CreateGraphics();
         }
 
         public void Form1_Load(object sender, EventArgs e)
@@ -79,8 +80,7 @@ namespace Age_of_Villagers
         {
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation_create(selectedNation);
-            village_name();
-            g = villagePanel.CreateGraphics();
+            village_name(villageNameBox.Text);
             nation.set_graphics(g);
             villagePanel.BackColor = nation.set_background();
         }
@@ -90,9 +90,9 @@ namespace Age_of_Villagers
             nation = nationfactory.GetNation(selectedNation);
         }
 
-        public void village_name() {
+        public void village_name(string name) {
             if(nation!=null)
-                nation.set_villagename(villageNameBox.Text);
+                nation.set_villagename(name);
         }
 
         public void openButton_Click(object sender, EventArgs e)
@@ -101,15 +101,18 @@ namespace Age_of_Villagers
             villagePanel.Invalidate();
             command = new OpenVillage();
             OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            if (nation == null)
+            {
+                MessageBox.Show("Nation Have to be choosen first");
+                
+            }
+            else if (open.ShowDialog() == DialogResult.OK & nation != null)
             {
                 if (System.IO.Path.GetExtension(open.FileName).Equals(".aov"))
                 {
                     command.execute(open.FileName, nation);
                     villageNameBox.Text = nation.get_villagename();
                 }
-                    
-
                 else
                     MessageBox.Show("Unsupported File type");
             }
@@ -126,7 +129,8 @@ namespace Age_of_Villagers
 
         private void villageNameBox_TextChanged(object sender, EventArgs e)
         {
-            village_name();
+            village_name(villageNameBox.Text);
+
         }
     }
 }
