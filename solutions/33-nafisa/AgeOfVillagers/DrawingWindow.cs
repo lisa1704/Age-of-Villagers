@@ -23,27 +23,21 @@ namespace AgeOfVillagers
         {
             label2.Text = Form1.VillageName;
             label3.Text = Form1.NationName;
-            if (Form1.NationName == "Bangladeshi Farmers")
+            Nations nation = new Nations(Form1.NationName, Drawingpanel);
+            nation.getNation().PaintTerrain(Drawingpanel);
+            
+             if (Form1.NationName == "Arab Beduins")
             {
-                Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
-            }
-            else if (Form1.NationName == "Arab Beduins")
-            {
-                Drawingpanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+                
                 radioButton3.Visible = false;
             }
-            else if (Form1.NationName == "Egyptian Kings")
-            {
-                Drawingpanel.BackColor = System.Drawing.Color.Yellow;
-            }
             
-            else if (Form1.NationName == "Inuit Hunters")
+            if (Form1.NationName == "Inuit Hunters")
             {
-                Drawingpanel.BackColor = System.Drawing.Color.White;
                 radioButton3.Visible = false;
                 radioButton1.Visible = false;
             }
-            //nation.getNation();
+            
 
         }
 

@@ -34,7 +34,7 @@ namespace AgeOfVillagers
 
         public void PaintTerrain(Panel Drawingpanel)
         {
-           // Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
+            Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
         }
     }
 }
