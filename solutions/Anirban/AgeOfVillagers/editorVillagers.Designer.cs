@@ -34,9 +34,9 @@
             this.open = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.house = new System.Windows.Forms.RadioButton();
-            this.tree = new System.Windows.Forms.RadioButton();
-            this.waterSource = new System.Windows.Forms.RadioButton();
+            this.house_rb = new System.Windows.Forms.RadioButton();
+            this.tree_rb = new System.Windows.Forms.RadioButton();
+            this.water_rb = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -48,7 +48,7 @@
             // 
             // villageNameBox
             // 
-            this.villageNameBox.Location = new System.Drawing.Point(612, 89);
+            this.villageNameBox.Location = new System.Drawing.Point(616, 89);
             this.villageNameBox.Name = "villageNameBox";
             this.villageNameBox.Size = new System.Drawing.Size(186, 22);
             this.villageNameBox.TabIndex = 1;
@@ -94,48 +94,48 @@
             this.comboBox1.Size = new System.Drawing.Size(217, 24);
             this.comboBox1.TabIndex = 5;
             // 
-            // house
+            // house_rb
             // 
-            this.house.AutoSize = true;
-            this.house.Location = new System.Drawing.Point(649, 217);
-            this.house.Name = "house";
-            this.house.Size = new System.Drawing.Size(70, 21);
-            this.house.TabIndex = 6;
-            this.house.TabStop = true;
-            this.house.Text = "House";
-            this.house.UseVisualStyleBackColor = true;
+            this.house_rb.AutoSize = true;
+            this.house_rb.Location = new System.Drawing.Point(649, 217);
+            this.house_rb.Name = "house_rb";
+            this.house_rb.Size = new System.Drawing.Size(70, 21);
+            this.house_rb.TabIndex = 6;
+            this.house_rb.TabStop = true;
+            this.house_rb.Text = "House";
+            this.house_rb.UseVisualStyleBackColor = true;
             // 
-            // tree
+            // tree_rb
             // 
-            this.tree.AutoSize = true;
-            this.tree.Location = new System.Drawing.Point(649, 245);
-            this.tree.Name = "tree";
-            this.tree.Size = new System.Drawing.Size(59, 21);
-            this.tree.TabIndex = 7;
-            this.tree.TabStop = true;
-            this.tree.Text = "Tree";
-            this.tree.UseVisualStyleBackColor = true;
+            this.tree_rb.AutoSize = true;
+            this.tree_rb.Location = new System.Drawing.Point(649, 245);
+            this.tree_rb.Name = "tree_rb";
+            this.tree_rb.Size = new System.Drawing.Size(59, 21);
+            this.tree_rb.TabIndex = 7;
+            this.tree_rb.TabStop = true;
+            this.tree_rb.Text = "Tree";
+            this.tree_rb.UseVisualStyleBackColor = true;
             // 
-            // waterSource
+            // water_rb
             // 
-            this.waterSource.AutoSize = true;
-            this.waterSource.Location = new System.Drawing.Point(649, 273);
-            this.waterSource.Name = "waterSource";
-            this.waterSource.Size = new System.Drawing.Size(114, 21);
-            this.waterSource.TabIndex = 8;
-            this.waterSource.TabStop = true;
-            this.waterSource.Text = "Water source";
-            this.waterSource.UseVisualStyleBackColor = true;
-            this.waterSource.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.water_rb.AutoSize = true;
+            this.water_rb.Location = new System.Drawing.Point(649, 273);
+            this.water_rb.Name = "water_rb";
+            this.water_rb.Size = new System.Drawing.Size(114, 21);
+            this.water_rb.TabIndex = 8;
+            this.water_rb.TabStop = true;
+            this.water_rb.Text = "Water source";
+            this.water_rb.UseVisualStyleBackColor = true;
+            this.water_rb.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // editorVillagers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 481);
-            this.Controls.Add(this.waterSource);
-            this.Controls.Add(this.tree);
-            this.Controls.Add(this.house);
+            this.Controls.Add(this.water_rb);
+            this.Controls.Add(this.tree_rb);
+            this.Controls.Add(this.house_rb);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.save);
             this.Controls.Add(this.open);
@@ -157,9 +157,9 @@
         private System.Windows.Forms.Button open;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton house;
-        private System.Windows.Forms.RadioButton tree;
-        private System.Windows.Forms.RadioButton waterSource;
+        private System.Windows.Forms.RadioButton house_rb;
+        private System.Windows.Forms.RadioButton tree_rb;
+        private System.Windows.Forms.RadioButton water_rb;
     }
 }
 
