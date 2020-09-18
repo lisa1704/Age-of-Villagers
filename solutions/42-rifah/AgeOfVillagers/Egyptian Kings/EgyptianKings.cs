@@ -9,17 +9,20 @@ namespace AgeOfVillagers.Egyptian_Kings
     {
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianKingsHouse egyptianHouse = new EgyptianKingsHouse(point);
+            egyptianHouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianKingsTrees egyptianTrees = new EgyptianKingsTrees(point);
+            egyptianTrees.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianKingsWatersource egyptianWaterSource = new EgyptianKingsWatersource(point);
+            egyptianWaterSource.Draw(g);
         }
     }
 }
