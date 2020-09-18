@@ -22,7 +22,7 @@ namespace AgeOfVillager
             }
             else if (myNation == "Egyptian Kings")
             {
-                return new EgyptianKings();
+                return new EgyptianKings(g);
             }
             else if (myNation == "Arab Bedouins")
             {
