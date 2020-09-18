@@ -2,7 +2,8 @@
 {
     internal interface IElement
     {
-        void getLocation();
+        int getX();
+        int getY();
         void setLocation();
     }
 }

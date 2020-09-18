@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    abstract class AbstractTree : IElement
+    class Tree : IElement
     {
-        public void getLocation()
+        private int x, y;
+        public int getX()
         {
-            throw new NotImplementedException();
+            return y;
         }
 
+        public int getY()
+        {
+            return x;
+        }
         public void setLocation()
         {
             throw new NotImplementedException();

@@ -90,10 +90,21 @@ namespace Age_of_Villagers
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point(e.X, e.Y);
-            x = p.X;
-            y = p.Y;
-            panel1.Invalidate();
+            ArabPainter ap = new ArabPainter(panel1);
+
+
+            if (radioButton2.Checked == true)
+            {
+                ap.drawHouse(e.X, e.Y);
+            }
+            else if (radioButton1.Checked == true)
+            {
+                ap.drawTree(e.X, e.Y);
+            }
+            else if (radioButton3.Checked == true)
+            {
+                ap.drawWaterSource(e.X, e.Y);
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
