@@ -15,9 +15,9 @@ namespace AgeOfVillagers
         }
         public void Draw(Graphics g)
         {
-            foreach (var c in My_components)
+            foreach (var component in My_components)
             {
-                c.Draw(g);
+                component.Draw(g);
             }
         }
     }
