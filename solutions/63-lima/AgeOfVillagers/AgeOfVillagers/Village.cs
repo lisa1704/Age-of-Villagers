@@ -11,6 +11,7 @@ namespace AgeOfVillagers
         public List<(int, int)> houses = new List<(int, int)>();
         public List<(int, int)> trees = new List<(int, int)>();
         public List<(int, int)> water_resources = new List<(int, int)>();
+    
         public void addHouse(int X , int Y)
         {
             houses.Add((X, Y));

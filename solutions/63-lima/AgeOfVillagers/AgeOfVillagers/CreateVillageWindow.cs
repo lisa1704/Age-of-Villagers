@@ -36,7 +36,9 @@ namespace AgeOfVillagers
         private void open_village_Click(object sender, EventArgs e)
         {
             myvillage =  myvillageSaver.OpenState();
+            village_name.Text = myvillage.Name;
             myvillage.paintAgain(nation);
+
         }
 
         private void village_name_TextChanged(object sender, EventArgs e)
