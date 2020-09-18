@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -102,8 +103,12 @@ namespace AgeOfVillagers
         private void btnOpenVillage_Click(object sender, EventArgs e)
         {
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            Village village=villageSave.openVillage(filePath, this);
+            Village village=villageSave.openVillage(this, filePath);
             villageSave.draw(this, village);
+            /*Thread a = new Thread(new ThreadStart(villageSave.openVillage));
+            a.Start();
+            Thread b = new Thread(new ThreadStart(villageSave.draw));
+            b.Start();*/
         }
 
 
