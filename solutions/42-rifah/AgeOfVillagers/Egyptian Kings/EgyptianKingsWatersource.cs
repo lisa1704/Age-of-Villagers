@@ -9,7 +9,7 @@ namespace AgeOfVillagers.Egyptian_Kings
     {
         public EgyptianKingsWatersource(Point point)
         {
-            Point topPoint = new Point(point.X + 100, point.Y + 100);
+            Point topPoint = new Point(point.X + 70, point.Y + 70);
             AddComponent(new Ellipse(point, topPoint));
         }
     }
