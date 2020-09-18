@@ -160,6 +160,11 @@
             // comboBox_NationList
             // 
             this.comboBox_NationList.FormattingEnabled = true;
+            this.comboBox_NationList.Items.AddRange(new object[] {
+            "Arab Bedouin",
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.comboBox_NationList.Location = new System.Drawing.Point(35, 146);
             this.comboBox_NationList.Name = "comboBox_NationList";
             this.comboBox_NationList.Size = new System.Drawing.Size(97, 21);
