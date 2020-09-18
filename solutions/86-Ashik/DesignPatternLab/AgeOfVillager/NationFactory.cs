@@ -8,11 +8,17 @@ namespace AgeOfVillager
 {
     class NationFactory
     {
+        private readonly Graphics g;
+
+        public NationFactory(Graphics graphics)
+        {
+            this.g = graphics;
+        }
         public INation GetNation(string myNation)
         {
             if (myNation == "Bangladeshi Farmers")
             {
-                return new BangladeshiFarmers();
+                return new BangladeshiFarmers(g);
             }
             else if (myNation == "Egyptian Kings")
             {
@@ -24,7 +30,7 @@ namespace AgeOfVillager
             }
             else if (myNation == "Inuit Hunters")
             {
-                return new InuitHunters();
+                return new InuitHunters(g);
             }
             throw new Exception();
         }

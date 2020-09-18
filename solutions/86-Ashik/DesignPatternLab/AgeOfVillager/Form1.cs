@@ -12,6 +12,7 @@ namespace AgeOfVillager
 {
     public partial class Form1 : Form
     {
+    
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             Graphics g = this.CreateGraphics();
@@ -19,8 +20,8 @@ namespace AgeOfVillager
             //tree
             if (radioButton1.Checked)
             {
-                //NationManager nm = new NationManager(myNation, g, nationFactory);
-                //nm.Draw(e);
+                var nationManager = new NationManager(myNation, new NationFactory(g));
+                nationManager.Draw(e);
             }
             //house
             else if (radioButton2.Checked)
