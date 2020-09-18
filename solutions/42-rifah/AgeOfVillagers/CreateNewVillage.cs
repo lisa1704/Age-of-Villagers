@@ -37,7 +37,7 @@ namespace AgeOfVillagers
 
         private void villageName_Click(object sender, EventArgs e)
         {
-            village_name = villageName.Text; 
+
         }
 
         private void nation_Click(object sender, EventArgs e)
