@@ -17,22 +17,17 @@ namespace AgeOfVillager
         {
             Graphics g = this.CreateGraphics();
             string myNation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            var nationManager = new NationManager(myNation, new NationFactory(g));
+
             //tree
             if (radioButton1.Checked)
             {
-                var nationManager = new NationManager(myNation, new NationFactory(g));
-                nationManager.Draw(e);
+                nationManager.DrawTree(e);
             }
             //house
             else if (radioButton2.Checked)
             {
-                //EgyptianKingsHouse eh = new EgyptianKingsHouse(g);
-                //BDFarmersHouse bdh = new BDFarmersHouse(g);
-                //bdh.draw(e);
-                //ArabBedouinsHouse abh = new ArabBedouinsHouse(g);
-                //abh.draw(e);
-                InuitHuntersHouse ihh = new InuitHuntersHouse(g);
-                ihh.draw(e);
+                nationManager.DrawHouse(e);
             }
             //water source
             else if (radioButton3.Checked)
