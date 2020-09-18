@@ -19,6 +19,8 @@ namespace AgeOfVillagers
         {
             System.Drawing.Rectangle rec = new System.Drawing.Rectangle(new Point(point.X, point.Y), (Size)new Point(point.X + 15, point.Y + 25));
             rec.Draw(g);
+            System.Drawing.Triangle triangle = new System.Drawing.Triangle(new Point(point.X - 5, point.Y + 10), new Point(point.X, point.Y), new Point(point.X + 15, point.Y));
+            Triangle.Draw(g);
         }
         public void Draw_WaterSource(Graphics g, Point point)
         {
