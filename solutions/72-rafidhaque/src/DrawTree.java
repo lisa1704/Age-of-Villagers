@@ -15,9 +15,7 @@ public class DrawTree implements IDrawComponent{
     }
 
     Rectangle outerArea;
-    public DrawTree(Group g, double currentX, double currentY) {
-        this.x = currentX;
-        this.y = currentY;
+    public DrawTree(Group g) {
         this.g = g;
     }
 

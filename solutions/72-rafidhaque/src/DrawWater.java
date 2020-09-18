@@ -15,9 +15,7 @@ public class DrawWater implements IDrawComponent{
         this.y = y;
     }
 
-    public DrawWater(Group g, double currentX, double currentY) {
-        this.x = currentX;
-        this.y = currentY;
+    public DrawWater(Group g) {
         this.g = g;
     }
 

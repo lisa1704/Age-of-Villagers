@@ -78,9 +78,9 @@ public class ControlPanel extends Application {
         Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
         rectangle2.draw();
 
-        DrawHouse house = new DrawHouse(drawSpace, 10, 10);
-        DrawTree tree = new DrawTree(drawSpace, 10, 10);
-        DrawWater water = new DrawWater(drawSpace, 10, 10);
+        DrawHouse house = new DrawHouse(drawSpace);
+        DrawTree tree = new DrawTree(drawSpace);
+        DrawWater water = new DrawWater(drawSpace);
 
         houseButton.setOnAction(event -> {
             this.nowDrawing = house;

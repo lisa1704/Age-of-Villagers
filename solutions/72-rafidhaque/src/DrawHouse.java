@@ -13,9 +13,7 @@ public class DrawHouse implements IDrawComponent{
 
     Group g;
     Rectangle outerArea;
-    public DrawHouse(Group g, double currentX, double currentY) {
-        this.x = currentX;
-        this.y = currentY;
+    public DrawHouse(Group g) {
         this.g = g;
     }
 
