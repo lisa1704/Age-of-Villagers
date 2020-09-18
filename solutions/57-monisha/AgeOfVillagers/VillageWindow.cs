@@ -67,7 +67,7 @@ namespace AgeOfVillagers
             GetVillageState();
 
             SaveVillage saveVillage = new SaveVillage(village);
-            saveVillage.executeSave();
+            saveVillage.executeAction();
             //MessagBox Show 
             MessageBox.Show(VillageNameBox.Text + " Village saved");
         }

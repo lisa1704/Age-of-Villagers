@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-   public class OpenVillage : ISatesSave
+   public class OpenVillage : IStatesVillage
     {
         VillageProperties villageproperties;
-        public void executeSave()
+        public void executeAction()
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -24,10 +24,23 @@ namespace AgeOfVillagers
                     villageproperties = JsonConvert.DeserializeObject<VillageProperties>(json);
                 }
             }
-          /*   public VillageProperties get_village()()
+          /*  if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                return villageproperties;
+                //Get the path of specified file
+                filePath = openFileDialog.FileName;
+
+                //Read the contents of the file into a stream
+                var fileStream = openFileDialog.OpenFile();
+
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    fileContent = reader.ReadToEnd();
+                }
             }*/
+            /*   public VillageProperties get_village()()
+              {
+                  return villageproperties;
+              }*/
         }
 
     }

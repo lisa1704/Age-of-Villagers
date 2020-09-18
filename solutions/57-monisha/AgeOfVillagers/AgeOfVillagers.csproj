@@ -65,6 +65,7 @@
     <Compile Include="OpenVillage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveVillage.cs" />
     <Compile Include="VillageWindow.cs">
       <SubType>Form</SubType>
     </Compile>
