@@ -98,20 +98,36 @@ namespace AgeOfVillagers
 
         private void OpenForm(object sender, EventArgs e)
         {
-            myVillage = myVillageSerializer.openState();
+            try
+            {
+                myVillage = myVillageSerializer.openState();
 
-            villagename.Text = myVillage.villageName;
+                villagename.Text = myVillage.villageName;
 
-            ReDraw(myVillage);
+                ReDraw(myVillage);
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("Something Happened");
+            }
         }
 
         private void ReDraw(Village vi)
         {
-            nation.BackgoundColor(graphic);
+            try
+            {
+                nation.BackgoundColor(graphic);
 
-            vi.housePosition.ForEach(house => nation.DrawHouse(graphic, house));
-            vi.treePosition.ForEach(tree => nation.DrawTree(graphic, tree));
-            vi.waterSourcePosition.ForEach(watersource => nation.DrawWaterResource(graphic, watersource));
+                vi.housePosition.ForEach(house => nation.DrawHouse(graphic, house));
+                vi.treePosition.ForEach(tree => nation.DrawTree(graphic, tree));
+                vi.waterSourcePosition.ForEach(watersource => nation.DrawWaterResource(graphic, watersource));
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("Nation not selected");
+            }
         }
     }
 }
