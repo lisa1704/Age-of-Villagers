@@ -42,6 +42,7 @@ public class ControlPanel extends Application {
         Button houseButton = new Button("House");
         Button waterSourceButton = new Button("Water Source");
 
+
         Button saveButton = new Button("Save");
         Button newButton = new Button("New");
         Button openButton = new Button(" Open");
@@ -72,7 +73,11 @@ public class ControlPanel extends Application {
         Group drawSpace = new Group();
 
         Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
+        Rectangle rectangle = new Rectangle(drawSpace, 100, 100, 300, 300);
         rectangle2.draw();
+
+        DrawHouse house = new DrawHouse(drawSpace, 10, 10);
+        houseButton.setOnAction(event -> house.draw());
 
         BorderPane layout = new BorderPane();
         layout.setRight(gridPane);
