@@ -8,12 +8,12 @@ namespace Age_of_Villagers
 {
     class Tree : IElement
     {
-        private int x, y;
+        public int x, y;
 
         public Tree(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            x = X;
+            y = Y;
         }
 
         public int getX()

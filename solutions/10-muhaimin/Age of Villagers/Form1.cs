@@ -18,6 +18,7 @@ namespace Age_of_Villagers
         String text = "";
         Village myVillage = new Village();
         VillageSerializer myVS = new VillageSerializer();
+        OpenFileDialog ofd = new OpenFileDialog();
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +41,12 @@ namespace Age_of_Villagers
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            ofd.Filter = "aov|*.aov";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = ofd.FileName;
+                myVillage = myVS.openState(fileName);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
