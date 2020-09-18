@@ -1,55 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Drawing;
-using Age_of_Villagers.Nation;
+using System.IO;
+using System.Windows.Forms;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Age_of_Villagers.Village_Saving
 {
     public class VillageSave
-    
     {
-        public List<Point> houseList = new List<Point>();
-        public List<Point> treeList = new List<Point>();
-        public List<Point> waterResourceList = new List<Point>();
+         SaveFileDialog sfd = new SaveFileDialog();
+         VillageState newVillageState;
+         string path;
+         string villageSerialized;
 
-        public string villageName = "";
-
-        public string GetVillageName()
+        public VillageSave(VillageState villageState)
         {
-            return villageName;
-        }
-        public void SetVillageName(string name)
-        {
-            villageName = name;
+            newVillageState = villageState;
         }
 
-        public void AddHouse(Graphics graphics, Point house, INation ination)
+        public void saveState(VillageState village)
+        {
+            newVillageState = village;
+            villageSerialized = JsonConvert.SerializeObject(newVillageState);
+            sfd.Filter = ".aov|*.aov";
+            sfd.Title = "Save AOV File";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                path = sfd.FileName;
+                using Stream aovStream = File.Open(path, FileMode.Create);
+                using StreamWriter stream_writer = new StreamWriter(aovStream);
+                stream_writer.Write(villageSerialized);
+            }
+            else
+            {
+                return;
+            }
+        }
         
-        {
-            houseList.Add(house);
-            ination.GetHouse(graphics,house);
-        }
-
-
-        public void AddTree(Graphics graphics, Point tree, INation ination)
-
-        {
-            treeList.Add(tree);
-            ination.GetTree(graphics, tree);
-        }
-
-
-        public void AddWaterResource(Graphics graphics, Point waterResource, INation ination)
-
-        {
-            waterResourceList.Add(waterResource);
-            ination.GetWaterResource(graphics, waterResource);
-        }
-
-
-
-
-
-    }
+   }
 }
