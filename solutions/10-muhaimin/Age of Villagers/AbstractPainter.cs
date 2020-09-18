@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    abstract class AbstractPainter : Ipainter
+    abstract class AbstractPainter : IPainter
     {
         protected Panel drawingSpace;
         protected List<House> houses = new List<House>();
@@ -50,5 +50,4 @@ namespace Age_of_Villagers
         public abstract void drawTree(int x, int y);
         public abstract void drawWaterSource(int x, int y);
     }
-}
 }
