@@ -1,5 +1,6 @@
 package project.Controllers;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -25,6 +27,7 @@ public class VillageViewController implements Initializable {
     private TextField Village_Name;
     @FXML private Button WaterSource = new Button();
     @FXML private Pane DrawPane;
+    private double x1,y1,x2,y2;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -34,16 +37,9 @@ public class VillageViewController implements Initializable {
     public void WaterSourceClicked(javafx.event.ActionEvent actionEvent) {
         try{
 
-            System.out.println("NIGGA!");
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("project/Views/VillageView.fxml"));
-//            fxmlLoader.setRoot(this);
-//            fxmlLoader.setController(this);
-//            Canvas canvas = new Canvas(600,400);
-            Circle circle = new Circle(200,200,10,Color.BLACK);
+            Circle circle = new Circle(500,200,10,Color.BLACK);
             DrawPane.getChildren().add(circle);
 
-
-//            g.drawLine(100,200,300,400);
 
         }
         catch (Exception e){
