@@ -31,7 +31,7 @@ namespace age_of_villagers
         private void Panel1(object sender, PaintEventArgs e)
         {
             Graphics g = panel1.CreateGraphics();
-            //Pen p = new Pen(Color.Blue);
+            
             foreach(Point pt in house_point)
             {
                 n.CreateNation(nType).draw_house(g,pt);
@@ -46,10 +46,6 @@ namespace age_of_villagers
             {
                 n.CreateNation(nType).draw_watersource(g, pt);
             }
-            //n.CreateNation(nType).paint_terrian(panel1);
-            //n.CreateNation(nType).ClearColor(e);
-            //n.CreateNation(nType).BackColor();
-
         }
 
         private void drawOnClick(object sender, MouseEventArgs e)
@@ -115,7 +111,10 @@ namespace age_of_villagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-
+            house_point.Clear();
+            tree_point.Clear();
+            water_point.Clear();
+            panel1.Refresh();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
