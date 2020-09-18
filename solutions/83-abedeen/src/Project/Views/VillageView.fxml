@@ -8,6 +8,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Controllers.VillageView_controller">
    <children>
       <Pane fx:id="DrawingCanvas" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" />
@@ -25,7 +27,16 @@
             <Button layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="New Village" textFill="WHITE" />
             <Button layoutX="154.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Open Village" textFill="WHITE" />
             <Button layoutX="81.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Save Village" textFill="WHITE" />
-            <ChoiceBox layoutX="73.0" layoutY="138.0" prefWidth="150.0" style="-fx-background-color: #FFF;" />
+            <ChoiceBox fx:id="NationList" layoutX="73.0" layoutY="138.0" prefWidth="150.0" style="-fx-background-color: #FFF;">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Bangladeshi Farmers"/>
+                     <String fx:value="Arab Bedouin"/>
+                     <String fx:value="Egyptian Kings"/>
+                     <String fx:value="Inuit Hunters"/>
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
          </children>
       </Pane>
    </children>
