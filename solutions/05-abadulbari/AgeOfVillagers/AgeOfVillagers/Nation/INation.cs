@@ -6,10 +6,10 @@ using System.Text;
 
 namespace AgeOfVillagers.Nation
 {
-    interface INation
+    public interface INation
     {
         string getNationName();
         Color getTerrainColor();
-        IShape getHouse();
+        IShape getHouse(Point p);
     }
 }

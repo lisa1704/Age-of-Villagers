@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AgeOfVillagers.Nation;
+using AgeOfVillagers.Shapes;
+using AgeOfVillagers.VillegeItems;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +18,13 @@ namespace AgeOfVillagers
         int x, y;
         string text = "";
         public Graphics g;
+        public Pen p;
+        public INation nation;
         public VillageWindow()
         {
             InitializeComponent();
             g = drawingPanel.CreateGraphics();
+            p = new Pen(Color.Black);
         }
 
         private void gameLabel_Click(object sender, EventArgs e)
@@ -75,7 +81,19 @@ namespace AgeOfVillagers
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            if (treeRadioBtn.Checked)
+            {
+                g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+
+            }
+            else if (houseRadioBtn.Checked)
+            {
+                nation.getHouse(point).draw(g, p);
+            }
+            else if (waterRadioBtn.Checked)
+            {
+                g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            }
         }
     }
 }
