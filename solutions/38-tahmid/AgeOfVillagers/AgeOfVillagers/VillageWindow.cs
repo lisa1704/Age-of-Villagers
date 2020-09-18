@@ -76,7 +76,7 @@ namespace AgeOfVillagers
             GameFactory gameFactory = new GameFactory();
             IGames game = gameFactory.getGame();
             CommandFactory commandFactory = new CommandFactory();
-            GameControlCommand onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
+            GameControlCommand onCommand = commandFactory.GetCommand("New", game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             itemList = new List<IItem>();
