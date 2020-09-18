@@ -15,15 +15,13 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-        public static string SetValueForText1 = "";
+        public static string village_naaam = "";
       
        
 
         private void submit_Click(object sender, EventArgs e)
         {
-            SetValueForText1 = textBox1.Text;
-           
-
+            village_naaam = textBox1.Text;
             VillageEditorWindow village_window_object = new VillageEditorWindow();
             village_window_object.Show();
             this.Hide();

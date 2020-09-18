@@ -83,7 +83,7 @@ namespace Age_of_Villagers
             this.label_village_name.Name = "label_village_name";
             this.label_village_name.Size = new System.Drawing.Size(116, 25);
             this.label_village_name.TabIndex = 1;
-            this.label_village_name.Text = "Village Name";
+            //this.label_village_name.Text = "";
             this.label_village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_village_name.Click += new System.EventHandler(this.label_Click);
             // 

@@ -21,7 +21,7 @@ namespace Age_of_Villagers.Village_Saving
             newVillageState = villageState;
         }
 
-        public void saveState(VillageState village)
+        public void SaveVillage(VillageState village)
         {
             newVillageState = village;
             villageSerialized = JsonConvert.SerializeObject(newVillageState);
@@ -39,6 +39,7 @@ namespace Age_of_Villagers.Village_Saving
                 return;
             }
         }
-        
-   }
+
+
+    }
 }

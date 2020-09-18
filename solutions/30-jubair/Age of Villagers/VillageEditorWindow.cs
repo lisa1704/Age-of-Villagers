@@ -46,14 +46,19 @@ namespace Age_of_Villagers
         public VillageEditorWindow()
         {
             InitializeComponent();
-            newVillage = new VillageState();
+            newVillage = new VillageState(CreateNewVillageForm.village_naaam);
             villageSave = new VillageSave(newVillage);
 
         }
 
-        
-       
 
+
+        private void VillageEditorWindow_Load(object sender, EventArgs e)
+        {
+            label_village_name.Text = CreateNewVillageForm.village_naaam;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
+
+
+        }
 
         private void label_Click(object sender, EventArgs e)
         {
@@ -67,7 +72,7 @@ namespace Age_of_Villagers
             Graphics graphics = drawing_space.CreateGraphics();
             Pen pen = new Pen(Color.Black);
 
-            
+      
 
         }
 
@@ -95,14 +100,14 @@ namespace Age_of_Villagers
 
 
 
-            
 
 
 
-           
 
 
-            
+
+
+
 
 
 
@@ -147,7 +152,7 @@ namespace Age_of_Villagers
             */
 
 
-
+            
             
 
 
@@ -159,8 +164,6 @@ namespace Age_of_Villagers
             {
                 iNation.GetTree(graphics, e.Location);
                 newVillage.AddTree(graphics,e.Location,iNation);
-
-
 
             }
             else if (radioButton_house.Checked)
@@ -176,12 +179,7 @@ namespace Age_of_Villagers
         }
 
 
-        private void VillageEditorWindow_Load(object sender, EventArgs e)
-        {
-            label_village_name.Text = CreateNewVillageForm.SetValueForText1;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
-             
-
-        }
+        
 
         private void radioButton_tree_Click(object sender, EventArgs e)
         {
@@ -212,7 +210,8 @@ namespace Age_of_Villagers
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            this.villageSave.saveState(newVillage);
+            
+            this.villageSave.SaveVillage(newVillage);
         }
 
         private void button_open_Click(object sender, EventArgs e)
@@ -239,12 +238,8 @@ namespace Age_of_Villagers
                  catch (Exception ex)
                  {
                      MessageBox.Show(ex.Message);
-                 }
+                 }*/
 
-
-             
-
-          */
 
         }
 

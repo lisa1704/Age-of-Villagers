@@ -13,15 +13,12 @@ namespace Age_of_Villagers.Village_Saving
         public List<Point> treeList = new List<Point>();
         public List<Point> waterResourceList = new List<Point>();
 
-        public string villageName = "";
+        public string villageName ;
 
-        public string GetVillageName()
+        public VillageState(string villageName)
         {
-            return villageName;
-        }
-        public void SetVillageName(string name)
-        {
-            villageName = name;
+            this.villageName = villageName;
+
         }
 
         public void AddHouse(Graphics graphics, Point house, INation ination)
@@ -29,8 +26,6 @@ namespace Age_of_Villagers.Village_Saving
         {
             houseList.Add(house);
             ination.GetHouse(graphics,house);
-
-            //houseList.Add(house);
 
         }
 
@@ -40,7 +35,6 @@ namespace Age_of_Villagers.Village_Saving
         {
            treeList.Add(tree);
             ination.GetTree(graphics, tree);
-           // treeList.Add(tree);
         }
 
 
@@ -48,9 +42,7 @@ namespace Age_of_Villagers.Village_Saving
 
         {
            waterResourceList.Add(waterResource);
-            ination.GetWaterResource(graphics, waterResource);
-
-            //waterResourceList.Add(waterResource);
+           ination.GetWaterResource(graphics, waterResource);
         }
 
     }
