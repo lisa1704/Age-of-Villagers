@@ -10,16 +10,18 @@ namespace AgeOfVillager
     {
         private readonly string myNation;
         private Graphics g;
+        private readonly NationFactory nationFactory;
 
-        public NationManager(string myNation, Graphics graphics)
+        public NationManager(string myNation, Graphics graphics, NationFactory nationFactory)
         {
             this.myNation = myNation;
             this.g = graphics;
+            this.nationFactory = nationFactory;
         }
 
         public void Draw(MouseEventArgs e)
         {
-            
+            INation nation = nationFactory.GetNation(myNation);
         }
     }
 }
