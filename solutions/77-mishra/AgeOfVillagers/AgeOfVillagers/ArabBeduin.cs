@@ -23,7 +23,8 @@ namespace AgeOfVillagers
 
         public void DrawTree(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            ArabTree arabTree = new ArabTree(drawingBoard);
+            arabTree.draw(p, drawingBoard);
         }
 
         public void DrawWaterSource(Point p, Panel drawingBoard)
