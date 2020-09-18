@@ -9,13 +9,10 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
     {
         List<IItem> itemList;
         public VillageItems() {
-            itemList = new List<IItem>();
+            
         }
 
-        public void addItems(IItem item)
-        {
-            itemList.Add(item);
-        }
+       
 
         
         public void displayElements()
