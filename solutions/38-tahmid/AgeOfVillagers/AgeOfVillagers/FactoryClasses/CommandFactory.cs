@@ -14,7 +14,7 @@ namespace AgeOfVillagers
             return new CreateVillage(game, drawing_panel, village_name,sVillageName);
         }
 
-        public GameControlCommand CreateCommand(String hint, IGames game, string sVillageName,List<IItem> itemList)
+        public GameControlCommand GetCommand(String hint, IGames game, string sVillageName,List<IItem> itemList)
         {
 
             return new SaveVillage(game, sVillageName, itemList);
