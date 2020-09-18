@@ -12,22 +12,21 @@ namespace AgeOfVillagers90
     {
         public ArabBedouinTree(Point MainPoint)
         {
-            Point TopRight = new Point(MainPoint.X + 22, MainPoint.Y + 20);
-            Point BottomRight = new Point(MainPoint.X + 25, MainPoint.Y + 80);
-            Point LeftTopPoint1 = new Point(MainPoint.X , MainPoint.Y - 15);
-            Point LeftTopPoint2 = new Point(MainPoint.X + 40, MainPoint.Y - 15);
-            Point LeftTopPoint3 = new Point(MainPoint.X + 40, MainPoint.Y + 15);
-            Point LeftTopPoint4 = new Point(MainPoint.X + 40, MainPoint.Y -50);
-            Point LeftTopPoint5 = new Point(MainPoint.X + 40, MainPoint.Y);
-            Point RightTopLeftPoint = new Point(MainPoint.X + 20, MainPoint.Y + 20);
+            Point rootPoint = new Point(MainPoint.X + 4, MainPoint.Y + 12);
+            Point midPoint = new Point(MainPoint.X + 2, MainPoint.Y + 0);
+            Point leafPoint1 = new Point(MainPoint.X + 8 , MainPoint.Y - 8);
+            Point leafPoint2 = new Point(MainPoint.X + 5, MainPoint.Y - 10);
+            Point leafPoint3 = new Point(MainPoint.X + 2, MainPoint.Y - 12);
+            Point leafPoint4 = new Point(MainPoint.X - 5, MainPoint.Y - 10);
+            Point leafPoint5 = new Point(MainPoint.X - 8, MainPoint.Y -8);
+            
 
-            AddComponent(new Rectangle(RightTopLeftPoint, BottomRight));
-            AddComponent(new Line(RightTopLeftPoint, LeftTopPoint1));
-            //AddComponent(new Line(TopRight, LeftTopPoint1));
-            AddComponent(new Line(TopRight, LeftTopPoint2));
-            AddComponent(new Line(TopRight, LeftTopPoint3));
-            AddComponent(new Line(TopRight, LeftTopPoint4));
-            AddComponent(new Line(TopRight, LeftTopPoint5));
+            AddComponent(new Rectangle(MainPoint, rootPoint));
+            AddComponent(new Line(midPoint, leafPoint1));
+            AddComponent(new Line(midPoint, leafPoint2));
+            AddComponent(new Line(midPoint, leafPoint3));
+            AddComponent(new Line(midPoint, leafPoint4));
+            AddComponent(new Line(midPoint, leafPoint5));
         }
 
     }
