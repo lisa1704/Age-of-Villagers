@@ -89,6 +89,21 @@ namespace AgeOfVillagers
         }
         public abstract CompositeShape getItemShape(Point point);
     }
+
+    public abstract class WaterResource : IVillageItem
+    {
+        private readonly Point point;
+        public WaterResource(Point point)
+        {
+            this.point = point;
+            getItemShape(point);
+        }
+        public Point getItemLocation()
+        {
+            return point;
+        }
+        public abstract CompositeShape getItemShape(Point point);
+    }
     
 
 
