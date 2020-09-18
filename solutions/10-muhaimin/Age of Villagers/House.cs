@@ -9,6 +9,13 @@ namespace Age_of_Villagers
     class House : IElement
     {
         private int x, y;
+
+        public House(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
         public int getX()
         {
             return y;

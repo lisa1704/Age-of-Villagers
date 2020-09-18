@@ -60,7 +60,7 @@ namespace Age_of_Villagers
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            myVillage.setName(comboBox1.Text);
         }
 
         private void Nation_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,14 +92,17 @@ namespace Age_of_Villagers
             if (radioButton2.Checked == true)
             {
                 painter.drawHouse(e.X, e.Y);
+                myVillage.addHouse(new House(e.X, e.Y));
             }
             else if (radioButton1.Checked == true)
             {
                 painter.drawTree(e.X, e.Y);
+                myVillage.addTree(new Tree(e.X, e.Y));
             }
             else if (radioButton3.Checked == true)
             {
                 painter.drawWaterSource(e.X, e.Y);
+                myVillage.addWSource(new WaterSource(e.X, e.Y));
             }
         }
 

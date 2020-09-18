@@ -52,6 +52,8 @@
     <Compile Include="House.cs" />
     <Compile Include="AbstractPainter.cs" />
     <Compile Include="Tree.cs" />
+    <Compile Include="Village.cs" />
+    <Compile Include="VillageSerializer.cs" />
     <Compile Include="WaterSource.cs" />
     <Compile Include="ArabPainter.cs" />
     <Compile Include="ArabTree.cs" />
