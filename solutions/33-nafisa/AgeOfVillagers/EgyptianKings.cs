@@ -28,7 +28,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            EgyptianWatersource ewatersource = new EgyptianWatersource(Drawingpanel);
+            ewatersource.Draw(point, Drawingpanel);
         }
 
         public void PaintTerrain(Panel Drawingpanel)
