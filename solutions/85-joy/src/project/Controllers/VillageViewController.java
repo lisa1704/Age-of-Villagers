@@ -16,6 +16,9 @@ import java.util.ResourceBundle;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+
 
 public class VillageViewController implements Initializable {
     @FXML public ChoiceBox NationDropDown;
@@ -61,11 +64,43 @@ public class VillageViewController implements Initializable {
         try {
             FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(obj);
+            out.writeObject(obj.toJSONString());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+
+    }
+
+    public void OpenVillage(ActionEvent actionEvent) {
+        File selectedFile = null;
+        final JFrame iFRAME = new JFrame();
+        iFRAME.setAlwaysOnTop(true);    // ****
+        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        iFRAME.setLocationRelativeTo(null);
+        iFRAME.requestFocus();
+
+        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
+        int returnValue = fileChooser.showOpenDialog(iFRAME);
+        iFRAME.dispose();
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            selectedFile = fileChooser.getSelectedFile();
+            // Display selected file in console
+            System.out.println(selectedFile.getAbsolutePath());
+        }
+        else {
+            System.out.println("No File Selected!");
+        }
+
+
+        try {
+            FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
+            ObjectInputStream in = new ObjectInputStream(file);
+            JSONObject obj = (JSONObject) in.readObject();
+            System.out.println(obj.toJSONString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }
