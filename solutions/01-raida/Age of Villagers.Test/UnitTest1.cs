@@ -1,23 +1,24 @@
 using NUnit.Framework;
-
+using Age_of_Villagers;
 namespace Age_of_Villagers.Test
 {
     public class Tests
     {
+        INation nation;
+        INationFactory factory;
         [SetUp]
         public void Setup()
         {
+            factory = new Nationfactory();
         }
 
         [Test]
         public void Test1()
         {
-            int value1 = 1;
-            int value2 = 2;
-
-            var result = value1+value2;
-
-            Assert.AreEqual(3, result);
+            
+            string selected ="Bangladeshi Farmers";
+            nation=factory.GetNation(selected);
+            Assert.AreEqual(nation,new Bangladesh());
         }
     }
 }
