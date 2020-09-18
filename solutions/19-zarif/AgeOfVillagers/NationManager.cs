@@ -41,9 +41,11 @@ namespace AgeOfVillagers
             }
             else
             {
-                return new InuitHunters();
+                return new NullHandlingNation();
             }
 
         }
     }
+
+    
 }

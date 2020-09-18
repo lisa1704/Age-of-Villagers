@@ -31,7 +31,7 @@ namespace AgeOfVillagers
             addShape(new BaseLine(fift_point, six_point));
             addShape(new BaseLine(six_point, sev_point));
             addShape(new BaseLine(sev_point, eig_point));
-           addShape(new BaseLine(eig_point, nin_point));
+            addShape(new BaseLine(eig_point, nin_point));
             addShape(new BaseLine(nin_point,ten_point));
             addShape(new BaseLine(ten_point, _point));
 
