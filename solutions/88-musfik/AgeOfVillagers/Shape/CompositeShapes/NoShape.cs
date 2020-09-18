@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers.Shape.CompositeShapes
 {
-    class NoShape
+    class NoShape: CompositeShape
     {
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using AgeOfVillagers.Shape.CompositeShapes;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
@@ -16,7 +17,53 @@ namespace AgeOfVillagers
         }
         public abstract CompositeShape getItemShape(Point point);
     }
-    
 
+    public class ArabTree : Tree
+    {
+        public ArabTree(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new ArabTreeShape(point);
+        }
+    }
+
+    public class BangladeshiTree : Tree
+    {
+        public BangladeshiTree(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new BangladeshiTreeShape(point);
+        }
+    }
+
+    public class EgyptianTree : Tree
+    {
+        public EgyptianTree(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new EgyptianTreeShape(point);
+        }
+    }
+
+    public class NoTree : Tree
+    {
+        public NoTree(Point point) : base(point)
+        {
+        }
+
+        public override CompositeShape getItemShape(Point point)
+        {
+            return new NoShape();
+        }
+    }
 
 }
