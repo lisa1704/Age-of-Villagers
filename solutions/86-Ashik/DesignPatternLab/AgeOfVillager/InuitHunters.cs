@@ -16,7 +16,7 @@ namespace AgeOfVillager
         }
         public void drawTree(MouseEventArgs e)
         {
-            
+            MessageBox.Show("Trees can not be planted");
         }
     }
 }
