@@ -8,5 +8,9 @@ namespace empty_project
 {
     class InuitHuntersWaterSource : IWaterSource
     {
+        public void drawWaterSource(Axis axis, Panel panel)
+        {
+            //No implementation
+        }
     }
 }
