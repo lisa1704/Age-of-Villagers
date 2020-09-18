@@ -8,7 +8,7 @@ namespace AgeOfVillagers.Shapes
         public Line(Point point1, Point point2)
         {
             this.point1 = point1;
-            this.point1 = point2;
+            this.point2 = point2;
         }
         public void draw(Graphics g, Pen p)
         {

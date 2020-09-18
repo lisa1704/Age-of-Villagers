@@ -15,13 +15,13 @@ namespace AgeOfVillagers.VillegeItems
             top = point;
             midLeft = new Point(top.X-10, top.Y+20);
             midRight = new Point(top.X+10, top.Y+20);
-            bottomLeft = new Point(top.X-10, top.Y+40);
+            //bottomLeft = new Point(top.X-10, top.Y+40);
             bottomRight = new Point(top.X+10, top.Y+40);
         }
         public void draw(Graphics g, Pen p)
         {
             new Triangle(top, midLeft, midRight).draw(g, p);
-            new Rectangle(midLeft, midRight, bottomLeft, bottomRight).draw(g, p);
+            new Rectangle(midLeft, bottomRight).draw(g, p);
         }
 
 

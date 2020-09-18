@@ -12,11 +12,11 @@ namespace AgeOfVillagers.Shapes
         private readonly Point bottomLeft;
         private readonly Point bottomRight;
 
-        public Rectangle(Point topLeft, Point topRight, Point bottomLeft, Point bottomRight)
+        public Rectangle(Point topLeft, Point bottomRight)
         {
             this.topLeft = topLeft;
-            this.topRight = topRight;
-            this.bottomLeft = bottomLeft;
+            this.topRight = new Point(bottomRight.X, topLeft.Y);
+            this.bottomLeft = new Point(topLeft.X, bottomRight.Y);
             this.bottomRight = bottomRight;
         }
 
