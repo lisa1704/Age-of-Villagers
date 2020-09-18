@@ -1,7 +1,5 @@
 package nation;
 
-import terrain.BlankTrerrain;
-
 public class NationFactory {
 
     public INation getNation(String nationType) {

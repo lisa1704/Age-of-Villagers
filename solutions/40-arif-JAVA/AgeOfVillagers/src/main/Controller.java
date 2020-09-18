@@ -22,6 +22,8 @@ import nation.BDFarmers;
 import nation.NationManager;
 import terrain.BDFarmerTerrain;
 import terrain.ITerrain;
+import tree.ITree;
+import water.IWater;
 
 import java.io.File;
 import java.util.List;
@@ -31,6 +33,8 @@ public class Controller {
     NationManager nationManager;
     ITerrain iTerrain;
     IHouse house;
+    ITree tree;
+    IWater water;
 
 
 
@@ -76,15 +80,6 @@ public class Controller {
         MyCanvas myCanvas = MyCanvas.getInstance();
         canvas = myCanvas.getCanvas();
 
-//        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-//        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<javafx.scene.input.MouseEvent>() {
-//
-//            @Override
-//            public void handle(MouseEvent mouseEvent) {
-//                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
-//            }
-//        });
-
         villageTypeList.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
@@ -98,8 +93,6 @@ public class Controller {
                 treeRB.setSelected(false);
                 waterRB.setSelected(false);
                 saveVillageBTN.setVisible(true);
-
-                houseRB.setSelected(true);
 
                 terrain.getChildren().clear();
                 terrain.getChildren().add(canvas);
@@ -125,12 +118,18 @@ public class Controller {
         houseRB.setSelected(false);
         treeRB.setSelected(true);
         waterRB.setSelected(false);
+
+        tree = nationManager.getTree();
+        tree.draw();
     }
     @FXML
     void waterRBCon(ActionEvent actionEvent){
         houseRB.setSelected(false);
         treeRB.setSelected(false);
         waterRB.setSelected(true);
+
+        water = nationManager.getWater();
+        water.draw();
     }
 
     @FXML

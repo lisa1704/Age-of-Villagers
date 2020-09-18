@@ -1,6 +1,6 @@
 package terrain;
 
-public class BlankTrerrain implements ITerrain {
+public class NoTrerrain implements ITerrain {
     @Override
     public void draw() {
 

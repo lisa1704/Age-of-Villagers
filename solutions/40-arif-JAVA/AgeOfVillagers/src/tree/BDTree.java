@@ -1,4 +1,4 @@
-package house;
+package tree;
 
 import canvas.MyCanvas;
 import javafx.event.EventHandler;
@@ -7,13 +7,14 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
-public class InuitHunterHouse implements IHouse {
-
+public class BDTree implements ITree {
     Canvas canvas;
-    public InuitHunterHouse(){
+
+    public BDTree(){
         MyCanvas myCanvas = MyCanvas.getInstance();
         this.canvas = myCanvas.getCanvas();
     }
+
     @Override
     public void draw() {
 
@@ -25,11 +26,14 @@ public class InuitHunterHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,10,200,360, ArcType.OPEN);
-                graphicsContext.strokeText("Inuit house", mouseEvent.getX(),mouseEvent.getY());
+                double x= mouseEvent.getX();
+                double y= mouseEvent.getY();
+
+                graphicsContext.strokeArc(x, y,50,50,200,360, ArcType.OPEN);
+                graphicsContext.lineTo(x,y);
+                graphicsContext.lineTo(x+10,y+20);
+                graphicsContext.strokeText("bd tree", mouseEvent.getX(),mouseEvent.getY());
             }
         });
-
     }
-
 }

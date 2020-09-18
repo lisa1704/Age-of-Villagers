@@ -2,6 +2,8 @@ package nation;
 
 import house.IHouse;
 import terrain.ITerrain;
+import tree.ITree;
+import water.IWater;
 
 public class NationManager {
     private INation nation;
@@ -18,5 +20,11 @@ public class NationManager {
 
     public IHouse getHouse(){
         return nation.getHouse();
+    }
+    public ITree getTree(){
+        return nation.getTree();
+    }
+    public IWater getWater(){
+        return nation.getWater();
     }
 }

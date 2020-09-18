@@ -1,4 +1,4 @@
-package house;
+package water;
 
 import canvas.MyCanvas;
 import javafx.event.EventHandler;
@@ -7,29 +7,30 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
-public class InuitHunterHouse implements IHouse {
-
+public class ArabWater implements IWater {
     Canvas canvas;
-    public InuitHunterHouse(){
+
+    public ArabWater(){
         MyCanvas myCanvas = MyCanvas.getInstance();
         this.canvas = myCanvas.getCanvas();
     }
     @Override
     public void draw() {
 
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,10,200,360, ArcType.OPEN);
-                graphicsContext.strokeText("Inuit house", mouseEvent.getX(),mouseEvent.getY());
+                double x= mouseEvent.getX();
+                double y= mouseEvent.getY();
+
+                graphicsContext.strokeArc(x, y,50,50,200,360, ArcType.OPEN);
+                graphicsContext.lineTo(x,y);
+                graphicsContext.lineTo(x+10,y+20);
+                graphicsContext.strokeText("bd tree", mouseEvent.getX(),mouseEvent.getY());
             }
         });
-
     }
-
 }

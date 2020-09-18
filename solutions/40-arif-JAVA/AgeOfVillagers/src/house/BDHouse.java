@@ -26,6 +26,7 @@ public class BDHouse implements IHouse {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
+                graphicsContext.strokeText("bd house", mouseEvent.getX(),mouseEvent.getY());
             }
         });
     }
