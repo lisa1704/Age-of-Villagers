@@ -8,5 +8,6 @@ namespace empty_project
 {
     interface IWaterSource
     {
+        void drawWaterSource(Axis axis, Panel panel);
     }
 }
