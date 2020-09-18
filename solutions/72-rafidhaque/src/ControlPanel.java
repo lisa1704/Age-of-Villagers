@@ -8,7 +8,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -72,9 +71,8 @@ public class ControlPanel extends Application {
 
         Group drawSpace = new Group();
 
-        Line line = new Line(0, 0, 600, 400);
-
-        drawSpace.getChildren().addAll(line);
+        Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
+        rectangle2.draw();
 
         BorderPane layout = new BorderPane();
         layout.setRight(gridPane);
