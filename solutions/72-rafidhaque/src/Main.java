@@ -2,7 +2,6 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    ControlPanel controlPanel = new ControlPanel();
 
     public static void main(String[] args) {
         launch(args);
@@ -10,6 +9,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        ControlPanel controlPanel = new ControlPanel();
         controlPanel.start(primaryStage);
     }
 }
