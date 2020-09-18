@@ -1,10 +1,21 @@
 import javafx.scene.Group;
 
 public class DrawWater implements IDrawComponent{
-    int x, y;
+    double x, y;
     Group g;
     Rectangle outerArea;
-    public DrawWater(Group g, int currentX, int currentY) {
+
+    @Override
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    @Override
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public DrawWater(Group g, double currentX, double currentY) {
         this.x = currentX;
         this.y = currentY;
         this.g = g;

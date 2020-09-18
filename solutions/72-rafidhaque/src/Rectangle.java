@@ -2,11 +2,11 @@ import javafx.scene.Group;
 import javafx.scene.shape.Line;
 
 public class Rectangle {
-    private int x1, y1, x2, y2;
+    private double x1, y1, x2, y2;
     public Line line1, line2, line3, line4;
     Group root;
 
-    public Rectangle(Group root, int startX, int startY, int endX, int endY) {
+    public Rectangle(Group root, double startX, double startY, double endX, double endY) {
         this.root = root;
         this.x1 = startX;
         this.y1 = startY;

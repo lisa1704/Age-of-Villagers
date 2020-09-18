@@ -1,10 +1,19 @@
 import javafx.scene.Group;
 
 public class DrawHouse implements IDrawComponent{
-    int x, y;
+    double x, y;
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     Group g;
     Rectangle outerArea;
-    public DrawHouse(Group g, int currentX, int currentY) {
+    public DrawHouse(Group g, double currentX, double currentY) {
         this.x = currentX;
         this.y = currentY;
         this.g = g;

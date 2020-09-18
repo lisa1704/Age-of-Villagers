@@ -1,10 +1,21 @@
 import javafx.scene.Group;
 
 public class DrawTree implements IDrawComponent{
-    int x, y;
+    double x, y;
     Group g;
+
+    @Override
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    @Override
+    public void setY(double y) {
+        this.y = y;
+    }
+
     Rectangle outerArea;
-    public DrawTree(Group g, int currentX, int currentY) {
+    public DrawTree(Group g, double currentX, double currentY) {
         this.x = currentX;
         this.y = currentY;
         this.g = g;

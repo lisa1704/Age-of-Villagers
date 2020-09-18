@@ -1,6 +1,8 @@
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -19,9 +21,22 @@ public class DrawExperiment extends Application {
         rectangle.draw();
         rectangle2.draw();
 
+
         Scene scene = new Scene(root, 400, 300, Color.AQUA);
+        scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                onMousePressed(event);
+            }
+        });
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    private void onMousePressed( MouseEvent mouseEvent ) {
+        double x = mouseEvent.getX();
+        double y = mouseEvent.getY();
+        System.out.println(x+" "+y);
     }
 }
 

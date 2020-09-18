@@ -1,9 +1,11 @@
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -13,6 +15,7 @@ import javafx.stage.Stage;
 
 public class ControlPanel extends Application {
     public Stage window;
+    public IDrawComponent nowDrawing;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -79,9 +82,17 @@ public class ControlPanel extends Application {
         DrawTree tree = new DrawTree(drawSpace, 10, 10);
         DrawWater water = new DrawWater(drawSpace, 10, 10);
 
-        houseButton.setOnAction(event -> house.drawOuterLayer());
-        treeButton.setOnAction(event -> tree.drawOuterLayer());
-        waterSourceButton.setOnAction(event -> water.drawOuterLayer());
+        houseButton.setOnAction(event -> {
+            this.nowDrawing = house;
+        });
+        treeButton.setOnAction(event -> {
+            this.nowDrawing = tree;
+        });
+        waterSourceButton.setOnAction(event -> {
+            this.nowDrawing = water;
+        });
+
+
 
         BorderPane layout = new BorderPane();
         layout.setRight(gridPane);
@@ -91,7 +102,24 @@ public class ControlPanel extends Application {
 
 
         Scene scene = new Scene(layout, 800, 400);
+
+        scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                onMousePressed(event, nowDrawing);
+            }
+        });
+
         window.setScene(scene);
         window.show();
+    }
+
+    private void onMousePressed( MouseEvent mouseEvent, IDrawComponent drawComponent ) {
+        double x = mouseEvent.getX();
+        double y = mouseEvent.getY();
+        System.out.println(x+" "+y);
+        drawComponent.setX(x);
+        drawComponent.setY(y);
+        drawComponent.drawOuterLayer();
     }
 }
