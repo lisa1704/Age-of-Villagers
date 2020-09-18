@@ -52,10 +52,10 @@ namespace AgeOfVillagers
         {   
             Graphics g = panel1.CreateGraphics();
             Point point = e.Location;
-            Village newVillage = new Village(villageType);
+            Village newVillage = new Village();
             if (item == "house") { newVillage.GetVillage(villageType).DrawHouse(g, point); }
-            if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
-            if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
+            else if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
+            else if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace AgeOfVillagers
             panel2.Refresh();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {}
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { villageType = VillageNation.Text; }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {}
     }

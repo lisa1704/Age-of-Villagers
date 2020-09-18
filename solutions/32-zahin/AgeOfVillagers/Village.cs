@@ -8,23 +8,20 @@ namespace AgeOfVillagers
 {
     class Village
     {
-        public Nations village;
-        public string villagetype;
-        public  Village(string villageType)
+        public INation village;
+        public Village() {}
+        public INation GetVillage(string villageType)
         {
-            this.villagetype = villagetype;
             if (villageType == "Bangladeshi Farmers")
-                village = new BangladeshiFarmers();
-            if (villageType == "Arab Bedoiun")
-                village = new ArabBedouin();
-            if (villageType == "Egyptian Kings")
-                village = new EgyptianKing();
-            if (villageType == "Inuit Hunters")
-                village = new InuitHunters();
-        }
-        public Nations GetVillage(string villageType)
-        {
-            return village;
+                return new BangladeshiFarmers();
+            else if (villageType == "Arab Bedoiun")
+                return new ArabBedouin();
+            else if (villageType == "Egyptian Kings")
+                return new EgyptianKing();
+            else if (villageType == "Inuit Hunters")
+                return new InuitHunters();
+            else
+                return new NullValuesHandler();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class InuitHunters : Nations
+    class InuitHunters : INation
     {
         private string item;
 
@@ -16,17 +16,17 @@ namespace AgeOfVillagers
 
         }
 
-        void Nations.DrawHouse(Graphics g, Point point)
+        void INation.DrawHouse(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
 
-        void Nations.DrawTree(Graphics g, Point point)
+        void INation.DrawTree(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
 
-        void Nations.DrawWaterSource(Graphics g, Point point)
+        void INation.DrawWaterSource(Graphics g, Point point)
         {
             throw new NotImplementedException();
         }
