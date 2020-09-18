@@ -6,14 +6,14 @@ namespace AgeOfVillagers90
     {
         public BangladeshiFarmersWaterSource(Point mainPoint)
         {
-            Point point1 = new Point(mainPoint.X - 20, mainPoint.Y + 40);
-            Point point2 = new Point(mainPoint.X, mainPoint.Y + 60);
-            Point point3 = new Point(mainPoint.X + 20, mainPoint.Y + 40);
-            Point point4 = new Point(mainPoint.X + 40, mainPoint.Y + 60);
-            Point point5 = new Point(mainPoint.X + 60, mainPoint.Y + 20);
-            Point point6 = new Point(mainPoint.X + 40, mainPoint.Y);
-            Point point7 = new Point(mainPoint.X + 20, mainPoint.Y + 20);
-            Point point8 = new Point(mainPoint.X + 20, mainPoint.Y);
+            Point point1 = new Point(mainPoint.X - 3, mainPoint.Y + 2);
+            Point point2 = new Point(mainPoint.X - 8 , mainPoint.Y + 10);
+            Point point3 = new Point(mainPoint.X - 2, mainPoint.Y + 16);
+            Point point4 = new Point(mainPoint.X , mainPoint.Y + 12);
+            Point point5 = new Point(mainPoint.X + 5, mainPoint.Y + 16);
+            Point point6 = new Point(mainPoint.X + 16, mainPoint.Y + 8);
+            Point point7 = new Point(mainPoint.X + 7 , mainPoint.Y );
+            Point point8 = new Point(mainPoint.X + 3, mainPoint.Y + 4);
 
             AddComponent(new Line(mainPoint, point1));
             AddComponent(new Line(point1, point2));
@@ -23,7 +23,7 @@ namespace AgeOfVillagers90
             AddComponent(new Line(point5, point6));
             AddComponent(new Line(point6, point7));
             AddComponent(new Line(point7, point8));
-            AddComponent(new Line(point8, mainPoint));
+           AddComponent(new Line(point8, mainPoint));
         }
     }
 }
