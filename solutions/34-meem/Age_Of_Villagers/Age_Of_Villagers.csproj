@@ -76,6 +76,7 @@
     <Compile Include="EgyptianTree.cs" />
     <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="INation.cs" />
     <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
     <Compile Include="ItemFactory.cs" />

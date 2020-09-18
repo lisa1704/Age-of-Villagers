@@ -46,7 +46,6 @@
             this.villNameBox.Name = "villNameBox";
             this.villNameBox.Size = new System.Drawing.Size(66, 22);
             this.villNameBox.TabIndex = 0;
-            this.villNameBox.Text = "katakhali";
             this.villNameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
@@ -177,10 +176,10 @@
         private System.Windows.Forms.Button openVill;
         private System.Windows.Forms.Button newVill;
         private System.Windows.Forms.Button saveVill;
-        private System.Windows.Forms.Panel Panel1;
-        private System.Windows.Forms.RadioButton rdButtonHouse;
-        private System.Windows.Forms.RadioButton rdButtonTree;
-        private System.Windows.Forms.RadioButton rdButtonWaterSrc;
         private System.Windows.Forms.ComboBox nationCombo;
+        public System.Windows.Forms.RadioButton rdButtonHouse;
+        public System.Windows.Forms.RadioButton rdButtonTree;
+        public System.Windows.Forms.RadioButton rdButtonWaterSrc;
+        public System.Windows.Forms.Panel Panel1;
     }
 }

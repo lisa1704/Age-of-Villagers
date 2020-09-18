@@ -15,7 +15,12 @@ namespace Age_Of_Villagers
         string name;
         string nation;
         string rdButton;
-     
+        Village village;
+
+
+        
+
+
         public VillageEditorWindow()
         {
             InitializeComponent();
@@ -23,23 +28,25 @@ namespace Age_Of_Villagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            name = villNameBox.Text;
+            
+        }
+        public void setVillageName(string Name)
+        {
+            villNameBox.Text = Name;
+            string villageName = Name;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-        /*
-                private void house_Click(object sender, EventArgs e)
-                {
-                    text = "House";
-
-                }
+        
+                
 
 
 
-            */
+            
 
         public void radioButton_Click()
         {
@@ -64,7 +71,7 @@ namespace Age_Of_Villagers
 
         private void saveVill_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(villNameBox.Text + " Village saved");
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -75,6 +82,7 @@ namespace Age_Of_Villagers
         private void Panel1_MouseClick(object sender, MouseEventArgs e)
         {
             
+
 
 
         }
@@ -95,6 +103,11 @@ namespace Age_Of_Villagers
         {
             nation = nationCombo.Text;
 
+
+        }
+
+        private void saveVill_MouseClick(object sender, MouseEventArgs e)
+        {
 
         }
     }
