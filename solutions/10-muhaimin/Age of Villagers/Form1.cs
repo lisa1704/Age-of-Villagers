@@ -46,6 +46,19 @@ namespace Age_of_Villagers
             {
                 string fileName = ofd.FileName;
                 myVillage = myVS.openState(fileName);
+                comboBox1.Text = myVillage.getName();
+                foreach (House house in myVillage.houses)
+                {
+                    painter.drawHouse(house.x, house.y);
+                }
+                foreach (Tree tree in myVillage.trees)
+                {
+                    painter.drawTree(tree.x, tree.y);
+                }
+                foreach (WaterSource ws in myVillage.wSources)
+                {
+                    painter.drawHouse(ws.x, ws.y);
+                }
             }
         }
 
