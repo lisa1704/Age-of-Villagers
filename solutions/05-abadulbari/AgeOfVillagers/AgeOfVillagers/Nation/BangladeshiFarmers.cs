@@ -27,7 +27,7 @@ namespace AgeOfVillagers.Nation
 
         public IShape getWaterSource(Point point)
         {
-            throw new System.NotImplementedException();
+            return new BangladeshiWaterSource(point);
         }
     }
 }

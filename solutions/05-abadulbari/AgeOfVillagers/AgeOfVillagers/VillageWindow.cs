@@ -92,7 +92,7 @@ namespace AgeOfVillagers
             }
             else if (waterRadioBtn.Checked)
             {
-                g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+                nation.getWaterSource(point).draw(g, p);
             }
         }
     }
