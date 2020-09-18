@@ -8,10 +8,16 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
+        private Panel Drawingpanel;
 
+        public InuitHunters(Panel Drawingpanel)
+        {
+            this.Drawingpanel = Drawingpanel;
+        }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            InuitHouse ihouse = new InuitHouse(Drawingpanel);
+            ihouse.Draw(point, Drawingpanel);
         }
 
         public void DrawTree(Point point, Panel Drawingpanel)

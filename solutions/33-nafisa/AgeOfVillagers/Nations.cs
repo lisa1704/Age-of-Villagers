@@ -34,8 +34,8 @@ namespace AgeOfVillagers
             }
             else if (Nationtype == "Inuit Hunters")
             {
-                Drawingpanel.BackColor = System.Drawing.Color.LightSkyBlue;
-                nation = new InuitHunters();
+                Drawingpanel.BackColor = System.Drawing.Color.White;
+                nation = new InuitHunters(Drawingpanel);
             }
         }
         public INation getNation()

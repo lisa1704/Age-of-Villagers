@@ -28,6 +28,11 @@ namespace AgeOfVillagers
             {
                 radioButton3.Visible = false;
             }
+            if (Form1.NationName == "Inuit Hunters")
+            {
+                radioButton3.Visible = false;
+                radioButton1.Visible = false;
+            }
             //nation.getNation();
 
         }
