@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -29,17 +30,13 @@ namespace Age_of_Villagers
 
         string nation_type = "";
 
-        List<Point> HouseLists = new List<Point>();
-        List<Point> TreeLists = new List<Point>();
-        List<Point> WaterLists = new List<Point>();
 
 
         NationFactoryApplication nationFactory = new NationFactoryApplication();
-
-
         INation iNation;
-
-        VillageSave villageSave = new VillageSave();
+        VillageState newVillage;
+        VillageSave villageSave;
+        
 
 
         //VillageEditorWindow villageWindow = new VillageEditorWindow();
@@ -49,6 +46,9 @@ namespace Age_of_Villagers
         public VillageEditorWindow()
         {
             InitializeComponent();
+            newVillage = new VillageState();
+            villageSave = new VillageSave(newVillage);
+
         }
 
         
@@ -93,7 +93,8 @@ namespace Age_of_Villagers
 
             checkRadioButton(font, brush, e);
 
-            foreach (Point pt in HouseLists)
+
+            /*foreach (Point pt in HouseLists)
             {
 
                 //iNation.GetHouse(graphics, pt);
@@ -110,16 +111,17 @@ namespace Age_of_Villagers
             {
                 //iNation.GetWaterResource(graphics, pt);
                 WaterLists.Add(pt);
-            }
+            }*/
 
 
+
             
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             /* Set Radio Button and act accordingly
 
 
@@ -168,7 +170,7 @@ namespace Age_of_Villagers
             messageBoxCS.AppendLine();
             MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event");*/
 
-            
+
 
         }
 
@@ -177,14 +179,18 @@ namespace Age_of_Villagers
             if (radioButton_tree.Checked)
             {
                 iNation.GetTree(graphics, e.Location);
+                newVillage.AddTree(graphics,e.Location,iNation);
+
             }
             else if (radioButton_house.Checked)
             { 
                 iNation.GetHouse(graphics, e.Location);
+                newVillage.AddHouse(graphics, e.Location, iNation);
             }
             else if (radioButton_water.Checked)
             {  
                 iNation.GetWaterResource(graphics, e.Location);
+                newVillage.AddWaterResource(graphics, e.Location, iNation);
             }
         }
 
@@ -219,61 +225,76 @@ namespace Age_of_Villagers
             
             nation_type = nationList.Text;
             //drawing_space.BackColor = iNation.getTerrainColor();
+            //newVillage.repaint(graphics,iNation);
 
         }
 
         private void button_save_Click(object sender, EventArgs e)
         {
+            VillageState villageSave = new VillageState();
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = ".aov|*.aov";
             sfd.Title = "Save AOV File";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            
+            //if (sfd.ShowDialog() == DialogResult.OK)
+            //{
+            //string path = sfd.FileName;
+            //BinaryWriter bw = new BinaryWriter(File.Create(path));
+            //bw.Dispose();
+
+            //Serialize.
+            XmlSerializer xml_serializer =
+                new XmlSerializer(villageSave.GetType());
+            using (StreamWriter stream_writer =
+                new StreamWriter(sfd.FileName))
             {
-                /*string path = sfd.FileName;
-                BinaryWriter bw = new BinaryWriter(File.Create(path));
-                bw.Dispose();*/
 
-                // Serialize.
-                XmlSerializer xml_serializer =
-                    new XmlSerializer(villageSave.GetType());
-                using (StreamWriter stream_writer =
-                    new StreamWriter(sfd.FileName))
-                {
-                    xml_serializer.Serialize(stream_writer, villageSave);
-                    stream_writer.Close();
-                }
-
+                xml_serializer.Serialize(stream_writer, villageSave);
+                //System.IO.File.WriteAllText(path, xml_serializer);
+                stream_writer.Close();
             }
+
+
+            //JsonSerializer.Serialize(villageSave);
+            //string jsonString = JsonSerializer.Serialize(villageSave);
+            //File.WriteAllText(path, jsonString);
+
+
+            // }
+
+            this.villageSave.saveState(newVillage);
         }
 
         private void button_open_Click(object sender, EventArgs e)
         {
-           /* OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = ".aov|*.aov";
-            ofd.Title = "Save AOV File";
-            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
+            /* OpenFileDialog ofd = new OpenFileDialog();
+             ofd.Filter = ".aov|*.aov";
+             ofd.Title = "Save AOV File";
+             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+             {
 
-                try
-                {
-                    XmlSerializer xml_serializer =
-                        new XmlSerializer(villageSave.GetType());
-                    using (FileStream file_stream =
-                        new FileStream(ofd.FileName, FileMode.Open))
-                    {
-                        VillageSave new_villageSave =
-                            (VillageSave)xml_serializer.Deserialize(file_stream);
-                        villageSave = new_villageSave;
-                       //villageWindow.Refresh();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                 try
+                 {
+                     XmlSerializer xml_serializer =
+                         new XmlSerializer(villageSave.GetType());
+                     using (FileStream file_stream =
+                         new FileStream(ofd.FileName, FileMode.Open))
+                     {
+                         VillageSave new_villageSave =
+                             (VillageSave)xml_serializer.Deserialize(file_stream);
+                         villageSave = new_villageSave;
+                        //villageWindow.Refresh();
+                     }
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show(ex.Message);
+                 }
 
 
-            }*/
+             
+
+          */
 
         }
 
