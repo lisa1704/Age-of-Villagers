@@ -10,7 +10,11 @@ namespace AgeOfVillagers
 {
     class Bangladeshi_Farmers : INation
     {
-        Pen p = new Pen(Color.Green);
+        public Color BackGroundColor()
+        {
+            return Color.Green;
+        }
+        Pen p = new Pen(Color.Yellow);
         public void Draw_Tree(Graphics g, Point point)
         {
             BangladeshFarmer_Tree bdtree = new BangladeshFarmer_Tree(point);

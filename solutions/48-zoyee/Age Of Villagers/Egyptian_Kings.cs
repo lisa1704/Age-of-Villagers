@@ -9,7 +9,7 @@ namespace Age_Of_Villagers
 {
     class Egyptian_Kings : INation
     {
-        Pen p = new Pen(Color.Red);
+        Pen p = new Pen(Color.Purple);
 
         public Color BackGroundColor()
         {

@@ -7,7 +7,7 @@ namespace Age_Of_Villagers
 {
     class Arab_Bedouin : INation
     {
-        Pen p = new Pen(Color.Violet);
+        Pen p = new Pen(Color.Red);
 
         public Color BackGroundColor()
         {
