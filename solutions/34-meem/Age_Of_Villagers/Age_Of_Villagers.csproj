@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="ArabBedouinHouse.cs" />
     <Compile Include="ArabBedouinTree.cs" />
-    <Compile Include="ArabBedouinWaterSource.cs" />
     <Compile Include="ArabItemFactory.cs" />
     <Compile Include="BangladeshiHouse.cs" />
     <Compile Include="BangladeshiItemFactory.cs" />
@@ -77,6 +76,7 @@
     <Compile Include="EgyptianTree.cs" />
     <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
