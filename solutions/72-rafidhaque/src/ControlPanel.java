@@ -118,8 +118,10 @@ public class ControlPanel extends Application {
         double x = mouseEvent.getX();
         double y = mouseEvent.getY();
         System.out.println(x+" "+y);
-        drawComponent.setX(x);
-        drawComponent.setY(y);
-        drawComponent.drawOuterLayer();
+        if (x + 24 <= 600 && y + 24 <= 400) {
+            drawComponent.setX(x);
+            drawComponent.setY(y);
+            drawComponent.drawOuterLayer();
+        }
     }
 }
