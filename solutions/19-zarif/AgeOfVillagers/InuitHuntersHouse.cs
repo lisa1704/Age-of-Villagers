@@ -7,11 +7,18 @@ namespace AgeOfVillagers
 {
     public class InuitHuntersHouse : CompositeShape
     {
-        private Point point;
+       
 
         public InuitHuntersHouse(Point point)
         {
-            addShape(new BaseArc(point, 24, 24));
+            addShape(new BaseArc(point, 40, 40,0,-180));
+
+
+           
+
+            addShape(new BaseLine(new Point(point.X, point.Y + 20), new Point(point.X + 40, point.Y + 20)));
+        
+        
         }
     }
 }
