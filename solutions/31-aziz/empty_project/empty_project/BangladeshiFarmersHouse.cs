@@ -13,9 +13,9 @@ namespace empty_project
             Pen pen = new Pen(Color.Black);
             Graphics graphics = panel.CreateGraphics();
 
-            graphics.DrawLine(pen, new PointF(axis.X + 8, axis.Y - 8), new PointF(axis.X, axis.Y));
-            graphics.DrawLine(pen, new PointF(axis.X + 8, axis.Y - 8), new PointF(axis.X + 16, axis.Y));
-            graphics.DrawRectangle(pen, axis.X, axis.Y, 16, 8);
+            graphics.DrawLine(pen, new PointF(axis.X + 10, axis.Y - 10), new PointF(axis.X, axis.Y));
+            graphics.DrawLine(pen, new PointF(axis.X + 10, axis.Y - 10), new PointF(axis.X + 20, axis.Y));
+            graphics.DrawRectangle(pen, axis.X, axis.Y, 20, 10);
         }
     }
 }
