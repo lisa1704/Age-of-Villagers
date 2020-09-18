@@ -8,13 +8,13 @@ namespace AgeOfVillagers
 {
     class CreateVillage : GameControlCommand
     {
-        public IGames pressedKey;
+        public IGames game;
         Panel drawing_panel;
         System.Windows.Forms.Label village_name;
         string sVillageName;
-        public CreateVillage(IGames pressedKey, Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
+        public CreateVillage(IGames game, Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
-            this.pressedKey = pressedKey;
+            this.game = game;
             this.village_name = village_name;
             this.drawing_panel = drawing_panel;
             this.sVillageName = sVillageName;
@@ -24,7 +24,7 @@ namespace AgeOfVillagers
 
         public void execute()
         {
-            pressedKey.createVillage(drawing_panel, village_name,sVillageName);
+            game.createVillage(drawing_panel, village_name,sVillageName);
         }
     }
 }
