@@ -33,9 +33,7 @@ namespace AgeOfVillagers
             Point rpt2 = new Point(MPt.X + 25, MPt.Y - 15);          
 
             AddComp(new Triangle(tpt2, tpt1, MPt));
-            AddComp(new Line(MPt, rpt2));
-            AddComp(new Line(tpt2, rpt1));
-            AddComp(new Line(rpt2, rpt1));
+            AddComp(new ShapeRectangle(MPt, rpt1, tpt2, rpt2));        
 
         }
     }

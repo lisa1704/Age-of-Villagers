@@ -36,6 +36,13 @@ namespace AgeOfVillagers
             AddComp(new Line(bottomLeft, bottomRight));
             AddComp(new Line(bottomRight, topRight));
         }
+        public ShapeRectangle(Point topLeft, Point bottomRight, Point topRight, Point bottomLeft)
+        {          
+            AddComp(new Line(topLeft, topRight));
+            AddComp(new Line(topLeft, bottomLeft));
+            AddComp(new Line(bottomLeft, bottomRight));
+            AddComp(new Line(bottomRight, topRight));
+        }
     }
      public class Triangle : CompositeShape
     {

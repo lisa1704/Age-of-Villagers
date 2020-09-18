@@ -15,9 +15,7 @@ namespace AgeOfVillagers
         {
             InuitHouse IglooHouse = new InuitHouse(pt);
             IglooHouse.Paint(g, p);
-      /*      ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y + 20));
-            r.Paint(g,p);*/
-            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+            
             return "Igloo";
         }
 
