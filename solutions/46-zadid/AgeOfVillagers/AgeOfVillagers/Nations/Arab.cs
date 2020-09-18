@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.House;
 using AgeOfVillagers.Nations;
+using AgeOfVillagers.Tree;
 using System.Diagnostics;
 using System.Drawing;
 
@@ -30,7 +31,12 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            
+            ArabianTree arabianTree = new ArabianTree();
+            TreeContext treeContext = new TreeContext(arabianTree, g, location, treeSize);
+
+            treeContext.TreeDrawing();
+
+            Debug.WriteLine("Drawing Arab Tree");
         }
 
         //Dead Code//
