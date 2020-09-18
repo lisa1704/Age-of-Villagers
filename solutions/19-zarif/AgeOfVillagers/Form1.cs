@@ -78,17 +78,7 @@ namespace AgeOfVillagers
 
         }
 
-        private void DrawPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (moving && x != -1 && y != -1)
-            {
-                g.DrawLine(pen, new Point(x, y),e.Location);
-                x = e.X;
-                y = e.Y;
-            }
-
-        }
-
+       
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {
