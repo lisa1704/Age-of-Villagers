@@ -1,6 +1,6 @@
 ﻿namespace AgeOfVillagers
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -44,7 +44,7 @@
             // 
             // drawingAreaPanel
             // 
-            this.drawingAreaPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.drawingAreaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.drawingAreaPanel.Location = new System.Drawing.Point(12, 12);
             this.drawingAreaPanel.Name = "drawingAreaPanel";
             this.drawingAreaPanel.Size = new System.Drawing.Size(600, 400);
@@ -167,14 +167,14 @@
             this.gameHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gameHeaderLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 420);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.drawingAreaPanel);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "Form1";
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
