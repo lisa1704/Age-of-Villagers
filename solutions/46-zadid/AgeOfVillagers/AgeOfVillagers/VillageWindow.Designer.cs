@@ -105,6 +105,7 @@ namespace AgeOfVillagers
             this.OpenButton.TabIndex = 7;
             this.OpenButton.Text = "Open Village";
             this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new EventHandler(this.OpenForm);
             // 
             // SaveButton
             // 
@@ -205,6 +206,8 @@ namespace AgeOfVillagers
         }
 
         
+
+
 
         #endregion
 

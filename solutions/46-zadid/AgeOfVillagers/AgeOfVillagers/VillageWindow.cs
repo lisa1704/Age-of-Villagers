@@ -58,7 +58,6 @@ namespace AgeOfVillagers
 
         private void NationtypeSelectedIndexChanged(object sender, EventArgs e)
         {
-            villname = villagename.Text;
             villtype = NationType.SelectedItem.ToString();
 
             Debug.WriteLine(villname);
@@ -67,7 +66,7 @@ namespace AgeOfVillagers
             NationCreator nationCreator = new NationCreator();
 
             nation = (Nation)nationCreator.GetNation(villtype);
-            nation.BackgoundColor(graphic);
+            ReDraw(myVillage);
         }
 
         private void RefreshForm(object sender, EventArgs e)
@@ -87,12 +86,32 @@ namespace AgeOfVillagers
             NationType.ResetText();
             NationType.Text = "Village type";
             drawpanel.Invalidate();
+            myVillage = new Village();
         }
 
         private void SaveForm(object sender, EventArgs e)
         {
+            villname = villagename.Text;
             myVillage.setName(villname);
             myVillageSerializer.saveState(myVillage);
+        }
+
+        private void OpenForm(object sender, EventArgs e)
+        {
+            myVillage = myVillageSerializer.openState();
+
+            villagename.Text = myVillage.villageName;
+
+            ReDraw(myVillage);
+        }
+
+        private void ReDraw(Village vi)
+        {
+            nation.BackgoundColor(graphic);
+
+            vi.housePosition.ForEach(house => nation.DrawHouse(graphic, house));
+            vi.treePosition.ForEach(tree => nation.DrawTree(graphic, tree));
+            vi.waterSourcePosition.ForEach(watersource => nation.DrawWaterResource(graphic, watersource));
         }
     }
 }
