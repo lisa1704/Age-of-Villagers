@@ -19,21 +19,6 @@ namespace AgeOfVillagers
 
         }
 
-        private void VillageNameInput_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         public string GetvillageNames()
         {
             return nametextbx.Text;
@@ -48,7 +33,8 @@ namespace AgeOfVillagers
 
             _parent.VillageName.Text = nametextbx.Text;
             _parent.NationName.Text = comboBox1.Text;
-
+           
+            
 
             this.Hide();
         }

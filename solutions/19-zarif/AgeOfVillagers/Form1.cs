@@ -29,39 +29,6 @@ namespace AgeOfVillagers
 
         }
 
-                     
-      
-        
-        private void DrawPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void houseradiobtn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void treeradiobtn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-      
-        private void WaterRadiobtn_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
@@ -71,24 +38,6 @@ namespace AgeOfVillagers
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Openvillagebtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SaveVillagebtn_Click(object sender, EventArgs e)
         {
@@ -106,6 +55,7 @@ namespace AgeOfVillagers
 
             NationManager manager = new NationManager(NationName.Text, DrawPanel);
             DrawPanel.BackColor = manager.getNation().GetTerritoryColor();
+
             if (Houseradiobtn.Checked)
             {
                 manager.getNation().GetHouse(_location).draw(g,pen);
@@ -139,10 +89,6 @@ namespace AgeOfVillagers
 
         }
 
-        private void DrawPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {

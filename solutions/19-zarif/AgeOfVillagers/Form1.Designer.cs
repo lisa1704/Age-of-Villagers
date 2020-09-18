@@ -53,8 +53,7 @@
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 0;
-            this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
-            this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseClick);
+         
             this.DrawPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseDown);
             this.DrawPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseMove);
             this.DrawPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseUp);
@@ -68,7 +67,6 @@
             this.Treeradiobtn.TabIndex = 3;
             this.Treeradiobtn.Text = "Tree";
             this.Treeradiobtn.UseVisualStyleBackColor = true;
-            this.Treeradiobtn.CheckedChanged += new System.EventHandler(this.treeradiobtn_CheckedChanged);
             // 
             // WaterRadiobtn
             // 
@@ -79,7 +77,6 @@
             this.WaterRadiobtn.TabIndex = 4;
             this.WaterRadiobtn.Text = "Water Source";
             this.WaterRadiobtn.UseVisualStyleBackColor = true;
-            this.WaterRadiobtn.CheckedChanged += new System.EventHandler(this.WaterRadiobtn_CheckedChanged);
             // 
             // NameOfApp
             // 
@@ -90,7 +87,6 @@
             this.NameOfApp.TabIndex = 5;
             this.NameOfApp.Text = "Age Of Villagers";
             this.NameOfApp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.NameOfApp.Click += new System.EventHandler(this.label1_Click);
             // 
             // NewVillagebtn
             // 
@@ -123,7 +119,6 @@
             this.Openvillagebtn.TabIndex = 8;
             this.Openvillagebtn.Text = "Open Village";
             this.Openvillagebtn.UseVisualStyleBackColor = true;
-            this.Openvillagebtn.Click += new System.EventHandler(this.Openvillagebtn_Click);
             // 
             // label2
             // 
@@ -141,7 +136,6 @@
             this.label1.Size = new System.Drawing.Size(210, 1);
             this.label1.TabIndex = 11;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label3
             // 
@@ -150,8 +144,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 1);
             this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label4
             // 
@@ -160,7 +152,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(1, 400);
             this.label4.TabIndex = 10;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // VillageName
             // 
@@ -170,8 +161,6 @@
             this.VillageName.Size = new System.Drawing.Size(196, 25);
             this.VillageName.TabIndex = 5;
             this.VillageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.VillageName.CausesValidationChanged += new System.EventHandler(this.Form1_Load);
-            this.VillageName.Click += new System.EventHandler(this.label1_Click);
             // 
             // NationName
             // 
@@ -181,7 +170,6 @@
             this.NationName.Size = new System.Drawing.Size(196, 25);
             this.NationName.TabIndex = 5;
             this.NationName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.NationName.Click += new System.EventHandler(this.label1_Click);
             // 
             // Houseradiobtn
             // 
@@ -192,7 +180,6 @@
             this.Houseradiobtn.TabIndex = 3;
             this.Houseradiobtn.Text = "House";
             this.Houseradiobtn.UseVisualStyleBackColor = true;
-            this.Houseradiobtn.CheckedChanged += new System.EventHandler(this.houseradiobtn_CheckedChanged);
             // 
             // Form1
             // 
@@ -217,7 +204,6 @@
             this.MinimumSize = new System.Drawing.Size(854, 466);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

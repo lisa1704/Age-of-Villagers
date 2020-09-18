@@ -41,7 +41,6 @@
             this.nametextbx.Name = "nametextbx";
             this.nametextbx.Size = new System.Drawing.Size(244, 23);
             this.nametextbx.TabIndex = 0;
-            this.nametextbx.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // vlgdemoname
             // 
@@ -75,7 +74,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ConfirmButton
             // 
@@ -104,7 +102,6 @@
             this.MinimumSize = new System.Drawing.Size(395, 170);
             this.Name = "VillageNameInput";
             this.Text = "VillageNameInput";
-            this.Load += new System.EventHandler(this.VillageNameInput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
