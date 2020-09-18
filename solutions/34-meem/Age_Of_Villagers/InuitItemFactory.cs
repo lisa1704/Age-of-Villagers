@@ -4,7 +4,11 @@
     {
         public override IVillageItem getItem(string button)
         {
-            throw new System.NotImplementedException();
+            if (button == "House")
+            {
+                return new InuitHunterHouse();
+            }
+            return null;
         }
     }
 }
