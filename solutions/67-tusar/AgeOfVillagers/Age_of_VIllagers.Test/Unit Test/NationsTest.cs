@@ -45,5 +45,21 @@ namespace Age_of_VIllagers.Test.Unit_Test
             AbstractPainter inpainter = new InuitPainter(new Panel());
             Assert.AreEqual(inpainter.getTreeType().GetType(), new NullTree().GetType());
         }
+
+        [TestMethod]
+        public void TestNationWaterSource()
+        {
+            AbstractPainter bdpainter = new BangladeshiPainter(new Panel());
+            Assert.AreEqual(bdpainter.getWSourceType().GetType(), new BangladeshiWaterSource().GetType());
+
+            AbstractPainter arpainter = new ArabPainter(new Panel());
+            Assert.AreEqual(arpainter.getWSourceType().GetType(), new NullWaterSource().GetType());
+
+            AbstractPainter egpainter = new EgyptianPainter(new Panel());
+            Assert.AreEqual(egpainter.getWSourceType().GetType(), new EgyptianWaterSource().GetType());
+
+            AbstractPainter inpainter = new InuitPainter(new Panel());
+            Assert.AreEqual(inpainter.getWSourceType().GetType(), new NullWaterSource().GetType());
+        }
     }
 }
