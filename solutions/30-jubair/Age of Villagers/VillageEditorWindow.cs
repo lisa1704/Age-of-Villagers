@@ -37,6 +37,7 @@ namespace Age_of_Villagers
         INation iNation;
         VillageState newVillage;
         VillageSave villageSave;
+        VillageOpen villageOpen;
         
 
 
@@ -49,6 +50,7 @@ namespace Age_of_Villagers
             InitializeComponent();
             newVillage = new VillageState(CreateNewVillageForm.village_naaam);
             villageSave = new VillageSave(newVillage);
+            villageOpen = new VillageOpen(newVillage);
 
         }
 
@@ -217,57 +219,7 @@ namespace Age_of_Villagers
 
         private void button_open_Click(object sender, EventArgs e)
         {
-            /* OpenFileDialog ofd = new OpenFileDialog();
-             ofd.Filter = ".aov|*.aov";
-             ofd.Title = "Save AOV File";
-             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-             {
-
-                 try
-                 {
-                     XmlSerializer xml_serializer =
-                         new XmlSerializer(villageSave.GetType());
-                     using (FileStream file_stream =
-                         new FileStream(ofd.FileName, FileMode.Open))
-                     {
-                         VillageSave new_villageSave =
-                             (VillageSave)xml_serializer.Deserialize(file_stream);
-                         villageSave = new_villageSave;
-                        //villageWindow.Refresh();
-                     }
-                 }
-                 catch (Exception ex)
-                 {
-                     MessageBox.Show(ex.Message);
-                 }*/
-           /* newVillage = villageSave.restoreState();
-            Refresh();
-            newVillage.repaint(graphics,iNation);*/
-
-
-            OpenFileDialog ofd = new OpenFileDialog();
-            //VillageState newVillage = new VillageState(CreateNewVillageForm.village_naaam);
-            string fileName;
-            string json;
-            string path;
-
-            ofd.Filter = "aov|*.aov";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                fileName = ofd.FileName;
-                VillageState newVillage = new VillageState(CreateNewVillageForm.village_naaam);
-
-
-                Stream stream = File.Open(fileName, FileMode.Open);
-                StreamReader stream_reader = new StreamReader(stream);
-                json = stream_reader.ReadLine();
-                stream_reader.Close();
-                JsonConvert.DeserializeObject<VillageState>(json);
-                Refresh();
-                newVillage.repaint(graphics, iNation);
-
-            }
-
+            newVillage = villageOpen.ReformVillage();
         }
 
         private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly
