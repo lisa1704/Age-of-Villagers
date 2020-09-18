@@ -20,14 +20,11 @@ namespace AgeOfVillagers
             ehouse.Draw(point, Drawingpanel);
         }
 
-        
-
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            EgyptianTree etree = new EgyptianTree(Drawingpanel);
+            etree.Draw(point, Drawingpanel);
         }
-
-   
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
@@ -39,4 +36,6 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
     }
+
+   
 }
