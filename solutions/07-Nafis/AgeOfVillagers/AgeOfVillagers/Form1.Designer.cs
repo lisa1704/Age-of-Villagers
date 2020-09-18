@@ -28,13 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.drawingAreaPanel = new System.Windows.Forms.Panel();
+            this.menuPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // drawingAreaPanel
+            // 
+            this.drawingAreaPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.drawingAreaPanel.Location = new System.Drawing.Point(12, 12);
+            this.drawingAreaPanel.Name = "drawingAreaPanel";
+            this.drawingAreaPanel.Size = new System.Drawing.Size(600, 400);
+            this.drawingAreaPanel.TabIndex = 12;
+            // 
+            // menuPanel
+            // 
+            this.menuPanel.Location = new System.Drawing.Point(618, 12);
+            this.menuPanel.Name = "panel1";
+            this.menuPanel.Size = new System.Drawing.Size(242, 400);
+            this.menuPanel.TabIndex = 13;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(872, 426);
+            this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.drawingAreaPanel);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel drawingAreaPanel;
+        private System.Windows.Forms.Panel menuPanel;
     }
 }
 
