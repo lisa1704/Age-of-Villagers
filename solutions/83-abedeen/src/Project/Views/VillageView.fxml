@@ -10,7 +10,7 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Controllers.VillageView_controller">
    <children>
-      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" />
+      <Pane fx:id="DrawingCanvas" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" />
       <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="297.0" style="-fx-background-color: #eae8ed;">
          <children>
             <Text fill="#5b5b5b" layoutX="74.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age of Villagers">
