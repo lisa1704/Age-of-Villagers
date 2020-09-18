@@ -10,12 +10,12 @@ namespace AgeOfVillagers
         Pen p = new Pen(Color.Green);
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            BDFarmersTree bdFarmersTree = new BDFarmersTree(point);
+            bdFarmersTree.Draw(g);
         }
         public void DrawHouse(Graphics g, Point point)
         {
-            BDFarmersHouse bdFarmersHouse = 
-                new BDFarmersHouse(new Point(point.X,point.Y), new Point(point.X-70,point.Y + 40), new Point(point.X+70,point.Y + 120));
+            BDFarmersHouse bdFarmersHouse = new BDFarmersHouse(point);
             bdFarmersHouse.Draw(g);
             /*g.DrawLine(p, point.X, point.Y, 100, 100);
             Rectangle rectangle = new Rectangle(new Point(point.X, point.Y), new Point(point.X + 15, point.Y + 25));
@@ -23,7 +23,8 @@ namespace AgeOfVillagers
         }
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            BDFarmersWatersource bdFarmersWS = new BDFarmersWatersource(point);
+            bdFarmersWS.Draw(g);
         }
     }
 }

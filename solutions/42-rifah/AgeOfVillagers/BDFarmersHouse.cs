@@ -7,10 +7,15 @@ namespace AgeOfVillagers
 {
     class BDFarmersHouse : Composite
     {
-        public BDFarmersHouse(Point Top, Point TopLeft, Point BottomRight)
+        public BDFarmersHouse(Point point)
         {
+            Point Top = new Point(point.X, point.Y);
+            Point TopLeft = new Point(point.X - 80, point.Y + 40);
+            Point BottomRight = new Point(point.X + 80, point.Y + 120);
+            Point TopRight = new Point(BottomRight.X, TopLeft.Y);
+
             AddComponent(new Rectangle(TopLeft, BottomRight));
-            AddComponent(new Triangle(Top, TopLeft, new Point(BottomRight.X, TopLeft.Y)));
+            AddComponent(new Triangle(Top, TopLeft, TopRight));
         }
     }
 }
