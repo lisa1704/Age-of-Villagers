@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace age_of_villagers
 {
@@ -84,7 +85,6 @@ namespace age_of_villagers
             nType = nations.Text;
             panel1.BackColor = n.CreateNation(nType).BackColor();
             panel1.Refresh();
-            //n.CreateNation(nType);
         }
 
         private void tree_Click(object sender, EventArgs e)
@@ -104,7 +104,13 @@ namespace age_of_villagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter write = new StreamWriter(File.Create(save.FileName));
+                write.Write(village.Text);
+                write.Dispose();
+            }
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -114,7 +120,14 @@ namespace age_of_villagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
+            OpenFileDialog open = new OpenFileDialog();
+            if(open.ShowDialog()==DialogResult.OK)
+            {
+                StreamReader read = new StreamReader(File.OpenRead(open.FileName));
 
+                village.Text = read.ReadToEnd();
+                read.Dispose();
+            }
         }
     }
 
