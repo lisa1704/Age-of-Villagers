@@ -12,12 +12,13 @@ namespace AgeOfVillagers
     public partial class DrawingWindow : Form
     {
         public static string VillageName;
-        private HouseShape house;
+        //private HouseShape house;
 
         
         public DrawingWindow()
         {
             InitializeComponent();
+            Nations nation = new Nations(Form1.VillageName, Drawingpanel);
             
         }
         private void DrawingWindow_Load(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace AgeOfVillagers
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
-            HouseShape house = new HouseShape(Drawingpanel);
+            BangladeshiFarmers bdhouse = new BangladeshiFarmers(Drawingpanel);
             TreeShape tree = new TreeShape(Drawingpanel);
             WaterSourceShape wsource = new WaterSourceShape(Drawingpanel);
 
@@ -69,7 +70,7 @@ namespace AgeOfVillagers
 
             if (radioButton2.Checked == true)
             {
-                house.Draw(P, Drawingpanel);
+                bdhouse.DrawHouse(P, Drawingpanel);
 
             }
             if (radioButton1.Checked == true)

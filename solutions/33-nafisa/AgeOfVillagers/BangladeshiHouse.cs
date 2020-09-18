@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class HouseShape : IShape
+    class BangladeshiHouse : IShape
     {
         private Panel Drawingpanel;
 
-        public HouseShape(Panel Drawingpanel)
+        public BangladeshiHouse(Panel Drawingpanel)
         {
             this.Drawingpanel = Drawingpanel;
         }
