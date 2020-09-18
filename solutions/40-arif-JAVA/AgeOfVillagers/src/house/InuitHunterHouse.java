@@ -6,4 +6,5 @@ public class InuitHunterHouse implements IHouse {
 
         System.out.println("nothing");
     }
+
 }

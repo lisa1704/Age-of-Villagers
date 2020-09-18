@@ -9,6 +9,11 @@ import javafx.scene.shape.ArcType;
 
 public class BDHouse implements IHouse {
     Canvas canvas;
+
+    public BDHouse(){
+        MyCanvas myCanvas = MyCanvas.getInstance();
+        this.canvas = myCanvas.getCanvas();
+    }
     @Override
     public void draw() {
 
@@ -24,4 +29,5 @@ public class BDHouse implements IHouse {
             }
         });
     }
+
 }

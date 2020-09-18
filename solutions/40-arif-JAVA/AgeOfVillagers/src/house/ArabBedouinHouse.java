@@ -6,4 +6,5 @@ public class ArabBedouinHouse implements IHouse {
 
         System.out.println("nothing");
     }
+
 }

@@ -6,4 +6,5 @@ public class EgyptKingHouse implements IHouse {
 
         System.out.println("nothing");
     }
+
 }

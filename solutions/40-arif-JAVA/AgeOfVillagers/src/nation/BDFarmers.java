@@ -1,5 +1,6 @@
 package nation;
 
+import house.BDHouse;
 import house.IHouse;
 import terrain.BDFarmerTerrain;
 import terrain.ITerrain;
@@ -12,6 +13,6 @@ public class BDFarmers implements INation {
 
     @Override
     public IHouse getHouse() {
-        return null;
+        return new BDHouse();
     }
 }

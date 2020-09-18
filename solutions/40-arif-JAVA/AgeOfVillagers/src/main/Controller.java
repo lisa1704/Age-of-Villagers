@@ -76,14 +76,14 @@ public class Controller {
         MyCanvas myCanvas = MyCanvas.getInstance();
         canvas = myCanvas.getCanvas();
 
-        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<javafx.scene.input.MouseEvent>() {
-
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
-            }
-        });
+//        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+//        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<javafx.scene.input.MouseEvent>() {
+//
+//            @Override
+//            public void handle(MouseEvent mouseEvent) {
+//                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,50,200,360, ArcType.OPEN);
+//            }
+//        });
 
         villageTypeList.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -94,7 +94,7 @@ public class Controller {
                 treeRB.setVisible(true);
                 houseRB.setVisible(true);
                 waterRB.setVisible(true);
-                houseRB.setSelected(true);
+                houseRB.setSelected(false);
                 treeRB.setSelected(false);
                 waterRB.setSelected(false);
                 saveVillageBTN.setVisible(true);
@@ -117,8 +117,8 @@ public class Controller {
         treeRB.setSelected(false);
         waterRB.setSelected(false);
 
-//        house = nationManager.getHouse();
-//        house.draw();
+        house = nationManager.getHouse();
+        house.draw();
     }
     @FXML
     void treeRBCon(ActionEvent actionEvent){
