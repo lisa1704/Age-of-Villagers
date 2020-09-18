@@ -16,7 +16,7 @@ namespace Age_Of_Villagers
             }
             else if (nation == "Inuit Hunters")
             {
-                return new BangladeshiItemFactory();
+                return new InuitItemFactory();
             }
             else if (nation == "Egyptian King")
             {
@@ -24,7 +24,7 @@ namespace Age_Of_Villagers
             }
             else if (nation == "Arab Bedouins")
             {
-                return new BangladeshiItemFactory();
+                return new ArabItemFactory();
             }
 
             return null;
