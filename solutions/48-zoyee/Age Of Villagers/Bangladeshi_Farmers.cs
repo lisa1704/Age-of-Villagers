@@ -23,11 +23,13 @@ namespace AgeOfVillagers
             //rec.Draw(g);
             //System.Drawing.Triangle triangle = new System.Drawing.Triangle(new Point(point.X - 5, point.Y + 10), new Point(point.X, point.Y), new Point(point.X + 15, point.Y));
             //Triangle.Draw(g);
-            BagladeshiFarmer_House bdhouse = new BagladeshiFarmer_House(new Point(point.X, point.Y), new Point(point.X - 50, point.Y * 10), new Point(point.X + 100, point.Y * 10));
+            BagladeshiFarmer_House bd_house = new BagladeshiFarmer_House(new Point(point.X, point.Y), new Point(point.X - 50, point.Y * 10), new Point(point.X + 100, point.Y * 10));
         }
         public void Draw_WaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            BangladeshiFarmer_WaterSource bd_ws = new BangladeshiFarmer_WaterSource(point);
+            bd_ws.Draw(g);
         }
     }
 }

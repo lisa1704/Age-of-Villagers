@@ -100,6 +100,7 @@ namespace Age_Of_Villagers
             foreach (Point point in waterSource_point)
             {
                 //g.DrawLine(p, point.X, point.Y, 100, 100);
+                //nationFactory.GetNation(village_type).Draw_WaterSource(g, point);
                 nationFactory.GetNation(village_type).Draw_WaterSource(g, point);
             }
         }
