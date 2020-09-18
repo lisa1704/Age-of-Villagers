@@ -1,27 +1,33 @@
 package project.Controllers;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import java.lang.String;
 
 import java.io.*;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import project.Utilities.Villages;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 
 
 public class VillageViewController implements Initializable {
-    @FXML public ChoiceBox NationDropDown;
+    @FXML public ComboBox NationDropDown = new ComboBox();
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
 
@@ -29,7 +35,7 @@ public class VillageViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Beduin"),("Egyptian Kings"),("Egyptian Knights"));
     }
 
     public void WaterSourceClicked(javafx.event.ActionEvent actionEvent) {
@@ -48,23 +54,14 @@ public class VillageViewController implements Initializable {
 
     public void SaveVillage(ActionEvent actionEvent) {
         String Filename = Village_Name.getText() + ".aov";
-        JSONObject obj = new JSONObject();
-        obj.put("Village_Name",Village_Name.getText());
-        obj.put("Nation",NationDropDown.getValue());
-
-//        FileWriter file = null;
-//        try {
-//            file = new FileWriter("SavedVillages/"+Filename);
-//            file.write(obj.toJSONString());
-//            file.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
+//        JSONObject obj = new JSONObject();
+//        obj.put("Village_Name",Village_Name.getText());
+//        obj.put("Nation",NationDropDown.getValue());
+        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
         try {
             FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(obj.toJSONString());
+            out.writeObject(villages);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -75,7 +72,7 @@ public class VillageViewController implements Initializable {
     public void OpenVillage(ActionEvent actionEvent) {
         File selectedFile = null;
         final JFrame iFRAME = new JFrame();
-        iFRAME.setAlwaysOnTop(true);    // ****
+        iFRAME.setAlwaysOnTop(true);
         iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         iFRAME.setLocationRelativeTo(null);
         iFRAME.requestFocus();
@@ -85,21 +82,20 @@ public class VillageViewController implements Initializable {
         iFRAME.dispose();
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             selectedFile = fileChooser.getSelectedFile();
-            // Display selected file in console
-            System.out.println(selectedFile.getAbsolutePath());
+            try {
+                FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
+                ObjectInputStream in = new ObjectInputStream(file);
+//                JSONObject obj = (JSONObject) in.readObject();
+                Villages villages = (Villages)in.readObject();
+
+                System.out.println(villages.VillageName);
+                System.out.println(villages.Nation);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         else {
             System.out.println("No File Selected!");
-        }
-
-
-        try {
-            FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
-            ObjectInputStream in = new ObjectInputStream(file);
-            JSONObject obj = (JSONObject) in.readObject();
-            System.out.println(obj.toJSONString());
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
     }
