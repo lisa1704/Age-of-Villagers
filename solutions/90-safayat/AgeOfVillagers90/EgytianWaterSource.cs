@@ -6,7 +6,7 @@ namespace AgeOfVillagers90
     {
         public EgytianWaterSource(Point mainPoint)
         {
-            Point topPoint = new Point(mainPoint.X + 75, mainPoint.Y+ 75);
+            Point topPoint = new Point(mainPoint.X + 12, mainPoint.Y+ 12);
             AddComponent(new ShapeEllipse(mainPoint, topPoint));
         }
     }
