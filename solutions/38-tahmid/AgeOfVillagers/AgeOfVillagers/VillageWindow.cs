@@ -118,9 +118,8 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.BD_NATION;
             Point point = new Point(e.X, e.Y);
-            IItem item = itemFactory.GetItem(point, selectedItem);
-            Shapes nationShapedItem = shapeFactory.GetShape(g, pen, point,selectedNation+selectedItem);
-            item.placeItem(nationShapedItem);
+            IItem item = itemFactory.GetItem(point, selectedItem,g,pen);
+            item.placeItem(selectedNation); ;
             itemList.Add(item);
             
             

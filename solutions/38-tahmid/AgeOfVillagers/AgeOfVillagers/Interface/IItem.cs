@@ -6,6 +6,6 @@ namespace AgeOfVillagers.Interface
 {
     interface IItem
     {
-        public void placeItem(Shapes shape);
+        public void placeItem(String nationHint);
     }
 }
