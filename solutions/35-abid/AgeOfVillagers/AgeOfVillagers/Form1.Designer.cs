@@ -1,4 +1,4 @@
-﻿namespace EmptyProject
+﻿namespace AgeOfVillagers
 {
     partial class Form1
     {
