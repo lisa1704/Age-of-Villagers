@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace empty_project
 {
     interface IHouse
     {
-        void DrawHouse(Axis axis, Panel panel);
+        void drawHouse(Axis axis, Panel panel);
     }
 }
