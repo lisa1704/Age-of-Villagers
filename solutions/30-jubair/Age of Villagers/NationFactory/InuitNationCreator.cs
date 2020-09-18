@@ -7,12 +7,20 @@ namespace Age_of_Villagers.NationFactory
 {
     class InuitNationCreator : AbstractNationCreator
     {
-        String nationName = "Inuit Hunter";
+        private String nationName = "Inuit Hunters";
 
         public string GetNationName
         {
-            get => nationName;
-            set => nationName = value;
+            get
+            {
+                return nationName;
+            }
+
+            set
+            {
+                if (value == "Inuit Hunters")
+                    nationName = value;
+            }
         }
 
         public override INation CreateNation()
