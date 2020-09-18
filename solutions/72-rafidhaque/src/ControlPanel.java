@@ -8,6 +8,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
+import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -63,15 +64,17 @@ public class ControlPanel extends Application {
         GridPane.setMargin(openButton, new Insets(0, 0, 0, 50));
 
         gridPane.getChildren().addAll(gameName, villageName, nationName, treeButton, houseButton, waterSourceButton, saveButton, newButton, openButton);
+        gridPane.setMaxSize(200,400);
+        gridPane.setMinSize(200,400);
 
 
         // Group Draw space
 
         Group drawSpace = new Group();
 
-        gridPane.setMaxSize(200,400);
-        gridPane.setMinSize(200,400);
+        Line line = new Line(0, 0, 600, 400);
 
+        drawSpace.getChildren().addAll(line);
 
         BorderPane layout = new BorderPane();
         layout.setRight(gridPane);

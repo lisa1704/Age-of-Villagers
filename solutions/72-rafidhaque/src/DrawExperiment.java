@@ -2,21 +2,26 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 public class DrawExperiment extends Application {
+    public DrawExperiment() {
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Group root = new Group();
 
-        Line line = new Line(200, 30, 400, 30);
+        int x1 = 200, y1 = 30, x2 = 300, y2 = 100;
 
-        root.getChildren().addAll(line);
-
+        Rectangle rectangle = new Rectangle(root, x1, y1, x2, y2);
+        Rectangle rectangle2 = new Rectangle(root, 230, 250, 10, 30);
+        rectangle.draw();
+        rectangle2.draw();
 
         Scene scene = new Scene(root, 400, 300, Color.AQUA);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 }
+
