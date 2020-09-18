@@ -8,11 +8,11 @@ namespace AgeOfVillagers
     public class NationManager
     {
         private string _nationtype;
-        Panel _Drawpanel;
-        public NationManager(string nationtype,Panel Drawpanel)
+      
+        public NationManager(string nationtype)
         {
             _nationtype = nationtype;
-            _Drawpanel = Drawpanel;
+           
         }
 
         public INation getNation()

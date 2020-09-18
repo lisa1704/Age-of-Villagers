@@ -32,7 +32,7 @@ namespace AgeOfVillagers
 
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
-            Form vlgname = new VillageNameInput(this);
+            Form vlgname = new VillageNameInput(this,DrawPanel);
             DrawPanel.Invalidate();
             vlgname.Show();
 
@@ -53,8 +53,8 @@ namespace AgeOfVillagers
 
             Point _location = new Point(x, y);
 
-            NationManager manager = new NationManager(NationName.Text, DrawPanel);
-            DrawPanel.BackColor = manager.getNation().GetTerritoryColor();
+            NationManager manager = new NationManager(NationName.Text);
+            
 
             if (Houseradiobtn.Checked)
             {
