@@ -132,7 +132,7 @@ namespace AgeOfVillagers
             this.radioButton3.Text = "WaterSource";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.WaterButton_CheckedChanged);
+            //this.radioButton3.CheckedChanged += new System.EventHandler(this.WaterButton_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -145,7 +145,7 @@ namespace AgeOfVillagers
             this.radioButton2.Text = "House";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.HouseButton_CheckedChanged);
+            //this.radioButton2.CheckedChanged += new System.EventHandler(this.HouseButton_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -158,7 +158,7 @@ namespace AgeOfVillagers
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeButton_CheckedChanged);
+            //this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeButton_CheckedChanged);
             // 
             // label1
             // 

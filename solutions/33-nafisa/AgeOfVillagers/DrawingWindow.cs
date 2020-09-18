@@ -13,33 +13,18 @@ namespace AgeOfVillagers
     {
         public static string VillageName;
         //private HouseShape house;
-
+        Nations nation;
         
         public DrawingWindow()
         {
             InitializeComponent();
-            Nations nation = new Nations(Form1.VillageName, Drawingpanel);
             
         }
         private void DrawingWindow_Load(object sender, EventArgs e)
         {
             label2.Text = Form1.VillageName;
             label3.Text = Form1.NationName;
-
-        }
-
-        private void TreeButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HouseButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WaterButton_CheckedChanged(object sender, EventArgs e)
-        {
+            //nation.getNation();
 
         }
 
@@ -62,26 +47,26 @@ namespace AgeOfVillagers
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
-            BangladeshiFarmers bd = new BangladeshiFarmers(Drawingpanel);
-            
+            //BangladeshiFarmers bd = new BangladeshiFarmers(Drawingpanel);
+            Nations nation = new Nations(Form1.NationName, Drawingpanel);
 
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
             {
-                bd.DrawHouse(P, Drawingpanel);
+                nation.getNation().DrawHouse(P, Drawingpanel);
 
             }
             if (radioButton1.Checked == true)
             {
 
-                bd.DrawTree(P, Drawingpanel);
+                nation.getNation().DrawTree(P, Drawingpanel);
                 
             }
             if (radioButton3.Checked == true)
             {
 
-                bd.DrawWaterSource(P, Drawingpanel);
+                nation.getNation().DrawWaterSource(P, Drawingpanel);
             }
         }
 

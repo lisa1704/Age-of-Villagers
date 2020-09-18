@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         protected Panel Drawingpanel;
         
