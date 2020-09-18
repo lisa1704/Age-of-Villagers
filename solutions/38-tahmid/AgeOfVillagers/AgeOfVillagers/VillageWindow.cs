@@ -2,6 +2,7 @@
 using AgeOfVillagers.FactoryClasses;
 using AgeOfVillagers.Interface;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace AgeOfVillagers
 
         EnvironmentFactory environmentFactory;
         Environment environment;
+
+        List<IItem> itemList;
         public VillageWindow()
         {
             InitializeComponent();
@@ -72,6 +75,7 @@ namespace AgeOfVillagers
             GameControlCommand onCommand = commandFactory.CreateCommand("New", game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
+            itemList = new List<IItem>();
             
            
 
@@ -102,6 +106,7 @@ namespace AgeOfVillagers
             IItem item = itemFactory.GetItem(point, selectedItem);
             Shapes nationShapedItem = shapeFactory.GetShape(g, pen, point,selectedNation+selectedItem);
             item.placeItem(nationShapedItem);
+            itemList.Add(item);
             
 
             
