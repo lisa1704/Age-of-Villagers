@@ -28,6 +28,7 @@ namespace AgeOfVillagers.IItem_Implementing_Classes
         public void placeItem(string nationHint)
         {
             shape = shapeFactory.GetShape(graphics, pen, point, nationHint);
+            shape.makeShape();
         }
     }
 }

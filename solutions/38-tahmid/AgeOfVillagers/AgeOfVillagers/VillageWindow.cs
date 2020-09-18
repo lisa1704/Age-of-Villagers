@@ -62,7 +62,10 @@ namespace AgeOfVillagers
 
         private void Save_Village(object sender, EventArgs e)
         {
-           
+            game = gameFactory.getGame();
+            GameControlCommand onCommand = commandFactory.GetCommand(Constants.SAVE_KEY,game,tbVillageName.Text,itemList);
+            GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
+            gameKeyInvoker.click();
 
         }
         Dummy pr = new Dummy();
@@ -119,7 +122,7 @@ namespace AgeOfVillagers
             selectedNation = Constants.BD_NATION;
             Point point = new Point(e.X, e.Y);
             IItem item = itemFactory.GetItem(point, selectedItem,g,pen);
-            item.placeItem(selectedNation); ;
+            item.placeItem(selectedNation+selectedItem); ;
             itemList.Add(item);
             
             

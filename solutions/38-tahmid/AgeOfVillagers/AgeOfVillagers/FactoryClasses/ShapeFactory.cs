@@ -14,7 +14,7 @@ namespace AgeOfVillagers
     {
         public  Shapes GetShape(Graphics g, Pen pen, Point point,string hint)
         {
-           
+            
 
             if (hint.Equals(Constants.BDTREE_HINT))
             {
