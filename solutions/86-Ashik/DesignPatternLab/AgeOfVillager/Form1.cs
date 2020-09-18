@@ -15,22 +15,12 @@ namespace AgeOfVillager
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            string selected = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            string myNation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
             //tree
             if (radioButton1.Checked)
             {
-                //EgyptianKingsTree et = new EgyptianKingsTree(g);
-                //et.draw(e);
-                if (selected == "Bangladeshi Farmers")
-                {
-                    BDFarmersTree bdt = new BDFarmersTree(g);
-                    bdt.draw(e);
-                }
-                else
-                {
-                    ArabBedouinsTree abt = new ArabBedouinsTree(g);
-                    abt.draw(e);
-                }
+                NationManager nm = new NationManager(myNation, g);
+                nm.Draw(e);
             }
             //house
             else if (radioButton2.Checked)
