@@ -24,5 +24,9 @@ namespace Age_of_villagers
             waterresource.paint(p, g);
         }
 
+        public Color get_backcolor()
+        {
+            return Color.PaleGoldenrod;
+        }
     }
 }

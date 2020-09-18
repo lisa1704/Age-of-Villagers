@@ -1,5 +1,7 @@
-using System;
 using Xunit;
+using Age_of_villagers;
+using System.Drawing;
+
 
 namespace AgeOfVillagers.Test
 {
@@ -12,5 +14,16 @@ namespace AgeOfVillagers.Test
             var expectedValue = 2;
             Assert.Equal(expectedValue, var);
         }
+
+        [Fact]
+        public void Test2()
+        {
+            INation nation = new Bangladeshi();
+            Color expected = Color.LightGreen;
+            Color actual = nation.get_backcolor();
+            Assert.Equal(expected,actual);
+        }
+
     }
+
 }
