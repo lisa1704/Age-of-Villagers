@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers.VillegeItems
 {
@@ -19,7 +20,8 @@ namespace AgeOfVillagers.VillegeItems
         }
         public void draw(Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            new Triangle(top, midLeft, midRight).draw(g, p);
+            new Rectangle(midLeft, midRight, bottomLeft, bottomRight).draw(g, p);
         }
 
 
