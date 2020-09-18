@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class InuitTree : AbstractTree
+    class InuitTree : Tree
     {
     }
 }

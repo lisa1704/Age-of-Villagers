@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class NullTree : AbstractTree
+    class NullTree : Tree
     {
     }
 }

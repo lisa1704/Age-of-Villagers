@@ -80,7 +80,6 @@ namespace Age_of_Villagers
         private void button5_Click(object sender, EventArgs e)
         {
             
-            refreshForm();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -90,20 +89,17 @@ namespace Age_of_Villagers
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            ArabPainter ap = new ArabPainter(panel1);
-
-
             if (radioButton2.Checked == true)
             {
-                ap.drawHouse(e.X, e.Y);
+                painter.drawHouse(e.X, e.Y);
             }
             else if (radioButton1.Checked == true)
             {
-                ap.drawTree(e.X, e.Y);
+                painter.drawTree(e.X, e.Y);
             }
             else if (radioButton3.Checked == true)
             {
-                ap.drawWaterSource(e.X, e.Y);
+                painter.drawWaterSource(e.X, e.Y);
             }
         }
 
@@ -126,19 +122,31 @@ namespace Age_of_Villagers
         {
             text = "Water";
         }
-        private void refreshForm()
-        {
-            comboBox1.Text = "Village Name";
-            Nation.Text = "Nation Name";
-            radioButton2.Checked = false;
-            radioButton1.Checked = false;
-            radioButton3.Checked = false;
-            this.Invalidate();
-        }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
             
+        }
+        AbstractPainter painter;
+
+        private void Nation_TextChanged(object sender, EventArgs e)
+        {
+            if (Nation.Text == "Arab Bedouin")
+            {
+                painter = new ArabPainter(panel1);
+            }
+            else if (Nation.Text == "Bangladeshi Farmers")
+            {
+                painter = new BangladeshiPainter(panel1);
+            }
+            else if (Nation.Text == "Egyptian Kings")
+            {
+                painter = new EgyptianPainter(panel1);
+            }
+            else if (Nation.Text == "Inuit Hunters")
+            {
+                painter = new InuitPainter(panel1);
+            }
         }
     }
 }

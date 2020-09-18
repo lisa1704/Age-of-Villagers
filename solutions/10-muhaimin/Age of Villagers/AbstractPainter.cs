@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Age_of_Villagers
 {
@@ -16,6 +17,7 @@ namespace Age_of_Villagers
         public AbstractPainter(Panel panel)
         {
             drawingSpace = panel;
+            paintTerrain();
         }
         public void drawVillage()
         {
@@ -49,5 +51,6 @@ namespace Age_of_Villagers
         public abstract void drawHouse(int x, int y);
         public abstract void drawTree(int x, int y);
         public abstract void drawWaterSource(int x, int y);
+        public abstract void paintTerrain();
     }
 }

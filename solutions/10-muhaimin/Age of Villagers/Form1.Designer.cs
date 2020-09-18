@@ -101,6 +101,7 @@
             this.Nation.TabIndex = 8;
             this.Nation.Text = "Nation";
             this.Nation.SelectedIndexChanged += new System.EventHandler(this.Nation_SelectedIndexChanged);
+            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
             // 
             // panel1
             // 

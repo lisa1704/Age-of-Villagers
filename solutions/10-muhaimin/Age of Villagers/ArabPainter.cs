@@ -13,6 +13,7 @@ namespace Age_of_Villagers
     {
         public ArabPainter(Panel panel) : base(panel)
         {
+
         }
         public override void drawHouse(int x, int y)
         {
@@ -35,6 +36,10 @@ namespace Age_of_Villagers
         public override void drawWaterSource(int x, int y)
         {
             throw new NotImplementedException();
+        }
+        public override void paintTerrain()
+        {
+            base.drawingSpace.BackColor = System.Drawing.Color.Yellow;
         }
     }
 }
