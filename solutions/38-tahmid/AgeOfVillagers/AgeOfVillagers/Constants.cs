@@ -8,7 +8,10 @@ namespace AgeOfVillagers
     abstract class Constants
     {
         public static string error_message = "Please enter your village name";
-        
+
+        //state elements
+        public static string VILLAGE_NAME_ELEMENT_HINT = "Village Name";
+        public static string VILLAGE_ITEMS_ELEMENT_HINT = "Village Item";
 
         //shape hints
         public static string RECT_HINT = "Rectangle";

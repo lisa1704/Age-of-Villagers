@@ -5,18 +5,11 @@ using System.Text;
 
 namespace AgeOfVillagers.IStateElements_implimentinf_folder
 {
-    class VillageItems : IStateElements
+    class Village_Name : IStateElements
     {
-        List<IItem> itemList;
-        public VillageItems() {
-            itemList = new List<IItem>();
-        }
-
-       
-        
         public void displayElements()
         {
-            
+           
         }
     }
 }
