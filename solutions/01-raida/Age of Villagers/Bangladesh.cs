@@ -27,7 +27,8 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Bdtree(p,30,30);
-            tree.draw(g, pen);
+            if(g!=null)
+                tree.draw(g, pen);
             return tree;
         }
 
@@ -35,7 +36,8 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Bdhouse(p,30,20);
-            house.draw(g, pen);
+            if (g != null)
+                house.draw(g, pen);
             return house;
         }
 
@@ -43,7 +45,8 @@ namespace Age_of_Villagers
         {
             river_points.Add(p);
             river = new Bdriver(p);
-            river.draw(g, pen);
+            if (g != null)
+                river.draw(g, pen);
             return river;
         }
 
