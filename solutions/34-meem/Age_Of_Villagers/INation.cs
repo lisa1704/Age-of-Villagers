@@ -46,8 +46,23 @@ namespace Age_Of_Villagers
             villageEditor.Panel1.BackColor = Color.YellowGreen;
         }
     }
+    public class EgyptianKing : INation
+    {
+        public void setRadiobutton(VillageEditorWindow villageEditor)
+        {
+            villageEditor.rdButtonHouse.Enabled = true;
+            villageEditor.rdButtonTree.Enabled = true;
+            villageEditor.rdButtonWaterSrc.Enabled = false;
 
-    
+        }
+
+        public void setTerrain(VillageEditorWindow villageEditor)
+        {
+            villageEditor.Panel1.BackColor = Color.Yellow;
+        }
+    }
+
+
 
 
 
