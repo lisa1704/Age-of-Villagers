@@ -4,16 +4,20 @@ using System.Drawing;
 
 namespace Age_of_Villagers.Test
 {
-    public class NationPropertyTest
+    public class BangladeshNationTest
     {
         INation nation= new Bangladesh();
         village villa,expected;
-        Point p = new Point(200, 200);
+        Point treepoint = new Point(200, 200);
+        Point riverpoint=new Point(300,300);
+        Point housepoint = new Point(400, 400);
         [SetUp]
         public void Setup()
         {
             expected.name = "abc";
-            expected.tree_points =new List<Point>() {p};
+            expected.tree_points =new List<Point>() { treepoint };
+            expected.river_points = new List<Point>() { riverpoint };
+            expected.house_points = new List<Point>() { housepoint };
         }
         [Test]
         public void Testname()
@@ -33,18 +37,34 @@ namespace Age_of_Villagers.Test
         [Test]
         public void testtree()
         {
-            IShape tree = nation.draw_tree(p);
-            IShape bdtree = new Bdtree(p, 30, 30);
+            IShape tree = nation.draw_tree(treepoint);
+            IShape bdtree = new Bdtree(treepoint, 30, 20);
             bdtree.Equals(tree);
         }
         [Test]
+        public void testriver()
+        {
+            IShape river = nation.draw_river(riverpoint);
+            IShape bdriver = new Bdriver(riverpoint);
+            bdriver.Equals(river);
+        }
+        [Test]
+        public void testhouse()
+        {
+            IShape house = nation.draw_house(housepoint);
+            IShape bdhouse = new Bdhouse(housepoint, 50,50);
+            bdhouse.Equals(house);
+        }
+
+        [Test]
         public void testsaving()
         {
-
-            nation.set_villagename("abc");
-            nation.draw_house(new Point(200, 200));
+            INation Bd = new Bangladesh();
+            Bd.draw_house(housepoint);
+            Bd.draw_river(riverpoint);
+            Bd.draw_tree(treepoint);
             ICommandVillage save = new SaveVillage();
-            villa=save.execute("D:\\game.aov", nation);
+            villa=save.execute("D:\\game.aov", Bd);
             expected.Equals(villa);
         }
         [Test]

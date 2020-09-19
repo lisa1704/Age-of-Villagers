@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    class Eghouse:house
+    public class Eghouse:house
     {
         public Eghouse(Point p, int length, int width):base(p,length,width)
         { }
