@@ -11,11 +11,12 @@ namespace Age_of_villagers
     {
         public Inuit_house(Point mptop)
         {
-            Point outtop = new Point(mptop.X - 50, mptop.Y - 50);
-            Point lpbottom = new Point(mptop.X - 75, mptop.Y);
-            Point rpbottom = new Point(mptop.X + 75, mptop.Y);
-            AddComponent(new obj_arc(mptop, 50, 50, 180, 180));
-            AddComponent(new obj_arc(outtop, 150, 150, 180, 180));
+            Point outtop = new Point(mptop.X - 12, mptop.Y - 12);
+            Point lpbottom = new Point(mptop.X - 12, mptop.Y);
+            Point rpbottom = new Point(mptop.X + 12, mptop.Y);
+            Point mpmid = new Point(mptop.X - 4, mptop.Y - 4);
+            AddComponent(new obj_arc(mpmid, 8, 8, 180, 180));
+            AddComponent(new obj_arc(outtop, 24, 24, 180, 180));
             AddComponent(new obj_line(lpbottom, rpbottom));
         }
     }
