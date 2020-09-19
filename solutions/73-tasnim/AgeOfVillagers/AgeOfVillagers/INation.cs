@@ -9,10 +9,10 @@ namespace AgeOfVillagers
 {
     interface INation
     {
-        void Draw_House(Graphics g, int x, int y);
-        void Draw_Tree(Graphics g, int x, int y);
-        void Draw_WaterSource(Graphics g, int x, int y);
-        void Paint_Terrain();
+        void Draw_House(Graphics g, Point p);
+        void Draw_Tree(Graphics g, Point p );
+        void Draw_WaterSource(Graphics g, Point p);
+        Color GetColor();
     }
 }
 
