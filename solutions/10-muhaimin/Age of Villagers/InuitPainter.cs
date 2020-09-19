@@ -15,7 +15,7 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            Pen pen = new Pen(Color.Red);
+            Pen pen = new Pen(Color.Brown);
             Graphics elem = drawingSpace.CreateGraphics();
             float startAngle = 0.0F;
             float sweepAngle = -180.0F;

@@ -17,25 +17,41 @@ namespace Age_of_Villagers
         }
         public override void drawHouse(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Blue);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("ArabHouse", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            //draw triangle
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 4, y - 8));
+            elem.DrawLine(pen, new PointF(x - 4, y - 8), new PointF(x - 8, y));
+            elem.DrawLine(pen, new PointF(x, y), new PointF(x - 8, y));
+
+            //draw square
+            elem.DrawLine(pen, new PointF(x - 4, y - 8), new PointF(x - 8, y - 8));
+            elem.DrawLine(pen, new PointF(x - 8, y), new PointF(x - 12, y));
+            elem.DrawLine(pen, new PointF(x - 8, y - 8), new PointF(x - 12, y));
         }
 
         public override void drawTree(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Blue);
-            Graphics elem = base.drawingSpace.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            elem.DrawString("ArabTree", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            //drawing the rectangle
+            elem.DrawRectangle(pen, x, y, 2, 12);
+
+            //drawng the branches
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 1, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 4, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 6, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x + 8, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 3, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 5, y - 12));
+            elem.DrawLine(pen, new PointF(x + 1, y), new PointF(x - 7, y - 12));
         }
 
         public override void drawWaterSource(int x, int y)
         {
-            throw new NotImplementedException();
+            
         }
         public override void paintTerrain()
         {

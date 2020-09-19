@@ -19,7 +19,7 @@ namespace Age_of_Villagers
             Console.WriteLine(villageSerialized);
         }
         public Village openState(string aovFile)
-        {
+        { 
             string json = System.IO.File.ReadAllText(aovFile);
             return JsonConvert.DeserializeObject<Village>(json);
         }
