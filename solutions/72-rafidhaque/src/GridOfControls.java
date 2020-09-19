@@ -1,6 +1,8 @@
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -39,10 +41,15 @@ public class GridOfControls {
         Label villageName = new Label("Bangladesh");
         Label nationName = new Label("Bangladeshi");
 
-        Button treeButton = new Button("Tree");
-        Button houseButton = new Button("House");
-        Button waterSourceButton = new Button("Water Source");
+        ToggleGroup tg = new ToggleGroup();
 
+        RadioButton treeButton = new RadioButton("Tree");
+        RadioButton houseButton = new RadioButton("House");
+        RadioButton waterSourceButton = new RadioButton("Water Source");
+
+        treeButton.setToggleGroup(tg);
+        houseButton.setToggleGroup(tg);
+        waterSourceButton.setToggleGroup(tg);
 
         Button saveButton = new Button("Save");
         Button newButton = new Button("New");
@@ -53,15 +60,14 @@ public class GridOfControls {
         GridPane.setConstraints(nationName, 0, 2);
 
         GridPane.setConstraints(treeButton, 0, 8);
-        GridPane.setConstraints(houseButton, 0, 8);
-        GridPane.setMargin(houseButton, new Insets(0, 0, 0, 50));
-        GridPane.setConstraints(waterSourceButton, 0, 9);
+        GridPane.setConstraints(houseButton, 0, 9);
+        GridPane.setConstraints(waterSourceButton, 0, 10);
         waterSourceButton.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
-        GridPane.setConstraints(saveButton, 0, 13);
+        GridPane.setConstraints(saveButton, 0, 14);
         saveButton.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        GridPane.setConstraints(newButton, 0, 14);
-        GridPane.setConstraints(openButton, 0, 14);
+        GridPane.setConstraints(newButton, 0, 15);
+        GridPane.setConstraints(openButton, 0, 15);
         GridPane.setMargin(openButton, new Insets(0, 0, 0, 50));
 
         gridPane.getChildren().addAll(gameName, villageName, nationName, treeButton, houseButton, waterSourceButton, saveButton, newButton, openButton);
