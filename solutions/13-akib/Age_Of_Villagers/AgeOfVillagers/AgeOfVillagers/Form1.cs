@@ -12,9 +12,52 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        private string text = "";
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            text = text + "Adding a New Tree...";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            text = text + "Adding a New House...";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            text = text + "Adding a New Water Resource...";
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            text = text + "Saving Your Village...";
+        }
+
+        private void NewVillageButton_Click(object sender, EventArgs e)
+        {
+            text = text + "Creating New Village...";
+        }
+
+        private void OpenVillageButton_Click(object sender, EventArgs e)
+        {
+            text = text + "Opening Your Village...";
+        }
+
+        public string getStatus()
+        {
+            return text;
+        }
+
     }
 }

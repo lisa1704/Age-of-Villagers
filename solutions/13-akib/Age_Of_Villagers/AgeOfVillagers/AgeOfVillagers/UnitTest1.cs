@@ -9,6 +9,7 @@ namespace AgeOfVillagers
         [TestMethod]
         public void TestMethod1()
         {
+            
         }
     }
 }
