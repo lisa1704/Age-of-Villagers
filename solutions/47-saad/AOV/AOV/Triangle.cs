@@ -9,11 +9,11 @@ namespace AOV
 {
     class Triangle : CompoundShape
     {
-        public Triangle(Point x, Point y, Point z)
+        public Triangle(Point x1, Point x2, Point x3)
         {
-            addShape(new DrawLine(x, y));
-            addShape(new DrawLine(y, z));
-            addShape(new DrawLine(z, x));
+            addShape(new DrawLine(x1, x2));
+            addShape(new DrawLine(x2, x3));
+            addShape(new DrawLine(x3, x1));
         }
     }
 }
