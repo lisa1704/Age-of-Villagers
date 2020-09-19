@@ -22,14 +22,14 @@ namespace Age_of_villagers
     {
         public Egyptian_tree(Point mptop)
         {
-            Point p1 = new Point(mptop.X + 15, mptop.Y - 25);
-            Point p2 = new Point(mptop.X - 15, mptop.Y - 35);
-            Point p3 = new Point(mptop.X + 40, mptop.Y - 50);
-            Point p4 = new Point(mptop.X + 15, mptop.Y - 50);
-            Point p5 = new Point(mptop.X + 40, mptop.Y - 30);
-            Point p6 = new Point(mptop.X - 5, mptop.Y - 60);
-            Point p7 = new Point(mptop.X - 25, mptop.Y - 60);
-            Point p8 = new Point(mptop.X - 40, mptop.Y - 50);
+            Point p1 = new Point(mptop.X + 5, mptop.Y - 8);
+            Point p2 = new Point(mptop.X - 5, mptop.Y - 11);
+            Point p3 = new Point(mptop.X + 13, mptop.Y - 16);
+            Point p4 = new Point(mptop.X + 5, mptop.Y - 16);
+            Point p5 = new Point(mptop.X + 13, mptop.Y - 10);
+            Point p6 = new Point(mptop.X - 1, mptop.Y - 19);
+            Point p7 = new Point(mptop.X - 8, mptop.Y - 19);
+            Point p8 = new Point(mptop.X - 13, mptop.Y - 16);
             AddComponent(new obj_line(mptop, p1));
             AddComponent(new obj_line(mptop, p2));
             AddComponent(new obj_line(p1, p3));
