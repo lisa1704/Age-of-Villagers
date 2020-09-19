@@ -50,26 +50,23 @@ namespace AgeOfVillagers
         {
             
 
-            State stateModel = new State()
+            State currentState = new State()
             {
                 VillageName = villageName,
-                ItemList=itemList
+                DrawnItemsInformationList=drawnItemsInfoList
 
             };
 
-            // Convert BlogSites object to JOSN string format  
-            string jsonData = JsonConvert.SerializeObject(stateModel);
+            
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "save village|*.aov";
             saveFileDialog1.Title = "Save village";
             saveFileDialog1.ShowDialog();
-            
-            if (saveFileDialog1.FileName != "")
-            {
-                var dataString = JsonConvert.SerializeObject(stateModel, Formatting.Indented);
-                System.IO.File.WriteAllText(saveFileDialog1.FileName, dataString);
-            }
+            JsonConversion objectToJson = new JsonConversion();
+            objectToJson.serialize(currentState, saveFileDialog1.FileName);
+
+           
         }
     }
 }
