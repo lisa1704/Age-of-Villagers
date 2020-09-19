@@ -5,19 +5,19 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class BanglaFarmers : INation
+    class Egyptians : INation
     {
-        public void DrawHouse()
+        public void DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }

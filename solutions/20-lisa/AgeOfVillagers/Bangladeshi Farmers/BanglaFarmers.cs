@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Arabs : INation
+    class BanglaFarmers : INation
     {
-        public void DrawHouse()
+        Pen pen = new Pen(Color.Green);
+        public void DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            BanglaTree bdTree = new BanglaTree(point);
+            bdTree.Draw(graphics, pen);
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }

@@ -35,7 +35,7 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                nationFactory.GetNation(vName).DrawTree(graphics,point)
+                nationFactory.GetNation(vName).DrawTree(graphics, point);
             }
             foreach (Point point in house_point)
             {

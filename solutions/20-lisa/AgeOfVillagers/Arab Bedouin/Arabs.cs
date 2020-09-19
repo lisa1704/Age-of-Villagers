@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Egyptians : INation
+    class Arabs : INation
     {
-        public void DrawHouse()
+        public void DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
