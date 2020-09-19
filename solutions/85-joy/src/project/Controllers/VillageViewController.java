@@ -13,15 +13,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+import javafx.scene.shape.*;
+
 import java.lang.String;
 
 import java.io.*;
 import java.net.URL;
 import java.util.*;
 
-import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import project.Utilities.Villages;
@@ -49,8 +48,7 @@ public class VillageViewController implements Initializable {
                     DrawPane.getChildren().addAll(line);
                 }
                 else if(Flag == 1){
-                    Circle circle = new Circle(event.getSceneX(),event.getSceneY(),10,Color.GRAY);
-                    DrawPane.getChildren().addAll(circle);
+                    DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
                 }
                 else if(Flag == 2){
                     DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
@@ -143,5 +141,28 @@ public class VillageViewController implements Initializable {
 
         DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6);
 
+    }
+
+    public void DrawTree(double x1,double y1,double width, double height){
+        //Top Circle
+        Arc arc = new Arc();
+        arc.setCenterX(x1);
+        arc.setCenterY(y1);
+        arc.setRadiusX(width/2.0);
+        arc.setRadiusY((height/2.0)-3);
+        arc.setStartAngle(0.0);
+        arc.setLength(100000.0);
+        arc.setType(ArcType.OPEN);
+        arc.setStroke(Color.BLACK);
+        arc.setFill(Color.TRANSPARENT);
+
+        //The Rectangle
+
+        Line line1 = new Line(x1-1,y1,x1+1,y1);
+        Line line2 = new Line(x1-1,y1,x1-1,y1+15);
+        Line line3 = new Line(x1-1,y1+15,x1+1,y1+15);
+        Line line4 = new Line(x1+1,y1+15,x1+1,y1);
+
+        DrawPane.getChildren().addAll(arc,line1,line2,line3,line4);
     }
 }
