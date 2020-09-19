@@ -13,7 +13,7 @@ namespace age_of_villagers_Test1
             NationFactory nation = new NationFactory();
             INation type = nation.CreateNation("Arab");
             Color color = type.BackColor();
-            Assert.AreEqual(color,Color.Yellow);
+            Assert.AreEqual(color,Color.Khaki);
         }
         [TestMethod()]
         public void test2()
@@ -29,7 +29,7 @@ namespace age_of_villagers_Test1
             NationFactory nation = new NationFactory();
             INation type = nation.CreateNation("Egypt");
             Color color = type.BackColor();
-            Assert.AreEqual(color, Color.GreenYellow);
+            Assert.AreEqual(color, Color.Yellow);
         }
         [TestMethod()]
         public void test4()
@@ -38,6 +38,14 @@ namespace age_of_villagers_Test1
             INation type = nation.CreateNation("Inuit");
             Color color = type.BackColor();
             Assert.AreEqual(color, Color.Snow);
+        }
+        [TestMethod()]
+        public void test5()
+        {
+            NationFactory nation = new NationFactory();
+            INation type = nation.CreateNation("NoNation");
+            Color color = type.BackColor();
+            Assert.AreEqual(color, Color.Empty);
         }
     }
 }
