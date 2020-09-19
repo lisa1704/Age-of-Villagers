@@ -1,8 +1,9 @@
 ﻿using System;
 
-public class Class1
+namespace AgeOfVillagers
 {
-	public Class1()
+	public interface IVillageItem
 	{
+		void Draw(Point e, Graphics g, Pen p);
 	}
 }
