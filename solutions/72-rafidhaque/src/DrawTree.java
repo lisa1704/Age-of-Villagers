@@ -30,7 +30,6 @@ public class DrawTree implements IDrawComponent{
     @Override
     public void drawOuterLayer() {
         outerArea = new Rectangle(g, x, y, x + 16, y + 24);
-        draw();
         outerArea.draw();
     }
 

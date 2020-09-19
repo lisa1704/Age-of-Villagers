@@ -22,7 +22,7 @@ public class ShowWindow extends Application {
     BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
 
     DrawHouse house = bangladeshiFarmers.house;
-    DrawTree tree = new DrawTree(drawSpace);
+    DrawTree tree = bangladeshiFarmers.tree;
     DrawWater water = new DrawWater(drawSpace, 24, 16);
     public GridOfControls gridOfControls = new GridOfControls(house, tree, water);
 

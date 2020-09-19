@@ -5,9 +5,11 @@ public class BangladeshiFarmers implements INation {
 
     Group drawSpace;
     DrawHouse house;
+    DrawTree tree;
     public BangladeshiFarmers(Group drawSpace) {
         this.drawSpace = drawSpace;
         house = new BangladeshiFarmersHouse(drawSpace);
+        tree = new BangladeshiFarmersTree(drawSpace);
     }
 
     @Override
