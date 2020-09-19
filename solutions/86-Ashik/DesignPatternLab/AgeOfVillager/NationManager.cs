@@ -27,5 +27,10 @@ namespace AgeOfVillager
             INation nation = nationFactory.GetNation(myNation);
             nation.drawHouse(e);
         }
+        public void DrawWaterSource(MouseEventArgs e)
+        {
+            INation nation = nationFactory.GetNation(myNation);
+            nation.drawWaterSource(e);
+        }
     }
 }

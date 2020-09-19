@@ -28,7 +28,8 @@ namespace AgeOfVillager
 
         public void drawWaterSource(MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            BDFarmersWaterSource bDFarmersWaterSource = new BDFarmersWaterSource(g);
+            bDFarmersWaterSource.draw(e);
         }
     }
 }

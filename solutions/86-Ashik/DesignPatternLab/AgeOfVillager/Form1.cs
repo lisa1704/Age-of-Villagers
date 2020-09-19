@@ -32,10 +32,7 @@ namespace AgeOfVillager
             //water source
             else if (radioButton3.Checked)
             {
-                //EgyptianKingsWaterSource ews = new EgyptianKingsWaterSource(g);
-                //ews.draw(e);
-                BDFarmersWaterSource bdwh = new BDFarmersWaterSource(g);
-                bdwh.draw(e);
+                nationManager.DrawWaterSource(e);
             }
         }
 
