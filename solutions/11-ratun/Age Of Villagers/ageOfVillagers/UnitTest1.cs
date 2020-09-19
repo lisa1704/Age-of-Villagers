@@ -9,8 +9,8 @@ namespace ageOfVillagers
         [TestMethod]
         public void TestMethod1()
         {
-            MenuForm m = new MenuForm;
-            Assert.AreEqual("", m.GetVillageName());
+            MenuForm m = new MenuForm();
+            Assert.AreEqual("", m.GetDrawingState());
         }
     }
 }

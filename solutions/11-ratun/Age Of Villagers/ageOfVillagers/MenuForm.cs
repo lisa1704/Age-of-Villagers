@@ -12,7 +12,7 @@ namespace ageOfVillagers
 {
     public partial class MenuForm : Form
     {
-        String text="";
+        private String text="";
         public MenuForm()
         {
             InitializeComponent();
@@ -26,16 +26,19 @@ namespace ageOfVillagers
         private void button2_Click(object sender, EventArgs e)
         {
             //ageOfVillagers.save();
+            text += "Saving the village. ";
         }
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
             //ageOfVillagers.Load();
+            text += "Loading the village. ";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            text = "Tree";
+            text += "Adding a tree. ";
         }
 
         private void VillageName_TextChanged(object sender, EventArgs e)
@@ -50,26 +53,32 @@ namespace ageOfVillagers
 
         private void House_Click(object sender, EventArgs e)
         {
-            text = "House";
+            text += "Adding a house. ";
         }
 
         private void Water_Click(object sender, EventArgs e)
         {
-            text = "Water";
+            text += "Adding new Water Source. ";
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+            text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
+            text += "Opening the village. ";
             //ageOfVillagers.open(List<Village>);
         }
         public String GetVillageName()
         {
             return VillageName.Text;
+        }
+        public String GetDrawingState()
+        {
+            return text;
         }
     }
 }
