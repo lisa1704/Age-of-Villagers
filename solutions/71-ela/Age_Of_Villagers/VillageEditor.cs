@@ -56,7 +56,7 @@ public partial class AgeOfVillagers : Form
 
         // open the village with selected nation
 
-        OpenVillage(village, drawingSpaceNation);
+        village.OpenVillage(village, drawingSpaceNation,g);
 
 
 
@@ -89,7 +89,7 @@ public partial class AgeOfVillagers : Form
         village.VillageName = villageNameEditor.Text;
 
         // connert the village object in Json
-        fileManager.saveVillage(village);
+        fileManager.SaveVillage(village);
 
 
 
@@ -98,13 +98,13 @@ public partial class AgeOfVillagers : Form
     //// open the village.json from the machine
     private void buttonOpenVillage_Click(object sender, EventArgs e)
     {
-        village = fileManager.openVillage();
+        village = fileManager.LoadVillage();
 
 
         // Open the uploaded village in the DrawingSpace
         villageNameEditor.Text = village.villageName;
 
-        OpenVillage(village, drawingSpaceNation);
+        village.OpenVillage(village, drawingSpaceNation,g);
 
 
 
@@ -116,40 +116,7 @@ public partial class AgeOfVillagers : Form
 
 
     // Open a villege from village object and selected nation
-    private void OpenVillage(Village village, Nation nation)
-    {
-        try
-        {
-
-            drawingSpaceNation.SetBackground(g);
-
-
-
-            // Draw village items from saved item position in the village object
-
-
-            village.housePosition.ForEach(house => drawingSpaceNation.DrawHouse(g, house));
-            village.treePosition.ForEach(tree => drawingSpaceNation.DrawTree(g, tree));
-            village.waterSoucePosition.ForEach(waterSource => drawingSpaceNation.DrawWaterSource(g, waterSource));
-
-
-        }
-        catch (Exception e)
-        {
-            string message = "Select Nation to Open The Village";
-            MessageBox.Show(message);
-
-
-
-
-
-        }
-
-
-
-
-
-    }
+   
 
     // Build Nation from selected nation name
 
@@ -203,5 +170,10 @@ public partial class AgeOfVillagers : Form
 
 
     }
-}
+
+        private void drawingSpace_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

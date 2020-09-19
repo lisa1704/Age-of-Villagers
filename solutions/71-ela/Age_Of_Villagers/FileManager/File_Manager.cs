@@ -12,7 +12,7 @@ namespace Age_Of_Villagers.FileManager
 public class File_Manager
 {
 
-    public void saveVillage(Village village)
+    public void SaveVillage(Village village)
     {
         var jsonVillage = JsonConvert.SerializeObject(village);
 
@@ -48,7 +48,7 @@ public class File_Manager
 
     }
 
-    public Village openVillage()
+    public Village LoadVillage()
     {
         Village village;
         OpenFileDialog openFileDialog1 = new OpenFileDialog
