@@ -28,7 +28,7 @@ namespace AgeOfVillager
 
         public void drawWaterSource(MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Bedouin villages do not build their own water source");
         }
     }
 }
