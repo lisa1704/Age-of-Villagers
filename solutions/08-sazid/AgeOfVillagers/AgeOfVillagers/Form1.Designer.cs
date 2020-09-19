@@ -94,10 +94,11 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.MinimumSize = new System.Drawing.Size(600, 400);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 495);
+            this.panel1.Size = new System.Drawing.Size(633, 497);
             this.panel1.TabIndex = 6;
             // 
             // Form1
