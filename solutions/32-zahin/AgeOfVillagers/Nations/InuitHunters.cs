@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Black);
         public InuitHunters()
         {
 
@@ -38,6 +38,10 @@ namespace AgeOfVillagers
             var message = new StringBuilder();
             MessageBox.Show("Inuit Hunters relies on natural water sources so it is not possible to place water sources");
 
+        }
+        public Color DrawTerrain()
+        {
+            return Color.White;
         }
     }
 }

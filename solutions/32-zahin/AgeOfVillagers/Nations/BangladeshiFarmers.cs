@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
     {
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Black);
         public BangladeshiFarmers()
         {
         }
@@ -59,6 +59,10 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p6, p7);
             g.DrawLine(pen, p7, p8);
             g.DrawLine(pen, p8, point);
+        }
+        public Color DrawTerrain()
+        {
+            return Color.PaleGreen;
         }
     }
 }

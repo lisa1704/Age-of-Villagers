@@ -12,7 +12,7 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : INation
     {
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Black);
          public ArabBedouin()
         {
 
@@ -52,6 +52,10 @@ namespace AgeOfVillagers
         public void DrawWaterSource(Graphics g, Point point)
         {
             MessageBox.Show("Bedouin villages do not build their own water source");
+        }
+        public Color DrawTerrain()
+        {
+            return Color.LightGoldenrodYellow;
         }
     }
 }

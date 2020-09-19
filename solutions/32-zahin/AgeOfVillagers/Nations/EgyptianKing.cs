@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 {
     class EgyptianKing : INation
     {
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Black);
         public EgyptianKing()
         {
 
@@ -52,6 +52,10 @@ namespace AgeOfVillagers
         {
             Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
             circle.DrawShape();
+        }
+        public Color DrawTerrain()
+        {
+            return Color.Gold;
         }
     }
 }
