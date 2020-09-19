@@ -28,4 +28,9 @@ public class DrawWater implements IDrawComponent{
         outerArea = new Rectangle(g, x, y, x + 24, y + 24);
         outerArea.draw();
     }
+
+    @Override
+    public String toString() {
+        return "DrawWater";
+    }
 }

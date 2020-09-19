@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 public class ShowWindow extends Application {
     public Stage window;
-    public IDrawComponent nowDrawing;
 
     public MouseClickManager mouseClickManager = new MouseClickManager();
 
     Group drawSpace = new Group();
-    ArrayList<StateOfComponent> stateOfComponents = null;
-    ArrayList<ArrayList<StateOfComponent>> previousStatesOfComponents = null;
+
+    StateOfComponent stateOfComponent = null;
+    ArrayList<StateOfComponent> stateOfComponents = new ArrayList<StateOfComponent>();
 
     DrawHouse house = new DrawHouse(drawSpace);
     DrawTree tree = new DrawTree(drawSpace);
@@ -50,22 +50,17 @@ public class ShowWindow extends Application {
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
-                stateOfComponents.add(mouseClickManager.getStateOfComponent());
+                stateOfComponent = mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
+                stateOfComponents.add(stateOfComponent);
             }
         });
 
-<<<<<<< HEAD
-
         gridOfControls.newButton.setOnAction(event -> {
-            previousStatesOfComponents.add(stateOfComponents);
             drawSpace.getChildren().clear();
             Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
             newRectangle.draw();
         });
 
-=======
->>>>>>> parent of 64459a6e... #4 Pressing New Button erase the drawing space
         window.setScene(scene);
         window.show();
     }

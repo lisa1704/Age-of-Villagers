@@ -27,4 +27,9 @@ public class DrawHouse implements IDrawComponent{
         outerArea = new Rectangle(g, x, y, x + 16, y + 16);
         outerArea.draw();
     }
+
+    @Override
+    public String toString() {
+        return "DrawHouse";
+    }
 }

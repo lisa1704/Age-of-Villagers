@@ -7,4 +7,13 @@ public class StateOfComponent {
         this.y = y;
         this.drawComponent = drawComponent;
     }
+
+    @Override
+    public String toString() {
+        return "StateOfComponent{" +
+                "x=" + x +
+                ", y=" + y +
+                ", drawComponent=" + drawComponent.toString() +
+                '}';
+    }
 }

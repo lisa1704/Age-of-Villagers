@@ -16,6 +16,11 @@ public class GridOfControls {
     DrawTree tree;
     DrawWater water;
 
+    Button saveButton = new Button("Save");
+    Button newButton = new Button("New");
+    Button openButton = new Button(" Open");
+
+
     public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water) {
         this.house = house;
         this.tree = tree;
@@ -50,10 +55,6 @@ public class GridOfControls {
         treeButton.setToggleGroup(tg);
         houseButton.setToggleGroup(tg);
         waterSourceButton.setToggleGroup(tg);
-
-        Button saveButton = new Button("Save");
-        Button newButton = new Button("New");
-        Button openButton = new Button(" Open");
 
         GridPane.setConstraints(gameName, 0, 0, 2, 1);
         GridPane.setConstraints(villageName, 0, 1);

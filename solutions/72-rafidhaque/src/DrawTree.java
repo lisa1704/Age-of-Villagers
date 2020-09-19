@@ -28,5 +28,10 @@ public class DrawTree implements IDrawComponent{
         outerArea = new Rectangle(g, x, y, x + 16, y + 24);
         outerArea.draw();
     }
+
+    @Override
+    public String toString() {
+        return "DrawTree";
+    }
 }
 
