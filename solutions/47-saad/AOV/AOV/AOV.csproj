@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ArabNation.cs" />
     <Compile Include="BangladeshiNation.cs" />
+    <Compile Include="CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
     <Compile Include="DrawLine.cs" />
     <Compile Include="EgyptianNation.cs" />
