@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.AbstractClass;
+using AgeOfVillagers.Drawable_Shape_Extending_Classes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -21,9 +22,20 @@ namespace AgeOfVillagers
                 return new Oval(g, pen, point, height, width);
             }
             
+            
             return null;
         }
 
-        
-    }
+        public DrawableShapes GetDrableShape(Graphics g, Pen pen, Point firstPoint, Point secondPoint, int height, int width, string hint)
+        {
+            if (hint.Equals(Constants.PARALELLOGRAM_HINT))
+            {
+                return new Paralellogram(g, pen, firstPoint,secondPoint, height, width);
+            }
+            return null;
+        }
+
+
+
+        }
 }

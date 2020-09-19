@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.AbstractClass;
+using AgeOfVillagers.Interface;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class ArabianHouseShape : DrawableShapes
+    class ArabianHouseShape :Shapes
     {
         private Graphics g;
         private Pen pen;
@@ -23,12 +24,7 @@ namespace AgeOfVillagers.Shape_implementing_Classes
             this.hOUSE_WIDTH = hOUSE_WIDTH;
         }
 
-        public override void drawShape()
-        {
-            
-        }
-
-        public override void makeShape()
+        public void makeShape()
         {
             
         }
