@@ -18,6 +18,7 @@ namespace AgeOfVillagers
         {
             Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Brown);
+
         }
     }
 }
