@@ -8,5 +8,11 @@ namespace empty_project
 {
     class EgyptianKings : AbstractNation
     {
+        public EgyptianKings(Panel panel) : base(panel)
+        {
+            base.house = new EgyptianKingsHouse();
+            base.tree = new EgyptianKingsTree();
+            base.waterSource = new EgyptianKingsWaterSource();
+        }
     }
 }
