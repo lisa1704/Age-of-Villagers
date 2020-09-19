@@ -7,9 +7,10 @@ interface Istate
 public class VillageState : Istate
 {
     string villagename;
-	public string getState(string villagename)
+    villagename = Village.getVillageName();
+    public string getState()
     {
         //return villagename.state();
-        return "Saving the village " + villagename;
+        return "Giving State of " + villagename+". ";
     }
 }

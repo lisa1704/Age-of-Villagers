@@ -18,6 +18,6 @@ public class SaveVillageState
     {
 		SaveVillageState state = new SaveVillageState();
 		state.getState(villagename);
-		return "Saved !";
+		return "Saving the village. ";
     }
 }

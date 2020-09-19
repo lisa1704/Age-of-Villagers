@@ -9,4 +9,8 @@ public class Village
         this.nation = nation;
         this.villagename = villagename;
     }
+    public string getVillageName()
+    {
+        return villagename;
+    }
 }

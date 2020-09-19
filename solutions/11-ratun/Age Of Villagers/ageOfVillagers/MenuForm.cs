@@ -50,6 +50,7 @@ namespace ageOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+            Village v = new Village("nation","village");
             text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
@@ -62,7 +63,8 @@ namespace ageOfVillagers
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //ageOfVillagers.save();
+            SaveVillageState currentVillage= new SaveVillageState();
+            currentVillage.save();
             text += "Saving the village. ";
         }
 
