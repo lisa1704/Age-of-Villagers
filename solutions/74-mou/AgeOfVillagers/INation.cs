@@ -13,6 +13,6 @@ namespace AgeOfVillagers
         string get_villagename();
         void draw_house(Point p);
         void draw_tree(Point p);
-        void draw_watercource(Point p);
+        void draw_watersource(Point p);
     }
 }
