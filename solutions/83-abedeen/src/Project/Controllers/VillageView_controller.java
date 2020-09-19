@@ -44,16 +44,12 @@ public class VillageView_controller implements Initializable {
                 if(flag == "Tree"){
                     INations village = new Bangladeshi_Farmers();
                     ArrayList<Shape> tree = village.drawTree(x1,y1);
-                    for (Shape s:tree) {
-                        DrawingCanvas.getChildren().addAll(s);
-                    }
+                    DrawShape(tree);
                 }
                 else if (flag == "House"){
                     INations village = new Bangladeshi_Farmers();
                     ArrayList<Shape> house = village.drawHouse(x1,y1);
-                    for (Shape s:house) {
-                        DrawingCanvas.getChildren().addAll(s);
-                    }
+                    DrawShape(house);
                 }
                 else if(flag == "WaterSource"){
                     DrawWaterBody(x1,y1,24,16);
@@ -136,5 +132,11 @@ public class VillageView_controller implements Initializable {
         Line l8 = new Line(x+(width/2)-2,y-(height/2),x+(width/4),y-(height/2));
         Line l9 = new Line(x+(width/4),y-(height/2),x,y);
         DrawingCanvas.getChildren().addAll(l1,l2,l3,l4,l5,l6,l7,l8,l9);
+    }
+
+    public void DrawShape(ArrayList<Shape> shape_to_be_drawn){
+        for (Shape s:shape_to_be_drawn) {
+            DrawingCanvas.getChildren().addAll(s);
+        }
     }
 }
