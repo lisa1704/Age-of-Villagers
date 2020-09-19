@@ -16,6 +16,8 @@ namespace AgeOfVillagers
         Graphics g;
         string selected_nation = "";
         string selected_component = "";
+        NationFactory nf = new NationFactory();
+        INations nation;
 
         public VillageWindow()
         {
@@ -101,7 +103,9 @@ namespace AgeOfVillagers
             }
             else
             {
+                g = DrawingPanel.CreateGraphics();
 
+                nation = nf.GetNations(selected_nation);
             }
         }
     }
