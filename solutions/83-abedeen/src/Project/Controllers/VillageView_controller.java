@@ -10,9 +10,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
-import javafx.scene.shape.TriangleMesh;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -40,16 +39,18 @@ public class VillageView_controller implements Initializable {
                 System.out.println(x1);
                 System.out.println(y1);
                 if(flag == "Tree"){
-                    Line l1 = new Line(x1,y1,x1-10,y1+20);
-                    Line l2 = new Line(x1,y1,x1+10,y1+20);
-                    Line l3 = new Line(x1-10,y1+20,x1+10,y1+20);
-                    DrawingCanvas.getChildren().addAll(l1,l2,l3);
+//                    Line l1 = new Line(x1,y1,x1-10,y1+20);
+//                    Line l2 = new Line(x1,y1,x1+10,y1+20);
+//                    Line l3 = new Line(x1-10,y1+20,x1+10,y1+20);
+//                    DrawingCanvas.getChildren().addAll(l1,l2,l3);
+
+                    DrawTree(x1,y1,16,24);
                 }
                 else if (flag == "House"){
-                    Line line1 = new Line(x1,y1,x1+20,y1);
-                    Line line2 = new Line(x1,y1,x1,y1+20);
-                    Line line3 = new Line(x1+20,y1,x1+20,y1+20);
-                    Line line4 = new Line(x1,y1+20,x1+20,y1+20);
+                    Line line1 = new Line(x1,y1,x1+16,y1);
+                    Line line2 = new Line(x1,y1,x1,y1+16);
+                    Line line3 = new Line(x1+16,y1,x1+16,y1+16);
+                    Line line4 = new Line(x1,y1+16,x1+16,y1+16);
                     DrawingCanvas.getChildren().addAll(line1,line2,line3,line4);
                 }
                 else if(flag == "WaterSource"){
@@ -120,5 +121,27 @@ public class VillageView_controller implements Initializable {
 
     public void WaterPressed(ActionEvent actionEvent) {
         flag = "WaterSource";
+    }
+
+    public void DrawTree(double x, double y, double width, double height){
+        System.out.println("Tree!");
+        Arc arc = new Arc();
+        arc.setCenterX(x);
+        arc.setCenterY(y);
+        arc.setRadiusX(width/2);
+        arc.setRadiusY((width/2)+2);
+        arc.setType(ArcType.OPEN);
+        arc.setStroke(Color.BLACK);
+        arc.setStrokeWidth(1);
+        arc.setFill(Color.TRANSPARENT);
+        arc.setStartAngle(0.0);
+        arc.setLength(1000.0);
+
+        Line l1 = new Line(x-1,y,x+1,y);
+        Line l2 = new Line(x-1,y+15,x+1,y+15);
+        Line l3 = new Line(x-1,y,x-1,y+15);
+        Line l4 = new Line(x+1,y,x+1,y+15);
+
+        DrawingCanvas.getChildren().addAll(arc,l1,l2,l3,l4);
     }
 }
