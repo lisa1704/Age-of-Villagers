@@ -53,6 +53,7 @@
     <Compile Include="CreateNewVillage.Designer.cs">
       <DependentUpon>CreateNewVillage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EgyptianKings.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
