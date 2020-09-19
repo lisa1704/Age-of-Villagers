@@ -79,6 +79,7 @@ namespace AgeOfVillagers
             WaterSource.Checked = false;
             DrawingPanel.Refresh();
             this.Invalidate();
+            text = "";
         }
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,17 +88,17 @@ namespace AgeOfVillagers
         }
         private void ElementSelect()
         {
-            if (House.Checked == true )
+            if (House.Checked == true && Nations.SelectedIndex > -1)
             {
                 text = Nations.SelectedItem + " " + "House";
                 brush = new SolidBrush(Color.Brown);
             }
-            else if (Tree.Checked == true )
+            else if (Tree.Checked == true && Nations.SelectedIndex > -1)
             {
                 text = Nations.SelectedItem + " " + "Tree";
                 brush = new SolidBrush(Color.Green);
             }
-            else if (WaterSource.Checked == true )
+            else if (WaterSource.Checked == true && Nations.SelectedIndex > -1)
             {
                 text = Nations.SelectedItem + " " + "Watersrc";
                 brush = new SolidBrush(Color.Blue);
