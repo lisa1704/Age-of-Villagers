@@ -14,5 +14,10 @@ namespace AgeofVillagers90Test
             string s = bdfarmerTest.BangladeshiFarmerTest();
             Assert.AreEqual("Bangladeshi", s);
         }
+
+        public void ArabBeduoinColorTest()
+        {
+            
+        }
     }
 }
