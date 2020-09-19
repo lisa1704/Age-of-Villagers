@@ -117,7 +117,7 @@ namespace AgeOfVillagers
 
             game = gameFactory.getGame();
             
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNation,previouslySavedState);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNation,previouslySavedState,g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
             gameKeyInvoker.click();

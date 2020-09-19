@@ -7,16 +7,12 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
 {
     class VillageItemsOpener : IElementOpener
     {
-        List<IItem> itemList;
+        List<DrawnItemsInformation> drawnItemsInfoList;
         private string selectedNation;
 
        
 
-        public VillageItemsOpener(List<IItem> itemList, string selectedNation)
-        {
-            this.itemList = itemList;
-            this.selectedNation = selectedNation;
-        }
+        
 
         public void displayElements()
         {

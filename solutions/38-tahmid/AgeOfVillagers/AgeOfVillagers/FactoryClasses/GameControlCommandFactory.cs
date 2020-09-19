@@ -2,6 +2,7 @@
 using AgeOfVillagers.Model_Class_Folder;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -21,10 +22,10 @@ namespace AgeOfVillagers
             return new SaveVillage(game, sVillageName, drawnItemsInfoList);
         }
 
-        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,State previouslySavedState)
+        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,State previouslySavedState,Graphics graphics, Pen pen)
         {
 
-            return new OpenVillage(game,villageNameLabel,selectedNation,previouslySavedState);
+            return new OpenVillage(game,villageNameLabel,selectedNation,previouslySavedState, graphics, pen);
         }
 
     }
