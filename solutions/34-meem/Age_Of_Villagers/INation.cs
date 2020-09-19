@@ -12,11 +12,17 @@ namespace Age_Of_Villagers
     {
         void setTerrain(VillageEditorWindow villageEditor);
         void setRadiobutton(VillageEditorWindow villageEditor);
+        string getColor();
 
     }
 
     public class BangladeshiNation : INation
     {
+        public string getColor()
+        {
+            return "green";
+        }
+
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
             villageEditor.rdButtonHouse.Enabled = true;
@@ -33,6 +39,11 @@ namespace Age_Of_Villagers
 
     public class ArabBedouinNation : INation
     {
+        public string getColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
             villageEditor.rdButtonHouse.Enabled = true;
@@ -48,6 +59,11 @@ namespace Age_Of_Villagers
     }
     public class EgyptianKingNation : INation
     {
+        public string getColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
             villageEditor.rdButtonHouse.Enabled = true;
@@ -64,6 +80,11 @@ namespace Age_Of_Villagers
 
     public class InuitHunterNation : INation
     {
+        public string getColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
             villageEditor.rdButtonHouse.Enabled = true;
