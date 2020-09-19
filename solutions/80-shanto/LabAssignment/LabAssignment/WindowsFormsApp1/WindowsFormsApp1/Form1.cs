@@ -172,7 +172,8 @@ namespace WindowsFormsApp1
 
             else if (comboBox1.SelectedItem == "Arab Bedouin")
             {
-
+                panel1.BackColor = Color.White;
+                BackColor = Color.YellowGreen; 
                 if (radioButton1.Checked)
                 {
 
