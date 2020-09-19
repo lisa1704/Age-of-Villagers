@@ -1,6 +1,6 @@
 ﻿namespace ageOfVillagers
 {
-    public class Village
+    public abstract class Village
     {
         private Nation nation;
         private string villagename;
@@ -9,5 +9,6 @@
             this.nation = nation;
             this.villagename = villagename;
         }
+        abstract void draw();
     }
 }
