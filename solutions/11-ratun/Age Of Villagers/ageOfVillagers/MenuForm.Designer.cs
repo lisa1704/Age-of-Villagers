@@ -76,10 +76,11 @@
             this.panel1.Controls.Add(this.SaveVillage);
             this.panel1.Controls.Add(this.ageOfVillagers);
             this.panel1.Controls.Add(this.Tree);
-            this.panel1.Location = new System.Drawing.Point(601, 0);
+            this.panel1.Location = new System.Drawing.Point(606, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 400);
+            this.panel1.Size = new System.Drawing.Size(253, 400);
             this.panel1.TabIndex = 2;
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ageOfVillagers
             // 
@@ -115,6 +116,7 @@
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(124, 22);
             this.VillageName.TabIndex = 2;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
             // 
             // Nation
             // 
@@ -122,6 +124,7 @@
             this.Nation.Name = "Nation";
             this.Nation.Size = new System.Drawing.Size(186, 22);
             this.Nation.TabIndex = 3;
+            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
             // 
             // House
             // 
@@ -131,6 +134,7 @@
             this.House.TabIndex = 4;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = true;
+            this.House.Click += new System.EventHandler(this.House_Click);
             // 
             // Water
             // 
@@ -140,6 +144,7 @@
             this.Water.TabIndex = 5;
             this.Water.Text = "Water Source";
             this.Water.UseVisualStyleBackColor = true;
+            this.Water.Click += new System.EventHandler(this.Water_Click);
             // 
             // NewVillage
             // 
@@ -149,6 +154,7 @@
             this.NewVillage.TabIndex = 6;
             this.NewVillage.Text = "New Village";
             this.NewVillage.UseVisualStyleBackColor = true;
+            this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // OpenVillage
             // 
@@ -158,6 +164,7 @@
             this.OpenVillage.TabIndex = 7;
             this.OpenVillage.Text = "Open Village";
             this.OpenVillage.UseVisualStyleBackColor = true;
+            this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // MenuForm
             // 
