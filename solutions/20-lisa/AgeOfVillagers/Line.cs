@@ -5,8 +5,11 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
+    
     class Line : IShape
     {
+        Graphics graphics;
+        Pen pen;
         private Point p1;
         private Point p2;
 
@@ -16,9 +19,8 @@ namespace AgeOfVillagers
             this.p2 = p2;
 
         }
-        public void Draw(Graphics graphics)
+        public void Draw(Graphics graphics, Pen pen)
         {
-            var pen = new Pen(Color.Black, 1);
             graphics.DrawLine(pen, p1, p2);
             
         }

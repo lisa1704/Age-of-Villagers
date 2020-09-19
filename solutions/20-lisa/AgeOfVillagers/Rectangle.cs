@@ -17,13 +17,12 @@ namespace AgeOfVillagers
             
 
         }
-        public void Draw(Graphics graphics)
+        public void Draw(Graphics graphics, Pen pen)
         {
-            var p = new Pen(Color.Black,1);
-            graphics.DrawLine(p, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
-            graphics.DrawLine(p, topLeft.X, topLeft.Y, topLeft.X, bottomRight.Y);
-            graphics.DrawLine(p, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
-            graphics.DrawLine(p, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
+            graphics.DrawLine(pen, topLeft.X, topLeft.Y, bottomRight.X, topLeft.Y);
+            graphics.DrawLine(pen, topLeft.X, topLeft.Y, topLeft.X, bottomRight.Y);
+            graphics.DrawLine(pen, topLeft.X, bottomRight.Y, bottomRight.X, bottomRight.Y);
+            graphics.DrawLine(pen, bottomRight.X, topLeft.Y, bottomRight.X, bottomRight.Y);
 
             
         }
