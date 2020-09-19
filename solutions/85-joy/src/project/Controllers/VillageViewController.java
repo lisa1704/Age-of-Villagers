@@ -50,9 +50,7 @@ public class VillageViewController implements Initializable {
                 if(Flag == 0){
                     INation BangladeshiFarmers = new BangladeshiFarmers();
                     Object = BangladeshiFarmers.DrawHouse(event.getSceneX(),event.getSceneY());
-                    for (Shape x : Object){
-                        DrawPane.getChildren().addAll(x);
-                    }
+                    DrawShape(Object);
                 }
                 else if(Flag == 1){
                     DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
@@ -178,5 +176,9 @@ public class VillageViewController implements Initializable {
 
         DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6,line7,line8,line9);
     }
-    
+    public void DrawShape(ArrayList<Shape> ShapeObject){
+        for (Shape x : ShapeObject){
+            DrawPane.getChildren().addAll(x);
+        }
+    }
 }

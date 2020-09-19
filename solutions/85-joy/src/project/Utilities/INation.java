@@ -10,6 +10,7 @@ public interface INation {
     double HouseHeight = 16.0;
     double TreeWidth = 16.0;
     double TreeHeight = 24.0;
+    String TerrainColor = null;
 
     ArrayList<Shape> DrawHouse(double x1, double y1);
     void DrawTree();
