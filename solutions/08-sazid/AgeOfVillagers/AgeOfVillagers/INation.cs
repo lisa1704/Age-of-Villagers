@@ -13,7 +13,7 @@ namespace AgeOfVillagers
 
         void DrawTree(Graphics g, Point p);
 
-        void DrawWaterource(Graphics g, Point p);
+        void DrawWaterResource(Graphics g, Point p);
 
         Color GetColor();
     }

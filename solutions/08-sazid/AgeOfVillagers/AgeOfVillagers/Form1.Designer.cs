@@ -70,6 +70,7 @@
             this.waterButton.TabIndex = 2;
             this.waterButton.Text = "Water Source";
             this.waterButton.UseVisualStyleBackColor = true;
+            this.waterButton.Click += new System.EventHandler(this.waterButton_Click);
             // 
             // newVillageButton
             // 
@@ -106,6 +107,8 @@
             this.drawinPanel.Name = "drawinPanel";
             this.drawinPanel.Size = new System.Drawing.Size(633, 497);
             this.drawinPanel.TabIndex = 6;
+            this.drawinPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawinPanel_Paint);
+            this.drawinPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawinPanel_MouseClick);
             // 
             // appName
             // 

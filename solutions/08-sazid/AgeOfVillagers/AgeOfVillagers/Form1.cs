@@ -15,6 +15,10 @@ namespace AgeOfVillagers
         Color backGroundColor;
         string nationName;
         NationFactory nationType = new NationFactory();
+        string objectName;
+        List<Point> houseLocations = new List<Point>();
+        List<Point> treeLocations = new List<Point>();
+        List<Point> sourceLocations = new List<Point>();
 
 
         public Form1()
@@ -24,12 +28,17 @@ namespace AgeOfVillagers
 
         private void houseButton_Click(object sender, EventArgs e)
         {
-
+            objectName = "house";
         }
 
         private void treeButton_Click(object sender, EventArgs e)
         {
+            objectName = "tree";
+        }
 
+        private void waterButton_Click(object sender, EventArgs e)
+        {
+            objectName = "waterSource";
         }
 
         private void submitName_Click(object sender, EventArgs e)
@@ -62,9 +71,46 @@ namespace AgeOfVillagers
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             nationName = nationList.Text;
-            Console.WriteLine(nationName);
+            //Console.WriteLine(nationName);
             //nationType=NationFactory
-            drawinPanel.BackColor = nationType.GetNation(nationName).GetColor();
+            backGroundColor = nationType.GetNation(nationName).GetColor();
+            drawinPanel.BackColor = backGroundColor;
+        }
+
+        private void drawinPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = drawinPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+            foreach (Point points in houseLocations)
+            {
+                nationType.GetNation(nationName).DrawHouse(g, points);
+            }
+
+            foreach (Point points in treeLocations)
+            {
+                nationType.GetNation(nationName).DrawTree(g, points);
+            }
+
+            foreach(Point points in sourceLocations)
+            {
+                nationType.GetNation(nationName).DrawWaterResource(g, points);
+            }
+        }
+
+        private void drawinPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(objectName == "house")
+            {
+                houseLocations.Add(e.Location);
+            }
+            if(objectName == "tree")
+            {
+                treeLocations.Add(e.Location);
+            }
+            if(objectName == "waterSource")
+            {
+                sourceLocations.Add(e.Location);
+            }
         }
     }
 }

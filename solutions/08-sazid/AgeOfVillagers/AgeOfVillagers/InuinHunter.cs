@@ -20,7 +20,7 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
-        public void DrawWaterource(Graphics g, Point p)
+        public void DrawWaterResource(Graphics g, Point p)
         {
             throw new NotImplementedException();
         }
