@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Age_of_Villagers;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Age_of_Villagers.Test
 {
@@ -8,6 +9,7 @@ namespace Age_of_Villagers.Test
     {
         INation nation;
         INationFactory factory;
+
         List<string> nationList = new List<string>() { "Bangladeshi Farmers", "Arab Bedouin", "Egyptian Kings", "Inuit Hunters" };
         [SetUp]
         public void Setup()
@@ -16,6 +18,7 @@ namespace Age_of_Villagers.Test
         }
 
         [Test]
+
         public void TestBDcreate()
         {
             INation nation=factory.GetNation(nationList[0]);
@@ -41,6 +44,37 @@ namespace Age_of_Villagers.Test
             string selected = nationList[3];
             nation = factory.GetNation(selected);
             new Inuit().Equals(nation);
+        }
+    }
+
+    public class NationPropertyTest
+    {
+        INation nation= new Bangladesh();
+        Graphics g
+        [SetUp]
+        public void Setup()
+        {
+            nation.set_graphics(g);
+        }
+        [Test]
+        public void Testname()
+        {
+            string name="abc";
+            nation.set_villagename(name);
+            string village_name = nation.get_villagename();
+            village_name.Equals(name);
+        }
+        [Test]
+        public void testbackground()
+        {
+            Color expected = Color.LightGreen;
+            Color c =nation.set_background();
+            expected.Equals(c);
+        }
+
+        public void testtree()
+        {
+            nation.draw_house(new Point (200,200));
         }
     }
 }
