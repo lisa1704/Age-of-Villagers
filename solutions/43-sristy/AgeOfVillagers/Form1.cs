@@ -17,18 +17,15 @@ namespace Age_of_villagers
         string item;
         Nationfactory nationfactory = new Nationfactory();
         village village;
-        public string name;
+        private string name;
 
-        public List<Point> W_points { get; set; } = new List<Point>();
-        public List<Point> T_points { get; set; } = new List<Point>();
-        public List<Point> H_points { get; set; } = new List<Point>();
+        private List<Point> W_points { get; set; } = new List<Point>();
+        private List<Point> T_points { get; set; } = new List<Point>();
+        private List<Point> H_points { get; set; } = new List<Point>();
 
         public void get_state()
         {
-            village.name = villagename.Text;
-            village.house_point = this.H_points;
-            village.tree_point = this.T_points;
-            village.waterresource_point = this.W_points;
+            this.village = new village(villagename.Text, H_points, T_points, W_points);
         }
 
         public void set_state(village village)
