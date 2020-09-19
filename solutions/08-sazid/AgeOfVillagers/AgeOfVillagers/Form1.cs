@@ -12,6 +12,11 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        Color backGroundColor;
+        string nationName;
+        NationFactory nationType = new NationFactory();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -56,8 +61,10 @@ namespace AgeOfVillagers
 
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(nationList.Text);
-            drawinPanel.BackColor = Color.Blue;
+            nationName = nationList.Text;
+            Console.WriteLine(nationName);
+            //nationType=NationFactory
+            drawinPanel.BackColor = nationType.GetNation(nationName).GetColor();
         }
     }
 }

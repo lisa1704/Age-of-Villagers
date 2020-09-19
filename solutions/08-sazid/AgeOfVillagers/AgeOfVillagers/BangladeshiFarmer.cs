@@ -9,6 +9,7 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmer : INation
     {
+        private Color backGroundColor = Color.Green;
         public void DrawHouse(Graphics g, Point p)
         {
             throw new NotImplementedException();
@@ -22,6 +23,11 @@ namespace AgeOfVillagers
         public void DrawWaterource(Graphics g, Point p)
         {
             throw new NotImplementedException();
+        }
+
+        public Color GetColor()
+        {
+            return backGroundColor;
         }
     }
 }
