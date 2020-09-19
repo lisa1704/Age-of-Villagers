@@ -43,7 +43,6 @@ public class VillageView_controller implements Initializable {
 //                    Line l2 = new Line(x1,y1,x1+10,y1+20);
 //                    Line l3 = new Line(x1-10,y1+20,x1+10,y1+20);
 //                    DrawingCanvas.getChildren().addAll(l1,l2,l3);
-
                     DrawTree(x1,y1,16,24);
                 }
                 else if (flag == "House"){
@@ -115,6 +114,7 @@ public class VillageView_controller implements Initializable {
     }
 
     public void TreePressed(ActionEvent actionEvent){
+        DrawingCanvas.setStyle("-fx-background-color: GREEN");
         flag = "Tree";
     }
 
