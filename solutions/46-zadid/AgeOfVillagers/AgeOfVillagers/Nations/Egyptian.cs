@@ -43,9 +43,10 @@ namespace AgeOfVillagers
 
         public override void DrawWaterResource(Graphics g, Point location)
         {
-            EgyptianWaterSource egyptianWaterSource = new EgyptianWaterSource();
-            WaterSourceContext waterSourceContext = new WaterSourceContext(egyptianWaterSource,g,location,waterSourceSize);
+            EgyptianWaterSource egyptianWaterSource = new EgyptianWaterSource(location,waterSourceSize);
+            egyptianWaterSource.Draw(g);
 
+            Debug.WriteLine("Drawing Egyptian Water Source");
         }
     }
 }
