@@ -21,11 +21,16 @@ public class DrawTree implements IDrawComponent{
 
     @Override
     public void draw() {
+        Circle circle = new Circle(g, x + 8, y + 8, 7);
+        Rectangle rectangle = new Rectangle(g, x + 8, y + 8, x + 10, y + 24);
+        circle.draw();
+        rectangle.draw();
     }
 
     @Override
     public void drawOuterLayer() {
         outerArea = new Rectangle(g, x, y, x + 16, y + 24);
+        draw();
         outerArea.draw();
     }
 

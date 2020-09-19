@@ -21,7 +21,11 @@ public class BangladeshiFarmers implements INation {
 
     @Override
     public void tree(DrawTree drawTree) {
-
+        drawTree.drawOuterLayer();
+        Circle circle = new Circle(drawSpace, drawTree.x + 8, drawTree.y + 8, 7);
+        Rectangle rectangle = new Rectangle(drawSpace, drawTree.x + 8, drawTree.y + 8, drawTree.x + 10, drawTree.y + 24);
+        circle.draw();
+        rectangle.draw();
     }
 
     @Override
