@@ -1,6 +1,6 @@
 import javafx.scene.Group;
 
-public class DrawHouse implements IDrawComponent{
+public abstract class DrawHouse implements IDrawComponent{
     double x, y;
 
     public void setX(double x) {
@@ -16,9 +16,6 @@ public class DrawHouse implements IDrawComponent{
     public DrawHouse(Group g) {
         this.g = g;
     }
-
-    @Override
-    public void draw() {    }
 
     @Override
     public void drawOuterLayer() {

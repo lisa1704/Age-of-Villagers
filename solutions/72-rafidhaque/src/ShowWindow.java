@@ -20,8 +20,9 @@ public class ShowWindow extends Application {
     ArrayList<StateOfComponent> stateOfComponents = new ArrayList<StateOfComponent>();
 
     BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
+    InuitHunters inuitHunters = new InuitHunters(drawSpace);
 
-    DrawHouse house = bangladeshiFarmers.house;
+    DrawHouse house = inuitHunters.house;
     DrawTree tree = bangladeshiFarmers.tree;
     DrawWater water = bangladeshiFarmers.water;
     public GridOfControls gridOfControls = new GridOfControls(house, tree, water, bangladeshiFarmers.nationName);
