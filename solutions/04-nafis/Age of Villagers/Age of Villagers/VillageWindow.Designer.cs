@@ -47,10 +47,10 @@
             this.VillageDrawing.AccessibleName = "VillageDrawing";
             this.VillageDrawing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.VillageDrawing.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VillageDrawing.Location = new System.Drawing.Point(1, 1);
+            this.VillageDrawing.Location = new System.Drawing.Point(2, 2);
             this.VillageDrawing.Margin = new System.Windows.Forms.Padding(0);
             this.VillageDrawing.Name = "VillageDrawing";
-            this.VillageDrawing.Size = new System.Drawing.Size(368, 398);
+            this.VillageDrawing.Size = new System.Drawing.Size(600, 400);
             this.VillageDrawing.TabIndex = 0;
             this.VillageDrawing.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageDrawing_Paint);
             // 
@@ -69,10 +69,10 @@
             this.MenuBar.Controls.Add(this.House);
             this.MenuBar.Controls.Add(this.Tree);
             this.MenuBar.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MenuBar.Location = new System.Drawing.Point(369, 1);
+            this.MenuBar.Location = new System.Drawing.Point(602, 2);
             this.MenuBar.Margin = new System.Windows.Forms.Padding(0);
             this.MenuBar.Name = "MenuBar";
-            this.MenuBar.Size = new System.Drawing.Size(228, 398);
+            this.MenuBar.Size = new System.Drawing.Size(250, 400);
             this.MenuBar.TabIndex = 1;
             // 
             // NationList
@@ -86,9 +86,9 @@
             "Egyptian Kings",
             "Arab Bedouin",
             "Inuit Hunters"});
-            this.NationList.Location = new System.Drawing.Point(50, 109);
+            this.NationList.Location = new System.Drawing.Point(66, 104);
             this.NationList.Name = "NationList";
-            this.NationList.Size = new System.Drawing.Size(125, 52);
+            this.NationList.Size = new System.Drawing.Size(136, 52);
             this.NationList.TabIndex = 3;
             // 
             // VillageText
@@ -96,9 +96,9 @@
             this.VillageText.AccessibleName = "VillageText";
             this.VillageText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.VillageText.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VillageText.Location = new System.Drawing.Point(50, 67);
+            this.VillageText.Location = new System.Drawing.Point(66, 63);
             this.VillageText.Name = "VillageText";
-            this.VillageText.Size = new System.Drawing.Size(125, 19);
+            this.VillageText.Size = new System.Drawing.Size(136, 19);
             this.VillageText.TabIndex = 2;
             this.VillageText.Text = "Village Name";
             this.VillageText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -108,7 +108,7 @@
             this.GameLabel.AccessibleName = "GameLabel";
             this.GameLabel.AutoSize = true;
             this.GameLabel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameLabel.Location = new System.Drawing.Point(43, 20);
+            this.GameLabel.Location = new System.Drawing.Point(66, 25);
             this.GameLabel.Name = "GameLabel";
             this.GameLabel.Size = new System.Drawing.Size(136, 17);
             this.GameLabel.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.SaveVillage.AccessibleName = "SaveVillage";
             this.SaveVillage.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveVillage.Location = new System.Drawing.Point(66, 324);
+            this.SaveVillage.Location = new System.Drawing.Point(84, 323);
             this.SaveVillage.Name = "SaveVillage";
             this.SaveVillage.Size = new System.Drawing.Size(89, 28);
             this.SaveVillage.TabIndex = 0;
@@ -131,7 +131,7 @@
             // OpenVillage
             // 
             this.OpenVillage.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OpenVillage.Location = new System.Drawing.Point(118, 358);
+            this.OpenVillage.Location = new System.Drawing.Point(136, 357);
             this.OpenVillage.Name = "OpenVillage";
             this.OpenVillage.Size = new System.Drawing.Size(89, 28);
             this.OpenVillage.TabIndex = 0;
@@ -143,7 +143,7 @@
             // 
             this.NewVillage.AccessibleName = "NewVillage";
             this.NewVillage.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NewVillage.Location = new System.Drawing.Point(13, 358);
+            this.NewVillage.Location = new System.Drawing.Point(31, 357);
             this.NewVillage.Name = "NewVillage";
             this.NewVillage.Size = new System.Drawing.Size(89, 28);
             this.NewVillage.TabIndex = 0;
@@ -155,7 +155,7 @@
             // 
             this.WaterSource.AccessibleName = "WaterSource";
             this.WaterSource.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WaterSource.Location = new System.Drawing.Point(66, 245);
+            this.WaterSource.Location = new System.Drawing.Point(84, 242);
             this.WaterSource.Name = "WaterSource";
             this.WaterSource.Size = new System.Drawing.Size(89, 28);
             this.WaterSource.TabIndex = 0;
@@ -167,7 +167,7 @@
             // 
             this.House.AccessibleName = "House";
             this.House.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.House.Location = new System.Drawing.Point(118, 211);
+            this.House.Location = new System.Drawing.Point(136, 208);
             this.House.Name = "House";
             this.House.Size = new System.Drawing.Size(89, 28);
             this.House.TabIndex = 0;
@@ -179,7 +179,7 @@
             // 
             this.Tree.AccessibleName = "Tree";
             this.Tree.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Tree.Location = new System.Drawing.Point(13, 211);
+            this.Tree.Location = new System.Drawing.Point(31, 208);
             this.Tree.Name = "Tree";
             this.Tree.Size = new System.Drawing.Size(89, 28);
             this.Tree.TabIndex = 0;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600,400);
+            this.ClientSize = new System.Drawing.Size(855, 405);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
