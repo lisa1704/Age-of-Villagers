@@ -10,7 +10,7 @@ namespace AgeOfVillagers
     {
         public INation nation;
         public string villageName;
-        private List<VillageItem> trees, houses, waterSources;
+        public List<VillageItem> trees, houses, waterSources;
         public Village(INation nation, string villageName)
         {
             this.nation = nation;

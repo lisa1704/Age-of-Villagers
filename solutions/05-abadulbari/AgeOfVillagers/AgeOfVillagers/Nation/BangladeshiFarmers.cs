@@ -15,17 +15,17 @@ namespace AgeOfVillagers.Nation
         {
             return Color.Green;
         }
-        public IShape getHouse(Point point)
+        public VillageItem getHouse(Point point)
         {
             return new BangladeshiHouse(point);
         }
 
-        public IShape getTree(Point point)
+        public VillageItem getTree(Point point)
         {
             return new BangladeshiTree(point);
         }
 
-        public IShape getWaterSource(Point point)
+        public VillageItem getWaterSource(Point point)
         {
             return new BangladeshiWaterSource(point);
         }

@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.Shapes;
+using AgeOfVillagers.VillegeItems;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,8 +11,8 @@ namespace AgeOfVillagers.Nation
     {
         string getNationName();
         Color getTerrainColor();
-        IShape getHouse(Point p);
-        IShape getTree(Point p);
-        IShape getWaterSource(Point p);
+        VillageItem getHouse(Point p);
+        VillageItem getTree(Point p);
+        VillageItem getWaterSource(Point p);
     }
 }
