@@ -16,33 +16,11 @@ namespace age_of_villagers
         string item;
         string vilName;
         string nType;
-        SaveVillage savepoints;
 
         List<Point> house_point { get; set; } = new List<Point>();
         List<Point> tree_point { get; set; } = new List<Point>();
         List<Point> water_point { get; set; } = new List<Point>();
 
-        public void getPoints()
-        {
-            this.savepoints = new SaveVillage(vilName, house_point, tree_point, water_point);
-        }
-
-        public void setPoints(SaveVillage vil)
-        {
-            village.Text = vil.village;
-            foreach (Point pt in vil.house_point)
-            {
-                house_point.Add(pt);
-            }
-            foreach (Point pt in vil.tree_point)
-            {
-               tree_point.Add(pt);
-            }
-            foreach (Point pt in vil.water_point)
-            {
-                water_point.Add(pt);
-            }
-        }
 
         NationFactory n = new NationFactory();
         public VillageWindow()
@@ -123,16 +101,13 @@ namespace age_of_villagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            /*SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter write = new StreamWriter(File.Create(save.FileName));
                 write.Write(village.Text);
                 write.Dispose();
-            }*/
-            getPoints();
-            Save save = new Save(savepoints);
-            save.execute();
+            }
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -145,26 +120,15 @@ namespace age_of_villagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            /*OpenFileDialog open = new OpenFileDialog();
+            OpenFileDialog open = new OpenFileDialog();
             if (open.ShowDialog() == DialogResult.OK)
             {
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
 
                 village.Text = read.ReadToEnd();
                 read.Dispose();
-            }*/
-            if (nations.Text != "")
-            {
-                Openvillage open = new Openvillage();
-                open.execute();
-                savepoints = open.get_village();
-                setPoints(savepoints);
-                panel1.Refresh();
             }
-            else
-            {
-                MessageBox.Show("VillgeType is not selected");
-            }
+
         }
     }
 }
