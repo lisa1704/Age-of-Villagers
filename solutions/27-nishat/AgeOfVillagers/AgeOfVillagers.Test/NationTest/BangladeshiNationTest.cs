@@ -5,7 +5,7 @@ namespace AgeOfVillagers.Test
 {
     public class BangladeshiNationTest
     {
-
+        Point point = new Point(100, 100);
         BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers("Bangladeshi Farmers");
 
         [Fact]
@@ -18,6 +18,12 @@ namespace AgeOfVillagers.Test
         public void BangladeshiTerrainColorTest()
         {
             Assert.Equal(Color.Green, bangladeshiFarmers.GetTerrainColor());
+        }
+
+        [Fact]
+        public void BangladeshiHouseTest()
+        {
+            Assert.IsType<BangladeshiHouse>(bangladeshiFarmers.GetHouse(point));
         }
     }
 }
