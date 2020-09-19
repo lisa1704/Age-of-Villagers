@@ -19,7 +19,8 @@ namespace AgeOfVillagers
         string text = "";
         public Graphics g;
         public Pen p;
-        public INation nation;
+        //public INation nation;
+        public Village village;
         public VillageWindow()
         {
             InitializeComponent();
@@ -83,16 +84,16 @@ namespace AgeOfVillagers
             Point point = new Point(e.X, e.Y);
             if (treeRadioBtn.Checked)
             {
-                nation.getTree(point).draw(g, p);
+                village.nation.getTree(point).draw(g, p);
 
             }
             else if (houseRadioBtn.Checked)
             {
-                nation.getHouse(point).draw(g, p);
+                village.nation.getHouse(point).draw(g, p);
             }
             else if (waterRadioBtn.Checked)
             {
-                nation.getWaterSource(point).draw(g, p);
+                village.nation.getWaterSource(point).draw(g, p);
             }
         }
     }

@@ -6,10 +6,10 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Village
+    public class Village
     {
-        private INation nation;
-        private string villageName;
+        public INation nation;
+        public string villageName;
         private List<VillageItem> trees, houses, waterSources;
         public Village(INation nation, string villageName)
         {
