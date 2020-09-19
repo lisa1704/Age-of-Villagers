@@ -6,19 +6,17 @@ namespace AgeOfVillagers
 {
 	public class ArabBeduin : INation
 	{
-        string name;
-		public ArabBeduin()
+        private Panel drawingBoard;
+		public ArabBeduin(Panel drawingBoard)
 		{
-#pragma warning disable CS1717 // Assignment made to same variable
-            //name = name;
-#pragma warning restore CS1717 // Assignment made to same variable
-
+            this.drawingBoard = drawingBoard;
 
         }
 
         public void DrawHouse(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            ArabHouse arabHouse = new ArabHouse(drawingBoard);
+            arabHouse.draw(p, drawingBoard);
         }
 
         public void DrawTree(Point p, Panel drawingBoard)

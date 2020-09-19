@@ -8,5 +8,6 @@ namespace AgeOfVillagers
 	public interface IShape
 	{
 		public void draw(Point p, Panel drawingBoard);
-	}
+        
+    }
 }
