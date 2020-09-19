@@ -10,6 +10,7 @@ namespace Age_Of_Villagers
         public Color BackGroundColor()
         {
             return Color.White;
+
         }
 
         public void Draw_House(Graphics g, Point point)

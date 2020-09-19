@@ -26,11 +26,18 @@ namespace Age_Of_Villagers
             {
                 return new Bangladeshi_Farmers();
             }
-            if (NationName == "Egyptian Kings")
+            else if (NationName == "Egyptian Kings")
             {
                 return new Egyptian_Kings();
             }
-
+            else if (NationName == "Arab Bedouin")
+            {
+                return new Arab_Bedouin();
+            }
+            else
+            {
+                return new Null_Nation();
+            }
             throw new Exception();
         }
     }
