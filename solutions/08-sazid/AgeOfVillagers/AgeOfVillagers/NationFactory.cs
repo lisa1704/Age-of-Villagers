@@ -8,20 +8,24 @@ namespace AgeOfVillagers
 {
     class NationFactory
     {
-        public void GetNation(String nationType)
+        public INation GetNation(string nationType)
         {
             if(nationType == "Bangladeshi Farmers")
             {
-
-            }else if(nationType == "")
+                return new BangladeshiFarmer();
+            }else if(nationType == "Arab Beduin")
             {
-
-            }else if(nationType == "")
+                return new ArabBeduin();
+            }else if(nationType == "Egyptian king")
             {
-
-            }else if(nationType == "")
+                return new EgyptianKing();
+            }else if(nationType == "Inuit Hunter")
             {
-
+                return new BangladeshiFarmer();
+            }
+            else
+            {
+                return null;
             }
         }
     }
