@@ -5,14 +5,14 @@ using System.Text;
 
 namespace AgeOfVillagers.IStateElements_implimentinf_folder
 {
-    class VillageItems : IElementDisplay
+    class VillageItemsOpener : IElementOpener
     {
         List<IItem> itemList;
         private string selectedNation;
 
        
 
-        public VillageItems(List<IItem> itemList, string selectedNation)
+        public VillageItemsOpener(List<IItem> itemList, string selectedNation)
         {
             this.itemList = itemList;
             this.selectedNation = selectedNation;
