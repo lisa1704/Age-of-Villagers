@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         string item;
         string villageName;
         string villageType;
+        Village newVillage = new Village();
         public VillageActions() { InitializeComponent(); }
 
         private void VillageActions_Load(object sender, EventArgs e){}
@@ -47,12 +48,16 @@ namespace AgeOfVillagers
             OpenVillage openVillage = new OpenVillage();
             openVillage.execute();
         }
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) 
+        { 
+            villageType = VillageNation.Text;
+            newVillage.GetVillage(villageType);
+            panel1.Refresh();
+        }
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {   
             Graphics g = panel1.CreateGraphics();
             Point point = e.Location;
-            Village newVillage = new Village();
             if (item == "house") { newVillage.GetVillage(villageType).DrawHouse(g, point); }
             else if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
             else if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
@@ -64,8 +69,11 @@ namespace AgeOfVillagers
             panel2.Refresh();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { villageType = VillageNation.Text; }
-
         private void textBox1_TextChanged(object sender, EventArgs e) {}
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            villageName = textBox1.Text;
+        }
     }
 }

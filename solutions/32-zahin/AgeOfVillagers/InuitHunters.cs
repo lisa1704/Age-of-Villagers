@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -15,20 +16,21 @@ namespace AgeOfVillagers
         {
 
         }
-
-        void INation.DrawHouse(Graphics g, Point point)
+        public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Drawing House for Inuit Hunters");
         }
 
-        void INation.DrawTree(Graphics g, Point point)
+        public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Inuit Hunters can not plant trees");
         }
 
-        void INation.DrawWaterSource(Graphics g, Point point)
+        public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            var message = new StringBuilder();
+            MessageBox.Show("Inuit Hunters relies on natural water sources so it is not possible to place water sources");
+
         }
     }
 }
