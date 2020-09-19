@@ -170,7 +170,6 @@
             this.village_name.Location = new System.Drawing.Point(28, 119);
             this.village_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.village_name.Name = "village_name";
-            this.village_name.ReadOnly = true;
             this.village_name.Size = new System.Drawing.Size(248, 28);
             this.village_name.TabIndex = 1;
             this.village_name.Text = "Edit Village Name";
