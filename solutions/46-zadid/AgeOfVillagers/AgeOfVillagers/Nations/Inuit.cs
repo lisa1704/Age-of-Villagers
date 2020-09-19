@@ -23,11 +23,8 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
-            InuitHouse inuitHouse = new InuitHouse();
-            HouseContext houseContext = new HouseContext(inuitHouse, g, location, houseSize);
-
-            houseContext.HouseDrawing();
-
+            InuitHouse inuitHouse = new InuitHouse(location,houseSize);
+            inuitHouse.Draw(g);
             Debug.WriteLine("Drawing Inuit House");
         }
 
