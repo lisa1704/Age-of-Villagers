@@ -32,6 +32,9 @@
             this.Age_of_Villagers = new System.Windows.Forms.Label();
             this.village_name = new System.Windows.Forms.Label();
             this.nations = new System.Windows.Forms.Label();
+            this.tree = new System.Windows.Forms.RadioButton();
+            this.house = new System.Windows.Forms.RadioButton();
+            this.water_source = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // panel
@@ -46,7 +49,7 @@
             // 
             this.Age_of_Villagers.AutoSize = true;
             this.Age_of_Villagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age_of_Villagers.Location = new System.Drawing.Point(709, 31);
+            this.Age_of_Villagers.Location = new System.Drawing.Point(639, 28);
             this.Age_of_Villagers.Name = "Age_of_Villagers";
             this.Age_of_Villagers.Size = new System.Drawing.Size(165, 25);
             this.Age_of_Villagers.TabIndex = 1;
@@ -57,7 +60,7 @@
             // 
             this.village_name.AutoSize = true;
             this.village_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.village_name.Location = new System.Drawing.Point(737, 90);
+            this.village_name.Location = new System.Drawing.Point(675, 72);
             this.village_name.Name = "village_name";
             this.village_name.Size = new System.Drawing.Size(91, 18);
             this.village_name.TabIndex = 2;
@@ -68,16 +71,55 @@
             // 
             this.nations.AutoSize = true;
             this.nations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nations.Location = new System.Drawing.Point(753, 131);
+            this.nations.Location = new System.Drawing.Point(691, 114);
             this.nations.Name = "nations";
             this.nations.Size = new System.Drawing.Size(59, 18);
             this.nations.TabIndex = 3;
             this.nations.Text = "Nations";
             this.nations.Click += new System.EventHandler(this.Nations_Click);
             // 
+            // tree
+            // 
+            this.tree.AutoSize = true;
+            this.tree.Location = new System.Drawing.Point(644, 208);
+            this.tree.Name = "tree";
+            this.tree.Size = new System.Drawing.Size(59, 21);
+            this.tree.TabIndex = 4;
+            this.tree.TabStop = true;
+            this.tree.Text = "Tree";
+            this.tree.UseVisualStyleBackColor = true;
+            this.tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
+            // 
+            // house
+            // 
+            this.house.AutoSize = true;
+            this.house.Location = new System.Drawing.Point(734, 208);
+            this.house.Name = "house";
+            this.house.Size = new System.Drawing.Size(70, 21);
+            this.house.TabIndex = 5;
+            this.house.TabStop = true;
+            this.house.Text = "House";
+            this.house.UseVisualStyleBackColor = true;
+            this.house.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
+            // 
+            // water_source
+            // 
+            this.water_source.AutoSize = true;
+            this.water_source.Location = new System.Drawing.Point(664, 244);
+            this.water_source.Name = "water_source";
+            this.water_source.Size = new System.Drawing.Size(116, 21);
+            this.water_source.TabIndex = 6;
+            this.water_source.TabStop = true;
+            this.water_source.Text = "Water Source";
+            this.water_source.UseVisualStyleBackColor = true;
+            this.water_source.CheckedChanged += new System.EventHandler(this.Water_source_CheckedChanged);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(949, 441);
+            this.Controls.Add(this.water_source);
+            this.Controls.Add(this.house);
+            this.Controls.Add(this.tree);
             this.Controls.Add(this.nations);
             this.Controls.Add(this.village_name);
             this.Controls.Add(this.Age_of_Villagers);
@@ -108,6 +150,9 @@
         private System.Windows.Forms.Label Age_of_Villagers;
         private System.Windows.Forms.Label village_name;
         private System.Windows.Forms.Label nations;
+        private System.Windows.Forms.RadioButton tree;
+        private System.Windows.Forms.RadioButton house;
+        private System.Windows.Forms.RadioButton water_source;
     }
 }
 
