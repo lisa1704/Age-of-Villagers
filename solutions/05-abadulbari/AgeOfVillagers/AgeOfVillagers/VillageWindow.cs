@@ -55,7 +55,7 @@ namespace AgeOfVillagers
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
+            new VillagerSaver(village).saveVillage();
         }
 
         private void newButton_Click(object sender, EventArgs e)
