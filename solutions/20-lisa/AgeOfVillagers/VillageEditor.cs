@@ -72,6 +72,7 @@ namespace AgeOfVillagers
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
         {
+
            if(s == "Tree")
             {
                 tree_point.Add(e.Location);
