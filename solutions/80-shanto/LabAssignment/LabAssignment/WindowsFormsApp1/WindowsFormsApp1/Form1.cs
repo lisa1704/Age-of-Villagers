@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
 
             else if (nation == "Inuit Hunters")
             {
-
+                BackColor = Color.White;
 
                 if (radioButton1.Checked)
                 {
