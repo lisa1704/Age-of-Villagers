@@ -5,25 +5,24 @@ namespace Age_of_villagers
 {
     public class Inuit : INation
     {
-        Pen p = new Pen(Color.Black);
-        public void Draw_house(Graphics g,Point mptop)
+        public IObject Draw_house(Point mptop)
         {
-            Compositeobj house = new Inuit_house(mptop);
-            house.paint(p, g);
+            IObject house = new Inuit_house(mptop);
+            return house;
 
         }
 
-        public void Draw_tree(Graphics g,Point mptop)
+        public IObject Draw_tree(Point mptop)
         {
             IObject tree = new null_obj();
-            tree.paint(p, g);
+            return tree;
 
         }
 
-        public void Draw_watersource(Graphics g,Point mptop)
+        public IObject Draw_watersource(Point mptop)
         {
             IObject waterresource = new null_obj();
-            waterresource.paint(p, g);
+            return waterresource;
         }
 
         public Color get_backcolor()

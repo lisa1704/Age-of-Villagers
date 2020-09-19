@@ -18,12 +18,12 @@ namespace Age_of_villagers
              else if (type == "Arab")
              {
                  return new Arab();
-             }
+             }*/
              else if (type == "Inuit")
              {
                  return new Inuit();
              }
-             else
+             /*else
              {
                  return new NullNation();
              }*/
