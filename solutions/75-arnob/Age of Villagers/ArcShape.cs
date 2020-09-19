@@ -34,9 +34,6 @@ namespace Age_of_Villagers
             graphics.DrawArc(pen, x, y, width, height, startAngle, sweepAngle);
         }
 
-        public void Paint(Graphics graphics)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
