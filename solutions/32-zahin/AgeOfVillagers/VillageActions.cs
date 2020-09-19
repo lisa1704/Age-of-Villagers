@@ -61,6 +61,7 @@ namespace AgeOfVillagers
             if (item == "house") { newVillage.GetVillage(villageType).DrawHouse(g, point); }
             else if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
             else if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
+            else 
             panel1.BackColor = newVillage.GetVillage(villageType).DrawTerrain();
         }
 
