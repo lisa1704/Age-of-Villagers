@@ -30,9 +30,6 @@ namespace AgeOfVillagers
         public override void DrawHouse(Graphics g, Point location)
         {
             BangladeshiHouse bangladeshiHouse = new BangladeshiHouse(location,houseSize);
-            //HouseContext houseContext = new HouseContext(bangladeshiHouse, g, location, houseSize);
-
-            //houseContext.HouseDrawing();
 
             bangladeshiHouse.Draw(g);
 
@@ -41,10 +38,9 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            BangladeshiTree bangladeshiTree = new BangladeshiTree();
-            TreeContext treeContext = new TreeContext(bangladeshiTree,g,location,treeSize);
+            BangladeshiTree bangladeshiTree = new BangladeshiTree(location,treeSize);
 
-            treeContext.TreeDrawing();
+            bangladeshiTree.Draw(g);
 
             Debug.WriteLine("Drawing Bangladeshi Tree");
         }

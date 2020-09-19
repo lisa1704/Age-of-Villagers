@@ -1,20 +1,21 @@
 ﻿using AgeOfVillagers.Data_Objects;
 using System.Drawing;
+using AgeOfVillagers.Components;
 
 namespace AgeOfVillagers.Tree
 {
-    public class BangladeshiTree : ITree
+    public class BangladeshiTree : CompositeShape
     {
-        public void Draw(ElementSize sz, Graphics g, Point p)
+        public BangladeshiTree(Point p, ElementSize sz)
         {
-            Pen pen = new Pen(Color.Black);
+            Point topleft = p;
+            Point topright = new Point(p.X + 2, p.Y);
+            Point bottomleft = new Point(p.X, p.Y + sz.height / 2);
+            Point bottomRight = new Point(p.X + 2, p.Y + sz.height / 2);
 
-            g.DrawLine(pen,p.X, p.Y, p.X + 2, p.Y);
-            g.DrawLine(pen,p.X + 2, p.Y, p.X + 2, p.Y + sz.height / 2);
-            g.DrawLine(pen, p.X + 2, p.Y + sz.height / 2, p.X, p.Y + sz.height / 2);
-            g.DrawLine(pen,p.X, p.Y + sz.height / 2, p.X, p.Y);
-            g.DrawArc(pen, p.X-sz.width/3, p.Y-sz.height/2, sz.height / 2, sz.width, 0, 360);
-
+            AddComponent(new Components.Rectangle(topleft, topright, bottomleft, bottomRight));
+            AddComponent(new Arc(p.X - sz.width / 3, p.Y - sz.height / 2, sz.height / 2, sz.width, 0, 360));
         }
+
     }
 }

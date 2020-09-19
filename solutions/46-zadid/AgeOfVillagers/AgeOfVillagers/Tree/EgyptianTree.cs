@@ -1,9 +1,10 @@
 ﻿using AgeOfVillagers.Data_Objects;
 using System.Drawing;
+using AgeOfVillagers.Components;
 
 namespace AgeOfVillagers.Tree
 {
-    public class EgyptianTree : ITree
+    public class EgyptianTree : CompositeShape
     {
         public void Draw(ElementSize sz, Graphics g, Point p)
         {
