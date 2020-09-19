@@ -85,7 +85,6 @@ namespace Age_of_Villagers
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation_create(selectedNation);
             village_name(villageNameBox.Text);
-            nation.set_graphics(g);
             villagePanel.BackColor = nation.set_background();
         }
 

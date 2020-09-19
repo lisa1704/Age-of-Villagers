@@ -11,12 +11,6 @@ namespace Age_of_Villagers
         private readonly List<Point> river_points = new List<Point>();
         private IShape tree, house, river;
         private string village_name;
-        private Graphics g;
-        private readonly Pen pen = new Pen(Color.Black);
-        public void set_graphics(Graphics g)
-        {
-            this.g = g;
-        }
         
         public void set_villagename(string name)
         {
