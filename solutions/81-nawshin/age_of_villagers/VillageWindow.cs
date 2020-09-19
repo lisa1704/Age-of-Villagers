@@ -27,6 +27,23 @@ namespace age_of_villagers
             this.savepoints = new SaveVillage(vilName, house_point, tree_point, water_point);
         }
 
+        public void setPoints(SaveVillage saveVillage)
+        {
+            vilName = saveVillage.village;
+            foreach(Point pt in saveVillage.house_point)
+            {
+                house_point.Add(pt);
+            }
+            foreach (Point pt in saveVillage.tree_point)
+            {
+                tree_point.Add(pt);
+            }
+            foreach (Point pt in saveVillage.water_point)
+            {
+                water_point.Add(pt);
+            }
+
+        }
 
         NationFactory n = new NationFactory();
         public VillageWindow()
