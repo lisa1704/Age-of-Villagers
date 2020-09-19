@@ -8,10 +8,10 @@ namespace empty_project
 {
     abstract class AbstractNation : INation
     {
-        IHouse house;
-        ITree tree;
-        IWaterSource waterSource;
-        Panel panel;
+        protected IHouse house;
+        protected ITree tree;
+        protected IWaterSource waterSource;
+        protected Panel panel;
 
         public AbstractNation(Panel panel)
         {
