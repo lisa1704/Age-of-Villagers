@@ -35,9 +35,11 @@ namespace Age_of_Villagers
         {
             x = e.X;
             y = e.Y;
+            Pen pen=  new Pen(Color.Black);
             if (text == "Tree")
             {
-                nation.draw_tree(new Point(x, y));
+                IShape tree=nation.draw_tree(new Point(x, y));
+                tree.draw(g, pen);
             }
             else if(text == "House")
             {
