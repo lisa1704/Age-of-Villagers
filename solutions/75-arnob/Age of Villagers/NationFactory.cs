@@ -8,5 +8,32 @@ namespace Age_of_Villagers
 {
     class NationFactory
     {
+        public class NationFactoryApplication
+        {
+            public AbstractNationFactoryCreator GetNation(string nation_name)
+            {
+                if (nation_name == "Bangladeshi Farmers")
+                {
+                    return new BangladeshiFarmer_Creator();
+                }
+
+                else if (nation_name == "Arab Bedouin")
+                {
+                    return new Arab_Creator();
+                }
+
+                else if (nation_name == "Egyptian Kings")
+                {
+                    return new Egyptian_Creator();
+                }
+
+                else if (nation_name == "Inuit Hunters")
+                {
+                    return new Inuit_Creator();
+                }
+
+                return null;
+            }
+        }
     }
 }
