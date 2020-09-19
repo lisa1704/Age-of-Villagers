@@ -139,6 +139,63 @@ namespace WindowsFormsApp1
                 }
             }
 
+            else if (comboBox1.SelectedItem == "Inuit Hunters")
+            {
+
+
+                //EgyptianKing ekh = new EgyptianKing(g);
+                //ekh.DrawHouse(e);
+                if (radioButton1.Checked)
+                {
+
+                    InuitHunters iht = new InuitHunters(g);
+                    iht.DrawHouse(e);
+
+                }
+
+                if (radioButton2.Checked)
+                {
+                    InuitHunters iht = new InuitHunters(g);
+                    iht.DrawTree(e);
+
+                }
+                if (radioButton3.Checked)
+                {
+
+
+                    InuitHunters iht = new InuitHunters(g);
+                    iht.DrawWaterSource(e);
+
+                }
+            }
+
+            else if (comboBox1.SelectedItem == "Arab Bedouin")
+            {
+
+                if (radioButton1.Checked)
+                {
+
+                    ArabBedouin abt = new ArabBedouin(g);
+                    abt.DrawHouse(e);
+
+                }
+
+                if (radioButton2.Checked)
+                {
+                    ArabBedouin abt = new ArabBedouin(g);
+                    abt.DrawTree(e);
+
+                }
+                if (radioButton3.Checked)
+                {
+
+
+                    ArabBedouin abt = new ArabBedouin(g);
+                    abt.DrawWaterSource(e);
+
+                }
+            }
+
 
         }
 
