@@ -24,12 +24,18 @@ namespace AgeOfVillagers
 
         private void VillageName_Click(object sender, EventArgs e)
         {
+            if (VillageName.Text.Trim() != "" || VillageName.Text != null)
 
+            {
+
+                VillageName.Text = "";
+
+            }
         }
 
         private void Nations_TextChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void VillageName_TextChanged(object sender, EventArgs e)
@@ -49,12 +55,22 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-
+            formRefresh();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void formRefresh()
+        {
+            VillageName.Text = "Village Name";
+            Nations.SelectedIndex = -1;
+            House.Checked = false;
+            Tree.Checked = false;
+            WaterSource.Checked = false;
+            this.Invalidate();
         }
     }
 }

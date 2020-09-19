@@ -72,7 +72,7 @@
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(132, 18);
             this.VillageName.TabIndex = 2;
-            this.VillageName.Text = "Village Name";
+            this.VillageName.Text = "Enter Village Name";
             this.VillageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.VillageName.Click += new System.EventHandler(this.VillageName_Click);
             this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
@@ -158,6 +158,7 @@
             this.Nations.Size = new System.Drawing.Size(151, 25);
             this.Nations.TabIndex = 10;
             this.Nations.TextChanged += new System.EventHandler(this.Nations_TextChanged);
+            //this.Nations.Text = "Please, select a Nation";
             // 
             // Form1
             // 
