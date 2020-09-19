@@ -12,6 +12,10 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        string name;
+        string nation;
+        string VillageType;
+        string text;
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +23,12 @@ namespace AgeOfVillagers
 
         private void VillageBox_TextChanged(object sender, EventArgs e)
         {
+            name = villageNameBox.Text;
+        }
+        public void setVillageName(string Name)
+        {
+            villageNameBox.Text = Name;
+            string villageName = Name;
 
         }
 
@@ -29,6 +39,7 @@ namespace AgeOfVillagers
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            nation = comboBox1.Text;
 
         }
 
