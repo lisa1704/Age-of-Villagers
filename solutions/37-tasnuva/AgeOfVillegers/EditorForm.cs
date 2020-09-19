@@ -13,7 +13,8 @@ namespace AgeOfVillegers
     
     public partial class EditorForm : Form
     {
-        string villageName;
+        string VillageName;
+        string name;
         string nation;
         public EditorForm()
         {
@@ -22,12 +23,16 @@ namespace AgeOfVillegers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            VillageNameBox
+            
+            name = VillageNameBox.Text;
+
+
+
         }
         public void setVillageName(string name)
         {
             VillageNameBox.Text = name;
-            VillageName = name;
+            string VillageName = name;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,6 +58,11 @@ namespace AgeOfVillegers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = comboBox1.Text;
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
