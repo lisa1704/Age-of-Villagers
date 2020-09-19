@@ -12,5 +12,14 @@ namespace AgeOfVillagers.Test
             Assert.Equal("Bangladeshi Farmers", bangladeshinationfactory.NationName);
             Assert.IsType<BangladeshiFarmers>(bangladeshinationfactory.GetNation());
         }
+
+        [Fact]
+        public void ArabNationFactoryTest()
+        {
+            ArabBedouinNationfactory arabnationfactory = new ArabBedouinNationfactory();
+
+            Assert.Equal("Arab Bedouin", arabnationfactory.NationName);
+            Assert.IsType<ArabBedouin>(arabnationfactory.GetNation());
+        }
     }
 }
