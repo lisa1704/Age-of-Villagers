@@ -12,6 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        private String villageName;
         public Form1()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            villageName = textBox1.Text;
 
         }
 
