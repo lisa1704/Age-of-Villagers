@@ -46,7 +46,7 @@ namespace Age_Of_Villagers
             villageEditor.Panel1.BackColor = Color.YellowGreen;
         }
     }
-    public class EgyptianKing : INation
+    public class EgyptianKingNation : INation
     {
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -62,7 +62,7 @@ namespace Age_Of_Villagers
         }
     }
 
-    public class InuitHunter : INation
+    public class InuitHunterNation : INation
     {
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
