@@ -65,8 +65,7 @@ namespace WindowsFormsApp1
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            panel1.BackColor = Color.White;
-            BackColor = Color.Green;
+            
 
             x =e.X;
             y = e.Y;
@@ -76,7 +75,8 @@ namespace WindowsFormsApp1
 
             if (comboBox1.SelectedItem == "Bangladeshi Farmers")
             {
-
+                panel1.BackColor = Color.White;
+                BackColor = Color.Green;
 
                 if (radioButton1.Checked)
                 {
@@ -114,9 +114,9 @@ namespace WindowsFormsApp1
             else if (comboBox1.SelectedItem == "Egypt Kings")
             {
 
+                panel1.BackColor = Color.White;
+                BackColor = Color.Yellow;
 
-                //EgyptianKing ekh = new EgyptianKing(g);
-                //ekh.DrawHouse(e);
                 if (radioButton1.Checked)
                 {
 
