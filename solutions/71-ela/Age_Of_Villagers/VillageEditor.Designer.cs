@@ -189,7 +189,7 @@
             this.drawingSpace.Name = "drawingSpace";
             this.drawingSpace.Size = new System.Drawing.Size(600, 400);
             this.drawingSpace.TabIndex = 7;
-            this.drawingSpace.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingSpace_Paint);
+         
             this.drawingSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingSpace_MouseClick);
             // 
             // label1

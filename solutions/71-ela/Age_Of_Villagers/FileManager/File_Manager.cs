@@ -22,7 +22,7 @@ public class File_Manager
         SaveFileDialog saveFileDialog1 = new SaveFileDialog
         {
             InitialDirectory = @"E:\",
-            Title = "Save a village (.json file)",
+            Title = "Save a village (.aov file)",
 
 
             CheckPathExists = true,
@@ -58,6 +58,7 @@ public class File_Manager
 
             CheckFileExists = true,
             CheckPathExists = true,
+            
 
             DefaultExt = "aov",
             Filter = "aov files (*.aov)|*.aov",

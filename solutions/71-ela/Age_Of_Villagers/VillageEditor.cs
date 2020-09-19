@@ -86,7 +86,11 @@ public partial class AgeOfVillagers : Form
     public void buttonSaveVillage_Click(object sender, EventArgs e)
     {
         //Get the village name from villageNameEditor
+
+
+
         village.VillageName = villageNameEditor.Text;
+           
 
         // connert the village object in Json
         fileManager.SaveVillage(village);
@@ -171,9 +175,6 @@ public partial class AgeOfVillagers : Form
 
     }
 
-        private void drawingSpace_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }
