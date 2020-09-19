@@ -10,6 +10,6 @@ public interface INations {
     double TreeWidth = 16;
     double TreeHeight = 24;
     ArrayList<Shape> drawHouse(double x, double y);
-    void drawTree(double x, double y);
+    ArrayList<Shape> drawTree(double x, double y);
     void drawWaterBody(double x, double y);
 }

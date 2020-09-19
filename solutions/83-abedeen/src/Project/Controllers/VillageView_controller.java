@@ -42,11 +42,11 @@ public class VillageView_controller implements Initializable {
                 System.out.println(x1);
                 System.out.println(y1);
                 if(flag == "Tree"){
-//                    Line l1 = new Line(x1,y1,x1-10,y1+20);
-//                    Line l2 = new Line(x1,y1,x1+10,y1+20);
-//                    Line l3 = new Line(x1-10,y1+20,x1+10,y1+20);
-//                    DrawingCanvas.getChildren().addAll(l1,l2,l3);
-                    DrawTree(x1,y1,16,24);
+                    INations village = new Bangladeshi_Farmers();
+                    ArrayList<Shape> tree = village.drawTree(x1,y1);
+                    for (Shape s:tree) {
+                        DrawingCanvas.getChildren().addAll(s);
+                    }
                 }
                 else if (flag == "House"){
                     INations village = new Bangladeshi_Farmers();
@@ -54,11 +54,8 @@ public class VillageView_controller implements Initializable {
                     for (Shape s:house) {
                         DrawingCanvas.getChildren().addAll(s);
                     }
-
                 }
                 else if(flag == "WaterSource"){
-//                    Circle c = new Circle(x1,y1,10);
-//                    DrawingCanvas.getChildren().addAll(c);
                     DrawWaterBody(x1,y1,24,16);
                 }
             }
@@ -126,28 +123,6 @@ public class VillageView_controller implements Initializable {
 
     public void WaterPressed(ActionEvent actionEvent) {
         flag = "WaterSource";
-    }
-
-    public void DrawTree(double x, double y, double width, double height){
-        System.out.println("Tree!");
-        Arc arc = new Arc();
-        arc.setCenterX(x);
-        arc.setCenterY(y);
-        arc.setRadiusX(width/2);
-        arc.setRadiusY((width/2)+2);
-        arc.setType(ArcType.OPEN);
-        arc.setStroke(Color.BLACK);
-        arc.setStrokeWidth(1);
-        arc.setFill(Color.TRANSPARENT);
-        arc.setStartAngle(0.0);
-        arc.setLength(1000.0);
-
-        Line l1 = new Line(x-1,y,x+1,y);
-        Line l2 = new Line(x-1,y+15,x+1,y+15);
-        Line l3 = new Line(x-1,y,x-1,y+15);
-        Line l4 = new Line(x+1,y,x+1,y+15);
-
-        DrawingCanvas.getChildren().addAll(arc,l1,l2,l3,l4);
     }
 
     public void DrawWaterBody(double x, double y, double width, double height){
