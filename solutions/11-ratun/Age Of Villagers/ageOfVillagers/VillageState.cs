@@ -7,7 +7,6 @@ interface Istate
 public class VillageState : Istate
 {
     string villagename;
-    villagename = Village.getVillageName();
     public string getState()
     {
         //return villagename.state();

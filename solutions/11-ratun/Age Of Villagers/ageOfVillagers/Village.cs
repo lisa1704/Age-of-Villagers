@@ -1,16 +1,13 @@
-﻿using System;
-
-public class Village
+﻿namespace ageOfVillagers
 {
-    private Nation nation;
-	private string villagename;
-	public Village(Nation nation, string villagename)
+    public class Village
     {
-        this.nation = nation;
-        this.villagename = villagename;
-    }
-    public string getVillageName()
-    {
-        return villagename;
+        private Nation nation;
+        private string villagename;
+        public Village(Nation nation, string villagename)
+        {
+            this.nation = nation;
+            this.villagename = villagename;
+        }
     }
 }

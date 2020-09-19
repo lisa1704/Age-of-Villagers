@@ -18,57 +18,57 @@ namespace ageOfVillagers
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void label1_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void VillageName_TextChanged(object sender, EventArgs e)
+        public void VillageName_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(VillageName.Text);
         }
 
-        private void Nation_TextChanged(object sender, EventArgs e)
+        public void Nation_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(Nation.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             text += "Adding a tree. ";
         }
 
-        private void House_Click(object sender, EventArgs e)
+        public void House_Click(object sender, EventArgs e)
         {
             text += "Adding a house. ";
         }
 
-        private void Water_Click(object sender, EventArgs e)
+        public void Water_Click(object sender, EventArgs e)
         {
             text += "Adding new Water Source. ";
         }
 
-        private void NewVillage_Click(object sender, EventArgs e)
+        public void NewVillage_Click(object sender, EventArgs e)
         {
             Village v = new Village("nation","village");
             text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
 
-        private void OpenVillage_Click(object sender, EventArgs e)
+        public void OpenVillage_Click(object sender, EventArgs e)
         {
             text += "Opening the village. ";
             //ageOfVillagers.open(List<Village>);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             SaveVillageState currentVillage= new SaveVillageState();
             currentVillage.save();
             text += "Saving the village. ";
         }
 
-        private void MenuForm_Load(object sender, EventArgs e)
+        public void MenuForm_Load(object sender, EventArgs e)
         {
             //ageOfVillagers.Load();
             text += "Loading the village. ";

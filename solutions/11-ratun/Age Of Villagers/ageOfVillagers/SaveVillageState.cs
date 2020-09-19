@@ -1,23 +1,24 @@
-﻿using System;
-
-public class SaveVillageState
+﻿namespace ageOfVillagers
 {
-	MenuForm menuForm = new MenuForm();
-	private string nation;
-	private string villagename;
-	private panel drawingPanel;
-
-	public void setVillage()
+    internal class SaveVillageState
     {
-		nation = menuForm.Nation.Text;
-		villagename = menuForm.VillageName.Text;
-		drawingPanel = menuForm.panel1;
+		MenuForm menuForm = new MenuForm();
+		private string nation;
+		private string villagename;
+		private panel drawingPanel;
+
+		public void setVillage()
+		{
+			nation = menuForm.Nation.Text;
+			villagename = menuForm.VillageName.Text;
+			drawingPanel = menuForm.panel1;
+		}
+
+		public string save()
+		{
+			VillageState state = new VillageState();
+			state.getState(villagename);
+			return "Saving the village. ";
+		}
 	}
-
-	public string save()
-    {
-		SaveVillageState state = new SaveVillageState();
-		state.getState(villagename);
-		return "Saving the village. ";
-    }
 }
