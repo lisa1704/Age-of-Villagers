@@ -21,7 +21,7 @@ namespace AgeOfVillagers
                 return new EgyptianKing();
             }else if(nationType == "Inuit Hunter")
             {
-                return new BangladeshiFarmer();
+                return new InuinHunter();
             }
             else
             {
