@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BdFarmerTree : VillageComponent
+    public class BdFarmerTree : VillageComponent
     {
         public Point e;
         public BdFarmerTree(Point e)
