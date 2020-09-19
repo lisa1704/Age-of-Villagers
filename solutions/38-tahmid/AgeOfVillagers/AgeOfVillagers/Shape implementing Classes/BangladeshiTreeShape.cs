@@ -8,7 +8,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace AgeOfVillagers.Shape_extended_classes
 {
-    class BangladeshiShapedTree : Shapes
+    class BangladeshiTreeShape : Shapes
     {
         Graphics g;
         Pen pen;
@@ -16,7 +16,7 @@ namespace AgeOfVillagers.Shape_extended_classes
         int length, width;
         BasicShapeFactory basicShapeFactory;
    
-        public BangladeshiShapedTree(Graphics g, Pen pen, Point point, int length, int width)
+        public BangladeshiTreeShape(Graphics g, Pen pen, Point point, int length, int width)
         {
             this.pen = pen;
             this.length = length;
