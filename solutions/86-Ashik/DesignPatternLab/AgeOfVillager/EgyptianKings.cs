@@ -28,7 +28,8 @@ namespace AgeOfVillager
 
         public void drawWaterSource(MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            EgyptianKingsWaterSource egyptianKingsWaterSource = new EgyptianKingsWaterSource(g);
+            egyptianKingsWaterSource.draw(e);
         }
     }
 }
