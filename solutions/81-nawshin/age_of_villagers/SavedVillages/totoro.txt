@@ -1,0 +1,1 @@
+{"village":"totoro","house_point":["115, 186"],"tree_point":["101, 181","121, 175","145, 189"],"water_point":["35, 141"]}
