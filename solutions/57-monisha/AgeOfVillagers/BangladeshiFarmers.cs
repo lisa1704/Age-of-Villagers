@@ -10,21 +10,19 @@ namespace AgeOfVillagers
 {
    public class BangladeshiFarmers : INations
     {
-        Pen p = new Pen(Color.Black);        
+        Pen p = new Pen(Color.Black);   
+        string testBdHouse;
         public string DrawHouse(Graphics g,Point pt)
         {
-           /* ShapeRectangle r = new ShapeRectangle(new Point(pt.X, pt.Y), new Point(pt.X + 10, pt.Y+20));
-            Triangle tr = new Triangle(new Point(pt.X-5, pt.Y-10), new Point(pt.X, pt.Y),new Point(pt.X+10,pt.Y));*/
-           BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
-            /*r.Paint(g);
-            tr.Paint(g);*/
+            BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
+         
             house.Paint(g,p);
-            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+            testBdHouse = "BDHouse Constructed";
             return "KureGhor";
         }
         public string testHouse()
         {
-            return "KureGhor";
+            return "BDHouse Constructed";
         }
 
         public void DrawTree(Graphics g, Point pt)

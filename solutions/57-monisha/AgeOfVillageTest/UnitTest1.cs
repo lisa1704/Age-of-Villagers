@@ -13,7 +13,7 @@ namespace AgeOfVillageTest
             BangladeshiFarmers l = new BangladeshiFarmers();
             string s = l.testHouse();
            
-            Assert.AreEqual(s, "KureGhor");
+            Assert.AreEqual(s, "BDHouse Constructed");
         }
     }
 }
