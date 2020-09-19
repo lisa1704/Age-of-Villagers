@@ -6,10 +6,10 @@ namespace Age_of_villagers
     {
         public Bangladeshi_house(Point lptop)
         {
-            Point rptop = new Point(lptop.X + 50, lptop.Y);
-            Point lpbottom = new Point(lptop.X, lptop.Y + 25);
-            Point rpbottom = new Point(lptop.X + 50, lptop.Y + 25);
-            Point mptop = new Point(lptop.X + 25, lptop.Y - 25);
+            Point rptop = new Point(lptop.X + 16, lptop.Y);
+            Point lpbottom = new Point(lptop.X, lptop.Y + 8);
+            Point rpbottom = new Point(lptop.X + 16, lptop.Y + 8);
+            Point mptop = new Point(lptop.X + 8, lptop.Y - 8);
             AddComponent(new obj_rectangle(lptop, rptop, lpbottom, rpbottom));
             AddComponent(new obj_triangle(lptop, rptop, mptop));
         }
@@ -19,11 +19,12 @@ namespace Age_of_villagers
     {
         public Bangladeshi_tree(Point mptop)
         {
-            Point lptop = new Point(mptop.X - 2, mptop.Y);
-            Point rptop = new Point(mptop.X + 2, mptop.Y);
-            Point lpbottom = new Point(mptop.X - 2, mptop.Y + 50);
-            Point rpbottom = new Point(mptop.X + 2, mptop.Y + 50);
-            AddComponent(new obj_arc(mptop, 50, 50, 0, 360));
+            Point lptop = new Point(mptop.X - 1, mptop.Y);
+            Point rptop = new Point(mptop.X + 1, mptop.Y);
+            Point lpbottom = new Point(mptop.X - 1, mptop.Y + 16);
+            Point rpbottom = new Point(mptop.X + 1, mptop.Y + 16);
+            Point mpmid = new Point(mptop.X - 8, mptop.Y - 8);
+            AddComponent(new obj_arc(mpmid, 16, 16, 0, 360));
             AddComponent(new obj_rectangle(lptop, rptop, lpbottom, rpbottom));
         }
     }

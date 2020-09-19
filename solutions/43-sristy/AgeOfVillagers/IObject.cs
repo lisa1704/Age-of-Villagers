@@ -42,7 +42,7 @@ namespace Age_of_villagers
 
         public void paint(Pen p, Graphics g)
         {
-            g.DrawArc(p, p1.X-25, p1.Y-25, x1, x2, r1, r2);
+            g.DrawArc(p, p1.X, p1.Y, x1, x2, r1, r2);
         }
     }
 
