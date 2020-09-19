@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            BangladeshiHouse house = new BangladeshiHouse(Drawingpanel);
+            BangladeshiHouse house = new BangladeshiHouse(point, Drawingpanel);
             house.Draw(point, Drawingpanel);
         }
 
