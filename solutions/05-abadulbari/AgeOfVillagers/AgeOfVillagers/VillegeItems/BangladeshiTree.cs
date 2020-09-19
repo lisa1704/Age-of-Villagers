@@ -7,7 +7,7 @@ using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class BangladeshiTree : IShape
+    class BangladeshiTree : VillageItem
     {
         private readonly Point topLeft, bottomRight, centre;
 
@@ -18,9 +18,11 @@ namespace AgeOfVillagers.VillegeItems
             topLeft.Y = point.Y - 20;
             bottomRight.X = point.X + 20;
             bottomRight.Y = point.Y + 20;
+            addItem(new Circle(topLeft, bottomRight));
+            addItem(new Rectangle(new Point(centre.X - 2, centre.Y), new Point(centre.X + 2, centre.Y + 40)));
         }
 
-        public void draw(Graphics g, Pen p)
+        public override void draw(Graphics g, Pen p)
         {
             new Circle(topLeft, bottomRight).draw(g, p);
             new Rectangle(new Point(centre.X - 2, centre.Y), new Point(centre.X + 2, centre.Y + 40)).draw(g, p);
