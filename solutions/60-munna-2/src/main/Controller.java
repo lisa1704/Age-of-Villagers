@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import tree.BangladeshiFarmersTree;
+import waterSource.Pond;
 
 import java.io.IOException;
 import java.net.URL;
@@ -85,5 +86,12 @@ public class Controller implements Initializable {
     void Tree_Button_Clicked(ActionEvent actionEvent) {
         BangladeshiFarmersTree bangladeshiFarmersTree = new BangladeshiFarmersTree();
         bangladeshiFarmersTree.draw_Tree(drawing_space_canvas);
+    }
+
+    @FXML
+    void WaterSource_Button_Clicked(ActionEvent event) {
+        Pond pond = new Pond();
+        pond.draw_water_resource(drawing_space_canvas);
+
     }
 }

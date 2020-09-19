@@ -39,7 +39,7 @@
             <Font name="Arial Bold" size="36.0" />
          </font>
       </Label>
-      <RadioButton fx:id="water_RadioButton" layoutX="719.0" layoutY="311.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="127.0" text="Water Source">
+      <RadioButton fx:id="water_RadioButton" layoutX="719.0" layoutY="311.0" mnemonicParsing="false" onAction="#WaterSource_Button_Clicked" prefHeight="24.0" prefWidth="127.0" text="Water Source">
          <font>
             <Font size="14.0" />
          </font>

@@ -44,7 +44,6 @@ public class Pond implements IWaterSource {
                             new Line_Shape(point9, point1, graphicsContext).draw();
                     }
                 });
-
     }
 }
 
