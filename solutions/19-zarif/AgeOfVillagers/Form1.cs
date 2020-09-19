@@ -18,7 +18,21 @@ namespace AgeOfVillagers
         bool moving=false;
         Pen pen;
         private string _villagename, _nationame;
-       private NationManager _nationmanager;
+        private NationManager _nationmanager;
+
+        VillageState _villagestate;
+        private string name;
+
+        private List<Point> Housepoints { get; set; } = new List<Point>();
+        private List<Point> Waterpoints { get; set; } = new List<Point>();
+        private List<Point> Treepoints { get; set; } = new List<Point>();
+
+        public void get_state()
+        {
+            this._villagestate = new VillageState(VillageName.Text, Housepoints, Treepoints, Waterpoints);
+        }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -41,10 +55,30 @@ namespace AgeOfVillagers
 
         private void SaveVillagebtn_Click(object sender, EventArgs e)
         {
-            string village_name = VillageName.Text;
-            MessageBox.Show(village_name);
-           
+            get_state();
+            SaveVillageState command = new SaveVillageState(_villagestate);
+            command.Execute();
+
+
         }
+
+        public void set_state(VillageState village)
+        {
+
+            foreach (Point pt in village._housePoints)
+            {
+                Housepoints.Add(pt);
+            }
+            foreach (Point pt in village._treePoints)
+            {
+                Treepoints.Add(pt);
+            }
+            foreach (Point pt in village._WaterScPoints)
+            {
+                Waterpoints.Add(pt);
+            }
+        }
+
 
         private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
         {

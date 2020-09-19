@@ -8,16 +8,16 @@ using Newtonsoft.Json;
 
 namespace AgeOfVillagers
 {
-    public class SaveVillageState
+    public class SaveVillageState : ICommandVillage
     {
-        VillageState village;
+      private  VillageState village;
 
         public SaveVillageState(VillageState village)
         {
             this.village = village;
         }
 
-        public void execute()
+        public void Execute()
         {
             SaveFileDialog _savefiledg = new SaveFileDialog();
             _savefiledg.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
