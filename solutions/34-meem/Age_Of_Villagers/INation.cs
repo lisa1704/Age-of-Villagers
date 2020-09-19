@@ -31,7 +31,7 @@ namespace Age_Of_Villagers
         }
     }
 
-    public class ArabKingNation : INation
+    public class ArabBedouinNation : INation
     {
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -47,6 +47,8 @@ namespace Age_Of_Villagers
         }
     }
 
+
+    
 
 
 
