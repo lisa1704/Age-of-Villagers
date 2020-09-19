@@ -21,39 +21,19 @@ namespace AgeOfVillegers
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-            name = VillageNameBox.Text;
+        
+        
 
-
-
-        }
-        public void setVillageName(string name)
-        {
-            VillageNameBox.Text = name;
-            string VillageName = name;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void save_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,6 +41,48 @@ namespace AgeOfVillegers
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
+
+        private void EditorForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VillageNameBox_TextChanged(object sender, EventArgs e)
+        {
+            name = VillageNameBox.Text;
+        }
+        public void setVillageName(string name)
+        {
+            VillageNameBox.Text = name;
+            string VillageName = name;
+        }
+
+        private void Tree_btn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_btn_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Water_btn_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void new_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Open_btn_Click(object sender, EventArgs e)
         {
 
         }
