@@ -35,6 +35,7 @@
             this.openVillageButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.appName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // treeButton
@@ -101,11 +102,22 @@
             this.panel1.Size = new System.Drawing.Size(633, 497);
             this.panel1.TabIndex = 6;
             // 
+            // appName
+            // 
+            this.appName.AutoSize = true;
+            this.appName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appName.Location = new System.Drawing.Point(659, 28);
+            this.appName.Name = "appName";
+            this.appName.Size = new System.Drawing.Size(163, 25);
+            this.appName.TabIndex = 7;
+            this.appName.Text = "Age of Villagers";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 493);
+            this.Controls.Add(this.appName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openVillageButton);
@@ -116,6 +128,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,6 +141,7 @@
         private System.Windows.Forms.Button openVillageButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label appName;
     }
 }
 
