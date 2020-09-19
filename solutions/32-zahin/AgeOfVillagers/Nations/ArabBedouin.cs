@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
@@ -19,7 +21,8 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Graphics g, Point point)
         {
-            MessageBox.Show("Drawing House for Arab Bedouin");
+            Triangle triangle = new Triangle();
+            triangle.DrawShape(g, point);
         }
 
         public void DrawTree(Graphics g, Point point)
