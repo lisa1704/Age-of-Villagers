@@ -30,13 +30,13 @@
         {
             this.drawingAreaPanel = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.nationTypeCombo = new System.Windows.Forms.ComboBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.waterButton = new System.Windows.Forms.Button();
             this.houseButton = new System.Windows.Forms.Button();
             this.TreeButton = new System.Windows.Forms.Button();
-            this.nationListbox = new System.Windows.Forms.ListBox();
             this.villageNameBox = new System.Windows.Forms.TextBox();
             this.gameHeaderLabel = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
@@ -54,19 +54,35 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.menuPanel.Controls.Add(this.nationTypeCombo);
             this.menuPanel.Controls.Add(this.saveButton);
             this.menuPanel.Controls.Add(this.openButton);
             this.menuPanel.Controls.Add(this.newButton);
             this.menuPanel.Controls.Add(this.waterButton);
             this.menuPanel.Controls.Add(this.houseButton);
             this.menuPanel.Controls.Add(this.TreeButton);
-            this.menuPanel.Controls.Add(this.nationListbox);
             this.menuPanel.Controls.Add(this.villageNameBox);
             this.menuPanel.Controls.Add(this.gameHeaderLabel);
             this.menuPanel.Location = new System.Drawing.Point(612, 12);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(248, 400);
             this.menuPanel.TabIndex = 13;
+            // 
+            // nationTypeCombo
+            // 
+            this.nationTypeCombo.BackColor = System.Drawing.SystemColors.Info;
+            this.nationTypeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nationTypeCombo.FormattingEnabled = true;
+            this.nationTypeCombo.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouins",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.nationTypeCombo.Location = new System.Drawing.Point(54, 112);
+            this.nationTypeCombo.Name = "nationTypeCombo";
+            this.nationTypeCombo.Size = new System.Drawing.Size(151, 28);
+            this.nationTypeCombo.TabIndex = 4;
+            this.nationTypeCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // saveButton
             // 
@@ -139,17 +155,6 @@
             this.TreeButton.UseVisualStyleBackColor = true;
             this.TreeButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TreeButton_MouseClick);
             // 
-            // nationListbox
-            // 
-            this.nationListbox.BackColor = System.Drawing.SystemColors.Info;
-            this.nationListbox.FormattingEnabled = true;
-            this.nationListbox.ItemHeight = 20;
-            this.nationListbox.Location = new System.Drawing.Point(55, 108);
-            this.nationListbox.Name = "nationListbox";
-            this.nationListbox.Size = new System.Drawing.Size(150, 44);
-            this.nationListbox.TabIndex = 2;
-            this.nationListbox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // villageNameBox
             // 
             this.villageNameBox.BackColor = System.Drawing.SystemColors.Info;
@@ -198,7 +203,7 @@
         private System.Windows.Forms.Button waterButton;
         private System.Windows.Forms.Button houseButton;
         private System.Windows.Forms.Button TreeButton;
-        private System.Windows.Forms.ListBox nationListbox;
+        private System.Windows.Forms.ComboBox nationTypeCombo;
     }
 }
 

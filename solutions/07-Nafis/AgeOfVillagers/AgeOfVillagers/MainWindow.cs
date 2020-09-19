@@ -33,10 +33,7 @@ namespace AgeOfVillagers
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void drawingAreaPanel_MouseClick(object sender, MouseEventArgs e)
         {
@@ -74,6 +71,11 @@ namespace AgeOfVillagers
         private void waterButton_MouseClick(object sender, MouseEventArgs e)
         {
             text = "WATER";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
