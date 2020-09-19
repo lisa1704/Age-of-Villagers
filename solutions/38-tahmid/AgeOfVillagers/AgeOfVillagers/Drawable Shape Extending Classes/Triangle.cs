@@ -8,15 +8,15 @@ namespace AgeOfVillagers
 {
     class Triangle : DrawableShapes
     {
-        Point start, right, top;
+        Point startPoint, rightPoint, topPoint;
         Graphics g;
         Pen p;
         int height, base_length;
         DrawableShapes rightLine,leftLine,baseLine;
 
-        public Triangle(Graphics g, Pen p, Point start, int height, int base_length)
+        public Triangle(Graphics g, Pen p, Point startPoint, int height, int base_length)
         {
-            this.start = start;
+            this.startPoint = startPoint;
             this.height = height;
             this.base_length = base_length;
             this.g = g;
@@ -30,14 +30,23 @@ namespace AgeOfVillagers
             baseLine.drawShape();
         }
 
+        public Point getTopPoint()
+        {
+            return topPoint;
+        }
+        public Point getRightPoint()
+        {
+            return rightPoint;
+        }
+
         public override void makeShape()
         {
-            right = new Point(start.X + base_length, start.Y);
-            top = new Point(start.X + (base_length / 2), start.Y - height);
+            rightPoint = new Point(startPoint.X + base_length, startPoint.Y);
+            topPoint = new Point(startPoint.X + (base_length / 2), startPoint.Y - height);
 
-            rightLine = base.getLines(right, top, g, p);
-            leftLine = base.getLines(start, top, g, p);
-            baseLine = base.getLines(start, right, g, p);
+            rightLine = base.getLines(rightPoint, topPoint, g, p);
+            leftLine = base.getLines(startPoint, topPoint, g, p);
+            baseLine = base.getLines(startPoint, rightPoint, g, p);
 
             drawShape();
         }
