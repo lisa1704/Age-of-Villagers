@@ -14,6 +14,7 @@ public class Line_Shape implements IShape {
         this.graphicsContext = graphicsContext;
     }
 
+
     @Override
     public void draw() {
         graphicsContext.strokeLine(point1.x, point1.y, point2.x, point2.y);
