@@ -13,6 +13,8 @@ namespace AgeOfVillagers
     public partial class VillageWindow : Form
     {
         int x, y;
+        Graphics g;
+
         public VillageWindow()
         {
             InitializeComponent();
@@ -52,6 +54,23 @@ namespace AgeOfVillagers
         }
 
         private void Label_villName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_saveVillage_Click(object sender, EventArgs e)
+        {
+            SaveVillageForm svf = new SaveVillageForm();
+            svf.Show();
+        }
+
+        private void btn_openVillage_Click(object sender, EventArgs e)
+        {
+            OpenVillageForm ovf = new OpenVillageForm();
+            ovf.Show();
+        }
+
+        private void btn_newVillage_Click(object sender, EventArgs e)
         {
 
         }
