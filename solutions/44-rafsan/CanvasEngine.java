@@ -19,7 +19,11 @@ public class CanvasEngine {
 
                     @Override
                     public void handle(MouseEvent event) {
+                        graphicsContext.strokeLine(event.getX(), event.getY(), 10, 10);
 
+                        String x = String.valueOf(event.getX());
+                        String y = String.valueOf(event.getY());
+                        System.out.println(x+", "+y);
                     }
                 });
 
