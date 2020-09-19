@@ -8,7 +8,7 @@ namespace AgeOfVillager
 {
     class BDFarmersTree : ITree
     {
-        int x, y;
+        int x, y, width, height, startAngle, sweepAngle;
         private readonly Graphics g;
         Pen myPen = new Pen(Color.Black);
         public BDFarmersTree(Graphics graphics)
@@ -19,10 +19,15 @@ namespace AgeOfVillager
         {
             x = e.X;
             y = e.Y;
-            Rectangle rect1 = new Rectangle(x,y,30,40);
-            Rectangle rect2 = new Rectangle(x+12, y+25, 5, 40);
-            g.DrawEllipse(myPen, rect1);
-            g.DrawRectangle(myPen, rect2);
+            width = 24;
+            height = 42;
+            startAngle = 0;
+            sweepAngle = 360;
+            g.DrawArc(myPen, x, y, width, height, startAngle, sweepAngle);
+            g.DrawLine(myPen, x+10, y+24, x + 14, y + 24);
+            g.DrawLine(myPen, x + 10, y + 24, x + 10, y + 64);
+            g.DrawLine(myPen, x + 10, y + 64, x + 14, y + 64);
+            g.DrawLine(myPen, x + 14, y + 24, x + 14, y + 64);
         }
     }
 }
