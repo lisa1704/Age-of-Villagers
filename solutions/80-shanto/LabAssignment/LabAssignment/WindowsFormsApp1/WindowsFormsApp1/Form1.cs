@@ -65,7 +65,8 @@ namespace WindowsFormsApp1
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-
+            panel1.BackColor = Color.White;
+            BackColor = Color.Green;
 
             x =e.X;
             y = e.Y;
