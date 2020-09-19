@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AOV
 {
-    public partial class Form1 : Form
+    public partial class AgeOfVillagers : Form
     {
-        public Form1()
+        public AgeOfVillagers()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }
