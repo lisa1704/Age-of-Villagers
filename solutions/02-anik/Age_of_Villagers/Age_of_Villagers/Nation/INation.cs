@@ -6,6 +6,9 @@ namespace Age_of_Villagers.Nation
 {
     interface INation
     {
-
+        public interface INation
+        {
+            string getNationName();
+        }
     }
 }
