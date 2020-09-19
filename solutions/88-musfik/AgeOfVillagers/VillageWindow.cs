@@ -14,6 +14,7 @@ namespace AgeOfVillagers
     {
         List<INation> nationlist = new List<INation>();
         INation nation = null;
+        Village village = null;
         Graphics g;
         public Pen p; 
         string villageName = null;
@@ -50,38 +51,46 @@ namespace AgeOfVillagers
 
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
-            
-            //Point point3 = new Point(e.X, e.Y);
-            //Point point1 = new Point(e.X-30, e.Y+30);
-            //Point point2 = new Point(e.X+30, e.Y+60);
-
-            Point point = new Point(e.X, e.Y);
-            //IShape aShape = new ArabTreeShape(new Point(point.X - 20, point.Y));
-            //IShape iShape = new EgyptianWaterSourceShape(point);
-
-            //bShape.Draw(g, p);
-            //aShape.Draw(g, p);
-            //iShape.Draw(g, p);
-
-
+            if (village != null)
+            {
+                Point point = new Point(e.X, e.Y);
+                if (tree_btn.Checked)
+                {
+                    
+                }
+                else if (House_btn.Checked)
+                {
+                    
+                }
+                else if (water_btn.Checked)
+                {
+                    
+                }
+            }
         }
 
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
         {
             TextBox objTextBox = (TextBox)sender;
             villageName = objTextBox.Text;
+            if (villageName.Length == 0){
+                villageName = null;
+            }             
         }
 
         private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = (INation)NationlistBox.SelectedItem;
-            Village_name_textBox.Text = nation.getNationName();
+            if(village!= null)
+            {
+                village.changeVillageNation(nation);
+                
+            }
         }
 
         private void House_btn_CheckedChanged(object sender, EventArgs e)
         {
-            selectedItem = House_btn.Text;
-            
+            selectedItem = House_btn.Text;     
         }
 
         private void tree_btn_CheckedChanged(object sender, EventArgs e)
@@ -96,7 +105,11 @@ namespace AgeOfVillagers
 
         private void new_village_btn_Click(object sender, EventArgs e)
         {
-            this.Refresh();
+            if (villageName != null && nation != null)
+            {
+                village = new Village(villageName, nation);
+                
+            }
         }
 
         private void save_village_btn_Click(object sender, EventArgs e)

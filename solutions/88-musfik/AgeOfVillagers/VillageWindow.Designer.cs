@@ -60,7 +60,7 @@ namespace AgeOfVillagers
             // drawing_space
             // 
             this.drawing_space.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.drawing_space.Location = new System.Drawing.Point(12, 12);
+            this.drawing_space.Location = new System.Drawing.Point(0, 0);
             this.drawing_space.Name = "drawing_space";
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 0;
@@ -70,7 +70,6 @@ namespace AgeOfVillagers
             // menuBar
             // 
             this.menuBar.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.menuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menuBar.Controls.Add(this.water_btn);
             this.menuBar.Controls.Add(this.tree_btn);
             this.menuBar.Controls.Add(this.House_btn);
@@ -80,9 +79,9 @@ namespace AgeOfVillagers
             this.menuBar.Controls.Add(this.NationlistBox);
             this.menuBar.Controls.Add(this.Village_name_textBox);
             this.menuBar.Controls.Add(MenuTopLabel);
-            this.menuBar.Location = new System.Drawing.Point(611, 12);
+            this.menuBar.Location = new System.Drawing.Point(600, 0);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(250, 400);
+            this.menuBar.Size = new System.Drawing.Size(248, 400);
             this.menuBar.TabIndex = 1;
             // 
             // water_btn
@@ -203,15 +202,14 @@ namespace AgeOfVillagers
             this.Village_name_textBox.TabIndex = 1;
             this.Village_name_textBox.Text = "village name";
             this.Village_name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Village_name_textBox.UseWaitCursor = true;
             this.Village_name_textBox.TextChanged += new System.EventHandler(this.Village_name_textBox_TextChanged);
             // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(876, 458);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(847, 396);
             this.Controls.Add(this.menuBar);
             this.Controls.Add(this.drawing_space);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

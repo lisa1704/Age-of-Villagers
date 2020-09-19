@@ -5,7 +5,7 @@ namespace AgeOfVillagers
 {
     public class ArabBedouin : INation
     {
-        private readonly Color color = Color.LightYellow;
+        private readonly Color color = Color.LightGoldenrodYellow;
         private String nation_name = "Arab Bedouin";
 
         public ArabBedouin()

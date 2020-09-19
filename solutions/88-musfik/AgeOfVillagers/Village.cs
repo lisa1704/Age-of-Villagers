@@ -11,14 +11,21 @@ namespace AgeOfVillagers
     {
         private string villageName;
         private INation nation;
-        private List<IVillageItem> village_items;
+        private List<House> house_items;
+        private List<WaterResource> waterResource_items;
+        private List<Tree> tree_items;
         public Village(string villageName, INation nation)
         {
             this.villageName = villageName;
             this.nation = nation;
-            village_items = new List<IVillageItem>();
+            tree_items = new List<Tree>();
+            house_items = new List<House>();
+            waterResource_items = new List<WaterResource>();
         }
-
+        public void changeVillageNation(INation nation)
+        {
+            this.nation = nation;
+        }
         public string GetVillageName()
         {
             return villageName;
@@ -28,7 +35,6 @@ namespace AgeOfVillagers
         {
             villageName = value;
         }
-
 
     }
 }

@@ -5,7 +5,7 @@ namespace AgeOfVillagers
 {
     public class BangladeshiFarmers : INation
     {
-        private readonly Color color = Color.Green;
+        private readonly Color color = Color.GreenYellow;
         private String nation_name = "Bangladeshi Farmers";
 
         public BangladeshiFarmers()
