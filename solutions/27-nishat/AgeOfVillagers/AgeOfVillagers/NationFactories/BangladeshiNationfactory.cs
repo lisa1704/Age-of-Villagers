@@ -10,7 +10,7 @@ namespace AgeOfVillagers
 
         public INation GetNation()
         {
-            return new BalgladeshiFarmers(Nationname);
+            return new BangladeshiFarmers(Nationname);
         }
     }
 }

@@ -2,11 +2,11 @@
 
 namespace AgeOfVillagers
 {
-    public class BalgladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         private readonly string nationname;
 
-        public BalgladeshiFarmers(string nationname)
+        public BangladeshiFarmers(string nationname)
         {
             this.nationname = nationname;
         }
