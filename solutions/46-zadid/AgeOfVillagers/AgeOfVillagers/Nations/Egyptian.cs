@@ -27,11 +27,8 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
-            EgyptianHouse egyptianHouse = new EgyptianHouse();
-            HouseContext houseContext = new HouseContext(egyptianHouse, g, location, houseSize);
-
-            houseContext.HouseDrawing();
-
+            EgyptianHouse egyptianHouse = new EgyptianHouse(location,houseSize);
+            egyptianHouse.Draw(g);
             Debug.WriteLine("Drawing Egyptian House");
         }
 
