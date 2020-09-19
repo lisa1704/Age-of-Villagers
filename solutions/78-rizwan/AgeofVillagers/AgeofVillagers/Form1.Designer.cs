@@ -36,7 +36,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -111,13 +110,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Age of Villagers";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(144, 138);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 15;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -159,7 +151,6 @@
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -170,6 +161,8 @@
             this.Controls.Add(this.splitter1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDrawingBoard_MouseDown);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelDrawingBoard_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,7 +177,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;

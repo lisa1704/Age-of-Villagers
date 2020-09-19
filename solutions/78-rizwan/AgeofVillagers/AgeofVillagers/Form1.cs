@@ -12,10 +12,9 @@ namespace AgeofVillagers
 {
     public partial class Form1 : Form
     {
-        bool drawing = false;
-        RadioButton rb = null;
-        Point start = new Point(0, 0);
-        Point end = new Point(0, 0);
+        bool drawing = true;
+        int x, y, h, w;
+        Pen p = new Pen(Color.Red, 3);
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +22,7 @@ namespace AgeofVillagers
 
         private void newvillage_Click(object sender, EventArgs e)
         {
-            panel1.Refresh();
+            //Form1.Refresh();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -38,7 +37,8 @@ namespace AgeofVillagers
 
         private void panelDrawingBoard_MouseUp(object sender, MouseEventArgs e)
         {
-            drawing = false;
+            //drawing = false;
+            
         }
         private void panelDrawingBoard_MouseMove(object sender, MouseEventArgs e)
         {
@@ -46,27 +46,40 @@ namespace AgeofVillagers
         }
         private void panelDrawingBoard_MouseDown(object sender, MouseEventArgs e)
         {
-            start = e.Location;
+            //start = e.Location;
             if (e.Button == MouseButtons.Left)
             {
                 drawing = true;
+                x = e.X;
+                y = e.Y;
+
+                h = x+5;
+                w = y+5;
+                if (radioButton1.Checked == true)
+                {
+                    RadioButton rb = radioButton1;
+                    Graphics g = this.CreateGraphics();
+                    Rectangle shape = new Rectangle(x, y, h, w);
+                    g.DrawRectangle(p, shape);
+                    
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    RadioButton rb = radioButton1;
+                    Graphics g = this.CreateGraphics();
+                    Rectangle shape = new Rectangle(x, y, h, w);
+                    g.DrawRectangle(p, shape);
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    RadioButton rb = radioButton1;
+                    Graphics g = this.CreateGraphics();
+                    Rectangle shape = new Rectangle(x, y, h, w);
+                    g.DrawRectangle(p, shape);
+                }
             }
         }
-        private void radiobutton_click(object sender, MouseEventArgs e)
-        {
-            if (radioButton1.Checked==true)
-            {
-                rb = radioButton1;
-            }
-            else if (radioButton2.Checked == true)
-            {
-                rb = radioButton2;
-            }
-            else if (radioButton3.Checked == true)
-            {
-                rb = radioButton3;
-            }
-        }
+        
         
     }
 }
