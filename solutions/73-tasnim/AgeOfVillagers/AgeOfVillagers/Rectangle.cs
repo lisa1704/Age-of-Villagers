@@ -23,4 +23,5 @@ namespace AgeOfVillagers
             addShape(new Line(BottomLeft, BottomRight));
             addShape(new Line(BottomRight, TopRight));
         }
+    }
 }
