@@ -32,6 +32,14 @@ namespace AgeOfVillageTest
             Color TestEColor = Color.LightGoldenrodYellow;
             Assert.AreEqual(EColor, TestEColor);
         }
+        [TestMethod]
+        public void TestInuitBackColor()
+        {
+            InuitHunters InuitColor = new InuitHunters();
+            Color InuitTerrainColor = InuitColor.GetTerrainColor();
+            Color TestInuitColor = Color.White;
+            Assert.AreEqual(InuitTerrainColor, TestInuitColor);
+        }
 
     }
 }
