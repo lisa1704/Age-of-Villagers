@@ -8,22 +8,24 @@ namespace AgeOfVillager
 {
     class EgyptianKingsWaterSource : IWaterSource
     {
+        int x, y, width, height, startAngle, sweepAngle;
         private readonly Graphics g;
 
         public EgyptianKingsWaterSource(Graphics graphics)
         {
             this.g = graphics;
         }
-        int x, y, radius;
         Pen myPen = new Pen(Color.Black);
 
         public void draw(MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
-            radius = 12;
-            g.DrawEllipse(myPen, x - radius, y - radius,
-                      radius + radius, radius + radius);
+            width = 24;
+            height = 24;
+            startAngle = 0;
+            sweepAngle = 360;
+            g.DrawArc(myPen, x, y, width, height, startAngle, sweepAngle);
         }
     }
 }
