@@ -25,39 +25,41 @@ namespace Age_of_Villagers
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void HouseButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TreeButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WaterSourceButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SaveVillageButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void NewVillageButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void OpenVillageButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void GameLabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

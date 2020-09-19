@@ -114,7 +114,7 @@
             this.GameLabel.TabIndex = 1;
             this.GameLabel.Text = "Age of Villagers";
             this.GameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.GameLabel.Click += new System.EventHandler(this.label1_Click);
+            this.GameLabel.Click += new System.EventHandler(this.GameLabel_Click);
             // 
             // SaveVillage
             // 
@@ -126,7 +126,7 @@
             this.SaveVillage.TabIndex = 0;
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
-            this.SaveVillage.Click += new System.EventHandler(this.button6_Click);
+            this.SaveVillage.Click += new System.EventHandler(this.SaveVillageButton_Click);
             // 
             // OpenVillage
             // 
@@ -137,7 +137,7 @@
             this.OpenVillage.TabIndex = 0;
             this.OpenVillage.Text = "Open Village";
             this.OpenVillage.UseVisualStyleBackColor = true;
-            this.OpenVillage.Click += new System.EventHandler(this.button5_Click);
+            this.OpenVillage.Click += new System.EventHandler(this.OpenVillageButton_Click);
             // 
             // NewVillage
             // 
@@ -149,7 +149,7 @@
             this.NewVillage.TabIndex = 0;
             this.NewVillage.Text = "New Village";
             this.NewVillage.UseVisualStyleBackColor = true;
-            this.NewVillage.Click += new System.EventHandler(this.button4_Click);
+            this.NewVillage.Click += new System.EventHandler(this.NewVillageButton_Click);
             // 
             // WaterSource
             // 
@@ -161,7 +161,7 @@
             this.WaterSource.TabIndex = 0;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.button3_Click);
+            this.WaterSource.Click += new System.EventHandler(this.WaterSourceButton_Click);
             // 
             // House
             // 
@@ -173,7 +173,7 @@
             this.House.TabIndex = 0;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.button2_Click);
+            this.House.Click += new System.EventHandler(this.HouseButton_Click);
             // 
             // Tree
             // 
@@ -185,7 +185,7 @@
             this.Tree.TabIndex = 0;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.button1_Click);
+            this.Tree.Click += new System.EventHandler(this.TreeButton_Click);
             // 
             // VillageWindow
             // 
