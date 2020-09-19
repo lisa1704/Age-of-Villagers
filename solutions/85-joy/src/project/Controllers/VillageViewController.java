@@ -49,12 +49,11 @@ public class VillageViewController implements Initializable {
                     DrawPane.getChildren().addAll(line);
                 }
                 else if(Flag == 1){
-                    Rectangle rectangle = new Rectangle(event.getSceneX(),event.getSceneY());
-                    DrawPane.getChildren().addAll(rectangle);
-                }
-                else if(Flag == 2){
                     Circle circle = new Circle(event.getSceneX(),event.getSceneY(),10,Color.GRAY);
                     DrawPane.getChildren().addAll(circle);
+                }
+                else if(Flag == 2){
+                    DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
                 }
             }
         });
@@ -124,9 +123,25 @@ public class VillageViewController implements Initializable {
 
     public void SelectTree(ActionEvent actionEvent) {
         this.Flag = 1;
+        System.out.println("TREE SELECTED!");
     }
 
     public void SelectHouse(ActionEvent actionEvent) {
         this.Flag = 2;
+        System.out.println("HOUSE SELECTED!");
+    }
+
+    public void DrawHouse(double x1, double y1, double height, double width){
+        //Upper Triangle..
+        Line line1 = new Line(x1,y1,x1+width,y1);
+        Line line2 = new Line(x1,y1,x1+(width/2.0),y1-(height/2.0));
+        Line line3 = new Line(x1+width,y1,x1+(width/2.0),y1-(height/2.0));
+        //Lower Rectangle
+        Line line4 = new Line(x1,y1,x1,y1-height);
+        Line line5 = new Line(x1,y1-height,x1+width,y1-height);
+        Line line6 = new Line(x1+width,y1-height,x1+width,y1);
+
+        DrawPane.getChildren().addAll(line1,line2,line3);
+
     }
 }
