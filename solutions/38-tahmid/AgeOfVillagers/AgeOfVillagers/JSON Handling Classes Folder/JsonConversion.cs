@@ -9,7 +9,7 @@ namespace AgeOfVillagers.JSON_Handling_Classes_Folder
     class JsonConversion
     {
         String jsonData;
-        public void serialize(StateModel currentState,string fileName)
+        public void serialize(State currentState,string fileName)
         {
             if (fileName != "")
             {
@@ -20,7 +20,7 @@ namespace AgeOfVillagers.JSON_Handling_Classes_Folder
             
         }
 
-        public StateModel deserialize(string jsonData)
+        public State deserialize(string jsonData)
         {
             var settings = new JsonSerializerSettings()
             {
@@ -29,7 +29,7 @@ namespace AgeOfVillagers.JSON_Handling_Classes_Folder
 
 
 
-            StateModel  previouslySavedState = JsonConvert.DeserializeObject<StateModel>(jsonData, settings);
+            State  previouslySavedState = JsonConvert.DeserializeObject<State>(jsonData, settings);
             return previouslySavedState;
         }
     }

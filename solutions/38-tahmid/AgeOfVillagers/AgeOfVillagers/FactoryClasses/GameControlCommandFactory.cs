@@ -21,7 +21,7 @@ namespace AgeOfVillagers
             return new SaveVillage(game, sVillageName, drawnItemsInfoList);
         }
 
-        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,StateModel previouslySavedState)
+        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,State previouslySavedState)
         {
 
             return new OpenVillage(game,villageNameLabel,selectedNation,previouslySavedState);

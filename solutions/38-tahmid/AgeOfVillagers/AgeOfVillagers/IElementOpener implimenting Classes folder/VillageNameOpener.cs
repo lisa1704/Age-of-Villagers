@@ -11,7 +11,7 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
     {
         private Label villageNameLabel;
         private string villageName;
-        private StateModel previosulySavedState;
+        private State previosulySavedState;
 
         public VillageNameOpener(Label villageNameLabel, string villageName)
         {

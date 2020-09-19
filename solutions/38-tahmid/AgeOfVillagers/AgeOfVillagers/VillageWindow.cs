@@ -35,7 +35,7 @@ namespace AgeOfVillagers
 
         List<IItem> itemList;
 
-        StateModel previouslySavedState;
+        State previouslySavedState;
 
         DrawnItemsInformation drawnItemsInfo;
         List<DrawnItemsInformation> drawnItemsInfosList;
@@ -113,7 +113,7 @@ namespace AgeOfVillagers
             environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
 
-            previouslySavedState = new StateModel();
+            previouslySavedState = new State();
 
             game = gameFactory.getGame();
             

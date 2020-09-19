@@ -11,6 +11,6 @@ namespace AgeOfVillagers
     {
         public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName);
         public void saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName);
-        public List<IItem> openVillage(String selectedNation, Label villageName,StateModel previouslySavedState);
+        public List<IItem> openVillage(String selectedNation, Label villageName,State previouslySavedState);
     }
 }
