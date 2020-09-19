@@ -9,7 +9,7 @@ namespace AgeOfVillagers.Shapes
 {
     class Circle : IShape
     {
-        public void DrawShape(Graphics g, Point point)
+        public void DrawShape()
         {
             throw new NotImplementedException();
         }

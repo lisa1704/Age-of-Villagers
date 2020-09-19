@@ -9,7 +9,7 @@ namespace AgeOfVillagers.Shapes
 {
     class Line : IShape
     {
-        public void DrawShape(Graphics g, Point point)
+        public void DrawShape()
         {
             //g.DrawLine(pen, p1, p2);
         }

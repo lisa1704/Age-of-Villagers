@@ -12,17 +12,14 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : INation
     {
-        private string item;
-
-        public ArabBedouin()
+         public ArabBedouin()
         {
 
         }
 
         public void DrawHouse(Graphics g, Point point)
         {
-            Triangle triangle = new Triangle();
-            triangle.DrawShape(g, point);
+            MessageBox.Show("Drawing House for Arab Bedouin");
         }
 
         public void DrawTree(Graphics g, Point point)
