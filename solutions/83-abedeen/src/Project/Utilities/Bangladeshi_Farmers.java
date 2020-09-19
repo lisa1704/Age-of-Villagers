@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Bangladeshi_Farmers implements INations {
     private double WaterBodyWidth = 24;
     private double WaterBodyheight = 16;
-
+    private String TerrainColor = "GREEN";
     public Bangladeshi_Farmers(){
         super();
     }
@@ -86,5 +86,10 @@ public class Bangladeshi_Farmers implements INations {
         Line l9 = new Line(x+(this.WaterBodyWidth/4),y-(this.WaterBodyheight/2),x,y);
         pond.add(l9);
         return pond;
+    }
+
+    @Override
+    public String GetTerrainColor() {
+        return TerrainColor;
     }
 }
