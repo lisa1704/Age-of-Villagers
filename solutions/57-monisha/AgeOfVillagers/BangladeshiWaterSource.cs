@@ -13,14 +13,14 @@ namespace AgeOfVillagers
     {
         public BangladeshiWaterSource(Point MPt)
         {
-            Point pt1 = new Point(MPt.X - 24, MPt.Y + 50);
-            Point pt2 = new Point(MPt.X , MPt.Y + 75);
-            Point pt3 = new Point(MPt.X + 25, MPt.Y +50);
-            Point pt4 = new Point(MPt.X + 50, MPt.Y + 75);
-            Point pt5 = new Point(MPt.X + 75, MPt.Y + 25);
-            Point pt6 = new Point(MPt.X + 50, MPt.Y );
-            Point pt7 = new Point(MPt.X + 25, MPt.Y + 25);
-            Point pt8 = new Point(MPt.X + 25, MPt.Y );
+            Point pt1 = new Point(MPt.X - 4, MPt.Y + 2);
+            Point pt2 = new Point(MPt.X - 8, MPt.Y + 10);
+            Point pt3 = new Point(MPt.X - 2, MPt.Y + 16);
+            Point pt4 = new Point(MPt.X + 2, MPt.Y + 12);
+            Point pt5 = new Point(MPt.X + 10, MPt.Y + 16);
+            Point pt6 = new Point(MPt.X + 16, MPt.Y + 7);
+            Point pt7 = new Point(MPt.X + 8, MPt.Y);
+            Point pt8 = new Point(MPt.X + 2, MPt.Y + 4);
 
             AddComp(new Line(MPt, pt1));
             AddComp(new Line(pt1, pt2));

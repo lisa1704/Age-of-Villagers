@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using AgeOfVillagers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -6,14 +7,17 @@ namespace AgeOfVillageTest
 {
     [TestClass]
     public class UnitTest1
-    {
+    {       
         [TestMethod]
-        public void TestMethod1()
+        public void TestBangladeshiNationObject()
         {
+            NationFactory BDObject = new NationFactory();
+            INations type= BDObject.GetNation("BangladeshiFarmers");
             BangladeshiFarmers l = new BangladeshiFarmers();
-            string s = l.testHouse();
+            Color s = l.GetTerrainColor();
+            Color testbojest = type.GetTerrainColor();
            
-            Assert.AreEqual(s, "BDHouse Constructed");
+            Assert.AreEqual(s, testbojest);
         }
     }
 }

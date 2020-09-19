@@ -38,7 +38,7 @@ namespace AgeOfVillagers
                   }
               }*/          
         }
-        public VillageProperties getVill()
+        public VillageProperties GetVillage()
         {
             return villageproperties;
         }

@@ -182,7 +182,7 @@
             // DrawPanel
             // 
             this.DrawPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DrawPanel.Location = new System.Drawing.Point(3, 4);
+            this.DrawPanel.Location = new System.Drawing.Point(11, 0);
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 1;
@@ -198,7 +198,6 @@
             this.ClientSize = new System.Drawing.Size(841, 396);
             this.Controls.Add(this.DrawPanel);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VillageWindow";
             this.RightToLeftLayout = true;
             this.Text = "Age Of Villagers";

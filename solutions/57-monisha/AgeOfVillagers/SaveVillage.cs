@@ -11,7 +11,6 @@ namespace AgeOfVillagers
         public List<Point> Tree_point;
         public List<Point> Waterresource_point;
     }*/
-
     public class SaveVillage : IStatesVillage
     {
         VillageProperties village;

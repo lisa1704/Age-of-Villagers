@@ -46,8 +46,7 @@ namespace AgeOfVillagers
         {
             public ArabTree(Point MPt)
             {
-               /* Point topRight = new Point(MPt.X + 22, MPt.Y+20);
-                //Point bottomRight = new Point(MPt.X +22, MPt.Y + 40);
+                /*//Point bottomRight = new Point(MPt.X +22, MPt.Y + 40);
                 Point L1topPt = new Point(MPt.X - 12, MPt.Y - 25);
                 Point L2topPt = new Point(MPt.X + 57, MPt.Y - 25);
                 Point L3topPt = new Point(topRight.X, MPt.Y - 35);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface INations
+    public interface INations
     {
         string DrawHouse(Graphics g,Point pt);
         void DrawTree(Graphics g, Point pt);
@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         Color GetTerrainColor();
     }
 
-    internal class NationFactory
+    public class NationFactory
     {
         public INations GetNation(string NationType)
         {
