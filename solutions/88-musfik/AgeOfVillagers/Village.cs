@@ -11,16 +11,14 @@ namespace AgeOfVillagers
     {
         private string villageName;
         private INation nation;
-        private List<House> house_items;
-        private List<WaterResource> waterResource_items;
-        private List<Tree> tree_items;
+        private List<IVillageItem> house_items, waterResource_items, tree_items;
         public Village(string villageName, INation nation)
         {
             this.villageName = villageName;
             this.nation = nation;
-            tree_items = new List<Tree>();
-            house_items = new List<House>();
-            waterResource_items = new List<WaterResource>();
+            tree_items = new List<IVillageItem>();
+            house_items = new List<IVillageItem>();
+            waterResource_items = new List<IVillageItem>();
         }
         public void changeVillageNation(INation nation)
         {
@@ -39,23 +37,20 @@ namespace AgeOfVillagers
         internal void initiate(Graphics g, Pen p)
         {
             g.Clear(nation.getTerrainColor());
-            for (int i = 0; i < tree_items.Count; i++)
+            tree_items = tree_items.ConvertAll(tree => tree = nation.getTree(tree.getItemLocation()));
+            house_items = house_items.ConvertAll(house => house = nation.getHouse(house.getItemLocation()));
+            waterResource_items = waterResource_items.ConvertAll(water => water = nation.getHouse(water.getItemLocation()));
+
+            fetchItems(g, p, tree_items);
+            fetchItems(g, p, house_items);
+            fetchItems(g, p, waterResource_items);
+        }
+        internal void fetchItems(Graphics g, Pen p, List<IVillageItem> villageItems)
+        {
+            foreach( var item in villageItems)
             {
-                Point point = tree_items[i].getItemLocation();
-                tree_items[i] = nation.getTree(point);
-                DrawItem(g, p, point, tree_items[i]);
-            }
-            for (int i = 0; i < house_items.Count; i++)
-            {
-                Point point = house_items[i].getItemLocation();
-                house_items[i] = nation.getHouse(point);
-                DrawItem(g, p, point, house_items[i]);
-            }
-            for (int i = 0; i < waterResource_items.Count; i++)
-            {
-                Point point = waterResource_items[i].getItemLocation();
-                waterResource_items[i] = nation.getWaterResource(point);
-                DrawItem(g, p, point, waterResource_items[i]);
+                Point point = item.getItemLocation();
+                DrawItem(g, p, point, item);
             }
         }
         internal void DrawItem(Graphics g, Pen p, Point point,IVillageItem item)
@@ -69,14 +64,12 @@ namespace AgeOfVillagers
             tree_items.Add(tree);
             DrawItem(g, p, point, tree);
         }
-        
         internal void AddHouse(Graphics g, Pen p, Point point)
         {
             var house = nation.getHouse(point);
             house_items.Add(house);
             DrawItem(g, p, point, house);
         }
-
         internal void AddWaterResource(Graphics g, Pen p, Point point)
         {
             var water = nation.getWaterResource(point);
