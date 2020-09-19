@@ -5,23 +5,22 @@ namespace Age_of_villagers
 { 
     public class Egyptian : INation
     {
-        Pen p = new Pen(Color.Yellow);
-        public void Draw_house(Graphics g, Point lpbottom)
+        public IObject Draw_house(Point lpbottom)
         {
-            Compositeobj house = new Egyptian_house(lpbottom);
-            house.paint(p, g);           
+            IObject house = new Egyptian_house(lpbottom);
+            return house;        
         }
 
-        public void Draw_tree(Graphics g, Point mptop)
+        public IObject Draw_tree(Point mptop)
         {
-            Compositeobj tree = new Egyptian_tree(mptop);
-            tree.paint(p, g);          
+            IObject tree = new Egyptian_tree(mptop);
+            return tree;       
         }
 
-        public void Draw_watersource(Graphics g, Point mptop)
+        public IObject Draw_watersource(Point mptop)
         {
-            Compositeobj watersource = new Egyptian_watersource(mptop);
-            watersource.paint(p, g);
+            IObject watersource = new Egyptian_watersource(mptop);
+            return watersource;
         }
 
         public Color get_backcolor()

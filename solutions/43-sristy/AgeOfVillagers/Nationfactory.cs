@@ -11,22 +11,22 @@ namespace Age_of_villagers
             {
                 return new Bangladeshi();
             }
-            /* else if (type == "Egyptian")
-             {
-                 return new Egyptian();
-             }
-             else if (type == "Arab")
-             {
-                 return new Arab();
-             }*/
-             else if (type == "Inuit")
-             {
-                 return new Inuit();
-             }
-             else
-             {
-                 return new NullNation();
-             }
+            else if (type == "Egyptian")
+            {
+                return new Egyptian();
+            }
+            else if (type == "Arab")
+            {
+                return new Arab();
+            }
+            else if (type == "Inuit")
+            {
+                return new Inuit();
+            }
+            else
+            {
+                return new NullNation();
+            }
         }
 
     }
