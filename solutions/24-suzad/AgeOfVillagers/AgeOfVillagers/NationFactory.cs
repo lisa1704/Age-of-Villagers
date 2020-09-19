@@ -24,7 +24,7 @@ namespace AgeOfVillagers
             {
                 return new InuitHunterNation();
             }
-            return null;
+            return new NullNation();
         }
     }
 }
