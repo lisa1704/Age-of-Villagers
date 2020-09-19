@@ -11,7 +11,7 @@ namespace Age_of_Villagers
         public Axes(int x, int y)
         {
             X = x;
-            y = y;
+            Y = y;
         }
         public int X { get; }
         public int Y { get; }
