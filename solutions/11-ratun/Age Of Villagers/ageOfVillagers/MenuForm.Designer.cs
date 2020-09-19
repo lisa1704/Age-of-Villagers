@@ -78,14 +78,14 @@
             this.panel1.Controls.Add(this.Tree);
             this.panel1.Location = new System.Drawing.Point(601, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 400);
+            this.panel1.Size = new System.Drawing.Size(258, 400);
             this.panel1.TabIndex = 2;
             // 
             // ageOfVillagers
             // 
             this.ageOfVillagers.AutoSize = true;
             this.ageOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageOfVillagers.Location = new System.Drawing.Point(43, 29);
+            this.ageOfVillagers.Location = new System.Drawing.Point(57, 28);
             this.ageOfVillagers.Name = "ageOfVillagers";
             this.ageOfVillagers.Size = new System.Drawing.Size(162, 24);
             this.ageOfVillagers.TabIndex = 0;
@@ -111,9 +111,9 @@
             // 
             // VillageName
             // 
-            this.VillageName.Location = new System.Drawing.Point(83, 76);
+            this.VillageName.Location = new System.Drawing.Point(74, 77);
             this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(100, 22);
+            this.VillageName.Size = new System.Drawing.Size(124, 22);
             this.VillageName.TabIndex = 2;
             // 
             // Nation
