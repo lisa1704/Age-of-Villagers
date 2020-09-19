@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
 {
     class BangladeshiFarmers : INation
     {
-        public Point e;
+        
         private readonly Graphics g;
         Pen mypen = new Pen(Color.Black, 2);
         public BangladeshiFarmers(Graphics g)

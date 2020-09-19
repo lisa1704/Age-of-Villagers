@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-
+using System.IO;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
         int x;
-        int y,h ,w;
+        int y;
         Pen myPen = new Pen(Color.Green,2);
 
         public Form1()
@@ -26,7 +26,22 @@ namespace WindowsFormsApp1
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Save Village");
+            //MessageBox.Show("Save Village");
+
+            /*SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Text Files(*.txt)|*.txt|All Files (*.*)|*.*";
+            if (save.ShowDialog()==DialogResult.OK)
+            {
+                StreamWriter write = new StreamWriter(File.Create(save.FileName));
+                write.Write(Text);
+                write.Dispose();                
+            }
+
+            else
+            {
+                throw new Exception();
+            }*/
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -38,7 +53,16 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Open Village");
+            //MessageBox.Show("Open Village");
+            /*OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Text Files(*.txt)|*.txt| All Files (*.*)|*.*";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader read = new StreamReader(File.OpenRead(open.FileName));
+                Text = read.ReadToEnd();
+                read.Dispose();
+            }
+            */
         }
 
         
@@ -73,7 +97,9 @@ namespace WindowsFormsApp1
             //w = 200;
             Graphics g = this.CreateGraphics();
 
-            if (comboBox1.SelectedItem == "Bangladeshi Farmers")
+            string nation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+
+            if (nation == "Bangladeshi Farmers")
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.Green;
@@ -92,10 +118,6 @@ namespace WindowsFormsApp1
                     BangladeshiFarmers bdt = new BangladeshiFarmers(g);
                     bdt.DrawTree(e);
 
-
-                    //EgyptianKing ekt = new EgyptianKing(g);
-                    //ekt.DrawTree(e);
-
                 }
                 if (radioButton3.Checked)
                 {
@@ -104,14 +126,10 @@ namespace WindowsFormsApp1
                     BangladeshiFarmers bds = new BangladeshiFarmers(g);
                     bds.DrawWaterSource(e);
 
-
-                    //EgyptianKing eks = new EgyptianKing(g);
-                    //eks.DrawWaterSource(e);
-
                 }
             }
 
-            else if (comboBox1.SelectedItem == "Egypt Kings")
+            else if (nation == "Egypt Kings")
             {
 
                 panel1.BackColor = Color.White;
@@ -141,7 +159,7 @@ namespace WindowsFormsApp1
                 }
             }
 
-            else if (comboBox1.SelectedItem == "Inuit Hunters")
+            else if (nation == "Inuit Hunters")
             {
 
 
@@ -170,7 +188,7 @@ namespace WindowsFormsApp1
                 
             }
 
-            else if (comboBox1.SelectedItem == "Arab Bedouin")
+            else if (nation == "Arab Bedouin")
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.YellowGreen; 
