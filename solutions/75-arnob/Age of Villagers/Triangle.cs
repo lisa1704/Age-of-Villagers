@@ -15,5 +15,10 @@ namespace Age_of_Villagers
             AddComponent(new Line(baseLeft, baseRight));
             AddComponent(new Line(baseRight, top));
         }
+
+        private void AddComponent(Line line)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
