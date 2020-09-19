@@ -15,6 +15,6 @@ namespace AOV
         public AgeOfVillagers()
         {
             InitializeComponent();
-        }        
+        }       
     }
 }

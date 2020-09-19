@@ -35,9 +35,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
             this.Nation = new System.Windows.Forms.ComboBox();
-            this.Tree = new System.Windows.Forms.Button();
-            this.WaterSource = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
+            this.Tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
+            this.WaterSource = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // NameOfVillage
@@ -119,33 +119,42 @@
             // 
             // Tree
             // 
+            this.Tree.AutoSize = true;
             this.Tree.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.Tree.Location = new System.Drawing.Point(617, 175);
+            this.Tree.Location = new System.Drawing.Point(616, 175);
             this.Tree.Name = "Tree";
-            this.Tree.Size = new System.Drawing.Size(91, 31);
-            this.Tree.TabIndex = 12;
+            this.Tree.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.Tree.Size = new System.Drawing.Size(87, 27);
+            this.Tree.TabIndex = 15;
+            this.Tree.TabStop = true;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = false;
             // 
-            // WaterSource
-            // 
-            this.WaterSource.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.WaterSource.Location = new System.Drawing.Point(647, 211);
-            this.WaterSource.Name = "WaterSource";
-            this.WaterSource.Size = new System.Drawing.Size(113, 31);
-            this.WaterSource.TabIndex = 13;
-            this.WaterSource.Text = "Water Source";
-            this.WaterSource.UseVisualStyleBackColor = false;
-            // 
             // House
             // 
+            this.House.AutoSize = true;
             this.House.BackColor = System.Drawing.Color.Goldenrod;
-            this.House.Location = new System.Drawing.Point(713, 175);
+            this.House.Location = new System.Drawing.Point(709, 175);
             this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(82, 31);
-            this.House.TabIndex = 14;
+            this.House.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.House.Size = new System.Drawing.Size(96, 27);
+            this.House.TabIndex = 16;
+            this.House.TabStop = true;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = false;
+            // 
+            // WaterSource
+            // 
+            this.WaterSource.AutoSize = true;
+            this.WaterSource.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.WaterSource.Location = new System.Drawing.Point(643, 218);
+            this.WaterSource.Name = "WaterSource";
+            this.WaterSource.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.WaterSource.Size = new System.Drawing.Size(131, 27);
+            this.WaterSource.TabIndex = 18;
+            this.WaterSource.TabStop = true;
+            this.WaterSource.Text = "Water Source";
+            this.WaterSource.UseVisualStyleBackColor = false;
             // 
             // AgeOfVillagers
             // 
@@ -153,8 +162,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.House);
             this.Controls.Add(this.WaterSource);
+            this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Nation);
             this.Controls.Add(this.Label);
@@ -179,9 +188,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.ComboBox Nation;
-        private System.Windows.Forms.Button Tree;
-        private System.Windows.Forms.Button WaterSource;
-        private System.Windows.Forms.Button House;
+        private System.Windows.Forms.RadioButton Tree;
+        private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.RadioButton WaterSource;
     }
 }
 
