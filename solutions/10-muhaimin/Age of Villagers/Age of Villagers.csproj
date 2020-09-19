@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Axis.cs" />
     <Compile Include="House.cs" />
     <Compile Include="AbstractPainter.cs" />
     <Compile Include="Tree.cs" />
