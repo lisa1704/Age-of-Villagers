@@ -17,10 +17,10 @@ namespace AgeOfVillagers90
         Graphics g;
         string ItemText = "";
         string NameofVillage = "";
-        string Vtype = "";
+        string typeofNation = "";
         public List<Point> HousePoints { get; set; } = new List<Point>();
         public List<Point> TreePoints { get; set; } = new List<Point>();
-        public List<Point> WaterPoints { get; set; } = new List<Point>();
+        public List<Point> WaterSourcePoints { get; set; } = new List<Point>();
         VillageItem VillageItem;
         NationFactory nationfactory = new NationFactory();
         public Form1()
@@ -33,7 +33,7 @@ namespace AgeOfVillagers90
             VillageItem.NameofVillage = VillageNametextBox.Text;
             VillageItem.PointHouse = this.HousePoints;
             VillageItem.PointTree = this.TreePoints;
-            VillageItem.PointWaterSource = this.WaterPoints;
+            VillageItem.PointWaterSource = this.WaterSourcePoints;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -75,11 +75,11 @@ namespace AgeOfVillagers90
         {
             HousePoints.Clear();
             TreePoints.Clear();
-            WaterPoints.Clear();
+            WaterSourcePoints.Clear();
             DrawPanel.Refresh();
             NationList.ResetText();
-            Vtype = NationList.Text;
-            DrawPanel.BackColor = nationfactory.GetNation(Vtype).BackGroundColor();
+            typeofNation = NationList.Text;
+            DrawPanel.BackColor = nationfactory.GetNation(typeofNation).BackGroundColor();
         }
 
 
@@ -102,23 +102,23 @@ namespace AgeOfVillagers90
             foreach (Point pt in HousePoints)
             {
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);
-                nationfactory.GetNation(Vtype).DrawHouse(g, pt);
+                nationfactory.GetNation(typeofNation).DrawHouse(g, pt);
 
             }
             foreach (Point pt in TreePoints)
             {
-                nationfactory.GetNation(Vtype).DrawTree(g, pt);
+                nationfactory.GetNation(typeofNation).DrawTree(g, pt);
             }
-            foreach (Point pt in WaterPoints)
+            foreach (Point pt in WaterSourcePoints)
             {
-                nationfactory.GetNation(Vtype).DrawWaterSource(g, pt);
+                nationfactory.GetNation(typeofNation).DrawWaterSource(g, pt);
             }
         }
 
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Vtype = NationList.Text;
-            DrawPanel.BackColor = nationfactory.GetNation(Vtype).BackGroundColor();
+            typeofNation = NationList.Text;
+            DrawPanel.BackColor = nationfactory.GetNation(typeofNation).BackGroundColor();
         }
 
         private void AgeofVillagers_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace AgeOfVillagers90
             }
             if (ItemText == "WaterSource")
             {
-                WaterPoints.Add(e.Location);
+                WaterSourcePoints.Add(e.Location);
             }
             DrawPanel.Invalidate();
         }
