@@ -101,5 +101,10 @@ namespace empty_project
         {
 
         }
+
+        private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

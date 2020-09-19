@@ -119,6 +119,7 @@
             this.NationBox.Name = "NationBox";
             this.NationBox.Size = new System.Drawing.Size(121, 23);
             this.NationBox.TabIndex = 0;
+            this.NationBox.SelectedIndexChanged += new System.EventHandler(this.NationBox_SelectedIndexChanged);
             // 
             // Form1
             // 
