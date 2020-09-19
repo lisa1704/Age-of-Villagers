@@ -36,7 +36,6 @@ public class DrawWater implements IDrawComponent{
     public void drawOuterLayer() {
         outerArea = new Rectangle(g, x, y, x + width, y + height);
         outerArea.draw();
-        draw();
     }
 
     @Override
