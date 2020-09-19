@@ -8,7 +8,17 @@ namespace AgeOfVillagers
 {
     class VillageState
     {
-        void setState() { }
-        void getState() { }
+        string villagename;
+        public VillageState(string villagename)
+        {
+            this.villagename = villagename;
+        }
+        void setState() 
+        {
+        }
+        string getState() 
+        {
+            return villagename;
+        }
     }
 }

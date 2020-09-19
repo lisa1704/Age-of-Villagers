@@ -16,6 +16,9 @@ namespace AgeOfVillagers
         string villageName;
         string villageType;
         Village newVillage = new Village();
+        public List<Point> house { get; set; } = new List<Point>();
+        public List<Point> tree { get; set; } = new List<Point>();
+        public List<Point> water { get; set; } = new List<Point>();
         public VillageActions() { InitializeComponent(); }
 
         private void VillageActions_Load(object sender, EventArgs e){}
@@ -39,6 +42,7 @@ namespace AgeOfVillagers
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            VillageState state = new VillageState(villageName);
             SaveVillage saveVillage = new SaveVillage();
             saveVillage.execute();
         }
@@ -57,11 +61,24 @@ namespace AgeOfVillagers
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {   
             Graphics g = panel1.CreateGraphics();
-            Point point = e.Location;
-            if (item == "house") { newVillage.GetVillage(villageType).DrawHouse(g, point); }
-            else if (item == "tree") { newVillage.GetVillage(villageType).DrawTree(g, point); }
-            else if (item == "water") { newVillage.GetVillage(villageType).DrawWaterSource(g, point); }
-            else 
+            if (item == "house") 
+            {
+                house.Add(e.Location);
+                foreach(Point point in house)
+                    newVillage.GetVillage(villageType).DrawHouse(g, point); 
+            }
+            else if (item == "tree") 
+            {
+                tree.Add(e.Location);
+                foreach (Point point in tree) 
+                    newVillage.GetVillage(villageType).DrawTree(g, point); 
+            }
+            else if (item == "water") 
+            {
+                water.Add(e.Location);
+                foreach (Point point in water)
+                    newVillage.GetVillage(villageType).DrawWaterSource(g, point); 
+            }
             panel1.BackColor = newVillage.GetVillage(villageType).DrawTerrain();
         }
 
