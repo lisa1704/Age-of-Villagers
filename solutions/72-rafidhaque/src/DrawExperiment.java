@@ -21,6 +21,9 @@ public class DrawExperiment extends Application {
         rectangle.draw();
         rectangle2.draw();
 
+        Circle circle = new Circle(root, 100, 100, 40);
+        circle.draw();
+
 
         Scene scene = new Scene(root, 400, 300, Color.AQUA);
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
