@@ -53,9 +53,7 @@
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 0;
-         
             this.DrawPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseDown);
-          
             this.DrawPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawPanel_MouseUp);
             // 
             // Treeradiobtn
@@ -119,6 +117,7 @@
             this.Openvillagebtn.TabIndex = 8;
             this.Openvillagebtn.Text = "Open Village";
             this.Openvillagebtn.UseVisualStyleBackColor = true;
+            this.Openvillagebtn.Click += new System.EventHandler(this.Openvillagebtn_Click);
             // 
             // label2
             // 

@@ -78,7 +78,10 @@ namespace AgeOfVillagers
 
         }
 
-       
+        private void Openvillagebtn_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {
