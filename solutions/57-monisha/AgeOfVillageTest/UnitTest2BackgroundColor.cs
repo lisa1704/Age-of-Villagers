@@ -40,6 +40,14 @@ namespace AgeOfVillageTest
             Color TestInuitColor = Color.White;
             Assert.AreEqual(InuitTerrainColor, TestInuitColor);
         }
+        [TestMethod]
+        public void TestNullBackColor()
+        {
+            NullNation NullColor = new NullNation();
+            Color NullTerrainColor = NullColor.GetTerrainColor();
+            Color TestNullColor = Color.MintCream;
+            Assert.AreEqual(NullTerrainColor, TestNullColor);
+        }
 
     }
 }

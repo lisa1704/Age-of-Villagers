@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class NullNation : INations
+    public class NullNation : INations
     {
         public string DrawHouse(Graphics g, Point pt)
         {
