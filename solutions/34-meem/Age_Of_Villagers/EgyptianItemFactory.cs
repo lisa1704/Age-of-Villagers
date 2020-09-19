@@ -23,7 +23,7 @@ namespace Age_Of_Villagers
                 return new EgyptianWaterSource();
             }
 
-            return null;
+            return new NullItem(); ;
 
         }
     }

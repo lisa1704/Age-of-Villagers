@@ -15,7 +15,7 @@ namespace Age_Of_Villagers
         string name;
         string nation;
         string rdButton;
-        Village village;
+        //Village village;
         INation ination;
         
 
@@ -76,6 +76,8 @@ namespace Age_Of_Villagers
             {
                 rdButton = rdButtonWaterSrc.Text;
             }
+            else
+                rdButton = "";
 
 
         }

@@ -27,7 +27,7 @@ namespace Age_Of_Villagers
                 return new ArabItemFactory();
             }
 
-            return null;
+            return new NullFactory();
         }
 
     }

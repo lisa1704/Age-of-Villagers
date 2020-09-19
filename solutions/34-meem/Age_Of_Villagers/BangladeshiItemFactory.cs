@@ -24,7 +24,7 @@ namespace Age_Of_Villagers
                 return new BangladeshiWaterSource();
             }
 
-            return null;
+            return new NullItem();
 
         }
     }

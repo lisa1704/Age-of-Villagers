@@ -8,7 +8,7 @@
             {
                 return new InuitHunterHouse();
             }
-            return null;
+            return new NullItem(); ;
         }
     }
 }

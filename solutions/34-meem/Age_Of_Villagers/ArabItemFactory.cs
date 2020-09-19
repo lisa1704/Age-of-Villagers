@@ -18,9 +18,9 @@ namespace Age_Of_Villagers
             {
                 return new ArabBedouinTree();
             }
-           
 
-            return null;
+
+            return new NullItem(); ;
         }
     }
 }
