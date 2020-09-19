@@ -3,3 +3,4 @@ public interface INation {
     void tree(DrawTree drawTree);
     void waterSource(DrawWater drawWater);
 }
+

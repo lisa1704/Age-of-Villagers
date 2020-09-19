@@ -9,6 +9,6 @@ public class Village {
     }
 
     public void saveVillage() {
-        
+
     }
 }
