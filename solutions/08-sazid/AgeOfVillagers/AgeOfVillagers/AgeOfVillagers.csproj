@@ -57,6 +57,7 @@
     <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianKing.cs" />
     <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="EllipseShape.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -12,13 +12,13 @@ namespace AgeOfVillagers
         public EgyptianTree(Point clickPoint)
         {
             Point p1 = new Point(clickPoint.X, clickPoint.Y);
-            Point p2 = new Point(clickPoint.X + 70, clickPoint.Y + 120);
+            Point p2 = new Point(clickPoint.X + 70, clickPoint.Y + 80);
             Point p3 = new Point(clickPoint.X + 140, clickPoint.Y);
-            Point p4 = new Point(clickPoint.X + 10, clickPoint.Y + 15);
+            Point p4 = new Point(clickPoint.X + 13, clickPoint.Y + 15);
             Point p5 = new Point(clickPoint.X + 20, clickPoint.Y-10);
             Point p6 = new Point(clickPoint.X - 20, clickPoint.Y);
             Point p7 = new Point(clickPoint.X + 120, clickPoint.Y - 20);
-            Point p8 = new Point(clickPoint.X + 130, clickPoint.Y + 20);
+            Point p8 = new Point(clickPoint.X + 123, clickPoint.Y + 20);
             Point p9 = new Point(clickPoint.X + 180, clickPoint.Y);
 
             addShape(new LineShape(p1, p2));

@@ -25,7 +25,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterResource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianWaterSource waterSource = new EgyptianWaterSource(p);
+            waterSource.draw(g);
         }
 
         public Color GetColor()
