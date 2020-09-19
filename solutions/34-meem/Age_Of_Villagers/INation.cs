@@ -43,12 +43,14 @@ namespace Age_Of_Villagers
 
         public void setTerrain(VillageEditorWindow villageEditor)
         {
-            villageEditor.Panel1.BackColor = Color.Yellow;
+            villageEditor.Panel1.BackColor = Color.YellowGreen;
         }
     }
 
-
     
+
+
+
 
 
 
