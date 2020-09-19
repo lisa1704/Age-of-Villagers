@@ -30,5 +30,14 @@ namespace AgeOfVillagers.Test
             Assert.Equal("Egyptian Kings", egyptnationfactory.NationName);
             Assert.IsType<EgyptianKings>(egyptnationfactory.GetNation());
         }
+
+        [Fact]
+        public void InuitNationFactoryTest()
+        {
+            InuitHuntersNationfactory inuitnationfactory = new InuitHuntersNationfactory();
+
+            Assert.Equal("Inuit Hunters", inuitnationfactory.NationName);
+            Assert.IsType<InuitHunters>(inuitnationfactory.GetNation());
+        }
     }
 }
