@@ -19,7 +19,7 @@ namespace AgeOfVillagers
                 return new CrookedOctagon(g, pen, point, height, width);
             else if (hint.Equals(Constants.OVAL_HINT))
             {
-                return new Oval(g, pen, point, height, width);
+                return new Oval(g, pen, point, width);
             }
             
             
