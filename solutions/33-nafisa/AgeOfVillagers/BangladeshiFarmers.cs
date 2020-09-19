@@ -22,7 +22,7 @@ namespace AgeOfVillagers
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            BangladeshiTree tree = new BangladeshiTree(Drawingpanel);
+            BangladeshiTree tree = new BangladeshiTree(point);
             tree.Draw(point, Drawingpanel);
         }
 
