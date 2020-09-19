@@ -21,10 +21,8 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
-            ArabianHouse arabianHouse  = new ArabianHouse();
-            HouseContext houseContext = new HouseContext(arabianHouse, g, location, houseSize);
-
-            houseContext.HouseDrawing();
+            ArabianHouse arabianHouse  = new ArabianHouse(location,houseSize);
+            arabianHouse.Draw(g);
 
             Debug.WriteLine("Drawing Arab House");
         }

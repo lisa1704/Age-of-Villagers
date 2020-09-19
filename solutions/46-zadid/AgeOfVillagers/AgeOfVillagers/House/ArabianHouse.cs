@@ -1,20 +1,24 @@
-﻿using AgeOfVillagers.Data_Objects;
+﻿using AgeOfVillagers.Components;
+using AgeOfVillagers.Data_Objects;
 using System.Drawing;
 
 namespace AgeOfVillagers.House
 {
-    public class ArabianHouse : IHouse
+    public class ArabianHouse : CompositeShape
     {
-        public void Draw(ElementSize sz, Graphics g, Point p)
+        public ArabianHouse(Point p, ElementSize sz)
         {
-            Pen pen = new Pen(Color.Black);
+            var topLeft = p;
+            
+            var bottomLeft= new Point(p.X - sz.width *5/16, p.Y+sz.height * 5 / 8);
+            var bottomMid = new Point(p.X + sz.width *5/ 16 , p.Y + sz.height * 5 / 8);
+            var bottomRight = new Point(bottomMid.X+ sz.width*6/16 , bottomMid.Y-sz.height*6/16);
+            var topRight = new Point(p.X + sz.width *6/ 16,p.Y-sz.height*6/16);
 
-            g.DrawLine(pen, p.X, p.Y, p.X + (sz.width - 5), p.Y);
-            g.DrawLine(pen, p.X + (sz.width - 5), p.Y, p.X + (sz.width - 10), p.Y - (sz.height - 6));
-            g.DrawLine(pen, p.X + (sz.width - 10), p.Y - (sz.height - 6), p.X, p.Y);
-            g.DrawLine(pen, p.X + (sz.width - 10), p.Y - (sz.height - 6),p.X+(sz.width-6),p.Y-sz.height);
-            g.DrawLine(pen, p.X + (sz.width - 6), p.Y - sz.height, p.X + sz.width, p.Y - (sz.height - 11));
-            g.DrawLine(pen, p.X + sz.width, p.Y - (sz.height - 11), p.X + (sz.width - 5), p.Y);
+
+
+            AddComponent(new Triangle(topLeft, bottomLeft, bottomMid));
+            AddComponent(new Components.Rectangle(topLeft,topRight,bottomMid, bottomRight));
         }
     }
 }

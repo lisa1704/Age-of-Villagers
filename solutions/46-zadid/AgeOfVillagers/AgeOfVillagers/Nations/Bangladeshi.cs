@@ -29,10 +29,12 @@ namespace AgeOfVillagers
 
         public override void DrawHouse(Graphics g, Point location)
         {
-            BangladeshiHouse bangladeshiHouse = new BangladeshiHouse();
-            HouseContext houseContext = new HouseContext(bangladeshiHouse, g, location, houseSize);
+            BangladeshiHouse bangladeshiHouse = new BangladeshiHouse(location,houseSize);
+            //HouseContext houseContext = new HouseContext(bangladeshiHouse, g, location, houseSize);
 
-            houseContext.HouseDrawing();
+            //houseContext.HouseDrawing();
+
+            bangladeshiHouse.Draw(g);
 
             Debug.WriteLine("Drawing Bangladeshi House");
         }
