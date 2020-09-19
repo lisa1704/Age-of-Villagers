@@ -87,7 +87,7 @@
             "Inuit Hunters"});
             this.SelectNation.Location = new System.Drawing.Point(415, 218);
             this.SelectNation.Name = "SelectNation";
-            this.SelectNation.Size = new System.Drawing.Size(182, 40);
+            this.SelectNation.Size = new System.Drawing.Size(242, 40);
             this.SelectNation.TabIndex = 5;
             this.SelectNation.SelectedIndexChanged += new System.EventHandler(this.SelectNation_SelectedIndexChanged);
             // 

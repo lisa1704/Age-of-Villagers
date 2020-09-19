@@ -12,7 +12,7 @@ namespace AgeOfVillagers
     public partial class DrawingWindow : Form
     {
         public static string VillageName;
-        Nations nation;
+        //Nations nation;
         
         public DrawingWindow()
         {
@@ -43,7 +43,7 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
