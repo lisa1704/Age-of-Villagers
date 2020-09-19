@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.FactoryClasses;
 using AgeOfVillagers.Interface;
+using AgeOfVillagers.JSON_Handling_Classes_Folder;
 using AgeOfVillagers.Model_Class_Folder;
 using AgeOfVillagers.Shape_extended_classes;
 using Newtonsoft.Json;
@@ -63,6 +64,7 @@ namespace AgeOfVillagers
             saveFileDialog1.Filter = "save village|*.aov";
             saveFileDialog1.Title = "Save village";
             saveFileDialog1.ShowDialog();
+            
             if (saveFileDialog1.FileName != "")
             {
                 var dataString = JsonConvert.SerializeObject(stateModel, Formatting.Indented);
