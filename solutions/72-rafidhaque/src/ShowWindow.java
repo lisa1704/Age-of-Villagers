@@ -55,6 +55,7 @@ public class ShowWindow extends Application {
             }
         });
 
+<<<<<<< HEAD
 
         gridOfControls.newButton.setOnAction(event -> {
             previousStatesOfComponents.add(stateOfComponents);
@@ -63,6 +64,8 @@ public class ShowWindow extends Application {
             newRectangle.draw();
         });
 
+=======
+>>>>>>> parent of 64459a6e... #4 Pressing New Button erase the drawing space
         window.setScene(scene);
         window.show();
     }
