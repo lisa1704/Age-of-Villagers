@@ -12,16 +12,13 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-        
+
         public Ageofvillagers()
         {
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
     
 }

@@ -7,16 +7,11 @@ using System.Windows.Forms;
 
 namespace Ageofvillagers
 {
-    class CreateNewVillage : Command
+    public partial class Ageofvillagers : Form
     {
-
-        public CreateNewVillage(Form ageofvillagers)
+        private void Select_Nation_Combo_box_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
-        }
-        public void execute(Form e)
-        {
-              throw new NotImplementedException();
+            Console.WriteLine();
         }
     }
 }

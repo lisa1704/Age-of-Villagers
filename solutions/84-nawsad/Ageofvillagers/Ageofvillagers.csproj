@@ -58,8 +58,6 @@
     <Compile Include="AgeofVillagers.Designer.cs">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Command.cs" />
-    <Compile Include="Create_new_Village.cs" />
     <Compile Include="NewDrawingBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +65,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveVillage.cs" />
+    <Compile Include="SelectNation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="AgeofVillagers.resx">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </EmbeddedResource>

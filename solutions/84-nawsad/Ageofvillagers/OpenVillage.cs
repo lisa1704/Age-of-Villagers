@@ -7,11 +7,8 @@ using System.Windows.Forms;
 
 namespace Ageofvillagers
 {
-    class OpenVillage : Command
+    class OpenVillage 
     {
-        public void execute(Form e)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
