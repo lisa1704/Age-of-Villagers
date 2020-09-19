@@ -17,7 +17,7 @@ namespace Age_of_villagers
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VillageName());
+            Application.Run(new VillageCreator());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Age_of_villagers
 {
-    partial class VillageName
+    partial class VillageCreator
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,16 +30,16 @@
         {
             this.SaveVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NationList = new System.Windows.Forms.ComboBox();
             this.WaterSource = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
             this.Tree = new System.Windows.Forms.RadioButton();
             this.NewVillage = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.VillageNameBox = new System.Windows.Forms.TextBox();
             this.NAtionName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -62,13 +62,14 @@
             this.OpenVillage.UseVisualStyleBackColor = true;
             this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
-            // comboBox1
+            // NationList
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(792, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 6;
+            this.NationList.FormattingEnabled = true;
+            this.NationList.Location = new System.Drawing.Point(792, 152);
+            this.NationList.Name = "NationList";
+            this.NationList.Size = new System.Drawing.Size(151, 28);
+            this.NationList.TabIndex = 6;
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // WaterSource
             // 
@@ -116,12 +117,13 @@
             this.NewVillage.UseVisualStyleBackColor = true;
             this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
             // 
-            // textBox1
+            // VillageNameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(792, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 27);
-            this.textBox1.TabIndex = 12;
+            this.VillageNameBox.Location = new System.Drawing.Point(792, 110);
+            this.VillageNameBox.Name = "VillageNameBox";
+            this.VillageNameBox.Size = new System.Drawing.Size(151, 27);
+            this.VillageNameBox.TabIndex = 12;
+            this.VillageNameBox.TextChanged += new System.EventHandler(this.VillageNameBox_TextChanged);
             // 
             // NAtionName
             // 
@@ -154,34 +156,36 @@
             this.label1.Size = new System.Drawing.Size(244, 38);
             this.label1.TabIndex = 17;
             this.label1.Text = "Age Of Villagers";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(32, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 18;
+            this.MainPanel.Location = new System.Drawing.Point(32, 39);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(600, 400);
+            this.MainPanel.TabIndex = 18;
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
-            // VillageName
+            // VillageCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 479);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.NAtionName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.VillageNameBox);
             this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.House);
             this.Controls.Add(this.WaterSource);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.NationList);
             this.Controls.Add(this.OpenVillage);
             this.Controls.Add(this.SaveVillage);
-            this.Name = "VillageName";
+            this.Name = "VillageCreator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Village Name";
+            this.Text = "Village Creator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,16 +195,16 @@
         #endregion
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button OpenVillage;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NationList;
         private System.Windows.Forms.RadioButton WaterSource;
         private System.Windows.Forms.RadioButton House;
         private System.Windows.Forms.RadioButton Tree;
         private System.Windows.Forms.Button NewVillage;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox VillageNameBox;
         private System.Windows.Forms.Label NAtionName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MainPanel;
     }
 }
 
