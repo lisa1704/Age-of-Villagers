@@ -11,6 +11,9 @@ namespace AgeOfVillagers.Test
 
             Assert.Equal("Bangladeshi Farmers", bangladeshinationfactory.NationName);
             Assert.IsType<BangladeshiFarmers>(bangladeshinationfactory.GetNation());
+
+            bangladeshinationfactory.NationName = "new nation";
+            Assert.Equal("new nation", bangladeshinationfactory.NationName);
         }
 
         [Fact]
@@ -20,6 +23,9 @@ namespace AgeOfVillagers.Test
 
             Assert.Equal("Arab Bedouin", arabnationfactory.NationName);
             Assert.IsType<ArabBedouin>(arabnationfactory.GetNation());
+
+            arabnationfactory.NationName = "new nation";
+            Assert.Equal("new nation", arabnationfactory.NationName);
         }
 
         [Fact]
@@ -29,6 +35,9 @@ namespace AgeOfVillagers.Test
 
             Assert.Equal("Egyptian Kings", egyptnationfactory.NationName);
             Assert.IsType<EgyptianKings>(egyptnationfactory.GetNation());
+
+            egyptnationfactory.NationName = "new nation";
+            Assert.Equal("new nation", egyptnationfactory.NationName);
         }
 
         [Fact]
@@ -38,6 +47,9 @@ namespace AgeOfVillagers.Test
 
             Assert.Equal("Inuit Hunters", inuitnationfactory.NationName);
             Assert.IsType<InuitHunters>(inuitnationfactory.GetNation());
+
+            inuitnationfactory.NationName = "new nation";
+            Assert.Equal("new nation", inuitnationfactory.NationName);
         }
     }
 }
