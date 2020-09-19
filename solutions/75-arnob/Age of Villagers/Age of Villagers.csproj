@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractNationFactoryCreator.cs" />
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
     <Compile Include="Egyptian_King.cs" />
