@@ -25,7 +25,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterResource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiWaterSource wSource = new BangladeshiWaterSource(p);
+            wSource.draw(g);
         }
 
         public Color GetColor()
