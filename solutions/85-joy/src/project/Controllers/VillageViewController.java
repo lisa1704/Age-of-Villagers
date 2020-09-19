@@ -53,7 +53,9 @@ public class VillageViewController implements Initializable {
                     DrawShape(Object);
                 }
                 else if(Flag == 1){
-                    DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
+                    INation BangladeshiFarmers = new BangladeshiFarmers();
+                    Object = BangladeshiFarmers.DrawTree(event.getSceneX(),event.getSceneY());
+                    DrawShape(Object);
                 }
                 else if(Flag == 2){
 //                    DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
@@ -133,34 +135,7 @@ public class VillageViewController implements Initializable {
         this.Flag = 2;
         System.out.println("HOUSE SELECTED!");
     }
-
-    public void DrawHouse(){
-
-
-    }
-
-    public void DrawTree(double x1,double y1,double width, double height){
-        //Top Circle
-        Arc arc = new Arc();
-        arc.setCenterX(x1);
-        arc.setCenterY(y1);
-        arc.setRadiusX(width/2.0);
-        arc.setRadiusY((height/2.0)-3);
-        arc.setStartAngle(0.0);
-        arc.setLength(100000.0);
-        arc.setType(ArcType.OPEN);
-        arc.setStroke(Color.BLACK);
-        arc.setFill(Color.TRANSPARENT);
-
-        //The Rectangle
-
-        Line line1 = new Line(x1-1,y1,x1+1,y1);
-        Line line2 = new Line(x1-1,y1,x1-1,y1+15);
-        Line line3 = new Line(x1-1,y1+15,x1+1,y1+15);
-        Line line4 = new Line(x1+1,y1+15,x1+1,y1);
-
-        DrawPane.getChildren().addAll(arc,line1,line2,line3,line4);
-    }
+    
 
     public void DrawWaterSource(double x1,double y1, double width, double height){
         Line line1 = new Line(x1,y1,x1+4,y1+height/2);

@@ -13,7 +13,7 @@ public interface INation {
 
 
     ArrayList<Shape> DrawHouse(double x1, double y1);
-    void DrawTree();
+    ArrayList<Shape> DrawTree(double x1,double y1);
     void DrawWaterSource();
     String getTerrainColor();
 
