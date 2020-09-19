@@ -111,7 +111,6 @@ namespace AgeOfVillagers
             {
                 filePath = openFileDialog.FileName;
             }
-            //string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             nationName ="Arab Bedouin";
             Village village = villageSave.openVillage(this, filePath, nationName);
             villageSave.draw(this, village, nationName);
