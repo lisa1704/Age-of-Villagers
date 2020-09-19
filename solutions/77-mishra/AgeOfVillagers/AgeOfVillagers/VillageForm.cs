@@ -16,6 +16,8 @@ namespace AgeOfVillagers
         private int y;
 
         public IShape arabtree;
+
+        public IShape arabhouse;
         public VillageForm()
         {
             InitializeComponent();
@@ -30,6 +32,11 @@ namespace AgeOfVillagers
             if(radioButton1.Checked == true)
             {
                 arabtree.draw(p, drawingBoard);
+            }
+
+            if(radioButton3.Checked == true)
+            {
+                arabhouse.draw(p, drawingBoard);
             }
 
           
