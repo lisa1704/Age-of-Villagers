@@ -24,6 +24,16 @@ namespace AgeOfVillagers
 
         }
 
+        private void VillageName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nation_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             text = text + "Adding a New Tree...";
@@ -54,10 +64,19 @@ namespace AgeOfVillagers
             text = text + "Opening Your Village...";
         }
 
+        public string getVillageName()
+        {
+            return VillageName.Text;
+        }
+
+        public string getNation()
+        {
+            return Nation.Text;
+        }
+
         public string getStatus()
         {
             return text;
         }
-
     }
 }

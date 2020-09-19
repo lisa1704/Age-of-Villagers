@@ -37,6 +37,8 @@
             this.HouseButton = new System.Windows.Forms.Button();
             this.TreeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.VillageName = new System.Windows.Forms.TextBox();
+            this.Nation = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Nation);
+            this.panel2.Controls.Add(this.VillageName);
             this.panel2.Controls.Add(this.OpenVillageButton);
             this.panel2.Controls.Add(this.NewVillageButton);
             this.panel2.Controls.Add(this.SaveVillageButton);
@@ -132,6 +136,22 @@
             this.label1.Text = "Age Of Villagers";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // VillageName
+            // 
+            this.VillageName.Location = new System.Drawing.Point(18, 50);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(149, 26);
+            this.VillageName.TabIndex = 7;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
+            // 
+            // Nation
+            // 
+            this.Nation.Location = new System.Drawing.Point(18, 82);
+            this.Nation.Name = "Nation";
+            this.Nation.Size = new System.Drawing.Size(149, 26);
+            this.Nation.TabIndex = 8;
+            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -158,5 +178,7 @@
         private System.Windows.Forms.Button SaveVillageButton;
         private System.Windows.Forms.Button OpenVillageButton;
         private System.Windows.Forms.Button NewVillageButton;
+        private System.Windows.Forms.TextBox VillageName;
+        private System.Windows.Forms.TextBox Nation;
     }
 }
