@@ -58,6 +58,7 @@
     <Compile Include="FactoryNation.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateNewVillage.resx">
