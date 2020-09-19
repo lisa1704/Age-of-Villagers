@@ -12,7 +12,7 @@ namespace AgeOfVillagers
     class BangladeshiFarmers : INation
     {
         private string item;
-
+        Pen pen = new Pen(Color.Red);
         public BangladeshiFarmers()
         {
         }
@@ -23,7 +23,6 @@ namespace AgeOfVillagers
             Point trianglePoint2 = new Point(point.X + 50, point.Y);
             Point rectanglePoint1 = new Point(point.X, point.Y + 25);
             Point rectanglePoint2 = new Point(trianglePoint2.X, trianglePoint2.Y + 25);
-            Pen pen = new Pen(Color.Red);
             Triangle triangle = new Triangle(g, pen, point, trianglePoint1, trianglePoint2);
             triangle.DrawShape();
             Rectangles rectangle = new Rectangles(g, pen, point, trianglePoint2, rectanglePoint1, rectanglePoint2);
@@ -32,7 +31,14 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point point)
         {
-            MessageBox.Show("Drawing Tree for Bangladeshi Farmers");
+            Point rectanglePoint1 = new Point(point.X - 2, point.Y);
+            Point rectanglePoint2 = new Point(point.X + 2, point.Y);
+            Point rectanglePoint3 = new Point(point.X - 2, point.Y + 50);
+            Point rectanglePoint4 = new Point(point.X + 2, point.Y + 50);
+            Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
+            circle.DrawShape();
+            Rectangles rectangle = new Rectangles(g, pen, rectanglePoint1, rectanglePoint2, rectanglePoint3, rectanglePoint4);
+            rectangle.DrawShape();
         }
 
         public void DrawWaterSource(Graphics g, Point point)
