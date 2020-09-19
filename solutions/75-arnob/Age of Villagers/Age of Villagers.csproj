@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AbstractNationFactoryCreator.cs" />
     <Compile Include="Arab_Bedouin.cs" />
+    <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
     <Compile Include="Egyptian_King.cs" />
     <Compile Include="Form1.cs">
