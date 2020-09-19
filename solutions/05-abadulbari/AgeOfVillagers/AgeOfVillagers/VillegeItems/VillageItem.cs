@@ -18,9 +18,7 @@ namespace AgeOfVillagers.VillegeItems
         {
             items.Add(shape);
         }
-        public void draw(Graphics g, Pen p)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void draw(Graphics g, Pen p);
+        
     }
 }
