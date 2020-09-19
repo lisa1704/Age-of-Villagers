@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
     {
         public Point e;
         private readonly Graphics g;
-        Pen mypen = new Pen(Color.Green, 2);
+        Pen mypen = new Pen(Color.Black, 2);
         public BangladeshiFarmers(Graphics g)
         {
             this.g = g;

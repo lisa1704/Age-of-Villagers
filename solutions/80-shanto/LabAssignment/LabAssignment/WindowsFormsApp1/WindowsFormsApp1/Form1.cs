@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
             if (comboBox1.SelectedItem == "Bangladeshi Farmers")
             {
 
+
                 if (radioButton1.Checked)
                 {
                     BangladeshiFarmers bdh = new BangladeshiFarmers(g);
@@ -143,8 +144,6 @@ namespace WindowsFormsApp1
             {
 
 
-                //EgyptianKing ekh = new EgyptianKing(g);
-                //ekh.DrawHouse(e);
                 if (radioButton1.Checked)
                 {
 
@@ -167,6 +166,7 @@ namespace WindowsFormsApp1
                     iht.DrawWaterSource(e);
 
                 }
+                
             }
 
             else if (comboBox1.SelectedItem == "Arab Bedouin")
@@ -194,6 +194,7 @@ namespace WindowsFormsApp1
                     abt.DrawWaterSource(e);
 
                 }
+                
             }
 
 
