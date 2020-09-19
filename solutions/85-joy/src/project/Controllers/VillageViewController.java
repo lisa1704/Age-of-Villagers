@@ -137,11 +137,11 @@ public class VillageViewController implements Initializable {
         Line line2 = new Line(x1,y1,x1+(width/2.0),y1-(height/2.0));
         Line line3 = new Line(x1+width,y1,x1+(width/2.0),y1-(height/2.0));
         //Lower Rectangle
-        Line line4 = new Line(x1,y1,x1,y1-height);
-        Line line5 = new Line(x1,y1-height,x1+width,y1-height);
-        Line line6 = new Line(x1+width,y1-height,x1+width,y1);
+        Line line4 = new Line(x1,y1,x1,y1+height);
+        Line line5 = new Line(x1,y1+height,x1+width,y1+height);
+        Line line6 = new Line(x1+width,y1+height,x1+width,y1);
 
-        DrawPane.getChildren().addAll(line1,line2,line3);
+        DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6);
 
     }
 }
