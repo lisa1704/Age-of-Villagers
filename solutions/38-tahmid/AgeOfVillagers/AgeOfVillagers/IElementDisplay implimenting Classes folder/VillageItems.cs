@@ -8,13 +8,16 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
     class VillageItems : IElementDisplay
     {
         List<IItem> itemList;
-        public VillageItems() {
-            
-        }
+        private string selectedNation;
 
        
 
-        
+        public VillageItems(List<IItem> itemList, string selectedNation)
+        {
+            this.itemList = itemList;
+            this.selectedNation = selectedNation;
+        }
+
         public void displayElements()
         {
             

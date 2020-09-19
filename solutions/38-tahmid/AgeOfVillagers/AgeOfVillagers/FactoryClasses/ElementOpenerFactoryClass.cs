@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.FactoryClasses
 {
-    class ElementDisplayFactoryClass
+    class ElementOpenerFactoryClass
     {
-        public IElementDisplay GetStateElements(String hint)
+        public IElementDisplay GetElementOpener(String hint,String selectedNation,List<IItem> itemList)
         {
-            return new VillageItems();
+            return new VillageItems(itemList, selectedNation);
         }
-        public IElementDisplay GetStateElements(String hint,Label VillageNameLabel,String villageName)
+        public IElementDisplay GetElementOpener(String hint,Label VillageNameLabel,String villageName)
         {
             return new Village_Name(VillageNameLabel, villageName);
         }
