@@ -38,5 +38,14 @@ namespace AgeOfVillagers.Test
             Color actual = nation.get_backcolor();
             Assert.Equal(expected, actual);
         }
+        [Fact]
+        public void Nonationbackgroundcolor()
+        {
+            INation nation = new NullNation();
+            Color expected = Color.White;
+            Color actual = nation.get_backcolor();
+            Assert.Equal(expected, actual);
+        }
+
     }
 }
