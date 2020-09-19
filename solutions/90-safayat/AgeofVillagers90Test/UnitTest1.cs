@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AgeOfVillagers90;
+using System.Drawing;
 
 namespace AgeofVillagers90Test
 {
@@ -14,10 +15,13 @@ namespace AgeofVillagers90Test
             string s = bdfarmerTest.BangladeshiFarmerTest();
             Assert.AreEqual("Bangladeshi", s);
         }
-
+        [TestMethod]
         public void ArabBeduoinColorTest()
         {
-            
+            ArabBedouin ABcolor = new ArabBedouin();
+            Color colorGet1 = ABcolor.BackGroundColor();
+            Color colorMatch1 = Color.YellowGreen;
+            Assert.AreEqual(colorGet1, colorMatch1);
         }
     }
 }

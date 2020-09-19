@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    interface INation
+    public interface INation
     {
         void DrawHouse(Graphics g,Point pt);
 

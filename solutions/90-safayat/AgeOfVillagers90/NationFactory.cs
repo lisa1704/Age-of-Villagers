@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers90
 {
-    internal class NationFactory
+    public class NationFactory
     {
         public INation GetNation(string NationType)
         {
