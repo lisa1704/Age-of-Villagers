@@ -13,7 +13,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
         Pen pen;
         Point point;
         int length, width;
-        BasicShapeFactory basicShapeFactory;
+        DrablerShapeFactory basicShapeFactory;
         public BangladeshiWaterSourceShape(Graphics g, Pen pen, Point point, int length, int width)
         {
             this.pen = pen;
@@ -21,12 +21,12 @@ namespace AgeOfVillagers.IItem_implementing_Classes
             this.width = width;
             this.g = g;
             this.point = point;
-            basicShapeFactory = new BasicShapeFactory();
+            basicShapeFactory = new DrablerShapeFactory();
         }
 
         public void makeShape()
         {
-            BasicShapes nonagon = basicShapeFactory.GetDrableShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
+            DrawableShapes nonagon = basicShapeFactory.GetDrableShape(g, pen, point, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
 

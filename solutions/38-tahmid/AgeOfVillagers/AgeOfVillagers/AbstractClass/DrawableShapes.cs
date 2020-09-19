@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.AbstractClass
 {
-    abstract class BasicShapes : Shapes
+    abstract class DrawableShapes : Shapes
     {
         public abstract void drawShape();
 
@@ -16,12 +16,12 @@ namespace AgeOfVillagers.AbstractClass
         }
 
 
-        internal BasicShapes getLines(Point start, Point end,Graphics g,Pen pen)
+        internal DrawableShapes getLines(Point start, Point end,Graphics g,Pen pen)
         {
             return new Line(start, end,g,pen);
         }
 
-        internal BasicShapes getArcs(Graphics g, Pen pen, Point point, int startAng, int endAng, int lenght, int width)
+        internal DrawableShapes getArcs(Graphics g, Pen pen, Point point, int startAng, int endAng, int lenght, int width)
         {
             return new Arc(g,pen,point,startAng,endAng,lenght,width);
         }

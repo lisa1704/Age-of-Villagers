@@ -6,13 +6,13 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Triangle : BasicShapes
+    class Triangle : DrawableShapes
     {
         Point start, right, top;
         Graphics g;
         Pen p;
         int height, base_length;
-        BasicShapes rightLine,leftLine,baseLine;
+        DrawableShapes rightLine,leftLine,baseLine;
 
         public Triangle(Graphics g, Pen p, Point start, int height, int base_length)
         {

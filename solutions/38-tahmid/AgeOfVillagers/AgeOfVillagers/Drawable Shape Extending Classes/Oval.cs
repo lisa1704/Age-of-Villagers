@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Oval : BasicShapes
+    class Oval : DrawableShapes
     {
         Point startingPoint;
         Pen p;
@@ -14,7 +14,7 @@ namespace AgeOfVillagers
         int startAng=Constants.OVAL_STARTING_ANG, endAng=Constants.OVAL_ENDING_ANG;
         int length, width;
         Pen pen;
-        BasicShapes arc;
+        DrawableShapes arc;
 
         public Oval(Graphics g, Pen pen, Point startingPoint, int length, int width)
         {

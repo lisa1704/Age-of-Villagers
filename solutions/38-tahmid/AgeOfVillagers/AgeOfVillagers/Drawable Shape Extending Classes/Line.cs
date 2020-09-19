@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Line : BasicShapes
+    class Line : DrawableShapes
     {
         Point start,end;
         Graphics g;

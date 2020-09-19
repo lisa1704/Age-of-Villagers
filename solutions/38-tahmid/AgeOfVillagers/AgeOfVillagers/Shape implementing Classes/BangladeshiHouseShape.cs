@@ -13,7 +13,7 @@ namespace AgeOfVillagers.Village_extended_classes
         Pen pen;
         Point point;
         int length, width;
-        BasicShapeFactory basicShapeFactory;
+        DrablerShapeFactory basicShapeFactory;
        public BangladeshiHouseShape (Graphics g,Pen pen,Point point,int length,int width)
         {
             this.pen = pen;
@@ -21,16 +21,16 @@ namespace AgeOfVillagers.Village_extended_classes
             this.width = width;
             this.g = g;
             this.point = point;
-            basicShapeFactory = new BasicShapeFactory();
+            basicShapeFactory = new DrablerShapeFactory();
 
             
         }
 
         public void makeShape()
         {
-            BasicShapes base_shape = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            DrawableShapes base_shape = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
             base_shape.makeShape();
-            BasicShapes roof_top = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            DrawableShapes roof_top = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
             roof_top.makeShape();
         }
 

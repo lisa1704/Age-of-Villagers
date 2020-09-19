@@ -6,9 +6,9 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class BasicShapeFactory
+    class DrablerShapeFactory
     {
-        public BasicShapes GetDrableShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
+        public DrawableShapes GetDrableShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
         {
             if (hint.Equals(Constants.RECT_HINT))
                 return new Rectangle(g, pen, point, height, width);
