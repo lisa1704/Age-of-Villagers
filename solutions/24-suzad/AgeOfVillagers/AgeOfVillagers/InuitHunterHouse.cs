@@ -28,14 +28,6 @@ namespace AgeOfVillagers
             addComponent(new SemiCircle(arcPoint1, linePoint1, linePoint2, height1, width1));
             addComponent(new SemiCircle(arcPoint2, linePoint3, linePoint4, height2, width2));
         }
-        /*public void drawComponent(Point e, Graphics graphics, Pen pen)
-        {
-            int x = e.X;
-            int y = e.Y;
-            graphics.DrawLine(pen, x, y, x + 16, y);
-            graphics.DrawArc(pen, x, y - 16, 16, 32, 180, 180);
-            graphics.DrawArc(pen, x + 5, y - 6, 6, 12, 180, 180);
-        }*/
 
         public override Point getPoint()
         {

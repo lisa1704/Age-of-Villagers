@@ -26,38 +26,15 @@ namespace AgeOfVillagers
                 System.IO.File.WriteAllText(path, contentsToWriteToFile);
             }
         }
+
         public Village openVillage(AgeOfVillagersForm ageOfVillagersForm, string filePath, string nation)
         {
-            //Color color=Color.White;
             Village village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
-            /*ageOfVillagersForm.lblNationName.Text = village.nation;
-            ageOfVillagersForm.lblVillageName.Text = village.village;
-            if (village.nation == "Arab Bedouin")
-            {
-                ageOfVillagersForm.radiobtnWaterSource.Enabled = false;
-                color = Color.LightYellow;
-            }
-            else if (village.nation == "Inuit Hunter")
-            {
-                ageOfVillagersForm.radiobtnTree.Enabled = false;
-                ageOfVillagersForm.radiobtnWaterSource.Enabled = false;
-                color = Color.White;
-            }
-            else if (village.nation == "Egyptian King")
-            {
-                color = Color.Yellow;
-            }
-            else if (village.nation == "Bangladeshi Farmer")
-            {
-                color = Color.Green;
-            }
-            ageOfVillagersForm.pnlDrawingSpace.BackColor = color;
-            //draw(ageOfVillagersForm, village);
-            //return village;*/
             ageOfVillagersForm.setNationProperty(nation);
             ageOfVillagersForm.setVillageName(village.village);
             return village;
         }
+
         public void draw(AgeOfVillagersForm ageOfVillagersForm, Village village, string nation)
         {
             ageOfVillagersForm.villageComponentFactory = NationComponentFactory.getNation(nation);

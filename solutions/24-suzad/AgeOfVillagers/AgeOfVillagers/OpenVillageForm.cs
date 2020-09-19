@@ -12,13 +12,14 @@ namespace AgeOfVillagers
     {
         AgeOfVillagersForm ageOfVillagersForm;
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        VillageSave villageSave=new VillageSave();
+        VillageSave villageSave;
         string filePath;
         string nationName;
-        public OpenVillageForm(AgeOfVillagersForm ageOfVillagersForm)
+        public OpenVillageForm(AgeOfVillagersForm ageOfVillagersForm, VillageSave villageSave)
         {
             InitializeComponent();
             this.ageOfVillagersForm = ageOfVillagersForm;
+            this.villageSave = villageSave;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -28,10 +29,6 @@ namespace AgeOfVillagers
             villageSave.draw(ageOfVillagersForm, village,nationName);
             ageOfVillagersForm.Show();
             this.Hide();
-            /*ageOfVillagersForm.openHelper1(cmboChooseNation.SelectedItem.ToString());
-            ageOfVillagersForm.openHelper2(filePath);
-            ageOfVillagersForm.Show();
-            this.Hide();*/
         }
 
         private void btnChooseVillage_Click(object sender, EventArgs e)
@@ -41,6 +38,7 @@ namespace AgeOfVillagers
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filePath = openFileDialog.FileName;
+
             }
         }
 
@@ -53,7 +51,6 @@ namespace AgeOfVillagers
 
         private void openVillageForm_Load(object sender, EventArgs e)
         {
-           // MessageBox.Show("opened");
         }
     }
 }

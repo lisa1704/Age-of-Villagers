@@ -21,16 +21,6 @@ namespace AgeOfVillagers
             addComponent(new Triangle(point1, point2, point3));
             addComponent(new Triangle(point1, point3, point4));
         }
-        /*public void drawComponent(Point e, Graphics graphics, Pen pen)
-        {
-            int x = e.X;
-            int y = e.Y;
-            graphics.DrawLine(pen, x, y, x + 6, y - 7);
-            graphics.DrawLine(pen, x + 6, y - 7, x - 3, y - 16);
-            graphics.DrawLine(pen, x - 3, y - 16, x - 10, y - 4);
-            graphics.DrawLine(pen, x - 10, y - 4, x, y);
-            graphics.DrawLine(pen, x - 3, y - 16, x, y);
-        }*/
 
         public override Point getPoint()
         {

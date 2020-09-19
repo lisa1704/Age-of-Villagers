@@ -23,7 +23,7 @@ namespace AgeOfVillagers
         public Graphics graphics;
         public Pen pen;
         public VillageComponentFactory villageComponentFactory =null;
-        public VillageSave villageSave = null;
+        public VillageSave villageSave;
         NationFactory nationFactory = new NationFactory();
         INation iNation;
 
@@ -95,7 +95,6 @@ namespace AgeOfVillagers
 
         public void btnSave_Click(object sender, EventArgs e)
         {
-            //string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             Village village = new Village(villageName,treePoints,housePoints,riverPoints);
             villageSave.saveVillage(village);
         }
@@ -103,18 +102,11 @@ namespace AgeOfVillagers
         public void btnOpenVillage_Click(object sender, EventArgs e)
         {
             string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
-            //Village village=villageSave.openVillage(this, filePath);
-            //villageSave.draw(this, village);
-            /*Thread a = new Thread(new ThreadStart(villageSave.openVillage));
-            a.Start();
-            Thread b = new Thread(new ThreadStart(villageSave.draw));
-            b.Start();*/
-
-            nationName ="Bangladeshi Farmer";
+            nationName ="Arab Bedouin";
             Village village = villageSave.openVillage(this, filePath, nationName);
             villageSave.draw(this, village, nationName);
 
-            /*OpenVillageForm openVillageForm = new OpenVillageForm(this);
+            /*OpenVillageForm openVillageForm = new OpenVillageForm(this,villageSave);
             openVillageForm.Show();
             this.Hide();*/
         }
