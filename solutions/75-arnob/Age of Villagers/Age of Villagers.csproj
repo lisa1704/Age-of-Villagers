@@ -63,6 +63,7 @@
     <Compile Include="Inuit_Creator.cs" />
     <Compile Include="Inuit_Hunter.cs" />
     <Compile Include="IShape.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
