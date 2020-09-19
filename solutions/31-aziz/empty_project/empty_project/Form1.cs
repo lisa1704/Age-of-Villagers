@@ -12,13 +12,10 @@ namespace empty_project
 {
     public partial class Form1 : Form
     {
-        string element_text = "";
-        string nation = "";
-        List<Point> treePoints = new List<Point>();
-        List<Point> housePoints = new List<Point>();
-        List<Point> watersourcePoints = new List<Point>();
+        INation nation;
+        SelectNation chooseNation;
+        String element_text;
 
-        SelectNation selectNation = new SelectNation();
         public Form1()
         {
             InitializeComponent();
@@ -26,23 +23,7 @@ namespace empty_project
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs paint)
         {
-            Graphics graphics = DrawingPanel.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-
-            foreach (Point point in treePoints)
-            {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
-            }
-
-            foreach (Point point in housePoints)
-            {
-                selectNation.GetNation(nation).DrawHouse(graphics, point);
-            }
-
-            foreach (Point point in watersourcePoints)
-            {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
-            }
+            
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
@@ -84,15 +65,15 @@ namespace empty_project
         {
             if (element_text == "Tree")
             {
-                treePoints.Add(click.Location);
+                
             }
             if (element_text == "House")
             {
-                housePoints.Add(click.Location);
+                
             }
             if (element_text == "WaterSource")
             {
-                watersourcePoints.Add(click.Location);
+                
             }
             DrawingPanel.Invalidate();
         }
@@ -104,7 +85,7 @@ namespace empty_project
 
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            nation = chooseNation.NationIndex(NationBox.SelectedIndex);
         }
     }
 }
