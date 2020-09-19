@@ -29,10 +29,8 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            ArabianTree arabianTree = new ArabianTree();
-            TreeContext treeContext = new TreeContext(arabianTree, g, location, treeSize);
-
-            treeContext.TreeDrawing();
+            ArabianTree arabianTree = new ArabianTree(location,treeSize);
+            arabianTree.Draw(g);
 
             Debug.WriteLine("Drawing Arab Tree");
         }
