@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         Point nullPoint=new Point();
         public void drawComponent(Point e, Graphics graphics, Pen pen)
         {
-            MessageBox.Show("Select a radio button!!");
+            MessageBox.Show("Select proper radio button and proper nation!!");
         }
 
         public override Point getPoint()

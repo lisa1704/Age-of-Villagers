@@ -24,7 +24,7 @@ namespace AgeOfVillagers
             {
                 return new InuitHunterComponentFactory();
             }
-            return null;
+            return new NullComponentFactory();
         }
     }
 }
