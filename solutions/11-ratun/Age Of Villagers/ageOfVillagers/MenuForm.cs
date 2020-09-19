@@ -49,26 +49,28 @@ namespace ageOfVillagers
             text += "Adding new Water Source. ";
         }
 
-        public void NewVillage_Click(object sender, EventArgs e)
+        public void NewVillage_Click(string a, string b)//object sender, EventArgs e)
         {
             Village v = new Village();
-            v.CreateVillage(Nation.Text, VillageName.Text);
+            v.CreateVillage(a, b);//Nation.Text, VillageName.Text);
             VillageNameList.Add(VillageName.Text);
             text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
 
-        public void OpenVillage_Click(object sender, EventArgs e)
+        public void OpenVillage_Click(string b)//object sender, EventArgs e)
         {
-            foreach (string i in VillageNameList)
-            {
-                if (VillageName.Text == i)
-                {
-                    Village v = new Village();
-                    v.Open(VillageName.Text);
-                }
+            //foreach (string i in VillageNameList)
+            //{
+            //if (VillageName.Text == i)
+            //{
+            //Village v = new Village();
+            //v.Open(VillageName.Text);
+            //}
 
-            }
+            //}
+            Village v = new Village();
+            v.Open(b);
             text += "Opening the village. ";
             //ageOfVillagers.open(List<Village>);
         }

@@ -7,9 +7,13 @@ namespace ageOfVillagers
     public class UnitTest1
     {
         [TestMethod]
-        public void Test()
+        public void test1()
         {
-            Assert.AreEqual(1, 1);
+            MenuForm m = new MenuForm();
+            m.NewVillage_Click("a", "b");
+            m.OpenVillage_Click("b");
+            VillageState village = new VillageState();
+            Assert.AreEqual("Giving State of b", village.GetState());
         }
     }
 }
