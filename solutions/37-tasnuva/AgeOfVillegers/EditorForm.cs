@@ -16,6 +16,7 @@ namespace AgeOfVillegers
         string VillageName;
         string name;
         string nation;
+        string text;
         public EditorForm()
         {
             InitializeComponent();
@@ -64,22 +65,25 @@ namespace AgeOfVillegers
 
         private void Tree_btn_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "Tree";
         }
 
         private void House_btn_CheckedChanged(object sender, EventArgs e)
         {
+            text = "House";
             
         }
 
         private void Water_btn_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            text = "Water Source";
         }
 
         private void new_btn_Click(object sender, EventArgs e)
         {
-
+            new_btn nv = new new_btn;
+            nv.Show();
+            this.Hide();
         }
 
         private void Open_btn_Click(object sender, EventArgs e)
