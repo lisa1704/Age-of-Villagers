@@ -23,6 +23,8 @@ import java.util.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import project.Utilities.BangladeshiFarmers;
+import project.Utilities.INation;
 import project.Utilities.Villages;
 
 import javax.swing.*;
@@ -34,6 +36,8 @@ public class VillageViewController implements Initializable {
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
     public int Flag = 0;
+    public String terrainColor = "GREEN" ;
+    public ArrayList<Shape> Object ;
 
 
 
@@ -44,14 +48,17 @@ public class VillageViewController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if(Flag == 0){
-                    DrawWaterSource(event.getSceneX(),event.getSceneY(),24.0,16.0);
-                    DrawPane.setStyle("-fx-background-color: #DAF7A6");
+                    INation BangladeshiFarmers = new BangladeshiFarmers();
+                    Object = BangladeshiFarmers.DrawHouse(event.getSceneX(),event.getSceneY());
+                    for (Shape x : Object){
+                        DrawPane.getChildren().addAll(x);
+                    }
                 }
                 else if(Flag == 1){
                     DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
                 }
                 else if(Flag == 2){
-                    DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
+//                    DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
                 }
             }
         });
@@ -129,17 +136,8 @@ public class VillageViewController implements Initializable {
         System.out.println("HOUSE SELECTED!");
     }
 
-    public void DrawHouse(double x1, double y1, double height, double width){
-        //Upper Triangle..
-        Line line1 = new Line(x1,y1,x1+width,y1);
-        Line line2 = new Line(x1,y1,x1+(width/2.0),y1-(height/2.0));
-        Line line3 = new Line(x1+width,y1,x1+(width/2.0),y1-(height/2.0));
-        //Lower Rectangle
-        Line line4 = new Line(x1,y1,x1,y1+height);
-        Line line5 = new Line(x1,y1+height,x1+width,y1+height);
-        Line line6 = new Line(x1+width,y1+height,x1+width,y1);
+    public void DrawHouse(){
 
-        DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6);
 
     }
 
@@ -180,4 +178,5 @@ public class VillageViewController implements Initializable {
 
         DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6,line7,line8,line9);
     }
+    
 }
