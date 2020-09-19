@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    interface Ination
+    interface INation
     {
+        void HouseDraw();
+        void TreeDraw();
+        void WaterSourceDraw();
     }
 }

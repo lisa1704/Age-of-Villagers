@@ -4,7 +4,23 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    class InuitHunters
+    class InuitHunters:INation
     {
+        public void HouseDraw()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void TreeDraw()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void WaterSourceDraw()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
