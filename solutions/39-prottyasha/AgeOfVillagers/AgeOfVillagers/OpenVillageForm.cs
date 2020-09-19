@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public partial class SaveVillageForm : Form
+    public partial class OpenVillageForm : Form
     {
-        public SaveVillageForm()
+        public OpenVillageForm()
         {
             InitializeComponent();
-        }
-
-        private void textbox_VillageName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
