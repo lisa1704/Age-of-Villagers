@@ -8,5 +8,11 @@ namespace Age_of_Villagers
 {
     class Bangladeshi_Farmer
     {
+        private string nationName;
+
+        public Bangladeshi_Farmer(string nationName)
+        {
+            this.nationName = nationName;
+        }
     }
 }
