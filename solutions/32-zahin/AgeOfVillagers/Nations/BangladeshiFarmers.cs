@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgeOfVillagers.Shapes;
+
 namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
@@ -17,7 +19,15 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Graphics g, Point point)
         {
-            MessageBox.Show("Drawing House for Bangladeshi Farmers");
+            Point trianglePoint1 = new Point(point.X + 25, point.Y - 25);
+            Point trianglePoint2 = new Point(point.X + 50, point.Y);
+            Point rectanglePoint1 = new Point(point.X, point.Y + 25);
+            Point rectanglePoint2 = new Point(trianglePoint2.X, trianglePoint2.Y + 25);
+            Pen pen = new Pen(Color.Red);
+            Triangle triangle = new Triangle(g, pen, point, trianglePoint1, trianglePoint2);
+            triangle.DrawShape();
+            Rectangles rectangle = new Rectangles(g, pen, point, trianglePoint2, rectanglePoint1, rectanglePoint2);
+            rectangle.DrawShape();
         }
 
         public void DrawTree(Graphics g, Point point)
