@@ -45,7 +45,7 @@ namespace AgeOfVillagers
            
         }
 
-        public void saveVillage(List<IItem> itemList, string villageName)
+        public void saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName)
         {
             
 

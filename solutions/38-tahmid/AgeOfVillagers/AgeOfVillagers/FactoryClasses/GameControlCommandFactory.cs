@@ -15,10 +15,10 @@ namespace AgeOfVillagers
             return new CreateVillage(game, drawing_panel, village_name,sVillageName);
         }
 
-        public GameControlCommand GetGameControlCommand(String hint, IGames game, string sVillageName,List<IItem> itemList)
+        public GameControlCommand GetGameControlCommand(String hint, IGames game, string sVillageName,List<DrawnItemsInformation> drawnItemsInfoList)
         {
 
-            return new SaveVillage(game, sVillageName, itemList);
+            return new SaveVillage(game, sVillageName, drawnItemsInfoList);
         }
 
         public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,StateModel previouslySavedState)

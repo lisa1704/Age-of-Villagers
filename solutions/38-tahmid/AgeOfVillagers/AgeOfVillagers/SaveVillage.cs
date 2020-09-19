@@ -9,19 +9,19 @@ namespace AgeOfVillagers
     {
         private IGames game;
         private string sVillageName;
-        private List<IItem> itemList;
+        private List<DrawnItemsInformation> drawnItemsInfoList;
         
 
-        public SaveVillage(IGames game, string sVillageName, List<IItem> itemList)
+        public SaveVillage(IGames game, string sVillageName, List<DrawnItemsInformation> drawnItemsInfoList)
         {
             this.game = game;
             this.sVillageName = sVillageName;
-            this.itemList = itemList;
+            this.drawnItemsInfoList = drawnItemsInfoList;
         }
 
         public void execute()
         {
-            game.saveVillage(itemList, sVillageName);
+            game.saveVillage(drawnItemsInfoList, sVillageName);
         }
     }
 }

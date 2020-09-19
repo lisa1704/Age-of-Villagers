@@ -37,6 +37,9 @@ namespace AgeOfVillagers
 
         StateModel previouslySavedState;
 
+        DrawnItemsInformation drawnItemsInfo;
+        List<DrawnItemsInformation> drawnItemsInfosList;
+
        
         public VillageWindow()
         {
@@ -66,7 +69,7 @@ namespace AgeOfVillagers
         private void Save_Village(object sender, EventArgs e)
         {
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, tbVillageName.Text, itemList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, tbVillageName.Text, drawnItemsInfosList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
@@ -93,7 +96,7 @@ namespace AgeOfVillagers
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
-            itemList = new List<IItem>();
+            drawnItemsInfosList = new List<DrawnItemsInformation>();
             
 
 
@@ -134,9 +137,14 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.BD_NATION;
             Point point = new Point(e.X, e.Y);
-            IItem item = itemFactory.GetItem(point, selectedItem,g,pen);
+            drawnItemsInfo = new DrawnItemsInformation
+            {
+                Item_type = selectedItem,
+                Clicked_point=point
+            };
+            IItem item = itemFactory.GetItem(drawnItemsInfo.Clicked_point, drawnItemsInfo.Item_type,g,pen);
             item.placeItem(selectedNation); ;
-            itemList.Add(item);
+            drawnItemsInfosList.Add(drawnItemsInfo);
             
             
 
