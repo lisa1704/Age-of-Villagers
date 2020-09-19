@@ -1,5 +1,7 @@
 package Project.Controllers;
 
+import Project.Utilities.Bangladeshi_Farmers;
+import Project.Utilities.INations;
 import Project.Utilities.Village;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,6 +22,7 @@ import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class VillageView_controller implements Initializable {
@@ -46,13 +49,12 @@ public class VillageView_controller implements Initializable {
                     DrawTree(x1,y1,16,24);
                 }
                 else if (flag == "House"){
-//                    Line line1 = new Line(x1,y1,x1+16,y1);
-//                    Line line2 = new Line(x1,y1,x1,y1+16);
-//                    Line line3 = new Line(x1+16,y1,x1+16,y1+16);
-//                    Line line4 = new Line(x1,y1+16,x1+16,y1+16);
-//                    DrawingCanvas.getChildren().addAll(line1,line2,line3,line4);
+                    INations village = new Bangladeshi_Farmers();
+                    ArrayList<Shape> house = village.drawHouse(x1,y1);
+                    for (Shape s:house) {
+                        DrawingCanvas.getChildren().addAll(s);
+                    }
 
-                    DrawHouse(x1,y1,16,16);
                 }
                 else if(flag == "WaterSource"){
 //                    Circle c = new Circle(x1,y1,10);
@@ -146,18 +148,6 @@ public class VillageView_controller implements Initializable {
         Line l4 = new Line(x+1,y,x+1,y+15);
 
         DrawingCanvas.getChildren().addAll(arc,l1,l2,l3,l4);
-    }
-
-    public void DrawHouse(double x, double y, double width, double height){
-        double halfWidth = width/2;
-        double halfHeight = height/2;
-        Line l1 = new Line(x-halfWidth,y,x+halfWidth,y);
-        Line l2 = new Line(x-halfWidth,y+halfHeight,x+halfWidth,y+halfHeight);
-        Line l3 = new Line(x-halfWidth,y,x-halfWidth,y+halfWidth);
-        Line l4 = new Line(x+halfWidth,y,x+halfWidth,y+halfWidth);
-        Line l5 = new Line(x-halfWidth,y,x,y-halfHeight);
-        Line l6 = new Line(x+halfWidth,y,x,y-halfHeight);
-        DrawingCanvas.getChildren().addAll(l1,l2,l3,l4,l5,l6);
     }
 
     public void DrawWaterBody(double x, double y, double width, double height){
