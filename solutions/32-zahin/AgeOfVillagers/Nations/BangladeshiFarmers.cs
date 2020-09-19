@@ -11,7 +11,6 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
     {
-        private string item;
         Pen pen = new Pen(Color.Red);
         public BangladeshiFarmers()
         {
