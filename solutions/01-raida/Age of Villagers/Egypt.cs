@@ -23,11 +23,11 @@ namespace Age_of_Villagers
             village_name = name;
         }
 
-        public void draw_tree(Point p)
+        public IShape draw_tree(Point p)
         {
             tree_points.Add(p);
             tree = new Egtree(p, 40, 20);
-            tree.draw(g, pen);
+            return tree;
         }
 
         public void draw_house(Point p)

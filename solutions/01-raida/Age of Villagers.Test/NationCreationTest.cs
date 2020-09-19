@@ -50,7 +50,7 @@ namespace Age_of_Villagers.Test
     public class NationPropertyTest
     {
         INation nation= new Bangladesh();
-        Graphics g
+        Graphics g;
         [SetUp]
         public void Setup()
         {
