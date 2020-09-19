@@ -56,8 +56,9 @@ public class VillageView_controller implements Initializable {
                     DrawHouse(x1,y1,16,16);
                 }
                 else if(flag == "WaterSource"){
-                    Circle c = new Circle(x1,y1,10);
-                    DrawingCanvas.getChildren().addAll(c);
+//                    Circle c = new Circle(x1,y1,10);
+//                    DrawingCanvas.getChildren().addAll(c);
+                    DrawWaterBody(x1,y1,24,16);
                 }
             }
         });
@@ -157,5 +158,18 @@ public class VillageView_controller implements Initializable {
         Line l5 = new Line(x-halfWidth,y,x,y-halfHeight);
         Line l6 = new Line(x+halfWidth,y,x,y-halfHeight);
         DrawingCanvas.getChildren().addAll(l1,l2,l3,l4,l5,l6);
+    }
+
+    public void DrawWaterBody(double x, double y, double width, double height){
+        Line l1 = new Line(x,y,x+(width/4),y+(height/2));
+        Line l2 = new Line(x+(width/4),y+(height/2),x+(width/2),y);
+        Line l3 = new Line(x+(width/2),y,x+(3*width/4),y+(height/2)-2);
+        Line l4 = new Line(x+(3*width/4),y+(height/2)-2,x+width,y-(height/3));
+        Line l5 = new Line(x+width,y-(height/3),x+(3*width/5),y-(height/2));
+        Line l6 = new Line(x+(3*width/5),y-(height/2),x+(width/2)-2,y-4);
+        Line l7 = new Line(x+(width/2)-2,y-4,x+(width/2)-2,y-(height/2));
+        Line l8 = new Line(x+(width/2)-2,y-(height/2),x+(width/4),y-(height/2));
+        Line l9 = new Line(x+(width/4),y-(height/2),x,y);
+        DrawingCanvas.getChildren().addAll(l1,l2,l3,l4,l5,l6,l7,l8,l9);
     }
 }
