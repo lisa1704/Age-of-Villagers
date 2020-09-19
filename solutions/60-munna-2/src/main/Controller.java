@@ -86,6 +86,4 @@ public class Controller implements Initializable {
         BangladeshiFarmersTree bangladeshiFarmersTree = new BangladeshiFarmersTree();
         bangladeshiFarmersTree.draw_Tree(drawing_space_canvas);
     }
-
-
 }
