@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    class compositeShape : IShape
+    public class compositeShape : IShape
     {
         private List<IShape> shapelist = new List<IShape>();
 

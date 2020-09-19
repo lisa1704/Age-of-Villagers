@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    class igloo : house
+    public class igloo : house
     {
         public igloo(Point p,int length,int width) : base(p, length, width) { }
         public override void createHouse()

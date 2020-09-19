@@ -12,7 +12,7 @@ namespace Age_of_Villagers
         void draw(Graphics g, Pen pen);
     }
 
-    class nullshape : IShape
+    public class nullshape : IShape
     {
         private static IShape _instance;
         private nullshape()

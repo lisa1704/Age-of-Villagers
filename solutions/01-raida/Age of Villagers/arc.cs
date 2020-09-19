@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    class arc : IShape
+    public class arc : IShape
     {
         private readonly Point point;
         private readonly int radius, startAngle, sweepAngle;

@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    class Artree : tree
+    public class Artree : tree
     {
         public Artree(Point p, int length ,int width) : base(p,length,width){ }
         public override void createTree()

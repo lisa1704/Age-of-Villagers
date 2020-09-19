@@ -2,10 +2,8 @@
 
 namespace Age_of_Villagers
 {
-    class rectangle :IShape
+    public class rectangle :IShape
     {
-        private readonly int length;
-        private readonly int height;
         private readonly Point p1,p2,p3,p4;
         
         private compositeShape cs = new compositeShape();

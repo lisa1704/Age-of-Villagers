@@ -3,7 +3,7 @@
 
 namespace Age_of_Villagers
 {
-    abstract class tree:IShape
+    public abstract class tree:IShape
     {
         protected Point p;
         protected int length,width;

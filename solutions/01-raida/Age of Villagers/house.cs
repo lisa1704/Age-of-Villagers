@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    abstract class house:IShape
+    public abstract class house:IShape
     {
         protected Point p;
         protected int length, width;
         protected compositeShape cs = new compositeShape();
+
         public house(Point p,int length, int width )
         {
             this.p = p;

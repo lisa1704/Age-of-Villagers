@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class triangle:IShape
+    public class triangle:IShape
     {
         
         private readonly Point point1,point2,point3;

@@ -3,7 +3,7 @@
 
 namespace Age_of_Villagers
 {
-    class Egtree : tree
+    public class Egtree : tree
     {
         public Egtree(Point p,int length, int width) : base(p, length, width) { }
         public override void createTree()

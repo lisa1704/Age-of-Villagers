@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    abstract class river:IShape
+    public abstract class river:IShape
     {
         protected Point p;
         

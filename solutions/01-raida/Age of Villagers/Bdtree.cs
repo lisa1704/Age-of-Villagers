@@ -3,7 +3,7 @@
 
 namespace Age_of_Villagers
 {
-    class Bdtree : tree
+    public class Bdtree : tree
     {
         public Bdtree(Point p, int length,int width) : base(p, length,width) { }
         public override void createTree()

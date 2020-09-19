@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    class circle : IShape
+    public class circle : IShape
     {
         private readonly Point point;
         private readonly int radius;
