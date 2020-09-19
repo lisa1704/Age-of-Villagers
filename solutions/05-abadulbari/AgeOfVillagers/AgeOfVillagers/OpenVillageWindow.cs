@@ -57,7 +57,19 @@ namespace AgeOfVillagers
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            
+            villageWin.nationLabel.Text = nationComBox.Text;
+            NationFactory nFactory = new NationFactory(nationComBox.Text);
+            INation newnation = nFactory.getNation();
+
+            var dataString = System.IO.File.ReadAllText(filePath);
+            var settings = new JsonSerializerSettings()
+            {
+                TypeNameHandling = TypeNameHandling.All
+            };
+            villageWin.village = JsonConvert.DeserializeObject<Village>(dataString, settings);
+            //villageWin.village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
+            villageWin.village.nation = newnation;
+            villageWin.villageLabel.Text = villageWin.village.villageName;
         }
 
         private void villageLabel_Click(object sender, EventArgs e)
