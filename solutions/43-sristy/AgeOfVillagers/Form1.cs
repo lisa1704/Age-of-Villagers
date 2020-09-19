@@ -71,18 +71,19 @@ namespace Age_of_villagers
 
         private void draw_panel(object sender, PaintEventArgs e)
         {
+            Pen p = new Pen(Color.Black);
             Graphics g = drawpanel.CreateGraphics();
                 foreach (Point pt in H_points)
                 {
-                nationfactory.GetNation(type).Draw_house(g, pt);
+                nationfactory.GetNation(type).Draw_house(pt).paint(p,g);
                 }
                 foreach (Point pt in T_points)
                 {
-                nationfactory.GetNation(type).Draw_tree(g, pt);
+                nationfactory.GetNation(type).Draw_tree(pt).paint(p,g);
                 }
                 foreach (Point pt in W_points)
                 {
-                nationfactory.GetNation(type).Draw_watersource(g, pt);
+                nationfactory.GetNation(type).Draw_watersource(pt).paint(p,g);
             }
         }
 

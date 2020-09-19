@@ -4,24 +4,21 @@ using System.Drawing;
 namespace Age_of_villagers
 {
     public class Bangladeshi : INation
-    {
-        Pen p = new Pen(Color.Green);
-        
-        public void Draw_house(Graphics g,Point lptop)
+    {        
+        public Compositeobj Draw_house(Point lptop)
         {
             Compositeobj house = new Bangladeshi_house(lptop);
-            house.paint(p,g);
+            return house;
         }
-        public void Draw_tree(Graphics g,Point mptop)
+        public Compositeobj Draw_tree(Point mptop)
         {
             Compositeobj tree = new Bangladeshi_tree(mptop);
-            tree.paint(p, g);
+            return tree;
         }
-        public void Draw_watersource(Graphics g,Point p1)
+        public Compositeobj Draw_watersource(Point p1)
         {
             Compositeobj watersource = new Bangladeshi_watersource(p1);
-            watersource.paint(p, g);
-
+            return watersource;
         }
 
         public Color get_backcolor()
