@@ -20,7 +20,7 @@ namespace AgeOfVillagers
 
         public void execute()
         {
-            
+            game.openVillage(selectedNation, villageNameLabel);
         }
     }
 }
