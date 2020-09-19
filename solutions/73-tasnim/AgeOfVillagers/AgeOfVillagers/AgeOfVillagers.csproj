@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArabBedouin.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="CreateNewVillage.cs">
       <SubType>Form</SubType>
