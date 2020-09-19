@@ -50,27 +50,38 @@ namespace ageOfVillagers
 
         public void NewVillage_Click(object sender, EventArgs e)
         {
-            Village v = new Village("nation","village");
+            Village v = new Village();
+            v.CreateVillage(Nation.Text, VillageName.Text);
             text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
 
         public void OpenVillage_Click(object sender, EventArgs e)
         {
+            string[] VillageList = { };
+            foreach (string i in VillageList)
+            {
+                if (VillageName.Text == i)
+                {
+                    Village v = new Village();
+                    v.Open(VillageName.Text);
+                }
+
+            }
             text += "Opening the village. ";
             //ageOfVillagers.open(List<Village>);
         }
 
         public void button2_Click(object sender, EventArgs e)
         {
-            SaveVillageState currentVillage= new SaveVillageState();
-            currentVillage.save();
+            Village v = new Village();
+            v.Save();
             text += "Saving the village. ";
         }
 
         public void MenuForm_Load(object sender, EventArgs e)
         {
-            //ageOfVillagers.Load();
+            //Village.Load();
             text += "Loading the village. ";
 
         }

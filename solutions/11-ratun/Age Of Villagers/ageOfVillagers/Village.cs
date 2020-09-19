@@ -1,14 +1,27 @@
 ﻿namespace ageOfVillagers
 {
-    public abstract class Village
+    interface IDraw
     {
-        private Nation nation;
+        void Draw();
+    }
+    public class Village: IDraw
+    {
+        private string nation;
         private string villagename;
-        public Village(Nation nation, string villagename)
+        public void Draw(){}
+        public void CreateVillage(string nation, string villagename)
         {
             this.nation = nation;
             this.villagename = villagename;
         }
-        abstract void draw();
+        public void Open(string villagename)
+        {
+            
+        }
+        public void Save()
+        {
+            SaveVillageState s = new SaveVillageState();
+            s.save();
+        }
     }
 }
