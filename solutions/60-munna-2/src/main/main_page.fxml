@@ -44,7 +44,7 @@
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="tree_RadioButton" layoutX="719.0" layoutY="278.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="127.0" text="Tree">
+      <RadioButton fx:id="tree_RadioButton" layoutX="719.0" layoutY="278.0" mnemonicParsing="false" onAction="#Tree_Button_Clicked" prefHeight="24.0" prefWidth="127.0" text="Tree">
          <font>
             <Font size="14.0" />
          </font>

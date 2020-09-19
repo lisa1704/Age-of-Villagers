@@ -14,6 +14,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import tree.BangladeshiFarmersTree;
 
 import java.io.IOException;
 import java.net.URL;
@@ -74,8 +75,17 @@ public class Controller implements Initializable {
         vn_label = village_name;
     }
 
+    @FXML
     public void House_Button_Clicked(ActionEvent actionEvent) {
         BangladeshiFarmersHouse bangladeshiFarmersHouse = new BangladeshiFarmersHouse();
         bangladeshiFarmersHouse.draw_house(drawing_space_canvas);
     }
+
+    @FXML
+    void Tree_Button_Clicked(ActionEvent actionEvent) {
+        BangladeshiFarmersTree bangladeshiFarmersTree = new BangladeshiFarmersTree();
+        bangladeshiFarmersTree.draw_Tree(drawing_space_canvas);
+    }
+
+
 }
