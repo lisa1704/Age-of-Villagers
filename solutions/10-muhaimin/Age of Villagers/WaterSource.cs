@@ -10,7 +10,7 @@ namespace Age_of_Villagers
     {
         public int x, y;
 
-        public WaterSource(int x, int y)
+        public WaterSource(int X, int Y)
         {
             x = X;
             y = Y;

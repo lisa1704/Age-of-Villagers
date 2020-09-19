@@ -10,7 +10,7 @@ namespace Age_of_Villagers
     {
         public int x, y;
 
-        public Tree(int x, int y)
+        public Tree(int X, int Y)
         {
             x = X;
             y = Y;

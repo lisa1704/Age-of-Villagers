@@ -10,7 +10,7 @@ namespace Age_of_Villagers
     {
         public int x, y;
 
-        public House(int x, int y)
+        public House(int X, int Y)
         {
             x = X;
             y = Y;
