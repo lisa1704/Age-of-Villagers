@@ -10,12 +10,6 @@ namespace Age_of_Villagers
         private readonly List<Point> river_points = new List<Point>();
         private IShape tree, house, river;
         private string village_name;
-        private Graphics g;
-        private Pen pen = new Pen(Color.Black);
-        public void set_graphics(Graphics g)
-        {
-            this.g = g;
-        }
 
         public void set_villagename(string name)
         {
@@ -26,20 +20,20 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Arhouse(p, 50, 20);
-            house.draw(g,pen);
+            
         }
 
         public void draw_river(Point P)
         {
             river = nullshape.Instance;            
-            river.draw(g,pen);
+            
         }
 
-        public void draw_tree(Point p)
+        public IShape draw_tree(Point p)
         {
             tree_points.Add(p);
             tree = new Artree(p,50,20);
-            tree.draw(g, pen);
+            return tree;
         }
 
         public string get_villagename()
