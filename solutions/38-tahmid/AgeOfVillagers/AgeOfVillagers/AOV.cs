@@ -20,7 +20,7 @@ namespace AgeOfVillagers
             drawing_panel.Invalidate();
         }
 
-        public List<IItem> openVillage(string selectedNation, Label villageNameLabel)
+        public List<IItem> openVillage(string selectedNation, Label villageNameLabel,StateModel previouslySavedState)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "age of villagers file|*.aov";
@@ -35,7 +35,7 @@ namespace AgeOfVillagers
 
             string json = dataString;
 
-            StateModel previouslySavedState = JsonConvert.DeserializeObject<StateModel>(json, settings);
+            previouslySavedState = JsonConvert.DeserializeObject<StateModel>(json, settings);
             itemList = previouslySavedState.ItemList;
             ElementOpenerFactory elementOpenerFactory = new ElementOpenerFactory();
             village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, villageNameLabel, previouslySavedState.VillageName);

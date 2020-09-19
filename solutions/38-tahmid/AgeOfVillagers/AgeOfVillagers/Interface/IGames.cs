@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.Interface;
+using AgeOfVillagers.Model_Class_Folder;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace AgeOfVillagers
     {
         public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName);
         public void saveVillage(List<IItem> itemList, string villageName);
-        public List<IItem> openVillage(String selectedNation, Label villageName);
+        public List<IItem> openVillage(String selectedNation, Label villageName,StateModel previouslySavedState);
     }
 }
