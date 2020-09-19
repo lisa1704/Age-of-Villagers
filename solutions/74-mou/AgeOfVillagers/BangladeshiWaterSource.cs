@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Tree : IShapes
+    class BangladeshiWaterSource : CompositeShapes
     {
     }
 }

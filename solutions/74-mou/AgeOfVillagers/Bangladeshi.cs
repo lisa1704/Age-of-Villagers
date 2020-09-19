@@ -10,6 +10,7 @@ namespace AgeOfVillagers
         private string vname;
         private Graphics gr;
         private Pen pen;
+
         void set_graphics(Graphics gr)
         {
             this.gr = gr;
