@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class InuitHunter : INation
+    public class InuitHunter : INation
     {
         string name;
 
