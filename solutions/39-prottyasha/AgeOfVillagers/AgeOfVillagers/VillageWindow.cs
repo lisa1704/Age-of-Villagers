@@ -14,16 +14,12 @@ namespace AgeOfVillagers
     {
         int x, y;
         Graphics g;
+        string selected_nation = "";
+        string selected_component = "";
 
         public VillageWindow()
         {
             InitializeComponent();
-        }
-
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e)
@@ -39,11 +35,6 @@ namespace AgeOfVillagers
         }
 
         private void Lbl_aovtitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -73,6 +64,50 @@ namespace AgeOfVillagers
         private void btn_newVillage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbtn_house_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_house.Checked == true)
+            {
+                selected_component = "house";
+            }
+        }
+
+        private void rbtn_tree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_tree.Checked == true)
+            {
+                selected_component = "tree";
+            }
+        }
+
+        private void rbtn_waterSource_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtn_waterSource.Checked == true)
+            {
+                selected_component = "water_source";
+            }
+        }
+
+        private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(nation_selector.SelectedIndex == 0)
+            {
+                selected_nation = "arab";
+            }
+            if (nation_selector.SelectedIndex == 1)
+            {
+                selected_nation = "bd";
+            }
+            if (nation_selector.SelectedIndex == 2)
+            {
+                selected_nation = "egypt";
+            }
+            if (nation_selector.SelectedIndex == 3)
+            {
+                selected_nation = "inuit";
+            }
         }
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)

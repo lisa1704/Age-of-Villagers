@@ -95,7 +95,7 @@
             this.rbtn_waterSource.TabStop = true;
             this.rbtn_waterSource.Text = "Water Source";
             this.rbtn_waterSource.UseVisualStyleBackColor = true;
-            this.rbtn_waterSource.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtn_waterSource.CheckedChanged += new System.EventHandler(this.rbtn_waterSource_CheckedChanged);
             // 
             // rbtn_house
             // 
@@ -107,7 +107,7 @@
             this.rbtn_house.TabStop = true;
             this.rbtn_house.Text = "House";
             this.rbtn_house.UseVisualStyleBackColor = true;
-            this.rbtn_house.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtn_house.CheckedChanged += new System.EventHandler(this.rbtn_house_CheckedChanged);
             // 
             // rbtn_tree
             // 
@@ -119,7 +119,7 @@
             this.rbtn_tree.TabStop = true;
             this.rbtn_tree.Text = "Tree";
             this.rbtn_tree.UseVisualStyleBackColor = true;
-            this.rbtn_tree.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtn_tree.CheckedChanged += new System.EventHandler(this.rbtn_tree_CheckedChanged);
             // 
             // Label_villName
             // 
@@ -160,11 +160,13 @@
             this.nation_selector.Items.AddRange(new object[] {
             "Arab Bedouins",
             "Bangladeshi Farmers",
-            "Egyptian Kings"});
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.nation_selector.Location = new System.Drawing.Point(18, 101);
             this.nation_selector.Name = "nation_selector";
             this.nation_selector.Size = new System.Drawing.Size(163, 28);
             this.nation_selector.TabIndex = 6;
+            this.nation_selector.SelectedIndexChanged += new System.EventHandler(this.nation_selector_SelectedIndexChanged);
             // 
             // Lbl_aovtitle
             // 
