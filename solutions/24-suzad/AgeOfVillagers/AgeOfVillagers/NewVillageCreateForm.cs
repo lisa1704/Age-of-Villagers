@@ -17,13 +17,20 @@ namespace AgeOfVillagers
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string villageName = txtboxVillageName.Text;
-            string nationName = comboBoxNationName.SelectedItem.ToString();
-            AgeOfVillagersForm ageOfVillagersForm = new AgeOfVillagersForm();
-            ageOfVillagersForm.setNationProperty(nationName);
-            ageOfVillagersForm.setVillageName(villageName);
-            ageOfVillagersForm.Show();
-            this.Hide();
+            if (comboBoxNationName.SelectedItem == null)
+            {
+                MessageBox.Show("Select a nation");
+            }
+            else
+            {
+                string villageName = txtboxVillageName.Text;
+                string nationName = comboBoxNationName.SelectedItem.ToString();
+                AgeOfVillagersForm ageOfVillagersForm = new AgeOfVillagersForm();
+                ageOfVillagersForm.setNationProperty(nationName);
+                ageOfVillagersForm.setVillageName(villageName);
+                ageOfVillagersForm.Show();
+                this.Hide();
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
