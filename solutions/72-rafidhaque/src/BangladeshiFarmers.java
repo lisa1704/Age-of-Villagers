@@ -1,4 +1,6 @@
 import javafx.scene.Group;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 public class BangladeshiFarmers implements INation {
 
@@ -10,6 +12,9 @@ public class BangladeshiFarmers implements INation {
 
     public BangladeshiFarmers(Group drawSpace) {
         this.drawSpace = drawSpace;
+        Rectangle fillColor = new Rectangle(0,0, 600, 400);
+        fillColor.setFill(Color.GREENYELLOW);
+        drawSpace.getChildren().add(fillColor);
         house = new BangladeshiFarmersHouse(drawSpace);
         tree = new BangladeshiFarmersTree(drawSpace);
         water = new BangladeshiFarmersWater(drawSpace, 24, 16);
