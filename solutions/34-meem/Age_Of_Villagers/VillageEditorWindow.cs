@@ -98,7 +98,7 @@ namespace Age_Of_Villagers
         {
             Graphics graphics = Panel1.CreateGraphics();
             Pen pen = new Pen(Color.Black);
-            setNation();
+            
 
             radioButton_Click();
             ItemFactory itemFactory = NationFactory.getNation(nation);
@@ -125,6 +125,7 @@ namespace Age_Of_Villagers
         private void nationCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = nationCombo.Text;
+            setNation();
 
 
         }
