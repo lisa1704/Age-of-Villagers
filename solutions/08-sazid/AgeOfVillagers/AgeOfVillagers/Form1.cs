@@ -19,6 +19,7 @@ namespace AgeOfVillagers
         List<Point> houseLocations = new List<Point>();
         List<Point> treeLocations = new List<Point>();
         List<Point> sourceLocations = new List<Point>();
+        Graphics g;
 
 
         public Form1()

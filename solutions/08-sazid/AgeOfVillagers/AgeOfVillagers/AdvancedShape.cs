@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     public abstract class AdvancedShape : IShape
     {
-        List<IShape> shapeElements;
+        public List<IShape> shapeElements;
 
         public AdvancedShape()
         {
