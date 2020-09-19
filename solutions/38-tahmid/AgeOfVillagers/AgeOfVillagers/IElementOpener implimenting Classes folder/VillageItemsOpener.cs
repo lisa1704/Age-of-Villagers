@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Interface;
+﻿using AgeOfVillagers.FactoryClasses;
+using AgeOfVillagers.Interface;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,21 +11,28 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
     {
         List<DrawnItemsInformation> drawnItemsInfoList;
         private string selectedNation;
-        private List<IItem> itemList;
+        
         private Graphics graphics;
         private Pen pen;
+        ItemFactory itemFactory;
+        IItem item;
 
-        public VillageItemsOpener(List<IItem> itemList, string selectedNation, Graphics graphics, Pen pen)
+        public VillageItemsOpener(List<DrawnItemsInformation> drawnItemsInfoList, string selectedNation, Graphics graphics, Pen pen)
         {
-            this.itemList = itemList;
+            this.drawnItemsInfoList = drawnItemsInfoList;
             this.selectedNation = selectedNation;
             this.graphics = graphics;
             this.pen = pen;
+            itemFactory = new ItemFactory();
         }
 
         public void displayElements()
         {
-            
+            foreach(DrawnItemsInformation drawnItemsInformation in drawnItemsInfoList)
+            {
+                item = itemFactory.GetItem(drawnItemsInformation.Clicked_point, drawnItemsInformation.Item_type, graphics, pen);
+                item.placeItem(selectedNation);
+            }
         }
     }
 }

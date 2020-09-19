@@ -23,7 +23,7 @@ namespace AgeOfVillagers.IStateElements_implimentinf_folder
 
         public void displayElements()
         {
-           
+            villageNameLabel.Text = villageName;
         }
     }
 }

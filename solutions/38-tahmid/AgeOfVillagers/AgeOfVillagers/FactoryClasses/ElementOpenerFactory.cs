@@ -10,9 +10,9 @@ namespace AgeOfVillagers.FactoryClasses
 {
     class ElementOpenerFactory
     {
-        public IElementOpener GetElementOpener(String hint,String selectedNation,List<IItem> itemList,Graphics graphics,Pen pen)
+        public IElementOpener GetElementOpener(String hint,String selectedNation, List<DrawnItemsInformation> drawnItemsInfoList, Graphics graphics,Pen pen)
         {
-            return new VillageItemsOpener(itemList, selectedNation, graphics, pen);
+            return new VillageItemsOpener(drawnItemsInfoList, selectedNation, graphics, pen);
         }
         public IElementOpener GetElementOpener(String hint,Label VillageNameLabel,String villageName)
         {
