@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Triangle : IShape
+    class Triangle : AbstractShape
     {
-        public void Draw_Shape(Graphics g)
+        public Triangle(Point P1, Point P2, Point P3)
         {
-            throw new NotImplementedException();
+            addShape(new Line(P1, P2));
+            addShape(new Line(P2, P3));
+            addShape(new Line(P3, P1));
         }
     }
 }
