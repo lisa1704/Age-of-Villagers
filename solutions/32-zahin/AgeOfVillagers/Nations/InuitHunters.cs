@@ -5,20 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
-        private string item;
-
+        Pen pen = new Pen(Color.Red);
         public InuitHunters()
         {
 
         }
         public void DrawHouse(Graphics g, Point point)
         {
-            MessageBox.Show("Drawing House for Inuit Hunters");
+            Point p1 = new Point(point.X - 75, point.Y);
+            Point p2 = new Point(point.X + 75, point.Y);
+            Point p3 = new Point(point.X - 50, point.Y - 50);
+            Circle innerCircle = new Circle(g, pen, point, 50, 50, 180, 180);
+            innerCircle.DrawShape();
+            Circle outerCircle = new Circle(g, pen, p3, 150, 150, 180, 180);
+            outerCircle.DrawShape();
+            g.DrawLine(pen, p1, p2);
         }
 
         public void DrawTree(Graphics g, Point point)
