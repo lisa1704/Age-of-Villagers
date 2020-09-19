@@ -9,7 +9,7 @@ namespace AgeOfVillageTest
     public class UnitTest2BackgroundColor
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestBangladeshiFarmer()
         {
             BangladeshiFarmers BDColor = new BangladeshiFarmers();
             Color s = BDColor.GetTerrainColor();
@@ -23,6 +23,14 @@ namespace AgeOfVillageTest
             Color s = ArabColor.GetTerrainColor();
             Color t = Color.PaleGoldenrod;
             Assert.AreEqual(s, t);
+        }
+        [TestMethod]
+        public void TestEgyptianBackColor()
+        {
+            EgyptianKings EgyptColor = new EgyptianKings();
+            Color EColor = EgyptColor.GetTerrainColor();
+            Color TestEColor = Color.LightGoldenrodYellow;
+            Assert.AreEqual(EColor, TestEColor);
         }
 
     }

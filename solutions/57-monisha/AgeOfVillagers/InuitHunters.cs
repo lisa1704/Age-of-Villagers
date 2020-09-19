@@ -8,7 +8,7 @@ using static AgeOfVillagers.DrawArc;
 
 namespace AgeOfVillagers
 {
-    class InuitHunters : INations
+    public class InuitHunters : INations
     {
         Pen p = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point pt)

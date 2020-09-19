@@ -8,7 +8,7 @@ using static AgeOfVillagers.DrawArc;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKings : INations
+    public class EgyptianKings : INations
     {
         Pen p = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point pt)
