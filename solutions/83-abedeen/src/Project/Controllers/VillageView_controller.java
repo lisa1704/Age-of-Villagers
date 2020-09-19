@@ -52,7 +52,9 @@ public class VillageView_controller implements Initializable {
                     DrawShape(house);
                 }
                 else if(flag == "WaterSource"){
-                    DrawWaterBody(x1,y1,24,16);
+                    INations village = new Bangladeshi_Farmers();
+                    ArrayList<Shape> WaterBody = village.drawWaterBody(x1,y1);
+                    DrawShape(WaterBody);
                 }
             }
         });
@@ -120,20 +122,7 @@ public class VillageView_controller implements Initializable {
     public void WaterPressed(ActionEvent actionEvent) {
         flag = "WaterSource";
     }
-
-    public void DrawWaterBody(double x, double y, double width, double height){
-        Line l1 = new Line(x,y,x+(width/4),y+(height/2));
-        Line l2 = new Line(x+(width/4),y+(height/2),x+(width/2),y);
-        Line l3 = new Line(x+(width/2),y,x+(3*width/4),y+(height/2)-2);
-        Line l4 = new Line(x+(3*width/4),y+(height/2)-2,x+width,y-(height/3));
-        Line l5 = new Line(x+width,y-(height/3),x+(3*width/5),y-(height/2));
-        Line l6 = new Line(x+(3*width/5),y-(height/2),x+(width/2)-2,y-4);
-        Line l7 = new Line(x+(width/2)-2,y-4,x+(width/2)-2,y-(height/2));
-        Line l8 = new Line(x+(width/2)-2,y-(height/2),x+(width/4),y-(height/2));
-        Line l9 = new Line(x+(width/4),y-(height/2),x,y);
-        DrawingCanvas.getChildren().addAll(l1,l2,l3,l4,l5,l6,l7,l8,l9);
-    }
-
+    
     public void DrawShape(ArrayList<Shape> shape_to_be_drawn){
         for (Shape s:shape_to_be_drawn) {
             DrawingCanvas.getChildren().addAll(s);
