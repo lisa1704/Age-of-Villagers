@@ -14,8 +14,11 @@ namespace AgeOfVillagers
 {
     class AOV : IGames
     {
-        List<IItem> itemList;
-        IElementOpener village_itemOpener, village_name_opener;
+        private List<DrawnItemsInformation> drawnItemsInformationList;
+        private IElementOpener village_itemOpener, village_name_opener;
+        private JsonConversion jsonToObejct;
+        private JsonConversion objectToJson;
+        private ElementOpenerFactory elementOpenerFactory;
         public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
             village_name.Text = sVillageName;
@@ -30,20 +33,20 @@ namespace AgeOfVillagers
             openFileDialog.ShowDialog();
             //exception needed
             var dataString = System.IO.File.ReadAllText(openFileDialog.FileName);
-            var settings = new JsonSerializerSettings()
-            {
-                TypeNameHandling = TypeNameHandling.All
-            };
+            
 
             string json = dataString;
+            jsonToObejct = new JsonConversion();
+            jsonToObejct.deserialize(json);
 
-            previouslySavedState = JsonConvert.DeserializeObject<State>(json, settings);
-            itemList = previouslySavedState.ItemList;
-            ElementOpenerFactory elementOpenerFactory = new ElementOpenerFactory();
+            previouslySavedState = jsonToObejct.deserialize(json);
+            
+            elementOpenerFactory = new ElementOpenerFactory();
             village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, labelVillageName, previouslySavedState.VillageName);
             village_name_opener.displayElements();
-            village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, itemList);
-            return itemList;
+            village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, previouslySavedState.DrawnItemsInformationList,graphics,pen);
+            village_itemOpener.displayElements();
+            
            
         }
 
@@ -64,7 +67,7 @@ namespace AgeOfVillagers
             saveFileDialog1.Filter = "save village|*.aov";
             saveFileDialog1.Title = "Save village";
             saveFileDialog1.ShowDialog();
-            JsonConversion objectToJson = new JsonConversion();
+            objectToJson = new JsonConversion();
             objectToJson.serialize(currentState, saveFileDialog1.FileName);
 
            

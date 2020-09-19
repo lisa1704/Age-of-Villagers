@@ -30,7 +30,7 @@ namespace AgeOfVillagers
 
         public void execute()
         {
-            itemList=game.openVillage(selectedNation, villageNameLabel,previouslySavedState, graphics, pen);
+            game.openVillage(selectedNation, villageNameLabel,previouslySavedState, graphics, pen);
         }
     }
 }

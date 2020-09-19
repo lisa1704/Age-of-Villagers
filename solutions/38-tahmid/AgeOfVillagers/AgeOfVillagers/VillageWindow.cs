@@ -21,7 +21,7 @@ namespace AgeOfVillagers
     {
         Graphics g;
         Pen pen;
-        String selectedItem, selectedNation;
+        String selectedItem, selectedNation,selectedNationforOpening;
         ShapeFactory shapeFactory;
         ItemFactory itemFactory;
 
@@ -77,6 +77,7 @@ namespace AgeOfVillagers
         Dummy pr = new Dummy();
         private void New_Village(object sender, EventArgs e)
         {
+            selectedNationforOpening = "";
             
             Regex pattern = new Regex(@"^[a-zA-Z]+$");
 
@@ -110,13 +111,19 @@ namespace AgeOfVillagers
 
         private void Open_village(object sender, EventArgs e)
         {
-            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
-            environment.setEnvironment();
+            
+            if (selectedNationforOpening == "" || selectedNationforOpening == null)
+            {
+                environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+                environment.setEnvironment();
+                MessageBox.Show("Choose Your Nation First");
+                return;
+            }
 
             previouslySavedState = new State();
 
             game = gameFactory.getGame();
-            
+            selectedNation = Constants.BD_NATION;
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNation,previouslySavedState,g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
@@ -135,7 +142,7 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-            selectedNation = Constants.BD_NATION;
+            selectedNationforOpening = "";
             Point point = new Point(e.X, e.Y);
             drawnItemsInfo = new DrawnItemsInformation
             {
@@ -163,6 +170,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.BD_NATION;
+            selectedNationforOpening = selectedNation;
             environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, selectedNation,Constants.BANGLADESHI_COLOR);
             environment.setEnvironment();
 
@@ -171,6 +179,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Inuit_Hunters(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.INUIT_NATION;
+            selectedNationforOpening = selectedNation;
             environment = environmentFactory.getEnvironment(Nation_Name, Hunters, BD, Egyptians, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.INUIT_COLOR);
             environment.setEnvironment();
 
@@ -179,6 +188,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Egyptian_Kings(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.EGYPT_NATION;
+            selectedNationforOpening = selectedNation;
             environment = environmentFactory.getEnvironment(Nation_Name, Egyptians, Hunters, BD, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.EGYPTIAN_COLOR);
             environment.setEnvironment();
         }
@@ -201,6 +211,7 @@ namespace AgeOfVillagers
         private void Mouse_Click_Arab_Bedouin(object sender, MouseEventArgs e)
         {
             selectedNation = Constants.ARAB_NATION;
+            selectedNationforOpening = selectedNation;
             environment = environmentFactory.getEnvironment(Nation_Name, Arabians, Egyptians, Hunters, BD, Tree, House, WaterSource, g, selectedNation, Constants.ARABIAN_COLOR);
             environment.setEnvironment();
         }
