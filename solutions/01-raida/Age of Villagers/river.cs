@@ -24,7 +24,7 @@ namespace Age_of_Villagers
             cs.draw(g, pen);
         }
     }
-    class Bdriver : river
+    public class Bdriver : river
     {
         public Bdriver(Point p) : base(p) { }
         public override void createRiver()
