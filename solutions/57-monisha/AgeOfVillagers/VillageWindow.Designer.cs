@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UserVillageName = new System.Windows.Forms.Label();
             this.NationList = new System.Windows.Forms.ComboBox();
             this.VillageNameBox = new System.Windows.Forms.TextBox();
             this.OpenVillage = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.NewVbutton = new System.Windows.Forms.Button();
             this.gameTitle = new System.Windows.Forms.Label();
             this.DrawPanel = new System.Windows.Forms.Panel();
-            this.UserVillageName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 400);
             this.panel1.TabIndex = 0;
+            // 
+            // UserVillageName
+            // 
+            this.UserVillageName.AutoSize = true;
+            this.UserVillageName.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserVillageName.Location = new System.Drawing.Point(56, 99);
+            this.UserVillageName.Name = "UserVillageName";
+            this.UserVillageName.Size = new System.Drawing.Size(134, 20);
+            this.UserVillageName.TabIndex = 18;
+            this.UserVillageName.Text = "UserVillageName";
+            this.UserVillageName.Click += new System.EventHandler(this.UserVillageName_Click);
             // 
             // NationList
             // 
@@ -93,7 +104,7 @@
             this.OpenVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenVillage.Location = new System.Drawing.Point(29, 351);
             this.OpenVillage.Name = "OpenVillage";
-            this.OpenVillage.Size = new System.Drawing.Size(130, 23);
+            this.OpenVillage.Size = new System.Drawing.Size(148, 32);
             this.OpenVillage.TabIndex = 15;
             this.OpenVillage.Text = "OPEN VILLAGE";
             this.OpenVillage.UseVisualStyleBackColor = false;
@@ -105,7 +116,7 @@
             this.SaveVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveVillage.Location = new System.Drawing.Point(29, 270);
             this.SaveVillage.Name = "SaveVillage";
-            this.SaveVillage.Size = new System.Drawing.Size(130, 23);
+            this.SaveVillage.Size = new System.Drawing.Size(148, 32);
             this.SaveVillage.TabIndex = 14;
             this.SaveVillage.Text = "SAVE VILLAGE";
             this.SaveVillage.UseVisualStyleBackColor = false;
@@ -151,7 +162,7 @@
             this.NewVbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewVbutton.Location = new System.Drawing.Point(29, 308);
             this.NewVbutton.Name = "NewVbutton";
-            this.NewVbutton.Size = new System.Drawing.Size(130, 23);
+            this.NewVbutton.Size = new System.Drawing.Size(148, 26);
             this.NewVbutton.TabIndex = 7;
             this.NewVbutton.Text = "NEW VILLAGE";
             this.NewVbutton.UseVisualStyleBackColor = false;
@@ -178,17 +189,6 @@
             this.DrawPanel.BackColorChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
             this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
-            // 
-            // UserVillageName
-            // 
-            this.UserVillageName.AutoSize = true;
-            this.UserVillageName.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserVillageName.Location = new System.Drawing.Point(56, 99);
-            this.UserVillageName.Name = "UserVillageName";
-            this.UserVillageName.Size = new System.Drawing.Size(134, 20);
-            this.UserVillageName.TabIndex = 18;
-            this.UserVillageName.Text = "UserVillageName";
-            this.UserVillageName.Click += new System.EventHandler(this.UserVillageName_Click);
             // 
             // VillageWindow
             // 

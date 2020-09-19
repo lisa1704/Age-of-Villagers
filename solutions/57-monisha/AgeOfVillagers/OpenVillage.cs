@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 {
    public class OpenVillage : IStatesVillage
     {
-        VillageProperties villageproperties;
+        public VillageProperties villageproperties;
         public void ExecuteAction()
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -24,24 +24,23 @@ namespace AgeOfVillagers
                     villageproperties = JsonConvert.DeserializeObject<VillageProperties>(json);
                 }
             }
-          /*  if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                //Get the path of specified file
-                filePath = openFileDialog.FileName;
-
-                //Read the contents of the file into a stream
-                var fileStream = openFileDialog.OpenFile();
-
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    fileContent = reader.ReadToEnd();
-                }
-            }*/
-            /*   public VillageProperties get_village()()
+            /*  if (openFileDialog.ShowDialog() == DialogResult.OK)
               {
-                  return villageproperties;
-              }*/
-        }
+                  //Get the path of specified file
+                  filePath = openFileDialog.FileName;
 
+                  //Read the contents of the file into a stream
+                  var fileStream = openFileDialog.OpenFile();
+
+                  using (StreamReader reader = new StreamReader(fileStream))
+                  {
+                      fileContent = reader.ReadToEnd();
+                  }
+              }*/          
+        }
+        public VillageProperties getVill()
+        {
+            return villageproperties;
+        }
     }
 }

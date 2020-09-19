@@ -71,16 +71,31 @@ namespace AgeOfVillagers
             //MessagBox Show 
             MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
-
+        public void SetVillageState(VillageProperties village)
+        {
+            VillageNameBox.Text = village.name;
+            foreach (Point pt in village.House_point)
+            {
+                HousePoints.Add(pt);
+            }
+            foreach (Point pt in village.Tree_point)
+            {
+                TreePoints.Add(pt);
+            }
+            foreach (Point pt in village.Waterresource_point)
+            {
+                WaterPoints.Add(pt);
+            }
+        }
         private void OpenVillage_Click(object sender, EventArgs e)
         {
            
-                /*OpenVillage openVillage = new OpenVillage();
-                NewVbutton_Click(sender, e);
-                openVillage.executeSave();
-                village = openVillage.get_village()();
-                set_state(village);
-                DrawPanel.Refresh();*/
+                OpenVillage openVillage = new OpenVillage();
+                
+                openVillage.ExecuteAction();
+                village = openVillage.getVill();
+                SetVillageState(village);
+                DrawPanel.Refresh();
             
             
             //  MessageBox.Show("Village is Saved");

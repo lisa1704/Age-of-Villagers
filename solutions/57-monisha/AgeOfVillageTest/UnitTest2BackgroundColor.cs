@@ -29,7 +29,7 @@ namespace AgeOfVillageTest
         {
             EgyptianKings EgyptColor = new EgyptianKings();
             Color EColor = EgyptColor.GetTerrainColor();
-            Color TestEColor = Color.LightGoldenrodYellow;
+            Color TestEColor = Color.Yellow;
             Assert.AreEqual(EColor, TestEColor);
         }
         [TestMethod]
