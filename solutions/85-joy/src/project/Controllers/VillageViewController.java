@@ -21,6 +21,7 @@ import java.net.URL;
 import java.util.*;
 
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Rectangle;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import project.Utilities.Villages;
@@ -33,6 +34,7 @@ public class VillageViewController implements Initializable {
     @FXML public ComboBox NationDropDown = new ComboBox();
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
+    public int Flag = 0;
 
 
 
@@ -42,8 +44,18 @@ public class VillageViewController implements Initializable {
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Line line = new Line(event.getSceneX(),event.getSceneY(),event.getSceneX()+20.0,event.getSceneY()+20.0);
-                DrawPane.getChildren().addAll(line);
+                if(Flag == 0){
+                    Line line = new Line(event.getSceneX(),event.getSceneY(),event.getSceneX()+20.0,event.getSceneY()+20.0);
+                    DrawPane.getChildren().addAll(line);
+                }
+                else if(Flag == 1){
+                    Rectangle rectangle = new Rectangle(event.getSceneX(),event.getSceneY());
+                    DrawPane.getChildren().addAll(rectangle);
+                }
+                else if(Flag == 2){
+                    Circle circle = new Circle(event.getSceneX(),event.getSceneY(),10,Color.GRAY);
+                    DrawPane.getChildren().addAll(circle);
+                }
             }
         });
     }
@@ -111,9 +123,10 @@ public class VillageViewController implements Initializable {
     }
 
     public void SelectTree(ActionEvent actionEvent) {
-
+        this.Flag = 1;
     }
 
     public void SelectHouse(ActionEvent actionEvent) {
+        this.Flag = 2;
     }
 }
