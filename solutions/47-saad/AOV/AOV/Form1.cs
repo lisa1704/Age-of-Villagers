@@ -12,9 +12,17 @@ namespace AOV
 {
     public partial class AgeOfVillagers : Form
     {
+        NationFactory typeOfNation = new NationFactory();
+        string selectedNation;
         public AgeOfVillagers()
         {
             InitializeComponent();
-        }       
+        }
+
+        private void Nation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedNation = Nation.Text;
+            Canvas.BackColor = typeOfNation.SelectNation(selectedNation).GetColor();
+        }
     }
 }

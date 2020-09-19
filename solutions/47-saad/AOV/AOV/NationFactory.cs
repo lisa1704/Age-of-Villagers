@@ -10,7 +10,7 @@ namespace AOV
     {
         public INation SelectNation(string typeOfNation)
         {
-            if(typeOfNation== "Arab Bedouin")
+            if(typeOfNation == "Arab Bedouin")
             {
                 return new ArabNation();
             }

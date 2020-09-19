@@ -26,7 +26,7 @@ namespace AOV
 
         public Color GetColor()
         {
-            return Color.LightYellow;
+            return Color.FromArgb(240, 230, 140);
         }
     }
 }

@@ -116,6 +116,7 @@
             this.Nation.Size = new System.Drawing.Size(169, 21);
             this.Nation.TabIndex = 11;
             this.Nation.Text = "Select nation";
+            this.Nation.SelectedIndexChanged += new System.EventHandler(this.Nation_SelectedIndexChanged);
             // 
             // Tree
             // 
