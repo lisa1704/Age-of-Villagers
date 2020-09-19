@@ -9,6 +9,7 @@ namespace AgeOfVillager
     class BangladeshiFarmers : INation
     {
         private readonly Graphics g;
+        
         public BangladeshiFarmers(Graphics graphics)
         {
             this.g = graphics;

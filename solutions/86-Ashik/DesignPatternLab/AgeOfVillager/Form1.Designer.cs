@@ -109,6 +109,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "New Village";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button3_MouseClick);
             // 
             // radioButton1
             // 
