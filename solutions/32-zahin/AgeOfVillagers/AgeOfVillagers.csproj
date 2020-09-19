@@ -61,16 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArabBedouin.cs" />
-    <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="Nations\ArabBedouin.cs" />
+    <Compile Include="Nations\BangladeshiFarmers.cs" />
     <Compile Include="NullValuesHandler.cs" />
-    <Compile Include="OpenVillage.cs" />
-    <Compile Include="NewVillage.cs" />
-    <Compile Include="SaveVillage.cs" />
-    <Compile Include="INation.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="InuitHunters.cs" />
-    <Compile Include="EgyptianKing.cs" />
+    <Compile Include="Commands\OpenVillage.cs" />
+    <Compile Include="Commands\NewVillage.cs" />
+    <Compile Include="Commands\SaveVillage.cs" />
+    <Compile Include="Nations\INation.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Nations\InuitHunters.cs" />
+    <Compile Include="Nations\EgyptianKing.cs" />
+    <Compile Include="Shapes\Circle.cs" />
+    <Compile Include="Shapes\Triangle.cs" />
+    <Compile Include="Shapes\Rectangle.cs" />
+    <Compile Include="Shapes\IShape.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageActions.cs">
       <SubType>Form</SubType>
