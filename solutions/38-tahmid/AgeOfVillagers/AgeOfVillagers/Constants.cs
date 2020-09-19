@@ -79,6 +79,10 @@ namespace AgeOfVillagers
         public static string OPEN_KEY = "Open";
         public static string SAVE_KEY = "Save";
 
+        //Element Opener Hints
+
+        public static string VILLAGE_NAME_OPENER = "Village name opener";
+        public static string VILLAGE_ITEM_OPENER = "Item opener";
 
     }
 }

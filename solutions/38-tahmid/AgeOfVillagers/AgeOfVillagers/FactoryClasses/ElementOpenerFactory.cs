@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.FactoryClasses
 {
-    class ElementOpenerFactoryClass
+    class ElementOpenerFactory
     {
         public IElementOpener GetElementOpener(String hint,String selectedNation,List<IItem> itemList)
         {

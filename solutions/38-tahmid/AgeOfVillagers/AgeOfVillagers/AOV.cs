@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Interface;
+﻿using AgeOfVillagers.FactoryClasses;
+using AgeOfVillagers.Interface;
 using AgeOfVillagers.Model_Class_Folder;
 using AgeOfVillagers.Shape_extended_classes;
 using Newtonsoft.Json;
@@ -11,16 +12,38 @@ namespace AgeOfVillagers
 {
     class AOV : IGames
     {
+        List<IItem> itemList;
+        IElementOpener village_itemOpener, village_name_opener;
         public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
             village_name.Text = sVillageName;
             drawing_panel.Invalidate();
         }
 
-        public List<IItem> openVillage(string selectedNation, Label villageName)
+        public List<IItem> openVillage(string selectedNation, Label villageNameLabel)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "age of villagers file|*.aov";
+            openFileDialog.Title = "open village";
+            openFileDialog.ShowDialog();
+            //exception needed
+            var dataString = System.IO.File.ReadAllText(openFileDialog.FileName);
+            var settings = new JsonSerializerSettings()
+            {
+                TypeNameHandling = TypeNameHandling.All
+            };
+
+            string json = dataString;
+
+            StateModel previouslySavedState = JsonConvert.DeserializeObject<StateModel>(json, settings);
+            itemList = previouslySavedState.ItemList;
+            ElementOpenerFactory elementOpenerFactory = new ElementOpenerFactory();
+            village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, villageNameLabel, previouslySavedState.VillageName);
+            village_name_opener.displayElements();
+            village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, itemList);
+            village_itemOpener.displayElements();
+            return itemList;
            
-            return null;
         }
 
         public void saveVillage(List<IItem> itemList, string villageName)
