@@ -12,6 +12,10 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        int x, y;
+        Graphics g;
+        Brush brush = new SolidBrush(Color.Black);
+        string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +23,7 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_Click(object sender, EventArgs e)
         {
-
+            ElementSelect();
         }
 
         private void VillageName_Click(object sender, EventArgs e)
@@ -40,12 +44,15 @@ namespace AgeOfVillagers
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-
+            x = e.X;
+            y = e.Y;
+            g = DrawingPanel.CreateGraphics();
+            g.DrawString(text, Font, brush, new Point(x, y));
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
@@ -70,7 +77,31 @@ namespace AgeOfVillagers
             House.Checked = false;
             Tree.Checked = false;
             WaterSource.Checked = false;
+            DrawingPanel.Refresh();
             this.Invalidate();
+        }
+
+        private void Nations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void ElementSelect()
+        {
+            if (House.Checked == true )
+            {
+                text = Nations.SelectedItem + " " + "House";
+                brush = new SolidBrush(Color.Brown);
+            }
+            else if (Tree.Checked == true )
+            {
+                text = Nations.SelectedItem + " " + "Tree";
+                brush = new SolidBrush(Color.Green);
+            }
+            else if (WaterSource.Checked == true )
+            {
+                text = Nations.SelectedItem + " " + "Watersrc";
+                brush = new SolidBrush(Color.Blue);
+            }
         }
     }
 }

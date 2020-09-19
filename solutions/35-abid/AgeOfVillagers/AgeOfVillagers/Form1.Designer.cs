@@ -157,6 +157,7 @@
             this.Nations.Name = "Nations";
             this.Nations.Size = new System.Drawing.Size(151, 25);
             this.Nations.TabIndex = 10;
+            this.Nations.SelectedIndexChanged += new System.EventHandler(this.Nations_SelectedIndexChanged);
             this.Nations.TextChanged += new System.EventHandler(this.Nations_TextChanged);
             // 
             // Form1
