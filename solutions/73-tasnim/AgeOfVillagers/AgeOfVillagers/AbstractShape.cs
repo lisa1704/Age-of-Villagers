@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class CombinedShape : IShape
+    class AbstractShape : IShape
     {
-        public List<IShape> shapeCombination;
-        public CombinedShape()
+        public List<IShape> combinedShape;
+        public AbstractShape()
         {
-            shapeCombination = new List<IShape>();
+            combinedShape = new List<IShape>();
         }
         public void addShape(IShape shape)
         {
-            shapeCombination.Add(shape);
+            combinedShape.Add(shape);
         }
         public void Draw_Shape(Graphics g)
         {
-            foreach (var shapes in shapeCombination)
+            foreach (var shapes in combinedShape)
             {
                 shapes.Draw_Shape(g);
             }

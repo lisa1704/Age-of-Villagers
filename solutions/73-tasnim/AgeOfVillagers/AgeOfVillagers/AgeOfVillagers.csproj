@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="ArabBedouin.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
-    <Compile Include="CombinedShape.cs" />
+    <Compile Include="AbstractShape.cs" />
     <Compile Include="CreateNewVillage.cs">
       <SubType>Form</SubType>
     </Compile>

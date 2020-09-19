@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Rectangle : IShape
+    class Rectangle : AbstractShape
     {
-        public void Draw_Shape(Graphics g)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
