@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -18,18 +19,16 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Drawing House for Arab Bedouin");
         }
 
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Drawing Tree for Arab Bedouin");
         }
         public void DrawWaterSource(Graphics g, Point point)
         {
-            //NullValuesHandler nullArab = new NullValuesHandler();
-            //nullArab.execute();
-            System.Windows.Forms.MessageBox.Show("Invalid!!");
+            MessageBox.Show("Bedouin villages do not build their own water source");
         }
     }
 }
