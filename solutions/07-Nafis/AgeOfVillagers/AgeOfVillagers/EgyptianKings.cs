@@ -7,34 +7,30 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INations
     {
-        public void DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
-
+        Pen pen = new Pen(Color.Black);
+        
         public void DrawHouse(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DrawTree()
-        {
-            throw new NotImplementedException();
+            Point[] points = { new Point(x, y), new Point(x + 15, y + 6), new Point(x + 20, y - 3), new Point(x + 9, y - 12) };
+            g.DrawPolygon(pen, points);
+            g.DrawLine(pen, new Point(x + 14, y + 5), new Point(x + 9, y - 12));
         }
 
         public void DrawTree(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DrawWater()
-        {
-            throw new NotImplementedException();
+            g.DrawLine(pen, new Point(x, y), new Point(x - 6, y - 10)); //left mid
+            g.DrawLine(pen, new Point(x, y), new Point(x - 13, y - 8)); //left left
+            g.DrawLine(pen, new Point(x, y), new Point(x + 7, y - 12)); //left right
+            g.DrawLine(pen, new Point(x, y), new Point(x + 12, y + 20)); //left main
+            g.DrawLine(pen, new Point(x + 22, y + 4), new Point(x + 12, y + 20)); //right main
+            g.DrawLine(pen, new Point(x + 22, y + 4), new Point(x + 28, y - 7)); //right mid
+            g.DrawLine(pen, new Point(x + 22, y + 4), new Point(x + 18, y - 7)); //right left
+            g.DrawLine(pen, new Point(x + 22, y + 4), new Point(x + 36, y - 8)); //right right
         }
 
         public void DrawWater(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
+            g.DrawEllipse(pen, x - 6, y - 6, 12, 12);
         }
     }
 }

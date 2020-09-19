@@ -8,8 +8,8 @@ namespace AgeOfVillagers
     class BangladeshiFarmers : INations
     {
         
-        
-        Pen pen = new Pen(Color.Black, 2);
+        Pen pen = new Pen(Color.Black, 1);
+
         public void DrawHouse(int x, int y, Graphics g)
         {
 
