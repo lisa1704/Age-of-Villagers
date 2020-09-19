@@ -20,7 +20,12 @@ namespace AgeOfVillagers
             watersources = new List<VillageItem>();
         }
 
-        internal void initiate(Graphics g, Pen p)
+        public string GetVillageName()
+        {
+            return villagename;
+        }
+
+        public void initiate(Graphics g, Pen p)
         {
             g.Clear(nation.GetTerrainColor());
             foreach (var tree in trees)
@@ -37,7 +42,7 @@ namespace AgeOfVillagers
             }
         }
 
-        internal IState GetState()
+        public IState GetState()
         {
             List<Point> treepoints,housepoinits,watersourcepoints;
             treepoints = trees.ConvertAll(x => x.GetPoint());
@@ -47,7 +52,7 @@ namespace AgeOfVillagers
             return new Villagestate(villagename, treepoints, housepoinits, watersourcepoints);
         }
 
-        internal void SetState(IState state)
+        public void SetState(IState state)
         {
             Villagestate villagestate = (Villagestate)state;
             villagename = villagestate.GetVillageName();
@@ -56,21 +61,21 @@ namespace AgeOfVillagers
             watersources = villagestate.watersources.ConvertAll(x => nation.GetWaterResource(x));
         }
 
-        internal void DrawTree(Graphics g, Pen p, Point point)
+        public void DrawTree(Graphics g, Pen p, Point point)
         {
             VillageItem tree = nation.GetTree(point);
             trees.Add(tree);
             tree.Draw(g, p);
         }
 
-        internal void DrawHouse(Graphics g, Pen p, Point point)
+        public void DrawHouse(Graphics g, Pen p, Point point)
         {
             VillageItem house = nation.GetHouse(point);
             houses.Add(house);
             house.Draw(g, p);
         }
 
-        internal void DrawWaterResource(Graphics g, Pen p, Point point)
+        public void DrawWaterResource(Graphics g, Pen p, Point point)
         {
             VillageItem watersource = nation.GetWaterResource(point);
             watersources.Add(watersource);
