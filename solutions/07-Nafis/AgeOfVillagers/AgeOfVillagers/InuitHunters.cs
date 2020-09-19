@@ -7,34 +7,23 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INations
     {
-        public void DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
-
+        Pen pen = new Pen(Color.Black);
+        
         public void DrawHouse(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DrawTree()
-        {
-            throw new NotImplementedException();
+            g.DrawArc(pen, x, y - 30, 60, 60, 180, 180);
+            g.DrawLine(pen, new Point(x, y), new Point(x + 60, y));
+            g.DrawArc(pen, x + 20, y - 10, 20, 20, 180, 180);
         }
 
         public void DrawTree(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DrawWater()
-        {
-            throw new NotImplementedException();
+            g.DrawLine(pen, new Point(10, 10), new Point(10, 10));
         }
 
         public void DrawWater(int x, int y, Graphics g)
         {
-            throw new NotImplementedException();
+            g.DrawLine(pen, new Point(10, 10), new Point(10, 10));
         }
     }
 }
