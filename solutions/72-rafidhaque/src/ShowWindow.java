@@ -23,8 +23,8 @@ public class ShowWindow extends Application {
     InuitHunters inuitHunters = new InuitHunters(drawSpace);
 
     DrawHouse house = inuitHunters.house;
-    DrawTree tree = bangladeshiFarmers.tree;
-    DrawWater water = bangladeshiFarmers.water;
+    DrawTree tree = inuitHunters.tree;
+    DrawWater water = inuitHunters.water;
     public GridOfControls gridOfControls = new GridOfControls(house, tree, water, bangladeshiFarmers.nationName);
 
     public void setDrawSpace(Group drawSpace) {

@@ -10,8 +10,8 @@ public class InuitHunters implements INation {
     public InuitHunters(Group drawSpace) {
         this.drawSpace = drawSpace;
         this.house = new InuitHuntersHouse(drawSpace);
-        this.tree = tree;
-        this.water = water;
+        this.tree = new NoTree(drawSpace);
+        this.water = new NoWater(drawSpace, 0, 0);
     }
 }
 
