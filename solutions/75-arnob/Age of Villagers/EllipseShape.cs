@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class EllipseShape
+    class EllipseShape : IShape
     {
+
     }
 }
