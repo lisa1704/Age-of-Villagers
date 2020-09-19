@@ -25,5 +25,10 @@ namespace AgeOfVillager
             EgyptianKingsTree egyptianKingsTree = new EgyptianKingsTree(g);
             egyptianKingsTree.draw(e);
         }
+
+        public void drawWaterSource(MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

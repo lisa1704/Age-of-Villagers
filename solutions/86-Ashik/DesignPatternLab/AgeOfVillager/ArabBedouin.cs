@@ -25,5 +25,10 @@ namespace AgeOfVillager
             ArabBedouinsTree arabBedouinsTree = new ArabBedouinsTree(g);
             arabBedouinsTree.draw(e);
         }
+
+        public void drawWaterSource(MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

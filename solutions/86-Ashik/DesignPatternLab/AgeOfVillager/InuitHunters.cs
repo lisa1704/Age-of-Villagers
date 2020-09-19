@@ -25,5 +25,10 @@ namespace AgeOfVillager
         {
             MessageBox.Show("Trees can not be planted");
         }
+
+        public void drawWaterSource(MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

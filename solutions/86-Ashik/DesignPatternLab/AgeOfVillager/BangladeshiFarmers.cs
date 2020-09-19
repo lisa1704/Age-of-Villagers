@@ -25,5 +25,10 @@ namespace AgeOfVillager
             BDFarmersTree bDFarmersTree = new BDFarmersTree(g);
             bDFarmersTree.draw(e);
         }
+
+        public void drawWaterSource(MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
