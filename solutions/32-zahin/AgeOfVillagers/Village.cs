@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Village
+    public class Village
     {
         public INation village;
         public Village() {}
@@ -14,7 +14,7 @@ namespace AgeOfVillagers
         {
             if (villageType == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
-            else if (villageType == "Arab Bedoiun")
+            else if (villageType == "Arab Bedouin")
                 return new ArabBedouin();
             else if (villageType == "Egyptian Kings")
                 return new EgyptianKing();
@@ -25,3 +25,8 @@ namespace AgeOfVillagers
         }
     }
 }
+/*
+Arab Bedouin
+Bangladeshi Farmers
+Egyptian Kings
+Inuit Hunters*/
