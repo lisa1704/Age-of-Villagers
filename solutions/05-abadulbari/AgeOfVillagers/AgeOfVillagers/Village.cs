@@ -2,6 +2,7 @@
 using AgeOfVillagers.VillegeItems;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
@@ -10,14 +11,14 @@ namespace AgeOfVillagers
     {
         public INation nation;
         public string villageName;
-        public List<VillageItem> trees, houses, waterSources;
+        public List<Point> trees, houses, waterSources;
         public Village(INation nation, string villageName)
         {
             this.nation = nation;
             this.villageName = villageName;
-            trees = new List<VillageItem>();
-            houses = new List<VillageItem>();
-            waterSources = new List<VillageItem>();
+            trees = new List<Point>();
+            houses = new List<Point>();
+            waterSources = new List<Point>();
         }
     }
 }
