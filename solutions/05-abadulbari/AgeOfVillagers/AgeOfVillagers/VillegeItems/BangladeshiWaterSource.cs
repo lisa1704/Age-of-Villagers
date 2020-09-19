@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class BangladeshiWaterSource : IShape
+    class BangladeshiWaterSource : VillageItem
     {
         private readonly Point point1, point2, point3, point4, point5, point6, point7, point8;
 
@@ -20,8 +20,16 @@ namespace AgeOfVillagers.VillegeItems
             point6 = new Point(point.X+25, point.Y+33);
             point7 = new Point(point.X, point.Y+45);
             point8 = new Point(point.X-30, point.Y+33);
+            addItem(new Line(point1, point2));
+            addItem(new Line(point2, point3));
+            addItem(new Line(point3, point4));
+            addItem(new Line(point4, point5));
+            addItem(new Line(point5, point6));
+            addItem(new Line(point6, point7));
+            addItem(new Line(point7, point8));
+            addItem(new Line(point8, point1));
         }
-        public void draw(Graphics g, Pen p)
+        public override void draw(Graphics g, Pen p)
         {
             new Line(point1, point2).draw(g, p);
             new Line(point2, point3).draw(g, p);
