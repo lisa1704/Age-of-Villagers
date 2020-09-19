@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SelectNationText = new System.Windows.Forms.TextBox();
             this.Select_Nation_Combo_box = new System.Windows.Forms.ComboBox();
@@ -52,6 +53,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.RefreshButton);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -67,6 +69,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 587);
             this.panel1.TabIndex = 0;
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.RefreshButton.Location = new System.Drawing.Point(57, 269);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(101, 23);
+            this.RefreshButton.TabIndex = 8;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // groupBox1
             // 
@@ -103,7 +116,7 @@
             "Arab Beduin"});
             this.Select_Nation_Combo_box.Location = new System.Drawing.Point(7, 165);
             this.Select_Nation_Combo_box.Name = "Select_Nation_Combo_box";
-            this.Select_Nation_Combo_box.Size = new System.Drawing.Size(121, 21);
+            this.Select_Nation_Combo_box.Size = new System.Drawing.Size(143, 21);
             this.Select_Nation_Combo_box.TabIndex = 1;
             this.Select_Nation_Combo_box.SelectedIndexChanged += new System.EventHandler(this.Select_Nation_Combo_box_SelectedIndexChanged);
             // 
@@ -268,6 +281,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox Select_Nation_Combo_box;
         private System.Windows.Forms.TextBox SelectNationText;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
 

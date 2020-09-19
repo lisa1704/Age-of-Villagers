@@ -64,10 +64,18 @@
     <Compile Include="OpenVillage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefreshPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SaveVillage.cs" />
     <Compile Include="SelectNation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Shapes\Circle.cs" />
+    <Compile Include="Shapes\Ishape.cs" />
+    <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Shapes\Rectangle.cs" />
+    <Compile Include="Shapes\Triangle.cs" />
     <EmbeddedResource Include="AgeofVillagers.resx">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,5 +101,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

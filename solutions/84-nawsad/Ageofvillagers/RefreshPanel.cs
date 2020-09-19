@@ -7,12 +7,11 @@ using System.Windows.Forms;
 
 namespace Ageofvillagers
 {
-    public partial class Ageofvillagers : Form
+    partial class Ageofvillagers : Form
     {
-        private void Select_Nation_Combo_box_SelectedIndexChanged(object sender, EventArgs e)
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine();
-        }
 
+        }
     }
 }

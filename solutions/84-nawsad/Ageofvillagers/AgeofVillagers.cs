@@ -18,7 +18,7 @@ namespace Ageofvillagers
             InitializeComponent();
         }
 
-        
+       
     }
     
 }
