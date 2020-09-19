@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Age_of_Villagers
 {
-    class CShape
+    interface IShape
     {
-
     }
 }
