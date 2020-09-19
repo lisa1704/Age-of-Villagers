@@ -30,5 +30,6 @@ namespace AgeOfVillagers
             var pen = new Pen(Color.Black, 1);
             graphics.DrawArc(pen, x, y, w, h, angle1, angle2);
         }
+
     }
 }
