@@ -17,8 +17,7 @@ public class ArabTree implements ITree {
     @Override
     public void draw() {
 
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
+        canvas = new Canvas(525,500);
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
@@ -27,6 +26,7 @@ public class ArabTree implements ITree {
             public void handle(MouseEvent mouseEvent) {
                 graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),100,50,200,360, ArcType.OPEN);
                 graphicsContext.strokeText("Arab tree", mouseEvent.getX(),mouseEvent.getY());
+
             }
         });
 
