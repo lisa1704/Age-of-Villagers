@@ -47,10 +47,8 @@ namespace AgeOfVillagers
 
         public override void DrawWaterResource(Graphics g, Point location)
         {
-            BangladeshiWaterSource bangladeshiWaterSource = new BangladeshiWaterSource();
-            WaterSourceContext waterSourceContext = new WaterSourceContext(bangladeshiWaterSource, g, location, waterSourceSize);
-
-            waterSourceContext.WaterSourceDrawing();
+            BangladeshiWaterSource bangladeshiWaterSource = new BangladeshiWaterSource(location,waterSourceSize);
+            bangladeshiWaterSource.Draw(g);
 
             Debug.WriteLine("Drawing Bangladeshi Watersource");
         }
