@@ -8,9 +8,9 @@ namespace empty_project
     class BangladeshiFarmers : INation
     {
         Pen pen = new Pen(Color.Green);
-        public void DrawHouse(Graphics graphics, Point point)
+        public void DrawHouse(Axis axis)
         {
-            graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+            //graphics.DrawLine(pen, point.X, point.Y, 100, 100);
         }
 
         void INation.DrawTree()

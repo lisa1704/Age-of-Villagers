@@ -7,8 +7,8 @@ namespace empty_project
 {
     public interface INation
     {
+        void drawHouse(Axis axis);
         void DrawTree();
-        void DrawHouse(Graphics graphics, Point point);
         void DrawWaterSource();
 
     }
