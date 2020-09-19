@@ -39,11 +39,6 @@ namespace AgeOfVillagers
 
         }
 
-        private void Label_nation_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Label_villName_Click(object sender, EventArgs e)
         {
 
@@ -63,7 +58,7 @@ namespace AgeOfVillagers
 
         private void btn_newVillage_Click(object sender, EventArgs e)
         {
-
+            DrawingPanel.Invalidate();
         }
 
         private void rbtn_house_CheckedChanged(object sender, EventArgs e)
@@ -92,30 +87,22 @@ namespace AgeOfVillagers
 
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(nation_selector.SelectedIndex == 0)
-            {
-                selected_nation = "arab";
-            }
-            if (nation_selector.SelectedIndex == 1)
-            {
-                selected_nation = "bd";
-            }
-            if (nation_selector.SelectedIndex == 2)
-            {
-                selected_nation = "egypt";
-            }
-            if (nation_selector.SelectedIndex == 3)
-            {
-                selected_nation = "inuit";
-            }
+            selected_nation = nation_selector.Items[nation_selector.SelectedIndex].ToString();
         }
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point(e.X, e.Y);
-            x = p.X;
-            y = p.Y;
-            DrawingPanel.Invalidate();
+            x = e.X;
+            y = e.Y;
+            //DrawingPanel.Invalidate();
+            if(selected_nation=="" || selected_component == "")
+            {
+                MessageBox.Show("Select nation and component to draw");
+            }
+            else
+            {
+
+            }
         }
     }
 }
