@@ -35,6 +35,7 @@
             this.House = new System.Windows.Forms.Button();
             this.WaterSource = new System.Windows.Forms.Button();
             this.DrawingPanel = new System.Windows.Forms.Panel();
+            this.NationBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -106,11 +107,25 @@
             this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
             this.DrawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseClick);
             // 
+            // NationBox
+            // 
+            this.NationBox.FormattingEnabled = true;
+            this.NationBox.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.NationBox.Location = new System.Drawing.Point(638, 68);
+            this.NationBox.Name = "NationBox";
+            this.NationBox.Size = new System.Drawing.Size(121, 23);
+            this.NationBox.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NationBox);
             this.Controls.Add(this.DrawingPanel);
             this.Controls.Add(this.WaterSource);
             this.Controls.Add(this.House);
@@ -134,6 +149,7 @@
         private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button WaterSource;
         private System.Windows.Forms.Panel DrawingPanel;
+        private System.Windows.Forms.ComboBox NationBox;
     }
 }
 
