@@ -24,7 +24,7 @@ namespace AgeOfVillagers
         ShapeFactory shapeFactory;
         ItemFactory itemFactory;
 
-        CommandFactory commandFactory;
+        GameControlCommandFactory commandFactory;
         GameFactory gameFactory;
 
         EnvironmentFactory environmentFactory;
@@ -45,7 +45,7 @@ namespace AgeOfVillagers
             shapeFactory = new ShapeFactory();
             itemFactory = new ItemFactory();
             environmentFactory = new EnvironmentFactory();
-            commandFactory = new CommandFactory();
+            commandFactory = new GameControlCommandFactory();
             gameFactory = new GameFactory();
 
 
@@ -63,7 +63,7 @@ namespace AgeOfVillagers
         private void Save_Village(object sender, EventArgs e)
         {
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetCommand(Constants.SAVE_KEY,game,tbVillageName.Text,itemList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY,game,tbVillageName.Text,itemList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
@@ -87,7 +87,7 @@ namespace AgeOfVillagers
             
             game = gameFactory.getGame();
            
-            GameControlCommand onCommand = commandFactory.GetCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             itemList = new List<IItem>();
