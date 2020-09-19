@@ -6,5 +6,6 @@ namespace Age_of_Villagers.Nation
 {
     interface INation
     {
+
     }
 }

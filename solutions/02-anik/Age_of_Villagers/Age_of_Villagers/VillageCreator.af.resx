@@ -125,14 +125,8 @@
   <data name="WaterSource.Text" xml:space="preserve">
     <value>Water Source</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>12, 12</value>
-  </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>600, 400</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>7</value>
   </data>
   <data name="AgeOfVillagers.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
@@ -141,47 +135,23 @@
   <data name="AgeOfVillagers.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Segoe UI, 19.800001pt, style=Bold</value>
   </data>
-  <data name="AgeOfVillagers.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>747, 32</value>
-  </data>
   <data name="AgeOfVillagers.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>279, 46</value>
-  </data>
-  <data name="AgeOfVillagers.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>9</value>
   </data>
   <data name="AgeOfVillagers.Text" xml:space="preserve">
     <value>Age Of Villagers</value>
   </data>
-  <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>785, 130</value>
-  </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>151, 28</value>
-  </data>
-  <data name="comboBox2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>11</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>785, 93</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>147, 27</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>12</value>
-  </data>
   <data name="VillageName.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
-  <data name="VillageName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>661, 96</value>
-  </data>
   <data name="VillageName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>113, 20</value>
-  </data>
-  <data name="VillageName.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>13</value>
   </data>
   <data name="VillageName.Text" xml:space="preserve">
     <value>Village Name =</value>
@@ -189,14 +159,8 @@
   <data name="NationName.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
-  <data name="NationName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>661, 133</value>
-  </data>
   <data name="NationName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>112, 20</value>
-  </data>
-  <data name="NationName.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>14</value>
   </data>
   <data name="NationName.Text" xml:space="preserve">
     <value>Nation Name =</value>

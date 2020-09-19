@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Test_Demo_Code
 {
-    public class UnitTest1
+    public class AgeOfVillagersTest
     {
         [Fact]
         public void Test1()
