@@ -31,5 +31,11 @@ namespace AgeOfVillagers.Test
         {
             Assert.IsType<BangladeshiTree>(bangladeshiFarmers.GetTree(point));
         }
+
+        [Fact]
+        public void BangladeshiWatersourceTest()
+        {
+            Assert.IsType<BangladeshiPond>(bangladeshiFarmers.GetWaterResource(point));
+        }
     }
 }
