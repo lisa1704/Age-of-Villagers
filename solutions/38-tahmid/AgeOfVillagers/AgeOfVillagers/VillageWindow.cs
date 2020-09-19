@@ -1,6 +1,7 @@
 ﻿using AgeOfVillagers.Environment_extending_Classes;
 using AgeOfVillagers.FactoryClasses;
 using AgeOfVillagers.Interface;
+using AgeOfVillagers.Model_Class_Folder;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ namespace AgeOfVillagers
 
         List<IItem> itemList;
 
+        StateModel previouslySavedState;
+
        
         public VillageWindow()
         {
@@ -63,7 +66,7 @@ namespace AgeOfVillagers
         private void Save_Village(object sender, EventArgs e)
         {
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY,game,tbVillageName.Text,itemList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, tbVillageName.Text, itemList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
@@ -86,7 +89,7 @@ namespace AgeOfVillagers
 
             
             game = gameFactory.getGame();
-           
+            
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
@@ -106,6 +109,16 @@ namespace AgeOfVillagers
         {
             environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g,Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
+
+            previouslySavedState = new StateModel();
+
+            game = gameFactory.getGame();
+            
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNation,previouslySavedState);
+            GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
+
+            gameKeyInvoker.click();
+            //itemlist
 
 
 

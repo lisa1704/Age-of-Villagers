@@ -10,6 +10,7 @@ namespace AgeOfVillagers
         private IGames game;
         private string sVillageName;
         private List<IItem> itemList;
+        
 
         public SaveVillage(IGames game, string sVillageName, List<IItem> itemList)
         {
