@@ -12,16 +12,13 @@ namespace Age_Of_Villagers
     {
         void setTerrain(VillageEditorWindow villageEditor);
         void setRadiobutton(VillageEditorWindow villageEditor);
-        string getColor();
+        Color getColor();
 
     }
 
     public class BangladeshiNation : INation
     {
-        public string getColor()
-        {
-            return "green";
-        }
+        
 
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -35,14 +32,15 @@ namespace Age_Of_Villagers
         {
             villageEditor.Panel1.BackColor = Color.Green;
         }
+        public Color getColor()
+        {
+            return Color.Green;
+        }
     }
 
     public class ArabBedouinNation : INation
     {
-        public string getColor()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -56,13 +54,15 @@ namespace Age_Of_Villagers
         {
             villageEditor.Panel1.BackColor = Color.YellowGreen;
         }
+        public Color getColor()
+        {
+            return Color.YellowGreen;
+            
+        }
     }
     public class EgyptianKingNation : INation
     {
-        public string getColor()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -76,14 +76,16 @@ namespace Age_Of_Villagers
         {
             villageEditor.Panel1.BackColor = Color.Yellow;
         }
+
+        public Color getColor()
+        {
+            return Color.Yellow;
+        }
     }
 
     public class InuitHunterNation : INation
     {
-        public string getColor()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void setRadiobutton(VillageEditorWindow villageEditor)
         {
@@ -96,6 +98,11 @@ namespace Age_Of_Villagers
         public void setTerrain(VillageEditorWindow villageEditor)
         {
             villageEditor.Panel1.BackColor = Color.White;
+        }
+
+        public Color getColor()
+        {
+            return Color.White;
         }
     }
 
