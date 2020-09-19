@@ -50,12 +50,7 @@ namespace Age_of_Villagers.Test
     public class NationPropertyTest
     {
         INation nation= new Bangladesh();
-        Graphics g;
-        [SetUp]
-        public void Setup()
-        {
-            nation.set_graphics(g);
-        }
+
         [Test]
         public void Testname()
         {
@@ -71,10 +66,13 @@ namespace Age_of_Villagers.Test
             Color c =nation.set_background();
             expected.Equals(c);
         }
-
+        [Test]
         public void testtree()
         {
-            nation.draw_house(new Point (200,200));
+            Point p = new Point(200, 200);
+            IShape tree= nation.draw_house(p);
+            IShape bdtree = new Bdtree(p, 30, 30);
+            bdtree.Equals(tree);
         }
     }
 }
