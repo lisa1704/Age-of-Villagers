@@ -60,6 +60,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface1.cs" />
+    <Compile Include="Inuit_Creator.cs" />
     <Compile Include="Inuit_Hunter.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
