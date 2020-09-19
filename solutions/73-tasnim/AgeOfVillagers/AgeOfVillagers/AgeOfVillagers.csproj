@@ -55,6 +55,7 @@
       <DependentUpon>CreateNewVillage.cs</DependentUpon>
     </Compile>
     <Compile Include="EgyptianKings.cs" />
+    <Compile Include="FactoryNation.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="Program.cs" />
