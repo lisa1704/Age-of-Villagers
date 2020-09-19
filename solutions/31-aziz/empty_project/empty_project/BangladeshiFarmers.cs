@@ -8,5 +8,11 @@ namespace empty_project
 {
     class BangladeshiFarmers : AbstractNation
     {
+        public BangladeshiFarmers(Panel panel) : base(panel)
+        {
+            base.house = new BangladeshiFarmersHouse();
+            base.tree = new BangladeshiFarmersTree();
+            base.waterSource = new BangladeshiFarmersWaterSource();
+        }
     }
 }
