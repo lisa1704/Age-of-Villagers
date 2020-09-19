@@ -80,7 +80,7 @@
             // 
             this.nameBox.Location = new System.Drawing.Point(258, 77);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(181, 31);
+            this.nameBox.Size = new System.Drawing.Size(206, 31);
             this.nameBox.TabIndex = 2;
             this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
@@ -96,8 +96,9 @@
             "Inuit Hunters"});
             this.nationBox.Location = new System.Drawing.Point(258, 160);
             this.nationBox.Name = "nationBox";
-            this.nationBox.Size = new System.Drawing.Size(182, 33);
+            this.nationBox.Size = new System.Drawing.Size(206, 33);
             this.nationBox.TabIndex = 3;
+            this.nationBox.SelectedIndex = 0;
             this.nationBox.SelectedIndexChanged += new System.EventHandler(this.nationBox_SelectedIndexChanged);
             // 
             // CreateNewVillageWindow

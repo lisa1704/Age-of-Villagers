@@ -33,7 +33,11 @@ namespace AgeOfVillagers
 
         private void browseButton_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "AgeOfVillagers file|*.aov";
+            openFileDialog.Title = "Open Village";
+            openFileDialog.ShowDialog();
+            filePath = openFileDialog.FileName;
         }
 
         private void nationLabel_Click(object sender, EventArgs e)
