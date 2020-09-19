@@ -62,6 +62,25 @@ namespace AgeOfVillegers
             VillageNameBox.Text = name;
             string VillageName = name;
         }
+        public void radioButton_Click()
+        {
+            if (rdButtonHouse.Checked)
+            {
+                rdButton = rdButtonHouse.Text;
+            }
+            else if (rdButtonTree.Checked)
+            {
+                rdButton = rdButtonTree.Text;
+            }
+            else if (rdButtonWaterSrc.Checked)
+            {
+                rdButton = rdButtonWaterSrc.Text;
+            }
+            else
+                rdButton = "";
+
+
+        }
 
         private void Tree_btn_CheckedChanged(object sender, EventArgs e)
         {
