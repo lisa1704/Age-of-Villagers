@@ -35,6 +35,13 @@ namespace AgeOfVillagers.Test
             INation expected = new Inuit();
             actual.Equals(expected);
         }
+        [Fact]
+        public void NullnationTest()
+        {
+            INation actual = nationfactory.GetNation("America");
+            INation expected = new NullNation();
+            actual.Equals(expected);
+        }
 
     }
 }
