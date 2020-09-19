@@ -1,9 +1,9 @@
-﻿namespace Age_of_Villagers
+﻿using System.Windows.Forms;
+
+namespace Age_of_Villagers
 {
     internal interface IElement
     {
-        int getX();
-        int getY();
-        void setLocation();
+        void draw(Axis axes, Panel panel);
     }
 }
