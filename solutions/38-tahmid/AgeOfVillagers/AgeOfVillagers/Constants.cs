@@ -45,9 +45,9 @@ namespace AgeOfVillagers
         public static int OVAL_ENDING_ANG = 360;
 
         //Items
-        public static string HOUSE_ITEM = "HOUSE";
-        public static string TREE_ITEM = "TREE";
-        public static string WATER_SOURCE_ITEM = "WATER SOURCE";
+        public static string HOUSE_ITEM = ",HOUSE";
+        public static string TREE_ITEM = ",TREE";
+        public static string WATER_SOURCE_ITEM = ",WATER SOURCE";
 
         //Nations
 
@@ -58,8 +58,8 @@ namespace AgeOfVillagers
         public static string DEFAULT_NATION = "Default Nation";
 
         //Shape hints
-        public static string BDTREE_HINT = "Bangladeshi_Farmer" + "TREE";
-        public static string BDWATERSOURCE_HINT = "Bangladeshi_Farmer" + "WATER SOURCE";
+        public static string BDTREE_HINT = "Bangladeshi_Farmer" + ",TREE";
+        public static string BDWATERSOURCE_HINT = "Bangladeshi_Farmer" + ",WATER SOURCE";
 
         //Panel Size
         public static int PANEL_HEIGHT = 600;

@@ -122,7 +122,7 @@ namespace AgeOfVillagers
             selectedNation = Constants.BD_NATION;
             Point point = new Point(e.X, e.Y);
             IItem item = itemFactory.GetItem(point, selectedItem,g,pen);
-            item.placeItem(selectedNation+selectedItem); ;
+            item.placeItem(selectedNation); ;
             itemList.Add(item);
             
             
