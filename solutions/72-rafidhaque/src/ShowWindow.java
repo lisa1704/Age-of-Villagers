@@ -24,7 +24,7 @@ public class ShowWindow extends Application {
     DrawHouse house = bangladeshiFarmers.house;
     DrawTree tree = bangladeshiFarmers.tree;
     DrawWater water = bangladeshiFarmers.water;
-    public GridOfControls gridOfControls = new GridOfControls(house, tree, water);
+    public GridOfControls gridOfControls = new GridOfControls(house, tree, water, bangladeshiFarmers.nationName);
 
     public void setDrawSpace(Group drawSpace) {
         this.drawSpace = drawSpace;

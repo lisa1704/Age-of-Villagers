@@ -20,11 +20,14 @@ public class GridOfControls {
     Button newButton = new Button("New");
     Button openButton = new Button(" Open");
 
+    String nationName;
 
-    public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water) {
+
+    public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water, String nationName) {
         this.house = house;
         this.tree = tree;
         this.water = water;
+        this.nationName = nationName;
     }
 
     GridPane createGrid() {
