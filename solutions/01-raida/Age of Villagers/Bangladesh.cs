@@ -37,11 +37,11 @@ namespace Age_of_Villagers
             return house;
         }
 
-        public void draw_river(Point p)
+        public IShape draw_river(Point p)
         {
             river_points.Add(p);
             river = new Bdriver(p);
-            river.draw(g, pen);
+            return river;
         }
 
         public string get_villagename()

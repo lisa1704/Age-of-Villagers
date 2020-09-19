@@ -29,10 +29,10 @@ namespace Age_of_Villagers
             return house;
         }
 
-        public void draw_river(Point P)
+        public IShape draw_river(Point P)
         {
             river = nullshape.Instance;            
-            river.draw(g,pen);
+            return river;
         }
 
         public IShape draw_tree(Point p)

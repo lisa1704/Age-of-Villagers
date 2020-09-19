@@ -48,7 +48,8 @@ namespace Age_of_Villagers
             }
             else if(text == "River")
             {
-                nation.draw_river(new Point(x, y));
+                IShape river=nation.draw_river(new Point(x, y));
+                river.draw(g, pen);
             }
 
         }
