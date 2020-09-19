@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace AgeOfVillagers
         private IGames game;
         private Label villageNameLabel;
         private string selectedNation;
+        List<IItem> itemList;
 
         public OpenVillage(IGames game, Label villageNameLabel, string selectedNation)
         {
@@ -18,9 +20,14 @@ namespace AgeOfVillagers
             this.selectedNation = selectedNation;
         }
 
+        public List<IItem> getItemList()
+        {
+            return itemList;
+        }
+
         public void execute()
         {
-            game.openVillage(selectedNation, villageNameLabel);
+            itemList=game.openVillage(selectedNation, villageNameLabel);
         }
     }
 }
