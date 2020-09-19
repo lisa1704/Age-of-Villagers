@@ -56,15 +56,15 @@ namespace AgeOfVillagers
                 Point point = new Point(e.X, e.Y);
                 if (tree_btn.Checked)
                 {
-                    
+                    village.DrawTree(g, p, point);
                 }
                 else if (House_btn.Checked)
                 {
-                    
+                    village.DrawHouse(g, p, point);
                 }
                 else if (water_btn.Checked)
                 {
-                    
+                    village.DrawWaterResource(g, p, point);
                 }
             }
         }
@@ -84,7 +84,7 @@ namespace AgeOfVillagers
             if(village!= null)
             {
                 village.changeVillageNation(nation);
-                
+                village.initiate(g, p);
             }
         }
 
@@ -108,7 +108,7 @@ namespace AgeOfVillagers
             if (villageName != null && nation != null)
             {
                 village = new Village(villageName, nation);
-                
+                village.initiate(g, p);
             }
         }
 
