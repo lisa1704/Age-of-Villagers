@@ -16,14 +16,19 @@ namespace Age_Of_Villagers
         string nation;
         string rdButton;
         Village village;
-
-
+        INation ination;
         
+
+
+
+
+
 
 
         public VillageEditorWindow()
         {
             InitializeComponent();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,12 +46,21 @@ namespace Age_Of_Villagers
         {
 
         }
-        
-                
 
-
-
+        public void setNation()
+        {
             
+            NationPropertyFactory nationProperty = new NationPropertyFactory();
+            ination = nationProperty.getNation(nation);
+            ination.setRadiobutton(this);
+            ination.setTerrain(this);
+        }
+
+
+
+
+
+
 
         public void radioButton_Click()
         {
@@ -76,6 +90,7 @@ namespace Age_Of_Villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            
 
         }
 
@@ -83,6 +98,7 @@ namespace Age_Of_Villagers
         {
             Graphics graphics = Panel1.CreateGraphics();
             Pen pen = new Pen(Color.Black);
+            setNation();
 
             radioButton_Click();
             ItemFactory itemFactory = NationFactory.getNation(nation);
@@ -94,11 +110,11 @@ namespace Age_Of_Villagers
 
         }
 
+        
+
         private void newVill_Click(object sender, EventArgs e)
         {
-            newVill nv= new newVill();
-            nv.Show();
-            this.Hide();
+            Panel1.Refresh();
         }
         
         private void rdButtonHouse_CheckedChanged(object sender, EventArgs e)
