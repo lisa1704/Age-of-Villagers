@@ -158,7 +158,6 @@
             this.Nations.Size = new System.Drawing.Size(151, 25);
             this.Nations.TabIndex = 10;
             this.Nations.TextChanged += new System.EventHandler(this.Nations_TextChanged);
-            //this.Nations.Text = "Please, select a Nation";
             // 
             // Form1
             // 
