@@ -6,19 +6,24 @@ using System.Drawing;
 
 namespace empty_project
 {
-    internal class SelectNation
+    class SelectNation
     {
-        public INation GetNation(string nation)
+        protected Panel panel;
+        public SelectNation(Panel panel)
         {
-            if (nation == "BangladeshiFarmers")
-                return new BangladeshiFarmers();
-            else if (nation == "ArabBedouin")
-                return new ArabBedouin();
-            else if (nation == "EgyptianKings")
-                return new EgyptianKings();
-            else if (nation == "InuitHunters")
-                return new InuitHunters();
-            throw new Exception();
+            this.panel = panel;
+        }
+        public AbstractNation NationIndex(int index)
+        {
+            if (index == 0)
+                return new BangladeshiFarmers(this.panel);
+            else if (index == 1)
+                return new ArabBedouin(this.panel);
+            else if (index == 2)
+                return new EgyptianKings(this.panel);
+            else if (index == 3)
+                return new InuitHunters(this.panel);
+            return null;
         }
     }
 }
