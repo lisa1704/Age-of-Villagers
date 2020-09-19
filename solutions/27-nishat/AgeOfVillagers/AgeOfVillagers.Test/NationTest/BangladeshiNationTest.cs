@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System.Drawing;
+using Xunit;
 
 namespace AgeOfVillagers.Test
 {
@@ -11,6 +12,12 @@ namespace AgeOfVillagers.Test
         public void BangladeshiNationNameTest()
         {
             Assert.Equal("Bangladeshi Farmers", bangladeshiFarmers.GetNationName());
+        }
+
+        [Fact]
+        public void BangladeshiTerrainColorTest()
+        {
+            Assert.Equal(Color.Green, bangladeshiFarmers.GetTerrainColor());
         }
     }
 }
