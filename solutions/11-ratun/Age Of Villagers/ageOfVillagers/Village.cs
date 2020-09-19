@@ -2,13 +2,31 @@
 {
     interface IDraw
     {
-        void Draw();
+        void Draw(string currentselect, int x, int y);
     }
     public class Village: IDraw
     {
         private string nation;
         private string villagename;
-        public void Draw(){}
+        public void Draw(string currentselect, int x, int y)
+        {
+            if (currentselect == "tree") 
+            {
+                Tree t = new Tree();
+                t.Draw(x, y);
+            }
+            else if (currentselect == "house")
+            {
+                House h = new House();
+                h.Draw(x, y);
+            }
+            else
+            {
+                Water w = new Water();
+                w.Draw(x, y);
+            }
+
+        }
         public void CreateVillage(string nation, string villagename)
         {
             this.nation = nation;
