@@ -22,7 +22,7 @@ namespace AgeOfVillagers
             drawing_panel.Invalidate();
         }
 
-        public List<IItem> openVillage(string selectedNation, Label labelVillageName, State previouslySavedState, Graphics graphics, Pen pen)
+        public void openVillage(string selectedNation, Label labelVillageName, State previouslySavedState, Graphics graphics, Pen pen)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "age of villagers file|*.aov";
