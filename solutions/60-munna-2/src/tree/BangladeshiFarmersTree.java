@@ -6,7 +6,7 @@ import shapes.Point;
 
 public class BangladeshiFarmersTree implements ITree {
     private Canvas t_canvas;
-    private Point centre,bottomLeft,topLeft, bottomRight, topRight;
+    private Point center,bottomLeft,topLeft, bottomRight, topRight;
 
     private GraphicsContext graphicsContext;
 
