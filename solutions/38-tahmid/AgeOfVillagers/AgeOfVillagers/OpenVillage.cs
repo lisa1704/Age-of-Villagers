@@ -20,10 +20,7 @@ namespace AgeOfVillagers
             this.selectedNation = selectedNation;
         }
 
-        public List<IItem> getItemList()
-        {
-            return itemList;
-        }
+      
 
         public void execute()
         {
