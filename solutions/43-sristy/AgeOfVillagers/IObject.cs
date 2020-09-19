@@ -50,7 +50,7 @@ namespace Age_of_villagers
     {
         public void paint(Pen p, Graphics g)
         {
-            
+            //null
         }
     }
 

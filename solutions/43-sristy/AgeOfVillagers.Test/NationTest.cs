@@ -14,5 +14,27 @@ namespace AgeOfVillagers.Test
             INation expected = new Bangladeshi();
             actual.Equals(expected);
         }
+        [Fact]
+        public void EgyptnationTest()
+        {
+            INation actual = nationfactory.GetNation("Egyptian");
+            INation expected = new Egyptian();
+            actual.Equals(expected);
+        }
+        [Fact]
+        public void ArabnationTest()
+        {
+            INation actual = nationfactory.GetNation("Arab");
+            INation expected = new Arab();
+            actual.Equals(expected);
+        }
+        [Fact]
+        public void InuitnationTest()
+        {
+            INation actual = nationfactory.GetNation("Inuit");
+            INation expected = new Inuit();
+            actual.Equals(expected);
+        }
+
     }
 }
