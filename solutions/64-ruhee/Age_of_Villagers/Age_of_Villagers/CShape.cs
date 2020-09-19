@@ -9,9 +9,9 @@ namespace Age_of_Villagers.Age_of_Villagers
     {
         protected List<IShape> My_components = new List<IShape>();
 
-        protected void AddComponent(IShape myshape)
+        protected void AddComponent(IShape shape)
         {
-            My_components.Add(myshape);
+            My_components.Add(shape);
         }
         public void Draw(Graphics g)
         {
