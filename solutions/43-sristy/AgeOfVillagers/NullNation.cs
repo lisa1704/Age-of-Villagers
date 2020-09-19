@@ -10,19 +10,22 @@ namespace Age_of_villagers
 {
     public class NullNation : INation
     {
-        public void Draw_house(Graphics g, Point p)
+        public IObject Draw_house(Point p)
         {
             warning();
+            return new null_obj();
         }
 
-        public void Draw_tree(Graphics g, Point p)
+        public IObject Draw_tree(Point p)
         {
             warning();
+            return new null_obj();
         }
 
-        public void Draw_watersource(Graphics g, Point p)
+        public IObject Draw_watersource(Point p)
         {
             warning();
+            return new null_obj();
         }
 
         public Color get_backcolor()
