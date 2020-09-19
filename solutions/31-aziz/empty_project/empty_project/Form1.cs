@@ -75,11 +75,6 @@ namespace empty_project
             element_text = "House";
         }
 
-        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void WaterSource_Click(object sender, EventArgs e)
         {
             element_text = "Water Source";

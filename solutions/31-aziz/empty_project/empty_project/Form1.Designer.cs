@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.SaveVillage = new System.Windows.Forms.Button();
-            this.NationList = new System.Windows.Forms.ListBox();
             this.NewVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.Tree = new System.Windows.Forms.Button();
@@ -47,21 +46,6 @@
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
             this.SaveVillage.Click += new System.EventHandler(this.SaveVillage_Click);
-            // 
-            // NationList
-            // 
-            this.NationList.FormattingEnabled = true;
-            this.NationList.ItemHeight = 15;
-            this.NationList.Items.AddRange(new object[] {
-            "Bangladeshi Farmers",
-            "Egyptian Kings",
-            "Arab Bedouin",
-            "Inuit Hunters"});
-            this.NationList.Location = new System.Drawing.Point(645, 50);
-            this.NationList.Name = "NationList";
-            this.NationList.Size = new System.Drawing.Size(120, 94);
-            this.NationList.TabIndex = 1;
-            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // NewVillage
             // 
@@ -133,7 +117,6 @@
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.OpenVillage);
             this.Controls.Add(this.NewVillage);
-            this.Controls.Add(this.NationList);
             this.Controls.Add(this.SaveVillage);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -145,7 +128,6 @@
 
         #endregion
         private System.Windows.Forms.Button SaveVillage;
-        private System.Windows.Forms.ListBox NationList;
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button Tree;
