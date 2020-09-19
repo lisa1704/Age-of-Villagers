@@ -12,6 +12,5 @@ namespace Age_of_Villagers.FactoryClasses
         {
             name = NationName;
         }
-
     }
 }

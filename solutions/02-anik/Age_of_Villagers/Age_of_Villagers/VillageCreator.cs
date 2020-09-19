@@ -56,5 +56,10 @@ namespace Age_of_Villagers
         {
             
         }
+
+        private void VillageName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

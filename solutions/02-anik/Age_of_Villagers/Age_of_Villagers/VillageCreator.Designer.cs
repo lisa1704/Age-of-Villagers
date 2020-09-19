@@ -114,6 +114,7 @@
             // 
             resources.ApplyResources(this.VillageName, "VillageName");
             this.VillageName.Name = "VillageName";
+            this.VillageName.Click += new System.EventHandler(this.VillageName_Click);
             // 
             // NationName
             // 
