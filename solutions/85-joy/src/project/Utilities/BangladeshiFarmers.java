@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class BangladeshiFarmers implements INation{
     private  String TerrainColor = "GREEN";
+    private  double WaterSourceWidth = 24.0;
+    private  double WaterSourceHeight = 16.0;
 
     public BangladeshiFarmers(){
         super();
@@ -68,8 +70,30 @@ public class BangladeshiFarmers implements INation{
     }
 
     @Override
-    public void DrawWaterSource() {
+    public ArrayList<Shape> DrawWaterSource(double x1,double y1) {
+        ArrayList<Shape> WaterSource = new ArrayList<Shape>();
 
+        Line line1 = new Line(x1,y1,x1+4,y1+WaterSourceHeight/2);
+        WaterSource.add(line1);
+        Line line2 = new Line(x1+4,y1+WaterSourceHeight/2,x1+11,y1+3);
+        WaterSource.add(line2);
+        Line line3 = new Line(x1+11,y1+3,x1+18,y1+6);
+        WaterSource.add(line3);
+        Line line4 = new Line(x1+18,y1+6,x1+WaterSourceWidth,y1-3);
+        WaterSource.add(line4);
+
+        Line line5 = new Line(x1+WaterSourceWidth,y1-3,x1+15,y1-WaterSourceHeight/2);
+        WaterSource.add(line5);
+        Line line6 = new Line(x1+15,y1-WaterSourceHeight/2,x1+9,y1-3);
+        WaterSource.add(line6);
+        Line line7 = new Line(x1+9,y1-3,x1+7,y1-6);
+        WaterSource.add(line7);
+        Line line8 = new Line(x1+7,y1-6,x1+5,y1-4);
+        WaterSource.add(line8);
+        Line line9 = new Line(x1+5,y1-4,x1,y1);
+        WaterSource.add(line9);
+
+        return  WaterSource;
     }
 
     @Override

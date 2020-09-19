@@ -47,35 +47,23 @@ public class VillageViewController implements Initializable {
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if(Flag == 0){
-                    INation BangladeshiFarmers = new BangladeshiFarmers();
-                    Object = BangladeshiFarmers.DrawHouse(event.getSceneX(),event.getSceneY());
-                    DrawShape(Object);
-                }
-                else if(Flag == 1){
+                if(Flag == 1){
                     INation BangladeshiFarmers = new BangladeshiFarmers();
                     Object = BangladeshiFarmers.DrawTree(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
                 else if(Flag == 2){
-//                    DrawHouse(event.getSceneX(), event.getSceneY(), 16.0,16.0);
+                    INation BangladeshiFarmers = new BangladeshiFarmers();
+                    Object = BangladeshiFarmers.DrawHouse(event.getSceneX(),event.getSceneY());
+                    DrawShape(Object);
+                }
+                else if(Flag == 3){
+                    INation BangladeshiFarmers = new BangladeshiFarmers();
+                    Object = BangladeshiFarmers.DrawWaterSource(event.getSceneX(),event.getSceneY());
+                    DrawShape(Object);
                 }
             }
         });
-    }
-
-    public void WaterSourceClicked(javafx.event.ActionEvent actionEvent) {
-        try{
-
-            Circle circle = new Circle(500,200,10,Color.BLACK);
-            DrawPane.getChildren().add(circle);
-            System.out.println(NationDropDown.getValue());
-            System.out.println(Village_Name.getText());
-
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     public void SaveVillage(ActionEvent actionEvent) {
@@ -135,25 +123,16 @@ public class VillageViewController implements Initializable {
         this.Flag = 2;
         System.out.println("HOUSE SELECTED!");
     }
-    
 
-    public void DrawWaterSource(double x1,double y1, double width, double height){
-        Line line1 = new Line(x1,y1,x1+4,y1+height/2);
-        Line line2 = new Line(x1+4,y1+height/2,x1+11,y1+3);
-        Line line3 = new Line(x1+11,y1+3,x1+18,y1+6);
-        Line line4 = new Line(x1+18,y1+6,x1+width,y1-3);
 
-        Line line5 = new Line(x1+width,y1-3,x1+15,y1-height/2);
-        Line line6 = new Line(x1+15,y1-height/2,x1+9,y1-3);
-        Line line7 = new Line(x1+9,y1-3,x1+7,y1-6);
-        Line line8 = new Line(x1+7,y1-6,x1+5,y1-4);
-        Line line9 = new Line(x1+5,y1-4,x1,y1);
-
-        DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6,line7,line8,line9);
-    }
     public void DrawShape(ArrayList<Shape> ShapeObject){
         for (Shape x : ShapeObject){
             DrawPane.getChildren().addAll(x);
         }
+    }
+
+    public void SelectWaterSource(ActionEvent actionEvent) {
+        this.Flag = 3;
+        System.out.println("WATERSOURCE SELECTED!");
     }
 }
