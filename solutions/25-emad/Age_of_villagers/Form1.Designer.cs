@@ -35,6 +35,9 @@
             this.tree = new System.Windows.Forms.RadioButton();
             this.house = new System.Windows.Forms.RadioButton();
             this.water_source = new System.Windows.Forms.RadioButton();
+            this.save = new System.Windows.Forms.Button();
+            this.New = new System.Windows.Forms.Button();
+            this.open = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel
@@ -114,9 +117,42 @@
             this.water_source.UseVisualStyleBackColor = true;
             this.water_source.CheckedChanged += new System.EventHandler(this.Water_source_CheckedChanged);
             // 
+            // save
+            // 
+            this.save.Location = new System.Drawing.Point(694, 293);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.TabIndex = 7;
+            this.save.Text = "Save Village";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // New
+            // 
+            this.New.Location = new System.Drawing.Point(644, 338);
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(75, 23);
+            this.New.TabIndex = 8;
+            this.New.Text = "New Village";
+            this.New.UseVisualStyleBackColor = true;
+            this.New.Click += new System.EventHandler(this.New_Click);
+            // 
+            // open
+            // 
+            this.open.Location = new System.Drawing.Point(734, 338);
+            this.open.Name = "open";
+            this.open.Size = new System.Drawing.Size(75, 23);
+            this.open.TabIndex = 9;
+            this.open.Text = "Open Village";
+            this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.Open_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(949, 441);
+            this.Controls.Add(this.open);
+            this.Controls.Add(this.New);
+            this.Controls.Add(this.save);
             this.Controls.Add(this.water_source);
             this.Controls.Add(this.house);
             this.Controls.Add(this.tree);
@@ -153,6 +189,9 @@
         private System.Windows.Forms.RadioButton tree;
         private System.Windows.Forms.RadioButton house;
         private System.Windows.Forms.RadioButton water_source;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button New;
+        private System.Windows.Forms.Button open;
     }
 }
 
