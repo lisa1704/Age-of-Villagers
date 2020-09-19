@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BdFarmerHouse : IShape
+    public class BdFarmerHouse : IShape
     {
         private Panel drawingBoard;
         

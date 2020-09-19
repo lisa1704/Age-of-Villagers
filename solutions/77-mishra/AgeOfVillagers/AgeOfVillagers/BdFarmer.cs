@@ -6,11 +6,17 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BdFarmer : INation
+    public class BdFarmer : INation
     {
+        private Panel drawingBoard;
+        public BdFarmer(Panel drawingBoard)
+        {
+            this.drawingBoard = drawingBoard;
+        }
         public void DrawHouse(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            BdFarmerHouse bdHouse = new BdFarmerHouse(drawingBoard);
+            bdHouse.draw(p, drawingBoard);
         }
 
         public void DrawTree(Point p, Panel drawingBoard)

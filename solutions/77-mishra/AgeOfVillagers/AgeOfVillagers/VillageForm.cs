@@ -20,6 +20,7 @@ namespace AgeOfVillagers
         //public IShape arabhouse;
 
         public INation arabBeduin;
+        public INation bdfarmer;
 
         //public IShape arabhouse;
         public VillageForm()
