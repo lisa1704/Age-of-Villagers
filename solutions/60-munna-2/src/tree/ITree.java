@@ -4,7 +4,7 @@ public interface ITree {
     void drawTree();
 
     void getCanvas();
-    
+
 
 
 }
