@@ -31,6 +31,24 @@ namespace Age_Of_Villagers
         }
     }
 
+    public class ArabKingNation : INation
+    {
+        public void setRadiobutton(VillageEditorWindow villageEditor)
+        {
+            villageEditor.rdButtonHouse.Enabled = true;
+            villageEditor.rdButtonTree.Enabled = true;
+            villageEditor.rdButtonWaterSrc.Enabled = false;
+
+        }
+
+        public void setTerrain(VillageEditorWindow villageEditor)
+        {
+            villageEditor.Panel1.BackColor = Color.Yellow;
+        }
+    }
+
+
+
 
 
 }
