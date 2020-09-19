@@ -111,7 +111,6 @@ public class VillageView_controller implements Initializable {
     }
 
     public void TreePressed(ActionEvent actionEvent){
-        DrawingCanvas.setStyle("-fx-background-color: GREEN");
         flag = "Tree";
     }
 
@@ -126,6 +125,16 @@ public class VillageView_controller implements Initializable {
     public void DrawShape(ArrayList<Shape> shape_to_be_drawn){
         for (Shape s:shape_to_be_drawn) {
             DrawingCanvas.getChildren().addAll(s);
+        }
+    }
+
+    public void ChangeNation(ActionEvent actionEvent) {
+        if((String) NationList.getValue() == "Bangladeshi Farmers"){
+            INations BDFarmers = new Bangladeshi_Farmers();
+            DrawingCanvas.setStyle("-fx-background-color:"+BDFarmers.GetTerrainColor());
+        }
+        else{
+            DrawingCanvas.setStyle("-fx-background-color:"+"White");
         }
     }
 }

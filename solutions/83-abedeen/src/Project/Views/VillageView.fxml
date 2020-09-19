@@ -25,7 +25,7 @@
             <Button layoutX="32.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="New Village" textFill="WHITE" />
             <Button fx:id="OpenVillage" layoutX="154.0" layoutY="350.0" mnemonicParsing="false" onAction="#Open_new_village" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Open Village" textFill="WHITE" />
             <Button fx:id="SaveVillage" layoutX="81.0" layoutY="316.0" mnemonicParsing="false" onAction="#save_village" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #6a6575; -fx-min-width: 80px;" text="Save Village" textFill="WHITE" />
-            <ComboBox fx:id="NationList" layoutX="74.0" layoutY="149.0" prefWidth="150.0" promptText="Nation" style="-fx-background-color: White;" />
+            <ComboBox fx:id="NationList" layoutX="74.0" layoutY="149.0" onAction="#ChangeNation" prefWidth="150.0" promptText="Nation" style="-fx-background-color: White;" />
          </children>
       </Pane>
    </children>
