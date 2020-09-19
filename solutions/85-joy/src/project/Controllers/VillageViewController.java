@@ -45,6 +45,7 @@ public class VillageViewController implements Initializable {
             public void handle(MouseEvent event) {
                 if(Flag == 0){
                     DrawWaterSource(event.getSceneX(),event.getSceneY(),24.0,16.0);
+                    DrawPane.setStyle("-fx-background-color: #DAF7A6");
                 }
                 else if(Flag == 1){
                     DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
