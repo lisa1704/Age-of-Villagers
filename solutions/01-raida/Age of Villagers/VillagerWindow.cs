@@ -39,17 +39,17 @@ namespace Age_of_Villagers
             if (text == "Tree")
             {
                 IShape tree=nation.draw_tree(new Point(x, y));
-                tree.draw(g, pen);
+                
             }
             else if(text == "House")
             {
                 IShape house=nation.draw_house(new Point(x, y));
-                house.draw(g, pen);
+                
             }
             else if(text == "River")
             {
                 IShape river=nation.draw_river(new Point(x, y));
-                river.draw(g, pen);
+               
             }
 
         }
@@ -85,6 +85,7 @@ namespace Age_of_Villagers
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation_create(selectedNation);
             village_name(villageNameBox.Text);
+            nation.set_graphics(g);
             villagePanel.BackColor = nation.set_background();
         }
 
