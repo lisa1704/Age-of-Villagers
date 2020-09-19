@@ -28,9 +28,9 @@ namespace AgeOfVillagers.Village_extended_classes
 
         public void makeShape()
         {
-            BasicShapes base_shape = basicShapeFactory.GetShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            BasicShapes base_shape = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
             base_shape.makeShape();
-            BasicShapes roof_top = basicShapeFactory.GetShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            BasicShapes roof_top = basicShapeFactory.GetDrableShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
             roof_top.makeShape();
         }
 

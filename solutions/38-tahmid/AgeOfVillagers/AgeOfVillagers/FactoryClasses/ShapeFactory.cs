@@ -1,6 +1,7 @@
 ﻿using AgeOfVillagers.IItem_implementing_Classes;
 using AgeOfVillagers.Interface;
 using AgeOfVillagers.Shape_extended_classes;
+using AgeOfVillagers.Shape_implementing_Classes;
 using AgeOfVillagers.Village_extended_classes;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,11 @@ namespace AgeOfVillagers
 
                 return new BangladeshiShapedWaterSource(g, pen, point, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
             }
-            else
+            else if(hint.Equals(Constants.BDHOUSE_HINT))
                 return new BangladeshiShapedHouse(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+            else if (hint.Equals(Constants.ARABIAN_HOUSE_HINT))
+                return new ArabianHouseShape(g, pen, point, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+
             return null;
         }
 
