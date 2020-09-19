@@ -43,7 +43,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(616, 62);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 22);
@@ -73,7 +73,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button6.BackColor = System.Drawing.Color.IndianRed;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(616, 383);
             this.button6.Name = "button6";
@@ -95,9 +95,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(641, 25);
+            this.label1.Location = new System.Drawing.Point(635, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 16);
+            this.label1.Padding = new System.Windows.Forms.Padding(10);
+            this.label1.Size = new System.Drawing.Size(139, 36);
             this.label1.TabIndex = 9;
             this.label1.Text = "Age of Villagers";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -105,6 +106,11 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
             this.comboBox1.Location = new System.Drawing.Point(616, 101);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 21);
