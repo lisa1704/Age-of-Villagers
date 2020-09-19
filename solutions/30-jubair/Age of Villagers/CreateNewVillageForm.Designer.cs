@@ -36,24 +36,26 @@
             // village_name
             // 
             this.village_name.AutoSize = true;
-            this.village_name.Location = new System.Drawing.Point(77, 77);
+            this.village_name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.village_name.Location = new System.Drawing.Point(81, 83);
             this.village_name.Name = "village_name";
-            this.village_name.Size = new System.Drawing.Size(116, 25);
+            this.village_name.Size = new System.Drawing.Size(175, 25);
             this.village_name.TabIndex = 0;
-            this.village_name.Text = "Village Name";
+            this.village_name.Text = "Enter Village Name";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(275, 77);
+            this.textBox1.Location = new System.Drawing.Point(302, 77);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
+            this.textBox1.Size = new System.Drawing.Size(165, 31);
             this.textBox1.TabIndex = 2;
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(313, 319);
+            this.submit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.submit.Location = new System.Drawing.Point(344, 319);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(112, 34);
+            this.submit.Size = new System.Drawing.Size(123, 34);
             this.submit.TabIndex = 4;
             this.submit.Text = "Submit";
             this.submit.UseVisualStyleBackColor = true;
@@ -61,14 +63,17 @@
             // 
             // CreateNewVillageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(870, 450);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.village_name);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "CreateNewVillageForm";
-            this.Text = "CreateNewVillageForm";
+            this.Text = "Create New Village Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

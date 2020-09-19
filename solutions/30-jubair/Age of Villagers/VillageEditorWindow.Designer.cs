@@ -41,6 +41,7 @@ namespace Age_of_Villagers
             this.radioButton_house = new System.Windows.Forms.RadioButton();
             this.radioButton_water = new System.Windows.Forms.RadioButton();
             this.nationList = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.drawing_space.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,20 +78,13 @@ namespace Age_of_Villagers
             // 
             // label_village_name
             // 
-            this.label_village_name.AutoSize = true;
-            this.label_village_name.Location = new System.Drawing.Point(721, 85);
-            this.label_village_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_village_name.Name = "label_village_name";
-            this.label_village_name.Size = new System.Drawing.Size(116, 25);
-            this.label_village_name.TabIndex = 1;
-            //this.label_village_name.Text = "";
-            this.label_village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_village_name.Click += new System.EventHandler(this.label_Click);
+           
+            //this.label_village_name.Click += new System.EventHandler(this.label_Click);
             // 
             // button_save
             // 
-            this.button_save.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_save.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_save.BackColor = System.Drawing.SystemColors.Info;
+            this.button_save.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_save.Location = new System.Drawing.Point(701, 316);
             this.button_save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_save.Name = "button_save";
@@ -102,8 +96,8 @@ namespace Age_of_Villagers
             // 
             // button_open
             // 
-            this.button_open.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_open.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_open.BackColor = System.Drawing.SystemColors.Info;
+            this.button_open.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_open.Location = new System.Drawing.Point(623, 364);
             this.button_open.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_open.Name = "button_open";
@@ -115,8 +109,8 @@ namespace Age_of_Villagers
             // 
             // button_new
             // 
-            this.button_new.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_new.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_new.BackColor = System.Drawing.SystemColors.Info;
+            this.button_new.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_new.Location = new System.Drawing.Point(767, 364);
             this.button_new.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_new.Name = "button_new";
@@ -129,22 +123,25 @@ namespace Age_of_Villagers
             // radioButton_tree
             // 
             this.radioButton_tree.AutoSize = true;
+            this.radioButton_tree.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButton_tree.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton_tree.Location = new System.Drawing.Point(687, 185);
             this.radioButton_tree.Name = "radioButton_tree";
-            this.radioButton_tree.Size = new System.Drawing.Size(68, 29);
+            this.radioButton_tree.Size = new System.Drawing.Size(67, 25);
             this.radioButton_tree.TabIndex = 1;
             this.radioButton_tree.TabStop = true;
             this.radioButton_tree.Text = "Tree";
-            this.radioButton_tree.UseVisualStyleBackColor = true;
+            this.radioButton_tree.UseVisualStyleBackColor = false;
             this.radioButton_tree.Click += new System.EventHandler(this.radioButton_tree_Click);
             this.radioButton_tree.Enter += new System.EventHandler(this.label_Click);
             // 
             // radioButton_house
             // 
             this.radioButton_house.AutoSize = true;
+            this.radioButton_house.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton_house.Location = new System.Drawing.Point(687, 220);
             this.radioButton_house.Name = "radioButton_house";
-            this.radioButton_house.Size = new System.Drawing.Size(88, 29);
+            this.radioButton_house.Size = new System.Drawing.Size(83, 25);
             this.radioButton_house.TabIndex = 2;
             this.radioButton_house.TabStop = true;
             this.radioButton_house.Text = "House";
@@ -154,9 +151,10 @@ namespace Age_of_Villagers
             // radioButton_water
             // 
             this.radioButton_water.AutoSize = true;
+            this.radioButton_water.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton_water.Location = new System.Drawing.Point(687, 255);
             this.radioButton_water.Name = "radioButton_water";
-            this.radioButton_water.Size = new System.Drawing.Size(142, 29);
+            this.radioButton_water.Size = new System.Drawing.Size(136, 25);
             this.radioButton_water.TabIndex = 3;
             this.radioButton_water.TabStop = true;
             this.radioButton_water.Text = "Water Source";
@@ -165,24 +163,39 @@ namespace Age_of_Villagers
             // 
             // nationList
             // 
+            this.nationList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.nationList.FormattingEnabled = true;
             this.nationList.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.nationList.Location = new System.Drawing.Point(675, 126);
+            this.nationList.Location = new System.Drawing.Point(675, 131);
             this.nationList.Name = "nationList";
             this.nationList.Size = new System.Drawing.Size(205, 33);
             this.nationList.TabIndex = 4;
             this.nationList.Text = "Nation Name";
             this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(701, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 34);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Village Name";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(932, 434);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.nationList);
             this.Controls.Add(this.radioButton_water);
             this.Controls.Add(this.button_new);
@@ -218,6 +231,7 @@ namespace Age_of_Villagers
         private System.Windows.Forms.RadioButton radioButton_house;
         private System.Windows.Forms.RadioButton radioButton_water;
         private System.Windows.Forms.ComboBox nationList;
+        private System.Windows.Forms.Button button1;
     }
 }
 

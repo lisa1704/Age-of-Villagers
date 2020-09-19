@@ -58,8 +58,8 @@ namespace Age_of_Villagers
 
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
-            label_village_name.Text = CreateNewVillageForm.village_naaam;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
-
+            //label_village_name.Text = CreateNewVillageForm.village_naaam;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
+            button1.Text = CreateNewVillageForm.village_naaam;
 
         }
 
@@ -206,6 +206,9 @@ namespace Age_of_Villagers
         {
             
             nation_type = nationList.Text;
+            AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
+            iNation = abstractNationCreator.CreateNation();
+            MessageBox.Show("Please Click on the drawing panel to Initialize Terrain Color");
             //drawing_space.BackColor = iNation.getTerrainColor();
             //newVillageEdit.ReDrawVillage(graphics,iNation);
 
@@ -219,9 +222,17 @@ namespace Age_of_Villagers
 
         private void button_open_Click(object sender, EventArgs e)
         {
+
+            AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
+            iNation = abstractNationCreator.CreateNation();
             newVillageEdit = villageOpen.ReformVillage();
             Refresh();
             newVillageEdit.ReDrawVillage(graphics, iNation);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Press 'New Village' Button to Enter Village Name ");
         }
 
         private void button_new_Click(object sender, EventArgs e)  // Will Send to the Create New Village Form and act accordingly
@@ -229,6 +240,7 @@ namespace Age_of_Villagers
             CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();  
             new_villageform_object.Show();
             drawing_space.Invalidate();  // Clearing the Drawing Space when a new village is created
+            this.Hide();
     
         }
     }

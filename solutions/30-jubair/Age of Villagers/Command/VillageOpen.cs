@@ -32,6 +32,11 @@ namespace Age_of_Villagers.Village_Saving
                 fileName = ofd.FileName;
             }
 
+            if (fileName == null)
+            {
+                return newVillageEdit;
+            }
+
             Stream stream = File.Open(fileName, FileMode.Open);
             StreamReader stream_reader = new StreamReader(stream);
             json = stream_reader.ReadLine();

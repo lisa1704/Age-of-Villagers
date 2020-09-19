@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
 
         string name;
