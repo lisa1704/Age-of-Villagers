@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
     interface INation
     {
-        void DrawTree();
+        void DrawTree(Graphics graphics, Point point);
         void DrawHouse();
         void DrawWaterSource();
         void SetWaterSource();

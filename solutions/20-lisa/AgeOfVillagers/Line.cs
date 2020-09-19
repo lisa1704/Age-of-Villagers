@@ -8,8 +8,6 @@ namespace AgeOfVillagers
     
     class Line : IShape
     {
-        Graphics graphics;
-        Pen pen;
         private Point p1;
         private Point p2;
 

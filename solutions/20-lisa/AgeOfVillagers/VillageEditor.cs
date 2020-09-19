@@ -20,7 +20,7 @@ namespace AgeOfVillagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> watersource_point = new List<Point>();
-    
+        NationFactory nationFactory = new NationFactory();
 
         public VillageEditor()
         {
@@ -35,7 +35,7 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                nationFactory.GetNation(vName).DrawTree(graphics,point)
             }
             foreach (Point point in house_point)
             {
