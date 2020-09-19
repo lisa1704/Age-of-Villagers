@@ -19,6 +19,15 @@ namespace AgeOfVillagers.Test
         }
 
         [Fact]
+        public void SetVillageNameTest()
+        {
+            Villagestate state = new Villagestate(villagename, null, null, null);
+            state.SetVillageName("new name");
+            Assert.Equal("new name", state.villagename);
+            Assert.Equal("new name", state.GetVillageName());
+        }
+
+        [Fact]
         public void StateHouseTest()
         {
             points = new List<Point>();
