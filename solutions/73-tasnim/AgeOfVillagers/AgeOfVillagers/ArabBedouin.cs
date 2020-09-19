@@ -11,7 +11,7 @@ namespace AgeOfVillagers
     {
         public Color Color_Terrain()
         {
-            return Color.YellowGreen;
+            return Color.LightYellow;
         }
 
         public void Draw_House(Graphics g, Point p)
