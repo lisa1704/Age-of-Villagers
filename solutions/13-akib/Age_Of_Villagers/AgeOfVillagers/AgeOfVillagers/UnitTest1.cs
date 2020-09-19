@@ -9,7 +9,8 @@ namespace AgeOfVillagers
         [TestMethod]
         public void TestMethod1()
         {
-            
+            Form1 gameForm = new Form1();
+            Assert.AreEqual("", gameForm.getStatus());
         }
     }
 }

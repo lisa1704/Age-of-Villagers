@@ -21,17 +21,17 @@ namespace AgeOfVillagers
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-
+            MessageBox.Show(VillageName.Text);
         }
 
         private void Nation_TextChanged(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(Nation.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
