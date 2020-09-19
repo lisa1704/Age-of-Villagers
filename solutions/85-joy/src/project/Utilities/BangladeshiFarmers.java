@@ -6,6 +6,7 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class BangladeshiFarmers implements INation{
+    private  String TerrainColor = "GREEN";
 
     public BangladeshiFarmers(){
         super();
@@ -39,5 +40,10 @@ public class BangladeshiFarmers implements INation{
     @Override
     public void DrawWaterSource() {
 
+    }
+
+    @Override
+    public String getTerrainColor() {
+        return TerrainColor;
     }
 }
