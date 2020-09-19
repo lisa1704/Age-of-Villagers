@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Orchid;
+            this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.select_nation);
             this.panel1.Controls.Add(this.open_village);
             this.panel1.Controls.Add(this.new_village);
@@ -63,11 +63,10 @@
             // select_nation
             // 
             this.select_nation.AccessibleDescription = "";
-            this.select_nation.BackColor = System.Drawing.Color.Orchid;
+            this.select_nation.BackColor = System.Drawing.Color.Teal;
             this.select_nation.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.select_nation.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.select_nation.ForeColor = System.Drawing.Color.FloralWhite;
-            this.select_nation.FormattingEnabled = true;
             this.select_nation.Items.AddRange(new object[] {
             "Egyptian Kings",
             "Bangladeshi Farmers",
@@ -82,7 +81,7 @@
             // 
             // open_village
             // 
-            this.open_village.BackColor = System.Drawing.Color.DarkOrchid;
+            this.open_village.BackColor = System.Drawing.Color.DarkCyan;
             this.open_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.open_village.ForeColor = System.Drawing.Color.FloralWhite;
             this.open_village.Location = new System.Drawing.Point(155, 488);
@@ -96,7 +95,7 @@
             // 
             // new_village
             // 
-            this.new_village.BackColor = System.Drawing.Color.DarkOrchid;
+            this.new_village.BackColor = System.Drawing.Color.DarkCyan;
             this.new_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.new_village.ForeColor = System.Drawing.Color.FloralWhite;
             this.new_village.Location = new System.Drawing.Point(17, 488);
@@ -110,7 +109,7 @@
             // 
             // save_village
             // 
-            this.save_village.BackColor = System.Drawing.Color.DarkOrchid;
+            this.save_village.BackColor = System.Drawing.Color.DarkCyan;
             this.save_village.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.save_village.ForeColor = System.Drawing.Color.FloralWhite;
             this.save_village.Location = new System.Drawing.Point(87, 443);
@@ -164,13 +163,14 @@
             // 
             // village_name
             // 
-            this.village_name.BackColor = System.Drawing.Color.Orchid;
+            this.village_name.BackColor = System.Drawing.Color.Teal;
             this.village_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.village_name.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.village_name.ForeColor = System.Drawing.Color.FloralWhite;
             this.village_name.Location = new System.Drawing.Point(28, 119);
             this.village_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.village_name.Name = "village_name";
+            this.village_name.ReadOnly = true;
             this.village_name.Size = new System.Drawing.Size(248, 28);
             this.village_name.TabIndex = 1;
             this.village_name.Text = "Edit Village Name";
@@ -179,7 +179,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Orchid;
+            this.textBox1.BackColor = System.Drawing.Color.Teal;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.FloralWhite;
@@ -194,7 +194,7 @@
             // 
             // drawing_panel
             // 
-            this.drawing_panel.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.drawing_panel.BackColor = System.Drawing.Color.Azure;
             this.drawing_panel.Location = new System.Drawing.Point(71, 56);
             this.drawing_panel.Name = "drawing_panel";
             this.drawing_panel.Size = new System.Drawing.Size(600, 400);
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1085, 555);
             this.Controls.Add(this.drawing_panel);
             this.Controls.Add(this.panel1);

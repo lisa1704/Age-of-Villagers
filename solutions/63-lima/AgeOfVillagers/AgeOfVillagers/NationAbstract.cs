@@ -34,4 +34,17 @@ public abstract class NationAbstract
     {
         panel.BackColor = color;
     }
+
+    public IHouse getHouseType()
+    {
+        return this.house;
+    }
+    public ITree getTreeType()
+    {
+        return this.tree;
+    }
+    public IWaterSource getWaterSourceType()
+    {
+        return this.waterSource;
+    }
 }

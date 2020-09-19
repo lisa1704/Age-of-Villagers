@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         Graphics newg ;
         Village myvillage = new Village();
         SaveVillage myvillageSaver;
+        NullNation nullnation = new NullNation();
         public CreateVillageWindow()
         {
             InitializeComponent();
@@ -35,10 +36,16 @@ namespace AgeOfVillagers
 
         private void open_village_Click(object sender, EventArgs e)
         {
-            myvillage =  myvillageSaver.OpenState();
-            village_name.Text = myvillage.Name;
-            myvillage.paintAgain(nation);
-
+            if (select_nation.SelectedIndex == -1 )
+            {
+                nullnation.showMessage();
+            }
+            else 
+            {
+                myvillage = myvillageSaver.OpenState();
+                village_name.Text = myvillage.Name;
+                myvillage.paintAgain(nation);
+            }
         }
 
         private void village_name_TextChanged(object sender, EventArgs e)
@@ -73,41 +80,47 @@ namespace AgeOfVillagers
 
         private void drawing_panel_MouseClick(object sender, MouseEventArgs e)
         {
-            if(tree.Checked == true)
+            if (select_nation.SelectedIndex == -1)
             {
-                nation.drawTree(e.X, e.Y);
-                myvillage.addTree(e.X,e.Y);
+                nullnation.showMessage();
             }
-            else if(house.Checked == true)
+            else 
             {
-                nation.drawHouse(e.X, e.Y);
-                myvillage.addHouse(e.X, e.Y);
+                if (tree.Checked == true)
+                {
+                    nation.drawTree(e.X, e.Y);
+                    myvillage.addTree(e.X, e.Y);
+                }
+                else if (house.Checked == true)
+                {
+                    nation.drawHouse(e.X, e.Y);
+                    myvillage.addHouse(e.X, e.Y);
+                }
+                else if (water_resource.Checked == true)
+                {
+                    nation.drawWaterSource(e.X, e.Y);
+                    myvillage.addWater_Resource(e.X, e.Y);
+                }
             }
-            else if(water_resource.Checked == true)
-            {
-                nation.drawWaterSource(e.X, e.Y);
-                myvillage.addWater_Resource(e.X, e.Y);
-            }
-
         }
 
         private void selectNation_TextChanged(object sender, EventArgs e)
         {
-            if( select_nation.Text == "Egyptian Kings")
+            if (select_nation.Text == "Egyptian Kings")
             {
-                nation = new EgyptianKings(newg, drawing_panel);   
+                nation = new EgyptianKings(newg, drawing_panel);
             }
-            else if(select_nation.Text == "Bangladeshi Farmers")
+            else if (select_nation.Text == "Bangladeshi Farmers")
             {
                 nation = new BangladeshiFarmers(newg, drawing_panel);
             }
-            else if(select_nation.Text == "Arab Bedouin")
+            else if (select_nation.Text == "Arab Bedouin")
             {
-                nation = new ArabBedouin(newg, drawing_panel);    
+                nation = new ArabBedouin(newg, drawing_panel);
             }
-            else if(select_nation.Text == "Inuit Hunters")
+            else if (select_nation.Text == "Inuit Hunters")
             {
-                nation = new InuitHunters(newg, drawing_panel);  
+                nation = new InuitHunters(newg, drawing_panel);
             }
         }
     }
