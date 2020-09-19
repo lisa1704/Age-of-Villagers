@@ -13,7 +13,7 @@ namespace AgeOfVillagers
         Pen pen = new Pen(Color.Pink);
         public void DrawHouse(Graphics g, Point p)
         {
-            BangladeshiHouse bdfarmerHouse = new BangladeshiHouse(new Point(p.X, p.Y), new Point(p.X - 70, p.Y + 40), new Point(p.X + 70, p.Y + 120));
+            BangladeshiHouse bdfarmerHouse = new BangladeshiHouse(new Point(p.X, p.Y), new Point(p.X - 60, p.Y + 30), new Point(p.X + 60, p.Y + 110));
             bdfarmerHouse.draw(g);
         }
 

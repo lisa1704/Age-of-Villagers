@@ -112,6 +112,7 @@ namespace AgeOfVillagers
             {
                 sourceLocations.Add(e.Location);
             }
+            drawinPanel.Invalidate();
         }
     }
 }
