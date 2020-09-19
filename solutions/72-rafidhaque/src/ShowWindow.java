@@ -16,7 +16,7 @@ public class ShowWindow extends Application {
     public MouseClickManager mouseClickManager = new MouseClickManager();
 
     Group drawSpace = new Group();
-    ArrayList<StateOfComponent> stateOfComponents;
+    ArrayList<StateOfComponent> stateOfComponents = null;
     ArrayList<ArrayList<StateOfComponent>> previousStatesOfComponents = null;
 
     DrawHouse house = new DrawHouse(drawSpace);
@@ -50,7 +50,8 @@ public class ShowWindow extends Application {
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing(), stateOfComponents);
+                mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
+                stateOfComponents.add(mouseClickManager.getStateOfComponent());
             }
         });
 

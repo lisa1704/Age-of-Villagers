@@ -1,13 +1,18 @@
 import javafx.scene.input.MouseEvent;
 
-import java.util.ArrayList;
-
 public class MouseClickManager {
-    public void onMousePressed(MouseEvent mouseEvent, IDrawComponent drawComponent, ArrayList<StateOfComponent> allComponents) {
+
+    StateOfComponent stateOfComponent = null;
+
+    public StateOfComponent getStateOfComponent() {
+        return stateOfComponent;
+    }
+
+    public void onMousePressed(MouseEvent mouseEvent, IDrawComponent drawComponent) {
         double x = mouseEvent.getX();
         double y = mouseEvent.getY();
-        StateOfComponent stateOfComponent = new StateOfComponent(x, y, drawComponent);
-        allComponents.add(stateOfComponent);
+        stateOfComponent = new StateOfComponent(x, y, drawComponent);
+
         System.out.println(x+" "+y);
         if (x + 24 <= 600 && y + 24 <= 400) {
             drawComponent.setX(x);
