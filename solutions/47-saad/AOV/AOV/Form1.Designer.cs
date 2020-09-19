@@ -105,6 +105,7 @@
             // 
             // Nation
             // 
+            this.Nation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nation.FormattingEnabled = true;
             this.Nation.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
@@ -113,7 +114,7 @@
             "Inuit Hunters"});
             this.Nation.Location = new System.Drawing.Point(616, 101);
             this.Nation.Name = "Nation";
-            this.Nation.Size = new System.Drawing.Size(169, 21);
+            this.Nation.Size = new System.Drawing.Size(169, 24);
             this.Nation.TabIndex = 11;
             this.Nation.Text = "Select nation";
             this.Nation.SelectedIndexChanged += new System.EventHandler(this.Nation_SelectedIndexChanged);
