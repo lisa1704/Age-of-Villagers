@@ -49,7 +49,7 @@
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="house_RadioButton" layoutX="719.0" layoutY="243.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="127.0" text="House">
+      <RadioButton fx:id="house_RadioButton" layoutX="719.0" layoutY="243.0" mnemonicParsing="false" onAction="#House_Button_Clicked" prefHeight="24.0" prefWidth="127.0" text="House">
          <font>
             <Font size="14.0" />
          </font>

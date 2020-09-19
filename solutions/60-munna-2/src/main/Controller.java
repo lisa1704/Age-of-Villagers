@@ -1,12 +1,13 @@
 package main;
 
-import com.sun.prism.shader.Solid_ImagePattern_Loader;
+import house.BangladeshiFarmersHouse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -51,7 +52,8 @@ public class Controller implements Initializable {
 
     public static Label vn_label,cn_label;
 
-
+    @FXML
+    public Canvas drawing_space_canvas;
 
 
     @FXML
@@ -70,5 +72,10 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cn_label = country_name;
         vn_label = village_name;
+    }
+
+    public void House_Button_Clicked(ActionEvent actionEvent) {
+        BangladeshiFarmersHouse bangladeshiFarmersHouse = new BangladeshiFarmersHouse();
+        bangladeshiFarmersHouse.draw_house(drawing_space_canvas);
     }
 }
