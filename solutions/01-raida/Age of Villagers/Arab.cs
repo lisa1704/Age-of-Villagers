@@ -22,6 +22,8 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Arhouse(p, 50, 20);
+            if (g != null)
+                house.draw(g, pen);
             return house;
         }
 
@@ -35,6 +37,8 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Artree(p,50,20);
+            if (g != null)
+                tree.draw(g, pen);
             return tree;
         }
 

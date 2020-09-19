@@ -44,11 +44,12 @@ namespace Age_of_Villagers
             else if(text == "House")
             {
                 IShape house=nation.draw_house(new Point(x, y));
+                house.draw(g, pen);
             }
             else if(text == "River")
             {
                 IShape river=nation.draw_river(new Point(x, y));
-               
+                river.draw(g, pen);
             }
 
         }
@@ -84,7 +85,6 @@ namespace Age_of_Villagers
             string selectedNation = nationList.Items[nationList.SelectedIndex].ToString();
             nation_create(selectedNation);
             village_name(villageNameBox.Text);
-            nation.set_graphics(g);
             villagePanel.BackColor = nation.set_background();
         }
 
@@ -111,6 +111,7 @@ namespace Age_of_Villagers
             }
             else if (open.ShowDialog() == DialogResult.OK & nation != null)
             {
+                nation.set_graphics(g);
                 if (System.IO.Path.GetExtension(open.FileName).Equals(".aov"))
                 {
                     command.execute(open.FileName, nation);

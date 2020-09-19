@@ -17,7 +17,8 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new igloo(p, 75,30);
-            house.draw(g, pen);
+            if(g!=null)
+                house.draw(g, pen);
             return house;
         }
 

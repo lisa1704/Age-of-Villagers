@@ -26,6 +26,8 @@ namespace Age_of_Villagers
         {
             tree_points.Add(p);
             tree = new Egtree(p, 40, 20);
+            if (g != null)
+                tree.draw(g,pen);
             return tree;
         }
 
@@ -33,6 +35,8 @@ namespace Age_of_Villagers
         {
             house_points.Add(p);
             house = new Eghouse(p, 40, 30);
+            if (g != null)
+                house.draw(g, pen);
             return house;
         }
 
@@ -40,6 +44,8 @@ namespace Age_of_Villagers
         {
             river_points.Add(p);
             river = new circle(p,30);
+            if (g != null)
+                river.draw(g, pen);
             return river;
         }
 
