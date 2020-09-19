@@ -50,8 +50,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            var message = new StringBuilder();
-            MessageBox.Show("Drawing Water for Egyptian Kings");
+            Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
+            circle.DrawShape();
         }
     }
 }
