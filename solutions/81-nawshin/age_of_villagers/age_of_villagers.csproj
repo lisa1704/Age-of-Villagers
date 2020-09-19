@@ -63,6 +63,7 @@
     <Compile Include="NoNation.cs" />
     <Compile Include="Openvillage.cs" />
     <Compile Include="Rectangle.cs" />
+    <Compile Include="Save.cs" />
     <Compile Include="SaveVillage.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Egyptian_Kings.cs" />
