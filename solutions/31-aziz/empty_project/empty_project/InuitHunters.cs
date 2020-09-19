@@ -8,5 +8,11 @@ namespace empty_project
 {
     class InuitHunters : AbstractNation
     {
+        public InuitHunters(Panel panel) : base(panel)
+        {
+            base.house = new InuitHuntersHouse();
+            base.tree = new InuitHuntersTree();
+            base.waterSource = new InuitHuntersWaterSource();
+        }
     }
 }
