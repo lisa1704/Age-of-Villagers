@@ -6,14 +6,18 @@ namespace AgeOfVillagers.Tree
 {
     public class EgyptianTree : CompositeShape
     {
-        public void Draw(ElementSize sz, Graphics g, Point p)
+     
+        public EgyptianTree(Point p, ElementSize sz)
         {
-            Pen pen = new Pen(Color.Black);
+            Point p1 = new Point (p.X + sz.width / 3, p.Y - (sz.height - 4));
+            Point p2 = new Point(p.X - sz.width / 3, p.Y - (sz.height - 4));
+            Point p3 = new Point(p.X - sz.width / 2, p.Y - sz.height);
+            Point p4 = new Point(p.X + sz.width / 2, p.Y - sz.height);
 
-            g.DrawLine(pen, p.X, p.Y, p.X - sz.width / 3, p.Y - (sz.height-4));
-            g.DrawLine(pen, p.X, p.Y, p.X + sz.width / 3, p.Y - (sz.height-4));
-            g.DrawLine(pen, p.X - sz.width / 3, p.Y - (sz.height - 4),p.X-sz.width/2,p.Y-sz.height);
-            g.DrawLine(pen, p.X + sz.width / 3, p.Y - (sz.height - 4),p.X+sz.width/2, p.Y - sz.height);
+            AddComponent(new Line(p.X, p.Y, p1.X, p1.Y));
+            AddComponent(new Line(p.X, p.Y, p2.X, p2.Y));
+            AddComponent(new Line(p1.X, p1.Y, p4.X, p4.Y));
+            AddComponent(new Line(p2.X, p2.Y, p3.X, p3.Y));
         }
     }
 }

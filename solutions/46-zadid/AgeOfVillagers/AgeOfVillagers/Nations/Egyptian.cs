@@ -34,10 +34,9 @@ namespace AgeOfVillagers
 
         public override void DrawTree(Graphics g, Point location)
         {
-            EgyptianTree egyptianTree = new EgyptianTree();
-            TreeContext treeContext = new TreeContext(egyptianTree, g, location, treeSize);
+            EgyptianTree egyptianTree = new EgyptianTree(location,treeSize);
 
-            treeContext.TreeDrawing();
+            egyptianTree.Draw(g);
 
             Debug.WriteLine("Drawing Egyptian Tree");
         }
