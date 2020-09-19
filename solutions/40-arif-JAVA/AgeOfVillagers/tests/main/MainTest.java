@@ -39,7 +39,7 @@ public class MainTest extends ApplicationTest {
     @Test
     public void testEnglishInput () {
 //        Label label = (Label) GuiTest.find("#label");
-//        clickOn("#inputField");
+//        clickOn("#newVillageBTN");
 //        write("This is a test!");
 
         assertEquals("program output", "program output");

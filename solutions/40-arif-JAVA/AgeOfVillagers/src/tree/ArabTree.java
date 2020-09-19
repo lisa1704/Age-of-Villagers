@@ -17,8 +17,6 @@ public class ArabTree implements ITree {
     @Override
     public void draw() {
 
-        canvas = new Canvas(525,500);
-
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 

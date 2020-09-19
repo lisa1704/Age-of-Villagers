@@ -9,10 +9,10 @@ import javafx.scene.shape.ArcType;
 
 public class InuitHunterHouse implements IHouse {
 
-    Canvas canvas = new Canvas(400,400);
+    Canvas canvas;
     public InuitHunterHouse(){
-//        MyCanvas myCanvas = MyCanvas.getInstance();
-//        this.canvas = myCanvas.getCanvas();
+        MyCanvas myCanvas = MyCanvas.getInstance();
+        this.canvas = myCanvas.getCanvas();
     }
     @Override
     public void draw() {

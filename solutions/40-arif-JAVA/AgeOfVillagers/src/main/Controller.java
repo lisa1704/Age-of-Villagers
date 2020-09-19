@@ -39,7 +39,7 @@ public class Controller {
 
 
     private String nation[] =
-            {"Select Village Type","Bangladeshi Farmer", "Arab Bedouin", "Egyptian King", "Inuit Hunter"};
+            {"Select Village Type","Bangladeshi Farmer", "Arab Bedouin", "Egyptian King", "Inuit Hunter","jhj"};
 
     @FXML
     private Button newVillageBTN;

@@ -8,11 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class NoTree implements ITree{
-    Canvas canvas;
-
     public NoTree(){
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
     }
 
     @Override

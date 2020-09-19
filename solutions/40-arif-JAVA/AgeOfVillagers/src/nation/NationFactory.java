@@ -1,5 +1,7 @@
 package nation;
 
+import canvas.MyCanvas;
+
 public class NationFactory {
 
     public INation getNation(String nationType) {
@@ -13,7 +15,8 @@ public class NationFactory {
         else if (nationType == "Inuit Hunter")
             return new InuitHunters();
         else {
-            return new NoNations();
+            NoNationSingleton noNationSingleton = NoNationSingleton.getInstance();
+            return noNationSingleton.getNation();
         }
     }
 }
