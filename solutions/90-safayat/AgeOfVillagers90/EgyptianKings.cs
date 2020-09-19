@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    class EgyptianKings : INation
+    public class EgyptianKings : INation
     {
         Pen p = new Pen(Color.Red);
 

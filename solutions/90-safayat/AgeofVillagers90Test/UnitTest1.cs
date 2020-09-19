@@ -23,5 +23,24 @@ namespace AgeofVillagers90Test
             Color colorMatch1 = Color.YellowGreen;
             Assert.AreEqual(colorGet1, colorMatch1);
         }
+
+        [TestMethod]
+        public void BDfarmersColorTest()
+        {
+            BangladeshiFarmers BDFcolor = new BangladeshiFarmers();
+            Color colorGet2 = BDFcolor.BackGroundColor();
+            Color colorMatch2 = Color.ForestGreen;
+            Assert.AreEqual(colorGet2, colorMatch2);
+        }
+
+        [TestMethod]
+        public void EKColorTest()
+        {
+            EgyptianKings EKcolor = new EgyptianKings();
+            Color colorGet2 = EKcolor.BackGroundColor();
+            Color colorMatch2 = Color.Yellow;
+            Assert.AreEqual(colorGet2, colorMatch2);
+        }
+
     }
 }
