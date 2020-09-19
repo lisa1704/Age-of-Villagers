@@ -77,6 +77,7 @@ namespace AgeOfVillagers90
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+            VillageNametextBox.Clear();
             HousePoints.Clear();
             TreePoints.Clear();
             WaterSourcePoints.Clear();
