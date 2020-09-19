@@ -4,7 +4,7 @@ using Xunit;
 namespace AgeOfVillagersTests
 {
     public class UnitTest1
-    {
+    {        
         [Fact]
         public void Test1()
         {

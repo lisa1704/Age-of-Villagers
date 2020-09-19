@@ -16,6 +16,7 @@ namespace AgeOfVillagers
         int x;
         int y;
         string text;
+        string nation;
         Graphics g;
 
         public MainWindow()
@@ -55,6 +56,7 @@ namespace AgeOfVillagers
             {
                 g.DrawRectangle(pen, x, y, 100, 100);
             }
+
            
         }
 
@@ -73,9 +75,10 @@ namespace AgeOfVillagers
             text = "WATER";
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void nationTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            nation = nationTypeCombo.Text;
+            
         }
     }
 }

@@ -82,7 +82,7 @@
             this.nationTypeCombo.Name = "nationTypeCombo";
             this.nationTypeCombo.Size = new System.Drawing.Size(151, 28);
             this.nationTypeCombo.TabIndex = 4;
-            this.nationTypeCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.nationTypeCombo.SelectedIndexChanged += new System.EventHandler(this.nationTypeCombo_SelectedIndexChanged);
             // 
             // saveButton
             // 
