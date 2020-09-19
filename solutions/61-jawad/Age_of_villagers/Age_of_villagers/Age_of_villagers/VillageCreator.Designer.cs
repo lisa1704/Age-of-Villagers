@@ -44,7 +44,7 @@
             // 
             // SaveVillage
             // 
-            this.SaveVillage.Location = new System.Drawing.Point(792, 319);
+            this.SaveVillage.Location = new System.Drawing.Point(789, 334);
             this.SaveVillage.Name = "SaveVillage";
             this.SaveVillage.Size = new System.Drawing.Size(121, 28);
             this.SaveVillage.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // OpenVillage
             // 
-            this.OpenVillage.Location = new System.Drawing.Point(856, 353);
+            this.OpenVillage.Location = new System.Drawing.Point(858, 368);
             this.OpenVillage.Name = "OpenVillage";
             this.OpenVillage.Size = new System.Drawing.Size(121, 29);
             this.OpenVillage.TabIndex = 3;
@@ -73,7 +73,7 @@
             // WaterSource
             // 
             this.WaterSource.AutoSize = true;
-            this.WaterSource.Location = new System.Drawing.Point(792, 252);
+            this.WaterSource.Location = new System.Drawing.Point(792, 262);
             this.WaterSource.Name = "WaterSource";
             this.WaterSource.Size = new System.Drawing.Size(118, 24);
             this.WaterSource.TabIndex = 8;
@@ -97,7 +97,7 @@
             // Tree
             // 
             this.Tree.AutoSize = true;
-            this.Tree.Location = new System.Drawing.Point(792, 211);
+            this.Tree.Location = new System.Drawing.Point(792, 202);
             this.Tree.Name = "Tree";
             this.Tree.Size = new System.Drawing.Size(58, 24);
             this.Tree.TabIndex = 10;
@@ -108,7 +108,7 @@
             // 
             // NewVillage
             // 
-            this.NewVillage.Location = new System.Drawing.Point(729, 353);
+            this.NewVillage.Location = new System.Drawing.Point(719, 368);
             this.NewVillage.Name = "NewVillage";
             this.NewVillage.Size = new System.Drawing.Size(121, 29);
             this.NewVillage.TabIndex = 11;
