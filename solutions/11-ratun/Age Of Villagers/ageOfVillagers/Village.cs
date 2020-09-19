@@ -16,7 +16,9 @@
         }
         public void Open(string villagename)
         {
-            
+            VillageState state = new VillageState();
+            state.SetState(villagename);
+            //openning the village
         }
         public void Save()
         {

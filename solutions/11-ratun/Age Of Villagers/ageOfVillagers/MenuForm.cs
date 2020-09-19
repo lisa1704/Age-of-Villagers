@@ -13,6 +13,7 @@ namespace ageOfVillagers
     public partial class MenuForm : Form
     {
         private String text="";
+        List<string> VillageNameList = new List<string>();
         public MenuForm()
         {
             InitializeComponent();
@@ -52,14 +53,14 @@ namespace ageOfVillagers
         {
             Village v = new Village();
             v.CreateVillage(Nation.Text, VillageName.Text);
+            VillageNameList.Add(VillageName.Text);
             text += "Creating the village. ";
             //ageOfVillagers newVillage = new ageOfVillagers();
         }
 
         public void OpenVillage_Click(object sender, EventArgs e)
         {
-            string[] VillageList = { };
-            foreach (string i in VillageList)
+            foreach (string i in VillageNameList)
             {
                 if (VillageName.Text == i)
                 {
