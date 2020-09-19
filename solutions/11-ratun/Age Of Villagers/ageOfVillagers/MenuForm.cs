@@ -23,24 +23,6 @@ namespace ageOfVillagers
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //ageOfVillagers.save();
-            text += "Saving the village. ";
-        }
-
-        private void MenuForm_Load(object sender, EventArgs e)
-        {
-            //ageOfVillagers.Load();
-            text += "Loading the village. ";
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            text += "Adding a tree. ";
-        }
-
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(VillageName.Text);
@@ -49,6 +31,11 @@ namespace ageOfVillagers
         private void Nation_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(Nation.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            text += "Adding a tree. ";
         }
 
         private void House_Click(object sender, EventArgs e)
@@ -72,6 +59,20 @@ namespace ageOfVillagers
             text += "Opening the village. ";
             //ageOfVillagers.open(List<Village>);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //ageOfVillagers.save();
+            text += "Saving the village. ";
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            //ageOfVillagers.Load();
+            text += "Loading the village. ";
+
+        }
+
         public String GetVillageName()
         {
             return VillageName.Text;
