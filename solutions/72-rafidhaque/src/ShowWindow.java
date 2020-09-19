@@ -57,6 +57,7 @@ public class ShowWindow extends Application {
 
         gridOfControls.newButton.setOnAction(event -> {
             drawSpace.getChildren().clear();
+            stateOfComponents.clear();
             Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
             newRectangle.draw();
         });
