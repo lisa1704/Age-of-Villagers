@@ -32,7 +32,7 @@
             this.SaveVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Canvas = new System.Windows.Forms.Panel();
             this.Label = new System.Windows.Forms.Label();
             this.Nation = new System.Windows.Forms.ComboBox();
             this.Tree = new System.Windows.Forms.RadioButton();
@@ -82,13 +82,13 @@
             this.NewVillage.Text = "New village";
             this.NewVillage.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // Canvas
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Location = new System.Drawing.Point(10, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 7;
+            this.Canvas.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Canvas.Location = new System.Drawing.Point(10, 14);
+            this.Canvas.Name = "Canvas";
+            this.Canvas.Size = new System.Drawing.Size(600, 400);
+            this.Canvas.TabIndex = 7;
             // 
             // Label
             // 
@@ -167,7 +167,7 @@
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Nation);
             this.Controls.Add(this.Label);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Canvas);
             this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.OpenVillage);
             this.Controls.Add(this.SaveVillage);
@@ -185,7 +185,7 @@
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button NewVillage;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Canvas;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.ComboBox Nation;
         private System.Windows.Forms.RadioButton Tree;
