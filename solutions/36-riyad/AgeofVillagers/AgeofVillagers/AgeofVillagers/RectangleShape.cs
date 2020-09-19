@@ -18,7 +18,8 @@ namespace AgeofVillagers
 
         public void Paint(Graphics g)
         {
-            throw new NotImplementedException();
+            var pen = new Pen(Color.Black, 1);
+            g.DrawLine(pen, leftTop, RightBottom);
         }
     }
 }
