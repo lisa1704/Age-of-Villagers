@@ -1,6 +1,9 @@
 package house;
 
+import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.MouseEvent;
 import shapes.Point;
 
 public class BangladeshiFarmersHouse implements IHouse {
@@ -15,8 +18,23 @@ public class BangladeshiFarmersHouse implements IHouse {
 
     @Override
     public void draw_house() {
-        
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+
+        canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                            calculating_points(new Point((int) event.getX(), (int) event.getY()));
+                            graphicsContext.strokeLine(top_center.x, top_center.y, top_left.x, top_left.y);
+                            graphicsContext.strokeLine(top_center.x, top_center.y, top_right.x, top_right.y);
+                            graphicsContext.strokeLine(top_left.x, top_left.y, top_right.x, top_right.y);
+                            graphicsContext.strokeLine(top_left.x, top_left.y, bottom_left.x, bottom_left.y);
+                            graphicsContext.strokeLine(bottom_left.x, bottom_left.y, bottom_right.x, bottom_right.y);
+                            graphicsContext.strokeLine(bottom_right.x, bottom_right.y, top_right.x, top_right.y);
+
+                    }
+                });
     }
+    
 
     @Override
     public void calculating_points(Point main_point) {
