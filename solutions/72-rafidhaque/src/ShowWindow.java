@@ -17,6 +17,7 @@ public class ShowWindow extends Application {
 
     Group drawSpace = new Group();
     ArrayList<StateOfComponent> stateOfComponents;
+    ArrayList<ArrayList<StateOfComponent>> previousStatesOfComponents = null;
 
     DrawHouse house = new DrawHouse(drawSpace);
     DrawTree tree = new DrawTree(drawSpace);
@@ -55,6 +56,7 @@ public class ShowWindow extends Application {
 
 
         gridOfControls.newButton.setOnAction(event -> {
+            previousStatesOfComponents.add(stateOfComponents);
             drawSpace.getChildren().clear();
             Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
             newRectangle.draw();
