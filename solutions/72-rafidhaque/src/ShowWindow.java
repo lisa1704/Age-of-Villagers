@@ -7,15 +7,25 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class ShowWindow extends Application {
     public Stage window;
     public IDrawComponent nowDrawing;
+
     public MouseClickManager mouseClickManager = new MouseClickManager();
+
     Group drawSpace = new Group();
+    ArrayList<StateOfComponent> stateOfComponents;
+
     DrawHouse house = new DrawHouse(drawSpace);
     DrawTree tree = new DrawTree(drawSpace);
     DrawWater water = new DrawWater(drawSpace);
     public GridOfControls gridOfControls = new GridOfControls(house, tree, water);
+
+    public void setDrawSpace(Group drawSpace) {
+        this.drawSpace = drawSpace;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -39,15 +49,15 @@ public class ShowWindow extends Application {
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
+                mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing(), stateOfComponents);
             }
         });
 
+
         gridOfControls.newButton.setOnAction(event -> {
-            Group newDrawSpace = new Group();
-            layout.setLeft(newDrawSpace);
-            Rectangle newRectange = new Rectangle(newDrawSpace, 0, 0, 600, 400);
-            newRectange.draw();
+            drawSpace.getChildren().clear();
+            Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
+            newRectangle.draw();
         });
 
         window.setScene(scene);
