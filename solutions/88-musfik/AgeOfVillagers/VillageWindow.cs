@@ -56,15 +56,15 @@ namespace AgeOfVillagers
                 Point point = new Point(e.X, e.Y);
                 if (tree_btn.Checked)
                 {
-                    village.DrawTree(g, p, point);
+                    village.AddTree(g, p, point);
                 }
                 else if (House_btn.Checked)
                 {
-                    village.DrawHouse(g, p, point);
+                    village.AddHouse(g, p, point);
                 }
                 else if (water_btn.Checked)
                 {
-                    village.DrawWaterResource(g, p, point);
+                    village.AddWaterResource(g, p, point);
                 }
             }
         }

@@ -43,49 +43,45 @@ namespace AgeOfVillagers
             {
                 Point point = tree_items[i].getItemLocation();
                 tree_items[i] = nation.getTree(point);
-                IShape shape = tree_items[i].getItemShape(point);
-                shape.Draw(g, p);
+                DrawItem(g, p, point, tree_items[i]);
             }
             for (int i = 0; i < house_items.Count; i++)
             {
                 Point point = house_items[i].getItemLocation();
                 house_items[i] = nation.getHouse(point);
-                IShape shape = house_items[i].getItemShape(point);
-                shape.Draw(g, p);
+                DrawItem(g, p, point, house_items[i]);
             }
             for (int i = 0; i < waterResource_items.Count; i++)
             {
                 Point point = waterResource_items[i].getItemLocation();
                 waterResource_items[i] = nation.getWaterResource(point);
-                IShape shape = waterResource_items[i].getItemShape(point);
-                shape.Draw(g, p);
+                DrawItem(g, p, point, waterResource_items[i]);
             }
         }
-        internal void DrawTree(Graphics g, Pen p, Point point)
+        internal void DrawItem(Graphics g, Pen p, Point point,IVillageItem item)
+        {
+            IShape shape = item.getItemShape(point);
+            shape.Draw(g, p);
+        }
+        internal void AddTree(Graphics g, Pen p, Point point)
         {
             var tree = nation.getTree(point);
-            IShape shape = tree.getItemShape(point);
-            shape.Draw(g, p);
-
             tree_items.Add(tree);
+            DrawItem(g, p, point, tree);
         }
         
-        internal void DrawHouse(Graphics g, Pen p, Point point)
+        internal void AddHouse(Graphics g, Pen p, Point point)
         {
             var house = nation.getHouse(point);
-            IShape shape = house.getItemShape(point);
-            shape.Draw(g, p);
-
             house_items.Add(house);
+            DrawItem(g, p, point, house);
         }
 
-        internal void DrawWaterResource(Graphics g, Pen p, Point point)
+        internal void AddWaterResource(Graphics g, Pen p, Point point)
         {
             var water = nation.getWaterResource(point);
-            IShape shape = water.getItemShape(point);
-            shape.Draw(g, p);
-
             waterResource_items.Add(water);
+            DrawItem(g, p, point, water);
         }
     }
 }
