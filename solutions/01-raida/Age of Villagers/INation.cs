@@ -13,7 +13,7 @@ namespace Age_of_Villagers
         void set_villagename(string name);
         void set_graphics(Graphics g);
         IShape draw_tree(Point p);
-        void draw_house(Point p);
+        IShape draw_house(Point p);
         void draw_river(Point P);
         string get_villagename();
         List<Point> get_tree();

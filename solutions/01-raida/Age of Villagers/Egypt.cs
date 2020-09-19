@@ -30,11 +30,11 @@ namespace Age_of_Villagers
             return tree;
         }
 
-        public void draw_house(Point p)
+        public IShape draw_house(Point p)
         {
             house_points.Add(p);
             house = new Eghouse(p, 40, 30);
-            house.draw(g, pen);
+            return house;
         }
 
         public void draw_river(Point p)

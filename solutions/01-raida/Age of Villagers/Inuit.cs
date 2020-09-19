@@ -13,11 +13,11 @@ namespace Age_of_Villagers
         private string village_name;
         private Graphics g;
         private Pen pen = new Pen(Color.Black);
-        public void draw_house(Point p)
+        public IShape draw_house(Point p)
         {
             house_points.Add(p);
             house = new igloo(p, 75,30);
-            house.draw(g, pen);
+            return house;
         }
 
         public void draw_river(Point P)
