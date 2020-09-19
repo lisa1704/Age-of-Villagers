@@ -16,10 +16,16 @@ namespace age_of_villagers
         string item;
         string vilName;
         string nType;
+        SaveVillage savepoints;
 
         List<Point> house_point { get; set; } = new List<Point>();
         List<Point> tree_point { get; set; } = new List<Point>();
         List<Point> water_point { get; set; } = new List<Point>();
+
+        public void getPoints()
+        {
+            this.savepoints = new SaveVillage(vilName, house_point, tree_point, water_point);
+        }
 
 
         NationFactory n = new NationFactory();
