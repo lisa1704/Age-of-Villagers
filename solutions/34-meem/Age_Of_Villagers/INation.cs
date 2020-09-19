@@ -52,13 +52,29 @@ namespace Age_Of_Villagers
         {
             villageEditor.rdButtonHouse.Enabled = true;
             villageEditor.rdButtonTree.Enabled = true;
-            villageEditor.rdButtonWaterSrc.Enabled = false;
+            villageEditor.rdButtonWaterSrc.Enabled = true;
 
         }
 
         public void setTerrain(VillageEditorWindow villageEditor)
         {
             villageEditor.Panel1.BackColor = Color.Yellow;
+        }
+    }
+
+    public class InuitHunter : INation
+    {
+        public void setRadiobutton(VillageEditorWindow villageEditor)
+        {
+            villageEditor.rdButtonHouse.Enabled = true;
+            villageEditor.rdButtonTree.Enabled = false;
+            villageEditor.rdButtonWaterSrc.Enabled = false;
+
+        }
+
+        public void setTerrain(VillageEditorWindow villageEditor)
+        {
+            villageEditor.Panel1.BackColor = Color.White;
         }
     }
 
