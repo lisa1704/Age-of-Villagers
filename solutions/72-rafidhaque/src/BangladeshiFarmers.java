@@ -30,7 +30,13 @@ public class BangladeshiFarmers implements INation {
 
     @Override
     public void waterSource(DrawWater drawWater) {
-
+        drawWater.drawOuterLayer();
+        Line line1 = new Line(drawWater.x + 1, drawWater.y + 8, drawWater.x + 8, drawWater.y);
+        Line line2 = new Line(drawWater.x + 8, drawWater.y, drawWater.x + 15, drawWater.y + 8);
+        Line line3 = new Line(drawWater.x + 15, drawWater.y + 8, drawWater.x + 24, drawWater.y + 10);
+        Line line4 = new Line(drawWater.x + 24, drawWater.y + 10, drawWater.x + 10, drawWater.y + 16);
+        Line line5 = new Line( drawWater.x + 10, drawWater.y + 16, drawWater.x + 1, drawWater.y + 8);
+        drawSpace.getChildren().addAll(line1, line2, line3, line4, line5);
     }
 }
 

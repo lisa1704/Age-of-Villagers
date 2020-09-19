@@ -21,7 +21,7 @@ public class ShowWindow extends Application {
 
     DrawHouse house = new DrawHouse(drawSpace);
     DrawTree tree = new DrawTree(drawSpace);
-    DrawWater water = new DrawWater(drawSpace);
+    DrawWater water = new DrawWater(drawSpace, 24, 16);
     public GridOfControls gridOfControls = new GridOfControls(house, tree, water);
 
     public void setDrawSpace(Group drawSpace) {
