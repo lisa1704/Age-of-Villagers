@@ -4,11 +4,13 @@ import javafx.beans.InvalidationListener;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -18,6 +20,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.*;
 
+import javafx.scene.shape.Line;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import project.Utilities.Villages;
@@ -36,6 +39,13 @@ public class VillageViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Beduin"),("Egyptian Kings"),("Egyptian Knights"));
+        DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Line line = new Line(event.getSceneX(),event.getSceneY(),event.getSceneX()+20.0,event.getSceneY()+20.0);
+                DrawPane.getChildren().addAll(line);
+            }
+        });
     }
 
     public void WaterSourceClicked(javafx.event.ActionEvent actionEvent) {
@@ -98,5 +108,12 @@ public class VillageViewController implements Initializable {
             System.out.println("No File Selected!");
         }
 
+    }
+
+    public void SelectTree(ActionEvent actionEvent) {
+
+    }
+
+    public void SelectHouse(ActionEvent actionEvent) {
     }
 }
