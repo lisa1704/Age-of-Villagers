@@ -9,9 +9,23 @@ namespace AOV
 {
     abstract class CompoundShape : IDraw
     {
+        public List<IDraw> shapes;
+
+        public CompoundShape()
+        {
+            shapes = new List<IDraw>();
+        }
+
+        public void addShape(IDraw shape)
+        {
+            shapes.Add(shape);
+        }
         public void draw(Graphics g)
         {
-            throw new NotImplementedException();
+            foreach(var shape in shapes)
+            {
+                shape.draw(g);
+            }
         }
     }
 }
