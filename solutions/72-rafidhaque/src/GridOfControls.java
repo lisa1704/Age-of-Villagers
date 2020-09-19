@@ -16,6 +16,14 @@ public class GridOfControls {
     DrawTree tree;
     DrawWater water;
 
+    RadioButton treeButton = new RadioButton("Tree");
+    RadioButton houseButton = new RadioButton("House");
+    RadioButton waterSourceButton = new RadioButton("Water Source");
+
+    Button saveButton = new Button("Save");
+    Button newButton = new Button("New");
+    Button openButton = new Button(" Open");
+
     public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water) {
         this.house = house;
         this.tree = tree;
@@ -43,17 +51,11 @@ public class GridOfControls {
 
         ToggleGroup tg = new ToggleGroup();
 
-        RadioButton treeButton = new RadioButton("Tree");
-        RadioButton houseButton = new RadioButton("House");
-        RadioButton waterSourceButton = new RadioButton("Water Source");
-
         treeButton.setToggleGroup(tg);
         houseButton.setToggleGroup(tg);
         waterSourceButton.setToggleGroup(tg);
 
-        Button saveButton = new Button("Save");
-        Button newButton = new Button("New");
-        Button openButton = new Button(" Open");
+
 
         GridPane.setConstraints(gameName, 0, 0, 2, 1);
         GridPane.setConstraints(villageName, 0, 1);
@@ -83,6 +85,8 @@ public class GridOfControls {
         waterSourceButton.setOnAction(event -> {
             this.nowDrawing = water;
         });
+
+
 
         return gridPane;
     }

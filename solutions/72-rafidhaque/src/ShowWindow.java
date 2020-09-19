@@ -43,6 +43,13 @@ public class ShowWindow extends Application {
             }
         });
 
+        gridOfControls.newButton.setOnAction(event -> {
+            Group newDrawSpace = new Group();
+            layout.setLeft(newDrawSpace);
+            Rectangle newRectange = new Rectangle(newDrawSpace, 0, 0, 600, 400);
+            newRectange.draw();
+        });
+
         window.setScene(scene);
         window.show();
     }
