@@ -12,6 +12,6 @@ namespace AgeOfVillegers
 {
    public  interface IVillageItem
     {
-        void Draw(Graphics g, Pen p);
+        void Draw(Point e,Graphics g, Pen p);
     }
 }
