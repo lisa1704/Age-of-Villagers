@@ -17,6 +17,7 @@ namespace AgeOfVillagers
         int y;
         string text;
         string nation;
+        Color background;
         Graphics g;
 
         public MainWindow()
@@ -78,7 +79,15 @@ namespace AgeOfVillagers
         private void nationTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = nationTypeCombo.Text;
-            
+
         }
+
+        /*public void setBackground(string color)
+        {
+            if(color == "green" || color == "Green" || color == "GREEN")
+            {
+                background = Color.Green;
+            }
+        }*/
     }
 }

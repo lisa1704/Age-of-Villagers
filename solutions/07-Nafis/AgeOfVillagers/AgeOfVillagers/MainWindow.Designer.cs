@@ -1,4 +1,6 @@
-﻿namespace AgeOfVillagers
+﻿using System.Drawing;
+
+namespace AgeOfVillagers
 {
     partial class MainWindow
     {
@@ -43,7 +45,7 @@
             this.SuspendLayout();
             // 
             // drawingAreaPanel
-            // 
+            //
             this.drawingAreaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.drawingAreaPanel.Location = new System.Drawing.Point(12, 12);
             this.drawingAreaPanel.Name = "drawingAreaPanel";
