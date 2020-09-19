@@ -52,6 +52,7 @@
     <Compile Include="ArcShape.cs" />
     <Compile Include="BangladeshiFarmer.cs" />
     <Compile Include="BangladeshiHouse.cs" />
+    <Compile Include="BangladeshiTree.cs" />
     <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianKing.cs" />
     <Compile Include="EllipseShape.cs" />
