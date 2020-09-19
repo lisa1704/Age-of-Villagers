@@ -10,7 +10,7 @@ public class MouseClickManager {
         if (x + 24 <= 600 && y + 24 <= 400) {
             drawComponent.setX(x);
             drawComponent.setY(y);
-            drawComponent.drawOuterLayer();
+            drawComponent.draw();
         }
 
         return new StateOfComponent(x, y, drawComponent);

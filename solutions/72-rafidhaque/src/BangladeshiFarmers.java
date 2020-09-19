@@ -4,9 +4,10 @@ import javafx.scene.shape.Line;
 public class BangladeshiFarmers implements INation {
 
     Group drawSpace;
-
+    DrawHouse house;
     public BangladeshiFarmers(Group drawSpace) {
         this.drawSpace = drawSpace;
+        house = new BangladeshiFarmersHouse(drawSpace);
     }
 
     @Override
