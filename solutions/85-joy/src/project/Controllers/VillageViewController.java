@@ -44,8 +44,7 @@ public class VillageViewController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if(Flag == 0){
-                    Line line = new Line(event.getSceneX(),event.getSceneY(),event.getSceneX()+20.0,event.getSceneY()+20.0);
-                    DrawPane.getChildren().addAll(line);
+                    DrawWaterSource(event.getSceneX(),event.getSceneY(),24.0,16.0);
                 }
                 else if(Flag == 1){
                     DrawTree(event.getSceneX(),event.getSceneY(),16.0,24.0);
@@ -164,5 +163,20 @@ public class VillageViewController implements Initializable {
         Line line4 = new Line(x1+1,y1+15,x1+1,y1);
 
         DrawPane.getChildren().addAll(arc,line1,line2,line3,line4);
+    }
+
+    public void DrawWaterSource(double x1,double y1, double width, double height){
+        Line line1 = new Line(x1,y1,x1+4,y1+height/2);
+        Line line2 = new Line(x1+4,y1+height/2,x1+11,y1+3);
+        Line line3 = new Line(x1+11,y1+3,x1+18,y1+6);
+        Line line4 = new Line(x1+18,y1+6,x1+width,y1-3);
+
+        Line line5 = new Line(x1+width,y1-3,x1+15,y1-height/2);
+        Line line6 = new Line(x1+15,y1-height/2,x1+9,y1-3);
+        Line line7 = new Line(x1+9,y1-3,x1+7,y1-6);
+        Line line8 = new Line(x1+7,y1-6,x1+5,y1-4);
+        Line line9 = new Line(x1+5,y1-4,x1,y1);
+
+        DrawPane.getChildren().addAll(line1,line2,line3,line4,line5,line6,line7,line8,line9);
     }
 }
