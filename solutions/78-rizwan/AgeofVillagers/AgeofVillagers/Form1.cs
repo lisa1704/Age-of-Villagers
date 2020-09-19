@@ -47,33 +47,40 @@ namespace AgeofVillagers
         private void panelDrawingBoard_MouseDown(object sender, MouseEventArgs e)
         {
             //start = e.Location;
+            Graphics g = this.CreateGraphics();
             if (e.Button == MouseButtons.Left)
             {
                 drawing = true;
                 x = e.X;
                 y = e.Y;
 
-                h = x+5;
-                w = y+5;
+                h = y+5;
+                w = x+5;
                 if (radioButton1.Checked == true)
                 {
-                    RadioButton rb = radioButton1;
-                    Graphics g = this.CreateGraphics();
-                    Rectangle shape = new Rectangle(x, y, h, w);
-                    g.DrawRectangle(p, shape);
+                    //RadioButton rb = radioButton1;
+                    //Graphics g = this.CreateGraphics();
+                    BangladeshiFarmers bf = new BangladeshiFarmers();
+                    bf.x = x;
+                    bf.y = y;
+                    bf.h = h;
+                    bf.w = w;
+                    bf.createHouse();
+                    //Rectangle shape = new Rectangle(x, y, h, w);
+                    //g.DrawRectangle(p, shape);
                     
                 }
                 else if (radioButton2.Checked == true)
                 {
-                    RadioButton rb = radioButton1;
-                    Graphics g = this.CreateGraphics();
+                    //RadioButton rb = radioButton2;
+                    //Graphics g = this.CreateGraphics();
                     Rectangle shape = new Rectangle(x, y, h, w);
                     g.DrawRectangle(p, shape);
                 }
                 else if (radioButton3.Checked == true)
                 {
-                    RadioButton rb = radioButton1;
-                    Graphics g = this.CreateGraphics();
+                    //RadioButton rb = radioButton3;
+                    //Graphics g = this.CreateGraphics();
                     Rectangle shape = new Rectangle(x, y, h, w);
                     g.DrawRectangle(p, shape);
                 }
