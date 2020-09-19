@@ -20,5 +20,10 @@ namespace AgeOfVillagers90
                 }
             }
         }
+
+        public VillageItem getsavedvillage()
+        {
+            return villageItemSave;
+        }
     }
 }

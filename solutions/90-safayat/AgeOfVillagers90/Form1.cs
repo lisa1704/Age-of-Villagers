@@ -68,7 +68,11 @@ namespace AgeOfVillagers90
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Village opened");
+            VillageOpen villageOpen = new VillageOpen();
+            villageOpen.execute();
+            VillageItem = villageOpen.getsavedvillage();
+            setSavedVillage(VillageItem);
+            DrawPanel.Refresh();
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -94,6 +98,24 @@ namespace AgeOfVillagers90
             
         }
 
+        public void setSavedVillage(VillageItem villageItem)
+        {
+            VillageNametextBox.Text = villageItem.NameofVillage;
+            foreach(Point point in villageItem.PointHouse)
+            {
+                HousePoints.Add(point);
+            }
+
+            foreach (Point point in villageItem.PointTree)
+            {
+                TreePoints.Add(point);
+            }
+
+            foreach (Point point in villageItem.PointWaterSource)
+            {
+                WaterSourcePoints.Add(point);
+            }
+        }
         private void DrawPanel_Paint(object sender, PaintEventArgs e) //600*400
         {
             Graphics g = DrawPanel.CreateGraphics();
