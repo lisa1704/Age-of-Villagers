@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class Shape
+    public class LineShape
     {
+
     }
 }
