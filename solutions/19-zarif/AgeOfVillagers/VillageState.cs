@@ -4,8 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-   public interface ICommandVillage
+    class VillageState
     {
-        void Execute();
     }
 }
