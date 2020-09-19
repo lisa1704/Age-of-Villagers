@@ -82,19 +82,23 @@ namespace AgeOfVillagers
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
+            VillageItem item;
             if (treeRadioBtn.Checked)
             {
-                village.nation.getTree(point).draw(g, p);
-
+                item = village.nation.getTree(point);
+                village.trees.Add(item);
             }
             else if (houseRadioBtn.Checked)
             {
-                village.nation.getHouse(point).draw(g, p);
+                item = village.nation.getHouse(point);
+                village.houses.Add(item);
             }
-            else if (waterRadioBtn.Checked)
+            else
             {
-                village.nation.getWaterSource(point).draw(g, p);
+                item = village.nation.getWaterSource(point);
+                village.waterSources.Add(item);
             }
+            item.draw(g, p);
         }
     }
 }
