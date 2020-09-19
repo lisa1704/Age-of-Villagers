@@ -124,6 +124,10 @@ public class VillageViewController implements Initializable {
         System.out.println("HOUSE SELECTED!");
     }
 
+    public void SelectWaterSource(ActionEvent actionEvent) {
+        this.Flag = 3;
+        System.out.println("WATERSOURCE SELECTED!");
+    }
 
     public void DrawShape(ArrayList<Shape> ShapeObject){
         for (Shape x : ShapeObject){
@@ -131,8 +135,14 @@ public class VillageViewController implements Initializable {
         }
     }
 
-    public void SelectWaterSource(ActionEvent actionEvent) {
-        this.Flag = 3;
-        System.out.println("WATERSOURCE SELECTED!");
+    public void NationChanged(ActionEvent actionEvent) {
+        if((String) NationDropDown.getValue() == "Bangladeshi Farmers"){
+            INation BangladeshiFarmers = new BangladeshiFarmers();
+            DrawPane.setStyle("-fx-background-color:"+BangladeshiFarmers.getTerrainColor());
+        }
+        else{
+            DrawPane.setStyle("-fx-background-color:"+"White");
+        }
+
     }
 }
