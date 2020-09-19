@@ -15,7 +15,7 @@ namespace Age_of_Villagers
             village.river_points = nation.get_river();
         }
 
-        public void execute(string path, INation nation)
+        public village execute(string path, INation nation)
         {
             
                 this.get_state(nation);
@@ -30,6 +30,7 @@ namespace Age_of_Villagers
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, village);
             }
+            return village;
         }
     }
 }

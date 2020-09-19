@@ -2,6 +2,6 @@
 {
     public interface ICommandVillage
     {
-        void execute(string path, INation nation);
+        village execute(string path, INation nation);
     }
 }

@@ -8,7 +8,7 @@ namespace Age_of_Villagers
     public class OpenVillage : ICommandVillage
     {
         village village;
-        public void execute(string path,INation nation)
+        public village execute(string path,INation nation)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -16,6 +16,7 @@ namespace Age_of_Villagers
                 village= JsonConvert.DeserializeObject<village>(json);
             }
                 this.set_state(nation);
+            return village;
         }
 
         private void set_state(INation nation)
