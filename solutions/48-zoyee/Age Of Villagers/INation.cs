@@ -1,4 +1,4 @@
-﻿using AgeOfVillagers;
+﻿using Age_Of_Villagers;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -18,7 +18,6 @@ namespace Age_Of_Villagers
 
     internal class FactoryNation
     {
-        //public string NationName { get; private set; }
 
         public INation GetNation(string NationName)
         {

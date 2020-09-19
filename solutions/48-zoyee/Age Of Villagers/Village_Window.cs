@@ -22,6 +22,7 @@ namespace Age_Of_Villagers
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
 
+
         FactoryNation nationFactory = new FactoryNation();
         public Village_Window()
         {
@@ -31,14 +32,25 @@ namespace Age_Of_Villagers
         {
 
         }
-        private void saveVillagebutton_Click(object sender, EventArgs e)
+        private void AgeOfVillagers_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(villageName.Text + "Village is saved");
+
+        }
+
+        private void villageName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nation_Click(object sender, EventArgs e)
+        {
+
         }
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
             text = "Tree";
         }
+
         private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
             text = "House";
@@ -48,30 +60,10 @@ namespace Age_Of_Villagers
         {
             text = "WaterSource";
         }
-        private void openVillagebutton_Click(object sender, EventArgs e)
+
+        private void saveVillagebutton_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(villageName.Text + "Village is Opened.");
-            MessageBox.Show("Village is opened");
-        }
-
-        private void CreateNewVillage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgeOfVillagers_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void villageName_Click(object sender, EventArgs e)
-        {
-            village_name = villageName.Text;
-        }
-
-        private void nation_Click(object sender, EventArgs e)
-        {
-            
+            MessageBox.Show(villageName.Text + "Village is saved");
         }
 
         private void newVillagebutton_Click(object sender, EventArgs e)
@@ -81,38 +73,46 @@ namespace Age_Of_Villagers
             waterSource_point.Clear();
             drawingPanel.Refresh();
             NationName.ResetText();
+            MessageBox.Show("Panel is ready");
             village_type = NationName.Text;
             drawingPanel.BackColor = nationFactory.GetNation(village_type).BackGroundColor();
-
+        }
+        private void openVillagebutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Village is opened");
+        }
+        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = NationName.Text;
         }
 
-      
+        private void VillageNametextBox_TextChanged(object sender, EventArgs e)
+        {
+            village_name = VillageNametextBox.Text;
+            villageName.Text = village_name;
+        }
+
+
+
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = drawingPanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
 
             foreach (Point point in tree_point)
             {
-                //g.DrawLine(p, point.X, point.Y, 100, 100);
-                //nationFactory.GetNation(village_type).Draw_Tree(g, point);
                 nationFactory.GetNation(village_type).Draw_Tree(g, point);
             }
 
             foreach (Point point in house_point)
             {
-                //g.DrawLine(p, point.X, point.Y, 100, 100);
                 nationFactory.GetNation(village_type).Draw_House(g, point);
             }
 
             foreach (Point point in waterSource_point)
             {
-                //g.DrawLine(p, point.X, point.Y, 100, 100);
-                //nationFactory.GetNation(village_type).Draw_WaterSource(g, point);
                 nationFactory.GetNation(village_type).Draw_WaterSource(g, point);
             }
         }
-
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             if (text == "Tree")
@@ -131,11 +131,6 @@ namespace Age_Of_Villagers
             }
 
             drawingPanel.Invalidate();
-
-        }
-        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            village_type = NationName.Text;
         }
     }
 }

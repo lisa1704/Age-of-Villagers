@@ -13,14 +13,14 @@ namespace Age_Of_Villagers.Test
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(2, 2);
         }
     }
-    public class UnitTest2
+    /*public class UnitTest2
     {
         [TestMethod]
         public void TestMethod1()
         {
             Bangladeshi_Farmers bdfarmerTest = new Bangladeshi_Farmers();
-            string s = bdfarmerTest.BangladeshiFarmerTest();
+            string s = bdfarmerTest.BangladeshiFarmer_Test();
             Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual("Bangladeshi", s);
         }
-    }
+    }*/
 }
