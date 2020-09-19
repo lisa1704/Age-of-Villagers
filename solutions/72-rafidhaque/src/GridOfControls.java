@@ -47,7 +47,7 @@ public class GridOfControls {
         Label gameName = new Label("Age of Villagers");
         gameName.setFont(new Font(20.0));
         Label villageName = new Label("Bangladesh");
-        Label nationName = new Label("Bangladeshi");
+        Label nationName = new Label(this.nationName);
 
         ToggleGroup tg = new ToggleGroup();
 
@@ -60,8 +60,8 @@ public class GridOfControls {
         waterSourceButton.setToggleGroup(tg);
 
         GridPane.setConstraints(gameName, 0, 0, 2, 1);
-        GridPane.setConstraints(villageName, 0, 1);
-        GridPane.setConstraints(nationName, 0, 2);
+        GridPane.setConstraints(villageName, 0, 1, 3, 1);
+        GridPane.setConstraints(nationName, 0, 2, 3, 1);
 
         GridPane.setConstraints(treeButton, 0, 8);
         GridPane.setConstraints(houseButton, 0, 9);
