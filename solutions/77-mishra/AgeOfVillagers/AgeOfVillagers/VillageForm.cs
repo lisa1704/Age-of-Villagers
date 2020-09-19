@@ -63,10 +63,7 @@ namespace AgeOfVillagers
         {
 
         }
-        private void nations_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void new_button_Click(object sender, EventArgs e)
         {
             drawingBoard.Invalidate();
@@ -95,6 +92,9 @@ namespace AgeOfVillagers
 
         }
 
-        
+        private void Nation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
