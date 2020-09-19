@@ -18,20 +18,12 @@ namespace AgeOfVillagers
         string text;
         string nation;
         INations currentNation;
-        Color background;
         Graphics g;
 
         NationBuilder builder = new NationBuilder();
 
         public MainWindow()
         {
-
-            InitializeComponent();
-        }
-
-        public MainWindow(Color background)
-        {
-            this.background = background;
 
             InitializeComponent();
         }
@@ -91,9 +83,35 @@ namespace AgeOfVillagers
         {
             nation = nationTypeCombo.Text;
             currentNation = builder.BuildNations(nation);
-            drawingAreaPanel.BackColor = background;
+
+            if(nation == "Bangladeshi Farmers")
+            {
+                drawingAreaPanel.BackColor = Color.Green;
+            }
+
+            else if(nation == "Arab Bedouins")
+            {
+                drawingAreaPanel.BackColor = Color.LightYellow;
+            }
+
+            else if(nation == "Egyptian Kings")
+            {
+                drawingAreaPanel.BackColor = Color.Yellow;
+            }
+
+            else if(nation == "Inuit Hunters")
+            {
+                drawingAreaPanel.BackColor = Color.White;
+            }
+
+            else
+            {
+                drawingAreaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            }
 
         }
+
+        
 
     }
 }

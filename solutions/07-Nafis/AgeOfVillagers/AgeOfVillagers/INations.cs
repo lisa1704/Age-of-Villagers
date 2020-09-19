@@ -7,6 +7,7 @@ namespace AgeOfVillagers
 {
     interface INations
     {
+        
         void DrawTree(int x, int y, Graphics g);
         void DrawHouse(int x, int y, Graphics g);
         void DrawWater(int x, int y, Graphics g);

@@ -10,7 +10,6 @@ namespace AgeOfVillagers
         
         
         Pen pen = new Pen(Color.Black, 2);
-        readonly MainWindow bd = new MainWindow(Color.Green);
         public void DrawHouse(int x, int y, Graphics g)
         {
 
@@ -31,6 +30,10 @@ namespace AgeOfVillagers
             Point[] points = { new Point(x, y), new Point(x + 8, y + 6), new Point(x + 16, y), new Point(x + 21, y + 5), new Point(x + 24, y - 4), new Point(x + 18, y - 10), new Point(x + 13, y - 4), new Point(x + 12, y - 9), new Point(x + 9, y - 8) };
             g.DrawPolygon(pen, points);
         }
+
+        
+        
+        
 
         
     }
