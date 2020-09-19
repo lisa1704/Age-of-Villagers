@@ -22,27 +22,22 @@ namespace Age_of_villagers
 
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
+        private void Panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Panel2_Paint(object sender, PaintEventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LabelAgeofvillagers_Click(object sender, EventArgs e)
+        private void Village_name_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LabelVillagename_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelNation_Click(object sender, EventArgs e)
+        private void Nations_Click(object sender, EventArgs e)
         {
 
         }
