@@ -1,6 +1,6 @@
 ﻿namespace Age_of_Villagers
 {
-    partial class Form1
+    partial class Village
     {
         /// <summary>
         ///  Required designer variable.
