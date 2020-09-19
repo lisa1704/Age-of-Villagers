@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -18,17 +19,18 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Drawing House for Egyptian Kings");
         }
 
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Drawing Tree for Egyptian Kings");
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            var message = new StringBuilder();
+            MessageBox.Show("Drawing Water for Egyptian Kings");
         }
     }
 }
