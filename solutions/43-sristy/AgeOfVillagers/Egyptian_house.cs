@@ -11,9 +11,9 @@ namespace Age_of_villagers
     {
         public Egyptian_house(Point lpbottom)
         {
-            Point rpbottom = new Point(lpbottom.X + 65, lpbottom.Y + 15);
-            Point mptop = new Point(lpbottom.X + 50, lpbottom.Y - 85);
-            Point backbottom = new Point(lpbottom.X + 90, lpbottom.Y - 25);
+            Point rpbottom = new Point(lpbottom.X + 11, lpbottom.Y + 3);
+            Point mptop = new Point(lpbottom.X + 8, lpbottom.Y - 27);
+            Point backbottom = new Point(lpbottom.X + 18, lpbottom.Y - 5);
             AddComponent(new obj_triangle(lpbottom, rpbottom, mptop));
             AddComponent(new obj_triangle(rpbottom, mptop, backbottom));
         }
@@ -44,7 +44,8 @@ namespace Age_of_villagers
     {
         public Egyptian_watersource(Point mptop)
         {
-            AddComponent(new obj_arc(mptop, 50, 50, 0, 360));
+            Point mpmid = new Point(mptop.X - 6, mptop.Y - 6);
+            AddComponent(new obj_arc(mpmid, 12, 12, 0, 360));
         }
     }
 }
