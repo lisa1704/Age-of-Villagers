@@ -20,8 +20,10 @@ namespace AgeOfVillagers
         Color background;
         Graphics g;
 
-        public MainWindow()
+        public MainWindow(Color background)
         {
+            this.background = background;
+
             InitializeComponent();
         }
 
@@ -80,14 +82,8 @@ namespace AgeOfVillagers
         {
             nation = nationTypeCombo.Text;
 
+
         }
 
-        /*public void setBackground(string color)
-        {
-            if(color == "green" || color == "Green" || color == "GREEN")
-            {
-                background = Color.Green;
-            }
-        }*/
     }
 }
