@@ -99,9 +99,19 @@ namespace AgeOfVillagers
             villageSave.saveVillage(village);
         }
 
+        
+
         public void btnOpenVillage_Click(object sender, EventArgs e)
         {
-            string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
+            string filePath="";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Open saved file";
+            openFileDialog.Filter = "aov files (*.aov)|*.aov";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog.FileName;
+            }
+            //string filePath = @"D:\Suzad\Books & notes\3-1\S.aov";
             nationName ="Arab Bedouin";
             Village village = villageSave.openVillage(this, filePath, nationName);
             villageSave.draw(this, village, nationName);
@@ -110,7 +120,6 @@ namespace AgeOfVillagers
             openVillageForm.Show();
             this.Hide();*/
         }
-
 
         private void AgeOfVillagersForm_Load(object sender, EventArgs e)
         {
