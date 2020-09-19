@@ -31,5 +31,20 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void LabelAgeofvillagers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelVillagename_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelNation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
