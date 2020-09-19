@@ -6,7 +6,7 @@ namespace AgeOfVillagers
 {
     class NationBuilder
     {
-       public INations GetNations(string text)
+       public INations BuildNations(string text)
         {
             if(text == "Bangladeshi Farmers")
             {

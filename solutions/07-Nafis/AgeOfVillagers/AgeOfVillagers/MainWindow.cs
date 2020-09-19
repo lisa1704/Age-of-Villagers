@@ -17,8 +17,17 @@ namespace AgeOfVillagers
         int y;
         string text;
         string nation;
+        INations currentNation;
         Color background;
         Graphics g;
+
+        NationBuilder builder = new NationBuilder();
+
+        public MainWindow()
+        {
+
+            InitializeComponent();
+        }
 
         public MainWindow(Color background)
         {
@@ -49,15 +58,15 @@ namespace AgeOfVillagers
 
             if(text == "TREE")
             {
-                g.DrawRectangle(pen, x, y, 50, 50);
+                currentNation.DrawTree(e.X, e.Y, g);
             }
             else if(text == "HOUSE")
             {
-                g.DrawEllipse(pen, x, y, 50, 50);
+                currentNation.DrawHouse(e.X, e.Y, g);
             }
             else
             {
-                g.DrawRectangle(pen, x, y, 100, 100);
+                currentNation.DrawWater(e.X, e.Y, g);
             }
 
            
@@ -81,7 +90,8 @@ namespace AgeOfVillagers
         private void nationTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = nationTypeCombo.Text;
-
+            currentNation = builder.BuildNations(nation);
+            drawingAreaPanel.BackColor = background;
 
         }
 
