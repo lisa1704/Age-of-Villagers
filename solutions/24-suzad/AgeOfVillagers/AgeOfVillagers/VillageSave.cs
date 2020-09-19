@@ -42,16 +42,19 @@ namespace AgeOfVillagers
             {
                 VillageComponent villageComponent = ageOfVillagersForm.villageComponentFactory.getComponent("Tree", point);
                 villageComponent.drawComponent(point, ageOfVillagersForm.graphics, ageOfVillagersForm.pen);
+                ageOfVillagersForm.treePoints.Add(point);
             }
             foreach (Point point in village.housePoints)
             {
                 VillageComponent villageComponent = ageOfVillagersForm.villageComponentFactory.getComponent("House", point);
                 villageComponent.drawComponent(point, ageOfVillagersForm.graphics, ageOfVillagersForm.pen);
+                ageOfVillagersForm.housePoints.Add(point);
             }
             foreach (Point point in village.riverPoints)
             {
                 VillageComponent villageComponent = ageOfVillagersForm.villageComponentFactory.getComponent("Water source", point);
                 villageComponent.drawComponent(point, ageOfVillagersForm.graphics, ageOfVillagersForm.pen);
+                ageOfVillagersForm.riverPoints.Add(point);
             }
         }
     }
