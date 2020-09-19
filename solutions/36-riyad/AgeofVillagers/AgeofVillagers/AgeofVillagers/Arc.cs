@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class Arc : IShapeItem
+    public class Arc : IShape
     {
         private Point point_1;
         private Point point_2;
@@ -17,7 +17,7 @@ namespace AgeofVillagers
 
         }
 
-        public void Paint(Graphics g, Pen p)
+        public void Paint(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
             g.DrawArc(pen, x, y, width, height, start, sweep);

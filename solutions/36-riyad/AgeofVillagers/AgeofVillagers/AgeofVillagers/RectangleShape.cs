@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class RectangleShape : IShapeItem
+    public class RectangleShape : IShape
     {
         private Point leftTop;
         private Point RightBottom;
@@ -16,7 +16,7 @@ namespace AgeofVillagers
             this.RightBottom = RightBottom;
         }
 
-        public void Paint(Graphics g, Pen p)
+        public void Paint(Graphics g)
         {
             throw new NotImplementedException();
         }
