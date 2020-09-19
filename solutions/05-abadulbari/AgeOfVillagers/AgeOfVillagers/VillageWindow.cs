@@ -50,18 +50,19 @@ namespace AgeOfVillagers
 
         private void openButton_Click(object sender, EventArgs e)
         {
-
+            var openWin = new OpenVillageWindow(this);
+            openWin.Show();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            new VillagerSaver(village).saveVillage();
+            new VillagerManager(village).saveVillage();
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            Form f = new CreateNewVillageWindow(this);
-            f.Show();
+            Form createWin = new CreateNewVillageWindow(this);
+            createWin.Show();
         }
      
         private void houseRadioBtn_CheckedChanged(object sender, EventArgs e)

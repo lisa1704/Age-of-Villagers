@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class VillagerSaver
+    class VillagerManager
     {
         private readonly Village village;
 
-        public VillagerSaver(Village village)
+        public VillagerManager(Village village)
         {
             this.village = village;
         }
