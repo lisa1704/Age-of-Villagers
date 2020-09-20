@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace AgeOfVillagers
 
-internal class Tree
+internal abstract class Tree
 {
 	int x_axis = 16;
 	int y_axis = 24;
