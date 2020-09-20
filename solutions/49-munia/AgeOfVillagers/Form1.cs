@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
+   
     public partial class Form1 : Form
     {
+      
         public Form1()
         {
             InitializeComponent();
@@ -55,5 +57,9 @@ namespace AgeOfVillagers
 
         }
 
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
