@@ -12,26 +12,12 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
-        private String villageName;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -50,11 +36,16 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            villageName = textBox1.Text;
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
