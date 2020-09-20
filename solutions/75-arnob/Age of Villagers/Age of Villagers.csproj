@@ -47,8 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractNationFactoryCreator.cs" />
-    <Compile Include="Arab bedouin items\Arab_House.cs" />
-    <Compile Include="Arab bedouin items\Arab_Tree.cs" />
+    <Compile Include="Arab_bedouin_items\Arab_House.cs" />
+    <Compile Include="Arab_bedouin_items\Arab_Tree.cs" />
     <Compile Include="Nation\Arab_Bedouin.cs" />
     <Compile Include="Nation_Factory_Creator\Arab_Creator.cs" />
     <Compile Include="Null_Item.cs" />

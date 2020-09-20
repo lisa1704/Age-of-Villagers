@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.Arab_bedouin;
+using Age_of_Villagers;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers.Nation
 {
     public class Arab_Bedouin : INation
     {
@@ -40,7 +41,7 @@ namespace Age_of_Villagers
 
         public void GetWaterSource(Graphics graphics, Point _point)
         {
-            Null_item null_object = new Null_item(_point);
+            Null_Item null_object = new Null_Item(_point);
             null_object.Paint(graphics);
         }
     }
