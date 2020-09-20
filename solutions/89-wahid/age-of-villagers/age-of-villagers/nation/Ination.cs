@@ -12,5 +12,8 @@ namespace age_of_villagers.nation
         void drawtree();
 
         void drawwatersource();
+
+        string Getnation();
+
     }
 }

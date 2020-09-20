@@ -20,5 +20,10 @@ namespace age_of_villagers.nation
         {
             throw new NotImplementedException();
         }
+
+        public string Getnation()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

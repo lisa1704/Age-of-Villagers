@@ -4,7 +4,7 @@ using System.Text;
 
 namespace age_of_villagers.nation
 {
-    class egyptiankings : Ination
+    class egyptiankings : Ination 
     {
         public void drawhouse()
         {
@@ -17,6 +17,11 @@ namespace age_of_villagers.nation
         }
 
         public void drawwatersource()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Getnation()
         {
             throw new NotImplementedException();
         }
