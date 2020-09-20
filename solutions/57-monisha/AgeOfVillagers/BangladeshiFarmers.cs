@@ -30,10 +30,11 @@ namespace AgeOfVillagers
             BDtree.Paint(g, p);
             return BDtree;
         }
-        public void DrawWaterSource(Graphics g, Point MPt)
+        public object DrawWaterSource(Graphics g, Point MPt)
         {
             BangladeshiWaterSource BDWaterSource = new BangladeshiWaterSource(MPt);
             BDWaterSource.Paint(g, p);
+            return new BangladeshiWaterSource(MPt);
         }
         public Color GetTerrainColor()
         {

@@ -26,10 +26,11 @@ namespace AgeOfVillagers
             return EgyptTree;
         }
 
-        public void DrawWaterSource(Graphics g, Point MPt)
+        public object DrawWaterSource(Graphics g, Point MPt)
         {
             EgyptianWaterSource EgyptWater = new EgyptianWaterSource(MPt);
             EgyptWater.Paint(g, p);
+            return EgyptWater;
         }
 
         public Color GetTerrainColor()

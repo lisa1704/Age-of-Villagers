@@ -26,10 +26,11 @@ namespace AgeOfVillagers
             return ntree;
         }
 
-        public void DrawWaterSource(Graphics g, Point MPt)
+        public object DrawWaterSource(Graphics g, Point MPt)
         {
             NullVillageItem nullWater = new NullVillageItem(MPt);
             nullWater.Paint(g, p);
+            return nullWater;
         }
 
         public Color GetTerrainColor()

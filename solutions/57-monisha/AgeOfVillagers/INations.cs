@@ -11,7 +11,7 @@ namespace AgeOfVillagers
     {
         string DrawHouse(Graphics g,Point pt);
         object DrawTree(Graphics g, Point pt);
-        void DrawWaterSource(Graphics g, Point MPt);
+        object DrawWaterSource(Graphics g, Point MPt);
         Color GetTerrainColor();
     }
 
