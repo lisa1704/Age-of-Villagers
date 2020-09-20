@@ -7,7 +7,10 @@ namespace age_of_villagers.nation
 {
     interface Ination
     {
-        string getnationname();
-        Color getterraintcolor();
+        void DrawHouse();
+
+        void DrawTree();
+
+        void DrawWaterSource();
     }
 }

@@ -7,12 +7,17 @@ namespace age_of_villagers.nation
 {
     class bangladeshifarmers : Ination
     {
-        public string getnationname()
+        public void DrawHouse()
         {
             throw new NotImplementedException();
         }
 
-        public Color getterraintcolor()
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterSource()
         {
             throw new NotImplementedException();
         }
