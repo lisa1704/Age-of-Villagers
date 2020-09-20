@@ -127,7 +127,7 @@ public class Controller {
         waterRB.setSelected(false);
 
         tree = nationManager.getTree();
-        tree.draw();
+        tree.draw(canvas, treeRB);
 
         originator.setState("tree");
         careTaker.add(originator.saveStateToMemento());
