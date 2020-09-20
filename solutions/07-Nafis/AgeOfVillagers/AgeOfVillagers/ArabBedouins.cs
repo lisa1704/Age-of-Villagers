@@ -13,9 +13,10 @@ namespace AgeOfVillagers
         
         public void DrawHouse(int x, int y, Graphics g)
         {
-            Point[] triangle = { new Point(x, y), new Point(x - 20, y + 25), new Point(x + 20, y + 25) };
-            //Point[] rectangle = { new Point(x, y), new Point(x + 14, y + 14), new Point(x + 24, y + 29), new Point(x + 20, y + 25) };
-            g.DrawPolygon(pen, triangle);
+            g.DrawLine(pen, new Point(x, y), new Point(x - 20, y + 25));
+            g.DrawLine(pen, new Point(x - 20, y + 25), new Point(x + 20, y + 25));
+            g.DrawLine(pen, new Point(x, y), new Point(x + 20, y + 25));
+
             g.DrawLine(pen, new Point(x, y), new Point(x + 12, y - 12));
             g.DrawLine(pen, new Point(x + 12, y - 12), new Point(x + 32, y + 13));
             g.DrawLine(pen, new Point(x + 20, y + 25), new Point(x + 32, y + 13));
@@ -29,7 +30,10 @@ namespace AgeOfVillagers
             g.DrawLine(pen, new Point(x, y), new Point(x + 11, y - 22)); //mid right
             g.DrawLine(pen, new Point(x, y), new Point(x + 25, y - 22)); //right
 
-            g.DrawRectangle(pen, x - 2, y, 4, 30);
+            g.DrawLine(pen, new Point(x - 2, y), new Point(x + 2, y));
+            g.DrawLine(pen, new Point(x - 2, y), new Point(x - 2, y + 30));
+            g.DrawLine(pen, new Point(x + 2, y), new Point(x + 2, y + 30));
+            g.DrawLine(pen, new Point(x - 2, y + 30), new Point(x + 2, y + 30));
 
         }
 
