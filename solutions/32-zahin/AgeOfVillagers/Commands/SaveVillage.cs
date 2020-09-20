@@ -24,6 +24,7 @@ namespace AgeOfVillagers
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     JsonSerializer serializer = new JsonSerializer();
+                    //VillageState state = new VillageState();
                     serializer.Serialize(sw, null);
                     sw.Close();
                 }

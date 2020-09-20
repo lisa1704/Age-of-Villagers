@@ -42,7 +42,7 @@ namespace AgeOfVillagers
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            VillageState state = new VillageState(villageName);
+            VillageState state = new VillageState(villageName, house, tree, water);
             SaveVillage saveVillage = new SaveVillage();
             saveVillage.execute();
         }

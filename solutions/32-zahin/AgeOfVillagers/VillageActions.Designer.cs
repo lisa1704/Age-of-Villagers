@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.OpenButton = new System.Windows.Forms.Button();
             this.NewButton = new System.Windows.Forms.Button();
             this.SaveButton2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +99,7 @@
             "Inuit Hunters"});
             this.VillageNation.Location = new System.Drawing.Point(87, 111);
             this.VillageNation.Name = "VillageNation";
-            this.VillageNation.Size = new System.Drawing.Size(143, 24);
+            this.VillageNation.Size = new System.Drawing.Size(143, 22);
             this.VillageNation.TabIndex = 9;
             this.VillageNation.Text = "Enter Nation";
             this.VillageNation.UseWaitCursor = true;
@@ -132,7 +134,7 @@
             // 
             // TreeButton
             // 
-            this.TreeButton.Location = new System.Drawing.Point(40, 152);
+            this.TreeButton.Location = new System.Drawing.Point(130, 152);
             this.TreeButton.Name = "TreeButton";
             this.TreeButton.Size = new System.Drawing.Size(62, 31);
             this.TreeButton.TabIndex = 6;
@@ -143,7 +145,7 @@
             // 
             // HouseButton
             // 
-            this.HouseButton.Location = new System.Drawing.Point(128, 152);
+            this.HouseButton.Location = new System.Drawing.Point(37, 152);
             this.HouseButton.Name = "HouseButton";
             this.HouseButton.Size = new System.Drawing.Size(67, 31);
             this.HouseButton.TabIndex = 5;
@@ -180,14 +182,20 @@
             this.SaveButton2.Name = "SaveButton2";
             this.SaveButton2.Size = new System.Drawing.Size(143, 40);
             this.SaveButton2.TabIndex = 2;
-            this.SaveButton2.Text = "SaveVillage";
+            this.SaveButton2.Text = "Save Village";
             this.SaveButton2.UseVisualStyleBackColor = true;
             this.SaveButton2.UseWaitCursor = true;
             this.SaveButton2.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // VillageActions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 403);
             this.Controls.Add(this.panel2);
@@ -214,6 +222,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox VillageNation;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
