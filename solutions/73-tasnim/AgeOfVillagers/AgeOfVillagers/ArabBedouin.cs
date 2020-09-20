@@ -29,7 +29,8 @@ namespace AgeOfVillagers
 
         public void Draw_WaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullObject NullWater = new NullObject();
+            NullWater.Draw_Shape();
         }
     }
 }

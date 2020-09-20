@@ -22,12 +22,14 @@ namespace AgeOfVillagers
 
         public void Draw_Tree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullObject NullTree = new NullObject();
+            NullTree.Draw_Shape();
         }
 
         public void Draw_WaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullObject NullWater = new NullObject();
+            NullWater.Draw_Shape();
         }
     }
 }
