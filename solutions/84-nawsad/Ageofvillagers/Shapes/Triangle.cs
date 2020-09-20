@@ -23,11 +23,10 @@ namespace Ageofvillagers
         }
         public void drawshape()
         {
-             g.DrawLine(p, X, Y, X + 100 ,Y);
-             g.DrawLine(p, X, Y,(X+ X + 100) / 2, Y - 87);
+            g.DrawLine(p, X, Y, X + 100 ,Y);
+            g.DrawLine(p, X, Y,(X+ X + 100) / 2, Y - 87);
             g.DrawLine(p, X + 100, Y, (X + X + 100) / 2, Y - 87);
-
-            Console.WriteLine("You are in Triangle");
+            Console.WriteLine("Triangle Has been Drawn Properly");
         }
     }
 }

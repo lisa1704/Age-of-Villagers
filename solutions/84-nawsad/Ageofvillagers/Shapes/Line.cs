@@ -21,15 +21,12 @@ namespace Ageofvillagers
             this.Y = Y;
             drawshape();
         }
-        void drawshape()
+        public void drawshape()
         {
             g.DrawLine(p, X, Y, X + 100, Y);
-            Console.WriteLine("You are in line");
+            Console.WriteLine("Line Drawn Correctly with Radius ");
         }
 
-        void IShape.drawshape()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
