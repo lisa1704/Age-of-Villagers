@@ -53,12 +53,14 @@
     <Compile Include="Arab_Creator.cs" />
     <Compile Include="ArcShape.cs" />
     <Compile Include="Bangladeshi Farmer\BDfarmer_Tree.cs" />
+    <Compile Include="Bangladeshi Farmer\BDfarmer_WaterResource.cs" />
     <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
     <Compile Include="Bangladeshi Farmer\BDfarmer_House.cs" />
     <Compile Include="CompositeShaping.cs" />
     <Compile Include="Egyptian King\Egyptian_House.cs" />
     <Compile Include="Egyptian King\Egyptian_Tree.cs" />
+    <Compile Include="Egyptian King\Egyptian_WaterResource.cs" />
     <Compile Include="Egyptian_Creator.cs" />
     <Compile Include="Egyptian_King.cs" />
     <Compile Include="EllipseShape.cs" />

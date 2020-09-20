@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers.Bangladeshi_Farmer
 {
-    class BDfarmer_tree
+    class BDfarmer_Tree
     {
-        public BDfarmer_tree(Point point)
+        public BDfarmer_Tree(Point point)
         {
             Point TopPoint = new Point(point.X + 60, point.Y + 70);
             Point BottomRight = new Point(point.X + 28, point.Y + 100);
