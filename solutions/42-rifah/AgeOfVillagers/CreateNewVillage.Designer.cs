@@ -158,7 +158,9 @@ namespace AgeOfVillagers
             // 
             // VillageNametextBox
             // 
+            this.VillageNametextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.VillageNametextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageNametextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.VillageNametextBox.Location = new System.Drawing.Point(711, 92);
             this.VillageNametextBox.Name = "VillageNametextBox";
             this.VillageNametextBox.Size = new System.Drawing.Size(160, 30);

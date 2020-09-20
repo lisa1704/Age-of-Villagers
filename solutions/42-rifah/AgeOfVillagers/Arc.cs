@@ -5,24 +5,26 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Arc : IShape
+    public class Arc : IShape
     {
-        public float x, y, width, height, angle_1, angle_2;
+        public int x, y;
+        private float width, height, StartAngle, SweepAngle;
 
-        public Arc(float x, float y, float width, float height, float angle_1, float angle_2)
+
+        public Arc(int x, int y, float width, float height, float startAngle, float sweepAngle)
         {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
-            this.angle_1 = angle_1;
-            this.angle_2 = angle_2;
+            this.StartAngle = startAngle;
+            this.SweepAngle = sweepAngle;
         }
 
         public void Draw(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen, x, y, width, height, angle_1, angle_2);
+            g.DrawArc(pen, x, y, width, height, StartAngle, SweepAngle);
         }
     }
 
