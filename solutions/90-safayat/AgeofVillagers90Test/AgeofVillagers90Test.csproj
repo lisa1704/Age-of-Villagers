@@ -54,6 +54,7 @@
     <Compile Include="BackGroundColorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ObjectTestofNation.cs" />
+    <Compile Include="NullNationItemTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
