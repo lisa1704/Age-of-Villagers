@@ -18,6 +18,10 @@ namespace Age_of_Villagers
         string name = "";
         public Graphics g;
         public Pen p;
+
+        List<Point> HousePoints = new List<Point>();
+        List<Point> TreePoints = new List<Point>();
+        List<Point> WaterPoints = new List<Point>();
         public VillageCreator()
         {
             InitializeComponent();
