@@ -14,6 +14,7 @@ namespace AgeOfVillagers
     {
         string villageName;
         string nation;
+        string selected_item;
 
         public editorVillagers()
         {
@@ -47,6 +48,29 @@ namespace AgeOfVillagers
         {
 
         }
+
+
+
+        public void radioButton_Click()
+        {
+            if (house_rb.Checked)
+            {
+                selected_item = house_rb.Text;
+            }
+            else if (tree_rb.Checked)
+            {
+                selected_item = tree_rb.Text;
+            }
+            else if (water_rb.Checked)
+            {
+                selected_item = water_rb.Text;
+            }
+            else
+                selected_item = "";
+
+
+        }
+
 
         private void house_rb_CheckedChanged(object sender, EventArgs e)
         {
