@@ -7,12 +7,20 @@ namespace Age_of_Villagers.Age_of_Villagers
 {
     class Rectangle: CShape
     {
-        public Rectangle(Point pt1, Point pt2, Point pt3,Point pt4)
+        private readonly Point UpperLeft;
+        private readonly Point BottomRight;
+        public Rectangle(Point topLeft, Point bottomRight)
         {
-            AddComponent(new Line(pt1, pt2));
-            AddComponent(new Line(pt2, pt3));
-            AddComponent(new Line(pt3, pt4));
-            AddComponent(new Line(pt4, pt1));
+            this.UpperLeft = topLeft;
+            this.BottomRight = bottomRight;
+        }
+        public void Draw(Graphics g)
+        {
+            var pen = new Pen(Color.Black, 1);
+            g.DrawLine(pen, UpperLeft.X, UpperLeft.Y, BottomRight.X, UpperLeft.Y);
+            g.DrawLine(pen, UpperLeft.X, UpperLeft.Y, UpperLeft.X, BottomRight.Y);
+            g.DrawLine(pen, UpperLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
+            g.DrawLine(pen, BottomRight.X, UpperLeft.Y, BottomRight.X, BottomRight.Y);
         }
     }
 }
