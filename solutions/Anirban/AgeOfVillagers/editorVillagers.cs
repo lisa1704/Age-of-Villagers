@@ -89,7 +89,7 @@ namespace AgeOfVillagers
 
         private void New_Click(object sender, EventArgs e)
         {
-
+            panel1.Refresh();
         }
 
         private void open_Click(object sender, EventArgs e)
