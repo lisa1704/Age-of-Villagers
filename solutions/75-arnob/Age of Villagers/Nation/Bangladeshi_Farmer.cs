@@ -6,13 +6,40 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Bangladeshi_Farmer
+    public class Bangladeshi_Farmer : INation
     {
         private string nationName;
 
         public Bangladeshi_Farmer(string nationName)
         {
             this.nationName = nationName;
+        }
+
+        public void GetHouse(Graphics graphics, Point _point)
+        {
+
+            Bdfarmer_House bangladeshi_house = new BDfarmerHouse(new Point(_point.X, _point.Y - 8), new Point(_point.X - 8, _point.Y), new Point(_point.X + 8, _point.Y + 8));
+            bangladeshi_house.Paint(graphics);
+        }
+
+        public string getName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Colour getTerrainColour()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetTree(Graphics graphics, Point _point)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GetWaterSource(Graphics graphics, Point _point)
+        {
+            throw new NotImplementedException();
         }
     }
 }
