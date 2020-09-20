@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     class EgyptianKing : INation
     {
         private readonly Graphics g;
-        Pen mypen = new Pen(Color.Black, 1);
+        Pen mypen = new Pen(Color.Black,2);
 
         public EgyptianKing(Graphics g)
         {
@@ -32,9 +32,8 @@ namespace WindowsFormsApp1
 
         public void DrawWaterSource(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawArc(mypen, x - 20, y - 20, 40, 40, 0, 360);
+            EgyptKingsWaterSource ekw = new EgyptKingsWaterSource(g);
+            ekw.Draw(e);
         }
     }
 }

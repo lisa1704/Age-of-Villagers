@@ -102,31 +102,13 @@ namespace WindowsFormsApp1
             
             else if (nation == "Egypt Kings")
             {
-
                 panel1.BackColor = Color.White;
                 BackColor = Color.Yellow;
-
-
-                if (radioButton3.Checked)
-                {
-
-
-                    EgyptianKing eks = new EgyptianKing(g);
-                    eks.DrawWaterSource(e);
-
-                }
             }
 
             else if (nation == "Inuit Hunters")
             {
                 BackColor = Color.White;
-
-                
-                if (radioButton3.Checked)
-                {
-                    InuitHunters iht = new InuitHunters(g);
-                    iht.DrawWaterSource(e);
-                }
             }
 
             else if (nation == "Arab Bedouin")
@@ -134,12 +116,6 @@ namespace WindowsFormsApp1
                 panel1.BackColor = Color.White;
                 BackColor = Color.YellowGreen;
 
-                if (radioButton3.Checked)
-                {
-                    ArabBedouin abt = new ArabBedouin(g);
-                    abt.DrawWaterSource(e);
-
-                }
             }
 
             if (radioButton1.Checked)
