@@ -9,22 +9,22 @@ namespace AgeOfVillagers
     class CircularShape : DrawableShapes
     {
         Point startingPoint;
-        Pen p;
+        
         Graphics graphics;
-        int startAngle, endAngle;
-        int length, width;
+       
+        int  width;
         Pen pen;
         DrawableShapes arc;
-        private Point point;
+        
         private int height;
         private int startingAngle;
         private int endingAngle;
 
-        public CircularShape(Graphics graphics, Pen pen, Point point, int height, int width, int startingAngle, int endingAngle)
+        public CircularShape(Graphics graphics, Pen pen, Point startingPoint, int height, int width, int startingAngle, int endingAngle)
         {
             this.graphics = graphics;
             this.pen = pen;
-            this.point = point;
+            this.startingPoint = startingPoint;
             this.height = height;
             this.width = width;
             this.startingAngle = startingAngle;
@@ -38,7 +38,7 @@ namespace AgeOfVillagers
 
         public override void makeShape()
         {
-            arc = getArcs(graphics, pen, startingPoint, startAngle, endAngle, length, width);
+            arc = getArcs(graphics, pen, startingPoint, startingAngle, endingAngle, height, width);
             drawShape();
         }
     }

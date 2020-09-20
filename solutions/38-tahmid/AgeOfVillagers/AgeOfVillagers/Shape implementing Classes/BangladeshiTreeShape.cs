@@ -34,7 +34,7 @@ namespace AgeOfVillagers.Shape_extended_classes
 
         public void makeShape()
         {
-            DrawableShapes leaf = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, 3 * (height / 4), width,Constants.FULL_CIRCLE_STARTING_ANGLE,Constants.FULL_CIRCLE_ENDING_ANGLE, Constants.CIRCULAR_HINT);
+            DrawableShapes leaf = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, Constants.FULL_CIRCLE_STARTING_ANGLE, Constants.FULL_CIRCLE_ENDING_ANGLE, 3 * (height / 4), width, Constants.CIRCULAR_HINT);
             leaf.makeShape();
             leafCenterPoint = new Point(startingPoint.X + 3 * (width / 8), startingPoint.Y + width / 2);
             rootTopLeftPoint = leafCenterPoint;

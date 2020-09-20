@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -27,7 +28,7 @@ namespace AgeOfVillagers
 
         public override void drawShape()
         {
-            g.DrawArc(p, start.X, start.Y, width,lenght, startAng,endAng);
+            g.DrawArc(p, start.X, start.Y, width,lenght, 0,360);
         }
 
         public override void makeShape()
