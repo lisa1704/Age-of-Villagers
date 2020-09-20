@@ -12,10 +12,10 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
-        Graphics g;
-        Pen pen = new Pen(Color.Black);
-        string selected_nation = "";
-        string selected_component = "";
+        public Graphics g;
+        public Pen pen = new Pen(Color.Black);
+        public string selected_nation = "";
+        public string selected_component = "";
         NationFactory nf = new NationFactory();
         INations nation;
         Village vill;

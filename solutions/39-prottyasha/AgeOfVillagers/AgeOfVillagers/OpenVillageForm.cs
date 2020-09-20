@@ -38,14 +38,25 @@ namespace AgeOfVillagers
 
         private void SetState(Village vill)
         {
+            VillageWindow vw = new VillageWindow();
+            vw.selected_nation = vill.nation;
+            
             NationFactory nf = new NationFactory();
             INations nation = nf.GetNation(vill.village_name);
-            Graphics g = new Graphics();
-            Pen pen = Pen();
+            //Graphics g = new Graphics();
+            //Pen pen = Pen();
             
             foreach(Point p in vill.trees_drawn)
             {
-                nation.drawtree(p, g, pen);
+                nation.drawtree(p, vw.g, vw.pen);
+            }
+            foreach (Point p in vill.houses_drawn)
+            {
+                nation.drawhouse(p, vw.g, vw.pen);
+            }
+            foreach (Point p in vill.rivers_drawn)
+            {
+                nation.drawwatersource(p, vw.g, vw.pen);
             }
         }
     }
