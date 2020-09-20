@@ -80,6 +80,7 @@ namespace AgeOfVillagers
             this.treeradio.Text = "Tree";
             this.treeradio.UseVisualStyleBackColor = true;
             this.treeradio.CheckedChanged += new System.EventHandler(this.treeradio_CheckedChanged);
+            this.treeradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TreeRadioMouseClicked);
             // 
             // houseradio
             // 
@@ -92,6 +93,7 @@ namespace AgeOfVillagers
             this.houseradio.Text = "House";
             this.houseradio.UseVisualStyleBackColor = true;
             this.houseradio.CheckedChanged += new System.EventHandler(this.houseradio_CheckedChanged);
+            this.houseradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HouseRadioMouseClicked);
             // 
             // waterradio
             // 
@@ -104,6 +106,7 @@ namespace AgeOfVillagers
             this.waterradio.Text = "Water Source";
             this.waterradio.UseVisualStyleBackColor = true;
             this.waterradio.CheckedChanged += new System.EventHandler(this.waterradio_CheckedChanged);
+            this.waterradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WaterSourceRadioMouseClicked);
             // 
             // titlelabel
             // 
@@ -168,7 +171,7 @@ namespace AgeOfVillagers
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.drawingpanel.TabIndex = 10;
             this.drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingpanel_Paint);
-            this.drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseClick);
+            this.drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);
             this.drawingpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseDown);
             this.drawingpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseMove);
             this.drawingpanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);

@@ -37,7 +37,7 @@ namespace AgeOfVillagers
 
         private void houseradio_CheckedChanged(object sender, EventArgs e)
         {
-            item = "House";
+            
         }
         private void treeradio_CheckedChanged(object sender, EventArgs e)
         {
@@ -128,6 +128,25 @@ namespace AgeOfVillagers
         private void savevillage_Click(object sender, EventArgs e)
         {
            
+        }
+
+
+        private void TreeRadioMouseClicked(object sender, MouseEventArgs e)
+        {
+            item = "Tree";
+
+        }
+
+        private void HouseRadioMouseClicked(object sender, MouseEventArgs e)
+        {
+            item = "House";
+
+        }
+
+        private void WaterSourceRadioMouseClicked(object sender, MouseEventArgs e)
+        {
+            item = "River";
+
         }
 
         private void newvillage_Click(object sender, EventArgs e)
