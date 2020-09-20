@@ -13,15 +13,13 @@ namespace empty_project
             Pen pen = new Pen(Color.Black);
             Graphics graphics = panel.CreateGraphics();
 
-            graphics.DrawRectangle(pen, axis.X, axis.Y, 2, 15);
+            graphics.DrawRectangle(pen, axis.X, axis.Y, 4, 30);
 
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X + 1, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X + 4, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X + 6, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X + 8, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X - 3, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X - 5, axis.Y - 15));
-            graphics.DrawLine(pen, new PointF(axis.X + 1, axis.Y), new PointF(axis.X - 7, axis.Y - 15));
+            graphics.DrawLine(pen, new PointF(axis.X + 2, axis.Y), new PointF(axis.X + 2, axis.Y - 30));
+            graphics.DrawLine(pen, new PointF(axis.X + 2, axis.Y), new PointF(axis.X + 18, axis.Y - 20));
+            graphics.DrawLine(pen, new PointF(axis.X + 2, axis.Y), new PointF(axis.X + 28, axis.Y - 10));
+            graphics.DrawLine(pen, new PointF(axis.X + 2, axis.Y), new PointF(axis.X - 12, axis.Y - 20));
+            graphics.DrawLine(pen, new PointF(axis.X + 2, axis.Y), new PointF(axis.X - 22, axis.Y - 10));
         }
     }
 }
