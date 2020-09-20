@@ -67,9 +67,10 @@ namespace AgeOfVillagers
                 TypeNameHandling = TypeNameHandling.All
             };
             villageWin.village = JsonConvert.DeserializeObject<Village>(dataString, settings);
-            //villageWin.village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
             villageWin.village.nation = newnation;
             villageWin.villageLabel.Text = villageWin.village.villageName;
+            new VillagerManager(villageWin.village).loadVillage(villageWin.g, villageWin.p);
+            this.Dispose();
         }
 
         private void villageLabel_Click(object sender, EventArgs e)
