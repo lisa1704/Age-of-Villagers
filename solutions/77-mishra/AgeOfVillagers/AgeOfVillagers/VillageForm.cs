@@ -13,12 +13,13 @@ namespace AgeOfVillagers
 {
     public partial class VillageForm : Form
     {
+        Graphics graphics;
         private int x;
         private int y;
 
         public string nationtype;
         //Nations nations = new Nations(nationtype);
-        private Point p;
+        //private Point p;
 
         /*public INation arabBeduin = new ArabBeduin();
         public INation bdfarmer = new BdFarmer();
@@ -37,19 +38,20 @@ namespace AgeOfVillagers
             Point p = new Point(e.X, e.Y);
             x = p.X;
             y = p.Y;
-
+            
             Nations nations = new Nations(nationtype);
 
             if(radioButton1.Checked == true)
             {
-                nations.GetNation().DrawTree(p);
+                
+                nations.GetNation().DrawTree(p).draw(p, graphics);
                 
             }
 
             if(radioButton3.Checked == true)
             {
 
-                nations.GetNation().DrawHouse(p);
+                nations.GetNation().DrawHouse(p).draw(p, graphics);
                 /*arabBeduin.DrawHouse(p, drawingBoard);
                 
                 bdfarmer.DrawHouse(p, drawingBoard);
@@ -59,7 +61,7 @@ namespace AgeOfVillagers
 
             if(radioButton2.Checked == true)
             {
-                nations.GetNation().DrawWaterSource(p);
+                nations.GetNation().DrawWaterSource(p).draw(p, graphics);
                 //bdfarmer.DrawWaterSource(p, drawingBoard);
             }
 

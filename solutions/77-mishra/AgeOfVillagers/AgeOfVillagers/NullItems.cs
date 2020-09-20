@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class NullItems : IShape
     {
-        public void draw(Point p, Graphics g)
+        public void draw(Point p, Graphics graphics)
         {
             MessageBox.Show("No Available items");
         }

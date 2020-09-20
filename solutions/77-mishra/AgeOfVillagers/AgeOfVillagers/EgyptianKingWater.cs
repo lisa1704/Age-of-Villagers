@@ -13,10 +13,10 @@ namespace AgeOfVillagers
         {
             
         }
-        public void draw(Point p, Graphics g)
+        public void draw(Point p, Graphics graphics)
         {
             Pen pen = new Pen(Color.Blue);
-            g.DrawArc(pen, p.X, p.Y, 12, 12, 45, 360);
+            graphics.DrawArc(pen, p.X, p.Y, 12, 12, 45, 360);
         }
     }
 }
