@@ -13,6 +13,11 @@ namespace age_of_villagers
         Pen pen = new Pen(Color.Black);
         Graphics gp;
 
+        public Arab_Beduin(Graphics gp)
+        {
+            this.gp = gp;
+        }
+
         public void draw_house()
         {
             Point point = new Point(50, 50);

@@ -12,6 +12,10 @@ namespace age_of_villagers
     {
         Pen pen = new Pen(Color.Red);
         Graphics gp;
+        public Inuit_Hunters(Graphics gp)
+        {
+            this.gp = gp;
+        }
         public void draw_house()
         {
             

@@ -11,6 +11,11 @@ namespace age_of_villagers
     {
         Pen pen = new Pen(Color.Black);
         Graphics gp;
+
+        public Egyptian_Kings(Graphics gp)
+        {
+            this.gp = gp;
+        }
         public void draw_house()
         {
             Point p0 = new Point(50, 50);
