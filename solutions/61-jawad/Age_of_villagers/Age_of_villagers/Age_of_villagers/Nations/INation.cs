@@ -8,7 +8,8 @@ namespace Age_of_villagers.Nations
     interface INation
     {
         string DrawHouse(Graphics g, Point pt);
-        void DrawTree();
-        void DrawWaterSource();
+        void DrawTree(Graphics g, Point pt);
+        void DrawWaterSource(Graphics g, Point MPt);
+        Color GetTerrainColor();
     }
 }
