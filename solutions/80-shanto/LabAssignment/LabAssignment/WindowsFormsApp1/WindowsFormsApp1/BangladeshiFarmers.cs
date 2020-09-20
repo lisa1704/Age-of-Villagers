@@ -35,7 +35,12 @@ namespace WindowsFormsApp1_Test
         {
             BangladeshiFarmersWaterSource bdw = new BangladeshiFarmersWaterSource(g);
             bdw.Draw(e);
-        }       
+        }     
+        
+        public string NationName()
+        {
+            return "Bangladeshi Farmers";
+        }
     }
 
 }

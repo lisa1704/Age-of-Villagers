@@ -52,5 +52,13 @@ namespace TestWindowsFormsApp1.UnitTests
             Color actual = ab.drawcolor();
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
+        public void Test6()
+        {
+            BangladeshiFarmers bd = new BangladeshiFarmers(g);
+            string expected = "Bangladeshi Farmers";
+            string actual = bd.NationName();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }

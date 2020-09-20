@@ -13,7 +13,7 @@ namespace WindowsFormsApp1_Test
         void DrawHouse(MouseEventArgs e);
         void DrawTree(MouseEventArgs e);
         void DrawWaterSource(MouseEventArgs e);
-        
+        //string villageName();
     }
 
 
