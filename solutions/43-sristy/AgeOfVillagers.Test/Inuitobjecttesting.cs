@@ -15,6 +15,12 @@ namespace AgeOfVillagers.Test
             IObject expected = new Inuit_house(lptop);
             actual.Equals(expected);
         }
-
+        [Fact]
+        public void InuittreeTest()
+        {
+            IObject actual = nationfactory.GetNation("Inuit").Draw_house(lptop);
+            IObject expected = new null_obj();
+            actual.Equals(expected);
+        }
     }
 }
