@@ -12,7 +12,6 @@ namespace AgeOfVillagers
 {
     public partial class VillageWindow : Form
     {
-        int x, y;
         Graphics g;
         string selected_nation = "";
         string selected_component = "";
@@ -109,15 +108,15 @@ namespace AgeOfVillagers
                 nation = nf.GetNations(selected_nation);
                 if (selected_component == "tree")
                 {
-                    nation.drawtree(p);
+                    nation.drawtree(p,g);
                 }
                 if (selected_component == "house")
                 {
-                    nation.drawhouse(p);
+                    nation.drawhouse(p,g);
                 }
                 if (selected_component == "water_source")
                 {
-                    nation.drawwatersource(p);
+                    nation.drawwatersource(p,g);
                 }
             }
         }
