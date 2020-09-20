@@ -79,7 +79,6 @@ namespace AgeOfVillagers
             this.treeradio.TabStop = true;
             this.treeradio.Text = "Tree";
             this.treeradio.UseVisualStyleBackColor = true;
-            this.treeradio.CheckedChanged += new System.EventHandler(this.treeradio_CheckedChanged);
             this.treeradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TreeRadioMouseClicked);
             // 
             // houseradio
@@ -92,7 +91,6 @@ namespace AgeOfVillagers
             this.houseradio.TabStop = true;
             this.houseradio.Text = "House";
             this.houseradio.UseVisualStyleBackColor = true;
-            this.houseradio.CheckedChanged += new System.EventHandler(this.houseradio_CheckedChanged);
             this.houseradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HouseRadioMouseClicked);
             // 
             // waterradio
@@ -105,7 +103,6 @@ namespace AgeOfVillagers
             this.waterradio.TabStop = true;
             this.waterradio.Text = "Water Source";
             this.waterradio.UseVisualStyleBackColor = true;
-            this.waterradio.CheckedChanged += new System.EventHandler(this.waterradio_CheckedChanged);
             this.waterradio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WaterSourceRadioMouseClicked);
             // 
             // titlelabel
@@ -135,7 +132,6 @@ namespace AgeOfVillagers
             this.toolpanel.Name = "toolpanel";
             this.toolpanel.Size = new System.Drawing.Size(296, 400);
             this.toolpanel.TabIndex = 9;
-            this.toolpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.toolpanel_Paint);
             // 
             // nation
             // 
@@ -160,7 +156,6 @@ namespace AgeOfVillagers
             this.villagename.Size = new System.Drawing.Size(178, 27);
             this.villagename.TabIndex = 5;
             this.villagename.TextChanged += new System.EventHandler(this.villagename_TextChanged);
-            this.villagename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.villagename_KeyDown);
             // 
             // drawingpanel
             // 
@@ -169,11 +164,7 @@ namespace AgeOfVillagers
             this.drawingpanel.Name = "drawingpanel";
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.drawingpanel.TabIndex = 10;
-            this.drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingpanel_Paint);
             this.drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseClick);
-            this.drawingpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseDown);
-            this.drawingpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseMove);
-            this.drawingpanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);
             // 
             // VillageEditorWindow
             // 
@@ -184,7 +175,6 @@ namespace AgeOfVillagers
             this.Name = "VillageEditorWindow";
             this.Text = "Age of Villagers";
             this.Load += new System.EventHandler(this.VillageWindow_Load);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingpanel_MouseUp);
             this.toolpanel.ResumeLayout(false);
             this.toolpanel.PerformLayout();
             this.ResumeLayout(false);

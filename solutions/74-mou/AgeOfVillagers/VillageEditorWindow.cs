@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,11 @@ namespace AgeOfVillagers
         public string vname,item,checked_nation;
         public Graphics gr;
         public INation _nation;
-
         public NationFactory nationfactory;
+
+        public List<Point> PointsOfHouse { get; set; } = new List<Point>();
+        public List<Point> PointsOfTree { get; set; } = new List<Point>();
+        public List<Point> PointsOfWatersource { get; set; } = new List<Point>();
 
         public VillageEditorWindow()
         {
@@ -36,22 +40,23 @@ namespace AgeOfVillagers
         {
             x = e.X;
             y = e.X;
+            Point point = new Point(x, y);
             Pen pen = new Pen(Color.Blue);
             NationFactory NaFact = new NationFactory(nation.Text);
 
             if(item == "Tree")
             {
-                NaFact.GetNation(checked_nation).DrawTree(new Point(x, y)).DrawShapes(gr, pen);
+                NaFact.GetNation(checked_nation).DrawTree(point).DrawShapes(gr, pen);
 
             }
             else if (item == "House")
             {
-                NaFact.GetNation(checked_nation).DrawHouse(new Point(x, y)).DrawShapes(gr, pen);
+                NaFact.GetNation(checked_nation).DrawHouse(point).DrawShapes(gr, pen);
 
             }
             else if (item == "Water Source")
             {
-                NaFact.GetNation(checked_nation).DrawWaterSource(new Point(x, y)).DrawShapes(gr, pen);
+                NaFact.GetNation(checked_nation).DrawWaterSource(point).DrawShapes(gr, pen);
 
             }
 
@@ -81,30 +86,18 @@ namespace AgeOfVillagers
 
         }
 
-        private void toolpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        public void drawingpanel_Paint(object sender, PaintEventArgs e)
-        {
-            //Graphics gr = drawingpanel.CreateGraphics();
-           // Pen p = new Pen(Color.Black);
-
-        }
 
 
         public void nation_SelectedIndexChanged(object sender, EventArgs e)
         {
             checked_nation = nation.Items[nation.SelectedIndex].ToString();
             _nation = nationfactory.GetNation(checked_nation);
-            _nation.SetVillagename(vname);
+            _nation.SetVillagename(villagename.Text);
 
         }
         private void villagename_TextChanged(object sender, EventArgs e)
         {
-            _nation.SetVillagename(vname);
+            _nation.SetVillagename(villagename.Text);
 
         }
 

@@ -26,11 +26,10 @@ namespace AgeOfVillagers
                 return new Egyptian();
 
             }
-            else if (typeofnation.Equals("Inuit Hunters "))
+            else
             {
                 return new Inuit();
             }
-            else return null;
         }
 
 

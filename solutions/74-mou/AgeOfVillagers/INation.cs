@@ -7,12 +7,12 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
-        void SetGraphics(Graphics gr);
-        void SetPen(Pen pen);
-        void SetVillagename(string vname);
-        string GetVillagename();
-        IShapes DrawTree(Point p);
-        IShapes DrawHouse(Point p);
-        IShapes DrawWaterSource(Point p);
+        public void SetGraphics(Graphics gr);
+        public void SetPen(Pen pen);
+        public void SetVillagename(string vname);
+        public string GetVillagename();
+        public IShapes DrawTree(Point p);
+        public IShapes DrawHouse(Point p);
+        public IShapes DrawWaterSource(Point p);
     }
 }
