@@ -10,10 +10,7 @@ import javafx.scene.shape.ArcType;
 public class EgyptKingHouse implements IHouse {
 
     boolean active= false;
-//    Canvas canvas;
     public EgyptKingHouse(){
-//        MyCanvas myCanvas = MyCanvas.getInstance();
-//        this.canvas = myCanvas.getCanvas();
     }
 
     @Override
