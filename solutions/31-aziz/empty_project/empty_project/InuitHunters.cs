@@ -13,6 +13,8 @@ namespace empty_project
             base.house = new InuitHuntersHouse();
             base.tree = new InuitHuntersTree();
             base.waterSource = new InuitHuntersWaterSource();
+            base.color = System.Drawing.Color.White;
+            colorBackground();
         }
     }
 }
