@@ -14,16 +14,16 @@ namespace AgeOfVillagers
         public List<Point> tree;
         public List<Point> water;
 
-        VillageState villagestate = new VillageState();
+        VillageState villagestate;
         public VillageState()
         {
         }
         public void setState(string villagename, List<Point> house, List<Point> tree, List<Point> water) 
         {
-            villagestate.villagename = villagename;
-            villagestate.house = house;
-            villagestate.tree = tree;
-            villagestate.water = water;
+            this.villagestate.villagename = villagename;
+            this.villagestate.house = house;
+            this.villagestate.tree = tree;
+            this.villagestate.water = water;
         }
         public VillageState getState() 
         {

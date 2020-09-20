@@ -41,18 +41,6 @@ namespace AgeOfVillagers.Tests
             INation actual = v.GetVillage("Inuit Hunters");
             actual.Equals(expected);
         }
-
-        [Fact]
-        public void ArabWaterTest()
-        {
-            Graphics g;
-            Point point = new Point(0,0);
-            ArabBedouin arab = new ArabBedouin();
-            string expected = arab.DrawWaterSource(null, point);
-            Village v = new Village();
-            string actual = v.GetVillage("Arab Bedouin").DrawWaterSource(null, point);
-            Assert.Equal(expected, actual);
-        }
     }
 }
 /*
