@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -28,6 +29,22 @@ namespace AgeOfVillagers
                 };
                 var dataString = JsonConvert.SerializeObject(village, Formatting.Indented, settings);
                 System.IO.File.WriteAllText(saveFileDialog.FileName, dataString);
+            }
+        }
+        public void loadVillage(Graphics g, Pen p)
+        {
+            g.Clear(village.nation.getTerrainColor());
+            foreach (var tree in village.trees)
+            {
+                village.nation.getTree(tree).draw(g, p);
+            }
+            foreach (var house in village.houses)
+            {
+                village.nation.getHouse(house).draw(g, p);
+            }
+            foreach (var watersource in village.waterSources)
+            {
+                village.nation.getWaterSource(watersource).draw(g, p);
             }
         }
     }
