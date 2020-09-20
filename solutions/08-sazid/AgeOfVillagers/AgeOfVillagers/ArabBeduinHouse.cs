@@ -9,18 +9,18 @@ namespace AgeOfVillagers
 {
     class ArabBeduinHouse : AdvancedShape
     {
-        public ArabBeduinHouse(Point mainPoint)
+        public ArabBeduinHouse(Point clickPoint)
         {
-            Point topPoint1 = new Point(mainPoint.X - 24, mainPoint.Y + 50);
-            Point topPoint2 = new Point(mainPoint.X + 16, mainPoint.Y + 50);
-            Point topPoint3 = new Point(mainPoint.X + 25, mainPoint.Y - 30);
-            Point topPoint4 = new Point(topPoint2.X + 25, topPoint2.Y - 30);
+            Point p1 = new Point(clickPoint.X - 24, clickPoint.Y + 50);
+            Point p2 = new Point(clickPoint.X + 16, clickPoint.Y + 50);
+            Point p3 = new Point(clickPoint.X + 25, clickPoint.Y - 30);
+            Point p4 = new Point(p2.X + 25, p2.Y - 30);
 
 
-            addShape(new TriangleShape(topPoint2, topPoint1, mainPoint));
-            addShape(new LineShape(topPoint3, mainPoint));
-            addShape(new LineShape(topPoint2, topPoint4));
-            addShape(new LineShape(topPoint3, topPoint4));
+            addShape(new TriangleShape(p2, p1, clickPoint));
+            addShape(new LineShape(p3, clickPoint));
+            addShape(new LineShape(p2, p4));
+            addShape(new LineShape(p3, p4));
         }
     }
 }

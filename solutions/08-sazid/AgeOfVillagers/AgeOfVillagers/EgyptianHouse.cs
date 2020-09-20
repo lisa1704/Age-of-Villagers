@@ -11,13 +11,13 @@ namespace AgeOfVillagers
     {
         public EgyptianHouse(Point clickPoint)
         {
-            Point topPoint1 = new Point(clickPoint.X - 24, clickPoint.Y + 50);
-            Point topPoint2 = new Point(clickPoint.X + 16, clickPoint.Y + 50);
-            Point topPoint3 = new Point(clickPoint.X + 35, clickPoint.Y + 40);
+            Point p1 = new Point(clickPoint.X - 24, clickPoint.Y + 50);
+            Point p2 = new Point(clickPoint.X + 16, clickPoint.Y + 50);
+            Point p3 = new Point(clickPoint.X + 35, clickPoint.Y + 40);
 
 
-            addShape(new TriangleShape(topPoint2, topPoint1, clickPoint));
-            addShape(new TriangleShape(topPoint3, topPoint2, clickPoint));
+            addShape(new TriangleShape(p2, p1, clickPoint));
+            addShape(new TriangleShape(p3, p2, clickPoint));
         }
     }
 }
