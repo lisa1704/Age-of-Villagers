@@ -21,8 +21,8 @@ namespace AgeOfVillagers
             addShape(new BaseRectangle(_toppoint,_bottomLeft,_bottomRight,_topRight));
 
 
-            /*circleShape = new arc(point, radius, 0, 360);
-            circleShape.draw(g, pen);*/
         }
+
+       
     }
 }
