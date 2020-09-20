@@ -9,22 +9,16 @@ namespace AgeOfVillagers
     public class BdFarmer : INation
     {
         //private Panel drawingBoard;
-        public BdFarmer()
-        {
-            
-        }
+        
         public IShape DrawHouse(Point p)
         {
             return new BdFarmerHouse(p);
         }
 
-       
-
         public IShape DrawTree(Point p)
         {
             return new BdTree(p);
         }
-
 
         public IShape DrawWaterSource(Point p)
         {

@@ -43,11 +43,6 @@ namespace AgeOfVillagers
             if(radioButton1.Checked == true)
             {
                 nations.GetNation().DrawTree(p);
-
-                /*arabBeduin.DrawTree(p, drawingBoard);
-                bdfarmer.DrawTree(p, drawingBoard);
-                egKing.DrawTree(p, drawingBoard);*/
-                
                 
             }
 

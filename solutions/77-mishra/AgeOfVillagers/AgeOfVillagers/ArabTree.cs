@@ -8,9 +8,6 @@ namespace AgeOfVillagers
 {
     public class ArabTree : IShape
     {
-        
-       
-
         public ArabTree(Point p)
         {
 
