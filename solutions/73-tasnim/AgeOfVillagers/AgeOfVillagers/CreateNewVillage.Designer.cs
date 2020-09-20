@@ -86,6 +86,7 @@
             this.Draw_Panel.Size = new System.Drawing.Size(600, 400);
             this.Draw_Panel.TabIndex = 3;
             this.Draw_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Draw_Panel_Paint);
+            this.Draw_Panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Draw_Panel_MouseClick_1);
             // 
             // Village_Name
             // 

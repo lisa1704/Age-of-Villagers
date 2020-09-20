@@ -69,21 +69,25 @@ namespace AgeOfVillagers
             Graphics g = Draw_Panel.CreateGraphics();
             Pen p = new Pen(Color.Black);
 
-            foreach (Point p in Houses)
+            foreach (Point point in Houses)
             {
                 nationType = Select_Nation.Text;
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);
-                Inputnation.NationType(nationType).Draw_House(g, p);
+                Inputnation.NationType(nationType).Draw_House(g, point);
+                Console.WriteLine("House painted");
 
             }
 
         }
 
-        private void Draw_Panel_MouseClick(object sender, MouseEventArgs e)
+       
+
+        private void Draw_Panel_MouseClick_1(object sender, MouseEventArgs e)
         {
             if (clickedObject == "House")
             {
                 Houses.Add(e.Location);
+                Console.WriteLine("Housepoint added");
             }
             Draw_Panel.Invalidate();
 

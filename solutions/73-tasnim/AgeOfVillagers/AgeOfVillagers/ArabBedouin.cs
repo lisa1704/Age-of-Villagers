@@ -16,8 +16,10 @@ namespace AgeOfVillagers
 
         public void Draw_House(Graphics g, Point p)
         {
+            Console.WriteLine("Arab Bedouine draw function");
             ArabBedouinHouse house = new ArabBedouinHouse(p);
             house.Draw_Shape(g);
+
         }
 
         public void Draw_Tree(Graphics g, Point p)
