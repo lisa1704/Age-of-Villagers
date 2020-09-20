@@ -22,9 +22,13 @@ namespace AOV
             {
                 return new BangladeshiNation();
             }
-            else
+            else if (typeOfNation == "Inuit Hunters")
             {
                 return new InuitNation();
+            }
+            else
+            {
+                return null;
             }
         }
     }

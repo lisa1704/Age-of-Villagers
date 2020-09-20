@@ -75,19 +75,32 @@ namespace AOV
 
         private void Canvas_MouseClick(object sender, MouseEventArgs e)
         {
-            if (itemSelected == "house")
+            if(Nation.Text != "Select Nation")
             {
-                housePoint.Add(e.Location);
-            }
-            if (itemSelected == "tree")
-            {
-                treePoint.Add(e.Location);
-            }
-            if(itemSelected=="water source")
-            {
-                waterSourcePoint.Add(e.Location);
+                if (itemSelected == "house")
+                {
+                    housePoint.Add(e.Location);
+                }
+                if (itemSelected == "tree")
+                {
+                    treePoint.Add(e.Location);
+                }
+                if (itemSelected == "water source")
+                {
+                    waterSourcePoint.Add(e.Location);
+                }
             }
             Canvas.Invalidate();
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+            housePoint.Clear();
+            treePoint.Clear();
+            waterSourcePoint.Clear();
+            Nation.Text = "Select Nation";
+            Canvas.BackColor = Color.WhiteSmoke;
+            NameOfVillage.Text = "Name your village";
         }
     }
 }

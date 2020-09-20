@@ -81,10 +81,11 @@
             this.NewVillage.TabIndex = 6;
             this.NewVillage.Text = "New village";
             this.NewVillage.UseVisualStyleBackColor = false;
+            this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // Canvas
             // 
-            this.Canvas.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Canvas.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Canvas.Location = new System.Drawing.Point(10, 14);
             this.Canvas.Name = "Canvas";
             this.Canvas.Size = new System.Drawing.Size(600, 400);
