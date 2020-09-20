@@ -36,5 +36,9 @@ namespace WindowsFormsApp1_Test
         {
             return Color.White;
         }
+        public string NationName()
+        {
+            return "Inuit Hunters";
+        }
     }
 }

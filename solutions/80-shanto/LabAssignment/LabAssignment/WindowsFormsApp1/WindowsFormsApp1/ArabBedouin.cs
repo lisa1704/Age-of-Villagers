@@ -40,5 +40,9 @@ namespace WindowsFormsApp1_Test
         {
             return Color.YellowGreen;
         }
+        public string NationName()
+        {
+            return "Arab Bedouin";
+        }
     }
 }

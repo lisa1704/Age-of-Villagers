@@ -60,5 +60,29 @@ namespace TestWindowsFormsApp1.UnitTests
             string actual = bd.NationName();
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
+        public void Test7()
+        {
+            ArabBedouin ab = new ArabBedouin(g);
+            string expected = "Arab Bedouin";
+            string actual = ab.NationName();
+            Assert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        public void Test8()
+        {
+            EgyptianKing ek = new EgyptianKing(g);
+            string expected = "Egyptian King";
+            string actual = ek.NationName();
+            Assert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        public void Test9()
+        {
+            InuitHunters uh = new InuitHunters(g);
+            string expected = "Inuit Hunters";
+            string actual = uh.NationName();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }

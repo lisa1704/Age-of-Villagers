@@ -40,5 +40,9 @@ namespace WindowsFormsApp1_Test
         {
             return Color.Yellow;
         }
+        public string NationName()
+        {
+            return "Egyptian King"; 
+        }
     }
 }
