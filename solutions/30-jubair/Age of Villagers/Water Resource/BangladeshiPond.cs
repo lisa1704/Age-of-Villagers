@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers.Water_Resource
 {
-    class BangladeshiPond : CompositeShape
+    public class BangladeshiPond : CompositeShape
     {
 
         public BangladeshiPond(Point startPoint, Point pt1, Point pt2, Point pt3, Point pt4, Point pt5, Point pt6, Point pt7, Point pt8)

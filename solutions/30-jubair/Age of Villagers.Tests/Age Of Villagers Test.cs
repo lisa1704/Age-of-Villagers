@@ -3,6 +3,7 @@ using Xunit;
 using System.Drawing;
 using Age_of_Villagers.Nation;
 using Age_of_Villagers.House;
+using Age_of_Villagers.NationFactory;
 
 namespace Age_of_Villagers.Tests
 {
@@ -14,15 +15,7 @@ namespace Age_of_Villagers.Tests
             Assert.Equal(2, 2);
         }
 
-        [Fact]
-        public void BangladeshiTerrainColor()
-        {
-            string name = "Bangladeshi Farmers" ;
-            INation nation = new BangladeshiFarmer(name);
-            Color expected = Color.PaleGreen;
-            Color actual = nation.getTerrainColor();
-            Assert.Equal(expected, actual);
-        }
+        
 
         [Fact]
 
@@ -34,7 +27,6 @@ namespace Age_of_Villagers.Tests
             Color actual = nation.getTerrainColor();
             Assert.Equal(expected, actual);
         }
-
 
         [Fact]
 
@@ -62,4 +54,5 @@ namespace Age_of_Villagers.Tests
 
 
     }
+
 }
