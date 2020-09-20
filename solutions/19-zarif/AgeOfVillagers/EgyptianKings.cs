@@ -7,9 +7,20 @@ namespace AgeOfVillagers
 {
     public class EgyptianKings : INation
     {
-        public IGraphicShape GetHouse(Point point)
+        private Point _point;
+
+        public EgyptianKings(Point point)
         {
-            return new EgyptianKingsHouse(point);
+            _point = point;
+        }
+        public IGraphicShape GetHouse()
+        {
+            return new EgyptianKingsHouse(_point);
+        }
+
+        public Point GetHousePoint()
+        {
+            return _point;
         }
 
         public Color GetTerritoryColor()
@@ -17,14 +28,24 @@ namespace AgeOfVillagers
             return Color.Yellow;
         }
 
-        public IGraphicShape GetTrees(Point point)
+        public Point GetTreePoint()
         {
-            return new EgyptianKingsTree(point);
+            return _point;
         }
 
-        public IGraphicShape GetWaterSources(Point point)
+        public IGraphicShape GetTrees()
         {
-            return new EgyptianKingsWaterSource(point);
+            return new EgyptianKingsTree(_point);
+        }
+
+        public Point GetWaterPoint()
+        {
+            return _point;
+        }
+
+        public IGraphicShape GetWaterSources()
+        {
+            return new EgyptianKingsWaterSource(_point);
         }
     }
 }

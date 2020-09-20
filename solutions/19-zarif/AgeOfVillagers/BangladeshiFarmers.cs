@@ -7,12 +7,21 @@ namespace AgeOfVillagers
 {
     public class BangladeshiFarmers : INation
     {
-      
+        private Point _point;
 
-        public IGraphicShape GetHouse(Point point)
+        public BangladeshiFarmers(Point point)
         {
-            return new BdFarmerHouse(point);
+            _point = point;
+        }
+        public IGraphicShape GetHouse()
+        {
+            return new BdFarmerHouse(_point);
 
+        }
+
+        public Point GetHousePoint()
+        {
+            return _point;
         }
 
         public Color GetTerritoryColor()
@@ -21,15 +30,25 @@ namespace AgeOfVillagers
 
         }
 
-        public IGraphicShape GetTrees(Point point)
+        public Point GetTreePoint()
         {
-            return new BdFarmerTree(point);
+            return _point;
+        }
+
+        public IGraphicShape GetTrees()
+        {
+            return new BdFarmerTree(_point);
 
         }
 
-        public IGraphicShape GetWaterSources(Point point)
+        public Point GetWaterPoint()
         {
-            return new BdFarmerWaterSc(point);
+            return _point;
+        }
+
+        public IGraphicShape GetWaterSources()
+        {
+            return new BdFarmerWaterSc(_point);
         }
     }
 }

@@ -7,10 +7,22 @@ namespace AgeOfVillagers
 {
     public class InuitHunters : INation
     {
-        public IGraphicShape GetHouse(Point point)
-        {
-            return new InuitHuntersHouse(point);
+        private Point _point;
 
+        public InuitHunters(Point point)
+        {
+            _point = point;
+        }
+        public IGraphicShape GetHouse()
+        {
+
+            return new InuitHuntersHouse(_point);
+
+        }
+
+        public Point GetHousePoint()
+        {
+            return _point;
         }
 
         public Color GetTerritoryColor()
@@ -18,12 +30,22 @@ namespace AgeOfVillagers
             return Color.White;
         }
 
-        public IGraphicShape GetTrees(Point point)
+        public Point GetTreePoint()
+        {
+            return new Point();
+        }
+
+        public IGraphicShape GetTrees()
         {
             return new NullHandler();
         }
 
-        public IGraphicShape GetWaterSources(Point point)
+        public Point GetWaterPoint()
+        {
+            return new Point();
+        }
+
+        public IGraphicShape GetWaterSources()
         {
             return new NullHandler();
         }
