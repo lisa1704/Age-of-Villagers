@@ -10,9 +10,9 @@ namespace AgeOfVillagers
     {
         private string village_name;
         private string nation_name;
-        private List<Point> house_locations;
-        private List<Point> tree_locations;
-        private List<Point> watersource_locations;
+        private List<Point> house_locations = new List<Point>();
+        private List<Point> tree_locations = new List<Point>();
+        private List<Point> watersource_locations = new List<Point>();
 
         public VillageState(String village_name, string nation_name, List<Point> house_locations, List<Point> tree_locations, List<Point> watersource_locations)
         {
@@ -21,6 +21,21 @@ namespace AgeOfVillagers
             this.house_locations = house_locations;
             this.tree_locations = tree_locations;
             this.watersource_locations = watersource_locations;
+        }
+
+        public List<Point> getHouseState()
+        {
+            return house_locations;
+        }
+
+        public List<Point> getTreeState()
+        {
+            return tree_locations;
+        }
+
+        public List<Point> getWsourceState()
+        {
+            return watersource_locations;
         }
 
         public void setHouseState(Point point)

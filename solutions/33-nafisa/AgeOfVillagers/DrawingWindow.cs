@@ -47,8 +47,13 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            this.village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
-
+            
+            village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
+            house_locations = village.getHouseState();
+            tree_locations = village.getTreeState();
+            watersource_locations = village.getWsourceState();
+            VillageStateSaver savevillage = new VillageStateSaver(village);
+            savevillage.execute();
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -59,14 +64,14 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
            
             Nations nation = new Nations(Form1.NationName, Drawingpanel);
-            this.village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
+            VillageState village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)

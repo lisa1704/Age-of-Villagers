@@ -9,28 +9,35 @@ namespace AgeOfVillagers
     class VillageStateSaver : ICommand
     {
         private VillageState village;
-        SaveFileDialog imgDialog;
+        SaveFileDialog sfDialog;
+       
+        private Stream myStream;
+
         public VillageStateSaver(VillageState village)
         {
             this.village = village;
         }
         public void execute()
         {
-            this.imgDialog = new SaveFileDialog();
-           // imgDialog.InitialDirectory = "";
-            imgDialog.FileName = "*.aov";
-            imgDialog.DefaultExt = "aov";
-            imgDialog.Filter = "Aov Files | *.aov";
-            if (imgDialog.ShowDialog()== DialogResult.OK)
+            this.sfDialog = new SaveFileDialog();
+            sfDialog.RestoreDirectory = true;
+            sfDialog.InitialDirectory = "G:/3.1/DP/solutions/33-nafisa/AgeOfVillagers/savedimage";
+            sfDialog.FileName = "*.aov";
+            sfDialog.DefaultExt = "aov";
+            sfDialog.Filter = "Aov File|*.aov";
+            if (sfDialog.ShowDialog() == DialogResult.OK)
             {
-                Stream filestream = imgDialog.OpenFile();
-                using (StreamWriter _sw = new StreamWriter(filestream))
+                
+                if ((myStream = sfDialog.OpenFile()) != null)
                 {
-                    Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
-                    serializer.Serialize(_sw, village);
-                    _sw.Close();
+                    using (StreamWriter sw = new StreamWriter(myStream))
+                    {
+                        Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
+                        serializer.Serialize(sw, village);
+                        sw.Close();
+                    }
+                    myStream.Close();
                 }
-                filestream.Close();
             }
         }
     }

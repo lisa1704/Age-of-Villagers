@@ -12,5 +12,6 @@ namespace AgeOfVillagers
         public void setHouseState(Point point);
         public void setTreeState(Point point);
         public void setWsourceState(Point point);
+       
     }
 }
