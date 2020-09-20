@@ -28,7 +28,7 @@ namespace AOV
             }
             else
             {
-                return null;
+                return new NullNation();
             }
         }
     }

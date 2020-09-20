@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    class InuitNation : INation
+    class NullNation : INation
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            InuitHouse igloo = new InuitHouse(p);
-            igloo.draw(g);
+            NullShape nothing = new NullShape(p);
+            nothing.draw(g); 
         }
 
         public void DrawTree(Graphics g, Point p)
         {
             NullShape nothing = new NullShape(p);
-            nothing.draw(g);
+            nothing.draw(g); 
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
             NullShape nothing = new NullShape(p);
-            nothing.draw(g);
+            nothing.draw(g); 
         }
 
         public Color GetColor()
         {
-            return Color.White;
+            return Color.WhiteSmoke;
         }
     }
 }
