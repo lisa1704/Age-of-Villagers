@@ -17,7 +17,6 @@ namespace WindowsFormsApp1
         {
             this.g = g;
         }
-
         public void DrawHouse(MouseEventArgs e)
         {
             BangladeshiFarrmersHouse bdh = new BangladeshiFarrmersHouse(g);
@@ -27,23 +26,11 @@ namespace WindowsFormsApp1
         {
             BangladeshiFarmersTree bdt = new BangladeshiFarmersTree(g);
             bdt.Draw(e);
-        }
-
-        
-
+        }       
         public void DrawWaterSource(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(mypen, x, y, x + 20, y + 16);
-            g.DrawLine(mypen, x + 20, y + 16, x + 40, y - 24);
-            g.DrawLine(mypen, x + 40, y - 24, x + 8, y - 40);
-            g.DrawLine(mypen, x + 8, y - 40, x - 16, y - 24);
-            g.DrawLine(mypen, x - 16, y - 24, x - 24, y - 36);
-            g.DrawLine(mypen, x - 24, y - 36, x - 36, y - 28);
-            g.DrawLine(mypen, x - 36, y - 28, x - 36, y);
-            g.DrawLine(mypen, x - 36, y, x - 24, y + 20);
-            g.DrawLine(mypen, x - 23, y + 20, x, y);
+            BangladeshiFarmersWaterSource bdw = new BangladeshiFarmersWaterSource(g);
+            bdw.Draw(e);
         }
 
         

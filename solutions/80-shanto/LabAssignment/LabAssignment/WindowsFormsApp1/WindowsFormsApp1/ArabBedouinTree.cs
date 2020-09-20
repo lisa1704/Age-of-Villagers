@@ -3,11 +3,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    class BangladeshiFarmersTree : ITree
+    class ArabBedouinTree : ITree
     {
         private readonly Graphics g;
-        Pen mypen = new Pen(Color.Black, 2);
-        public BangladeshiFarmersTree(Graphics g)
+        Pen mypen = new Pen(Color.Black, 1);
+
+        public ArabBedouinTree(Graphics g)
         {
             this.g = g;
         }
@@ -15,11 +16,19 @@ namespace WindowsFormsApp1
         {
             int x = e.X;
             int y = e.Y;
-            g.DrawArc(mypen, x - 25, y - 25, 50, 50, 0, 360);
+
+            g.DrawLine(mypen, x, y, x + 40, y - 10);
+            g.DrawLine(mypen, x, y, x - 40, y - 10);
+
+            g.DrawLine(mypen, x, y, x + 20, y - 30);
+            g.DrawLine(mypen, x, y, x - 20, y - 30);
+            g.DrawLine(mypen, x, y, x, y - 30);
+
             g.DrawLine(mypen, x - 1, y, x + 1, y);
             g.DrawLine(mypen, x + 1, y, x + 1, y + 50);
             g.DrawLine(mypen, x + 1, y + 50, x - 1, y + 50);
             g.DrawLine(mypen, x - 1, y + 50, x - 1, y);
+
         }
     }
 

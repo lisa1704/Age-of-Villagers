@@ -98,17 +98,8 @@ namespace WindowsFormsApp1
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.Green;
-
-                if (radioButton3.Checked)
-                {
-                    BangladeshiFarmers bds = new BangladeshiFarmers(g);
-                    bds.DrawWaterSource(e);
-
-                }
             }
             
-
-
             else if (nation == "Egypt Kings")
             {
 
@@ -158,6 +149,10 @@ namespace WindowsFormsApp1
             if (radioButton2.Checked)
             {
                 nationManager.DrawTree(e);
+            }
+            if (radioButton3.Checked)
+            {
+                nationManager.DrawWaterSource(e);
             }
 
         }
