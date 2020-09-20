@@ -8,20 +8,28 @@ namespace AgeOfVillagers
 {
     class ArabBedouins : INation
     {
-        private Panel drawingPanel;
-        public void drawhouse(Point p)
-        {
-          
-        }
+        protected Panel drawingPanel;
+        protected IHouse house = new ArabHouse();
+        protected ITree tree = new ArabTree();
+        protected IWatersrc waterSrc = new ArabWatersrc();
 
+        public ArabBedouins(Panel panel)
+        {
+            drawingPanel = panel;
+        }
         public void drawtree(Point p)
         {
-            
+            tree.drawTree(p, drawingPanel);
+        }
+
+        public void drawhouse(Point p)
+        {
+            house.drawHouse(p, drawingPanel);
         }
 
         public void drawwatersrc(Point p)
         {
-            //no implementation
+            waterSrc.drawWatersrc(p, drawingPanel);
         }
     }
 }
