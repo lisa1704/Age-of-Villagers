@@ -15,7 +15,7 @@ namespace age_of_villagers.shape
         }
         public void draw(Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            g.DrawLine(p, point1, point2);
         }
     }
 }
