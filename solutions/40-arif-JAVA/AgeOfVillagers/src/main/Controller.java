@@ -140,7 +140,7 @@ public class Controller {
         waterRB.setSelected(true);
 
         water = nationManager.getWater();
-        water.draw(canvas,"water");
+        water.draw(canvas, waterRB);
 
         originator.setState("water");
         careTaker.add(originator.saveStateToMemento());
