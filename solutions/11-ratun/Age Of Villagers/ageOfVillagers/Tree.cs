@@ -4,9 +4,11 @@
     {
         int Xaxis = 16;
         int Yaxis = 24;
-        public string Draw(int x, int y)
+        public void Draw(int x, int y)
         {
-            return "Drwaing a tree on (" + x + "," + y + ").";
+            //return "Drwaing a tree on (" + x + "," + y + ").";
+            VillageState vs = new VillageState();
+            vs.UpdateState("Tree", x, y);
         }
     }
 }
