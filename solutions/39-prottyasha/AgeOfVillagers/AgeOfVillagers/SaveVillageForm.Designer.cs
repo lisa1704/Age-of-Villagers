@@ -31,6 +31,7 @@
             this.label1savevill = new System.Windows.Forms.Label();
             this.textbox_VillageName = new System.Windows.Forms.TextBox();
             this.save_villName = new System.Windows.Forms.Button();
+            this.extension_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1savevill
@@ -60,11 +61,21 @@
             this.save_villName.Text = "Save";
             this.save_villName.UseVisualStyleBackColor = true;
             // 
+            // extension_label
+            // 
+            this.extension_label.AutoSize = true;
+            this.extension_label.Location = new System.Drawing.Point(453, 147);
+            this.extension_label.Name = "extension_label";
+            this.extension_label.Size = new System.Drawing.Size(36, 20);
+            this.extension_label.TabIndex = 3;
+            this.extension_label.Text = ".aov";
+            // 
             // SaveVillageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 353);
+            this.Controls.Add(this.extension_label);
             this.Controls.Add(this.save_villName);
             this.Controls.Add(this.textbox_VillageName);
             this.Controls.Add(this.label1savevill);
@@ -80,5 +91,6 @@
         private System.Windows.Forms.Label label1savevill;
         private System.Windows.Forms.TextBox textbox_VillageName;
         private System.Windows.Forms.Button save_villName;
+        private System.Windows.Forms.Label extension_label;
     }
 }
