@@ -19,7 +19,9 @@ namespace age_of_villagers.shape
         }
         public void draw(Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            new line(top, bottomLeft).draw(g, p);
+            new line(top, bottomRight).draw(g, p);
+            new line(bottomLeft, bottomRight).draw(g, p);
         }
     }
 }
