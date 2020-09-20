@@ -9,23 +9,26 @@ namespace AgeOfVillagers90
 {
     public class BangladeshiFarmers : INation
     {
-        Pen p = new Pen(Color.Pink);
-        public void DrawHouse(Graphics g,Point pt)
+
+        public object DrawHouse(Graphics g,Point pt)
         {
             BangladeshiFarmerHouse bdhouse = new BangladeshiFarmerHouse(pt);
             bdhouse.Draw(g);
+            return bdhouse;
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             BangladeshFarmersTree bdtree = new BangladeshFarmersTree(pt);
             bdtree.Draw(g);
+            return bdtree;
         }
 
-        public void DrawWaterSource(Graphics g, Point pt)
+        public object DrawWaterSource(Graphics g, Point pt)
         {
             BangladeshiFarmersWaterSource bdws = new BangladeshiFarmersWaterSource(pt);
             bdws.Draw(g);
+            return bdws;
         }
 
         public string BangladeshiFarmerTest()

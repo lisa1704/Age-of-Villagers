@@ -14,22 +14,26 @@ namespace AgeOfVillagers90
             return Color.White;
         }
 
-        public void DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
             InuitHouse inhouse = new InuitHouse(pt);
             inhouse.Draw(g);
+            return inhouse;
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             NullVillageItem InuitNulltree = new NullVillageItem();
             InuitNulltree.paint();
+            return InuitNulltree;
+
         }
 
-        public void DrawWaterSource(Graphics g, Point pt)
+        public object DrawWaterSource(Graphics g, Point pt)
         {
             NullVillageItem InuitNullws = new NullVillageItem();
             InuitNullws.paint();
+            return InuitNullws;
         }
     }
 }

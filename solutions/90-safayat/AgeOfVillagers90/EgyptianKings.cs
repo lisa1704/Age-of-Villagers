@@ -14,22 +14,25 @@ namespace AgeOfVillagers90
             return Color.Yellow;
         }
 
-        public void DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
             EgyptianHouse ekh = new EgyptianHouse(pt);
             ekh.Draw(g);
+            return ekh;
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             EgyptianTree ekt = new EgyptianTree(pt);
             ekt.Draw(g);
+            return ekt;
         }
 
-        public void DrawWaterSource(Graphics g, Point pt)
+        public object DrawWaterSource(Graphics g, Point pt)
         {
             EgytianWaterSource ekws = new EgytianWaterSource(pt);
             ekws.Draw(g);
+            return ekws;
         }
     }
 }

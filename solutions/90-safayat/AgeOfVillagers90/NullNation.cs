@@ -9,22 +9,25 @@ namespace AgeOfVillagers90
             return Color.White;
         }
 
-        public void DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
             NullVillageItem NullNationhouse = new NullVillageItem();
             NullNationhouse.paint();
+            return NullNationhouse;
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             NullVillageItem NullNationtree = new NullVillageItem();
             NullNationtree.paint();
+            return NullNationtree;
         }
 
-        public void DrawWaterSource(Graphics g, Point pt)
+        public object DrawWaterSource(Graphics g, Point pt)
         {
             NullVillageItem NullNationws = new NullVillageItem();
             NullNationws.paint();
+            return NullNationws;
         }
     }
 }
