@@ -40,7 +40,7 @@ public class VillageViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouin"),("Egyptian Kings"),("Egyptian Knights"));
+        NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouin"),("Egyptian Kings"),("Inuit Hunters"));
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
