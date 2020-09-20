@@ -16,5 +16,14 @@ namespace AgeOfVillagers.Testing
             Point actual = obj.getPoint();
             Assert.Equal(actual, p);
         }
+
+        [Fact]
+        public void EgyptianKingTreeTest()
+        {
+            Point p = new Point(10, 10);
+            EgyptianKingTree obj = new EgyptianKingTree(p);
+            Point actual = obj.getPoint();
+            Assert.Equal(actual, p);
+        }
     }
 }
