@@ -8,9 +8,9 @@ namespace AgeOfVillagers.Nation
 {
     class EgyptianKings : INation
     {
-        public VillageItem getHouse(Point p)
+        public VillageItem getHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new EgyptianHouse(point);
         }
 
         public string getNationName()
@@ -20,7 +20,7 @@ namespace AgeOfVillagers.Nation
 
         public Color getTerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
 
         public VillageItem getTree(Point p)
