@@ -37,11 +37,16 @@
             this.house_rb = new System.Windows.Forms.RadioButton();
             this.tree_rb = new System.Windows.Forms.RadioButton();
             this.water_rb = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(35, 35);
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(35, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 0;
@@ -50,15 +55,15 @@
             // 
             // villageNameBox
             // 
-            this.villageNameBox.Location = new System.Drawing.Point(734, 89);
+            this.villageNameBox.Location = new System.Drawing.Point(768, 114);
             this.villageNameBox.Name = "villageNameBox";
-            this.villageNameBox.Size = new System.Drawing.Size(186, 22);
+            this.villageNameBox.Size = new System.Drawing.Size(204, 22);
             this.villageNameBox.TabIndex = 1;
             this.villageNameBox.TextChanged += new System.EventHandler(this.villageNameBox_TextChanged);
             // 
             // New
             // 
-            this.New.Location = new System.Drawing.Point(688, 352);
+            this.New.Location = new System.Drawing.Point(689, 376);
             this.New.Name = "New";
             this.New.Size = new System.Drawing.Size(71, 27);
             this.New.TabIndex = 2;
@@ -68,7 +73,7 @@
             // 
             // open
             // 
-            this.open.Location = new System.Drawing.Point(795, 352);
+            this.open.Location = new System.Drawing.Point(796, 376);
             this.open.Name = "open";
             this.open.Size = new System.Drawing.Size(66, 26);
             this.open.TabIndex = 3;
@@ -78,7 +83,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(892, 352);
+            this.save.Location = new System.Drawing.Point(893, 376);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(79, 26);
             this.save.TabIndex = 4;
@@ -94,16 +99,16 @@
             "Arab Bedouins",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.comboBox1.Location = new System.Drawing.Point(717, 155);
+            this.comboBox1.Location = new System.Drawing.Point(768, 177);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 24);
+            this.comboBox1.Size = new System.Drawing.Size(204, 24);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // house_rb
             // 
             this.house_rb.AutoSize = true;
-            this.house_rb.Location = new System.Drawing.Point(767, 217);
+            this.house_rb.Location = new System.Drawing.Point(768, 241);
             this.house_rb.Name = "house_rb";
             this.house_rb.Size = new System.Drawing.Size(70, 21);
             this.house_rb.TabIndex = 6;
@@ -115,7 +120,7 @@
             // tree_rb
             // 
             this.tree_rb.AutoSize = true;
-            this.tree_rb.Location = new System.Drawing.Point(767, 245);
+            this.tree_rb.Location = new System.Drawing.Point(768, 269);
             this.tree_rb.Name = "tree_rb";
             this.tree_rb.Size = new System.Drawing.Size(59, 21);
             this.tree_rb.TabIndex = 7;
@@ -127,7 +132,7 @@
             // water_rb
             // 
             this.water_rb.AutoSize = true;
-            this.water_rb.Location = new System.Drawing.Point(767, 273);
+            this.water_rb.Location = new System.Drawing.Point(768, 297);
             this.water_rb.Name = "water_rb";
             this.water_rb.Size = new System.Drawing.Size(114, 21);
             this.water_rb.TabIndex = 8;
@@ -136,11 +141,56 @@
             this.water_rb.UseVisualStyleBackColor = true;
             this.water_rb.CheckedChanged += new System.EventHandler(this.water_rb_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(728, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 35);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Age of Villagers";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(689, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Village";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(692, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Nation";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(250, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Drawing Panel";
+            // 
             // editorVillagers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 465);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(1022, 493);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.water_rb);
             this.Controls.Add(this.tree_rb);
             this.Controls.Add(this.house_rb);
@@ -168,6 +218,10 @@
         private System.Windows.Forms.RadioButton house_rb;
         private System.Windows.Forms.RadioButton tree_rb;
         private System.Windows.Forms.RadioButton water_rb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
