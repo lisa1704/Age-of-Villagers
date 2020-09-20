@@ -16,6 +16,9 @@ namespace AgeOfVillagers
         Graphics g;
         Brush brush = new SolidBrush(Color.Black);
         string text = "";
+        string chosen_nation = "";
+        NationFactory NF = new NationFactory();
+        INation nation;
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +54,7 @@ namespace AgeOfVillagers
         {
             x = e.X;
             y = e.Y;
+            nation = NF.GetNations(chosen_nation);
             g = DrawingPanel.CreateGraphics();
             g.DrawString(text, Font, brush, new Point(x, y));
         }
@@ -83,7 +87,7 @@ namespace AgeOfVillagers
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            chosen_nation = Nations.SelectedItem.ToString();
         }
         private void ElementSelect()
         {
