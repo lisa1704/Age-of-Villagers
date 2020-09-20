@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1_Test
 {
     interface IHouse
     {

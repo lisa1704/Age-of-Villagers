@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1_Test
 {
-    interface INation
+    public interface INation
     {
         void DrawHouse(MouseEventArgs e);
         void DrawTree(MouseEventArgs e);

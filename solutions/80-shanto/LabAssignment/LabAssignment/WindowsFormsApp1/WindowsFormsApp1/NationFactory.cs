@@ -2,11 +2,11 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1_Test
 {
-    class NationFactory
+     public class NationFactory
     {
-        private readonly Graphics g;
+        public readonly Graphics g;
         public NationFactory(Graphics g)
         {
             this.g = g;

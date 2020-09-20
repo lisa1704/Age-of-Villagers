@@ -6,12 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1_Test
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         
-        private readonly Graphics g;
+        Graphics g;
         Pen mypen = new Pen(Color.Black, 2);
         public BangladeshiFarmers(Graphics g)
         {
@@ -21,6 +21,10 @@ namespace WindowsFormsApp1
         {
             BangladeshiFarrmersHouse bdh = new BangladeshiFarrmersHouse(g);
             bdh.Draw(e);
+        }
+        public Color drawcolor()
+        {
+            return Color.Green;
         }
         public void DrawTree(MouseEventArgs e)
         {

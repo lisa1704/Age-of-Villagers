@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1_Test
 {
     public partial class Form1 : Form
     {
@@ -37,10 +37,6 @@ namespace WindowsFormsApp1
                 write.Dispose();                
             }
 
-            else
-            {
-                throw new Exception();
-            }
 
         }
 
@@ -115,6 +111,7 @@ namespace WindowsFormsApp1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+
             if (nation == "Bangladeshi Farmers")
             {
                 panel1.BackColor = Color.White;
