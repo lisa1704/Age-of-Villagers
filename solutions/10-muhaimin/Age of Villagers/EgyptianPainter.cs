@@ -16,6 +16,7 @@ namespace Age_of_Villagers
             base.tree = new EgyptianTree();
             base.wSource = new EgyptianWaterSource();
             base.color = System.Drawing.Color.LightYellow;
+            paintTerrain();
         }
     }
 }

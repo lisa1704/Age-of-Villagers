@@ -18,7 +18,6 @@ namespace Age_of_Villagers
         public AbstractPainter(Panel panel)
         {
             drawingSpace = panel;
-            paintTerrain();
         }
         public void drawHouse(Axis axes)
         {
