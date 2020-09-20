@@ -10,7 +10,7 @@ namespace empty_project
     {
         public void drawTree(Axis axis, Panel panel)
         {
-            //No Tree
+            MessageBox.Show("We rely on natural water sources :D ");
         }
     }
 }
