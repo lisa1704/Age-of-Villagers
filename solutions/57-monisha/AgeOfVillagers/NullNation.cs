@@ -23,11 +23,11 @@ namespace AgeOfVillagers
             return ntree;            
         }
 
-        public void DrawWaterSource(Graphics g, Point MPt)
+        public object DrawWaterSource(Graphics g, Point MPt)
         {
             NullVillageItem nWater = new NullVillageItem(MPt);
             nWater.Paint(g, p);
-           // return ntree;
+            return nWater;
             //throw new NotImplementedException();
         }
 
