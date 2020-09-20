@@ -18,6 +18,10 @@ namespace AgeOfVillagers.Factories
             {
                 return new BangladeshiFarmers();
             }
+            if (nationName == "Egyptian Kings")
+            {
+                return new EgyptianKings();
+            }
             return null;
         }
     }
