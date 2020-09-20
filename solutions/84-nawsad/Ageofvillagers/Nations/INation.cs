@@ -7,7 +7,7 @@ namespace Ageofvillagers
 {
     interface INation
     {
-        void drawHouse();
+        void drawHouse(int x,int y);
         void drawTree();
         void drawWaterSource();
     }

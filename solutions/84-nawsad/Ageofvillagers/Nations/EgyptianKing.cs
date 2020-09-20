@@ -8,7 +8,8 @@ namespace Ageofvillagers.Nations
 {
     class EgyptianKing : INation
     {
-        public void drawHouse()
+      
+        public void drawHouse(int x, int y)
         {
             throw new NotImplementedException();
         }
