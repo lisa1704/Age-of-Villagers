@@ -21,11 +21,5 @@ namespace AgeOfVillagers.VillegeItems
             addItem(new Circle(topLeft, bottomRight));
             addItem(new Rectangle(new Point(centre.X - 2, centre.Y), new Point(centre.X + 2, centre.Y + 40)));
         }
-
-        public override void draw(Graphics g, Pen p)
-        {
-            new Circle(topLeft, bottomRight).draw(g, p);
-            new Rectangle(new Point(centre.X - 2, centre.Y), new Point(centre.X + 2, centre.Y + 40)).draw(g, p);
-        }
     }
 }
