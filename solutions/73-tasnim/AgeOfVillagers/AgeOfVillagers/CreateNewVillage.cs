@@ -14,7 +14,10 @@ namespace AgeOfVillagers
     {
         Graphics g;
         string nationType = "";
-        List<Point> HousePoints = new List<Point>();
+        string clickedObject;
+        List<Point> Houses = new List<Point>();
+        List<Point> Trees = new List<Point>();
+        List<Point> WaterSourses = new List<Point>();
         FactoryNation Inputnation = new FactoryNation();
         public CreateNewVillage()
         {
@@ -23,17 +26,17 @@ namespace AgeOfVillagers
 
         private void Tree_Click(object sender, EventArgs e)
         {
-
+            clickedObject = "Tree";
         }
 
         private void House_Click(object sender, EventArgs e)
         {
-
+            clickedObject = "House";
         }
 
         private void Water_Source_Click(object sender, EventArgs e)
         {
-
+            clickedObject = "Water Source";
         }
 
         private void Select_Nation_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,11 +69,11 @@ namespace AgeOfVillagers
             Graphics g = Draw_Panel.CreateGraphics();
             Pen p = new Pen(Color.Black);
 
-            foreach (Point pt in HousePoints)
+            foreach (Point p in Houses)
             {
                 nationType = Select_Nation.Text;
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);
-                Inputnation.NationType(nationType).Draw_House(g, pt);
+                Inputnation.NationType(nationType).Draw_House(g, p);
 
             }
 
@@ -78,7 +81,10 @@ namespace AgeOfVillagers
 
         private void Draw_Panel_MouseClick(object sender, MouseEventArgs e)
         {
-            HousePoints.Add(e.Location);
+            if (clickedObject == "House")
+            {
+                Houses.Add(e.Location);
+            }
             Draw_Panel.Invalidate();
 
         }
