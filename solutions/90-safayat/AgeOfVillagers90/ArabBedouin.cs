@@ -13,7 +13,7 @@ namespace AgeOfVillagers90
 
         public Color BackGroundColor()
         {
-            return Color.YellowGreen;
+            return Color.LightYellow;
         }
 
         public void DrawHouse(Graphics g, Point pt)

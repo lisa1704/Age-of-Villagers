@@ -20,7 +20,7 @@ namespace AgeofVillagers90Test
         {
             ArabBedouin ABcolor = new ArabBedouin();
             Color colorGet1 = ABcolor.BackGroundColor();
-            Color colorMatch1 = Color.YellowGreen;
+            Color colorMatch1 = Color.LightYellow;
             Assert.AreEqual(colorGet1, colorMatch1);
         }
 
