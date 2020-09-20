@@ -21,13 +21,12 @@ namespace AgeOfVillagers
         private NationManager _nationmanager;
 
         VillageState _villagestate;
-        private string name;
+      
 
         private List<Point> Housepoints { get; set; } = new List<Point>();
         private List<Point> Waterpoints { get; set; } = new List<Point>();
         private List<Point> Treepoints { get; set; } = new List<Point>();
-       
-        IGraphicShape _shape;
+     
         public void get_state()
         {
             this._villagestate = new VillageState(VillageName.Text, Housepoints, Treepoints, Waterpoints);
@@ -67,25 +66,7 @@ namespace AgeOfVillagers
 
         }
 
-     public void setState(VillageState village,string check)
-        {
-            NationManager manager = new NationManager(check);
-
-
-            foreach (Point pt in village._housePoints)
-            {
-                manager.getNation(pt).GetHouse().draw(g, pen);
-            }
-            foreach (Point pt in village._treePoints)
-            {
-                manager.getNation(pt).GetTrees().draw(g, pen);
-            }
-            foreach (Point pt in village._WaterScPoints)
-            {
-                manager.getNation(pt).GetWaterSources().draw(g, pen);
-            }
-        }
-
+     
 
 
 
@@ -104,6 +85,7 @@ namespace AgeOfVillagers
             if (Houseradiobtn.Checked)
             {
                 manager.getNation(_location).GetHouse().draw(g,pen);
+
                 Point hp = manager.getNation(_location).GetHousePoint();
                 if (!hp.IsEmpty)
                 {
@@ -111,7 +93,6 @@ namespace AgeOfVillagers
                     Housepoints.Add(hp);
 
                 }
-
 
             }
             else if (Treeradiobtn.Checked)
@@ -153,22 +134,20 @@ namespace AgeOfVillagers
 
         private void Openvillagebtn_Click(object sender, EventArgs e)
         {
-            if (_nationame != "")
-            {
+            
+          
                 OpenVillageState opencommand = new OpenVillageState();
-                
+               
                 opencommand.Execute();
-                _villagestate = opencommand.get_villageState();
-                
-                
-                
-                setState(_villagestate, "Egyptian Kings");
 
-            }
-            else
-            {
-                MessageBox.Show("Show Something");
-            }
+                _villagestate = opencommand.get_villageState();
+                Form opennation = new OpenVillageNation(this,_villagestate,g,pen,DrawPanel);
+
+
+            DrawPanel.Invalidate();
+            DrawPanel.Refresh();
+            opennation.Show();
+               
         }
 
         
