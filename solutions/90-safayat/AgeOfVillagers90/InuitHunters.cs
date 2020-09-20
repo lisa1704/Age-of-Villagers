@@ -9,8 +9,6 @@ namespace AgeOfVillagers90
 {
     class InuitHunters : INation
     {
-        Pen p = new Pen(Color.Yellow);
-
         public Color BackGroundColor()
         {
             return Color.White;
