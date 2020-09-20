@@ -16,6 +16,7 @@ namespace Age_of_villagers
         int X, Y;
         string text = "";
         string name = "";
+        VillageProperties village;
         public Graphics g;
         public Pen p;
 
@@ -118,20 +119,19 @@ namespace Age_of_villagers
 
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
-            int x = e.Location.X;
-            int y = e.Location.Y;
-            if (Tree.Checked)
+            if (text == "house")
             {
-                g.DrawLine(p, X, y, X + 25, y + 25);
+                HousePoints.Add(e.Location);
             }
-            else if (House.Checked)
+            if (text == "tree")
             {
-                drawHouse(x, y);
+                TreePoints.Add(e.Location);
             }
-            else if (WaterSource.Checked)
+            if (text == "water")
             {
-
+                WaterPoints.Add(e.Location);
             }
+            MainPanel.Invalidate();
 
         }
 
