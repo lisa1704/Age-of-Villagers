@@ -9,6 +9,7 @@ namespace AgeOfVillagers
     {
         public IGraphicShape GetHouse(Point point)
         {
+
             return new ArabBedouinHouse(point);
         }
 
