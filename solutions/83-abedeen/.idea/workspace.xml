@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ab0ca4d-0b11-47b0-a906-f824649c9a16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project/Controllers/VillageView_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project/Controllers/VillageView_controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +168,7 @@
       <workItem from="1600456762493" duration="7265000" />
       <workItem from="1600520813215" duration="5354000" />
       <workItem from="1600534331196" duration="16442000" />
-      <workItem from="1600597973711" duration="1842000" />
+      <workItem from="1600597973711" duration="2722000" />
     </task>
     <servers />
   </component>

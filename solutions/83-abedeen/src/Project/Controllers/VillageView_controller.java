@@ -31,7 +31,7 @@ public class VillageView_controller implements Initializable {
     @FXML public ComboBox NationList = new ComboBox();
     @FXML private Pane DrawingCanvas;
     public String flag;
-    public INations nation;
+    public INations nation = new Bangladeshi_Farmers();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -41,21 +41,16 @@ public class VillageView_controller implements Initializable {
             public void handle(MouseEvent event) {
                 double x1 = event.getSceneX();
                 double y1 = event.getSceneY();
-                System.out.println(x1);
-                System.out.println(y1);
                 if(flag == "Tree"){
-                    INations village = new Bangladeshi_Farmers();
-                    ArrayList<Shape> tree = village.drawTree(x1,y1);
+                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
                     DrawShape(tree);
                 }
                 else if (flag == "House"){
-                    INations village = new Bangladeshi_Farmers();
-                    ArrayList<Shape> house = village.drawHouse(x1,y1);
+                    ArrayList<Shape> house = nation.drawHouse(x1,y1);
                     DrawShape(house);
                 }
                 else if(flag == "WaterSource"){
-                    INations village = new Bangladeshi_Farmers();
-                    ArrayList<Shape> WaterBody = village.drawWaterBody(x1,y1);
+                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
                     DrawShape(WaterBody);
                 }
             }
@@ -112,9 +107,7 @@ public class VillageView_controller implements Initializable {
         }
     }
 
-    public void TreePressed(ActionEvent actionEvent){
-        flag = "Tree";
-    }
+    public void TreePressed(ActionEvent actionEvent){ flag = "Tree"; }
 
     public void HousePressed(ActionEvent actionEvent) {
         flag = "House";
