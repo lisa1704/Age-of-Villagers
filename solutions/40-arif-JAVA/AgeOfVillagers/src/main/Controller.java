@@ -114,9 +114,7 @@ public class Controller {
         waterRB.setSelected(false);
 
         house = nationManager.getHouse();
-        house.getCanvas();
-        house.draw(canvas,"house");
-//        house.releaseCanvas();
+        house.draw(canvas,houseRB);
 
         originator.setState("home");
         careTaker.add(originator.saveStateToMemento());
