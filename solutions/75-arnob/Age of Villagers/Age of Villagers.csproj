@@ -52,6 +52,7 @@
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Arab_Creator.cs" />
     <Compile Include="ArcShape.cs" />
+    <Compile Include="Bangladeshi Farmer\BDfarmer_tree.cs" />
     <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
     <Compile Include="Bangladeshi Farmer\BDfarmer_House.cs" />
