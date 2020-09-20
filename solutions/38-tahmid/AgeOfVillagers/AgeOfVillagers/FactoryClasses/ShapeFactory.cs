@@ -47,7 +47,7 @@ namespace AgeOfVillagers
 
             else if (hint.Equals(Constants.INUIT_HOUSE_HINT))
             {
-                return new InuitHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+                return new InuitHouseIglooShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
             }
 
             return null;
