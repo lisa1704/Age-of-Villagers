@@ -98,9 +98,9 @@
             this.nation.Text = "Select Nation";
             this.nation.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
-            //"Arab Beduin",
-            //"Egyptian king",
-            //"Inuit Hunter"
+            "Arab Beduin",
+            "Egyptian king",
+            "Inuit Hunter"
             });
             this.nation.SelectedIndexChanged += new System.EventHandler(this.nation_SelectedIndexChanged);
             // 

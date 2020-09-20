@@ -4,7 +4,22 @@
     {
         public INation GetNation(string nation_name)
         {
-            return new Bangladeshifarmer();
+            if (nation_name == "Bangladeshi Farmers")
+            {
+                return new Bangladeshifarmer();
+            }
+            else if (nation_name == "Arab Beduin")
+            {
+                return new ArabBeduin();
+            }
+            else if (nation_name == "Egyptian king")
+            {
+                return new Egyptianking();
+            }
+            else
+            {
+                return new Inuithunter();
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace age_of_villagers
         Color colorofbackground;
         string nameofnation;
         NationFactory nationtype = new NationFactory();
-        Graphics g;
+        //Graphics g;
         public aov_editor()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace age_of_villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = panel1.CreateGraphics();
+            //Graphics g = panel1.CreateGraphics();
         }
     }
 }
