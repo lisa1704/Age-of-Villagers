@@ -7,26 +7,28 @@ namespace AgeOfVillagers
 	public class ArabBeduin : INation
 	{
         //private Panel drawingBoard;
-		public ArabBeduin()
-		{
+        public ArabBeduin()
+        {
 
         }
-
-        public void DrawHouse(Point p, Panel drawingBoard)
+        public Color PaintTerrain(Point p)
         {
-            ArabHouse arabHouse = new ArabHouse(drawingBoard);
-            arabHouse.draw(p, drawingBoard);
+            return Color.LightGoldenrodYellow;
         }
 
-        public void DrawTree(Point p, Panel drawingBoard)
+        IShape INation.DrawHouse(Point p)
         {
-            ArabTree arabTree = new ArabTree(drawingBoard);
-            arabTree.draw(p, drawingBoard);
+            return new ArabHouse(p);
         }
 
-        public void DrawWaterSource(Point p, Panel drawingBoard)
+        IShape INation.DrawTree(Point p)
         {
-            
+            return new ArabTree(p);
+        }
+
+        IShape INation.DrawWaterSource(Point p)
+        {
+            return new NullItems();
         }
 
         /*public Color PaintTerrain(Point p, Panel drawingBoard)
@@ -34,6 +36,6 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
         */
-        
+
     }
 }
