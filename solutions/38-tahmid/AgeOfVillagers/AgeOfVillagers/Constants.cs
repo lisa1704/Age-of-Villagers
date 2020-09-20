@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
     abstract class Constants
     {
-        public static string error_message = "Please enter your village name";
+        public static string string_invalid_message = "Please enter all needed information";
         public static string conversion_error_message = "is not available";
+        public static string point_invalid_message = "Your Selected Point Is Invalid";
+
 
         //state elements
         public static string VILLAGE_NAME_ELEMENT_HINT = "Village Name";
@@ -82,6 +85,7 @@ namespace AgeOfVillagers
         public static int PANEL_WIDTH = 400;
         public static int PANEL_STARTING_POINT_X = 0;
         public static int PANEL_STARTING_POINT_y = 0;
+        public static int PANEL_BORDER = 24;
 
         //Color
         public static Color BANGLADESHI_COLOR = Color.Green;
@@ -99,6 +103,9 @@ namespace AgeOfVillagers
 
         public static string VILLAGE_NAME_OPENER = "Village name opener";
         public static string VILLAGE_ITEM_OPENER = "Item opener";
+
+       
+
 
     }
 }

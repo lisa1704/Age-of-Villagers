@@ -84,7 +84,7 @@ namespace AgeOfVillagers
             string sVillageName = tbVillageName.Text;
             if (!pattern.IsMatch(sVillageName)) {
 
-                MessageBox.Show(Constants.error_message);
+                MessageBox.Show(Constants.string_invalid_message);
                 return;
             }
 
