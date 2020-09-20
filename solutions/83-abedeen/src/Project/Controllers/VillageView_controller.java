@@ -8,15 +8,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
