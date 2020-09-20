@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Egyptian_Kings implements INations{
     private double WaterBodyWidth = 12;
-    private double WaterBodyheight = 12;
+    private double WaterBodyHeight = 12;
     private String TerrainColor = "#fcd556";
     public Egyptian_Kings(){
         super();
@@ -56,7 +56,7 @@ public class Egyptian_Kings implements INations{
         arc.setCenterX(x);
         arc.setCenterY(y);
         arc.setRadiusX(WaterBodyWidth/2);
-        arc.setRadiusY(WaterBodyWidth/2);
+        arc.setRadiusY(WaterBodyHeight/2);
         arc.setType(ArcType.OPEN);
         arc.setStroke(Color.BLACK);
         arc.setStrokeWidth(2);
