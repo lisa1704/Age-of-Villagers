@@ -7,14 +7,13 @@ namespace Age_Of_Villagers
 {
     class ElipseShape : CompositeShape
     {
-        private readonly Point topleft;
-        private readonly Point bottomright;
-
-        public ElipseShape(Point topleft, Point bottomright)
+        private readonly Point TopLeft;
+        private readonly Point BottomRight;
+        public ElipseShape(Point TopLeft, Point BottomRight)
         {
-            this.topleft = topleft;
-            this.bottomright = bottomright;
-            AddComponent(new Arc(topleft.X, topleft.Y, bottomright.X - topleft.X, bottomright.Y - topleft.Y, 0, 360));
+            this.TopLeft = TopLeft;
+            this.BottomRight = BottomRight;
+            AddComponent(new Arc(TopLeft.X, TopLeft.Y, BottomRight.X - TopLeft.X, BottomRight.Y - TopLeft.Y, 0, 360));
         }
     }
 }
