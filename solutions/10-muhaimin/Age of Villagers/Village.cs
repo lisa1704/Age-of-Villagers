@@ -51,5 +51,10 @@ namespace Age_of_Villagers
                 nation.drawWaterSource(ws);
             }
         }
+
+        internal void RefreshVillage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

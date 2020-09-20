@@ -37,8 +37,7 @@ namespace Age_of_Villagers
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Refresh();
-            myVillage.RefreshVillage();
+            myVS.saveState(myVillage);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -84,7 +83,8 @@ namespace Age_of_Villagers
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            Refresh();
+            myVillage.RefreshVillage();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -161,5 +161,6 @@ namespace Age_of_Villagers
             trees.Clear();
             wSources.Clear();
         }
+
     }
 }
