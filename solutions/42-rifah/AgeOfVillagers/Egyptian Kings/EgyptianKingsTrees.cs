@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Egyptian_Kings
 {
-    class EgyptianKingsTrees : Composite
+    public class EgyptianKingsTrees : Composite
     {
 
         public EgyptianKingsTrees(Point point)

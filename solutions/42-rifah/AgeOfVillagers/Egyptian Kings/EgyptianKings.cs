@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Egyptian_Kings
 {
-    class EgyptianKings : INation
+    public class EgyptianKings : INation
     {
         public Color BackgroundColor()
         {

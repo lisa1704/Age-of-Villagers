@@ -6,7 +6,7 @@ using System.Text;
 namespace AgeOfVillagers.Inuit_Hunters
 
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         public Color BackgroundColor()
         {

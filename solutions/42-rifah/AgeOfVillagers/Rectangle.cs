@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Rectangle : IShape
+    public class Rectangle : IShape
     {
         private readonly Point TopLeft;
         private readonly Point BottomRight;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Bangladeshi_Farmers
 {
-    class BDFarmersWatersource : Composite
+    public class BDFarmersWatersource : Composite
     {
         public BDFarmersWatersource(Point Point1)
         {

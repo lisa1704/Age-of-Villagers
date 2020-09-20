@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Arab_Bedouin
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         public Color BackgroundColor()
         {
