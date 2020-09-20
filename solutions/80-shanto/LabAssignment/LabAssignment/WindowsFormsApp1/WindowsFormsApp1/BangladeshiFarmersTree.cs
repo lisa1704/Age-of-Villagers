@@ -22,5 +22,4 @@ namespace WindowsFormsApp1
             g.DrawLine(mypen, x - 1, y + 50, x - 1, y);
         }
     }
-
 }

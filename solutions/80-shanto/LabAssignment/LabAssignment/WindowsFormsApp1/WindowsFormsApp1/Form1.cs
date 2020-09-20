@@ -28,26 +28,19 @@ namespace WindowsFormsApp1
         {
             //MessageBox.Show("Save Village");
 
-            /*GetVillageState();
-
-            SaveVillage saveVillage = new SaveVillage(village);
-            saveVillage.ExecuteAction();
-            //MessagBox Show 
-            MessageBox.Show(VillageNameBox.Text + " Village saved");*/
-
-            /*SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Text Files(*.txt)|*.txt|All Files (*.*)|*.*";
             if (save.ShowDialog()==DialogResult.OK)
             {
                 StreamWriter write = new StreamWriter(File.Create(save.FileName));
-                write.Write(Text);
+                write.Write(textBox4.Text);
                 write.Dispose();                
             }
 
             else
             {
                 throw new Exception();
-            }*/
+            }
 
         }
 
@@ -66,13 +59,11 @@ namespace WindowsFormsApp1
             if (open.ShowDialog() == DialogResult.OK)
             {
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
-                Text = read.ReadToEnd();
+                textBox4.Text = read.ReadToEnd();
                 read.Dispose();
-            }
-            */
+            }*/
+            
         }
-
-        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -147,6 +138,11 @@ namespace WindowsFormsApp1
                 BackColor = Color.YellowGreen;
 
             }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
