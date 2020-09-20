@@ -9,10 +9,6 @@ namespace AgeOfVillagers
 {
     class Rectangle : AbstractShape
     {
-        //private Point TopLeft;
-        //private Point BottomRight;
-        //private Point TopRight;
-        //private Point BottomLeft;
         public Rectangle(Point topLeft, Point BottomRight)
         {
             Point TopRight = new Point(BottomRight.X, topLeft.Y);
