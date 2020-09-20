@@ -66,5 +66,10 @@ namespace age_of_villagers
         {
 
         }
+
+        private void savevillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

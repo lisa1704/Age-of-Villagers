@@ -37,6 +37,7 @@
             this.tree = new System.Windows.Forms.RadioButton();
             this.house = new System.Windows.Forms.RadioButton();
             this.watersource = new System.Windows.Forms.RadioButton();
+            this.savevillage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,11 +132,22 @@
             this.watersource.UseVisualStyleBackColor = true;
             this.watersource.CheckedChanged += new System.EventHandler(this.watersource_CheckedChanged);
             // 
+            // savevillage
+            // 
+            this.savevillage.Location = new System.Drawing.Point(737, 326);
+            this.savevillage.Name = "savevillage";
+            this.savevillage.Size = new System.Drawing.Size(94, 23);
+            this.savevillage.TabIndex = 9;
+            this.savevillage.Text = "Save village";
+            this.savevillage.UseVisualStyleBackColor = true;
+            this.savevillage.Click += new System.EventHandler(this.savevillage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.savevillage);
             this.Controls.Add(this.watersource);
             this.Controls.Add(this.house);
             this.Controls.Add(this.tree);
@@ -165,6 +177,7 @@
         private System.Windows.Forms.RadioButton house;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.RadioButton watersource;
+        private System.Windows.Forms.Button savevillage;
     }
 }
 
