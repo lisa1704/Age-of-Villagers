@@ -112,11 +112,11 @@ namespace WindowsFormsApp1_Test
         {
             string nation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
 
-            if (nation == "Bangladeshi Farmers")
+            /*if (nation == "Bangladeshi Farmers")
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.Green;
-            }
+            }*/
 
              if (nation == "Egypt Kings")
             {

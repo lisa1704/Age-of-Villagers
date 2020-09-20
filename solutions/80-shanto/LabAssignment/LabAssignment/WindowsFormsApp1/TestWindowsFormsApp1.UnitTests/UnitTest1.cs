@@ -34,5 +34,14 @@ namespace TestWindowsFormsApp1.UnitTests
             Color actual = ek.drawcolor();
             Assert.AreEqual(actual, expected);
         }
+
+        [TestMethod]
+        public void Test4()
+        {
+            ArabBedouin ab = new ArabBedouin(g);
+            Color expected = Color.YellowGreen;
+            Color actual = ab.drawcolor();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
