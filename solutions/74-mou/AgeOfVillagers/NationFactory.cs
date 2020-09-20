@@ -17,12 +17,20 @@ namespace AgeOfVillagers
             {
                 return new Bangladeshi();
             }
-            else return null;
-
-           else if (typeofnation.Equals("Arab Bedouin"))
+            else if (typeofnation.Equals("Arab Bedouin"))
             {
                 return new Arab();
             }
+            else if (typeofnation.Equals("Egyptian Kings"))
+            {
+                return new Egyptian();
+
+            }
+            else if (typeofnation.Equals("Inuit Hunters "))
+            {
+                return new Inuit();
+            }
+            else return null;
         }
 
 
