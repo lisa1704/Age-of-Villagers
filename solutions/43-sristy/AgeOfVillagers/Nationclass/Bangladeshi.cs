@@ -4,10 +4,14 @@ using System.Drawing;
 namespace Age_of_villagers
 {
     public class Bangladeshi : INation
-    {        
+    {
+        Size housesize=new Housesize();
+        Size treesize = new Treesize();
         public IObject Draw_house(Point lptop)
         {
-            Compositeobj house = new Bangladeshi_house(lptop);
+            int height = housesize.GetHeight();
+            int weight = housesize.GetWeidth();
+            Compositeobj house = new Bangladeshi_house(lptop,height,weight);
             return house;
         }
         public IObject Draw_tree(Point mptop)
