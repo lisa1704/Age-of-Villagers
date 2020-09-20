@@ -12,7 +12,7 @@ namespace AgeOfVillagers.Test
         public void InuithouseTest()
         {
             IObject actual = nationfactory.GetNation("Inuit").Draw_house(lptop);
-            IObject expected = new Inuit_house(lptop);
+            IObject expected = new Inuit_house(lptop,16,16);
             actual.Equals(expected);
         }
         [Fact]

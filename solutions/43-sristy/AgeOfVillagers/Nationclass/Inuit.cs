@@ -5,9 +5,12 @@ namespace Age_of_villagers
 {
     public class Inuit : INation
     {
+        Size housesize = new Housesize();
         public IObject Draw_house(Point mptop)
         {
-            IObject house = new Inuit_house(mptop);
+            int height = housesize.GetHeight();
+            int weidth = housesize.GetWeidth();
+            IObject house = new Inuit_house(mptop, height, weidth);
             return house;
 
         }
