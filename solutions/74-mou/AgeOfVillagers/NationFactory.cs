@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         {
             this.typeofnation = typeofnation;
         }
-        public INation GetNation()
+        public INation GetNation(string checked_nation)
         {
             if (typeofnation.Equals("Bangladeshi Farmers"))
             {

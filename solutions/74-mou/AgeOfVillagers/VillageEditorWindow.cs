@@ -14,26 +14,26 @@ namespace AgeOfVillagers
 {
     public partial class VillageEditorWindow : Form
     {
-        ArrayList listOfPoints;
-        bool PencilDown;
         public int x,y;
-        public string vname,item;
-        public INation _nation;
+        public string vname,item,checked_nation;
         public Graphics gr;
+        public INation _nation;
+
+        public NationFactory nationfactory;
 
         public VillageEditorWindow()
         {
             InitializeComponent();
-            listOfPoints = new ArrayList();
-            PencilDown = false;
-            this.ActiveControl = villagename;
             gr = drawingpanel.CreateGraphics();
             
+        }
+        private void VillageWindow_Load(object sender, EventArgs e)
+        {
+
         }
 
         public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            //Point p = new Point();
             x = e.X;
             y = e.X;
             Pen pen = new Pen(Color.Blue);
@@ -41,101 +41,21 @@ namespace AgeOfVillagers
 
             if(item == "Tree")
             {
-                NaFact.GetNation().DrawTree(new Point(x, y)).DrawShapes(gr, pen);
+                NaFact.GetNation(checked_nation).DrawTree(new Point(x, y)).DrawShapes(gr, pen);
 
             }
-            
-        }
-
-        private void houseradio_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-        private void treeradio_CheckedChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void waterradio_CheckedChanged(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void VillageWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void titlelabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        public void drawingpanel_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics gr = drawingpanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-
-        }
-
-        private void villagename_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void nation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        public void drawingpanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            PencilDown = true;
-        }
-
-        public void drawingpanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            PencilDown = false;
-
-        }
-
-
-        public void drawingpanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (PencilDown)
+            else if (item == "House")
             {
-                using (Graphics graphics = drawingpanel.CreateGraphics())
-                {
-                    graphics.FillEllipse(new SolidBrush(Color.Black), e.X, e.Y, 3, 3);
-          
-                }
+                NaFact.GetNation(checked_nation).DrawHouse(new Point(x, y)).DrawShapes(gr, pen);
+
+            }
+            else if (item == "Water Source")
+            {
+                NaFact.GetNation(checked_nation).DrawWaterSource(new Point(x, y)).DrawShapes(gr, pen);
+
             }
 
         }
-
-        public void villagename_KeyDown(object sender, KeyEventArgs e)
-        {
-            vname = villagename.Text;
-
-        }
-
-        private void savevillage_Click(object sender, EventArgs e)
-        {
-           
-        }
-
 
         public void TreeRadioMouseClicked(object sender, MouseEventArgs e)
         {
@@ -155,14 +75,57 @@ namespace AgeOfVillagers
 
         }
 
+
+        private void titlelabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        public void drawingpanel_Paint(object sender, PaintEventArgs e)
+        {
+            //Graphics gr = drawingpanel.CreateGraphics();
+           // Pen p = new Pen(Color.Black);
+
+        }
+
+
+        public void nation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checked_nation = nation.Items[nation.SelectedIndex].ToString();
+            _nation = nationfactory.GetNation(checked_nation);
+            _nation.SetVillagename(vname);
+
+        }
+        private void villagename_TextChanged(object sender, EventArgs e)
+        {
+            _nation.SetVillagename(vname);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void savevillage_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         public void newvillage_Click(object sender, EventArgs e)
         {
-            drawingpanel.Invalidate();
+            //drawingpanel.Invalidate();
 
         }
         public void openvillage_Click(object sender, EventArgs e)
         {
-            drawingpanel.Invalidate();
+            //drawingpanel.Invalidate();
         }
 
 
