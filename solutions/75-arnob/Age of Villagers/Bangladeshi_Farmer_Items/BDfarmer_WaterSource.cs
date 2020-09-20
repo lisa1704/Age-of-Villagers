@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿using System;poii
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,17 +9,17 @@ namespace Age_of_Villagers.Bangladeshi_Farmer_Item
 {
     class BDfarmer_WaterSource : CompositeShaping
     {
-        public BDfarmer_WaterSource (Point startPoint, Point pt1, Point pt2, Point pt3, Point pt4, Point pt5, Point pt6, Point pt7, Point pt8)
+        public BDfarmer_WaterSource (Point startPoint, Point point1, Point point2, Point point3, Point point4, Point point5, Point point6, Point point7, Point point8)
         {
-            AddComponent(new Line(startPoint, pt1));
-            AddComponent(new Line(pt1, pt2));
-            AddComponent(new Line(pt2, pt3));
-            AddComponent(new Line(pt3, pt4));
-            AddComponent(new Line(pt4, pt5));
-            AddComponent(new Line(pt5, pt6));
-            AddComponent(new Line(pt6, pt7));
-            AddComponent(new Line(pt7, pt8));
-            AddComponent(new Line(pt8, startPoint));
+            AddComponent(new Line(startPoint, point1));
+            AddComponent(new Line(point1, point2));
+            AddComponent(new Line(point2, point3));
+            AddComponent(new Line(point3, point4));
+            AddComponent(new Line(point4, point5));
+            AddComponent(new Line(point5, point6));
+            AddComponent(new Line(point6, point7));
+            AddComponent(new Line(point7, point8));
+            AddComponent(new Line(point8, startPoint));
         }
 
 
