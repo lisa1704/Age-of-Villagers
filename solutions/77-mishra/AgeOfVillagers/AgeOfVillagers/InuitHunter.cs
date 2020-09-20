@@ -22,5 +22,10 @@ namespace AgeOfVillagers
         {
             throw new NotImplementedException();
         }
+
+        public void PaintTerrain(Point p, Panel drawingBoard)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

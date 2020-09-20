@@ -21,10 +21,18 @@ namespace AgeOfVillagers
 
         public void DrawTree(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            BdTree bdTree = new BdTree(drawingBoard);
+            bdTree.draw(p, drawingBoard);
+
         }
 
         public void DrawWaterSource(Point p, Panel drawingBoard)
+        {
+            BdWater bdWater = new BdWater(drawingBoard);
+            bdWater.draw(p, drawingBoard);
+        }
+
+        public void PaintTerrain(Point p, Panel drawingBoard)
         {
             throw new NotImplementedException();
         }

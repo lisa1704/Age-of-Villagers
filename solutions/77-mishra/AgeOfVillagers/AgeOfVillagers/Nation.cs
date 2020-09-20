@@ -28,6 +28,9 @@ namespace AgeOfVillagers
             
         }
 
-        
+        public INation getnationtype()
+        {
+            return nation;
+        }
     }
 }
