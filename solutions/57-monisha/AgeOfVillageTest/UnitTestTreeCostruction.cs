@@ -15,14 +15,14 @@ namespace AgeOfVillageTest
         {
         }
         [TestMethod]
-        public void TestBangladeshiTreeConstruction()
+        public void TestNullTreeConstruction()
         {
-            INations BDTree = new NullNation();
-            object s = BDTree.DrawTree(g, pt);
-            NullVillageItem BDHouseTest = new NullVillageItem(pt);
+            INations nationType = new NullNation();
+            object testObject = nationType.DrawTree(g, pt);
+            NullVillageItem NullTreeTest = new NullVillageItem(pt);
 
             //Assert.AreEqual(s, BDHouseTest);
-            BDHouseTest.Equals(s);
+            NullTreeTest.Equals(testObject);
         }
     }
 }
