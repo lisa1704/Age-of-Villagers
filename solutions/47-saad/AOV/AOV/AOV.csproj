@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="ArabNation.cs" />
     <Compile Include="BangladeshiNation.cs" />
+    <Compile Include="BdHouse.cs" />
+    <Compile Include="BdTree.cs" />
+    <Compile Include="BdWaterSource.cs" />
     <Compile Include="CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
     <Compile Include="DrawLine.cs" />

@@ -12,18 +12,20 @@ namespace AOV
         public void DrawHouse(Graphics g, Point p)
         {
             
-            Console.WriteLine("Bangladeshi House");            
-
+            BdHouse bdHouse=new BdHouse(new Point(p.X,p.Y),new Point(p.X-60,p.Y+30),new Point(p.X+60,p.Y+110));            
+            bdHouse.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BdTree bdTree = new BdTree(p);
+            bdTree.draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BdWaterSource bdWaterSource = new BdWaterSource(p);
+            bdWaterSource.draw(g);
         }
 
         public Color GetColor()
