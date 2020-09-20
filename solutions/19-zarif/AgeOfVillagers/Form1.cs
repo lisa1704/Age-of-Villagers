@@ -26,7 +26,7 @@ namespace AgeOfVillagers
         private List<Point> Housepoints { get; set; } = new List<Point>();
         private List<Point> Waterpoints { get; set; } = new List<Point>();
         private List<Point> Treepoints { get; set; } = new List<Point>();
-
+       
         IGraphicShape _shape;
         public void get_state()
         {
@@ -67,22 +67,24 @@ namespace AgeOfVillagers
 
         }
 
-     /*  public void set_state(VillageState village)
+     public void setState(VillageState village)
         {
+            NationManager manager = new NationManager(NationName.Text);
+
 
             foreach (Point pt in village._housePoints)
             {
-                Housepoints.Add(pt);
+                manager.getNation(pt).GetHouse().draw(g, pen);
             }
             foreach (Point pt in village._treePoints)
             {
-                Treepoints.Add(pt);
+                manager.getNation(pt).GetTrees().draw(g, pen);
             }
             foreach (Point pt in village._WaterScPoints)
             {
-                Waterpoints.Add(pt);
+                manager.getNation(pt).GetWaterSources().draw(g, pen);
             }
-        }*/
+        }
 
 
 
@@ -96,8 +98,8 @@ namespace AgeOfVillagers
 
             Point _location = new Point(x, y);
 
+
             NationManager manager = new NationManager(NationName.Text);
-             
 
             if (Houseradiobtn.Checked)
             {
@@ -138,7 +140,6 @@ namespace AgeOfVillagers
                 {
 
                     Waterpoints.Add(wp);
-
                 }
             } 
 
@@ -152,19 +153,20 @@ namespace AgeOfVillagers
 
         private void Openvillagebtn_Click(object sender, EventArgs e)
         {
-/*            if (_nationame != "")
+            if (_nationame != "")
             {
                 OpenVillageState opencommand = new OpenVillageState();
                 NewVillagebtn_Click(sender, e);
                 opencommand.Execute();
-                _villagestate =opencommand.get_villageState();
-                set_state(_villagestate);
+                _villagestate = opencommand.get_villageState();
+                
                 DrawPanel.Refresh();
+                setState(_villagestate);
             }
             else
             {
-                MessageBox.Show("VillgeType is not selected");
-            }*/
+                MessageBox.Show("Show Something");
+            }
         }
 
         

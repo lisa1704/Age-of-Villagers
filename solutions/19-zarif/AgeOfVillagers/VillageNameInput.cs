@@ -36,7 +36,7 @@ namespace AgeOfVillagers
             NationManager nationManager = new NationManager(comboBox1.Text);
 
 
-            _drawpanel.BackColor = nationManager.getNation().GetTerritoryColor();
+            _drawpanel.BackColor = nationManager.getNation(new Point()).GetTerritoryColor();
                         
 
             this.Hide();
