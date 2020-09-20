@@ -17,7 +17,7 @@ public class BangladeshiFarmer : Nation
     }
     public IShape draw_water(int waterX, int waterY)
     {
-        water = new Bdwater(x, y);
+        water = new Bdwater(waterX, waterY);
         return water;
         //return "Drawing a tree. ";
     }
