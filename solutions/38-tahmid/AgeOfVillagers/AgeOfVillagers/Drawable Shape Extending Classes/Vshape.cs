@@ -8,15 +8,16 @@ namespace AgeOfVillagers.Drawable_Shape_Extending_Classes
 {
     class Vshape : DrawableShapes
     {
-        private Point topPoint;
+        private Point centerPoint;
         private Point rightPoint;
         private Point leftPoint;
         private Graphics graphics;
         private Pen pen;
+        private DrawableShapes rightLine, leftLine;
 
-        public Vshape(Point topPoint, Point rightPoint, Point leftPoint, Graphics graphics, Pen pen)
+        public Vshape(Point centerPoint, Point rightPoint, Point leftPoint, Graphics graphics, Pen pen)
         {
-            this.topPoint = topPoint;
+            this.centerPoint = centerPoint;
             this.rightPoint = rightPoint;
             this.leftPoint = leftPoint;
             this.graphics = graphics;
@@ -25,12 +26,14 @@ namespace AgeOfVillagers.Drawable_Shape_Extending_Classes
 
         public override void drawShape()
         {
-            
+            rightLine.drawShape();
+            leftLine.drawShape();
         }
 
         public override void makeShape()
         {
-            
+            rightLine = base.getLines(rightPoint, centerPoint, graphics, pen);
+            leftLine = base.getLines(leftPoint, centerPoint, graphics, pen);
         }
     }
 }
