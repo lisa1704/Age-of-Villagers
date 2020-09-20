@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers.VillegeItems
 {
@@ -12,10 +13,6 @@ namespace AgeOfVillagers.VillegeItems
         public NullItem(Point point)
         {
             this.point = point;
-        }
-        public new void draw(Graphics g, Pen p)
-        {
-
         }
     }
 }

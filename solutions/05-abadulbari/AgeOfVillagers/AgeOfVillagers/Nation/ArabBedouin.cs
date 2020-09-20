@@ -28,9 +28,9 @@ namespace AgeOfVillagers.Nation
             return new ArabianTree(point);
         }
 
-        public VillageItem getWaterSource(Point p)
+        public VillageItem getWaterSource(Point point)
         {
-            throw new NotImplementedException();
+            return new NullItem(point);
         }
     }
 }
