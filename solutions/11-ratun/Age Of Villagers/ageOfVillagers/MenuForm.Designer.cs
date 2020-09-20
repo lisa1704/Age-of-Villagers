@@ -31,17 +31,17 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tree = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ageOfVillagers = new System.Windows.Forms.Label();
+            this.OpenVillage = new System.Windows.Forms.Button();
+            this.NewVillage = new System.Windows.Forms.Button();
+            this.Water = new System.Windows.Forms.Button();
+            this.House = new System.Windows.Forms.Button();
+            this.Nation = new System.Windows.Forms.TextBox();
+            this.VillageName = new System.Windows.Forms.TextBox();
             this.SaveVillage = new System.Windows.Forms.Button();
+            this.ageOfVillagers = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.VillageName = new System.Windows.Forms.TextBox();
-            this.Nation = new System.Windows.Forms.TextBox();
-            this.House = new System.Windows.Forms.Button();
-            this.Water = new System.Windows.Forms.Button();
-            this.NewVillage = new System.Windows.Forms.Button();
-            this.OpenVillage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,72 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 400);
             this.panel1.TabIndex = 2;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // OpenVillage
+            // 
+            this.OpenVillage.Location = new System.Drawing.Point(142, 365);
+            this.OpenVillage.Name = "OpenVillage";
+            this.OpenVillage.Size = new System.Drawing.Size(105, 23);
+            this.OpenVillage.TabIndex = 7;
+            this.OpenVillage.Text = "Open Village";
+            this.OpenVillage.UseVisualStyleBackColor = true;
+            this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
+            // 
+            // NewVillage
+            // 
+            this.NewVillage.Location = new System.Drawing.Point(16, 365);
+            this.NewVillage.Name = "NewVillage";
+            this.NewVillage.Size = new System.Drawing.Size(94, 23);
+            this.NewVillage.TabIndex = 6;
+            this.NewVillage.Text = "New Village";
+            this.NewVillage.UseVisualStyleBackColor = true;
+            this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
+            // 
+            // Water
+            // 
+            this.Water.Location = new System.Drawing.Point(74, 216);
+            this.Water.Name = "Water";
+            this.Water.Size = new System.Drawing.Size(109, 23);
+            this.Water.TabIndex = 5;
+            this.Water.Text = "Water Source";
+            this.Water.UseVisualStyleBackColor = true;
+            this.Water.Click += new System.EventHandler(this.Water_Click);
+            // 
+            // House
+            // 
+            this.House.Location = new System.Drawing.Point(144, 186);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(75, 23);
+            this.House.TabIndex = 4;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.Click += new System.EventHandler(this.House_Click);
+            // 
+            // Nation
+            // 
+            this.Nation.Location = new System.Drawing.Point(47, 105);
+            this.Nation.Name = "Nation";
+            this.Nation.Size = new System.Drawing.Size(186, 22);
+            this.Nation.TabIndex = 3;
+            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
+            // 
+            // VillageName
+            // 
+            this.VillageName.Location = new System.Drawing.Point(74, 77);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(124, 22);
+            this.VillageName.TabIndex = 2;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
+            // 
+            // SaveVillage
+            // 
+            this.SaveVillage.Location = new System.Drawing.Point(74, 327);
+            this.SaveVillage.Name = "SaveVillage";
+            this.SaveVillage.Size = new System.Drawing.Size(124, 23);
+            this.SaveVillage.TabIndex = 1;
+            this.SaveVillage.Text = "Save Village";
+            this.SaveVillage.UseVisualStyleBackColor = true;
+            this.SaveVillage.Click += new System.EventHandler(this.button2_Click);
             // 
             // ageOfVillagers
             // 
@@ -93,78 +158,13 @@
             this.ageOfVillagers.Text = "Age Of Villagers";
             this.ageOfVillagers.Click += new System.EventHandler(this.label1_Click);
             // 
-            // SaveVillage
-            // 
-            this.SaveVillage.Location = new System.Drawing.Point(74, 327);
-            this.SaveVillage.Name = "SaveVillage";
-            this.SaveVillage.Size = new System.Drawing.Size(124, 23);
-            this.SaveVillage.TabIndex = 1;
-            this.SaveVillage.Text = "Save Village";
-            this.SaveVillage.UseVisualStyleBackColor = true;
-            this.SaveVillage.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 400);
             this.panel2.TabIndex = 3;
-            // 
-            // VillageName
-            // 
-            this.VillageName.Location = new System.Drawing.Point(74, 77);
-            this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(124, 22);
-            this.VillageName.TabIndex = 2;
-            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
-            // 
-            // Nation
-            // 
-            this.Nation.Location = new System.Drawing.Point(47, 105);
-            this.Nation.Name = "Nation";
-            this.Nation.Size = new System.Drawing.Size(186, 22);
-            this.Nation.TabIndex = 3;
-            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
-            // 
-            // House
-            // 
-            this.House.Location = new System.Drawing.Point(144, 186);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(75, 23);
-            this.House.TabIndex = 4;
-            this.House.Text = "House";
-            this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.House_Click);
-            // 
-            // Water
-            // 
-            this.Water.Location = new System.Drawing.Point(74, 216);
-            this.Water.Name = "Water";
-            this.Water.Size = new System.Drawing.Size(109, 23);
-            this.Water.TabIndex = 5;
-            this.Water.Text = "Water Source";
-            this.Water.UseVisualStyleBackColor = true;
-            this.Water.Click += new System.EventHandler(this.Water_Click);
-            // 
-            // NewVillage
-            // 
-            this.NewVillage.Location = new System.Drawing.Point(16, 365);
-            this.NewVillage.Name = "NewVillage";
-            this.NewVillage.Size = new System.Drawing.Size(94, 23);
-            this.NewVillage.TabIndex = 6;
-            this.NewVillage.Text = "New Village";
-            this.NewVillage.UseVisualStyleBackColor = true;
-            this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
-            // 
-            // OpenVillage
-            // 
-            this.OpenVillage.Location = new System.Drawing.Point(142, 365);
-            this.OpenVillage.Name = "OpenVillage";
-            this.OpenVillage.Size = new System.Drawing.Size(105, 23);
-            this.OpenVillage.TabIndex = 7;
-            this.OpenVillage.Text = "Open Village";
-            this.OpenVillage.UseVisualStyleBackColor = true;
-            this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // MenuForm
             // 

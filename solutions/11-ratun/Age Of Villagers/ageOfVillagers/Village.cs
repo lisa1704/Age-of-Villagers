@@ -1,4 +1,6 @@
-﻿namespace ageOfVillagers
+﻿using System.Windows.Forms;
+
+namespace ageOfVillagers
 {
     interface IDraw
     {
@@ -20,10 +22,14 @@
                 House h = new House();
                 h.Draw(x, y);
             }
-            else
+            else if( currentselect=="water")
             {
                 Water w = new Water();
                 w.Draw(x, y);
+            }
+            else
+            {
+                MessageBox.Show("Select an item first! ");
             }
 
         }

@@ -97,5 +97,11 @@ namespace ageOfVillagers
         {
             return text;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Village v = new Village();
+            v.Draw(currentselect, Cursor.Position.X, Cursor.Position.Y);
+        }
     }
 }
