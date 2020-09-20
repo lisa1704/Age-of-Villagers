@@ -15,33 +15,6 @@ namespace Age_of_Villagers.Tests
             Assert.Equal(2, 2);
         }
 
-        
-
-        [Fact]
-
-        public void ArabBedouinTerrainColor()
-        {
-            string name = "Arab Bedouin";
-            INation nation = new ArabBedouin(name);
-            Color expected = Color.LightYellow;
-            Color actual = nation.getTerrainColor();
-            Assert.Equal(expected, actual);
-        }
-
-
-
-        [Fact]
-
-        public void InuitHunterTerrainColor()
-        {
-            string name = "Inuit Hunters";
-            INation nation = new InuitHunter(name);
-            Color expected = Color.White;
-            Color actual = nation.getTerrainColor();
-            Assert.Equal(expected, actual);
-        }
-
-
     }
 
 }
