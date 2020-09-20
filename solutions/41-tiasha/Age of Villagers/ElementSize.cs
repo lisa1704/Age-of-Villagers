@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class ElementSize
+    public class ElementSize
     {
+        public int height, width;
+
+        public ElementSize(int _height, int _width)
+        {
+            this.height = _height;
+            this.width = _width;
+        }
     }
 }
