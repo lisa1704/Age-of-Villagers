@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public class NullItems
+    public class NullItems : Composite
     {
     }
 }
