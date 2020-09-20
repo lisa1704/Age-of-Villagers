@@ -30,7 +30,17 @@ namespace age_of_villagers
 
         public void draw_tree()
         {
-            throw new NotImplementedException();
+            Point p0 = new Point(50, 50);
+            Point p1 = new Point(p0.X - 2, p0.Y);
+            Point p2 = new Point(p0.X + 2, p0.Y);
+            Point p3 = new Point(p0.X - 2, p0.Y + 50);
+            Point p4 = new Point(p0.X + 2, p0.Y + 50);
+            gp.DrawArc(pen, p0.X, p0.Y, 50, 50, 0, 360);
+
+            gp.DrawLine(pen, p1, p2);
+            gp.DrawLine(pen, p1, p3);
+            gp.DrawLine(pen, p3, p4);
+            gp.DrawLine(pen, p2, p4);
         }
 
         public void draw_watersource()
