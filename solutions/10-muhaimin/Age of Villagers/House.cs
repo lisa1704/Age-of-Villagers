@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class House : IElement
+    class House : IHouse
     {
         public int x, y;
 

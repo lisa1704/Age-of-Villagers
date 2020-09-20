@@ -2,7 +2,7 @@
 
 namespace Age_of_Villagers
 {
-    internal interface IElement
+    internal interface IHouse
     {
         void draw(Axis axes, Panel panel);
     }
