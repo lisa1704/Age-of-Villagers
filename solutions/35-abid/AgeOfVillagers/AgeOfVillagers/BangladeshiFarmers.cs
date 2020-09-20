@@ -7,17 +7,17 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
     {
-        public void drawhouse(Point p, Graphics g)
+        public void drawhouse(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }
 
-        public void drawtree(Point p, Graphics g)
+        public void drawtree(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }
 
-        public void drawwatersrc(Point p, Graphics g)
+        public void drawwatersrc(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }
