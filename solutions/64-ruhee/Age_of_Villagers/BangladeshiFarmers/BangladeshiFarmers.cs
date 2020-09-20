@@ -8,7 +8,7 @@ namespace Age_of_Villagers.BangladeshiFarmers
 {
     public class BangladeshiFarmers : INation
     {
-        Pen p = new Pen(Color.Green);
+        Pen p = new Pen(Color.Black);
         public void DrawTree(Graphics g, Point point)
         {
             BangladeshiTrees bdFarmersTree = new BangladeshiTrees(point);
@@ -28,8 +28,8 @@ namespace Age_of_Villagers.BangladeshiFarmers
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            BangladeshiWaterS bdFarmersWaterSource = new BangladeshiWaterS(point);
-            bdFarmersWaterSource.Draw(g);
+            BangladeshiWaterS bdWater = new BangladeshiWaterS(point);
+            bdWater.Draw(g);
         }
 
         public Color BackgroundColor()

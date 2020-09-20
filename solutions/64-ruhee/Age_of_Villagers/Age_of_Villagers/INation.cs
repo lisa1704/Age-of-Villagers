@@ -20,7 +20,7 @@ namespace Age_of_Villagers.Age_of_Villagers
         {
             if (NationName == "Bangladeshi Farmers")
             {
-                return null;
+                return new BangladeshiFarmers.BangladeshiFarmers();
             }
             else if (NationName == "Arab Bedouin")
             {
@@ -28,7 +28,7 @@ namespace Age_of_Villagers.Age_of_Villagers
             }
             else if (NationName == "Egyptian Kings")
             {
-                return null;
+                return new EgyptianKings.EgyptianKings();
             }
             else if (NationName == "Inuit Hunters")
             {

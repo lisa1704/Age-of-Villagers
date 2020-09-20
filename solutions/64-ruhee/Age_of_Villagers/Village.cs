@@ -123,11 +123,6 @@ namespace Age_of_Villagers
             drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
         }
 
-        private void VillageNametextBox_TextChanged(object sender, EventArgs e)
-        {
-            village_name = VillageNametextBox.Text;
-            villageName.Text = village_name;
-        }
 
     }
 }

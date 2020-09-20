@@ -8,6 +8,5 @@ namespace Age_of_Villagers.Age_of_Villagers
 {
     interface IHouse
     {
-        void drawHouse(Axes Axes, Panel drawingpanel);
     }
 }
