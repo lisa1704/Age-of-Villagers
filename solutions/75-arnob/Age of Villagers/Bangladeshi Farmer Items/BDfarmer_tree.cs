@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers.Bangladeshi_Farmer
 {
-    class BDfarmer_Tree
+    class BDfarmer_Tree : CompositeShaping
     {
 
 
