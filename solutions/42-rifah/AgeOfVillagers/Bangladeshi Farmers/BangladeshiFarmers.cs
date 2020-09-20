@@ -18,6 +18,13 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
             BDFarmersHouse bdFarmersHouse = new BDFarmersHouse(point);
             bdFarmersHouse.Draw(g);
         }
+
+        public string BangladeshiFarmerTest()
+        {
+            string NationName = "Bangladesh";
+            return NationName;
+        }
+
         public void DrawWaterSource(Graphics g, Point point)
         {
             BDFarmersWatersource bdFarmersWaterSource = new BDFarmersWatersource(point);
