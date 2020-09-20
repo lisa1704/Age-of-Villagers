@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgeOfVillagers
+namespace AgeOfVillagers 
 {
-    class Village
+    class Village : INation
     {
         private String villageName;
     
@@ -15,5 +15,19 @@ namespace AgeOfVillagers
             villageName = name; 
         }
 
+        public void DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void drawWater()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
