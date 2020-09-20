@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class Quadrangle : DrawableShapes
     {
-        private Point topLeftPoint,topRightPoint, bottomRightPoint, bottomLeftPoint;
+        private Point topLeftPoint,topRightPoint,bottomRightPoint,bottomLeftPoint;
         DrawableShapes upLine,downLine,leftLine,rightLine;
        
         private Graphics graphics;
