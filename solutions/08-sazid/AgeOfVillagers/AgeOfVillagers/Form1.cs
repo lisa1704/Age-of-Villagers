@@ -114,5 +114,18 @@ namespace AgeOfVillagers
             }
             drawinPanel.Invalidate();
         }
+
+        private void newVillageButton_Click(object sender, EventArgs e)
+        {
+            houseLocations.Clear();
+            treeLocations.Clear();
+            sourceLocations.Clear();
+            drawinPanel.Refresh();
+            nationList.ResetText();
+            nationName = nationList.Text;
+            drawinPanel.BackColor = Color.Empty;
+            //refactor here
+           // drawinPanel.BackColor= nationType.GetNation(nationName).GetColor();
+        }
     }
 }

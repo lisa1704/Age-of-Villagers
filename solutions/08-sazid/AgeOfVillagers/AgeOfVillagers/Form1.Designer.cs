@@ -80,6 +80,7 @@
             this.newVillageButton.TabIndex = 3;
             this.newVillageButton.Text = "New Village";
             this.newVillageButton.UseVisualStyleBackColor = true;
+            this.newVillageButton.Click += new System.EventHandler(this.newVillageButton_Click);
             // 
             // openVillageButton
             // 
