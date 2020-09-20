@@ -25,6 +25,7 @@ namespace AgeOfVillagers
         public VillageComponentFactory villageComponentFactory =null;
         public VillageSave villageSave;
         NationFactory nationFactory = new NationFactory();
+        VillageOpen villageOpen = new VillageOpen();
         INation iNation;
 
         public AgeOfVillagersForm()
@@ -112,8 +113,8 @@ namespace AgeOfVillagers
                 filePath = openFileDialog.FileName;
             }
             nationName ="Arab Bedouin";
-            Village village = villageSave.openVillage(this, filePath, nationName);
-            villageSave.draw(this, village, nationName);
+            Village village = villageOpen.openVillage(this, filePath, nationName);
+            villageOpen.draw(this, village, nationName);
 
             /*OpenVillageForm openVillageForm = new OpenVillageForm(this,villageSave);
             openVillageForm.Show();

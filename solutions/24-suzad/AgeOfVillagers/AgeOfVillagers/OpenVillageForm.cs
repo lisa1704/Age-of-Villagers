@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         VillageSave villageSave;
         string filePath;
         string nationName;
+        VillageOpen villageOpen = new VillageOpen();
         public OpenVillageForm(AgeOfVillagersForm ageOfVillagersForm, VillageSave villageSave)
         {
             InitializeComponent();
@@ -34,8 +35,8 @@ namespace AgeOfVillagers
         private void btnOpen_Click(object sender, EventArgs e)
         {
             nationName = cmboChooseNation.SelectedItem.ToString();
-            Village village = villageSave.openVillage(ageOfVillagersForm, filePath,nationName);
-            villageSave.draw(ageOfVillagersForm, village,nationName);
+            Village village = villageOpen.openVillage(ageOfVillagersForm, filePath,nationName);
+            villageOpen.draw(ageOfVillagersForm, village,nationName);
             ageOfVillagersForm.Show();
             this.Hide();
         }

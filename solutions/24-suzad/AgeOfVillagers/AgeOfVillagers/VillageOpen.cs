@@ -4,30 +4,12 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class VillageSave
+    public class VillageOpen
     {
-
-        public void saveVillage <Village> ( Village objectToWrite, bool append = false)
-        {
-            var contentsToWriteToFile = JsonConvert.SerializeObject(objectToWrite, Formatting.Indented);
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Save aov file";
-            saveFileDialog.AddExtension = true;
-            saveFileDialog.DefaultExt = "aov";
-            saveFileDialog.OverwritePrompt = true;
-            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                string path = saveFileDialog.FileName;
-                
-                System.IO.File.WriteAllText(path, contentsToWriteToFile);
-            }
-        }
-
-        /*public Village openVillage(AgeOfVillagersForm ageOfVillagersForm, string filePath, string nation)
+        public Village openVillage(AgeOfVillagersForm ageOfVillagersForm, string filePath, string nation)
         {
             Village village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(filePath));
             ageOfVillagersForm.setNationProperty(nation);
@@ -56,6 +38,6 @@ namespace AgeOfVillagers
                 villageComponent.drawComponent(point, ageOfVillagersForm.graphics, ageOfVillagersForm.pen);
                 ageOfVillagersForm.riverPoints.Add(point);
             }
-        }*/
+        }
     }
 }
