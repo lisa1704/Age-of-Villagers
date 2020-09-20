@@ -53,7 +53,6 @@ namespace Age_of_Villagers
             this.GameTitle.Size = new System.Drawing.Size(207, 37);
             this.GameTitle.TabIndex = 2;
             this.GameTitle.Text = "Age of Villagers";
-            
             // 
             // VillageTitle
             // 
@@ -61,9 +60,9 @@ namespace Age_of_Villagers
             this.VillageTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VillageTitle.Location = new System.Drawing.Point(691, 88);
             this.VillageTitle.Name = "VillageTitle";
-            this.VillageTitle.Size = new System.Drawing.Size(115, 23);
+            this.VillageTitle.Size = new System.Drawing.Size(104, 23);
             this.VillageTitle.TabIndex = 3;
-            this.VillageTitle.Text = "blank Village";
+            this.VillageTitle.Text = "Add Village";
             this.VillageTitle.Click += new System.EventHandler(this.VillageTitle_Click);
             // 
             // NationTitle
@@ -72,9 +71,9 @@ namespace Age_of_Villagers
             this.NationTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NationTitle.Location = new System.Drawing.Point(691, 128);
             this.NationTitle.Name = "NationTitle";
-            this.NationTitle.Size = new System.Drawing.Size(114, 23);
+            this.NationTitle.Size = new System.Drawing.Size(103, 23);
             this.NationTitle.TabIndex = 4;
-            this.NationTitle.Text = "blank Nation";
+            this.NationTitle.Text = "Add Nation";
             this.NationTitle.Click += new System.EventHandler(this.NationTitle_Click);
             // 
             // VillageEditorWindow

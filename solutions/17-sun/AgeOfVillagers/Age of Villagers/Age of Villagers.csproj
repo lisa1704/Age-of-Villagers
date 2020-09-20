@@ -7,4 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Models\EgyptianKings.cs~RF11822b1e.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Manifests\" />
+  </ItemGroup>
+
 </Project>
