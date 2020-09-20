@@ -9,8 +9,6 @@ namespace AgeOfVillagers90
 {
     public class EgyptianKings : INation
     {
-        Pen p = new Pen(Color.Red);
-
         public Color BackGroundColor()
         {
             return Color.Yellow;
