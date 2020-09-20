@@ -57,7 +57,7 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(VillageName.Text + " Saved!");
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Village Opened!");
         }
 
         private void formRefresh()
