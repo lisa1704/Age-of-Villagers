@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunterHouse : VillageComponent
+    public class InuitHunterHouse : VillageComponent
     {
         public Point e;
         public InuitHunterHouse(Point e)
