@@ -6,10 +6,9 @@ public class NationFactory {
 
     public NationFactory(String SelectedNation){
         this.SelectedNation = SelectedNation;
-        nation = createNation(this.SelectedNation);
     }
 
-    public INation createNation(String SelectedNation){
+    public INation createNation(){
         this.nation = null;
         if(SelectedNation == "Bangladeshi Farmers"){
             nation = new BangladeshiFarmers();

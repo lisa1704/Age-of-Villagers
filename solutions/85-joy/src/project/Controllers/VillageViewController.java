@@ -20,6 +20,7 @@ import java.util.*;
 
 import project.Utilities.BangladeshiFarmers;
 import project.Utilities.INation;
+import project.Utilities.NationFactory;
 import project.Utilities.Villages;
 
 import javax.swing.*;
@@ -30,6 +31,8 @@ public class VillageViewController implements Initializable {
     @FXML public ComboBox NationDropDown = new ComboBox();
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
+
+    public INation nation;
     public int Flag = 0;
     public ArrayList<Shape> Object ;
 
@@ -130,13 +133,9 @@ public class VillageViewController implements Initializable {
     }
 
     public void NationChanged(ActionEvent actionEvent) {
-        if((String) NationDropDown.getValue() == "Bangladeshi Farmers"){
-            INation BangladeshiFarmers = new BangladeshiFarmers();
-            DrawPane.setStyle("-fx-background-color:"+BangladeshiFarmers.getTerrainColor());
-        }
-        else{
-            DrawPane.setStyle("-fx-background-color:"+"White");
-        }
+        NationFactory nationFactory = new NationFactory((String) NationDropDown.getValue());
+        this.nation = nationFactory.createNation();
+        DrawPane.setStyle("-fx-background-color:"+nation.getTerrainColor());
 
     }
 }
