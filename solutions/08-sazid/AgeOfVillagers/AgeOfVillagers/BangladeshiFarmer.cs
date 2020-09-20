@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmer : INation
+    public class BangladeshiFarmer : INation
     {
         private Color backGroundColor = Color.Green;
         Pen pen = new Pen(Color.Pink);
@@ -33,5 +33,7 @@ namespace AgeOfVillagers
         {
             return backGroundColor;
         }
+
+        
     }
 }

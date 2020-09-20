@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class NationFactory
+    public class NationFactory
     {
         public INation GetNation(string nationType)
         {
