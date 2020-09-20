@@ -46,7 +46,7 @@ namespace AgeOfVillagers
 
         public void drawwatersrc(Point p, Graphics g, Pen pen)
         {
-            throw new NotImplementedException();
+            g.DrawArc(pen, p.X, p.Y, 12, 12, 0, 360);
         }
     }
 }
