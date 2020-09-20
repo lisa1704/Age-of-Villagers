@@ -53,14 +53,14 @@
     <Compile Include="Nation_Factory_Creator\Arab_Creator.cs" />
     <Compile Include="Shape\ArcShape.cs" />
     <Compile Include="Bangladeshi Farmer Items\BDfarmer_Tree.cs" />
-    <Compile Include="Bangladeshi Farmer Items\BDfarmer_WaterResource.cs" />
+    <Compile Include="Bangladeshi Farmer Items\BDfarmer_WaterSource.cs" />
     <Compile Include="Nation_Factory_Creator\BangladeshiFarmer_Creator.cs" />
     <Compile Include="Nation\Bangladeshi_Farmer.cs" />
     <Compile Include="Bangladeshi Farmer Items\BDfarmer_House.cs" />
     <Compile Include="CompositeShaping.cs" />
     <Compile Include="Egyptian King Items\Egyptian_House.cs" />
     <Compile Include="Egyptian King Items\Egyptian_Tree.cs" />
-    <Compile Include="Egyptian King Items\Egyptian_WaterResource.cs" />
+    <Compile Include="Egyptian King Items\Egyptian_WaterSource.cs" />
     <Compile Include="Nation_Factory_Creator\Egyptian_Creator.cs" />
     <Compile Include="Nation\Egyptian_King.cs" />
     <Compile Include="Shape\EllipseShape.cs" />
