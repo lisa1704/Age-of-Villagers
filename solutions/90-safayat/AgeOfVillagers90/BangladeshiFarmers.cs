@@ -12,11 +12,7 @@ namespace AgeOfVillagers90
         Pen p = new Pen(Color.Pink);
         public void DrawHouse(Graphics g,Point pt)
         {
-            /*Rectangle rec = new Rectangle(new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y + 25));
-            TAgle tri = new TAgle(new Point(pt.X - 5, pt.Y + 10), new Point(pt.X, pt.Y), new Point(pt.X + 15, pt.Y));*/
             BangladeshiFarmerHouse bdhouse = new BangladeshiFarmerHouse(pt);
-            /*rec.Draw(g);
-            tri.Draw(g);*/
             bdhouse.Draw(g);
         }
 

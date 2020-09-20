@@ -42,6 +42,14 @@ namespace AgeofVillagers90Test
             Assert.AreEqual(colorGet2, colorMatch2);
         }
 
-        
+        [TestMethod]
+        public void IHColorTest()
+        {
+            InuitHunters IHcolor = new InuitHunters();
+            Color colorGet2 = IHcolor.BackGroundColor();
+            Color colorMatch2 = Color.White;
+            Assert.AreEqual(colorGet2, colorMatch2);
+        }
+
     }
 }
