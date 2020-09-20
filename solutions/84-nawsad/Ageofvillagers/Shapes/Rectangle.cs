@@ -30,7 +30,7 @@ namespace Ageofvillagers
             g.DrawLine(p, X, Y, X, Y + 100);
             g.DrawLine(p, X, Y+ 100, X + 100, Y + 100);
             g.DrawLine(p, X + 100, Y + 100, X+ 100, Y);
-            Console.WriteLine("You are in the drawshape method");
+            Console.WriteLine("Rectangle Drawn Correctly with size"+100);
         }
     }
 }

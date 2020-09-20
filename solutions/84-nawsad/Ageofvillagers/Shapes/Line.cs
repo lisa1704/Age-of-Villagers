@@ -24,7 +24,7 @@ namespace Ageofvillagers
         public void drawshape()
         {
             g.DrawLine(p, X, Y, X + 100, Y);
-            Console.WriteLine("Line Drawn Correctly with Radius ");
+            Console.WriteLine("Line Drawn Correctly with lenghth "+100);
         }
 
        

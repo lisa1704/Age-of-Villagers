@@ -11,7 +11,7 @@ namespace Ageofvillagers
     {
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            drawingboard.Refresh();
+            panel2.Refresh();
         }
     }
 }

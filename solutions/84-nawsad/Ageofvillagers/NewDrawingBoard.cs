@@ -8,7 +8,6 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-        private Panel drawingboard;
         
         private void button4_Click(object sender, EventArgs e)
         {  
