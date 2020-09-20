@@ -29,7 +29,7 @@ namespace AgeOfVillagers
         }
         IShapes draw_house(Point p)
         {
-            
+            return new BangladeshiHouse(p);
         }
         IShapes draw_tree()
         {
