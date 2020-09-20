@@ -41,7 +41,7 @@ namespace Age_of_Villagers
             this.radioButton_house = new System.Windows.Forms.RadioButton();
             this.radioButton_water = new System.Windows.Forms.RadioButton();
             this.nationList = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.village_nameButton = new System.Windows.Forms.Button();
             this.drawing_space.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@ namespace Age_of_Villagers
             // label_village_name
             // 
            
-            //this.label_village_name.Click += new System.EventHandler(this.label_Click);
+            
             // 
             // button_save
             // 
@@ -132,8 +132,7 @@ namespace Age_of_Villagers
             this.radioButton_tree.TabStop = true;
             this.radioButton_tree.Text = "Tree";
             this.radioButton_tree.UseVisualStyleBackColor = false;
-            this.radioButton_tree.Click += new System.EventHandler(this.radioButton_tree_Click);
-            this.radioButton_tree.Enter += new System.EventHandler(this.label_Click);
+       
             // 
             // radioButton_house
             // 
@@ -146,7 +145,6 @@ namespace Age_of_Villagers
             this.radioButton_house.TabStop = true;
             this.radioButton_house.Text = "House";
             this.radioButton_house.UseVisualStyleBackColor = true;
-            this.radioButton_house.Click += new System.EventHandler(this.radioButton_house_Click);
             // 
             // radioButton_water
             // 
@@ -159,7 +157,6 @@ namespace Age_of_Villagers
             this.radioButton_water.TabStop = true;
             this.radioButton_water.Text = "Water Source";
             this.radioButton_water.UseVisualStyleBackColor = true;
-            this.radioButton_water.Click += new System.EventHandler(this.radioButton_water_Click);
             // 
             // nationList
             // 
@@ -177,17 +174,17 @@ namespace Age_of_Villagers
             this.nationList.Text = "Nation Name";
             this.nationList.SelectedIndexChanged += new System.EventHandler(this.nationList_SelectedIndexChanged);
             // 
-            // button1
+            // village_nameButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(701, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 34);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Village Name";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.village_nameButton.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.village_nameButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.village_nameButton.Location = new System.Drawing.Point(701, 85);
+            this.village_nameButton.Name = "village_nameButton";
+            this.village_nameButton.Size = new System.Drawing.Size(142, 34);
+            this.village_nameButton.TabIndex = 5;
+            this.village_nameButton.Text = "Village Name";
+            this.village_nameButton.UseVisualStyleBackColor = false;
+            this.village_nameButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // VillageEditorWindow
             // 
@@ -195,7 +192,7 @@ namespace Age_of_Villagers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(932, 434);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.village_nameButton);
             this.Controls.Add(this.nationList);
             this.Controls.Add(this.radioButton_water);
             this.Controls.Add(this.button_new);
@@ -231,7 +228,7 @@ namespace Age_of_Villagers
         private System.Windows.Forms.RadioButton radioButton_house;
         private System.Windows.Forms.RadioButton radioButton_water;
         private System.Windows.Forms.ComboBox nationList;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button village_nameButton;
     }
 }
 

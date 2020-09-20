@@ -8,7 +8,8 @@ namespace Age_of_Villagers.Nation
 {
     public class NullNation : INation
     {
-        string nullName;
+        string nullName = "No Nation";
+
         public String getName()
         {
             return nullName;

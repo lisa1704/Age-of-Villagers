@@ -25,13 +25,7 @@ namespace Age_of_Villagers
 
         int x, y;
         Graphics graphics;
-        public static string setValueForText_Tree = "";
-        public static string setValueForText_House = "";
-        public static string setValueForText_Water = "";
-
         string nation_type = "";
-
-
 
         NationFactoryApplication nationFactory = new NationFactoryApplication();
         INation iNation;
@@ -39,125 +33,31 @@ namespace Age_of_Villagers
         VillageSave villageSave;
         VillageOpen villageOpen;
         
-
-
-        
-
-
-
         public VillageEditorWindow()
         {
             InitializeComponent();
             newVillageEdit = new VillageEdit(CreateNewVillageForm.village_naaam);
             villageSave = new VillageSave(newVillageEdit);
             villageOpen = new VillageOpen(newVillageEdit);
-
         }
-
-
 
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
-            //label_village_name.Text = CreateNewVillageForm.village_naaam;   // Village Name passing from CreateNewVillageForm to VillageEditorWindow Form
-            button1.Text = CreateNewVillageForm.village_naaam;
-
-        }
-
-        private void label_Click(object sender, EventArgs e)
-        {
             
+            village_nameButton.Text = CreateNewVillageForm.village_naaam;
         }
 
         
-
-        private void drawing_space_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics graphics = drawing_space.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-
-      
-
-        }
-
-        
-
         private void drawing_space_MouseClick(object sender, MouseEventArgs e)
         {
              x = e.X;
              y = e.Y;
-
-
             graphics = drawing_space.CreateGraphics();
             Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
-
-            
-
             AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
-
             iNation = abstractNationCreator.CreateNation();
-
-            drawing_space.BackColor = iNation.getTerrainColor();
-
             checkRadioButton(font, brush, e);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /* Set Radio Button and act accordingly
-
-
-            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            bd.GetHouse(graphics,e.Location);
-
-            BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            bd.GetTree(graphics,e.Location);
-
-            //BangladeshiFarmer bd = new BangladeshiFarmer("Bangladeshi Farmer");
-            //bd.GetWaterResource(graphics,e.Location);
-
-
-
-            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
-            //eg.GetHouse(graphics, e.Location);
-
-            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
-            //eg.GetTree(graphics, e.Location);
-
-            //EgyptianKings eg = new EgyptianKings("Egyptian Kings");
-            //eg.GetWaterResource(graphics, e.Location);
-
-            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            //arab.GetHouse(graphics, e.Location);
-
-            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            //arab.GetTree(graphics, e.Location);
-
-            //ArabBedouin arab = new ArabBedouin("Arab Bedouin");
-            //arab.GetWaterResource(graphics, e.Location);
-
-            //InuitHunter inuit = new InuitHunter("Inuit Hunter");
-            //inuit.GetHouse(graphics, e.Location);
-
-            */
-
-
-            
-            
-
 
         }
 
@@ -167,7 +67,6 @@ namespace Age_of_Villagers
             {
                 iNation.GetTree(graphics, e.Location);
                 newVillageEdit.AddTree(graphics,e.Location,iNation);
-
             }
             else if (radioButton_house.Checked)
             { 
@@ -182,35 +81,13 @@ namespace Age_of_Villagers
         }
 
 
-        
-
-        private void radioButton_tree_Click(object sender, EventArgs e)
-        {
-            setValueForText_Tree = "Coconut Tree";
-           
-            
-        }
-
-        private void radioButton_house_Click(object sender, EventArgs e)
-        {
-            setValueForText_House = "Duplex House";
-
-        }
-
-        private void radioButton_water_Click(object sender, EventArgs e)
-        {
-            setValueForText_Water = "River Water";
-        }
-
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             
             nation_type = nationList.Text;
             AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
             iNation = abstractNationCreator.CreateNation();
-            MessageBox.Show("Please Click on the drawing panel to Initialize Terrain Color");
-            //drawing_space.BackColor = iNation.getTerrainColor();
-            //newVillageEdit.ReDrawVillage(graphics,iNation);
+            drawing_space.BackColor = iNation.getTerrainColor(); 
 
         }
 
@@ -222,13 +99,14 @@ namespace Age_of_Villagers
 
         private void button_open_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Select Nation First. If Nation is selected then Click on the drawing panel to Initialize Drawing", "Condition for Opening a saved AOV file");
             AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
             iNation = abstractNationCreator.CreateNation();
             newVillageEdit = villageOpen.ReformVillage();
-            button1.Text = newVillageEdit.GetVillageName();
+            village_nameButton.Text = newVillageEdit.GetVillageName();
             Refresh();
             newVillageEdit.ReDrawVillage(graphics, iNation);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -240,9 +118,8 @@ namespace Age_of_Villagers
         {
             CreateNewVillageForm new_villageform_object = new CreateNewVillageForm();  
             new_villageform_object.Show();
-            drawing_space.Invalidate();  // Clearing the Drawing Space when a new village is created
+            drawing_space.Invalidate(); 
             this.Hide();
-    
         }
     }
 }
