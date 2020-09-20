@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -9,6 +10,10 @@ public class Main extends Application {
         launch(args);
     }
 
+    void changeScene(Scene scene) {
+        this.window.setScene(scene);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
@@ -16,9 +21,10 @@ public class Main extends Application {
         Group g = new Group();
         INation bd = new ArabBedouin(g);
 
-        ShowWindow controlPanel = new ShowWindow(bd, g);
+        ChoiceWindow choiceWindow = new ChoiceWindow(window);
 
-        window.setScene(controlPanel.display());
-        window.show();
+        choiceWindow.display().show();
+
+
     }
 }
