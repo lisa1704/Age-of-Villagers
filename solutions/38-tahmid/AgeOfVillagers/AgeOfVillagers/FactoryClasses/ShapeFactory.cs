@@ -15,20 +15,20 @@ namespace AgeOfVillagers
     {
         public  Shapes GetShape(Graphics graphics, Pen pen, Point startingPoint,string hint)
         {
-            
+
 
             if (hint.Equals(Constants.BDTREE_HINT))
             {
-                return new BangladeshiTreeShape(graphics, pen, startingPoint,  Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
+                return new BangladeshiTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
             }
             else if (hint.Equals(Constants.BDWATERSOURCE_HINT))
             {
 
                 return new BangladeshiWaterSourceShape(graphics, pen, startingPoint, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
             }
-            else if(hint.Equals(Constants.BDHOUSE_HINT))
+            else if (hint.Equals(Constants.BDHOUSE_HINT))
                 return new BangladeshiHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
-            
+
             else if (hint.Equals(Constants.ARABIAN_HOUSE_HINT))
                 return new ArabianHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
 
@@ -36,6 +36,10 @@ namespace AgeOfVillagers
                 return new ArabianTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
             else if (hint.Equals(Constants.EGYPTIAN_HOUSE_HINT))
                 return new EgyptianHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+            else if (hint.Equals(Constants.EGYPTIAN_TREE_HINT))
+            {
+                return new EgyptianTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
+            }
 
             return null;
         }
