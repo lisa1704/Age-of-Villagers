@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arab.cs" />
     <Compile Include="Components\Arc.cs" />
     <Compile Include="Components\CompositeShape.cs" />
     <Compile Include="ElementSize.cs" />
