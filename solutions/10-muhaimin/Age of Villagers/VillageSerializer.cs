@@ -11,11 +11,9 @@ namespace Age_of_Villagers
 {
     class VillageSerializer
     {
-        protected Village villageState;
         protected OpenFileDialog ofd = new OpenFileDialog();
         protected SaveFileDialog sfd = new SaveFileDialog();
         protected string fileName;
-        protected string savePath;
         public void saveState(Village village)
         {
             
@@ -23,9 +21,9 @@ namespace Age_of_Villagers
             sfd.Filter = "aov|*.aov";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                using (Stream s = File.Open(sfd.FileName, FileMode.CreateNew))
-                using (StreamWriter sw = new StreamWriter(s))
-                    sw.Write(villageSerialized);
+                Stream s = File.Open(sfd.FileName, FileMode.CreateNew);
+                StreamWriter sw = new StreamWriter(s);
+                sw.Write(villageSerialized);
             }
         }
         public Village restoreState()
