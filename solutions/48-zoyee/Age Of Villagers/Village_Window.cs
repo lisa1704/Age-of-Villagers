@@ -84,6 +84,7 @@ namespace Age_Of_Villagers
         private void NationName_SelectedIndexChanged(object sender, EventArgs e)
         {
             village_type = NationName.Text;
+            drawingPanel.BackColor = nationFactory.GetNation(village_type).BackGroundColor();
         }
 
         private void VillageNametextBox_TextChanged(object sender, EventArgs e)

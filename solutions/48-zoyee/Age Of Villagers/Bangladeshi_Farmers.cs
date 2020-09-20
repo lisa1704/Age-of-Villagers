@@ -12,10 +12,7 @@ namespace Age_Of_Villagers
     {
         Pen p = new Pen(Color.Yellow);
 
-        public Color BackGroundColor()
-        {
-            return Color.Green;
-        }
+        
 
         public void Draw_Tree(Graphics g, Point point)
         {
@@ -32,9 +29,13 @@ namespace Age_Of_Villagers
             BangladeshiFarmer_WaterSource bd_ws = new BangladeshiFarmer_WaterSource(point);
             bd_ws.Draw(g);
         }
-        public string BangladeshiFarmer_Test()
+        public Color BackGroundColor()
+        {
+            return Color.Green;
+        }
+        /*public string BangladeshiFarmer_Test()
         {
             return "Bangladeshi";
-        }
+        }*/
     }
 }
