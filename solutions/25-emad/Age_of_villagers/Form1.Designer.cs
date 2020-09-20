@@ -31,13 +31,13 @@
             this.panel = new System.Windows.Forms.Panel();
             this.Age_of_Villagers = new System.Windows.Forms.Label();
             this.village_name = new System.Windows.Forms.Label();
-            this.nations = new System.Windows.Forms.Label();
             this.tree = new System.Windows.Forms.RadioButton();
             this.house = new System.Windows.Forms.RadioButton();
             this.water_source = new System.Windows.Forms.RadioButton();
             this.save = new System.Windows.Forms.Button();
             this.New = new System.Windows.Forms.Button();
             this.open = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // panel
@@ -47,6 +47,7 @@
             this.panel.Size = new System.Drawing.Size(600, 400);
             this.panel.TabIndex = 0;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Paint);
+            this.panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
             // 
             // Age_of_Villagers
             // 
@@ -63,23 +64,12 @@
             // 
             this.village_name.AutoSize = true;
             this.village_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.village_name.Location = new System.Drawing.Point(675, 72);
+            this.village_name.Location = new System.Drawing.Point(678, 73);
             this.village_name.Name = "village_name";
             this.village_name.Size = new System.Drawing.Size(91, 18);
             this.village_name.TabIndex = 2;
             this.village_name.Text = "Village name";
             this.village_name.Click += new System.EventHandler(this.Village_name_Click);
-            // 
-            // nations
-            // 
-            this.nations.AutoSize = true;
-            this.nations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nations.Location = new System.Drawing.Point(691, 114);
-            this.nations.Name = "nations";
-            this.nations.Size = new System.Drawing.Size(59, 18);
-            this.nations.TabIndex = 3;
-            this.nations.Text = "Nations";
-            this.nations.Click += new System.EventHandler(this.Nations_Click);
             // 
             // tree
             // 
@@ -147,16 +137,30 @@
             this.open.UseVisualStyleBackColor = true;
             this.open.Click += new System.EventHandler(this.Open_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Egyptian King",
+            "Arab Bedouin",
+            "Inuit Hunter"});
+            this.comboBox1.Location = new System.Drawing.Point(659, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(949, 441);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.open);
             this.Controls.Add(this.New);
             this.Controls.Add(this.save);
             this.Controls.Add(this.water_source);
             this.Controls.Add(this.house);
             this.Controls.Add(this.tree);
-            this.Controls.Add(this.nations);
             this.Controls.Add(this.village_name);
             this.Controls.Add(this.Age_of_Villagers);
             this.Controls.Add(this.panel);
@@ -185,13 +189,13 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label Age_of_Villagers;
         private System.Windows.Forms.Label village_name;
-        private System.Windows.Forms.Label nations;
         private System.Windows.Forms.RadioButton tree;
         private System.Windows.Forms.RadioButton house;
         private System.Windows.Forms.RadioButton water_source;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button New;
         private System.Windows.Forms.Button open;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

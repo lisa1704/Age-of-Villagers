@@ -71,5 +71,16 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Panel_MouseClick(object sender, MouseEventArgs e)
+        {
+            int x = e.X;
+            int y = e.Y;
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
