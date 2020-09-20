@@ -56,6 +56,8 @@ namespace AgeOfVillagers
 
         private void New_Village_Click(object sender, EventArgs e)
         {
+            Houses.Clear();
+            Draw_Panel.Refresh();
 
         }
 
