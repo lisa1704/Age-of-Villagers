@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class InunitHunters : INation
+    class InuitHunters : INation
     {
         private Color Colorbackground = Color.White;
         public Color BgColor()
