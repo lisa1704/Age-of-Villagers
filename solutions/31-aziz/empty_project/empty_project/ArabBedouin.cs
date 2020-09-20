@@ -13,6 +13,8 @@ namespace empty_project
             base.house = new ArabBedouinHouse();
             base.tree = new ArabBedouinTree();
             base.waterSource = new ArabBedouinWaterSource();
+            base.color = System.Drawing.Color.LightYellow;
+            colorBackground();
         }
     }
 }
