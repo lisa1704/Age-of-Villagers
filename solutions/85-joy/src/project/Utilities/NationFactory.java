@@ -16,6 +16,9 @@ public class NationFactory {
         else if(SelectedNation == "Arab Bedouin"){
             nation = new ArabBedouin();
         }
+        else if(SelectedNation == "Egyptian Kings"){
+            nation = new EgyptianKings();
+        }
 
         return nation;
     }

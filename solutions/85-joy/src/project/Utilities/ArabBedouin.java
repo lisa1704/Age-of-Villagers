@@ -61,12 +61,14 @@ public class ArabBedouin implements  INation{
         Tree.add(line8);
         Line line9 = new Line(x1+1,y1+(TreeHeight/2),x1+1,y1+1);
         Tree.add(line9);
-        
+
         return Tree;
     }
 
     @Override
     public ArrayList<Shape> DrawWaterSource(double x1, double y1) {
+        //Null Object Implementation
+
         return null;
     }
 
