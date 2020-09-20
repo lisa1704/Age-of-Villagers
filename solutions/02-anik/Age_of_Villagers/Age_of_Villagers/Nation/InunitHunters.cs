@@ -8,6 +8,10 @@ namespace Age_of_Villagers.Nation
     class InunitHunters : INation
     {
         private Color Colorbackground = Color.White;
+        public Color BgColor()
+        {
+            return Colorbackground;
+        }
 
 
     }
