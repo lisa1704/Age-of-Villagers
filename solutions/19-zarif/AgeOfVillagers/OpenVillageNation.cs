@@ -39,7 +39,8 @@ namespace AgeOfVillagers
             main.NationName.Text = Opencombobox.Text;
             main.VillageName.Text = villageState._name;
 
-// panel.BackColor = manager.getNation(new Point()).GetTerritoryColor();
+            panel.BackColor = manager.getNation(new Point()).GetTerritoryColor();
+            panel.Refresh();
 
             opn.ResetState(villageState, Opencombobox.Text);
 
