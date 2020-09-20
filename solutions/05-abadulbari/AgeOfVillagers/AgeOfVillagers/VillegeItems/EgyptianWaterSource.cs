@@ -12,8 +12,8 @@ namespace AgeOfVillagers.VillegeItems
 
         public EgyptianWaterSource(Point point)
         {
-            topLeft = new Point(point.X - 25, point.Y - 25);
-            bottomRight = new Point(point.X + 25, point.Y + 25);
+            topLeft = new Point(point.X - 6, point.Y - 6);
+            bottomRight = new Point(point.X + 6, point.Y + 6);
             addItem(new Circle(topLeft, bottomRight));
         }
     }
