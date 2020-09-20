@@ -18,7 +18,14 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void InuittreeTest()
         {
-            IObject actual = nationfactory.GetNation("Inuit").Draw_house(lptop);
+            IObject actual = nationfactory.GetNation("Inuit").Draw_tree(lptop);
+            IObject expected = new null_obj();
+            actual.Equals(expected);
+        }
+        [Fact]
+        public void InuitwatersourceTest()
+        {
+            IObject actual = nationfactory.GetNation("Inuit").Draw_watersource(lptop);
             IObject expected = new null_obj();
             actual.Equals(expected);
         }
