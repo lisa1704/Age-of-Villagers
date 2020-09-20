@@ -22,7 +22,8 @@ public class Arab_Bedouins implements INations{
 
     @Override
     public ArrayList<Shape> drawWaterBody(double x, double y) {
-        return null;
+        ArrayList<Shape> WB = new ArrayList<Shape>();
+        return WB;
     }
 
     @Override
