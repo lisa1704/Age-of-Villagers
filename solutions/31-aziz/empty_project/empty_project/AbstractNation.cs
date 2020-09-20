@@ -12,11 +12,18 @@ namespace empty_project
         protected ITree tree;
         protected IWaterSource waterSource;
         protected Panel panel;
+        protected Color color;
 
         public AbstractNation(Panel panel)
         {
             this.panel = panel;
         }
+
+        public void colorBackground()
+        {
+            panel.BackColor = color;
+        }
+
         public void drawHouse(Axis axis)
         {
             house.drawHouse(axis, panel);
