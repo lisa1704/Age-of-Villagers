@@ -49,7 +49,7 @@ public class Bangladeshi_Farmers implements INations {
         arc.setStrokeWidth(1);
         arc.setFill(Color.TRANSPARENT);
         arc.setStartAngle(0.0);
-        arc.setLength(1000.0);
+        arc.setLength(360.0);
 
         tree.add(arc);
 
