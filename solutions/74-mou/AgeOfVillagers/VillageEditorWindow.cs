@@ -16,27 +16,33 @@ namespace AgeOfVillagers
     {
         ArrayList listOfPoints;
         bool PencilDown;
-        int x,y;
-        string vname,item;
-        INation nation;
+        public int x,y;
+        public string vname,item;
+        public INation _nation;
+        public Graphics gr;
+
         public VillageEditorWindow()
         {
             InitializeComponent();
             listOfPoints = new ArrayList();
             PencilDown = false;
             this.ActiveControl = villagename;
-            villagename.Focus();
+            gr = drawingpanel.CreateGraphics();
+            
         }
 
-        private void drawingpanel_MouseClick(object sender, MouseEventArgs e)
+        public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             //Point p = new Point();
             x = e.X;
             y = e.X;
             Pen pen = new Pen(Color.Blue);
+            NationFactory NaFact = new NationFactory(nation.Text);
+
             if(item == "Tree")
             {
-                IShapes tree = nation.DrawTree(new Point(x,y);
+                NaFact.GetNation().DrawTree(new Point(x, y)).DrawShapes(gr, pen);
+
             }
             
         }
@@ -47,12 +53,12 @@ namespace AgeOfVillagers
         }
         private void treeradio_CheckedChanged(object sender, EventArgs e)
         {
-            item = "Tree";
+          
         }
 
         private void waterradio_CheckedChanged(object sender, EventArgs e)
         {
-            item = "Water Resource";
+        
         }
 
         private void VillageWindow_Load(object sender, EventArgs e)
@@ -71,7 +77,7 @@ namespace AgeOfVillagers
         }
 
 
-        private void drawingpanel_Paint(object sender, PaintEventArgs e)
+        public void drawingpanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics gr = drawingpanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
@@ -83,7 +89,7 @@ namespace AgeOfVillagers
 
         }
 
-        private void nation_SelectedIndexChanged(object sender, EventArgs e)
+        public void nation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -94,19 +100,19 @@ namespace AgeOfVillagers
         }
 
 
-        private void drawingpanel_MouseDown(object sender, MouseEventArgs e)
+        public void drawingpanel_MouseDown(object sender, MouseEventArgs e)
         {
             PencilDown = true;
         }
 
-        private void drawingpanel_MouseUp(object sender, MouseEventArgs e)
+        public void drawingpanel_MouseUp(object sender, MouseEventArgs e)
         {
             PencilDown = false;
 
         }
 
 
-        private void drawingpanel_MouseMove(object sender, MouseEventArgs e)
+        public void drawingpanel_MouseMove(object sender, MouseEventArgs e)
         {
             if (PencilDown)
             {
@@ -119,15 +125,9 @@ namespace AgeOfVillagers
 
         }
 
-        private void villagename_KeyDown(object sender, KeyEventArgs e)
+        public void villagename_KeyDown(object sender, KeyEventArgs e)
         {
             vname = villagename.Text;
-
-        }
-
-        private void nation_KeyDown(object sender, KeyEventArgs e)
-        {
-            nation.Items.Add(nation);
 
         }
 
@@ -137,30 +137,30 @@ namespace AgeOfVillagers
         }
 
 
-        private void TreeRadioMouseClicked(object sender, MouseEventArgs e)
+        public void TreeRadioMouseClicked(object sender, MouseEventArgs e)
         {
             item = "Tree";
 
         }
 
-        private void HouseRadioMouseClicked(object sender, MouseEventArgs e)
+        public void HouseRadioMouseClicked(object sender, MouseEventArgs e)
         {
             item = "House";
 
         }
 
-        private void WaterSourceRadioMouseClicked(object sender, MouseEventArgs e)
+        public void WaterSourceRadioMouseClicked(object sender, MouseEventArgs e)
         {
             item = "River";
 
         }
 
-        private void newvillage_Click(object sender, EventArgs e)
+        public void newvillage_Click(object sender, EventArgs e)
         {
             drawingpanel.Invalidate();
 
         }
-        private void openvillage_Click(object sender, EventArgs e)
+        public void openvillage_Click(object sender, EventArgs e)
         {
             drawingpanel.Invalidate();
         }

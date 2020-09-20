@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface INation
+    public interface INation
     {
         void SetGraphics(Graphics gr);
         void SetPen(Pen pen);

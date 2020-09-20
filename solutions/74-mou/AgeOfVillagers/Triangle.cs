@@ -23,10 +23,10 @@ namespace AgeOfVillagers
             compSh.add_shapes(new Line(p3, p1));
 
         }
-        public void draw_shapes(Graphics gr, Pen pen)
+        public void DrawShapes(Graphics gr, Pen pen)
         {
             this.generate_triangle();
-            compSh.draw_shapes(gr, pen);
+            compSh.DrawShapes(gr, pen);
         }
     }
 }

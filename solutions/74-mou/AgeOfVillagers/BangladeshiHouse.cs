@@ -7,9 +7,9 @@ namespace AgeOfVillagers
 {
     class BangladeshiHouse : CompositeShapes
     {
-        private Point p1,p2,p3,p4;
-        
-        
+        private Point p1, p2, p3, p4;
+
+
         public BangladeshiHouse(Point p)
         {
             this.p1 = p;
@@ -21,4 +21,5 @@ namespace AgeOfVillagers
             add_shapes(new Rectangle(p1, p2, p3, p4));
 
         }
+    }
 }

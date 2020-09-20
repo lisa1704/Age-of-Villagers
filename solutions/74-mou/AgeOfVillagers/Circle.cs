@@ -17,10 +17,10 @@ namespace AgeOfVillagers
             this.radius = r;
         }
 
-        public void draw_shapes(Graphics gr, Pen pen)
+        public void DrawShapes(Graphics gr, Pen pen)
         {
             circles = new Arc(p, radius, 0, 360);
-            circles.draw_shapes(gr, pen);
+            circles.DrawShapes(gr, pen);
         }
     }
 }

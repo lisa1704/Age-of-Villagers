@@ -151,7 +151,6 @@ namespace AgeOfVillagers
             this.nation.Size = new System.Drawing.Size(178, 24);
             this.nation.TabIndex = 10;
             this.nation.SelectedIndexChanged += new System.EventHandler(this.nation_SelectedIndexChanged);
-            this.nation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nation_KeyDown);
             // 
             // villagename
             // 
