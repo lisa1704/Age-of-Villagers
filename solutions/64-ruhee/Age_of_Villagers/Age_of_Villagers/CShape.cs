@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Age_of_Villagers
 {
-    class CShape : IShape
+    public abstract class CShape : IShape
     {
         protected List<IShape> My_components = new List<IShape>();
 
