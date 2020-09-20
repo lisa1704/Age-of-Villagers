@@ -6,5 +6,14 @@ namespace empty_project
 {
     class Village
     {
+        public string village = "";
+        public string getName()
+        {
+            return village;
+        }
+        public void setName(string villageName)
+        {
+            village = villageName;
+        }
     }
 }
