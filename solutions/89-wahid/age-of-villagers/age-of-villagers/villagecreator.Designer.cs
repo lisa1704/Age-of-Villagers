@@ -1,6 +1,6 @@
 ﻿namespace age_of_villagers
 {
-    partial class Form1
+    partial class villagecreator
     {
         /// <summary>
         ///  Required designer variable.
@@ -164,7 +164,7 @@
             this.openvillage.UseVisualStyleBackColor = true;
             this.openvillage.Click += new System.EventHandler(this.openvillage_Click);
             // 
-            // Form1
+            // villagecreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,8 +181,8 @@
             this.Controls.Add(this.villagenamebox);
             this.Controls.Add(this.ageofvillagers);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "villagecreator";
+            this.Text = "village creator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
