@@ -37,6 +37,8 @@ namespace AgeOfVillagers
 
         State previouslySavedState;
 
+        InputValidation inputValidation;
+
         DrawnItemsInformation drawnItemsInfo;
         List<DrawnItemsInformation> drawnItemsInfosList;
 
@@ -54,6 +56,8 @@ namespace AgeOfVillagers
             commandFactory = new GameControlCommandFactory();
             gameFactory = new GameFactory();
 
+            inputValidation = new InputValidation();
+
 
         }
 
@@ -68,25 +72,21 @@ namespace AgeOfVillagers
 
         private void Save_Village(object sender, EventArgs e)
         {
+            if (inputValidation.checkStringInput(tbVillageName.Text))
+                return;
             game = gameFactory.getGame();
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, tbVillageName.Text, drawnItemsInfosList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
         }
-        Dummy pr = new Dummy();
+        
         private void New_Village(object sender, EventArgs e)
         {
+
             selectedNationforOpening = "";
-            
-            Regex pattern = new Regex(@"^[a-zA-Z]+$");
-
-            string sVillageName = tbVillageName.Text;
-            if (!pattern.IsMatch(sVillageName)) {
-
-                MessageBox.Show(Constants.string_invalid_message);
+            if(inputValidation.checkStringInput(tbVillageName.Text))
                 return;
-            }
 
             environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
@@ -94,7 +94,7 @@ namespace AgeOfVillagers
             
             game = gameFactory.getGame();
             
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,sVillageName);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,tbVillageName.Text);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             drawnItemsInfosList = new List<DrawnItemsInformation>();
@@ -112,7 +112,8 @@ namespace AgeOfVillagers
         private void Open_village(object sender, EventArgs e)
         {
             
-            if (selectedNationforOpening == "" || selectedNationforOpening == null)
+            
+            if (inputValidation.checkStringInput(selectedNationforOpening))
             {
                 environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
                 environment.setEnvironment();
@@ -144,6 +145,10 @@ namespace AgeOfVillagers
         {
             selectedNationforOpening = "";
             Point point = new Point(e.X, e.Y);
+
+            if (inputValidation.checkPoints(point)|| inputValidation.checkStringInput(tbVillageName.Text)|| inputValidation.checkStringInput(selectedNation)|| inputValidation.checkStringInput(selectedItem))
+                return;
+
             drawnItemsInfo = new DrawnItemsInformation
             {
                 Item_type = selectedItem,

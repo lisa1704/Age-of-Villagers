@@ -19,9 +19,9 @@ namespace AgeOfVillagers
             {
 
                 MessageBox.Show(Constants.string_invalid_message);
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
         public Boolean checkPoints(Point point)
@@ -29,9 +29,9 @@ namespace AgeOfVillagers
             if(point.X<Constants.PANEL_BORDER || point.X>Constants.PANEL_WIDTH- Constants.PANEL_BORDER ||point.Y< Constants.PANEL_BORDER || point.Y> Constants.PANEL_HEIGHT - Constants.PANEL_BORDER)
             {
                 MessageBox.Show(Constants.string_invalid_message);
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
 
     }
