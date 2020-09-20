@@ -12,33 +12,95 @@ namespace Age_of_Villagers
 {
     public partial class Village : Form
     {
-        private int x;
-        private int y;
-        string s;
-        string vName;
-
+        string ItemNames = "";
+        string village_name = "";
+        string village_type = "";
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
-        List<Point> watersource_point = new List<Point>();
+        List<Point> waterSource_point = new List<Point>();
 
         public Village()
         {
             InitializeComponent();
         }
 
-        private void drawingPanel_Paint(object sender, PaintEventArgs e)
+        private void CreateNewVillage_Load(object sender, EventArgs e)
         {
-            Graphics graphics = drawingPanel.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
 
-            foreach (Point point in house_point)
+        }
+
+        private void villageName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ItemNames = "Tree";
+        }
+
+        private void houseButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ItemNames = "House";
+        }
+
+        private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ItemNames = "WaterSource";
+        }
+
+        private void saveVillagebutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(villageName.Text + "Village is saved");
+        }
+
+        private void newVillagebutton_Click(object sender, EventArgs e)
+        {
+            house_point.Clear();
+            tree_point.Clear();
+            waterSource_point.Clear();
+            drawingPanel.Refresh();
+            NationName.ResetText();
+            MessageBox.Show("Panel is ready for new village to be created");
+        }
+
+        private void openVillagebutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Village is opened");
+        }
+
+
+        private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (ItemNames == "Tree")
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                tree_point.Add(e.Location);
             }
-            foreach (Point point in watersource_point)
+
+            if (ItemNames == "House")
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                house_point.Add(e.Location);
             }
+         
+            if (ItemNames == "WaterSource")
+            {
+                waterSource_point.Add(e.Location);
+            }
+
+            drawingPanel.Invalidate();
+        }
+
+
+        private void VillageNametextBox_TextChanged(object sender, EventArgs e)
+        {
+            village_name = VillageNametextBox.Text;
+            villageName.Text = village_name;
+        }
 
     }
 }
