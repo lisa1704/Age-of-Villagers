@@ -45,6 +45,16 @@ namespace AgeOfVillagers.Testing
         }
 
         [Fact]
+        public void NullComponentFactoryTesting()
+        {
+            Point p = new Point(100, 100);
+            NullComponentFactory nullComponentFactory = new NullComponentFactory();
+            var actual = nullComponentFactory.getComponent("House", p);
+            var expected = typeof(NullVillageComponent);
+            Assert.IsType(expected, actual);
+        }
+
+        [Fact]
         public void NationAbstractFactoryTesting()
         {
             var actual = NationComponentFactory.getNation("Bangladeshi Farmer");
