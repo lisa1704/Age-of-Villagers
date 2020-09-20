@@ -94,8 +94,9 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            x = e.X;
-            y = e.Y;
+            Point p = new Point();
+            p.X = e.X;
+            p.Y = e.Y;
             //DrawingPanel.Invalidate();
             if(selected_nation=="" || selected_component == "")
             {
@@ -106,6 +107,18 @@ namespace AgeOfVillagers
                 g = DrawingPanel.CreateGraphics();
 
                 nation = nf.GetNations(selected_nation);
+                if (selected_component == "tree")
+                {
+                    nation.drawtree(p);
+                }
+                if (selected_component == "house")
+                {
+                    nation.drawhouse(p);
+                }
+                if (selected_component == "water_source")
+                {
+                    nation.drawwatersource(p);
+                }
             }
         }
     }

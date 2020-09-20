@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
     interface INations
     {
-        public void drawtree();
-        public void drawhouse();
-        public void drawwatersource();
+        public void drawtree(Point p);
+        public void drawhouse(Point p);
+        public void drawwatersource(Point p);
     }
 }
