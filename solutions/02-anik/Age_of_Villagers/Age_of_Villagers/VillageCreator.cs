@@ -21,6 +21,8 @@ namespace Age_of_Villagers
         public VillageCreator()
         {
             InitializeComponent();
+            g = panel1.CreateGraphics();
+            p = new Pen(Color.Black);
         }
         private void VillageCreator_Load(object sender, EventArgs e)
         {
