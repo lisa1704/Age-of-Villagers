@@ -9,10 +9,16 @@ namespace AgeOfVillageTest
     public class UnitTestTreeCostruction
     {
         public Graphics g;
-        Point pt = new Point(16, 16);
+        Point pt = new Point(100, 80);
         [TestMethod]
-        public void TestMethod1()
+        public void TestBDTreeConstruction()
         {
+            INations nationType = new ArabBedouin();
+            object testObject = nationType.DrawTree(g, pt);
+            CompositeShape BDTreeTest = new ArabTree(pt);
+
+            //Assert.AreEqual(s, BDHouseTest);
+            BDTreeTest.Equals(testObject);
         }
         [TestMethod]
         public void TestNullTreeConstruction()
@@ -24,5 +30,6 @@ namespace AgeOfVillageTest
             //Assert.AreEqual(s, BDHouseTest);
             NullTreeTest.Equals(testObject);
         }
+
     }
 }

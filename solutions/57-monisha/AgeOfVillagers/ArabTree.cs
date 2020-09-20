@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-    partial class DrawArc
-    {
+   /* partial class DrawArc
+    {*/
         public class BangladeshiTree : CompositeShape
         {
             public BangladeshiTree(Point MPt)
@@ -71,6 +75,6 @@ namespace AgeOfVillagers
                 AddComp(new Line(RecMid, L5topPt));
             }
         }
-    }
+    //}
 }
 

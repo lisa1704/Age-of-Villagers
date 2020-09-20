@@ -13,7 +13,7 @@ namespace AgeOfVillageTest
         [TestMethod]
         public void TestBangladeshiHouseConstruction()
         {           
-            BangladeshiHouse BDHouseTest = new BangladeshiHouse(pt);
+            BangladeshiHouse BDHouseTest = new BangladeshiHouse(pt);            
             string house = BDHouseTest.CheckHouse();
             string testString = "BDHouse Constructed";
 

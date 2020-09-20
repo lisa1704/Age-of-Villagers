@@ -9,6 +9,7 @@ namespace AgeOfVillagers
 {
     public class NullNation : INations
     {
+        Pen p = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point pt)
         {
             //
@@ -18,13 +19,15 @@ namespace AgeOfVillagers
         public object DrawTree(Graphics g, Point pt)
         {
             NullVillageItem ntree = new NullVillageItem(pt);
-            //ntree.Paint(g, p);
-            return ntree;
-            //throw new NotImplementedException();
+            ntree.Paint(g, p);
+            return ntree;            
         }
 
         public void DrawWaterSource(Graphics g, Point MPt)
         {
+            NullVillageItem nWater = new NullVillageItem(MPt);
+            nWater.Paint(g, p);
+           // return ntree;
             //throw new NotImplementedException();
         }
 
