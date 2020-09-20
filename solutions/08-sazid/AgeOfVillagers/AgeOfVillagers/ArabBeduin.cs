@@ -19,7 +19,8 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ArabBeduinTree aTree = new ArabBeduinTree(p);
+            aTree.draw(g);
         }
 
         public void DrawWaterResource(Graphics g, Point p)

@@ -49,6 +49,7 @@
     <Compile Include="AdvancedShape.cs" />
     <Compile Include="ArabBeduin.cs" />
     <Compile Include="ArabBeduinHouse.cs" />
+    <Compile Include="ArabBeduinTree.cs" />
     <Compile Include="ArcShape.cs" />
     <Compile Include="BangladeshiFarmer.cs" />
     <Compile Include="BangladeshiHouse.cs" />
