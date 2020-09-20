@@ -116,12 +116,6 @@ namespace WindowsFormsApp1
                 BackColor = Color.Yellow;
 
 
-                if (radioButton2.Checked)
-                {
-                    EgyptianKing ekt = new EgyptianKing(g);
-                    ekt.DrawTree(e);
-
-                }
                 if (radioButton3.Checked)
                 {
 
