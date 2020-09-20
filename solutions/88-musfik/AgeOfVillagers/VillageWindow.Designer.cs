@@ -208,8 +208,8 @@ namespace AgeOfVillagers
             // saveFileDialog
             // 
             this.saveFileDialog.CheckFileExists = true;
-            this.saveFileDialog.Filter = "\"Age of Villagers files|*.aov\"";
-            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog_FileOk);
+            this.saveFileDialog.CreatePrompt = true;
+            this.saveFileDialog.Filter = "Age of villagers file|*.aov";
             // 
             // VillageWindow
             // 

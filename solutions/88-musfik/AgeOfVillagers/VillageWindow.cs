@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -114,15 +116,27 @@ namespace AgeOfVillagers
 
         private void save_village_btn_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (village != null)
+                {
+                    if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        VillageState state = village.createState();
+                        state.restoreState();
+                        string jsonString = JsonConvert.SerializeObject(state, Formatting.Indented);
+                        File.WriteAllText(saveFileDialog.FileName, jsonString);
+                        saveFileDialog.Dispose();
+                    }
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("An error occured! File not saved", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void open_village_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveFileDialog_FileOk(object sender, CancelEventArgs e)
         {
 
         }
