@@ -35,6 +35,7 @@
             this.villagelocationbox = new System.Windows.Forms.ComboBox();
             this.villagelocation = new System.Windows.Forms.Label();
             this.tree = new System.Windows.Forms.RadioButton();
+            this.house = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,11 +106,24 @@
             this.tree.UseVisualStyleBackColor = true;
             this.tree.CheckedChanged += new System.EventHandler(this.tree_CheckedChanged);
             // 
+            // house
+            // 
+            this.house.AutoSize = true;
+            this.house.Location = new System.Drawing.Point(737, 240);
+            this.house.Name = "house";
+            this.house.Size = new System.Drawing.Size(59, 19);
+            this.house.TabIndex = 7;
+            this.house.TabStop = true;
+            this.house.Text = "House";
+            this.house.UseVisualStyleBackColor = true;
+            this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.house);
             this.Controls.Add(this.tree);
             this.Controls.Add(this.villagelocation);
             this.Controls.Add(this.villagelocationbox);
@@ -134,6 +148,7 @@
         private System.Windows.Forms.ComboBox villagelocationbox;
         private System.Windows.Forms.Label villagelocation;
         private System.Windows.Forms.RadioButton tree;
+        private System.Windows.Forms.RadioButton house;
     }
 }
 
