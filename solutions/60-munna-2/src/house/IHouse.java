@@ -5,6 +5,6 @@ import shapes.Point;
 
 
 public interface IHouse {
-    void draw_house(Canvas canvas);
+    void draw_house();
     void calculating_points(Point main_point);
 }

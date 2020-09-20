@@ -4,6 +4,7 @@ import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
+import main.MainCanvas;
 import shapes.Line_Shape;
 import shapes.Point;
 
@@ -11,6 +12,26 @@ import java.util.List;
 
 public class Pond implements IWaterSource {
     private Point point1,point2,point3,point4,point5,point6,point7,point8,point9;
+    private boolean flag = true;
+    private Canvas canvas;
+
+    public Pond(){
+        MainCanvas mainCanvas = MainCanvas.getInstance();
+        this.canvas = mainCanvas.getCanvas();
+    }
+
+    public void Draw()
+    {
+        this.flag = true;
+    }
+    public void Dont_Draw()
+    {
+        this.flag = false;
+    }
+    public void Pond(){
+        MainCanvas mainCanvas = MainCanvas.getInstance();
+        this.canvas = mainCanvas.getCanvas();
+    }
 
     @Override
     public void calculating_points(Point main_point) {
@@ -26,13 +47,13 @@ public class Pond implements IWaterSource {
     }
 
     @Override
-    public void draw_water_resource(Canvas canvas) {
+    public void draw_water_resource() {
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>(){
                     @Override
                     public void handle(MouseEvent event) {
-                            calculating_points(new Point((int)event.getX(), (int)event.getY()));
+                        if (flag) {
+                            calculating_points(new Point((int) event.getX(), (int) event.getY()));
                             new Line_Shape(point1, point2, graphicsContext).draw();
                             new Line_Shape(point2, point3, graphicsContext).draw();
                             new Line_Shape(point3, point4, graphicsContext).draw();
@@ -42,6 +63,7 @@ public class Pond implements IWaterSource {
                             new Line_Shape(point7, point8, graphicsContext).draw();
                             new Line_Shape(point8, point9, graphicsContext).draw();
                             new Line_Shape(point9, point1, graphicsContext).draw();
+                        }
                     }
                 });
     }

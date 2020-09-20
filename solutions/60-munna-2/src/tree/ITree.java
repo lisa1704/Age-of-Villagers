@@ -4,6 +4,6 @@ import javafx.scene.canvas.Canvas;
 import shapes.Point;
 
 public interface ITree {
-    void draw_Tree(Canvas canvas);
+    void draw_Tree();
     void calculating_points(Point main_point);
 }
