@@ -15,8 +15,8 @@ namespace AgeOfVillagers
 
             addshape(new Rectangle(point.X, point.Y, point.X + 24, point.Y, point.X, point.Y + 16, point.X + 24, point.Y + 16));
             
-            addshape(new Line(point.X, point.Y, point.X + 12, point.Y - 8));
-            addshape(new Line(point.X + 24, point.Y, point.X + 12, point.Y - 8));
+            addshape(new Triangle(point.X + 12, point.Y - 8, point.X, point.Y, point.X + 24, point.Y));
+            
         }
 
         /*public new void Draw(Point point, Panel Drawingpanel)
