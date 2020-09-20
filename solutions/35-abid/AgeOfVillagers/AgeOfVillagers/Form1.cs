@@ -12,11 +12,12 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
-        int x, y;
+        //int x, y;
         Graphics g;
         Brush brush = new SolidBrush(Color.Black);
         string text = "";
         string chosen_nation = "";
+        string chosen_component = "";
         NationFactory NF = new NationFactory();
         INation nation;
         public Form1()
@@ -26,7 +27,7 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_Click(object sender, EventArgs e)
         {
-            ElementSelect();
+            //ElementSelect();
         }
 
         private void VillageName_Click(object sender, EventArgs e)
@@ -52,11 +53,27 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            x = e.X;
-            y = e.Y;
+            //x = e.X;
+            //y = e.Y;
+            Point p = new Point();
+            p.X = e.X;
+            p.Y = e.Y;
+
             nation = NF.GetNations(chosen_nation);
-            g = DrawingPanel.CreateGraphics();
-            g.DrawString(text, Font, brush, new Point(x, y));
+            //g = DrawingPanel.CreateGraphics();
+            //g.DrawString(text, Font, brush, new Point(x, y));
+            if (chosen_component == "tree")
+            {
+                nation.drawtree(p);
+            }
+            if (chosen_component == "house")
+            {
+                nation.drawhouse(p);
+            }
+            if (chosen_component == "watersrc")
+            {
+                nation.drawwatersrc(p);
+            }
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
@@ -89,7 +106,7 @@ namespace AgeOfVillagers
         {
             chosen_nation = Nations.SelectedItem.ToString();
         }
-        private void ElementSelect()
+        /*private void ElementSelect()
         {
             if (House.Checked == true && Nations.SelectedIndex > -1)
             {
@@ -105,6 +122,30 @@ namespace AgeOfVillagers
             {
                 text = Nations.SelectedItem + " " + "Watersrc";
                 brush = new SolidBrush(Color.Blue);
+            }
+        }*/
+
+        private void Tree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Tree.Checked == true)
+            {
+                chosen_component = "tree";
+            }
+        }
+
+        private void House_CheckedChanged(object sender, EventArgs e)
+        {
+            if (House.Checked == true)
+            {
+                chosen_component = "house";
+            }
+        }
+
+        private void WaterSource_CheckedChanged(object sender, EventArgs e)
+        {
+            if (WaterSource.Checked == true)
+            {
+                chosen_component = "watersrc";
             }
         }
     }
