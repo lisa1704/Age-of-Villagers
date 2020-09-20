@@ -14,6 +14,7 @@ namespace AOV
     {
         NationFactory typeOfNation = new NationFactory();
         string selectedNation;
+        string itemSelected;
         public AgeOfVillagers()
         {
             InitializeComponent();
@@ -23,6 +24,24 @@ namespace AOV
         {
             selectedNation = Nation.Text;
             Canvas.BackColor = typeOfNation.SelectNation(selectedNation).GetColor();
+        }
+
+        private void Tree_CheckedChanged(object sender, EventArgs e)
+        {
+                itemSelected = "tree";
+                Console.WriteLine(itemSelected);
+        }
+
+        private void House_CheckedChanged(object sender, EventArgs e)
+        {
+                itemSelected = "house";
+                Console.WriteLine(itemSelected);
+        }
+
+        private void WaterSource_CheckedChanged(object sender, EventArgs e)
+        {
+                itemSelected = "water source";
+                Console.WriteLine(itemSelected);
         }
     }
 }

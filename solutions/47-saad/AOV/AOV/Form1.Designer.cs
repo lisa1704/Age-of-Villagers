@@ -131,6 +131,7 @@
             this.Tree.TabStop = true;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = false;
+            this.Tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
             // 
             // House
             // 
@@ -144,6 +145,7 @@
             this.House.TabStop = true;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = false;
+            this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
             // 
             // WaterSource
             // 
@@ -157,6 +159,7 @@
             this.WaterSource.TabStop = true;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = false;
+            this.WaterSource.CheckedChanged += new System.EventHandler(this.WaterSource_CheckedChanged);
             // 
             // AgeOfVillagers
             // 
