@@ -18,7 +18,7 @@ namespace AgeOfVillagers
 
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             Point trianglePoint1 = new Point(point.X + 25, point.Y + 50);
             Point trianglePoint2 = new Point(point.X - 25, point.Y + 50);
@@ -28,9 +28,11 @@ namespace AgeOfVillagers
             triangle.DrawShape();
             Rectangles rectangle = new Rectangles(g, pen, point, rectanglePoint1, trianglePoint1, rectanglePoint2);
             rectangle.DrawShape();
+
+            return "Bedouin House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             Point rectanglpoint1 = new Point(point.X - 2, point.Y);
             Point rectanglepoint2 = new Point(point.X + 2, point.Y);
@@ -48,10 +50,13 @@ namespace AgeOfVillagers
             g.DrawLine(pen, point, p3);
             g.DrawLine(pen, point, p4);
             g.DrawLine(pen, point, p5);
+
+            return "Bedouin Tree";
         }
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             MessageBox.Show("Bedouin villages do not build their own water source");
+            return "Bedouin villages do not build their own water source";
         }
         public Color DrawTerrain()
         {

@@ -17,7 +17,7 @@ namespace AgeOfVillagers
 
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             Point trianglepoint1 = new Point(point.X + 50, point.Y + 25);
             Point trianglepoint2 = new Point(point.X + 50, point.Y - 75);
@@ -26,9 +26,11 @@ namespace AgeOfVillagers
             triangle1.DrawShape();
             Triangle triangle2 = new Triangle(g, pen, trianglepoint1, trianglepoint2, trianglepoint3);
             triangle2.DrawShape();
+
+            return "Egypt House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             Point p1 = new Point(point.X + 25, point.Y - 25);
             Point p2 = new Point(point.X - 25, point.Y - 25);
@@ -45,13 +47,17 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p1, p5);
             g.DrawLine(pen, p2, p6);
             g.DrawLine(pen, p2, p7);
-            g.DrawLine(pen, p2, p8); ;
+            g.DrawLine(pen, p2, p8);
+
+            return "Egypt Tree";
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
             circle.DrawShape();
+
+            return "Egypt Water Resource";
         }
         public Color DrawTerrain()
         {

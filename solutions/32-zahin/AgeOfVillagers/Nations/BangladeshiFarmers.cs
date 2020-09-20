@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             Point trianglePoint1 = new Point(point.X + 25, point.Y - 25);
             Point trianglePoint2 = new Point(point.X + 50, point.Y);
@@ -26,9 +26,11 @@ namespace AgeOfVillagers
             triangle.DrawShape();
             Rectangles rectangle = new Rectangles(g, pen, point, trianglePoint2, rectanglePoint1, rectanglePoint2);
             rectangle.DrawShape();
+
+            return "Bangladeshi House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             Point rectanglePoint1 = new Point(point.X - 2, point.Y);
             Point rectanglePoint2 = new Point(point.X + 2, point.Y);
@@ -38,9 +40,11 @@ namespace AgeOfVillagers
             circle.DrawShape();
             Rectangles rectangle = new Rectangles(g, pen, rectanglePoint1, rectanglePoint2, rectanglePoint3, rectanglePoint4);
             rectangle.DrawShape();
+
+            return "Bangladeshi Tree";
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             Point p1 = new Point(point.X - 25, point.Y + 50);
             Point p2 = new Point(point.X, point.Y + 75);
@@ -59,6 +63,8 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p6, p7);
             g.DrawLine(pen, p7, p8);
             g.DrawLine(pen, p8, point);
+
+            return "Bangladeshi Water Resource";
         }
         public Color DrawTerrain()
         {

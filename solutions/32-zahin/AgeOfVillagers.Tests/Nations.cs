@@ -1,4 +1,5 @@
 ﻿using Xunit;
+using System.Drawing;
 namespace AgeOfVillagers.Tests
 {
     public class Nations
@@ -37,6 +38,17 @@ namespace AgeOfVillagers.Tests
             INation expected = inuit;
             Village v = new Village();
             INation actual = v.GetVillage("Inuit Hunters");
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ArabWaterTest()
+        {
+            Graphics g;
+            Point point = new Point();
+            ArabBedouin arab = new ArabBedouin();
+            string expected = arab.DrawWaterSource(null, point);
+            string actual = "Bedouin villages do not build their own water source";
             Assert.Equal(expected, actual);
         }
     }
