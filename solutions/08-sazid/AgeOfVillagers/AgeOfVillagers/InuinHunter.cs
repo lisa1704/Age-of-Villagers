@@ -12,7 +12,8 @@ namespace AgeOfVillagers
         private Color backGroundColor = Color.White;
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            InuitIgloo igloo = new InuitIgloo(p);
+            igloo.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)

@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="INation.cs" />
     <Compile Include="InuinHunter.cs" />
+    <Compile Include="InuitIgloo.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="LineShape.cs" />
     <Compile Include="NationFactory.cs" />
