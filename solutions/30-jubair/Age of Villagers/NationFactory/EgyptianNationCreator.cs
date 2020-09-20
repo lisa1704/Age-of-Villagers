@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    class EgyptianNationCreator : AbstractNationCreator
+   public class EgyptianNationCreator : AbstractNationCreator
     {
         private String nationName = "Egyptian Kings";
 

@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Age_of_Villagers.NationFactory
 {
-    class InuitNationCreator : AbstractNationCreator
+    public class InuitNationCreator : AbstractNationCreator
+    
     {
         private String nationName = "Inuit Hunters";
 
