@@ -74,8 +74,6 @@ namespace AgeOfVillagers
                 nationType = Select_Nation.Text;
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);
                 Inputnation.NationType(nationType).Draw_House(g, point);
-                Console.WriteLine("House painted");
-
             }
 
         }
@@ -87,9 +85,13 @@ namespace AgeOfVillagers
             if (clickedObject == "House")
             {
                 Houses.Add(e.Location);
-                Console.WriteLine("Housepoint added");
             }
             Draw_Panel.Invalidate();
+
+        }
+
+        private void CreateNewVillage_Load(object sender, EventArgs e)
+        {
 
         }
     }

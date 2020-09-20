@@ -180,6 +180,7 @@
             this.Controls.Add(this.Open_Village);
             this.Name = "CreateNewVillage";
             this.Text = "Age Of Villagers";
+            this.Load += new System.EventHandler(this.CreateNewVillage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
