@@ -16,5 +16,14 @@ namespace AgeOfVillagers.Testing
             Point actual = obj.getPoint();
             Assert.Equal(actual, p);
         }
+
+        [Fact]
+        public void ArabBedouinTreeTest()
+        {
+            Point p = new Point(10, 10);
+            ArabBedouinTree obj = new ArabBedouinTree(p);
+            Point actual = obj.getPoint();
+            Assert.Equal(actual, p);
+        }
     }
 }
