@@ -79,7 +79,14 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(VillageName.Text + " Saved!");
+            if (VillageName.Text == "Enter Village Name" || VillageName.Text == "" || Nations.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please Enter Village Name and Nation type!");
+            }
+            else
+            {
+                MessageBox.Show(VillageName.Text + " Saved!");
+            }
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
