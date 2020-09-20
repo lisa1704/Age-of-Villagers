@@ -9,7 +9,7 @@ namespace AoV.Nations
 {
     interface INation
     {
-        void ColorTerrain(Graphics g);
+        void ColorTerrain();
         void DrawHouse(Graphics g, Point p);
         void DrawTree(Graphics g, Point p);
         void DrawWaterSource(Graphics g, Point p);
