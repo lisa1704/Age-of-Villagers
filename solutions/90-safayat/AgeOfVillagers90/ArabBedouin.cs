@@ -9,8 +9,6 @@ namespace AgeOfVillagers90
 {
     public class ArabBedouin : INation
     {
-        Pen p = new Pen(Color.Violet);
-
         public Color BackGroundColor()
         {
             return Color.LightYellow;
