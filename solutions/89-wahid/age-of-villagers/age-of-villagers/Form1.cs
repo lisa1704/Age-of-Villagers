@@ -31,5 +31,15 @@ namespace age_of_villagers
         {
 
         }
+
+        private void villagenamebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void villagename_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

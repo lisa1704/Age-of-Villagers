@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.ageofvillagers = new System.Windows.Forms.Label();
+            this.villagenamebox = new System.Windows.Forms.TextBox();
+            this.villagename = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,11 +53,31 @@
             this.ageofvillagers.Text = "Age of villagers";
             this.ageofvillagers.Click += new System.EventHandler(this.ageofvillagers_Click);
             // 
+            // villagenamebox
+            // 
+            this.villagenamebox.Location = new System.Drawing.Point(786, 100);
+            this.villagenamebox.Name = "villagenamebox";
+            this.villagenamebox.Size = new System.Drawing.Size(100, 23);
+            this.villagenamebox.TabIndex = 2;
+            this.villagenamebox.TextChanged += new System.EventHandler(this.villagenamebox_TextChanged);
+            // 
+            // villagename
+            // 
+            this.villagename.AutoSize = true;
+            this.villagename.Location = new System.Drawing.Point(705, 103);
+            this.villagename.Name = "villagename";
+            this.villagename.Size = new System.Drawing.Size(75, 15);
+            this.villagename.TabIndex = 3;
+            this.villagename.Text = "Village name";
+            this.villagename.Click += new System.EventHandler(this.villagename_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.villagename);
+            this.Controls.Add(this.villagenamebox);
             this.Controls.Add(this.ageofvillagers);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -70,6 +92,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label ageofvillagers;
+        private System.Windows.Forms.TextBox villagenamebox;
+        private System.Windows.Forms.Label villagename;
     }
 }
 
