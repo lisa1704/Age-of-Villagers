@@ -17,13 +17,13 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            ArabHouse abhouse = new ArabHouse(Drawingpanel);
+            ArabHouse abhouse = new ArabHouse(point);
             abhouse.Draw(point, Drawingpanel);
         }
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            ArabTree abtree = new ArabTree(Drawingpanel);
+            ArabTree abtree = new ArabTree(point);
             abtree.Draw(point, Drawingpanel);
         }
 

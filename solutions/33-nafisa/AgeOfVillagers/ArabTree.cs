@@ -6,15 +6,23 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabTree : IShape
+    class ArabTree : CompositeShape
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
 
-        public ArabTree(Panel Drawingpanel)
+        public ArabTree(Point point)
         {
-            this.Drawingpanel = Drawingpanel;
+            addshape(new Line(point.X, point.Y, point.X + 4, point.Y));
+            addshape(new Line(point.X, point.Y, point.X, point.Y - 30));
+            addshape(new Line(point.X, point.Y - 30, point.X + 4, point.Y - 30));
+            addshape(new Line( point.X + 4, point.Y - 30, point.X + 4, point.Y));
+            addshape(new Line( point.X + 2, point.Y - 30, point.X + 2, point.Y - 60));
+            addshape(new Line( point.X + 2, point.Y - 30, point.X + 30, point.Y - 55));
+            addshape(new Line(point.X + 2, point.Y - 30, point.X - 30, point.Y - 55));
+            addshape(new Line(point.X + 2, point.Y - 30, point.X + 30, point.Y - 40));
+            addshape(new Line(point.X + 2, point.Y - 30, point.X - 30, point.Y - 40));
         }
-        public void Draw(Point point, Panel Drawingpanel)
+        /*public void Draw(Point point, Panel Drawingpanel)
         {
             Graphics g = Drawingpanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
@@ -28,6 +36,6 @@ namespace AgeOfVillagers
             g.DrawLine(p, point.X + 2, point.Y - 30, point.X + 30, point.Y - 40);
             g.DrawLine(p, point.X + 2, point.Y - 30, point.X - 30, point.Y - 40);
             //g.DrawLine(p, point.X, point.Y, point.X + 15, point.Y - 30);
-        }
+        }*/
     }
 }
