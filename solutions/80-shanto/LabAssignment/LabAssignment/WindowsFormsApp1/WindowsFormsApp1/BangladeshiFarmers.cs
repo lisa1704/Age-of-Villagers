@@ -23,21 +23,10 @@ namespace WindowsFormsApp1
             BangladeshiFarrmersHouse bdh = new BangladeshiFarrmersHouse(g);
             bdh.Draw(e);
         }
-
-        
-
         public void DrawTree(MouseEventArgs e)
         {
-
-
-
-            int x = e.X;
-            int y = e.Y;
-            g.DrawArc(mypen, x - 25, y - 25, 50, 50, 0, 360);
-            g.DrawLine(mypen, x - 1, y, x + 1, y);
-            g.DrawLine(mypen, x + 1, y, x + 1, y + 50);
-            g.DrawLine(mypen, x + 1, y + 50, x - 1, y + 50);
-            g.DrawLine(mypen, x - 1, y + 50, x - 1, y);
+            BangladeshiFarmersTree bdt = new BangladeshiFarmersTree(g);
+            bdt.Draw(e);
         }
 
         

@@ -49,6 +49,7 @@
     <Compile Include="ArabBedouin.cs" />
     <Compile Include="ArabBedouinHouse.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="BangladeshiFarmersTree.cs" />
     <Compile Include="BangladeshiFarrmersHouse.cs" />
     <Compile Include="EgyptianKing.cs" />
     <Compile Include="EgyptianKingsHouse.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="InutHuntersHouse.cs" />
+    <Compile Include="ITree.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
