@@ -58,6 +58,8 @@
     <Compile Include="AgeofVillagers.Designer.cs">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nations\BangladeshiFarmer.cs" />
+    <Compile Include="Nations\INation.cs" />
     <Compile Include="NewDrawingBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Nations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
