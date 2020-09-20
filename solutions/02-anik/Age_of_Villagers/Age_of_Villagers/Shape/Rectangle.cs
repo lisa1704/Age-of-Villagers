@@ -7,25 +7,25 @@ namespace Age_of_Villagers.Shape
 {
     class Rectangle : IShape
     {
-        private readonly Point tl;
-        private readonly Point tr;
-        private readonly Point bl;
-        private readonly Point br;
+        private readonly Point topLeft;
+        private readonly Point topRight;
+        private readonly Point bottomLeft;
+        private readonly Point bottomRight;
 
         public Rectangle(Point topLeft, Point bottomRight)
         {
-            this.tl = tl;
-            this.tr = new Point(br.X, tl.Y);
-            this.bl = new Point(tl.X, br.Y);
-            this.br = br;
+            this.topLeft = topLeft;
+            this.topRight = new Point(bottomRight.X, topLeft.Y);
+            this.bottomLeft = new Point(topLeft.X, bottomRight.Y);
+            this.bottomRight = bottomRight;
         }
 
-        public void Draw(Graphics g, Pen p)
+        public void draw(Graphics g, Pen p)
         {
-            new Line(tl, tr).Draw(g, p);
-            new Line(tl, bl).Draw(g, p);
-            new Line(bl, br).Draw(g, p);
-            new Line(br, tr).Draw(g, p);
+            new Line(topLeft, topRight).Draw(g, p);
+            new Line(topLeft, bottomLeft).Draw(g, p);
+            new Line(bottomLeft, bottomRight).Draw(g, p);
+            new Line(bottomRight, topRight).Draw(g, p);
         }
 
 
