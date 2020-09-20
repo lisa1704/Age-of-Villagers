@@ -7,8 +7,7 @@ namespace AgeOfVillagers
 {
     class ArabBedouins : INations
     {
-        Pen pen = new Pen(Color.Gold);
-        public void drawhouse(Point p, Graphics g)
+        public void drawhouse(Point p, Graphics g, Pen pen)
         {
             Point p1 = new Point(p.X - 8, p.Y - 16);
             Point p2 = new Point(p.X + 16, p.Y);

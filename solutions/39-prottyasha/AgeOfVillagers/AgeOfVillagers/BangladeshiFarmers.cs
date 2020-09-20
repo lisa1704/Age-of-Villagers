@@ -7,8 +7,7 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INations
     {
-        Pen pen = new Pen(Color.Green);
-        public void drawhouse(Point p, Graphics g)
+        public void drawhouse(Point p, Graphics g, Pen pen)
         {
             Point p1 = new Point(p.X - 8, p.Y - 8);
             Point p2 = new Point(p1.X + 16, p1.Y);

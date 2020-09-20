@@ -7,7 +7,7 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INations
     {
-        public void drawhouse(Point p, Graphics g)
+        public void drawhouse(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }

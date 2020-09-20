@@ -7,10 +7,9 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INations
     {
-        Pen pen = new Pen(Color.Yellow);
-        public void drawhouse(Point p, Graphics g)
+        public void drawhouse(Point p, Graphics g, Pen pen)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void drawtree(Point p, Graphics g)
@@ -20,7 +19,7 @@ namespace AgeOfVillagers
 
         public void drawwatersource(Point p, Graphics g)
         {
-            throw new NotImplementedException();
+            g.DrawArc(pen, p.X, p.Y, 6, 6, 0, 360);
         }
     }
 }
