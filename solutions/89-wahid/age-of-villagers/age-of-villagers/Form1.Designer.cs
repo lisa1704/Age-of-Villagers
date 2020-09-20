@@ -36,7 +36,7 @@
             this.villagelocation = new System.Windows.Forms.Label();
             this.tree = new System.Windows.Forms.RadioButton();
             this.house = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.watersource = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,24 +119,24 @@
             this.house.UseVisualStyleBackColor = true;
             this.house.CheckedChanged += new System.EventHandler(this.house_CheckedChanged);
             // 
-            // radioButton1
+            // watersource
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(737, 266);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 19);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Water source";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.watersource.AutoSize = true;
+            this.watersource.Location = new System.Drawing.Point(737, 266);
+            this.watersource.Name = "watersource";
+            this.watersource.Size = new System.Drawing.Size(94, 19);
+            this.watersource.TabIndex = 8;
+            this.watersource.TabStop = true;
+            this.watersource.Text = "Water source";
+            this.watersource.UseVisualStyleBackColor = true;
+            this.watersource.CheckedChanged += new System.EventHandler(this.watersource_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.watersource);
             this.Controls.Add(this.house);
             this.Controls.Add(this.tree);
             this.Controls.Add(this.villagelocation);
@@ -163,7 +163,8 @@
         private System.Windows.Forms.Label villagelocation;
         private System.Windows.Forms.RadioButton tree;
         private System.Windows.Forms.RadioButton house;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.RadioButton watersource;
     }
 }
 
