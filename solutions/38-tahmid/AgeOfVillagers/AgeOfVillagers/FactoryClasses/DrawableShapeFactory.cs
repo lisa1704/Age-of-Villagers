@@ -6,13 +6,13 @@ namespace AgeOfVillagers
 {
     class DrawableShapeFactory
     {
-        public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point point, int height, int width, string hint)
+        public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point point,int startingAngle,int endingAngle, int height, int width, string hint)
         {
 
 
             if (hint.Equals(Constants.CIRCULAR_HINT))
             {
-                return new CircularShape(g, pen, point, height, width);
+                return new CircularShape(g, pen, point, height, width,startingAngle,endingAngle);
             }
 
 

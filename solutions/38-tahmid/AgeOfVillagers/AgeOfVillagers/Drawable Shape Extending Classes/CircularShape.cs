@@ -10,23 +10,27 @@ namespace AgeOfVillagers
     {
         Point startingPoint;
         Pen p;
-        Graphics g;
-        int startAng=Constants.FILL_CIRCLE_STARTING_ANGLE, endAng=Constants.FULL_CIRCLE_ENDING_ANGle;
+        Graphics graphics;
+        int startAngle, endAngle;
         int length, width;
         Pen pen;
         DrawableShapes arc;
+        private Point point;
+        private int height;
+        private int startingAngle;
+        private int endingAngle;
 
-        public CircularShape(Graphics g, Pen pen, Point startingPoint, int length, int width)
+        public CircularShape(Graphics graphics, Pen pen, Point point, int height, int width, int startingAngle, int endingAngle)
         {
+            this.graphics = graphics;
             this.pen = pen;
-            this.length = length;
+            this.point = point;
+            this.height = height;
             this.width = width;
-            this.g = g;
-            this.startingPoint = startingPoint;
-
-            
-
+            this.startingAngle = startingAngle;
+            this.endingAngle = endingAngle;
         }
+
         public override void drawShape()
         {
             arc.drawShape();
@@ -34,7 +38,7 @@ namespace AgeOfVillagers
 
         public override void makeShape()
         {
-            arc = getArcs(g, pen, startingPoint, startAng, endAng, length, width);
+            arc = getArcs(graphics, pen, startingPoint, startAngle, endAngle, length, width);
             drawShape();
         }
     }
