@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     public class Village
     {
-        private string villageName;
+        private String villageName;
         private INation nation;
         private List<IVillageItem> house_items, waterResource_items, tree_items;
         public Village(string villageName, INation nation)
@@ -28,18 +28,30 @@ namespace AgeOfVillagers
         {
             return villageName;
         }
-
         public void SetVillageName(string value)
         {
             villageName = value;
+        }
+        internal void SetTreeItems(List<IVillageItem> list_items)
+        {
+            tree_items = list_items.ConvertAll(tree => tree = nation.getTree(tree.getItemLocation()));
+        }
+        internal void SetHouseItems(List<IVillageItem> list_items)
+        {
+            house_items = list_items.ConvertAll(house => house = nation.getHouse(house.getItemLocation()));
+        }
+        internal void SetWaterSourceItems(List<IVillageItem> list_items)
+        {
+            waterResource_items = list_items.ConvertAll(water => water = nation.getHouse(water.getItemLocation()));
         }
 
         internal void initiate(Graphics g, Pen p)
         {
             g.Clear(nation.getTerrainColor());
-            tree_items = tree_items.ConvertAll(tree => tree = nation.getTree(tree.getItemLocation()));
-            house_items = house_items.ConvertAll(house => house = nation.getHouse(house.getItemLocation()));
-            waterResource_items = waterResource_items.ConvertAll(water => water = nation.getHouse(water.getItemLocation()));
+
+            SetTreeItems(tree_items);
+            SetHouseItems(house_items);
+            SetWaterSourceItems(waterResource_items);
 
             fetchItems(g, p, tree_items);
             fetchItems(g, p, house_items);
@@ -75,6 +87,30 @@ namespace AgeOfVillagers
             var water = nation.getWaterResource(point);
             waterResource_items.Add(water);
             DrawItem(g, p, point, water);
+        }
+    }
+
+    internal class VillageState
+    {
+        private Village village;
+        private String villageName;
+        private List<IVillageItem> trees, houses, watersources;
+
+        public VillageState(Village village, String villageName, List<IVillageItem> trees, List<IVillageItem> houses, List<IVillageItem> watersources)
+        {
+            this.village = village;
+            this.villageName = villageName;
+            this.watersources = watersources;
+            this.houses = houses;
+            this.trees = trees;
+        }
+
+        public void SetState()
+        {
+            village.SetVillageName(villageName);
+            village.SetTreeItems(trees);
+            village.SetHouseItems(houses);
+            village.SetWaterSourceItems(watersources);
         }
     }
 }
