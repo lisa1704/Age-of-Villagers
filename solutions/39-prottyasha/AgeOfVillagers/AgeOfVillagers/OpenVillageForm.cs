@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -20,6 +22,31 @@ namespace AgeOfVillagers
         {
             SavedVillageList.Items.Clear();
             SavedVillageList.Items.Add(svf.savedVillList);
+        }
+
+        private void SavedVillageList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string villageToOpen = SavedVillageList.SelectedIndex.ToString();
+            Village vill = new Village();
+            using (StreamReader r = new StreamReader(villageToOpen))
+            {
+                string json = r.ReadToEnd();
+                vill = JsonConvert.DeserializeObject<Village>(json);
+            }
+            this.SetState(vill);
+        }
+
+        private void SetState(Village vill)
+        {
+            NationFactory nf = new NationFactory();
+            INations nation = nf.GetNation(vill.village_name);
+            Graphics g = new Graphics();
+            Pen pen = Pen();
+            
+            foreach(Point p in vill.trees_drawn)
+            {
+                nation.drawtree(p, g, pen);
+            }
         }
     }
 }
