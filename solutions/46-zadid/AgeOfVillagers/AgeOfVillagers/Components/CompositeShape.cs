@@ -22,5 +22,10 @@ namespace AgeOfVillagers.Components
             foreach (var component in components)
                 component.Draw(g);
         }
+
+        public List<IComponent> getComponents()
+        {
+            return components;
+        }
     }
 }
