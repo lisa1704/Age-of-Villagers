@@ -15,8 +15,8 @@ namespace Ageofvillagers
             Graphics g = panel2.CreateGraphics();
             Pen p = new Pen(Color.Black, 1);
           //  Rectangle rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
-            Line l = new Line(g, p, e.Location.X, e.Location.Y);
-          
+          //  Line l = new Line(g, p, e.Location.X, e.Location.Y);
+            Triangle T = new Triangle(g, p, e.Location.X, e.Location.Y);
             // g.DrawLine(p,e.Location.X,e.Location.Y, e.Location.X+100, e.Location.Y);
             //  Console.WriteLine(e.Location.X);
             //  Console.WriteLine(e.Location.Y);
