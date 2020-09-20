@@ -7,17 +7,16 @@ namespace Age_Of_Villagers
 {
     class Inuit_House : CompositeShape
     {
-        public Inuit_House(Point mainPoint)
+        public Inuit_House(Point point)
         {
-            Point linePoint1 = new Point(mainPoint.X, mainPoint.Y - 100);
-            Point linePoint2 = new Point(mainPoint.X + 200, mainPoint.Y - 100);
-            Point sidePoint1 = new Point(linePoint1.X - 25, linePoint1.Y + 100);
-            Point sidePoint2 = new Point(sidePoint1.X + 150, sidePoint1.Y);
+            Point point1 = new Point(point.X - 40, point.Y - 40);
+            Point point2 = new Point(point.X - 10, point.Y - 10);
+            Point LeftBottom = new Point(point.X - 40, point.Y);
+            Point RightBottom = new Point(point.X + 40, point.Y);
 
-            AddComponent(new Line(sidePoint1, sidePoint2));
-            AddComponent(new Arc(linePoint1.X, linePoint1.Y, 100F, 200F, 0, s_angle: -180.0F));
-            AddComponent(new Arc(linePoint1.X - 25, linePoint1.Y - 50, 150F, 300F, 0, s_angle: -180.0F));
-  
+            AddComponent(new Line(LeftBottom, RightBottom));
+            AddComponent(new Arc(point.X - 10, point.Y - 10, 20, 20, 180.0F, 180.0F));
+            AddComponent(new Arc(point.X - 40, point.Y - 40, 80, 80, 180.0F, 180.0F));
         }
     }
 }
