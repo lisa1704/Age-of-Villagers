@@ -6,7 +6,7 @@ using System.Drawing;
 namespace AgeofVillagers90Test
 {
     [TestClass]
-    public class UnitTest1
+    public class BackGroundColorTest
     {
         [TestMethod]
         public void TestMethod1()
@@ -42,5 +42,6 @@ namespace AgeofVillagers90Test
             Assert.AreEqual(colorGet2, colorMatch2);
         }
 
+        
     }
 }
