@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1_Test
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
 
         private readonly Graphics g;
@@ -31,6 +31,10 @@ namespace WindowsFormsApp1_Test
         public void DrawWaterSource(MouseEventArgs e)
         {
             
+        }
+        public Color drawcolor()
+        {
+            return Color.White;
         }
     }
 }

@@ -43,5 +43,14 @@ namespace TestWindowsFormsApp1.UnitTests
             Color actual = ab.drawcolor();
             Assert.AreEqual(actual, expected);
         }
+
+        [TestMethod]
+        public void Test5()
+        {
+            InuitHunters ab = new InuitHunters(g);
+            Color expected = Color.White;
+            Color actual = ab.drawcolor();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
