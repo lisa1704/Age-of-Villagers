@@ -12,6 +12,10 @@ public class Nation : I_Nation
 
         else if (nation == "Arab_Beduin")
             nation = new Arab_Bedouin();
+
+        else if (nation == "Egyptian_Kings")
+            nation = new Egyptian_Kings();
+
         return nation;
     }
 }
