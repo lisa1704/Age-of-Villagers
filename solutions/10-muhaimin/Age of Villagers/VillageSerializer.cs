@@ -13,17 +13,30 @@ namespace Age_of_Villagers
     {
         protected OpenFileDialog ofd = new OpenFileDialog();
         protected SaveFileDialog sfd = new SaveFileDialog();
+        protected Village villageState;
         protected string fileName;
+        protected string savePath;
+        protected string json;
+        protected string villageSerialized;
         public void saveState(Village village)
         {
-            
-            string villageSerialized = JsonConvert.SerializeObject(village);
+
+            villageState = village;
+            villageSerialized = JsonConvert.SerializeObject(villageState);
             sfd.Filter = "aov|*.aov";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                Stream s = File.Open(sfd.FileName, FileMode.CreateNew);
-                StreamWriter sw = new StreamWriter(s);
-                sw.Write(villageSerialized);
+                savePath = sfd.FileName;
+            }
+            if (savePath != null)
+            {
+                using (Stream s = File.Open(savePath, FileMode.Create))
+                using (StreamWriter sw = new StreamWriter(s))
+                    sw.Write(villageSerialized);
+            }
+            else
+            {
+                return;
             }
         }
         public Village restoreState()
@@ -33,7 +46,14 @@ namespace Age_of_Villagers
             {
                 fileName = ofd.FileName;
             }
-            string json = System.IO.File.ReadAllText(fileName);
+            if (fileName == null)
+            {
+                return villageState;
+            }
+            Stream s = File.Open(fileName, FileMode.Open);
+            StreamReader sr = new StreamReader(s);
+            json = sr.ReadLine();
+            sr.Close();
             return JsonConvert.DeserializeObject<Village>(json);
         }
     }

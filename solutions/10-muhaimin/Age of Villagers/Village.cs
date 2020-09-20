@@ -8,7 +8,7 @@ namespace Age_of_Villagers
 {
     class Village
     {
-        public string villageName;
+        public string villageName = "untitled";
         public List<Axis> houses = new List<Axis>();
         public List<Axis> trees = new List<Axis>();
         public List<Axis> wSources = new List<Axis>();
@@ -54,7 +54,10 @@ namespace Age_of_Villagers
 
         internal void RefreshVillage()
         {
-            throw new NotImplementedException();
+            villageName = "Untitled";
+            houses.Clear();
+            trees.Clear();
+            wSources.Clear();
         }
     }
 }
