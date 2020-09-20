@@ -77,8 +77,7 @@ namespace AgeOfVillagers
             House.Checked = false;
             Tree.Checked = false;
             WaterSource.Checked = false;
-            DrawingPanel.Refresh();
-            this.Invalidate();
+            DrawingPanel.Invalidate();
             text = "";
         }
 
