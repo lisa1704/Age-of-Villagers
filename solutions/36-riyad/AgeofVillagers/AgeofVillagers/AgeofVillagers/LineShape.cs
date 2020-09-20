@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class LineShape : IShape
+    public class LineShape : IShapeItem
     {
 
         private Point point_1;
@@ -17,7 +17,7 @@ namespace AgeofVillagers
             this.point_2 = point_2;
 
         }
-        public void Paint(Graphics g)
+        public void Paint(Graphics g, Pen p)
         {
             var pen = new Pen(Color.Black, 1);
             g.DrawLine(pen, point_1, point_2);

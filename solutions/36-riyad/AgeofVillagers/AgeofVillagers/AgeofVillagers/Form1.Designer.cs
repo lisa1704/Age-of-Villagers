@@ -30,15 +30,15 @@
         {
             this.DrawPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nation = new System.Windows.Forms.ComboBox();
             this.tree_btn = new System.Windows.Forms.Button();
-            this.villageName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.waterSource_btn = new System.Windows.Forms.Button();
-            this.nation = new System.Windows.Forms.Label();
             this.save_btn = new System.Windows.Forms.Button();
             this.house_btn = new System.Windows.Forms.Button();
             this.new_btn = new System.Windows.Forms.Button();
             this.open_btn = new System.Windows.Forms.Button();
+            this.VillageNameBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +52,12 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel2.Controls.Add(this.VillageNameBox);
+            this.panel2.Controls.Add(this.nation);
             this.panel2.Controls.Add(this.tree_btn);
-            this.panel2.Controls.Add(this.villageName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.waterSource_btn);
-            this.panel2.Controls.Add(this.nation);
             this.panel2.Controls.Add(this.save_btn);
             this.panel2.Controls.Add(this.house_btn);
             this.panel2.Controls.Add(this.new_btn);
@@ -66,6 +67,15 @@
             this.panel2.Size = new System.Drawing.Size(220, 400);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // nation
+            // 
+            this.nation.FormattingEnabled = true;
+            this.nation.Location = new System.Drawing.Point(50, 117);
+            this.nation.Name = "nation";
+            this.nation.Size = new System.Drawing.Size(125, 28);
+            this.nation.TabIndex = 3;
+            this.nation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tree_btn
             // 
@@ -77,16 +87,6 @@
             this.tree_btn.Text = "Tree";
             this.tree_btn.UseVisualStyleBackColor = true;
             this.tree_btn.Click += new System.EventHandler(this.tree_btn_Click);
-            // 
-            // villageName
-            // 
-            this.villageName.AutoSize = true;
-            this.villageName.Location = new System.Drawing.Point(82, 82);
-            this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(70, 20);
-            this.villageName.TabIndex = 2;
-            this.villageName.Text = "Katakhali";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // label2
             // 
@@ -109,16 +109,6 @@
             this.waterSource_btn.Text = "Water Source";
             this.waterSource_btn.UseVisualStyleBackColor = true;
             this.waterSource_btn.Click += new System.EventHandler(this.waterSource_btn_Click);
-            // 
-            // nation
-            // 
-            this.nation.AutoSize = true;
-            this.nation.Location = new System.Drawing.Point(37, 115);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(145, 20);
-            this.nation.TabIndex = 2;
-            this.nation.Text = "Bangladeshi Farmers";
-            this.nation.Click += new System.EventHandler(this.nation_Click);
             // 
             // save_btn
             // 
@@ -164,6 +154,14 @@
             this.open_btn.UseVisualStyleBackColor = true;
             this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
+            // VillageNameBox
+            // 
+            this.VillageNameBox.Location = new System.Drawing.Point(50, 77);
+            this.VillageNameBox.Name = "VillageNameBox";
+            this.VillageNameBox.Size = new System.Drawing.Size(125, 27);
+            this.VillageNameBox.TabIndex = 4;
+            this.VillageNameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -184,13 +182,13 @@
         private System.Windows.Forms.Panel DrawPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button tree_btn;
-        private System.Windows.Forms.Label villageName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button waterSource_btn;
-        private System.Windows.Forms.Label nation;
         private System.Windows.Forms.Button save_btn;
         private System.Windows.Forms.Button house_btn;
         private System.Windows.Forms.Button new_btn;
         private System.Windows.Forms.Button open_btn;
+        private System.Windows.Forms.ComboBox nation;
+        private System.Windows.Forms.TextBox VillageNameBox;
     }
 }

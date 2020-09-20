@@ -14,7 +14,7 @@ namespace AgeofVillagers
         int x;
         int y;
         string Text = "";
-        string Name = "";
+        string VName = "";
         Graphics g;
         string VType = "";
         Pen p;
@@ -59,7 +59,7 @@ namespace AgeofVillagers
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(villageName.Text + " Village saved");
+            MessageBox.Show(VillageNameBox.Text + " Village saved");
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -105,12 +105,13 @@ namespace AgeofVillagers
 
         private void NationList_Select(object sender, EventArgs e)
         {
-            VType = nation.Text;
+            
         }
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
-
+            VName = VillageNameBox.Text;
+            //label2.Text = VName;
         }
 
 
@@ -132,6 +133,16 @@ namespace AgeofVillagers
                 }
                 DrawPanel.Invalidate();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VType = nation.Text;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

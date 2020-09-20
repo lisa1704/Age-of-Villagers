@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeofVillagers
 {
     public class ArabBedouin : INation
     {
-        public string DrawHouse()
+        public string DrawHouse(Graphics g, Point p)
         {
             return "Stonehouse";
         }

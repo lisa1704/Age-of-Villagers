@@ -5,16 +5,16 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class CompositeShape : IShape
+    public class CompositeShape : IShapeItem
     {
-        private List<IShape> Components;
+        private List<IShapeItem> Components;
 
         public CompositeShape()
         {
-            Components = new List<IShape>();
+            Components = new List<IShapeItem>();
         }
 
-        public void AddComponents(IShape shapeItem)
+        public void AddComponents(IShapeItem shapeItem)
         {
             Components.Add(shapeItem);
         }
