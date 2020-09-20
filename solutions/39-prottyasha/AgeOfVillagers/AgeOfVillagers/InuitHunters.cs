@@ -7,6 +7,7 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INations
     {
+        Pen pen = new Pen(Color.Yellow);
         public void drawhouse(Point p, Graphics g)
         {
             throw new NotImplementedException();
