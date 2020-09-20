@@ -9,19 +9,25 @@ namespace Age_of_Villagers.Nation
 {
     public class Egyptian_King : INation
     {
+        string name;
+
+        public Egyptian_King(string name)
+        {
+            this.name = name;
+        }
+        public String getName()
+        {
+            return name;
+        }
         public void GetHouse(Graphics graphics, Point _point)
         {
             throw new NotImplementedException();
         }
 
-        public string getName()
-        {
-            throw new NotImplementedException();
-        }
 
         public Color getTerrainColour()
         {
-            return Color.Yellow;
+            throw new NotImplementedException();
         }
 
         public void GetTree(Graphics graphics, Point _point)

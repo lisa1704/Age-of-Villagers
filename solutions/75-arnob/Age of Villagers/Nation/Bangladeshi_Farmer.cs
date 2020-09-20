@@ -10,9 +10,18 @@ namespace Age_of_Villagers.Nation
     {
         private string nationName;
 
-        public Bangladeshi_Farmer(string nationName)
+      
+
+        public Bangladeshi_Farmer(string name)
         {
-            this.nationName = nationName;
+            this.nationName = name;
+        }
+
+
+
+        public String getName()
+        {
+            return nationName;
         }
 
         public void GetHouse(Graphics graphics, Point _point)
@@ -22,10 +31,7 @@ namespace Age_of_Villagers.Nation
             bangladeshi_house.Paint(graphics);
         }
 
-        public string getName()
-        {
-            throw new NotImplementedException();
-        }
+
 
         public Color getTerrainColour()
         {
