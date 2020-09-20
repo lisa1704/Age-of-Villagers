@@ -95,7 +95,7 @@ namespace AgeOfVillagers
         private void formRefresh()
         {
             VillageName.Text = "Enter Village Name";
-            Nations.SelectedIndex = -1;
+            //Nations.SelectedIndex = -1;
             House.Checked = false;
             Tree.Checked = false;
             WaterSource.Checked = false;
