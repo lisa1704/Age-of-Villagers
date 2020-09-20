@@ -11,7 +11,7 @@ namespace Age_of_Villagers
     {
         public void drawTree(Axis axes, Panel drawingSpace)
         {
-            MessageBox.Show("Selected nation do not have Trees");
+            
         }
     }
 }

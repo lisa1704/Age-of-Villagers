@@ -50,6 +50,7 @@ namespace Age_of_Villagers
                 myVillage = myVS.openState(fileName);
                 comboBox1.Text = myVillage.getName();
                 myVillage.repaint(nation);
+                nation.paintTerrain();
             }
         }
 
@@ -143,24 +144,21 @@ namespace Age_of_Villagers
         {
             if (Nation.Text == "Arab Bedouin")
             {
-                panel1.Invalidate();
                 nation = new ArabPainter(panel1);
             }
             else if (Nation.Text == "Bangladeshi Farmers")
             {
-                panel1.Invalidate();
                 nation = new BangladeshiPainter(panel1);
             }
             else if (Nation.Text == "Egyptian Kings")
             {
-                panel1.Invalidate();
                 nation = new EgyptianPainter(panel1);
             }
             else if (Nation.Text == "Inuit Hunters")
             {
-                panel1.Invalidate();
                 nation = new InuitPainter(panel1);
             }
+            Refresh();
             myVillage.repaint(nation);
         }
     }
