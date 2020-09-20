@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
+        private Panel drawingPanel;
+
+        public InuitHunters(Panel drawingPanel)
+        {
+            this.drawingPanel = drawingPanel;
+        }
+
         public void drawhouse(Point p)
         {
            /* g.DrawArc(pen, p.X, p.Y, 16, 16, 180, 180);

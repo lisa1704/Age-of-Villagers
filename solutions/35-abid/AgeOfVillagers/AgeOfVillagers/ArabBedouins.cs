@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class ArabBedouins : INation
     {
+        private Panel drawingPanel;
+
+        public ArabBedouins(Panel drawingPanel)
+        {
+            this.drawingPanel = drawingPanel;
+        }
+
         public void drawhouse(Point p)
         {
            /* Point p1 = new Point(p.X - 8, p.Y + 16);

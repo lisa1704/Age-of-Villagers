@@ -22,15 +22,15 @@ namespace AgeOfVillagers
             }
             else if (selectedIndex == 1)
             {
-                return new ArabBedouins();
+                return new ArabBedouins(this.drawingPanel);
             }
             else if (selectedIndex == 2)
             {
-                return new EgyptianKings();
+                return new EgyptianKings(this.drawingPanel);
             }
             else if (selectedIndex == 3)
             {
-                return new InuitHunters();
+                return new InuitHunters(this.drawingPanel);
             }
             else
                 return null;

@@ -8,6 +8,13 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INation
     {
+        private Panel drawingPanel;
+
+        public EgyptianKings(Panel drawingPanel)
+        {
+            this.drawingPanel = drawingPanel;
+        }
+
         public void drawhouse(Point p)
         {
            /* Point p1 = new Point(p.X + 4, p.Y + 16);
