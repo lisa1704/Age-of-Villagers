@@ -28,7 +28,8 @@ namespace AgeOfVillagers
 
         public void Draw_WaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianKingsWater Water = new EgyptianKingsWater(p);
+            Water.Draw_Shape(g);
         }
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="EgyptianKingsHouse.cs" />
     <Compile Include="EgyptianKingsTree.cs" />
+    <Compile Include="EgyptianKingsWater.cs" />
     <Compile Include="FactoryNation.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
