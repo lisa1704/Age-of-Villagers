@@ -53,6 +53,7 @@
     <Compile Include="BangladeshiFarmersHouse.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="AbstractShape.cs" />
+    <Compile Include="BangladeshiFarmersTree.cs" />
     <Compile Include="BangladeshiFarmersWater.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="CreateNewVillage.cs">
