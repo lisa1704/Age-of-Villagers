@@ -1,18 +1,15 @@
 package project.Controllers;
 
-import javafx.beans.InvalidationListener;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
+
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
+
 import javafx.scene.shape.*;
 
 import java.lang.String;
@@ -21,8 +18,6 @@ import java.io.*;
 import java.net.URL;
 import java.util.*;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import project.Utilities.BangladeshiFarmers;
 import project.Utilities.INation;
 import project.Utilities.Villages;
@@ -36,14 +31,13 @@ public class VillageViewController implements Initializable {
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
     public int Flag = 0;
-    public String terrainColor = "GREEN" ;
     public ArrayList<Shape> Object ;
 
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Beduin"),("Egyptian Kings"),("Egyptian Knights"));
+        NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouin"),("Egyptian Kings"),("Egyptian Knights"));
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
