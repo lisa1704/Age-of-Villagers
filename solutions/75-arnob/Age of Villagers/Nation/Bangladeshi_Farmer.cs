@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.Bangladeshi_Farmer;
+using Age_of_Villagers.Bangladeshi_Farmer_Item;
 using Age_of_Villagers.BD_Farmer;
 using System;
 using System.Drawing;
@@ -39,7 +40,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterSource(Graphics graphics, Point _point)
         {
-            Age_of_Villagers.Bangladeshi_Farmer.BDfarmer_WaterSource bangladeshi_pond = new Age_of_Villagers.Bangladeshi_Farmer.BDfarmer_WaterSource(new Point(_point.X, _point.Y), new Point(_point.X - 6, _point.Y + 12), new Point(_point.X, _point.Y + 18), new Point(_point.X + 9, _point.Y + 12), new Point(_point.X + 12, _point.Y + 18), new Point(_point.X + 18, _point.Y + 6), new Point(_point.X + 15, _point.Y - 3), new Point(_point.X + 6, _point.Y + 3), new Point(_point.X + 6, _point.Y - 2));
+            BDfarmer_WaterSource bangladeshi_pond = new BDfarmer_WaterSource(new Point(_point.X, _point.Y), new Point(_point.X - 6, _point.Y + 12), new Point(_point.X, _point.Y + 18), new Point(_point.X + 9, _point.Y + 12), new Point(_point.X + 12, _point.Y + 18), new Point(_point.X + 18, _point.Y + 6), new Point(_point.X + 15, _point.Y - 3), new Point(_point.X + 6, _point.Y + 3), new Point(_point.X + 6, _point.Y - 2));
             bangladeshi_pond.Paint(graphics);
         }
     }
