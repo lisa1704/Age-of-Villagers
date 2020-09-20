@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class ShowWindow {
-    public Stage window;
+public class ShowWindow implements IWindow{
+
     Group drawSpace;
     INation nation;
     DrawHouse house;
@@ -46,7 +46,7 @@ public class ShowWindow {
         this.drawSpace = drawSpace;
     }
 
-    public Scene display() {
+    public Scene getDisplay() {
 
         Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
         rectangle2.draw();
@@ -71,6 +71,10 @@ public class ShowWindow {
         });
 
         gridOfControls.newButton.setOnAction(event -> {
+
+            ChoiceWindow choiceWindow = new ChoiceWindow();
+            Main.mainWindow.setScene(choiceWindow.getDisplay());
+
             drawSpace.getChildren().clear();
             stateOfComponents.clear();
             Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
@@ -78,5 +82,12 @@ public class ShowWindow {
         });
 
         return scene;
+    }
+
+
+    @Override
+    public Stage getStage(Scene scene) {
+        Main.mainWindow.setScene(scene);
+        return Main.mainWindow;
     }
 }

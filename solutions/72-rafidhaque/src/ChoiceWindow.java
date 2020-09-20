@@ -7,20 +7,16 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class ChoiceWindow {
+public class ChoiceWindow implements IWindow {
     String boxValue;
     Scene scene;
-    Stage stage;
 
     public String getBoxValue() {
         return boxValue;
     }
 
-    public ChoiceWindow(Stage stage) {
-        this.stage = stage;
-    }
 
-    public Stage display() {
+    public Scene getDisplay() {
 
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(10, 10, 10, 10));
@@ -48,15 +44,20 @@ public class ChoiceWindow {
 
         newVillage.setOnAction(event -> {
             scene = getChoice(choiceBox);
-            stage.setScene(scene);
+            Main.mainWindow.setScene(scene);
         });
 
 
 
         gridPane.getChildren().addAll(chooseNation, choiceBox, newVillage, openVillage);
         scene = new Scene(gridPane, 400, 250);
-        stage.setScene(scene);
-        return stage;
+        return scene;
+    }
+
+    @Override
+    public Stage getStage(Scene scene) {
+        Main.mainWindow.setScene(scene);
+        return Main.mainWindow;
     }
 
     private Scene getChoice(ChoiceBox<String> choiceBox) {
@@ -78,7 +79,7 @@ public class ChoiceWindow {
         ShowWindow showWindow = new ShowWindow(nation1, g);
 
         System.out.println(nation);
-        return showWindow.display();
+        return showWindow.getDisplay();
     }
 
 }

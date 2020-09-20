@@ -4,26 +4,27 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    Stage window;
+    static Stage mainWindow;
 
     public static void main(String[] args) {
         launch(args);
     }
 
     void changeScene(Scene scene) {
-        this.window.setScene(scene);
+        this.mainWindow.setScene(scene);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        window = primaryStage;
+        mainWindow = primaryStage;
+        mainWindow.setTitle("Age of Villagers");
 
         Group g = new Group();
         INation bd = new ArabBedouin(g);
 
-        ChoiceWindow choiceWindow = new ChoiceWindow(window);
+        ChoiceWindow choiceWindow = new ChoiceWindow();
 
-        choiceWindow.display().show();
+        choiceWindow.getStage(choiceWindow.getDisplay()).show();
 
 
     }
