@@ -12,16 +12,13 @@ namespace Age_of_Villagers.House
            
         {
             //Triangle
-            //AddComponent(new Line(baseLeft, baseMedium)); ////////
             AddComponent(new Line(baseMedium, topOne));
             AddComponent(new Line(topOne, baseLeft));
-            AddComponent(new Line(baseMedium, baseLeft)); ////*****
+            AddComponent(new Line(baseMedium, baseLeft));
             //Rectangle
            AddComponent(new Line(baseMedium,baseRight));
            AddComponent(new Line(topOne, topTwo));
            AddComponent(new Line(topTwo, baseRight));
-
-
 
         }
     }

@@ -32,16 +32,13 @@ namespace Age_of_Villagers.Nation
         public void GetHouse(Graphics graphics, Point _point)
         {
             BangladeshiHouse bangladeshi_house = new BangladeshiHouse(new Point(_point.X, _point.Y - 8), new Point(_point.X - 8, _point.Y), new Point(_point.X + 8, _point.Y + 8));
-            bangladeshi_house.Paint(graphics);
-            
-            
+            bangladeshi_house.Paint(graphics);  
         }
 
         public void GetTree(Graphics graphics, Point _point)
         {
             BangladeshiTree bangladeshi_tree = new BangladeshiTree(new Point(_point.X, _point.Y), new Point(_point.X + 9, _point.Y + 20), new Point(_point.X + 15, _point.Y + 12), new Point(_point.X + 7, _point.Y + 8));
             bangladeshi_tree.Paint(graphics);
-            //Point mainPoint, Point topRight, Point bottomRight, Point topPoint, Point topLeft
             
         }
 

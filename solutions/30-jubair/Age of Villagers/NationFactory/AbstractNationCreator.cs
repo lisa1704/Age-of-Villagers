@@ -13,7 +13,6 @@ namespace Age_of_Villagers.NationFactory
             set;
         }
         public abstract INation CreateNation();
-        // Factory Method Implemented
 
     }
 }

@@ -9,6 +9,5 @@ namespace Age_of_Villagers.Shape
     {
         void Paint(Graphics graphics);
 
-        // GetBoundingBox();
     }
 }

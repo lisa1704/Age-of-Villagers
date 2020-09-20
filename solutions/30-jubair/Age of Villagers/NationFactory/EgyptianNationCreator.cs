@@ -26,7 +26,7 @@ namespace Age_of_Villagers.NationFactory
         public override INation CreateNation()
         {
             return new EgyptianKings(nationName);
-            // Factory Method Implemented
+          
         }
     }
 }

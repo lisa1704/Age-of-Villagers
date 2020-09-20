@@ -31,7 +31,6 @@ namespace Age_of_Villagers.Nation
         {
             ArabHouse arab_house = new ArabHouse(new Point(_point.X, _point.Y), new Point(_point.X - 4, _point.Y + 13), new Point(_point.X + 4, _point.Y + 13), new Point(_point.X + 8, _point.Y - 3), new Point(_point.X + 12, _point.Y + 11));
             arab_house.Paint(graphics);
-            //Point baseLeft , Point baseMedium , Point topOne, Point baseRight , Point topTwo
             
         }
 

@@ -27,7 +27,7 @@ namespace Age_of_Villagers.NationFactory
         public override INation CreateNation()
         {
             return new InuitHunter(nationName);
-            // Factory Method Implemented
+      
         }
 
     }

@@ -26,7 +26,6 @@ namespace Age_of_Villagers.NationFactory
         public override INation CreateNation()
         {
             return new ArabBedouin(nationName);
-            // Factory Method Implemented
         }
 
 

@@ -13,11 +13,6 @@ namespace Age_of_Villagers.Tree
             AddComponent(new MyRectangle(topLeft, bottomRight));
             AddComponent(new NewEllipse(mainPoint, topPoint));
 
-            //AddComponent(new Line(topLeft, bottomRight));
-            //AddComponent(new NewEllipse(mainPoint, bottomRight));
-            //AddComponent(new Line(mainPoint, topLeft));
-            //AddComponent(new Line(mainPoint, topRight));
-            //AddComponent(new Line(mainPoint, bottomRight));
         }
     }
 }

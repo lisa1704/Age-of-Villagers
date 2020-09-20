@@ -22,10 +22,5 @@ namespace Age_of_Villagers.Shape
             graphics.DrawLine(pen, _point1, _point2);
         }
 
-        // GetBoundingBox()
-        // {
-
-        // }
-
     }
 }
