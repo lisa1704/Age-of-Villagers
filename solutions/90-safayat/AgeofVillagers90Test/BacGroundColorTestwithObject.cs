@@ -34,6 +34,17 @@ namespace AgeofVillagers90Test
 
             Assert.AreEqual(color, colorObject);
         }
+        [TestMethod]
+        public void InuitHUnterColorTestWithObject()
+        {
+            NationFactory InuitcolorObject = new NationFactory();
+            INation NationType = InuitcolorObject.GetNation("Inuit HUnters");
+            InuitHunters Inuit = new InuitHunters();
+            Color color = Inuit.BackGroundColor();
+            Color colorObject = NationType.BackGroundColor();
+
+            Assert.AreEqual(color, colorObject);
+        }
 
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers90
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         public Color BackGroundColor()
         {
