@@ -22,7 +22,6 @@ namespace AgeOfVillagers
         {
             foreach (var shapes in combinedShape)
             {
-                Console.WriteLine("Draw shape working");
                 shapes.Draw_Shape(g);
             }
         }
