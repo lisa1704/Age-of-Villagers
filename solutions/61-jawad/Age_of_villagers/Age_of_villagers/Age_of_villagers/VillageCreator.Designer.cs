@@ -171,6 +171,7 @@
             this.MainPanel.Size = new System.Drawing.Size(600, 400);
             this.MainPanel.TabIndex = 18;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
+            this.MainPanel.Click += new System.EventHandler(this.MainPanel_Click);
             this.MainPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.main_panelMouseClick);
             // 
             // VillageCreator

@@ -13,7 +13,7 @@ namespace Age_of_villagers
    
     public partial class VillageCreator : Form
     {
-        int x, y;
+        int X, Y;
         string text = "";
         string name = "";
         public Graphics g;
@@ -82,6 +82,16 @@ namespace Age_of_villagers
 
         }
 
+        private void drawHouse(int X,int Y)
+        {
+
+            g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
+            g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
+            g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
+            g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
+            g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
+        }
+
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -97,18 +107,22 @@ namespace Age_of_villagers
 
         }
 
+        private void MainPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.X, e.Y);
-            Graphics g = MainPanel.CreateGraphics();
-            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            int x = e.Location.X;
+            int y = e.Location.Y;
             if (Tree.Checked)
             {
-
+                g.DrawLine(p, X, y, X + 25, y + 25);
             }
             else if (House.Checked)
             {
-
+                drawHouse(x, y);
             }
             else if (WaterSource.Checked)
             {
