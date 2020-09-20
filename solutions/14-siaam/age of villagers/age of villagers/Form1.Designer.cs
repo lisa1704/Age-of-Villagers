@@ -1,6 +1,6 @@
 ﻿namespace age_of_villagers
 {
-    partial class Form1
+    partial class aov_editor
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.nation = new System.Windows.Forms.ComboBox();
             this.vill_name = new System.Windows.Forms.TextBox();
-            this.treebutton = new System.Windows.Forms.Button();
             this.housebutton = new System.Windows.Forms.Button();
             this.waterbutton = new System.Windows.Forms.Button();
+            this.treebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +85,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // nation
             // 
@@ -106,16 +107,6 @@
             this.vill_name.Text = "Enter Village Name";
             this.vill_name.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // treebutton
-            // 
-            this.treebutton.Location = new System.Drawing.Point(688, 228);
-            this.treebutton.Name = "treebutton";
-            this.treebutton.Size = new System.Drawing.Size(104, 29);
-            this.treebutton.TabIndex = 7;
-            this.treebutton.Text = "Tree";
-            this.treebutton.UseVisualStyleBackColor = true;
-            this.treebutton.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // housebutton
             // 
             this.housebutton.Location = new System.Drawing.Point(798, 228);
@@ -134,7 +125,17 @@
             this.waterbutton.Text = "Water Source";
             this.waterbutton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // treebutton
+            // 
+            this.treebutton.Location = new System.Drawing.Point(688, 228);
+            this.treebutton.Name = "treebutton";
+            this.treebutton.Size = new System.Drawing.Size(104, 29);
+            this.treebutton.TabIndex = 7;
+            this.treebutton.Text = "Tree";
+            this.treebutton.UseVisualStyleBackColor = true;
+            this.treebutton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // aov_editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,8 +150,8 @@
             this.Controls.Add(this.open_vill);
             this.Controls.Add(this.new_vill);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "aov_editor";
+            this.Text = "Age of Villagers";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +166,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox nation;
         private System.Windows.Forms.TextBox vill_name;
-        private System.Windows.Forms.Button treebutton;
         private System.Windows.Forms.Button housebutton;
         private System.Windows.Forms.Button waterbutton;
+        private System.Windows.Forms.Button treebutton;
     }
 }
 

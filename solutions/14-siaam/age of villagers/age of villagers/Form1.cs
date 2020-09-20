@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace age_of_villagers
 {
-    public partial class Form1 : Form
+    public partial class aov_editor : Form
     {
-        public Form1()
+       
+        public aov_editor()
         {
             InitializeComponent();
         }
@@ -43,6 +44,11 @@ namespace age_of_villagers
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
