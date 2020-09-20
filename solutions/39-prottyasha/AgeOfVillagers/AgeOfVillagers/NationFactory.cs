@@ -6,7 +6,7 @@ namespace AgeOfVillagers
 {
     class NationFactory
     {
-        public INations GetNations(string nation)
+        public INations GetNation(string nation)
         {
             if (nation == "Arab Bedouins")
             {
