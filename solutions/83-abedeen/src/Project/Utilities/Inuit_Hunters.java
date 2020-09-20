@@ -13,12 +13,14 @@ public class Inuit_Hunters implements INations{
 
     @Override
     public ArrayList<Shape> drawTree(double x, double y) {
-        return null;
+        ArrayList<Shape> tree = new ArrayList<>();
+        return tree;
     }
 
     @Override
     public ArrayList<Shape> drawWaterBody(double x, double y) {
-        return null;
+        ArrayList<Shape> WB = new ArrayList<>();
+        return WB;
     }
 
     @Override
