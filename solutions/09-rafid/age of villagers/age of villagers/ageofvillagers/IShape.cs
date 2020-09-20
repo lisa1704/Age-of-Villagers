@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ageOfVillagers
+namespace ageofvillagers
 {
     public interface IShape
     {
