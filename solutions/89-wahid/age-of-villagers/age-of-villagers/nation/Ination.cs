@@ -7,10 +7,10 @@ namespace age_of_villagers.nation
 {
     interface Ination
     {
-        void DrawHouse();
+        void drawhouse();
 
-        void DrawTree();
+        void drawtree();
 
-        void DrawWaterSource();
+        void drawwatersource();
     }
 }
