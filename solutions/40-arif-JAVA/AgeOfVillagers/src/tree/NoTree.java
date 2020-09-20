@@ -14,7 +14,6 @@ public class NoTree implements ITree{
 
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
-
         System.out.println("blank tree");
     }
 }

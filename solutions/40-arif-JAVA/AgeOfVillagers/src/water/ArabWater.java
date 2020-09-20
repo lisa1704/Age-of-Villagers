@@ -4,18 +4,16 @@ import canvas.MyCanvas;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class ArabWater implements IWater {
-//    Canvas canvas;
-
+    boolean active = true;
     public ArabWater(){
-//        MyCanvas myCanvas = MyCanvas.getInstance();
-//        this.canvas = myCanvas.getCanvas();
     }
     @Override
-    public void draw(Canvas canvas, String item) {
+    public void draw(Canvas canvas, RadioButton radioButton) {
 
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
@@ -23,16 +21,14 @@ public class ArabWater implements IWater {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(item.equals("water")) {
+                if(active) {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
-
                     graphicsContext.lineTo(x, y);
                     graphicsContext.lineTo(x + 10, y + 20);
                     graphicsContext.strokeText("arab water", mouseEvent.getX(), mouseEvent.getY());
-//
-//                canvas.removeEventHandler(MouseEvent.MOUSE_RELEASED,this);
-                    System.out.println("oknsdndkd");
+                    radioButton.setSelected(false);
+                    active = false;
                 }
 
             }
