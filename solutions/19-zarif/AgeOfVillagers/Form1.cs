@@ -47,6 +47,10 @@ namespace AgeOfVillagers
         private void NewVillagebtn_Click(object sender, EventArgs e)
         {
             Form vlgname = new VillageNameInput(this,DrawPanel);
+            
+            Housepoints.Clear();
+            Treepoints.Clear();
+            Waterpoints.Clear();
             DrawPanel.Invalidate();
             vlgname.Show();
 
@@ -58,11 +62,11 @@ namespace AgeOfVillagers
             get_state();
             SaveVillageState command = new SaveVillageState(_villagestate);
             command.Execute();
-
+            MessageBox.Show("Village Saved");
 
         }
 
-        public void set_state(VillageState village)
+       public void set_state(VillageState village)
         {
 
             foreach (Point pt in village._housePoints)
@@ -78,6 +82,10 @@ namespace AgeOfVillagers
                 Waterpoints.Add(pt);
             }
         }
+
+
+
+
 
 
         private void DrawPanel_MouseDown(object sender, MouseEventArgs e)
@@ -118,8 +126,23 @@ namespace AgeOfVillagers
 
         private void Openvillagebtn_Click(object sender, EventArgs e)
         {
-
+            if (_nationame != "")
+            {
+                OpenVillageState opencommand = new OpenVillageState();
+                NewVillagebtn_Click(sender, e);
+                opencommand.Execute();
+                _villagestate =opencommand.get_villageState();
+                set_state(_villagestate);
+                DrawPanel.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("VillgeType is not selected");
+            }
         }
+
+        
+        
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {

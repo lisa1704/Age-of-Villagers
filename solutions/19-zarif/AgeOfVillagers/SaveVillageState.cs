@@ -20,7 +20,6 @@ namespace AgeOfVillagers
         public void Execute()
         {
             SaveFileDialog _savefiledg = new SaveFileDialog();
-            _savefiledg.InitialDirectory = @"E:\Dp_Assignment_Age_of_villagers\save\";
             _savefiledg.RestoreDirectory = true;
             _savefiledg.FileName = "*.aov";
             _savefiledg.DefaultExt = "aov";

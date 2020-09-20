@@ -10,6 +10,7 @@ namespace AgeOfVillagers
         public IGraphicShape GetHouse(Point point)
         {
             return new InuitHuntersHouse(point);
+
         }
 
         public Color GetTerritoryColor()
