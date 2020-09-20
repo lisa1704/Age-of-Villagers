@@ -11,7 +11,7 @@ namespace Age_of_Villagers.Arab_bedouin
         public Arab_House(Point baseLeft, Point baseMedium, Point topOne, Point baseRight, Point topTwo)
         {
             //Triangle
-            //AddComponent(new Line(baseLeft, baseMedium)); 
+            AddComponent(new Line(baseLeft, baseMedium)); 
             AddComponent(new Line(baseMedium, topOne));
             AddComponent(new Line(topOne, baseLeft));
             AddComponent(new Line(baseRight, baseLeft)); 
