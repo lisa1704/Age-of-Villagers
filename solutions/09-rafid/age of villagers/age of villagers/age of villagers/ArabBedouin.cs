@@ -17,7 +17,7 @@ public class ArabBedouin : Nation
     public IShape draw_water()
     {
        
-        return unavailable;
+        return NotSupportedException; ;
     }
 
     public string backgroundColor()
