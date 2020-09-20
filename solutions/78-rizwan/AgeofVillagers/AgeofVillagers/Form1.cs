@@ -60,12 +60,9 @@ namespace AgeofVillagers
                 {
                     //RadioButton rb = radioButton1;
                     //Graphics g = this.CreateGraphics();
-                    BangladeshiFarmers bf = new BangladeshiFarmers();
-                    bf.x = x;
-                    bf.y = y;
-                    bf.h = h;
-                    bf.w = w;
-                    bf.createHouse();
+                    BangladeshiFarmers bf = new BangladeshiFarmers(g);
+                    
+                    bf.createHouse(e);
                     //Rectangle shape = new Rectangle(x, y, h, w);
                     //g.DrawRectangle(p, shape);
                     

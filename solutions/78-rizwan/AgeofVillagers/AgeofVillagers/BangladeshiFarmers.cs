@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeofVillagers
 {
@@ -9,18 +10,21 @@ namespace AgeofVillagers
     {
         public int x, y, w, h;
         Pen p = new Pen(Color.Red, 3);
-        public void createHouse()
+        Graphics g;
+        public BangladeshiFarmers(Graphics g)
         {
-            Point v1, v2, v3;
-            Form1 frm1 = new Form1();
-            Graphics g = frm1.CreateGraphics();
-            Rectangle shape = new Rectangle(x, y, h, w);
-            g.DrawRectangle(p, shape);
-            v1 = new Point(x, y);
-            v2 = new Point((x + w) / 2, y + 5);
-            v3 = new Point(w, h);
-            Point[] vertices = { v1, v2, v3 };
-            g.DrawPolygon(p, vertices);
+            this.g = g;
+        }
+        public void createHouse(MouseEventArgs e)
+        {
+            x = e.X;
+            y = e.Y;
+            g.DrawLine(p, x, y, x + 50, y);
+            g.DrawLine(p, x + 50, y, x + 50, y + 25);
+            g.DrawLine(p, x + 50, y + 25, x, y + 25);
+            g.DrawLine(p, x, y + 25, x, y);
+            g.DrawLine(p, x, y, x + 25, y - 25);
+            g.DrawLine(p, x + 25, y - 25, x + 50, y);
         }
 
         public void createTree()

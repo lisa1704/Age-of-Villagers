@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeofVillagers
 {
     interface Ination
     {
-        void createHouse();
+        void createHouse(MouseEventArgs e);
         void createTree();
         void createWaterSource();
     }
