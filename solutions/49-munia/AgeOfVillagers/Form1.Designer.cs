@@ -77,7 +77,7 @@
             // 
             this.button5.Location = new System.Drawing.Point(715, 399);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 34);
+            this.button5.Size = new System.Drawing.Size(102, 34);
             this.button5.TabIndex = 4;
             this.button5.Text = "New Village";
             this.button5.UseVisualStyleBackColor = true;
