@@ -62,7 +62,7 @@ namespace AgeofVillagers
                     //Graphics g = this.CreateGraphics();
                     BangladeshiFarmers bf = new BangladeshiFarmers(g);
                     
-                    bf.createHouse(e);
+                    bf.createTree(e);
                     //Rectangle shape = new Rectangle(x, y, h, w);
                     //g.DrawRectangle(p, shape);
                     //refactor
@@ -71,15 +71,15 @@ namespace AgeofVillagers
                 {
                     //RadioButton rb = radioButton2;
                     //Graphics g = this.CreateGraphics();
-                    Rectangle shape = new Rectangle(x, y, h, w);
-                    g.DrawRectangle(p, shape);
+                    BangladeshiFarmers bf = new BangladeshiFarmers(g);
+                    bf.createHouse(e);
                 }
                 else if (radioButton3.Checked == true)
                 {
                     //RadioButton rb = radioButton3;
                     //Graphics g = this.CreateGraphics();
-                    Rectangle shape = new Rectangle(x, y, h, w);
-                    g.DrawRectangle(p, shape);
+                    BangladeshiFarmers bf = new BangladeshiFarmers(g);
+                    bf.createWaterSource(e);
                 }
             }
         }

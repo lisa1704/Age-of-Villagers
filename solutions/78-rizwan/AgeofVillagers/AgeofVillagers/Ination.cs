@@ -9,7 +9,7 @@ namespace AgeofVillagers
     interface Ination
     {
         void createHouse(MouseEventArgs e);
-        void createTree();
-        void createWaterSource();
+        void createTree(MouseEventArgs e);
+        void createWaterSource(MouseEventArgs e);
     }
 }
