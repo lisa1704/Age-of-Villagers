@@ -12,8 +12,8 @@ namespace AgeOfVillagers
 
         public InuitHouse(Point point)
         {
-            addshape(new Arc(point.X, point.Y, 24, 24, 0, -180));
-            addshape(new Arc(point.X + 8, point.Y + 7, 8, 8, 0, -180));
+            addshape(new HalfCircle(point.X, point.Y, 24));
+            addshape(new HalfCircle(point.X + 8, point.Y + 7, 8));
             addshape(new Line(point.X, point.Y + 12, point.X + 24, point.Y + 12));
         }
         
