@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BangladeshiWaterSource.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="IWaterResource.cs" />
     <Compile Include="WaterSourceContext.cs" />
     <Compile Include="Nations\Arab.cs" />
