@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Age_of_Villagers.BangladeshiFarmers
 {
-    class BangladeshiFarmers
+    public class BangladeshiFarmers
     {
     }
 }

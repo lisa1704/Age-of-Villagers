@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Age_of_Villagers.ArabBedouin;
 
 namespace Age_of_Villagers.Age_of_Villagers
 {
@@ -12,4 +13,32 @@ namespace Age_of_Villagers.Age_of_Villagers
         void DrawWaterSource(Graphics g, Point point);
         Color BackgroundColor();
     }
+
+    internal class Factory_Nation
+    {
+        public INation GetNation(string NationName)
+        {
+            if (NationName == "Bangladeshi Farmers")
+            {
+                return null;
+            }
+            else if (NationName == "Arab Bedouin")
+            {
+                return new ArabBedouin.ArabBedouin();
+            }
+            else if (NationName == "Egyptian Kings")
+            {
+                return null;
+            }
+            else if (NationName == "Inuit Hunters")
+            {
+                return null;
+            }
+            else
+            {
+                return new NullNation();
+            }
+        }
+    }
+
 }
