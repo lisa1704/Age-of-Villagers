@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IHouse.cs" />
+    <Compile Include="INation.cs" />
+    <Compile Include="ITree.cs" />
+    <Compile Include="IWaterSource.cs" />
     <Compile Include="VillageMain.cs">
       <SubType>Form</SubType>
     </Compile>
