@@ -12,8 +12,6 @@ namespace WindowsFormsApp1
     {
 
         private readonly Graphics g;
-        Pen mypen = new Pen(Color.Black, 2);
-
         public InuitHunters(Graphics g)
         {
             this.g = g;
@@ -21,12 +19,8 @@ namespace WindowsFormsApp1
 
         public void DrawHouse(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-
-            g.DrawArc(mypen, x - 25, y - 25, 50, 50, 0, -180);
-            g.DrawArc(mypen, x - 50, y - 50, 100, 100, 0, -180);
-            g.DrawLine(mypen, x - 50, y , x +50 , y );
+            InutHuntersHouse ihh = new InutHuntersHouse(g);
+            ihh.Draw(e);
         }
 
         public void DrawTree(MouseEventArgs e)

@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
-        private static Graphics g;
+        //private static Graphics g;
 
         /// <summary>
         /// The main entry point for the application.

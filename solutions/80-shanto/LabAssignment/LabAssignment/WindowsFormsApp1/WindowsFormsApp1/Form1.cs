@@ -14,8 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        int x;
-        int y;
+
         Pen myPen = new Pen(Color.Green,2);
 
         public Form1()
@@ -145,11 +144,6 @@ namespace WindowsFormsApp1
             {
                 BackColor = Color.White;
 
-                /*if (radioButton1.Checked)
-                {
-                    InuitHunters iht = new InuitHunters(g);
-                    iht.DrawHouse(e);
-                }*/
                 if (radioButton2.Checked)
                 {
                     InuitHunters iht = new InuitHunters(g);
