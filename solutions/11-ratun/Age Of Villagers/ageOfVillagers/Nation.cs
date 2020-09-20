@@ -9,6 +9,8 @@ public class Nation : INation
             nation = new BangladeshiFarmer();
         else if (nationName == "Arab_Bedouin")
             nation = new ArabBedouin();
+        else if (nationName == "Egyptian_Kings")
+            nation = new EgyptianKings();
         return nation;
     }
 }

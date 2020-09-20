@@ -14,7 +14,7 @@ public class ArabBedouin : Nation
         return house;
         //return "Drawing a tree. ";
     }
-    public IShape draw_water(int waterX, int waterY)
+    public IShape draw_water()
     {
         return NotSupportedException;
     }
