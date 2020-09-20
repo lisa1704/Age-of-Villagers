@@ -125,11 +125,11 @@
             // 
             this.Label_villName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Label_villName.AutoSize = true;
-            this.Label_villName.Location = new System.Drawing.Point(50, 69);
+            this.Label_villName.Location = new System.Drawing.Point(69, 69);
             this.Label_villName.Name = "Label_villName";
-            this.Label_villName.Size = new System.Drawing.Size(99, 20);
+            this.Label_villName.Size = new System.Drawing.Size(60, 20);
             this.Label_villName.TabIndex = 5;
-            this.Label_villName.Text = "Village Name";
+            this.Label_villName.Text = "untitled";
             this.Label_villName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Label_villName.Click += new System.EventHandler(this.Label_villName_Click);
             // 

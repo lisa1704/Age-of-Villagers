@@ -10,6 +10,7 @@ namespace AgeOfVillagers
 {
     public partial class SaveVillageForm : Form
     {
+        Village vill;
         string village_name = "untitled";
         public SaveVillageForm()
         {
@@ -22,6 +23,8 @@ namespace AgeOfVillagers
             {
                 village_name = textbox_VillageName.Text;
             }
+            vill.village_name = village_name;
         }
+
     }
 }
