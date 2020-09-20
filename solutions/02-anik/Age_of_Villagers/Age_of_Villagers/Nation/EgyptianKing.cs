@@ -12,5 +12,19 @@ namespace Age_of_Villagers.Nation
         {
             return colorofbackground;
         }
+        public void DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
