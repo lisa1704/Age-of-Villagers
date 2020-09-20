@@ -5,9 +5,14 @@ namespace Age_of_villagers
 { 
     public class Egyptian : INation
     {
+        Size housesize = new Housesize();
+        Size treesize = new Treesize();
+        Size watersourcesize = new EGPTWatersourcesize();
         public IObject Draw_house(Point lpbottom)
         {
-            IObject house = new Egyptian_house(lpbottom);
+            int height = housesize.GetHeight();
+            int weidth = housesize.GetWeidth();
+            IObject house = new Egyptian_house(lpbottom,height,weidth);
             return house;        
         }
 

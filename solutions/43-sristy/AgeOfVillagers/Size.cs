@@ -51,5 +51,17 @@ namespace Age_of_villagers
             return 24;
         }
     }
+    public class EGPTWatersourcesize : Size
+    {
+        public override int GetHeight()
+        {
+            return 12;
+        }
+
+        public override int GetWeidth()
+        {
+            return 12;
+        }
+    }
 
 }
