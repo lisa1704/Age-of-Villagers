@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,19 @@ namespace age_of_villagers
 {
     class Inuit_Hunters : INations
     {
+        Pen pen = new Pen(Color.Red);
+        Graphics gp;
         public void draw_house()
         {
-            throw new NotImplementedException();
+            
+            Point p0 = new Point(50, 50);
+            Point p1 = new Point(p0.X - 75, p0.Y);
+            Point p2 = new Point(p0.X + 75, p0.Y);
+            Point p3 = new Point(p0.X - 50, p0.Y - 50);
+            gp.DrawArc(pen, p3.X, p3.Y, 150, 150, 180, 180);
+            gp.DrawArc(pen, p2.X, p2.Y, 150, 150, 180, 180);
+            gp.DrawLine(pen, p1, p2);
+            
         }
 
         public void draw_tree()
