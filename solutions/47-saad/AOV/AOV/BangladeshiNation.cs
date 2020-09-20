@@ -24,8 +24,8 @@ namespace AOV
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            BdWaterSource bdWaterSource = new BdWaterSource(p);
-            bdWaterSource.draw(g);
+            BdWaterSource pond = new BdWaterSource(p);
+            pond.draw(g);
         }
 
         public Color GetColor()
