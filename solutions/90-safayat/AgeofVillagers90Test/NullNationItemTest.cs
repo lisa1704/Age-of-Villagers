@@ -19,6 +19,24 @@ namespace AgeofVillagers90Test
             TestNullHouse.Equals(obj);
         }
 
+        [TestMethod]
+        public void TestNNTree()
+        {
+            INation nation = new NullNation();
+            object obj = nation.DrawTree(g, point);
+            NullVillageItem TestNullTree = new NullVillageItem();
+            TestNullTree.Equals(obj);
+        }
+        [TestMethod]
+        public void TestNNws()
+        {
+            INation nation = new NullNation();
+            object obj = nation.DrawWaterSource(g, point);
+            NullVillageItem TestNullws = new NullVillageItem();
+            TestNullws.Equals(obj);
+        }
+
+
 
     }
 }
