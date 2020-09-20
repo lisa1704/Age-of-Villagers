@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     public interface INations
     {
-        string DrawHouse(Graphics g,Point pt);
+        object DrawHouse(Graphics g,Point pt);
         object DrawTree(Graphics g, Point pt);
         object DrawWaterSource(Graphics g, Point MPt);
         Color GetTerrainColor();

@@ -11,12 +11,12 @@ namespace AgeOfVillagers
     public class EgyptianKings : INations
     {
         Pen p = new Pen(Color.Black);
-        public string DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
             EgyptianHouse EgyptHouse = new EgyptianHouse(pt);
             EgyptHouse.Paint(g, p);
-            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
-            return "Piramid";
+            //return "Piramid";
+            return EgyptHouse;
         }
 
         public object DrawTree(Graphics g, Point pt)

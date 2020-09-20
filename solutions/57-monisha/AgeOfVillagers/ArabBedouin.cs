@@ -11,12 +11,12 @@ namespace AgeOfVillagers
     public class ArabBedouin : INations
     {
         Pen p = new Pen(Color.Black);
-        public string DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
             ArabBedouinHouse ArabHouse = new ArabBedouinHouse(pt);
             ArabHouse.Paint(g, p);
-            //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
-            return "Stonehouse";
+            //return "Stonehouse";
+            return ArabHouse;
         }
 
         public object DrawTree(Graphics g, Point pt)

@@ -10,7 +10,7 @@ namespace AgeOfVillageTest
     {
         public Graphics g;
         Point pt = new Point(16, 16);
-        [TestMethod]
+       /* [TestMethod]
         public void TestBangladeshiHouseConstruction()
         {           
             BangladeshiHouse BDHouseTest = new BangladeshiHouse(pt);            
@@ -18,7 +18,16 @@ namespace AgeOfVillageTest
             string testString = "BDHouse Constructed";
 
             Assert.AreEqual(house, testString);
+        }*/
+        [TestMethod]
+        public void TestNullHouseConstruction()
+        {
+            INations nationType = new NullNation();
+            object testObject = nationType.DrawHouse(g, pt);
+            NullVillageItem NullHouseTest = new NullVillageItem(pt);
+
+            //Assert.AreEqual(s, BDHouseTest);
+            NullHouseTest.Equals(testObject);
         }
-       
     }
 }

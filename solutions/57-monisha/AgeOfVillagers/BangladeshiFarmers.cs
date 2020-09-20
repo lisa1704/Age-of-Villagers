@@ -12,13 +12,14 @@ namespace AgeOfVillagers
     {
         Pen p = new Pen(Color.Black);   
         string testBdHouse;
-        public string DrawHouse(Graphics g,Point pt)
+        public object DrawHouse(Graphics g,Point pt)
         {
             BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
          
             house.Paint(g,p);
             testBdHouse = "BDHouse Constructed";
-            return "KureGhor";
+            //return "KureGhor";
+            return house;
         }
         public string testHouse()
         {

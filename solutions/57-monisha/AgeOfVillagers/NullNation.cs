@@ -10,10 +10,11 @@ namespace AgeOfVillagers
     public class NullNation : INations
     {
         Pen p = new Pen(Color.Black);
-        public string DrawHouse(Graphics g, Point pt)
+        public object DrawHouse(Graphics g, Point pt)
         {
-            //
-            return "No Nation";
+            NullVillageItem nHouse = new NullVillageItem(pt);
+            //return "No Nation";
+            return nHouse;
         }
 
         public object DrawTree(Graphics g, Point pt)
