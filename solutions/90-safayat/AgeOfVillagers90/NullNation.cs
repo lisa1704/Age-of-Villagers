@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers90
 {
-    class NullNation : INation
+    public class NullNation : INation
     {
         public Color BackGroundColor()
         {

@@ -23,6 +23,17 @@ namespace AgeofVillagers90Test
 
             Assert.AreEqual(color, colorObject);
         }
+        [TestMethod]
+        public void NullNationColorTestWithObject()
+        {
+            NationFactory NullcolorObject = new NationFactory();
+            INation NationType = NullcolorObject.GetNation("");
+            NullNation NN = new NullNation();
+            Color color = NN.BackGroundColor();
+            Color colorObject = NationType.BackGroundColor();
+
+            Assert.AreEqual(color, colorObject);
+        }
 
     }
 }
