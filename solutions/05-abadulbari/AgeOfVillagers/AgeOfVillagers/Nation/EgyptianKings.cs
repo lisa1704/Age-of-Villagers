@@ -25,7 +25,7 @@ namespace AgeOfVillagers.Nation
 
         public VillageItem getTree(Point p)
         {
-            throw new NotImplementedException();
+            return new EgyptianTree(p);
         }
 
         public VillageItem getWaterSource(Point p)

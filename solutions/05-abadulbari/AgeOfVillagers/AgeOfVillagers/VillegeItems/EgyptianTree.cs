@@ -20,7 +20,7 @@ namespace AgeOfVillagers.VillegeItems
             top22 = new Point(bottom.X + 20, bottom.Y - 60);
             top23 = new Point(bottom.X + 35, bottom.Y - 60);
             mid1 = new Point((bottom.X + top12.X)/2, (bottom.Y + top12.Y)/2);
-            mid1 = new Point((bottom.X + top22.X)/2, (bottom.Y + top22.Y)/2);
+            mid2 = new Point((bottom.X + top22.X)/2, (bottom.Y + top22.Y)/2);
             addItem(new Line(bottom, top12));
             addItem(new Line(mid1, top11));
             addItem(new Line(mid1, top13));
