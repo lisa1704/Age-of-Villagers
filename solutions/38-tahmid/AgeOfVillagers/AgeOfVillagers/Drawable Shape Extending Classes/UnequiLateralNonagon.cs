@@ -16,16 +16,21 @@ namespace AgeOfVillagers
         DrawableShapes topLeftLine, topMidLeftLine, topMidRightLine, topRightLine, bottomLeftLine, bottomMidLeftLine, bottomMidRightLine, bottomRightLine,topMidLine,topEndLine,bottomEndLine;
         Point topLeftPoint, topMidLeftPoint, topMidRightPoint,  bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint,endPoint,topMidPoint;
 
-        public UnequilateralNonagon(Graphics graphics,Pen pen,Point startingPoint,int unitHeight,int uintWidth)
+        public UnequilateralNonagon(Point startingPoint, Point topLeftPoint, Point topMidLeftPoint, Point topMidPoint, Point topMidRightPoint, Point bottomLeftPoint, Point bottomMidLeftPoint, Point bottomMidRightPoint, Point endPoint, Graphics graphics, Pen pen)
         {
+            this.startingPoint = startingPoint;
+            this.topLeftPoint = topLeftPoint;
+            this.topMidLeftPoint = topMidLeftPoint;
+            this.topMidPoint = topMidPoint;
+            this.topMidRightPoint = topMidRightPoint;
+            this.bottomLeftPoint = bottomLeftPoint;
+            this.bottomMidLeftPoint = bottomMidLeftPoint;
+            this.bottomMidRightPoint = bottomMidRightPoint;
+            this.endPoint = endPoint;
             this.graphics = graphics;
             this.pen = pen;
-            this.startingPoint = startingPoint;
-            this.unitHeight = unitHeight;
-            this.unitWidth = uintWidth;
-
-
         }
+
         public override void drawShape()
         {
             topLeftLine.drawShape();
@@ -46,14 +51,7 @@ namespace AgeOfVillagers
         {
             
             
-            topLeftPoint = new Point(startingPoint.X +3* unitWidth , startingPoint.Y - 2* unitHeight);
-            topMidLeftPoint = new Point(topLeftPoint.X +  unitWidth, startingPoint.Y - 3 * unitHeight);
-            topMidPoint = new Point(topMidLeftPoint.X, startingPoint.Y -  unitHeight);
-            topMidRightPoint = new Point(topMidPoint.X + 2*unitWidth , startingPoint.Y -4* unitHeight);
-            bottomLeftPoint = new Point(startingPoint.X + 3*unitWidth, startingPoint.Y + 4 * unitHeight);
-            bottomMidLeftPoint= new Point(bottomLeftPoint.X +  unitWidth, startingPoint.Y + unitHeight);
-            bottomMidRightPoint= new Point(bottomMidLeftPoint.X + unitWidth, startingPoint.Y +3* unitHeight);
-            endPoint= new Point(startingPoint.X + 8*unitWidth, startingPoint.Y );
+
 
             topLeftLine = base.getLines(startingPoint, topLeftPoint,graphics,pen);
             topMidLeftLine = base.getLines(topLeftPoint, topMidLeftPoint, graphics, pen);

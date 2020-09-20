@@ -9,24 +9,27 @@ namespace AgeOfVillagers.IItem_implementing_Classes
 {
     class BangladeshiWaterSourceShape : Shapes
     {
-        Graphics g;
+        Graphics graphics;
         Pen pen;
-        private Point startingPoint;
-
-        int length, width;
+        private Point startingPoint,endPoint;
+        private Point topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint;
+        private Point bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint;
+        int height, width;
         DrawableShapeFactory basicShapeFactory;
-        public BangladeshiWaterSourceShape(Graphics g, Pen pen, Point startingPoint, int length, int width)
+        public BangladeshiWaterSourceShape(Graphics graphics, Pen pen, Point startingPoint, int length, int width)
         {
             this.pen = pen;
-            this.length = length;
+            this.height = length;
             this.width = width;
-            this.g = g;
+            this.graphics = graphics;
             this.startingPoint = startingPoint;
             basicShapeFactory = new DrawableShapeFactory();
         }
 
         public void makeShape()
         {
+            int unitWidth = width / 8;
+            int unitHeight = height / 8;
             topLeftPoint = new Point(startingPoint.X + 3 * unitWidth, startingPoint.Y - 2 * unitHeight);
             topMidLeftPoint = new Point(topLeftPoint.X + unitWidth, startingPoint.Y - 3 * unitHeight);
             topMidPoint = new Point(topMidLeftPoint.X, startingPoint.Y - unitHeight);
@@ -35,7 +38,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
             bottomMidLeftPoint = new Point(bottomLeftPoint.X + unitWidth, startingPoint.Y + unitHeight);
             bottomMidRightPoint = new Point(bottomMidLeftPoint.X + unitWidth, startingPoint.Y + 3 * unitHeight);
             endPoint = new Point(startingPoint.X + 8 * unitWidth, startingPoint.Y);
-            DrawableShapes nonagon = basicShapeFactory.GetDrawableShape(g, pen, startingPoint, length / 8, width / 8, Constants.UNEQUAL_NONAGON_HINT);
+            DrawableShapes nonagon = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint, bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint, endPoint, Constants.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
 
