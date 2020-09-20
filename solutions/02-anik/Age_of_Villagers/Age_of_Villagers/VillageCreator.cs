@@ -50,17 +50,18 @@ namespace Age_of_Villagers
 
         private void Tree_CheckedChanged(object sender, EventArgs e)
         {
-
+            Text = "Tree";
         }
 
         private void House_CheckedChanged(object sender, EventArgs e)
         {
+            Text = "House";
 
         }
 
         private void WaterSource_CheckedChanged(object sender, EventArgs e)
         {
-
+            Text = "Water";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -77,6 +78,12 @@ namespace Age_of_Villagers
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            name = textBox1.Text;
+        }
+
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
