@@ -16,19 +16,19 @@ namespace AgeOfVillagers
         }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            EgyptianHouse ehouse = new EgyptianHouse(Drawingpanel);
+            EgyptianHouse ehouse = new EgyptianHouse(point);
             ehouse.Draw(point, Drawingpanel);
         }
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            EgyptianTree etree = new EgyptianTree(Drawingpanel);
+            EgyptianTree etree = new EgyptianTree(point);
             etree.Draw(point, Drawingpanel);
         }
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
-            EgyptianWatersource ewatersource = new EgyptianWatersource(Drawingpanel);
+            EgyptianWatersource ewatersource = new EgyptianWatersource(point);
             ewatersource.Draw(point, Drawingpanel);
         }
 

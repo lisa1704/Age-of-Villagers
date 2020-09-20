@@ -6,19 +6,14 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class EgyptianWatersource : IShape
+    class EgyptianWatersource : CompositeShape
     {
         private Panel Drawingpanel;
 
-        public EgyptianWatersource(Panel Drawingpanel)
+        public EgyptianWatersource(Point point)
         {
-            this.Drawingpanel = Drawingpanel;
+           addshape( new Arc( point.X, point.Y, 12, 12, 45, 360));
         }
-        public void Draw(Point point, Panel Drawingpanel)
-        {
-            Graphics g = Drawingpanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-            g.DrawArc(p, point.X, point.Y, 12, 12, 45, 360);
-        }
+        
     }
 }

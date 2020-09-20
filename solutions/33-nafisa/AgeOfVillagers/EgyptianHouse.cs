@@ -6,26 +6,20 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class EgyptianHouse : IShape
+    class EgyptianHouse : CompositeShape
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
 
-        public EgyptianHouse(Panel Drawingpanel)
+        public EgyptianHouse(Point point)
         {
-            this.Drawingpanel = Drawingpanel;
+            //this.Drawingpanel = Drawingpanel;
+            addshape(new Line(point.X, point.Y, point.X + 25, point.Y - 15));
+            addshape(new Line(point.X, point.Y, point.X - 30, point.Y - 10));
+            addshape(new Line(point.X, point.Y, point.X - 10, point.Y - 30));
+            addshape(new Line(point.X - 30, point.Y - 10, point.X - 10, point.Y - 30));
+            addshape(new Line(point.X + 25, point.Y - 15, point.X - 10, point.Y - 30));
         }
 
-        public void Draw(Point point, Panel Drawingpanel)
-        {
-            Graphics g = Drawingpanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-            g.DrawLine(p, point.X, point.Y, point.X + 25, point.Y-15);
-            g.DrawLine(p, point.X, point.Y, point.X -30, point.Y - 10);
-            g.DrawLine(p, point.X, point.Y, point.X -10, point.Y - 30);
-            g.DrawLine(p, point.X - 30, point.Y - 10, point.X - 10, point.Y - 30);
-            g.DrawLine(p, point.X + 25, point.Y - 15, point.X - 10, point.Y - 30);
-            
-            
-        }
+        
     }
 }
