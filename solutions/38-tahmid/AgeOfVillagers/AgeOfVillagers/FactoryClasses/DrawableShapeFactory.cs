@@ -7,10 +7,9 @@ namespace AgeOfVillagers
     {
         public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point point, int height, int width,string hint)
         {
-            if (hint.Equals(Constants.RECT_HINT))
-                return new Quadrangle(g, pen, point, height, width);
             
-            else if(hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
+            
+             if(hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
                 return new CrookedOctagon(g, pen, point, height, width);
             else if (hint.Equals(Constants.OVAL_HINT))
             {
