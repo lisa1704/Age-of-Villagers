@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Age_of_Villagers.Shape
 {
-    class Triangle
+    class Triangle : IShape
     {
+
     }
 }
