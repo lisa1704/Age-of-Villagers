@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class EgyptianTree : CompositeShape
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
 
         public EgyptianTree(Point point)
         {

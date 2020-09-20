@@ -6,23 +6,16 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHouse : IShape
+    class InuitHouse : CompositeShape
     {
-        private Panel Drawingpanel;
+       // private Panel Drawingpanel;
 
-        public InuitHouse(Panel Drawingpanel)
+        public InuitHouse(Point point)
         {
-            this.Drawingpanel = Drawingpanel;
+            addshape(new Arc(point.X, point.Y, 24, 24, 0, -180));
+            addshape(new Arc(point.X + 8, point.Y + 7, 8, 8, 0, -180));
+            addshape(new Line(point.X, point.Y + 12, point.X + 24, point.Y + 12));
         }
-        public void Draw(Point point, Panel Drawingpanel)
-        {
-            Graphics g = Drawingpanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-           
-            g.DrawArc(p, point.X, point.Y, 16, 16, 0, -180);
-            g.DrawArc(p, point.X + 4, point.Y + 4, 8, 8, 0, -180);
-            g.DrawLine(p, point.X, point.Y + 8, point.X + 16, point.Y+8);
-            
-        }
+        
     }
 }

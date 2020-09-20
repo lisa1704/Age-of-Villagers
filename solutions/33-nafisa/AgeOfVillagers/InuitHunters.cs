@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            InuitHouse ihouse = new InuitHouse(Drawingpanel);
+            InuitHouse ihouse = new InuitHouse(point);
             ihouse.Draw(point, Drawingpanel);
         }
 
