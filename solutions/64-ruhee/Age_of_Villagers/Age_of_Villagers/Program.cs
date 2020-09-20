@@ -11,7 +11,10 @@ namespace Age_of_Villagers.Age_of_Villagers
         [STAThread]
         static void Main()
         {
-
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Village());
         }
     }
 }
