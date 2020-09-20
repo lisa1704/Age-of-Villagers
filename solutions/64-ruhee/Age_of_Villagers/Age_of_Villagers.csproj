@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Age_of_Villagers.test\" />
-    <Folder Include="ArabBedouin\" />
   </ItemGroup>
 
   <ItemGroup>
