@@ -61,5 +61,10 @@ namespace age_of_villagers
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
