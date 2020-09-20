@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace age_of_villagers
 {
@@ -15,7 +16,7 @@ namespace age_of_villagers
 
         public void draw_tree()
         {
-            throw new NotImplementedException();
+                MessageBox.Show("Inuit Hunters can not plant trees");
         }
 
         public void draw_watersource()
