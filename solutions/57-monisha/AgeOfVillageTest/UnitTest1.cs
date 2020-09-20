@@ -12,10 +12,10 @@ namespace AgeOfVillageTest
         public void TestBangladeshiNationObject()
         {
             NationFactory BDObject = new NationFactory();
-            INations type= BDObject.GetNation("BangladeshiFarmers");
+            INations Ntype= BDObject.GetNation("BangladeshiFarmers");
             BangladeshiFarmers l = new BangladeshiFarmers();
             Color s = l.GetTerrainColor();
-            Color testobjest = type.GetTerrainColor();
+            Color testobjest = Ntype.GetTerrainColor();
            
             Assert.AreEqual(s, testobjest);
         }
@@ -23,12 +23,25 @@ namespace AgeOfVillageTest
         public void TestArabBedouinNationObject()
         {
             NationFactory ArabObject = new NationFactory();
-            INations type = ArabObject.GetNation("ArabBedouin");
+            INations Ntype = ArabObject.GetNation("ArabBedouin");
             ArabBedouin l = new ArabBedouin();
             Color ArabColor = l.GetTerrainColor();
-            Color testobjest = type.GetTerrainColor();
+            Color testobjest = Ntype.GetTerrainColor();
 
             Assert.AreEqual(ArabColor, testobjest);
         }
+
+        [TestMethod]
+        public void TestEgyptianKingNationObject()
+        {
+            NationFactory EgyptianObject = new NationFactory();
+            INations Ntype = EgyptianObject.GetNation("EgyptianKings");
+            EgyptianKings Egypt = new EgyptianKings();
+            Color EgyptColor = Egypt.GetTerrainColor();
+            Color testobjest = Ntype.GetTerrainColor();
+
+            Assert.AreEqual(EgyptColor, testobjest);
+        }
+      
     }
 }
