@@ -12,21 +12,21 @@ namespace AgeOfVillagers.Test
         public void EgypthouseTest()
         {
             IObject actual = nationfactory.GetNation("Egyptian").Draw_house(lptop);
-            IObject expected = new Egyptian_house(lptop);
+            IObject expected = new Egyptian_house(lptop,16,16);
             actual.Equals(expected);
         }
         [Fact]
         public void EgypttreeTest()
         {
             IObject actual = nationfactory.GetNation("Egyptian").Draw_tree(lptop);
-            IObject expected = new Egyptian_tree(lptop);
+            IObject expected = new Egyptian_tree(lptop,24,16);
             actual.Equals(expected);
         }
         [Fact]
         public void EgyptwatersourceTest()
         {
             IObject actual = nationfactory.GetNation("Egyptian").Draw_watersource(lptop);
-            IObject expected = new Egyptian_watersource(lptop);
+            IObject expected = new Egyptian_watersource(lptop,12,12);
             actual.Equals(expected);
         }
     }

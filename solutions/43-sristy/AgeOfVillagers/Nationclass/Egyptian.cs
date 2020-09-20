@@ -26,7 +26,9 @@ namespace Age_of_villagers
 
         public IObject Draw_watersource(Point mptop)
         {
-            IObject watersource = new Egyptian_watersource(mptop);
+            int height = watersourcesize.GetHeight();
+            int weidth = watersourcesize.GetWeidth();
+            IObject watersource = new Egyptian_watersource(mptop, height, weidth);
             return watersource;
         }
 
