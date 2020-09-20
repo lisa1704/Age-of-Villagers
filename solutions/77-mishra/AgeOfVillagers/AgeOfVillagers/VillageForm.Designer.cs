@@ -31,6 +31,7 @@
             this.drawingBoard = new System.Windows.Forms.Panel();
             this.villageName = new System.Windows.Forms.Label();
             this.sidepanel = new System.Windows.Forms.Panel();
+            this.Nation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.Nation = new System.Windows.Forms.ComboBox();
             this.sidepanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,21 @@
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(224, 400);
             this.sidepanel.TabIndex = 13;
+            // 
+            // Nation
+            // 
+            this.Nation.FormattingEnabled = true;
+            this.Nation.Items.AddRange(new object[] {
+            "Arab Beduins",
+            "Bangladeshi Farmers",
+            "Egyptian King",
+            "Inuit Hunter"});
+            this.Nation.Location = new System.Drawing.Point(30, 93);
+            this.Nation.Name = "Nation";
+            this.Nation.Size = new System.Drawing.Size(151, 28);
+            this.Nation.TabIndex = 13;
+            this.Nation.Text = "Nation";
+            this.Nation.SelectedIndexChanged += new System.EventHandler(this.Nation_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -163,19 +178,6 @@
             this.radioButton1.Text = "Tree";
             this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.tree_changed_CheckedChanged);
-            // 
-            // Nation
-            // 
-            this.Nation.FormattingEnabled = true;
-            this.Nation.Items.AddRange(new object[] {
-            "Arab Beduins",
-            "Bangladeshi Farmers"});
-            this.Nation.Location = new System.Drawing.Point(30, 93);
-            this.Nation.Name = "Nation";
-            this.Nation.Size = new System.Drawing.Size(151, 28);
-            this.Nation.TabIndex = 13;
-            this.Nation.Text = "Nation";
-            this.Nation.SelectedIndexChanged += new System.EventHandler(this.Nation_SelectedIndexChanged);
             // 
             // VillageForm
             // 

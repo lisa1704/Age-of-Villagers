@@ -37,12 +37,15 @@ namespace AgeOfVillagers
             x = p.X;
             y = p.Y;
 
+            
+
             if(radioButton1.Checked == true)
             {
                 //arabtree.draw(p, drawingBoard);
                 arabBeduin.DrawTree(p, drawingBoard);
                 bdfarmer.DrawTree(p, drawingBoard);
                 egKing.DrawTree(p, drawingBoard);
+                
                 
             }
 

@@ -7,15 +7,17 @@ namespace AgeOfVillagers
 {
     public class Nation
     {
-        private string nationtype;
-        private Panel drawingBoard;
+        private readonly string nationtype;
+        //private Panel drawingBoard;
         public INation nation;
 
-        public Nation(string nationtype, Panel drawingBoard)
+        public Nation()
         {
-            this.nationtype = nationtype;
-            this.drawingBoard = drawingBoard;
 
+        }
+
+        public Nation(string nationtype)
+        {
             if(nationtype == "Arab Beduins")
             {
                 nation = new ArabBeduin();
@@ -32,7 +34,6 @@ namespace AgeOfVillagers
             }
 
         }
-
         public INation getnationtype()
         {
             return nation;
