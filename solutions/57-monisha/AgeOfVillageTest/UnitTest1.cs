@@ -53,5 +53,16 @@ namespace AgeOfVillageTest
 
             Assert.AreEqual(InuitColor, testobjest);
         }
+        [TestMethod]
+        public void TestNullNationObject()
+        {
+            NationFactory NullObject = new NationFactory();
+            INations Ntype = NullObject.GetNation("");
+            NullNation nullNation = new NullNation();
+            Color NullColor = nullNation.GetTerrainColor();
+            Color testobjest = Ntype.GetTerrainColor();
+
+            Assert.AreEqual(NullColor, testobjest);
+        }
     }
 }
