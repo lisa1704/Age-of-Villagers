@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         public void showMessage()
         {
-            MessageBox.Show("Please , Select a Nation !");
+            MessageBox.Show("Please, Select a Nation!");
         }
     }
 }
