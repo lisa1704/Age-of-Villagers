@@ -12,9 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Group g = new Group();
-        INation bd = new BangladeshiFarmers(g);
+        INation bd = new ArabBedouin(g);
 
-        ShowWindow controlPanel = new ShowWindow();
+        ShowWindow controlPanel = new ShowWindow(bd, g);
 
         controlPanel.start(primaryStage);
     }
