@@ -51,5 +51,10 @@ namespace age_of_villagers
         {
 
         }
+
+        private void tree_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
