@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -8,26 +9,29 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INation
     {
-        private Panel drawingPanel;
+        protected Panel drawingPanel;
+        protected IHouse house = new EgyptianHouse();
+        protected ITree tree = new EgyptianTree();
+        protected IWatersrc waterSrc = new EgyptianWatersrc();
 
-        public EgyptianKings(Panel drawingPanel)
+        public EgyptianKings(Panel panel)
         {
-            this.drawingPanel = drawingPanel;
+            drawingPanel = panel;
         }
 
         public void drawhouse(Point p)
         {
-           
+            house.drawHouse(p, drawingPanel);
         }
 
         public void drawtree(Point p)
         {
-            
+            tree.drawTree(p, drawingPanel);
         }
 
         public void drawwatersrc(Point p)
         {
-            
+            waterSrc.drawWatersrc(p, drawingPanel);
         }
     }
 }
