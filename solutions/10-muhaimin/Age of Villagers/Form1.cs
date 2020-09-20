@@ -16,13 +16,15 @@ namespace Age_of_Villagers
         int y;
         Graphics g;
         String text = "";
-        Village myVillage = new Village();
-        VillageSerializer myVS = new VillageSerializer();
+        Village myVillage;
+        VillageSerializer myVS;
         IPainter nation;
         public Form1()
         {
             InitializeComponent();
-            nation = new BangladeshiPainter(panel1);
+            myVillage = new Village();
+            myVS = new VillageSerializer(myVillage);
+            nationList.SelectedIndex = 1;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,7 +87,6 @@ namespace Age_of_Villagers
         {
             Refresh();
             myVillage.RefreshVillage();
-            myVS = new VillageSerializer();
         }
 
         private void button3_Click(object sender, EventArgs e)

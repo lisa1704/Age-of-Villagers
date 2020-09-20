@@ -54,7 +54,6 @@ namespace Age_of_Villagers
 
         internal void RefreshVillage()
         {
-            villageName = "Untitled";
             houses.Clear();
             trees.Clear();
             wSources.Clear();
