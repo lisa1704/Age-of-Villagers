@@ -9,18 +9,23 @@ namespace AgeOfVillagers.Village_extended_classes
 {
     class BangladeshiHouseShape : Shapes
     {
-        Graphics g;
-        Pen pen;
-        Point point;
-        int length, width;
-        DrawableShapeFactory basicShapeFactory;
-       public BangladeshiHouseShape (Graphics g,Pen pen,Point point,int length,int width)
+        private Graphics g;
+        private Pen pen;
+        private Point startingPoint;
+        private Point roofTopPoint;
+        private Point roofRightPoint;
+        private Point baseTopRightPoint;
+        private Point baseBottomLeftPoint;
+        private Point baseBottomRightPoint;
+        private int height, width;
+        private DrawableShapeFactory basicShapeFactory;
+       public BangladeshiHouseShape (Graphics g,Pen pen,Point startinhPoint,int height,int width)
         {
             this.pen = pen;
-            this.length = length;
+            this.height = height;
             this.width = width;
             this.g = g;
-            this.point = point;
+            this.startingPoint = startinhPoint;
             basicShapeFactory = new DrawableShapeFactory();
 
             
@@ -28,9 +33,14 @@ namespace AgeOfVillagers.Village_extended_classes
 
         public void makeShape()
         {
-            DrawableShapes base_shape = basicShapeFactory.GetDrawableShape(g, pen, point, length / 2, width, Constants.RECT_HINT);
+            baseTopRightPoint = new Point(startingPoint.X + width, startingPoint.Y);
+            baseBottomRightPoint= new Point(startingPoint.X + width, startingPoint.Y + 3 * height / 4);
+            baseBottomLeftPoint= new Point(startingPoint.X , startingPoint.Y+3*height/4);
+            DrawableShapes base_shape = basicShapeFactory.GetDrawableShape(g, pen, startingPoint,baseTopRightPoint,baseBottomLeftPoint,baseBottomRightPoint, Constants.RECT_HINT);
             base_shape.makeShape();
-            DrawableShapes roof_top = basicShapeFactory.GetDrawableShape(g, pen, point, length / 2, width, Constants.TRIANGLE_HINT);
+            roofRightPoint = baseTopRightPoint;
+            roofTopPoint = new Point(startingPoint.X + width/2, startingPoint.Y- height / 4);
+            DrawableShapes roof_top = basicShapeFactory.GetDrawableShape(g, pen, roofTopPoint,roofRightPoint, startingPoint, Constants.TRIANGLE_HINT);
             roof_top.makeShape();
         }
 

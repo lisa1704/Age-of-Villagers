@@ -20,18 +20,18 @@ namespace AgeOfVillagers
             return null;
         }
 
-        public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point topPoint, Point rightPoint,Point leftPoint, string hint)
+        public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point topPoint, Point rightPoint,Point leftPoint, string hint)
         {
             if (hint.Equals(Constants.TRIANGLE_HINT))
-                new Triangle(topPoint, rightPoint, leftPoint);
+                return new Triangle(topPoint, rightPoint, leftPoint, graphics, pen);
             return null;
             
         }
 
-        public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point topLeftPoint, Point topRightPoint, Point bottomLeftPoint, Point bottomRighttPoint, string hint)
+        public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point topLeftPoint, Point topRightPoint, Point bottomLeftPoint, Point bottomRighttPoint, string hint)
         {
             if (hint.Equals(Constants.RECT_HINT))
-                new Quadrangle(topLeftPoint,topRightPoint,bottomLeftPoint,bottomRighttPoint);
+                return new Quadrangle(topLeftPoint, topRightPoint, bottomLeftPoint, bottomRighttPoint, graphics, pen);
             return null;
 
         }
