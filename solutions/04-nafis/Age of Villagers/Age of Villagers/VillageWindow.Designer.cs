@@ -36,9 +36,9 @@
             this.SaveVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
-            this.WaterSource = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
-            this.Tree = new System.Windows.Forms.Button();
+            this.HouseRB = new System.Windows.Forms.RadioButton();
+            this.TreeRB = new System.Windows.Forms.RadioButton();
+            this.WaterSourceRB = new System.Windows.Forms.RadioButton();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,15 +59,15 @@
             this.MenuBar.AccessibleName = "MenuBar";
             this.MenuBar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.MenuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MenuBar.Controls.Add(this.WaterSourceRB);
+            this.MenuBar.Controls.Add(this.TreeRB);
+            this.MenuBar.Controls.Add(this.HouseRB);
             this.MenuBar.Controls.Add(this.NationList);
             this.MenuBar.Controls.Add(this.VillageText);
             this.MenuBar.Controls.Add(this.GameLabel);
             this.MenuBar.Controls.Add(this.SaveVillage);
             this.MenuBar.Controls.Add(this.OpenVillage);
             this.MenuBar.Controls.Add(this.NewVillage);
-            this.MenuBar.Controls.Add(this.WaterSource);
-            this.MenuBar.Controls.Add(this.House);
-            this.MenuBar.Controls.Add(this.Tree);
             this.MenuBar.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MenuBar.Location = new System.Drawing.Point(602, 2);
             this.MenuBar.Margin = new System.Windows.Forms.Padding(0);
@@ -90,6 +90,7 @@
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(136, 52);
             this.NationList.TabIndex = 3;
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // VillageText
             // 
@@ -102,6 +103,7 @@
             this.VillageText.TabIndex = 2;
             this.VillageText.Text = "Village Name";
             this.VillageText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.VillageText.TextChanged += new System.EventHandler(this.VillageText_TextChanged);
             // 
             // GameLabel
             // 
@@ -151,41 +153,44 @@
             this.NewVillage.UseVisualStyleBackColor = true;
             this.NewVillage.Click += new System.EventHandler(this.NewVillageButton_Click);
             // 
-            // WaterSource
+            // HouseRB
             // 
-            this.WaterSource.AccessibleName = "WaterSource";
-            this.WaterSource.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WaterSource.Location = new System.Drawing.Point(84, 242);
-            this.WaterSource.Name = "WaterSource";
-            this.WaterSource.Size = new System.Drawing.Size(89, 28);
-            this.WaterSource.TabIndex = 0;
-            this.WaterSource.Text = "Water Source";
-            this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.WaterSourceButton_Click);
+            this.HouseRB.AccessibleName = "HouseRB";
+            this.HouseRB.AutoSize = true;
+            this.HouseRB.Location = new System.Drawing.Point(66, 199);
+            this.HouseRB.Name = "HouseRB";
+            this.HouseRB.Size = new System.Drawing.Size(69, 21);
+            this.HouseRB.TabIndex = 4;
+            this.HouseRB.TabStop = true;
+            this.HouseRB.Text = "House";
+            this.HouseRB.UseVisualStyleBackColor = true;
+            this.HouseRB.CheckedChanged += new System.EventHandler(this.HouseRB_CheckedChanged);
             // 
-            // House
+            // TreeRB
             // 
-            this.House.AccessibleName = "House";
-            this.House.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.House.Location = new System.Drawing.Point(136, 208);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(89, 28);
-            this.House.TabIndex = 0;
-            this.House.Text = "House";
-            this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.HouseButton_Click);
+            this.TreeRB.AccessibleName = "TreeRB";
+            this.TreeRB.AutoSize = true;
+            this.TreeRB.Location = new System.Drawing.Point(66, 235);
+            this.TreeRB.Name = "TreeRB";
+            this.TreeRB.Size = new System.Drawing.Size(61, 21);
+            this.TreeRB.TabIndex = 4;
+            this.TreeRB.TabStop = true;
+            this.TreeRB.Text = "Tree";
+            this.TreeRB.UseVisualStyleBackColor = true;
+            this.TreeRB.CheckedChanged += new System.EventHandler(this.TreeRB_CheckedChanged);
             // 
-            // Tree
+            // WaterSourceRB
             // 
-            this.Tree.AccessibleName = "Tree";
-            this.Tree.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Tree.Location = new System.Drawing.Point(31, 208);
-            this.Tree.Name = "Tree";
-            this.Tree.Size = new System.Drawing.Size(89, 28);
-            this.Tree.TabIndex = 0;
-            this.Tree.Text = "Tree";
-            this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.TreeButton_Click);
+            this.WaterSourceRB.AccessibleName = "WaterSourceRB";
+            this.WaterSourceRB.AutoSize = true;
+            this.WaterSourceRB.Location = new System.Drawing.Point(66, 273);
+            this.WaterSourceRB.Name = "WaterSourceRB";
+            this.WaterSourceRB.Size = new System.Drawing.Size(125, 21);
+            this.WaterSourceRB.TabIndex = 4;
+            this.WaterSourceRB.TabStop = true;
+            this.WaterSourceRB.Text = "Water Source";
+            this.WaterSourceRB.UseVisualStyleBackColor = true;
+            this.WaterSourceRB.CheckedChanged += new System.EventHandler(this.WaterSourceRB_CheckedChanged);
             // 
             // VillageWindow
             // 
@@ -207,14 +212,14 @@
 
         private System.Windows.Forms.Panel VillageDrawing;
         private System.Windows.Forms.Panel MenuBar;
-        private System.Windows.Forms.Button House;
-        private System.Windows.Forms.Button WaterSource;
-        private System.Windows.Forms.Button Tree;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Label GameLabel;
         private System.Windows.Forms.TextBox VillageText;
         private System.Windows.Forms.ListBox NationList;
+        private System.Windows.Forms.RadioButton WaterSourceRB;
+        private System.Windows.Forms.RadioButton TreeRB;
+        private System.Windows.Forms.RadioButton HouseRB;
     }
 }

@@ -25,17 +25,17 @@ namespace Age_of_Villagers
 
         }
 
-        private void HouseButton_Click(object sender, EventArgs e)
+        private void HouseRB_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void TreeButton_Click(object sender, EventArgs e)
+        private void TreeRB_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void WaterSourceButton_Click(object sender, EventArgs e)
+        private void WaterSourceRB_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -61,5 +61,15 @@ namespace Age_of_Villagers
         }
 
 
+
+        private void VillageText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
