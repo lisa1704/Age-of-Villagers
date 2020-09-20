@@ -94,14 +94,18 @@ namespace AgeOfVillagers
             {
                 manager.getNation().GetHouse(_location).draw(g,pen);
                 
+                Housepoints.Add(_location);
+                
             }
             else if (Treeradiobtn.Checked)
             {
                 manager.getNation().GetTrees(_location).draw(g,pen);
+                Treepoints.Add(_location);
             }
             else if (WaterRadiobtn.Checked)
             {
                 manager.getNation().GetWaterSources(_location).draw(g, pen);
+                Waterpoints.Add(_location);
             } 
 
             else
