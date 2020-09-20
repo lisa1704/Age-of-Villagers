@@ -26,7 +26,7 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
 
         public Color BackgroundColor()
         {
-            throw new NotImplementedException();
+            return Color.Green;
         }
     }
 }

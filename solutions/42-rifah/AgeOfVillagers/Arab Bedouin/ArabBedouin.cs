@@ -9,7 +9,8 @@ namespace AgeOfVillagers.Arab_Bedouin
     {
         public Color BackgroundColor()
         {
-            throw new NotImplementedException();
+
+            return Color.GreenYellow;
         }
 
         public void DrawHouse(Graphics g, Point point)

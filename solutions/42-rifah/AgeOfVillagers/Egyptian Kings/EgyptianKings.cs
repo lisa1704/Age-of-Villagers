@@ -9,7 +9,7 @@ namespace AgeOfVillagers.Egyptian_Kings
     {
         public Color BackgroundColor()
         {
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
 
         public void DrawHouse(Graphics g, Point point)

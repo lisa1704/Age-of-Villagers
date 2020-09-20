@@ -10,7 +10,7 @@ namespace AgeOfVillagers.Inuit_Hunters
     {
         public Color BackgroundColor()
         {
-            throw new NotImplementedException();
+            return Color.White;
         }
 
         public void DrawHouse(Graphics g, Point point)
