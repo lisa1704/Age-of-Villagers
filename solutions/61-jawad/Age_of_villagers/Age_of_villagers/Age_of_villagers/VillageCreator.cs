@@ -19,6 +19,10 @@ namespace Age_of_villagers
         public Graphics g;
         public Pen p;
 
+        List<Point> HousePoints = new List<Point>();
+        List<Point> TreePoints = new List<Point>();
+        List<Point> WaterPoints = new List<Point>();
+
 
         public VillageCreator()
         {
