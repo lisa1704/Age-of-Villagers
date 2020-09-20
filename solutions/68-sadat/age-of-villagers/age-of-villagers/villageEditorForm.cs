@@ -60,7 +60,7 @@ namespace age_of_villagers
 
         private void newVillageButton_Click(object sender, EventArgs e)
         {
-
+            VillageCanvas.Invalidate();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
