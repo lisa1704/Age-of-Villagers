@@ -28,6 +28,13 @@ namespace WindowsFormsApp1
         {
             //MessageBox.Show("Save Village");
 
+            /*GetVillageState();
+
+            SaveVillage saveVillage = new SaveVillage(village);
+            saveVillage.ExecuteAction();
+            //MessagBox Show 
+            MessageBox.Show(VillageNameBox.Text + " Village saved");*/
+
             /*SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Text Files(*.txt)|*.txt|All Files (*.*)|*.*";
             if (save.ShowDialog()==DialogResult.OK)
@@ -94,30 +101,6 @@ namespace WindowsFormsApp1
 
             var nationManager = new NationManager(nation, new NationFactory(g));
 
-            if (nation == "Bangladeshi Farmers")
-            {
-                panel1.BackColor = Color.White;
-                BackColor = Color.Green;
-            }
-            
-            else if (nation == "Egypt Kings")
-            {
-                panel1.BackColor = Color.White;
-                BackColor = Color.Yellow;
-            }
-
-            else if (nation == "Inuit Hunters")
-            {
-                BackColor = Color.White;
-            }
-
-            else if (nation == "Arab Bedouin")
-            {
-                panel1.BackColor = Color.White;
-                BackColor = Color.YellowGreen;
-
-            }
-
             if (radioButton1.Checked)
             {
                 nationManager.DrawHouse(e);
@@ -136,6 +119,34 @@ namespace WindowsFormsApp1
         {
              //x = e.X;
              //y = e.Y;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            if (nation == "Bangladeshi Farmers")
+            {
+                panel1.BackColor = Color.White;
+                BackColor = Color.Green;
+            }
+
+            else if (nation == "Egypt Kings")
+            {
+                panel1.BackColor = Color.White;
+                BackColor = Color.Yellow;
+            }
+
+            else if (nation == "Inuit Hunters")
+            {
+                BackColor = Color.White;
+            }
+
+            else if (nation == "Arab Bedouin")
+            {
+                panel1.BackColor = Color.White;
+                BackColor = Color.YellowGreen;
+
+            }
         }
     }
 }

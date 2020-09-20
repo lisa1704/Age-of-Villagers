@@ -31,8 +31,6 @@ namespace WindowsFormsApp1
         {
             BangladeshiFarmersWaterSource bdw = new BangladeshiFarmersWaterSource(g);
             bdw.Draw(e);
-        }
-
-        
+        }       
     }
 }
