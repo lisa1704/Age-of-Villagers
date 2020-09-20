@@ -1,9 +1,10 @@
 ﻿namespace ageOfVillagers
 {
-    internal class House : Village
+    internal abstract class House : Village
     {
         int Xaxis = 16;
-        int Yaxis = 24;
+        int Yaxis = 16;
+        public abstract void CreateHouse();
         public void Draw(int x, int y)
         {
             //return "Drwaing a house on (" + x + "," + y + ").";

@@ -1,9 +1,10 @@
 ﻿namespace ageOfVillagers
 {
-    internal class Water: Village
+    internal abstract class Water
     {
         //int Xaxis = nationName.waterXaxis();
         //int Yaxis = nationName.waterYaxis();
+        public abstract void CreateWater();
         public void Draw(int x, int y)
         {
             //return "Drwaing a water on (" + x + "," + y + ").";
