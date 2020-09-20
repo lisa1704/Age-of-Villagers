@@ -58,7 +58,7 @@ namespace AgeOfVillagers
         public static string ARAB_NATION = "ARAB BEDOUIN";
         public static string EGYPT_NATION = "EGYPTIAN KING";
         public static string INUIT_NATION = "Inuit Hunters";
-        public static string DEFAULT_NATION = "Default Nation";
+        public static string DEFAULT_NATION = "Nation";
 
         //Shape hints
         public static string BDTREE_HINT = "Bangladeshi_Farmer" + ",TREE";
@@ -69,6 +69,7 @@ namespace AgeOfVillagers
         public static string EGYPTIAN_HOUSE_HINT = "EGYPTIAN KING" + ",HOUSE";
         public static string EGYPTIAN_TREE_HINT = "EGYPTIAN KING" + ",TREE";
         public static string EGYPTIAN_WATER_SOURCE_HINT = "EGYPTIAN KING" + ",WATER SOURCE";
+        public static string INUIT_HOUSE_HINT = "Inuit Hunters" + ",HOUSE";
 
 
 

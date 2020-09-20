@@ -45,6 +45,11 @@ namespace AgeOfVillagers
                 return new EgyptianWaterSourceShape(graphics, pen, startingPoint, Constants.Egyptian_WATER_SOURCE_HEIGHT, Constants.Egyptian_WATER_SOURCE_WIDTH);
             }
 
+            else if (hint.Equals(Constants.INUIT_HOUSE_HINT))
+            {
+                return new InuitHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+            }
+
             return null;
         }
 
