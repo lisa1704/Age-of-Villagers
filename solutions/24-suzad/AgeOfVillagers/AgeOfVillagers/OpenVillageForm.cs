@@ -23,15 +23,6 @@ namespace AgeOfVillagers
             this.villageSave = villageSave;
         }
 
-        public string getFilePath()
-        {
-            return filePath;
-        }
-        public string getNationName()
-        {
-            return nationName;
-        }
-
         private void btnOpen_Click(object sender, EventArgs e)
         {
             nationName = cmboChooseNation.SelectedItem.ToString();
