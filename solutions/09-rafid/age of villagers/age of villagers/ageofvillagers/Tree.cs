@@ -6,6 +6,8 @@ namespace ageofvillagers
         int Xaxis = 16;
         int Yaxis = 24;
 
+
+
         public abstract void CreateTree();
     }
 }
