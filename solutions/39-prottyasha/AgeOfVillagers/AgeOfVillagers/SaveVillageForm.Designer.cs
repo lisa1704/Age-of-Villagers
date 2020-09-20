@@ -60,6 +60,7 @@
             this.save_villName.TabIndex = 2;
             this.save_villName.Text = "Save";
             this.save_villName.UseVisualStyleBackColor = true;
+            this.save_villName.Click += new System.EventHandler(this.save_villName_Click);
             // 
             // extension_label
             // 
