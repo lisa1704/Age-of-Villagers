@@ -138,9 +138,11 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Water Source";
             this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // canvas
             // 
+            this.canvas.BackColor = System.Drawing.Color.GhostWhite;
             this.canvas.Location = new System.Drawing.Point(24, 33);
             this.canvas.Name = "canvas";
             this.canvas.Size = new System.Drawing.Size(600, 400);
