@@ -9,15 +9,13 @@ namespace AOV
 {
     class Rectangle : CompoundShape
     {
-        private Point x1;
         private Point x2;
-        private Point x3;
         private Point x4;
 
         public Rectangle(Point x1, Point x3)
         {
-            this.x2 = new Point(x3.X, x1.Y);
-            this.x4 = new Point(x1.X, x3.Y);
+            x2 = new Point(x3.X, x1.Y);
+            x4 = new Point(x1.X, x3.Y);
 
             addShape(new DrawLine(x1, x4));
             addShape(new DrawLine(x1, x2));
