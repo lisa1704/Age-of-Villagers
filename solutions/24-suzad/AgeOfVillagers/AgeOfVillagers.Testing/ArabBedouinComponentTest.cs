@@ -25,5 +25,6 @@ namespace AgeOfVillagers.Testing
             Point actual = obj.getPoint();
             Assert.Equal(actual, p);
         }
+
     }
 }
