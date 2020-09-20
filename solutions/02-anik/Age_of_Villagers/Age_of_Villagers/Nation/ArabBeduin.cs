@@ -7,7 +7,7 @@ namespace Age_of_Villagers.Nation
 {
     class ArabBeduin:INation 
     {
-        private Color colorofbackground = Color.Green;
+        private Color colorofbackground = Color.Yellow;
         public Color BgColor()
         {
             return colorofbackground;
