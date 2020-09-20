@@ -34,13 +34,13 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            NullVillageComponent null_object = new NullVillageComponent(new Point(_point.X, _point.Y));
+            NullVillageComponent null_object = new NullVillageComponent(_point);
             null_object.Paint(graphics);
         }
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            NullVillageComponent null_object = new NullVillageComponent(new Point(_point.X, _point.Y));
+            NullVillageComponent null_object = new NullVillageComponent(_point);
             null_object.Paint(graphics);
         }
 

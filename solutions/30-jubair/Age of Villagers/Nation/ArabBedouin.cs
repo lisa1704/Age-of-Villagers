@@ -33,7 +33,6 @@ namespace Age_of_Villagers.Nation
             arab_house.Paint(graphics);
             //Point baseLeft , Point baseMedium , Point topOne, Point baseRight , Point topTwo
             
-
         }
 
         public void GetTree(Graphics graphics, Point _point)
@@ -44,7 +43,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterResource(Graphics graphics, Point _point)
         {
-            NullVillageComponent null_object = new NullVillageComponent(new Point(_point.X, _point.Y));
+            NullVillageComponent null_object = new NullVillageComponent(_point);
             null_object.Paint(graphics);
         }
 

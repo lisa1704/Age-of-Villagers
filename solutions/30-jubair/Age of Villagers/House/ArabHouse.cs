@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers.House
 {
-    class ArabHouse : CompositeShape
+    public class ArabHouse : CompositeShape
     {
         public ArabHouse(Point topOne, Point baseLeft , Point baseMedium, Point topTwo, Point baseRight)
            

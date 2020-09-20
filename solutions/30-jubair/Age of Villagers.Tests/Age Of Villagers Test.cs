@@ -19,17 +19,6 @@ namespace Age_of_Villagers.Tests
 
         [Fact]
 
-        public void EgyptianKingTerrainColor()
-        {
-            string name = "Egyptian Kings";
-            INation nation = new EgyptianKings(name);
-            Color expected = Color.Yellow;
-            Color actual = nation.getTerrainColor();
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-
         public void ArabBedouinTerrainColor()
         {
             string name = "Arab Bedouin";

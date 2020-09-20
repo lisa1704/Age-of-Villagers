@@ -7,11 +7,16 @@ namespace Age_of_Villagers.Shape
 {
     public class NullVillageComponent : CompositeShape
     {
-        private readonly Point _point;
+        Point point = new Point();
 
         public NullVillageComponent(Point point)
         {
-            _point = point;
+            this.point= point;
+        }
+
+        public Point DrawNothing()
+        {
+            return point;
         }
 
 
