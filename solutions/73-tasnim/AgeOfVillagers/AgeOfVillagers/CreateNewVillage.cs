@@ -57,6 +57,8 @@ namespace AgeOfVillagers
         private void New_Village_Click(object sender, EventArgs e)
         {
             Houses.Clear();
+            Trees.Clear();
+            WaterSourses.Clear();
             Draw_Panel.Refresh();
             Village_Name.Text = "Enter Village Name";
 
@@ -75,14 +77,17 @@ namespace AgeOfVillagers
             foreach (Point point in Houses)
             {
                 nationType = Select_Nation.Text;
-                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
                 Inputnation.NationType(nationType).Draw_House(g, point);
             }
             foreach (Point point in Trees)
             {
                 nationType = Select_Nation.Text;
-                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
                 Inputnation.NationType(nationType).Draw_Tree(g, point);
+            }
+            foreach (Point point in WaterSourses)
+            {
+                nationType = Select_Nation.Text;
+                Inputnation.NationType(nationType).Draw_WaterSource(g, point);
             }
 
         }
@@ -98,6 +103,10 @@ namespace AgeOfVillagers
             if (clickedObject == "Tree")
             {
                 Trees.Add(e.Location);
+            }
+            if (clickedObject == "Water Sourse")
+            {
+                WaterSourses.Add(e.Location);
             }
             Draw_Panel.Invalidate();
 
