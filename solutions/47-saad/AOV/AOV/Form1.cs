@@ -28,20 +28,29 @@ namespace AOV
 
         private void Tree_CheckedChanged(object sender, EventArgs e)
         {
+            if (Tree.Checked == true)
+            {
                 itemSelected = "tree";
                 Console.WriteLine(itemSelected);
+            }            
         }
 
         private void House_CheckedChanged(object sender, EventArgs e)
         {
+            if (House.Checked == true)
+            {
                 itemSelected = "house";
                 Console.WriteLine(itemSelected);
+            }
         }
 
         private void WaterSource_CheckedChanged(object sender, EventArgs e)
         {
+            if (WaterSource.Checked == true)
+            {
                 itemSelected = "water source";
                 Console.WriteLine(itemSelected);
+            }
         }
     }
 }
