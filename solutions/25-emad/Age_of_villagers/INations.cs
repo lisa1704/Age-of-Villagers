@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Age_of_villagers.Nations
+namespace Age_of_villagers
 {
-    interface INations
+    public interface INations
     {
         string getName();
          
