@@ -9,7 +9,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         ShowWindow controlPanel = new ShowWindow();
+
         controlPanel.start(primaryStage);
     }
 }

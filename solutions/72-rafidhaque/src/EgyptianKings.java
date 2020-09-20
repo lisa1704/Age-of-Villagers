@@ -18,4 +18,20 @@ public class EgyptianKings implements INation {
         tree = new EgyptianKingsTree(drawSpace);
         water = new EgyptianKingsWater(drawSpace, 12, 12);
     }
+
+    public String getNationName() {
+        return nationName;
+    }
+
+    public DrawHouse getHouse() {
+        return house;
+    }
+
+    public DrawTree getTree() {
+        return tree;
+    }
+
+    public DrawWater getWater() {
+        return water;
+    }
 }

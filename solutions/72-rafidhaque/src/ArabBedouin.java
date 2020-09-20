@@ -19,4 +19,20 @@ public class ArabBedouin implements INation {
         tree = new ArabBedouinTree(drawSpace);
         water = new NoWater(drawSpace, 0, 0);
     }
+
+    public String getNationName() {
+        return nationName;
+    }
+
+    public DrawHouse getHouse() {
+        return house;
+    }
+
+    public DrawTree getTree() {
+        return tree;
+    }
+
+    public DrawWater getWater() {
+        return water;
+    }
 }

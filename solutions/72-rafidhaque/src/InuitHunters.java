@@ -18,5 +18,21 @@ public class InuitHunters implements INation {
         this.tree = new NoTree(drawSpace);
         this.water = new NoWater(drawSpace, 0, 0);
     }
+
+    public String getNationName() {
+        return nationName;
+    }
+
+    public DrawHouse getHouse() {
+        return house;
+    }
+
+    public DrawTree getTree() {
+        return tree;
+    }
+
+    public DrawWater getWater() {
+        return water;
+    }
 }
 

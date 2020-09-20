@@ -11,10 +11,14 @@ import java.util.ArrayList;
 
 public class ShowWindow extends Application {
     public Stage window;
+//    public ShowWindow(INation nation) {
+//        this.nation = nation;
+//    }
 
     public MouseClickManager mouseClickManager = new MouseClickManager();
 
     Group drawSpace = new Group();
+    INation nation = new BangladeshiFarmers(drawSpace);
 
     StateOfComponent stateOfComponent = null;
     ArrayList<StateOfComponent> stateOfComponents = new ArrayList<StateOfComponent>();
@@ -24,10 +28,10 @@ public class ShowWindow extends Application {
     EgyptianKings egyptianKings = new EgyptianKings(drawSpace);
     ArabBedouin arabBedouin = new ArabBedouin(drawSpace);
 
-    DrawHouse house = arabBedouin.house;
-    DrawTree tree = arabBedouin.tree;
-    DrawWater water = arabBedouin.water;
-    public GridOfControls gridOfControls = new GridOfControls(house, tree, water, arabBedouin.nationName);
+    DrawHouse house = this.nation.getHouse();
+    DrawTree tree = this.nation.getTree();
+    DrawWater water = this.nation.getWater();
+    public GridOfControls gridOfControls = new GridOfControls(house, tree, water, this.nation.getNationName());
 
     public void setDrawSpace(Group drawSpace) {
         this.drawSpace = drawSpace;

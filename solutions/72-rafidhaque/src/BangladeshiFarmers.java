@@ -19,5 +19,21 @@ public class BangladeshiFarmers implements INation {
         tree = new BangladeshiFarmersTree(drawSpace);
         water = new BangladeshiFarmersWater(drawSpace, 24, 16);
     }
+
+    public String getNationName() {
+        return nationName;
+    }
+
+    public DrawHouse getHouse() {
+        return house;
+    }
+
+    public DrawTree getTree() {
+        return tree;
+    }
+
+    public DrawWater getWater() {
+        return water;
+    }
 }
 
