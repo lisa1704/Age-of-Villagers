@@ -34,7 +34,8 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            Egyptian_Tree egyptian_tree = new Egyptian_Tree(new Point(_point.X, _point.Y), new Point(_point.X - 3, _point.Y - 8), new Point(_point.X + 3, _point.Y - 8), new Point(_point.X - 5, _point.Y - 16), new Point(_point.X + 4, _point.Y - 17), new Point(_point.X - 8, _point.Y - 14), new Point(_point.X - 1, _point.Y - 17), new Point(_point.X + 1, _point.Y - 16), new Point(_point.X + 8, _point.Y - 16));
+            egyptian_tree.Paint(graphics);
         }
 
         public void GetWaterSource(Graphics graphics, Point _point)
