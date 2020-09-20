@@ -13,8 +13,8 @@ namespace empty_project
             Pen pen = new Pen(Color.Black);
             Graphics graphics = panel.CreateGraphics();
 
-            graphics.DrawEllipse(pen, axis.X, axis.Y, 20, 20);
-            graphics.DrawEllipse(pen, axis.X + 8, axis.Y + 20, 4, 10);
+            graphics.DrawEllipse(pen, axis.X, axis.Y, 16, 20);
+            graphics.DrawRectangle(pen, axis.X + 7, axis.Y + 14, 2, 16);
         }
     }
 }
