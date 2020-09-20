@@ -106,25 +106,28 @@ namespace AgeOfVillagers
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
         {
             chosen_nation = Nations.SelectedItem.ToString();
+            BackColorSelect();
         }
-        /*private void ElementSelect()
+        
+        private void BackColorSelect()
         {
-            if (House.Checked == true && Nations.SelectedIndex > -1)
+            if (chosen_nation == "Bangladeshi Farmers")
             {
-                text = Nations.SelectedItem + " " + "House";
-                brush = new SolidBrush(Color.Brown);
+                DrawingPanel.BackColor = Color.Green;
             }
-            else if (Tree.Checked == true && Nations.SelectedIndex > -1)
+            if (chosen_nation == "Arab Bedouins")
             {
-                text = Nations.SelectedItem + " " + "Tree";
-                brush = new SolidBrush(Color.Green);
+                DrawingPanel.BackColor = Color.LightGoldenrodYellow;
             }
-            else if (WaterSource.Checked == true && Nations.SelectedIndex > -1)
+            if (chosen_nation == "Egyptian Kings")
             {
-                text = Nations.SelectedItem + " " + "Watersrc";
-                brush = new SolidBrush(Color.Blue);
+                DrawingPanel.BackColor = Color.LightYellow;
             }
-        }*/
+            if (chosen_nation == "Inuit Hunters")
+            {
+                DrawingPanel.BackColor = Color.White;
+            }
+        }
 
         private void Tree_CheckedChanged(object sender, EventArgs e)
         {

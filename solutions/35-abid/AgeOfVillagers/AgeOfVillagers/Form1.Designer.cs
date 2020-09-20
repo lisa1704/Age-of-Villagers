@@ -154,7 +154,7 @@
             this.Nations.FormattingEnabled = true;
             this.Nations.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
-            "Arab Bedouin",
+            "Arab Bedouins",
             "Egyptian Kings",
             "Inuit Hunters"});
             this.Nations.Location = new System.Drawing.Point(655, 138);
