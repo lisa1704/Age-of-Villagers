@@ -13,6 +13,8 @@ namespace empty_project
             base.house = new BangladeshiFarmersHouse();
             base.tree = new BangladeshiFarmersTree();
             base.waterSource = new BangladeshiFarmersWaterSource();
+            base.color = System.Drawing.Color.Green;
+            colorBackground();
         }
     }
 }
