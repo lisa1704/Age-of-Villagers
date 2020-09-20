@@ -11,6 +11,7 @@ namespace AgeOfVillagers
 {
     public class BangladeshiHouse : CompositeShape
     {
+        public string testBdHouse;
         public BangladeshiHouse(Point MPt)
         {            
             Point tpt1 = new Point(MPt.X + 16, MPt.Y );
@@ -19,12 +20,13 @@ namespace AgeOfVillagers
             Point rpt2 = new Point(MPt.X , MPt.Y + 8);
 
             AddComp(new Triangle(tpt1, tpt2, MPt));
-            AddComp(new ShapeRectangle(rpt1, rpt2));           
+            AddComp(new ShapeRectangle(rpt1, rpt2));
+            testBdHouse = "BDHouse Constructed";
         }
-      /*  public string CheckHouse()
+        public string CheckHouse()
         {
-            return "BD House";
-        }*/
+            return testBdHouse;
+        }
     }
     class ArabBedouinHouse : CompositeShape
     {

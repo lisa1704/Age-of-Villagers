@@ -64,5 +64,6 @@ namespace AgeOfVillageTest
 
             Assert.AreEqual(NullColor, testobjest);
         }
+      
     }
 }
