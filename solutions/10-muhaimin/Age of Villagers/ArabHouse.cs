@@ -16,14 +16,14 @@ namespace Age_of_Villagers
             Graphics elem = drawingSpace.CreateGraphics();
 
             //draw triangle
-            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X - 4, axes.Y - 8));
-            elem.DrawLine(pen, new PointF(axes.X - 4, axes.Y - 8), new PointF(axes.X - 8, axes.Y));
-            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X - 8, axes.Y));
+            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X - 5, axes.Y - 10));
+            elem.DrawLine(pen, new PointF(axes.X - 5, axes.Y - 10), new PointF(axes.X - 10, axes.Y));
+            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X - 10, axes.Y));
 
             //draw square
-            elem.DrawLine(pen, new PointF(axes.X - 4, axes.Y - 8), new PointF(axes.X - 8, axes.Y - 8));
-            elem.DrawLine(pen, new PointF(axes.X - 8, axes.Y), new PointF(axes.X - 12, axes.Y));
-            elem.DrawLine(pen, new PointF(axes.X - 8, axes.Y - 8), new PointF(axes.X - 12, axes.Y));
+            elem.DrawLine(pen, new PointF(axes.X - 5, axes.Y - 10), new PointF(axes.X - 10, axes.Y - 10));
+            elem.DrawLine(pen, new PointF(axes.X - 10, axes.Y), new PointF(axes.X - 15, axes.Y));
+            elem.DrawLine(pen, new PointF(axes.X - 10, axes.Y - 10), new PointF(axes.X - 15, axes.Y));
         }
     }
 }
