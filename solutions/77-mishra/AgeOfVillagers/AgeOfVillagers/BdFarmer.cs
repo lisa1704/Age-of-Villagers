@@ -32,9 +32,10 @@ namespace AgeOfVillagers
             bdWater.draw(p, drawingBoard);
         }
 
-        public void PaintTerrain(Point p, Panel drawingBoard)
+        public Color PaintTerrain(Point p, Panel drawingBoard)
         {
-            drawingBoard.BackColor = System.Drawing.Color.Green;
+            return drawingBoard.BackColor = System.Drawing.Color.Green;
+            
         }
     }
 }

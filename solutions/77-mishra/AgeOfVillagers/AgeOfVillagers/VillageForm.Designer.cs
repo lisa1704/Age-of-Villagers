@@ -82,8 +82,8 @@
             // 
             this.Nation.FormattingEnabled = true;
             this.Nation.Items.AddRange(new object[] {
-            "Arab Beduins",
             "Bangladeshi Farmers",
+            "Arab Beduins",
             "Egyptian King",
             "Inuit Hunter"});
             this.Nation.Location = new System.Drawing.Point(30, 93);

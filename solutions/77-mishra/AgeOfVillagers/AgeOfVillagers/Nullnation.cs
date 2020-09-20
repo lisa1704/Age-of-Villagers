@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class InuitHunter : INation
+    class Nullnation : INation
     {
         public void DrawHouse(Point p, Panel drawingBoard)
         {
@@ -25,7 +25,8 @@ namespace AgeOfVillagers
 
         public Color PaintTerrain(Point p, Panel drawingBoard)
         {
-            return drawingBoard.BackColor = System.Drawing.Color.White;
+            throw new NotImplementedException();
+            
         }
     }
 }

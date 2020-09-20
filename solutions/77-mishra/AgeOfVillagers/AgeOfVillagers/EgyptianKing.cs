@@ -30,9 +30,9 @@ namespace AgeOfVillagers
             egKingWater.draw(p, drawingBoard);
         }
 
-        public void PaintTerrain(Point p, Panel drawingBoard)
+        public Color PaintTerrain(Point p, Panel drawingBoard)
         {
-            drawingBoard.BackColor = System.Drawing.Color.Yellow;
+            return drawingBoard.BackColor = System.Drawing.Color.Yellow;
         }
     }
 }

@@ -16,13 +16,14 @@ namespace AgeOfVillagers
         private int x;
         private int y;
 
-        //public IShape arabtree;
+        public string nationtype;
+        //Nations nations = new Nations(nationtype);
+        private Point p;
 
-        //public IShape arabhouse;
-
-        public INation arabBeduin = new ArabBeduin();
+        /*public INation arabBeduin = new ArabBeduin();
         public INation bdfarmer = new BdFarmer();
-        public INation egKing = new EgyptianKing();
+        public INation egKing = new EgyptianKing();*/
+
 
         public VillageForm()
         {
@@ -37,31 +38,34 @@ namespace AgeOfVillagers
             x = p.X;
             y = p.Y;
 
-            
+            Nations nations = new Nations(nationtype);
 
             if(radioButton1.Checked == true)
             {
-                //arabtree.draw(p, drawingBoard);
-                arabBeduin.DrawTree(p, drawingBoard);
+                nations.GetNation().DrawTree(p, drawingBoard);
+
+                /*arabBeduin.DrawTree(p, drawingBoard);
                 bdfarmer.DrawTree(p, drawingBoard);
-                egKing.DrawTree(p, drawingBoard);
+                egKing.DrawTree(p, drawingBoard);*/
                 
                 
             }
 
             if(radioButton3.Checked == true)
             {
-                //arabhouse.draw(p, drawingBoard);
-                arabBeduin.DrawHouse(p, drawingBoard);
+
+                nations.GetNation().DrawHouse(p, drawingBoard);
+                /*arabBeduin.DrawHouse(p, drawingBoard);
                 
                 bdfarmer.DrawHouse(p, drawingBoard);
-                egKing.DrawHouse(p, drawingBoard);
+                egKing.DrawHouse(p, drawingBoard);*/
 
             }
 
             if(radioButton2.Checked == true)
             {
-                bdfarmer.DrawWaterSource(p, drawingBoard);
+                nations.GetNation().DrawWaterSource(p, drawingBoard);
+                //bdfarmer.DrawWaterSource(p, drawingBoard);
             }
 
           
@@ -112,7 +116,10 @@ namespace AgeOfVillagers
 
         private void Nation_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Nations nations = new Nations(nationtype);
+            nationtype = Nation.Text;
+            //drawingBoard.BackColor = nations.GetNation().PaintTerrain(p, drawingBoard);
+            
         }
     }
 }
