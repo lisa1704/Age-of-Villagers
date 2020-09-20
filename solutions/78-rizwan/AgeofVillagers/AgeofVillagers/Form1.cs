@@ -65,7 +65,7 @@ namespace AgeofVillagers
                     bf.createHouse(e);
                     //Rectangle shape = new Rectangle(x, y, h, w);
                     //g.DrawRectangle(p, shape);
-                    
+                    //refactor
                 }
                 else if (radioButton2.Checked == true)
                 {
