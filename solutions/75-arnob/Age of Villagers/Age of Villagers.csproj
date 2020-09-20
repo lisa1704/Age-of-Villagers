@@ -51,6 +51,7 @@
     <Compile Include="Arab bedouin items\Arab_Tree.cs" />
     <Compile Include="Nation\Arab_Bedouin.cs" />
     <Compile Include="Nation_Factory_Creator\Arab_Creator.cs" />
+    <Compile Include="Null_Item.cs" />
     <Compile Include="Shape\ArcShape.cs" />
     <Compile Include="Bangladeshi Farmer Items\BDfarmer_Tree.cs" />
     <Compile Include="Bangladeshi Farmer Items\BDfarmer_WaterSource.cs" />
