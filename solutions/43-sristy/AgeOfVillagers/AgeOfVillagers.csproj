@@ -99,7 +99,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Savevillage.cs" />
-    <Compile Include="Size.cs" />
+    <Compile Include="Sizeclass\BDWatersourcesize.cs" />
+    <Compile Include="Sizeclass\EGPTWatersourcesize.cs" />
+    <Compile Include="Sizeclass\Housesize.cs" />
+    <Compile Include="Sizeclass\Size.cs" />
+    <Compile Include="Sizeclass\Treesize.cs" />
     <Compile Include="village.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
