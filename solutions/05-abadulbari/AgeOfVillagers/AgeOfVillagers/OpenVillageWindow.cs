@@ -74,7 +74,10 @@ namespace AgeOfVillagers
                 new VillagerManager(villageWin.village).loadVillage(villageWin.g, villageWin.p);
                 this.Dispose();
             }
-            DialogResult dialog = MessageBox.Show("Choose Village file !");
+            else 
+            { 
+                DialogResult dialog = MessageBox.Show("Choose Village file !");
+            }
         }
 
         private void villageLabel_Click(object sender, EventArgs e)

@@ -101,6 +101,7 @@
             this.nationComBox.Name = "nationComBox";
             this.nationComBox.Size = new System.Drawing.Size(236, 33);
             this.nationComBox.TabIndex = 3;
+            this.nationComBox.SelectedIndex = 0;
             this.nationComBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // OpenVillageWindow

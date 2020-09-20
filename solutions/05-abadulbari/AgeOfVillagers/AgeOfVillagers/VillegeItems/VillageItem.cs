@@ -18,7 +18,13 @@ namespace AgeOfVillagers.VillegeItems
         {
             items.Add(shape);
         }
-        public abstract void draw(Graphics g, Pen p);
+        public void draw(Graphics g, Pen p)
+        {
+            foreach (IShape item in items)
+            {
+                item.draw(g, p);
+            }
+        }
         
     }
 }
