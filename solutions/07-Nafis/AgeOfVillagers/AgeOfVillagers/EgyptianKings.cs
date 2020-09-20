@@ -11,8 +11,10 @@ namespace AgeOfVillagers
         
         public void DrawHouse(int x, int y, Graphics g)
         {
-            Point[] points = { new Point(x, y), new Point(x + 15, y + 6), new Point(x + 20, y - 3), new Point(x + 9, y - 12) };
-            g.DrawPolygon(pen, points);
+            g.DrawLine(pen, new Point(x, y), new Point(x + 15, y + 6));
+            g.DrawLine(pen, new Point(x, y), new Point(x + 9, y - 12));
+            g.DrawLine(pen, new Point(x + 15, y + 6), new Point(x + 20, y - 3));
+            g.DrawLine(pen, new Point(x + 9, y - 12), new Point(x + 20, y - 3));
             g.DrawLine(pen, new Point(x + 14, y + 5), new Point(x + 9, y - 12));
         }
 
@@ -30,7 +32,7 @@ namespace AgeOfVillagers
 
         public void DrawWater(int x, int y, Graphics g)
         {
-            g.DrawEllipse(pen, x - 6, y - 6, 12, 12);
+            g.DrawArc(pen, x - 6, y - 6, 12, 12, 0, 360);
         }
     }
 }
