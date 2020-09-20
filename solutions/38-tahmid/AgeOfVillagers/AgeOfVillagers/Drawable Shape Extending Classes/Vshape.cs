@@ -34,6 +34,7 @@ namespace AgeOfVillagers.Drawable_Shape_Extending_Classes
         {
             rightLine = base.getLines(rightPoint, centerPoint, graphics, pen);
             leftLine = base.getLines(leftPoint, centerPoint, graphics, pen);
+            drawShape();
         }
     }
 }
