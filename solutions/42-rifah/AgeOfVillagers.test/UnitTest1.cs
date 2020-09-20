@@ -3,7 +3,7 @@ using Xunit;
 using AgeOfVillagers;
 using System.Drawing;
 
-namespace AgeOfVillagers.test
+namespace AgeOfVillagers42.test
 {
     public class UnitTest1
     {

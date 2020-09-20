@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AgeOfVillagers;
+using System.Drawing;
 
-namespace AgeOfVillagers.test
+namespace AgeOfVillagers42.test
 {
-    class BangladeshiNationTest
+    public class BangladeshiNationTest
     {
+        Factory_Nation nationfactory = new Factory_Nation();
     }
 }
