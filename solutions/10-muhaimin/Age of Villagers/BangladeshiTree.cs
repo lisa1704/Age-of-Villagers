@@ -16,7 +16,7 @@ namespace Age_of_Villagers
             Graphics elem = drawingSpace.CreateGraphics();
 
             elem.DrawEllipse(pen, axes.X, axes.Y, 16, 16);
-            elem.DrawEllipse(pen, axes.X + 7, axes.Y + 16, 2, 8);
+            elem.DrawRectangle(pen, axes.X+7, axes.Y+10, 2, 12);
         }
     }
 }
