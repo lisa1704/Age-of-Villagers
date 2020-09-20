@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class InuinHunter : INation
+    public class InuitHunter : INation
     {
         private Color backGroundColor = Color.White;
         public void DrawHouse(Graphics g, Point p)

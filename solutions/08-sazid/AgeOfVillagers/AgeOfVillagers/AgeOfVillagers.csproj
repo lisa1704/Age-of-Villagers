@@ -67,7 +67,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="INation.cs" />
-    <Compile Include="InuinHunter.cs" />
+    <Compile Include="InuitHunter.cs" />
     <Compile Include="InuitIgloo.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="LineShape.cs" />

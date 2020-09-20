@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class ArabBeduin : INation
+    public class ArabBeduin : INation
     {
         private Color backGroundColor = Color.Orange;
         Pen pen = new Pen(Color.Black);
