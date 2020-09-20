@@ -15,5 +15,17 @@ namespace empty_project
         {
             village = villageName;
         }
+        public void insertHouse(Axis house, INation nation)
+        {
+
+        }
+        public void insertTree(Axis tree, INation nation)
+        {
+
+        }
+        public void insertWaterSource(Axis waterSource, INation nation)
+        {
+
+        }
     }
 }
