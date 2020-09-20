@@ -31,11 +31,12 @@ namespace AgeOfVillagers
         {
             return new BangladeshiHouse(p);
         }
-        IShapes draw_tree()
+        IShapes draw_tree(Point p)
         {
+            return new BangladeshiTree(p);
 
         }
-        IShapes draw_watercource()
+        IShapes draw_watercource(Point p)
         {
 
         }
