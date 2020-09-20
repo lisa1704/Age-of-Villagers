@@ -10,7 +10,7 @@ namespace Age_of_Villagers
 {
     class EgyptianHouse : IHouse
     {
-        public void draw(Axis axes, Panel drawingSpace)
+        public void drawHouse(Axis axes, Panel drawingSpace)
         {
             Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();

@@ -4,6 +4,6 @@ namespace Age_of_Villagers
 {
     internal interface IHouse
     {
-        void draw(Axis axes, Panel panel);
+        void drawHouse(Axis axes, Panel panel);
     }
 }

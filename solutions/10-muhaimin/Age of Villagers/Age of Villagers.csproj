@@ -52,6 +52,7 @@
     <Compile Include="Axis.cs" />
     <Compile Include="House.cs" />
     <Compile Include="AbstractPainter.cs" />
+    <Compile Include="ITree.cs" />
     <Compile Include="Tree.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageSerializer.cs" />
