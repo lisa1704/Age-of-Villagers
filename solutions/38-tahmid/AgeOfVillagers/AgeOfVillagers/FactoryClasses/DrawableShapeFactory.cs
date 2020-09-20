@@ -10,9 +10,9 @@ namespace AgeOfVillagers
         {
 
 
-            if (hint.Equals(Constants.OVAL_HINT))
+            if (hint.Equals(Constants.CIRCULAR_HINT))
             {
-                return new Oval(g, pen, point, height, width);
+                return new CircularShape(g, pen, point, height, width);
             }
 
 

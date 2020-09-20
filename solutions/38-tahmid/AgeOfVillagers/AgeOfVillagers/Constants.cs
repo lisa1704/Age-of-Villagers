@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         //shape hints
         public static string RECT_HINT = "Rectangle";
         public static string TRIANGLE_HINT = "Tryangle";
-        public static string OVAL_HINT = "OVAL";
+        public static string CIRCULAR_HINT = "Circular Shape";
         public static string PARALELLOGRAM_HINT = "Paralellogram";
         public static string UNEQUAL_NONAGON_HINT = "Unequal Nonago";
         public static string LINE_HINT = "Line";
@@ -44,8 +44,8 @@ namespace AgeOfVillagers
 
 
         //angle range
-        public static int OVAL_STARTING_ANG = 0;
-        public static int OVAL_ENDING_ANG = 360;
+        public static int FILL_CIRCLE_STARTING_ANGLE = 0;
+        public static int FULL_CIRCLE_ENDING_ANGle = 360;
 
         //Items
         public static string HOUSE_ITEM = ",HOUSE";

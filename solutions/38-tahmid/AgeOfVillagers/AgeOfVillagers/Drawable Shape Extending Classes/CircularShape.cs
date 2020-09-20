@@ -6,17 +6,17 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Oval : DrawableShapes
+    class CircularShape : DrawableShapes
     {
         Point startingPoint;
         Pen p;
         Graphics g;
-        int startAng=Constants.OVAL_STARTING_ANG, endAng=Constants.OVAL_ENDING_ANG;
+        int startAng=Constants.FILL_CIRCLE_STARTING_ANGLE, endAng=Constants.FULL_CIRCLE_ENDING_ANGle;
         int length, width;
         Pen pen;
         DrawableShapes arc;
 
-        public Oval(Graphics g, Pen pen, Point startingPoint, int length, int width)
+        public CircularShape(Graphics g, Pen pen, Point startingPoint, int length, int width)
         {
             this.pen = pen;
             this.length = length;
