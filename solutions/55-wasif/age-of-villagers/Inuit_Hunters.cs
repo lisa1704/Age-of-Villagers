@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace age_of_villagers
 {
-    class Inuit_Hunters
+    class Inuit_Hunters:INations
     {
     }
 }

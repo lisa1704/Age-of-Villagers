@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace age_of_villagers
 {
-    interface Interface1
+    public interface INations
     {
+
     }
 }

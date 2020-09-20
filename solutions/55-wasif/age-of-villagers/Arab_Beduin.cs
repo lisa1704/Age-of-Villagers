@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace age_of_villagers
 {
-    class Class1
+    class Arab_Beduin:INations
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace age_of_villagers
 {
-    class Egyptian_Farmers
+    class Egyptian_Kings:INations
     {
     }
 }
