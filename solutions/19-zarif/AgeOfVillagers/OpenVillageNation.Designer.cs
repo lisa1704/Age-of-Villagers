@@ -37,13 +37,13 @@
             // Opencombobox
             // 
             this.Opencombobox.FormattingEnabled = true;
-            this.Opencombobox.Location = new System.Drawing.Point(13, 54);
-            this.Opencombobox.Name = "Opencombobox";
             this.Opencombobox.Items.AddRange(new object[] {
             "Arab Bedouin",
             "Bangladeshi Farmers",
             "Egyptian Kings",
             "Inuit Hunters"});
+            this.Opencombobox.Location = new System.Drawing.Point(13, 54);
+            this.Opencombobox.Name = "Opencombobox";
             this.Opencombobox.Size = new System.Drawing.Size(164, 23);
             this.Opencombobox.TabIndex = 0;
             this.Opencombobox.SelectedIndexChanged += new System.EventHandler(this.Opencomboboc_SelectedIndexChanged);
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 148);
+            this.ClientSize = new System.Drawing.Size(459, 148);
             this.Controls.Add(this.Cancelbutton);
             this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.label1);
