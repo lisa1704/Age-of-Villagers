@@ -36,7 +36,7 @@ namespace Age_of_Villagers
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            BDfarmer_Tree bangladeshi_tree = new BDfarmer_Tree(new Point(_point.X, _point.Y), new Point(_point.X + 9, _point.Y + 20), new Point(_point.X + 15, _point.Y + 12), new Point(_point.X + 7, _point.Y + 8));
+            Age_of_Villagers.Bangladeshi_Farmer.BDfarmer_Tree bangladeshi_tree = new Age_of_Villagers.Bangladeshi_Farmer.BDfarmer_Tree(new Point(_point.X, _point.Y), new Point(_point.X + 9, _point.Y + 20), new Point(_point.X + 15, _point.Y + 12), new Point(_point.X + 7, _point.Y + 8));
             bangladeshi_tree.Paint(graphics);
         }
 
