@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class BDHouse implements IHouse {
+    boolean active=true;
 //    Canvas canvas;
 
     public BDHouse(){
@@ -25,16 +26,29 @@ public class BDHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(item.equals("house")) {
+                if(active) {
                     graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 20, 30, 200, 360, ArcType.OPEN);
                     graphicsContext.strokeText("bd house", mouseEvent.getX(), mouseEvent.getY());
                     System.out.println("bd house");
+                    active = false;
                 }
             }
         };
 
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, handler);
-        canvas.removeEventHandler(MouseEvent.MOUSE_RELEASED, handler);
+        canvas.removeEventHandler(MouseEvent.MOUSE_CLICKED, handler);
+    }
+
+    @Override
+    public void releaseCanvas() {
+
+        active = false;
+    }
+
+    @Override
+    public void getCanvas() {
+
+        active= true;
     }
 
 }

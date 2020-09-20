@@ -9,6 +9,7 @@ import javafx.scene.shape.ArcType;
 
 public class InuitHunterHouse implements IHouse {
 
+    boolean active = false;
 //    Canvas canvas;
     public InuitHunterHouse(){
 //        MyCanvas myCanvas = MyCanvas.getInstance();
@@ -22,7 +23,7 @@ public class InuitHunterHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(item.equals("house")) {
+                if(active) {
                     graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 50, 10, 200, 360, ArcType.OPEN);
                     graphicsContext.strokeText("Inuit house", mouseEvent.getX(), mouseEvent.getY());
                     System.out.println("ok");
@@ -30,6 +31,18 @@ public class InuitHunterHouse implements IHouse {
             }
         });
 
+    }
+
+    @Override
+    public void releaseCanvas() {
+
+        active= false;
+    }
+
+    @Override
+    public void getCanvas() {
+
+        active = true;
     }
 
 }

@@ -8,6 +8,7 @@ import javafx.scene.shape.ArcType;
 
 public class EgyptKingHouse implements IHouse {
 
+    boolean active= false;
 //    Canvas canvas;
     public EgyptKingHouse(){
 //        MyCanvas myCanvas = MyCanvas.getInstance();
@@ -28,6 +29,16 @@ public class EgyptKingHouse implements IHouse {
                 }
             }
         });
+    }
+
+    @Override
+    public void releaseCanvas() {
+active = false;
+    }
+
+    @Override
+    public void getCanvas() {
+active= true;
     }
 
 }

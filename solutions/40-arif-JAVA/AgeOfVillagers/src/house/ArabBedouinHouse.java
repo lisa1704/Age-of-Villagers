@@ -8,8 +8,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class ArabBedouinHouse implements IHouse {
-//    Canvas canvas;
-    public ArabBedouinHouse(){
+    boolean active = false;
+
+    //    Canvas canvas;
+    public ArabBedouinHouse() {
 //
 //        MyCanvas myCanvas = MyCanvas.getInstance();
 //        this.canvas = myCanvas.getCanvas();
@@ -23,12 +25,22 @@ public class ArabBedouinHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(item.equals("house")) {
+                if (active) {
                     graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 10, 50, 200, 360, ArcType.OPEN);
                     graphicsContext.strokeText("arab        house", mouseEvent.getX(), mouseEvent.getY());
                 }
             }
         });
+    }
+
+    @Override
+    public void releaseCanvas() {
+        active = false;
+    }
+
+    @Override
+    public void getCanvas() {
+        active = true;
     }
 
 }

@@ -113,13 +113,10 @@ public class Controller {
         treeRB.setSelected(false);
         waterRB.setSelected(false);
 
-//        Canvas canvas1 = new Canvas(525,500);
-//        terrain.getChildren().remove(canvas);
-//        terrain.getChildren().add(canvas1);
-//        terrain.getChildren().add(canvas);
-
         house = nationManager.getHouse();
+        house.getCanvas();
         house.draw(canvas,"house");
+//        house.releaseCanvas();
 
         originator.setState("home");
         careTaker.add(originator.saveStateToMemento());
