@@ -37,6 +37,8 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.NewButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
+            this.VillageName = new System.Windows.Forms.TextBox();
+            this.NationName = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +52,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.NationName);
+            this.panel2.Controls.Add(this.VillageName);
             this.panel2.Controls.Add(this.OpenButton);
             this.panel2.Controls.Add(this.NewButton);
             this.panel2.Controls.Add(this.SaveButton);
@@ -134,6 +138,22 @@
             this.OpenButton.UseVisualStyleBackColor = true;
             this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
             // 
+            // VillageName
+            // 
+            this.VillageName.Location = new System.Drawing.Point(14, 46);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(89, 20);
+            this.VillageName.TabIndex = 7;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
+            // 
+            // NationName
+            // 
+            this.NationName.Location = new System.Drawing.Point(14, 72);
+            this.NationName.Name = "NationName";
+            this.NationName.Size = new System.Drawing.Size(100, 20);
+            this.NationName.TabIndex = 8;
+            this.NationName.TextChanged += new System.EventHandler(this.NationName_TextChanged);
+            // 
             // Gameform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,5 +180,7 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.Button OpenButton;
+        private System.Windows.Forms.TextBox VillageName;
+        private System.Windows.Forms.TextBox NationName;
     }
 }

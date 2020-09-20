@@ -12,6 +12,7 @@ namespace age_of_villagers
 {
     public partial class Gameform : Form
     {
+        private string text = "";
         public Gameform()
         {
             InitializeComponent();
@@ -34,32 +35,55 @@ namespace age_of_villagers
 
         private void TreeButton_Click(object sender, EventArgs e)
         {
-
+            text = text + "added a new tree...";
         }
 
         private void HouseButton_Click(object sender, EventArgs e)
         {
-
+            text = text + "added a new house...";
         }
 
         private void WaterButton_Click(object sender, EventArgs e)
         {
-
+            text = text + "added a new water...";
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-
+            text = text + "saving village...";
         }
 
         private void NewButton_Click(object sender, EventArgs e)
         {
-
+            text = text + "creating village...";
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
         {
+            text = text + "opening village...";
+        }
 
+        private void VillageName_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(VillageName.Text);
+        }
+
+        private void NationName_TextChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(NationName.Text);
+        }
+        public string get_VillageName()
+        {
+            return VillageName.Text;
+        }
+
+        public string get_NationName()
+        {
+            return NationName.Text;
+        }
+        public string get_Status()
+        {
+            return text;
         }
     }
 }
