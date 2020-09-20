@@ -36,7 +36,7 @@ namespace age_of_villagers
 
         public void draw_watersource()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Inuit Hunters doesn't have water source");
         }
     }
 }
