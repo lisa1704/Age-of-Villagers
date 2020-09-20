@@ -12,12 +12,14 @@ namespace AgeOfVillagers
 
         public ArabHouse(Point point)
         {
-            addshape(new Line(point.X, point.Y, point.X + 30, point.Y));
-            addshape(new Line(point.X + 30, point.Y, point.X + 15, point.Y - 30));
+            addshape(new Triangle(point.X + 15, point.Y - 30, point.X, point.Y, point.X + 30, point.Y));
+            
+            
             addshape(new Line(point.X + 15, point.Y - 30, point.X + 30, point.Y));
             addshape(new Line(point.X + 30, point.Y, point.X + 45, point.Y - 10));
-            addshape(new Line(point.X + 45, point.Y - 10, point.X + 15, point.Y - 30));
-            addshape(new Line(point.X, point.Y, point.X + 15, point.Y - 30));
+            addshape(new Line(point.X + 45, point.Y - 10, point.X + 32, point.Y - 40));
+            addshape(new Line(point.X + 15, point.Y - 30, point.X + 32, point.Y - 40));
+            
         }
     }
         
