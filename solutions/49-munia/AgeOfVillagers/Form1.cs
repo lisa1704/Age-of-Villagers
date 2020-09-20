@@ -13,7 +13,8 @@ namespace AgeOfVillagers
    
     public partial class Form1 : Form
     {
-      
+
+        
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            Village v = new Village(Text);
         }
 
 
@@ -57,9 +58,5 @@ namespace AgeOfVillagers
 
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
     }
 }

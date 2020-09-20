@@ -8,6 +8,12 @@ namespace AgeOfVillagers
 {
     class Village
     {
+        private String villageName;
+    
+      public Village(String name)
+        {
+            villageName = name; 
+        }
 
     }
 }
