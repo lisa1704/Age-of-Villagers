@@ -14,7 +14,7 @@ public class Arab_Bedouin : Nation
         house = new Arab_House(x, y);
         return house;
     }
-    public I_Shape Draw_WaterRes(int x_water, int y_water)
+    public I_Shape Draw_WaterRes()
     {
         return NotSupportedException;
     }
