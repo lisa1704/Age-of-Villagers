@@ -9,17 +9,21 @@ namespace AgeOfVillagers
     {
         public void drawhouse(Point p, Graphics g, Pen pen)
         {
-            throw new NotImplementedException();
+            g.DrawArc(pen, p.X, p.Y, 16, 16, 180, 180);
+            g.DrawArc(pen, p.X + 5, p.Y + 5, 6, 6, 180, 180);
+            Point p1 = new Point(p.X, p.Y + 8);
+            Point p2 = new Point(p1.X + 16, p1.Y);
+            g.DrawLine(pen, p1, p2);
         }
 
         public void drawtree(Point p, Graphics g, Pen pen)
         {
-            throw new NotImplementedException();
+            //no implementation
         }
 
         public void drawwatersrc(Point p, Graphics g, Pen pen)
         {
-            throw new NotImplementedException();
+            //no implementation
         }
     }
 }
