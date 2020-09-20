@@ -45,12 +45,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.RefreshButton);
@@ -67,7 +69,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.panel1.Location = new System.Drawing.Point(605, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 587);
+            this.panel1.Size = new System.Drawing.Size(216, 587);
             this.panel1.TabIndex = 0;
             // 
             // RefreshButton
@@ -239,7 +241,7 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 0);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 92);
@@ -247,11 +249,21 @@
             this.textBox1.Text = "                        Age of villagers";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(600, 400);
+            this.panel2.TabIndex = 1;
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            // 
             // Ageofvillagers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 599);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Ageofvillagers";
             this.Text = "AgeofVillagers";
@@ -260,6 +272,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,6 +295,7 @@
         private System.Windows.Forms.ComboBox Select_Nation_Combo_box;
         private System.Windows.Forms.TextBox SelectNationText;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
