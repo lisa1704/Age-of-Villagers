@@ -67,9 +67,9 @@ namespace AgeOfVillagers
 
         }
 
-     public void setState(VillageState village)
+     public void setState(VillageState village,string check)
         {
-            NationManager manager = new NationManager(NationName.Text);
+            NationManager manager = new NationManager(check);
 
 
             foreach (Point pt in village._housePoints)
@@ -156,12 +156,14 @@ namespace AgeOfVillagers
             if (_nationame != "")
             {
                 OpenVillageState opencommand = new OpenVillageState();
-                NewVillagebtn_Click(sender, e);
+                
                 opencommand.Execute();
                 _villagestate = opencommand.get_villageState();
                 
-                DrawPanel.Refresh();
-                setState(_villagestate);
+                
+                
+                setState(_villagestate, "Egyptian Kings");
+
             }
             else
             {
