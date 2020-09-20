@@ -68,7 +68,7 @@ namespace AgeOfVillagers
         public static string ARABIAN_TREE_HINT = "ARAB BEDOUIN" + ",TREE";
         public static string EGYPTIAN_HOUSE_HINT = "EGYPTIAN KING" + ",HOUSE";
         public static string EGYPTIAN_TREE_HINT = "EGYPTIAN KING" + ",TREE";
-        public static string EGYPTIAN_HINT = "EGYPTIAN KING" + ",WATER SOURCE";
+        public static string EGYPTIAN_WATER_SOURCE_HINT = "EGYPTIAN KING" + ",WATER SOURCE";
 
 
 

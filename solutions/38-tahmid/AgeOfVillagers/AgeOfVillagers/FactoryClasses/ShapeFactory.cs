@@ -40,6 +40,10 @@ namespace AgeOfVillagers
             {
                 return new EgyptianTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
             }
+            else if (hint.Equals(Constants.EGYPTIAN_WATER_SOURCE_HINT))
+            {
+                return new EgyptianWaterSourceShape(graphics, pen, startingPoint, Constants.Egyptian_WATER_SOURCE_HEIGHT, Constants.Egyptian_WATER_SOURCE_WIDTH);
+            }
 
             return null;
         }
