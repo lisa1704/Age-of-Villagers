@@ -17,6 +17,10 @@ namespace age_of_villagers
         string name = "";
         public Graphics g;
         public Pen p;
+
+        List<Point> HousePoints = new List<Point>();
+        List<Point> TreePoints = new List<Point>();
+        List<Point> WaterPoints = new List<Point>();
         public villagecreator()
         {
             g = panel1.CreateGraphics();
@@ -41,7 +45,7 @@ namespace age_of_villagers
 
         private void villagenamebox_TextChanged(object sender, EventArgs e)
         {
-
+            name = villagenamebox.Text;
         }
 
         private void villagename_Click(object sender, EventArgs e)
@@ -61,17 +65,17 @@ namespace age_of_villagers
 
         private void tree_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "tree";
         }
 
         private void house_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "house";
         }
 
         private void watersource_CheckedChanged(object sender, EventArgs e)
         {
-
+            text = "water";
         }
 
         private void savevillage_Click(object sender, EventArgs e)
