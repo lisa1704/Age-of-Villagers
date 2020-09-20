@@ -15,8 +15,9 @@ namespace Age_of_Villagers
             Pen pen = new Pen(Color.Black);
             Graphics elem = drawingSpace.CreateGraphics();
 
-            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X + 4, axes.Y - 20));
-            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X - 4, axes.Y - 20));
+            elem.DrawLine(pen, new PointF(axes.X, axes.Y), new PointF(axes.X, axes.Y - 10));
+            elem.DrawLine(pen, new PointF(axes.X, axes.Y-10), new PointF(axes.X + 4, axes.Y - 20));
+            elem.DrawLine(pen, new PointF(axes.X, axes.Y-10), new PointF(axes.X - 4, axes.Y - 20));
 
             elem.DrawLine(pen, new PointF(axes.X + 4, axes.Y - 20), new PointF(axes.X + 4, axes.Y - 24));
             elem.DrawLine(pen, new PointF(axes.X + 4, axes.Y - 20), new PointF(axes.X + 8, axes.Y - 20));
