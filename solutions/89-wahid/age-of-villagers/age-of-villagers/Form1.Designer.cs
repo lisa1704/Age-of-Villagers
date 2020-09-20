@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ageofvillagers = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -39,22 +40,36 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // ageofvillagers
+            // 
+            this.ageofvillagers.AutoSize = true;
+            this.ageofvillagers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ageofvillagers.Location = new System.Drawing.Point(681, 38);
+            this.ageofvillagers.Name = "ageofvillagers";
+            this.ageofvillagers.Size = new System.Drawing.Size(193, 32);
+            this.ageofvillagers.TabIndex = 1;
+            this.ageofvillagers.Text = "Age of villagers";
+            this.ageofvillagers.Click += new System.EventHandler(this.ageofvillagers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.ageofvillagers);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label ageofvillagers;
     }
 }
 

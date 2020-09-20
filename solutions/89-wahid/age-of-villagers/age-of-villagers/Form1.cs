@@ -26,5 +26,10 @@ namespace age_of_villagers
         {
 
         }
+
+        private void ageofvillagers_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
