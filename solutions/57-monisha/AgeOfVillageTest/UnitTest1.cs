@@ -15,9 +15,20 @@ namespace AgeOfVillageTest
             INations type= BDObject.GetNation("BangladeshiFarmers");
             BangladeshiFarmers l = new BangladeshiFarmers();
             Color s = l.GetTerrainColor();
-            Color testbojest = type.GetTerrainColor();
+            Color testobjest = type.GetTerrainColor();
            
-            Assert.AreEqual(s, testbojest);
+            Assert.AreEqual(s, testobjest);
+        }
+        [TestMethod]
+        public void TestArabBedouinNationObject()
+        {
+            NationFactory ArabObject = new NationFactory();
+            INations type = ArabObject.GetNation("ArabBedouin");
+            ArabBedouin l = new ArabBedouin();
+            Color ArabColor = l.GetTerrainColor();
+            Color testobjest = type.GetTerrainColor();
+
+            Assert.AreEqual(ArabColor, testobjest);
         }
     }
 }
