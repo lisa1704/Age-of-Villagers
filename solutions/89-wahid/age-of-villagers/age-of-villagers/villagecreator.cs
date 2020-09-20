@@ -19,6 +19,8 @@ namespace age_of_villagers
         public Pen p;
         public villagecreator()
         {
+            g = panel1.CreateGraphics();
+            p = new Pen(Color.Black);
             InitializeComponent();
         }
 
@@ -86,6 +88,11 @@ namespace age_of_villagers
         {
 
         }
+
+        private void drawhouse(int X, int Y)
+        {
+
+        }
         private void panel1MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
@@ -97,6 +104,7 @@ namespace age_of_villagers
             }
             else if (house.Checked)
             {
+                drawhouse(x, y);
 
             }
             else if (watersource.Checked)
