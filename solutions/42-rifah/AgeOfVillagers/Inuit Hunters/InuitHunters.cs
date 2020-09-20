@@ -10,7 +10,8 @@ namespace AgeOfVillagers.Inuit_Hunters
     {
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            InuitHuntersHouse inuitHunterHouse = new InuitHuntersHouse(point);
+            inuitHunterHouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point point)
