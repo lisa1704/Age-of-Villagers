@@ -5,9 +5,13 @@ namespace Age_of_villagers
 {
     public class Arab : INation
     {
+        Size housesize = new Housesize();
+        Size treesize = new Treesize();
         public IObject Draw_house(Point lptop)
         {
-            IObject house = new Arab_house(lptop);
+            int height = housesize.GetHeight();
+            int weidth = housesize.GetWeidth();
+            IObject house = new Arab_house(lptop, height, weidth);
             return house;
         }
 
