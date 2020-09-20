@@ -43,5 +43,13 @@ namespace AgeOfVillagers.Testing
             var expected = typeof(InuitHunterHouse);
             Assert.IsType(expected, inuitHunterComponentFactory.getComponent("House", p));
         }
+
+        [Fact]
+        public void NationAbstractFactoryTesting()
+        {
+            var actual = NationComponentFactory.getNation("Bangladeshi Farmer");
+            var expected = typeof(BdFarmerComponentFactory);
+            Assert.IsType(expected, actual);
+        }
     }
 }
