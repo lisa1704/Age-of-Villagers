@@ -61,7 +61,7 @@ namespace Age_of_Villagers
 
         private void WaterSource_CheckedChanged(object sender, EventArgs e)
         {
-            Text = "Water";
+            Text = "WaterS";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

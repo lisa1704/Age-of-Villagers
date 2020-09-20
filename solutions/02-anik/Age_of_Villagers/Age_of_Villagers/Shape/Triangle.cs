@@ -23,4 +23,5 @@ namespace Age_of_Villagers.Shape
             new Line(top, bottomRight).Draw(g, p);
             new Line(bottomLeft, bottomRight).Draw(g, p);
         }
+    }
 }

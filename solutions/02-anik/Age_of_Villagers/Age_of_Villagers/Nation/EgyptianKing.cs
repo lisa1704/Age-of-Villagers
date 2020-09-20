@@ -5,11 +5,12 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class EgyptianKing:INation
+    class EgyptianKing : INation
     {
         private Color colorofbackground = Color.Yellow;
         public Color BgColor()
         {
             return colorofbackground;
         }
+    }
 }
