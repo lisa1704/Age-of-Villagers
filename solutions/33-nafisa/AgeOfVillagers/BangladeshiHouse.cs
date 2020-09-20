@@ -8,11 +8,10 @@ namespace AgeOfVillagers
 {
     class BangladeshiHouse : CompositeShape
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
         //private Point point;
-        public BangladeshiHouse(Point point,Panel Drawingpanel)
+        public BangladeshiHouse(Point point)
         {
-            this.Drawingpanel = Drawingpanel;
 
             addshape(new Line(point.X, point.Y, point.X + 24, point.Y));
             addshape(new Line(point.X + 24, point.Y, point.X + 24, point.Y + 16));
