@@ -7,9 +7,12 @@ namespace Age_of_Villagers.Shape
 {
     class Rectangle : IShape
     {
-        public void Draw(Graphics g, int x, int y, int height, int width)
+       
+            public void Draw(Graphics g, Pen p)
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
