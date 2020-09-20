@@ -73,10 +73,21 @@
     </Compile>
     <Compile Include="Icommand.cs" />
     <Compile Include="Itemclass\Arab_house.cs" />
+    <Compile Include="Itemclass\Arab_tree.cs" />
     <Compile Include="Itemclass\Bangladeshi_house.cs" />
+    <Compile Include="Itemclass\Bangladeshi_tree.cs" />
+    <Compile Include="Itemclass\Bangladeshi_watersource.cs" />
+    <Compile Include="Itemclass\Compositeobj.cs" />
     <Compile Include="Itemclass\Egyptian_house.cs" />
+    <Compile Include="Itemclass\Egyptian_tree.cs" />
+    <Compile Include="Itemclass\Egyptian_watersource.cs" />
     <Compile Include="Itemclass\Inuit_house.cs" />
     <Compile Include="Itemclass\IObject.cs" />
+    <Compile Include="Itemclass\null_obj.cs" />
+    <Compile Include="Itemclass\obj_arc.cs" />
+    <Compile Include="Itemclass\obj_line.cs" />
+    <Compile Include="Itemclass\obj_rectangle.cs" />
+    <Compile Include="Itemclass\obj_triangle.cs" />
     <Compile Include="Nationclass\Arab.cs" />
     <Compile Include="Nationclass\Bangladeshi.cs" />
     <Compile Include="Nationclass\Egyptian.cs" />
@@ -84,8 +95,11 @@
     <Compile Include="Nationclass\Inuit.cs" />
     <Compile Include="Nationclass\NullNation.cs" />
     <Compile Include="Nationfactory.cs" />
+    <Compile Include="Openvillage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Savevillage.cs" />
+    <Compile Include="village.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
