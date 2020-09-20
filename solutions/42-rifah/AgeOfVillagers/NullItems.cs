@@ -7,7 +7,7 @@ namespace AgeOfVillagers
 {
     public class NullItems : Composite
     {
-        void drawing()
+        public void drawing()
         {
             MessageBox.Show("NULL ITEMS");
         }
