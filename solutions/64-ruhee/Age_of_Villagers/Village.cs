@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Age_of_Villagers.Age_of_Villagers;
 
 namespace Age_of_Villagers
 {
@@ -18,7 +19,7 @@ namespace Age_of_Villagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
-
+        Factory_Nation nationfactory = new Factory_Nation();
         public Village()
         {
             InitializeComponent();
@@ -74,6 +75,27 @@ namespace Age_of_Villagers
             MessageBox.Show("Village is opened");
         }
 
+        private void drawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = drawingPanel.CreateGraphics();
+
+            foreach (Point point in tree_point)
+            {
+                nationfactory.GetNation(village_type).DrawTree(g, point);
+            }
+
+            foreach (Point point in house_point)
+            {
+                nationfactory.GetNation(village_type).DrawHouse(g, point);
+            }
+
+            foreach (Point point in waterSource_point)
+            {
+                nationfactory.GetNation(village_type).DrawWaterSource(g, point);
+            }
+
+        }
+
 
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
@@ -95,6 +117,11 @@ namespace Age_of_Villagers
             drawingPanel.Invalidate();
         }
 
+        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = NationName.Text;
+            drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
+        }
 
         private void VillageNametextBox_TextChanged(object sender, EventArgs e)
         {
