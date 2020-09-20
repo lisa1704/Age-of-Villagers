@@ -15,6 +15,7 @@ namespace Age_of_villagers
     {
         int x, y;
         string text = "";
+        string name = "";
         public Graphics g;
         public Pen p;
 
@@ -88,12 +89,34 @@ namespace Age_of_villagers
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
-
+            name = VillageNameBox.Text;
         }
 
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void main_panelMouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = new Point(e.X, e.Y);
+            Graphics g = MainPanel.CreateGraphics();
+            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            if (Tree.Checked)
+            {
+
+            }
+            else if (House.Checked)
+            {
+
+            }
+            else if (WaterSource.Checked)
+            {
+
+            }
+
+        }
+
+
     }
 }

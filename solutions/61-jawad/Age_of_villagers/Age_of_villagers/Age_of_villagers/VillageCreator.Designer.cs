@@ -65,10 +65,16 @@
             // NationList
             // 
             this.NationList.FormattingEnabled = true;
+            this.NationList.Items.AddRange(new object[] {
+            "Bangladeshi",
+            "Arab",
+            "Egyptian",
+            "Inuit"});
             this.NationList.Location = new System.Drawing.Point(792, 152);
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(151, 28);
             this.NationList.TabIndex = 6;
+            this.NationList.Text = "Nation List";
             this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // WaterSource
@@ -165,6 +171,7 @@
             this.MainPanel.Size = new System.Drawing.Size(600, 400);
             this.MainPanel.TabIndex = 18;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
+            this.MainPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.main_panelMouseClick);
             // 
             // VillageCreator
             // 
