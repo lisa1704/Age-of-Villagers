@@ -66,7 +66,7 @@ namespace AgeOfVillagers
 
         }
 
-       public void set_state(VillageState village)
+     /*  public void set_state(VillageState village)
         {
 
             foreach (Point pt in village._housePoints)
@@ -81,7 +81,7 @@ namespace AgeOfVillagers
             {
                 Waterpoints.Add(pt);
             }
-        }
+        }*/
 
 
 
@@ -101,19 +101,18 @@ namespace AgeOfVillagers
             if (Houseradiobtn.Checked)
             {
                 manager.getNation().GetHouse(_location).draw(g,pen);
-                
-                Housepoints.Add(_location);
+               
                 
             }
             else if (Treeradiobtn.Checked)
             {
                 manager.getNation().GetTrees(_location).draw(g,pen);
-                Treepoints.Add(_location);
+                
             }
             else if (WaterRadiobtn.Checked)
             {
                 manager.getNation().GetWaterSources(_location).draw(g, pen);
-                Waterpoints.Add(_location);
+              
             } 
 
             else
@@ -126,7 +125,7 @@ namespace AgeOfVillagers
 
         private void Openvillagebtn_Click(object sender, EventArgs e)
         {
-            if (_nationame != "")
+/*            if (_nationame != "")
             {
                 OpenVillageState opencommand = new OpenVillageState();
                 NewVillagebtn_Click(sender, e);
@@ -138,7 +137,7 @@ namespace AgeOfVillagers
             else
             {
                 MessageBox.Show("VillgeType is not selected");
-            }
+            }*/
         }
 
         
