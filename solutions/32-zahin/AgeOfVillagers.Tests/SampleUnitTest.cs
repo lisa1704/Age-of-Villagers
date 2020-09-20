@@ -6,7 +6,7 @@ namespace AgeOfVillagers.Tests
         [Fact]
         public void VillageTypeTest()
         {
-            var expected = 2;
+            var expected = 4;
             var actual = 2 + 2;
             Assert.Equal(expected, actual);
         }
