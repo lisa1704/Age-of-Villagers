@@ -1,27 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
     class NationFactory
     {
-        public INation GetNations(string nation)
+        private Panel drawingPanel;
+
+        public NationFactory(Panel drawingPanel)
         {
-            if (nation == "Arab Bedouins")
-            {
-                return new ArabBedouins();
-            }
-            if (nation == "Bangladeshi Farmers")
+            this.drawingPanel = drawingPanel;
+        }
+
+        public INation nationUpdate(int selectedIndex)
+        {
+            if (selectedIndex == 0)
             {
                 return new BangladeshiFarmers();
             }
-            if (nation == "Egyptian Kings")
+            else if (selectedIndex == 1)
+            {
+                return new ArabBedouins();
+            }
+            else if (selectedIndex == 2)
             {
                 return new EgyptianKings();
             }
-            else
+            else if (selectedIndex == 3)
+            {
                 return new InuitHunters();
+            }
+            else
+                return null;
         }
     }
 }

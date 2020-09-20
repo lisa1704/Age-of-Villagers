@@ -19,11 +19,12 @@ namespace AgeOfVillagers
         //string text = "";
         string chosen_nation = "";
         string chosen_component = "";
-        NationFactory NF = new NationFactory();
+        NationFactory NF;
         INation nation;
         public Form1()
         {
             InitializeComponent();
+            NF = new NationFactory(DrawingPanel);
         }
 
         private void DrawingPanel_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace AgeOfVillagers
             p.X = e.X;
             p.Y = e.Y;
 
-            nation = NF.GetNations(chosen_nation);
+            //nation = NF.nationUpdate(Nations.SelectedIndex);
             g = DrawingPanel.CreateGraphics();
             //g.DrawString(text, Font, brush, new Point(x, y));
             if (chosen_component == "tree")
@@ -118,6 +119,8 @@ namespace AgeOfVillagers
                 chosen_nation = Nations.SelectedItem.ToString();
                 BackColorSelect();
             }
+            nation = NF.nationUpdate(Nations.SelectedIndex);
+
         }
         
         private void BackColorSelect()
