@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 
-public class Shape
+public abstract class Shape
 {
-	
+	public abstract void Draw_Shape();
 }
