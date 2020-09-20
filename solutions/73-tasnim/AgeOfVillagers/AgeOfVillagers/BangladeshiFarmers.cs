@@ -11,7 +11,8 @@ namespace AgeOfVillagers
     {
         public void Draw_House(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiFarmerHouse house = new BangladeshiFarmerHouse(p);
+            house.Draw_Shape(g);
         }
 
         public void Draw_Tree(Graphics g, Point p)
