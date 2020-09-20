@@ -9,21 +9,15 @@ namespace AgeOfVillagers
     public class EgyptianKingHouse : IShape
     {
         
-        public EgyptianKingHouse(Point p)
+        public EgyptianKingHouse(Point point)
         {
             
         }
         
 
-        public void draw(Point p, Graphics graphics)
+        public void draw(Pen pen, Graphics graphics)
         {
-            Pen pen = new Pen(Color.Brown);
-
-            graphics.DrawLine(pen, p.X, p.Y, p.X + 8, p.Y);
-            graphics.DrawLine(pen, p.X, p.Y, p.X + 4, p.Y - 16);
-            graphics.DrawLine(pen, p.X + 4, p.Y - 16, p.X + 8, p.Y);
-            graphics.DrawLine(pen, p.X + 8, p.Y, p.X + 16, p.Y - 8);
-            graphics.DrawLine(pen, p.X + 4, p.Y - 16, p.X + 16, p.Y - 8);
+           
         }
     }
 }

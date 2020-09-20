@@ -14,11 +14,11 @@ namespace AgeOfVillagers
         {
             shapelists.Add(shape);
         }
-        public void draw(Point p, Graphics graphics)
+        public void draw(Pen pen, Graphics graphics)
         {
              foreach(var shapes in shapelists)
             {
-                shapes.draw(p, graphics);
+                shapes.draw(pen, graphics);
             }
         }
     }

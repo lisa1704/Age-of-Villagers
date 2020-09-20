@@ -9,22 +9,22 @@ namespace AgeOfVillagers
     public class EgyptianKing : INation
     {
        
-        public IShape DrawHouse(Point p)
+        public IShape DrawHouse(Point point)
         {
-            return new EgyptianKingHouse(p);
+            return new EgyptianKingHouse(point);
         }
 
-        public IShape DrawTree(Point p)
+        public IShape DrawTree(Point point)
         {
-            return new EgyptianKingTree(p);
+            return new EgyptianKingTree(point);
         }
 
-        public IShape DrawWaterSource(Point p)
+        public IShape DrawWaterSource(Point point)
         {
-            return new EgyptianKingWater(p);
+            return new EgyptianKingWater(point);
         }
 
-        public Color PaintTerrain(Point p)
+        public Color PaintTerrain(Point point)
         {
             return Color.Yellow;
         }

@@ -6,21 +6,25 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class ArabTree : IShape
+    public class ArabTree : CompositeShapes
     {
-        public ArabTree(Point p)
+        public ArabTree(Point point)
         {
+            Point point1 = new Point(point.X + 30, point.Y - 10);
+            Point point2 = new Point(point.X - 30, point.Y - 10);
+            Point point3 = new Point(point.X + 24, point.Y - 24);
+            Point point4 = new Point(point.X - 24, point.Y - 24);
+            Point point5 = new Point(point.X, point.Y - 28);
+            Point point6 = new Point(point.X, point.Y);
+            Point point7 = new Point(point.X, point.Y + 30);
 
+            addshapes(new Line(point6, point7));
+            addshapes(new Line(point, point1));
+            addshapes(new Line(point, point2));
+            addshapes(new Line(point, point3));
+            addshapes(new Line(point, point4));
+            addshapes(new Line(point, point5));
         }
-        public void draw(Point p, Graphics graphics)
-        {
-            Pen pen = new Pen(Color.Green);
-            graphics.DrawLine(pen, p.X, p.Y, p.X, p.Y + 14);
-            graphics.DrawLine(pen, p.X, p.Y, p.X + 8, p.Y + 3);
-            graphics.DrawLine(pen, p.X, p.Y, p.X + 5, p.Y + 6);
-            graphics.DrawLine(pen, p.X, p.Y, p.X, p.Y + 10);
-            graphics.DrawLine(pen, p.X, p.Y, p.X - 5, p.Y + 6);
-            graphics.DrawLine(pen, p.X, p.Y, p.X - 8, p.Y - 3);
-        }
+       
     }
 }

@@ -10,22 +10,22 @@ namespace AgeOfVillagers
     {
         //private Panel drawingBoard;
         
-        public IShape DrawHouse(Point p)
+        public IShape DrawHouse(Point point)
         {
-            return new BdFarmerHouse(p);
+            return new BdFarmerHouse(point);
         }
 
-        public IShape DrawTree(Point p)
+        public IShape DrawTree(Point point)
         {
-            return new BdTree(p);
+            return new BdTree(point);
         }
 
-        public IShape DrawWaterSource(Point p)
+        public IShape DrawWaterSource(Point point)
         {
-            return new BdWater(p);
+            return new BdWater(point);
         }
 
-        public Color PaintTerrain(Point p)
+        public Color PaintTerrain(Point point)
         {
             return Color.Green;
         }
