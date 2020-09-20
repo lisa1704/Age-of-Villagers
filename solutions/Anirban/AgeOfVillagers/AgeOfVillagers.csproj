@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Nations\Arab_bedouin.cs" />
     <Compile Include="Nations\Bangladeshi_farmers.cs" />
+    <Compile Include="Nations\Egyptian_kings.cs" />
     <Compile Include="Nations\INations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
