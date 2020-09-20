@@ -47,11 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractNationFactoryCreator.cs" />
+    <Compile Include="Arab bedouin\Arab_House.cs" />
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Arab_Creator.cs" />
     <Compile Include="ArcShape.cs" />
     <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
+    <Compile Include="BDfarmer_House.cs" />
     <Compile Include="CompositeShaping.cs" />
     <Compile Include="Egyptian_Creator.cs" />
     <Compile Include="Egyptian_King.cs" />
@@ -97,8 +99,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Arab bedouin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
