@@ -76,5 +76,10 @@ namespace age_of_villagers
         {
 
         }
+
+        private void openvillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
