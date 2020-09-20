@@ -32,6 +32,8 @@
             this.ageofvillagers = new System.Windows.Forms.Label();
             this.villagenamebox = new System.Windows.Forms.TextBox();
             this.villagename = new System.Windows.Forms.Label();
+            this.villagelocationbox = new System.Windows.Forms.ComboBox();
+            this.villagelocation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,18 +66,39 @@
             // villagename
             // 
             this.villagename.AutoSize = true;
-            this.villagename.Location = new System.Drawing.Point(705, 103);
+            this.villagename.Location = new System.Drawing.Point(692, 103);
             this.villagename.Name = "villagename";
             this.villagename.Size = new System.Drawing.Size(75, 15);
             this.villagename.TabIndex = 3;
             this.villagename.Text = "Village name";
             this.villagename.Click += new System.EventHandler(this.villagename_Click);
             // 
+            // villagelocationbox
+            // 
+            this.villagelocationbox.FormattingEnabled = true;
+            this.villagelocationbox.Location = new System.Drawing.Point(786, 138);
+            this.villagelocationbox.Name = "villagelocationbox";
+            this.villagelocationbox.Size = new System.Drawing.Size(100, 23);
+            this.villagelocationbox.TabIndex = 4;
+            this.villagelocationbox.SelectedIndexChanged += new System.EventHandler(this.villagelocationbox_SelectedIndexChanged);
+            // 
+            // villagelocation
+            // 
+            this.villagelocation.AutoSize = true;
+            this.villagelocation.Location = new System.Drawing.Point(692, 141);
+            this.villagelocation.Name = "villagelocation";
+            this.villagelocation.Size = new System.Drawing.Size(88, 15);
+            this.villagelocation.TabIndex = 5;
+            this.villagelocation.Text = "Village location";
+            this.villagelocation.Click += new System.EventHandler(this.villagelocation_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 450);
+            this.Controls.Add(this.villagelocation);
+            this.Controls.Add(this.villagelocationbox);
             this.Controls.Add(this.villagename);
             this.Controls.Add(this.villagenamebox);
             this.Controls.Add(this.ageofvillagers);
@@ -94,6 +117,8 @@
         private System.Windows.Forms.Label ageofvillagers;
         private System.Windows.Forms.TextBox villagenamebox;
         private System.Windows.Forms.Label villagename;
+        private System.Windows.Forms.ComboBox villagelocationbox;
+        private System.Windows.Forms.Label villagelocation;
     }
 }
 

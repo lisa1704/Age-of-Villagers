@@ -41,5 +41,15 @@ namespace age_of_villagers
         {
 
         }
+
+        private void villagelocationbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void villagelocation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
