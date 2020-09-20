@@ -12,6 +12,9 @@ public class NationFactory {
         if(this.nationName == "Bangladeshi Farmers"){
             nation = new Bangladeshi_Farmers();
         }
+        else if (this.nationName == "Arab Bedouins"){
+            nation = new Arab_Bedouins();
+        }
         return nation;
     }
 }
