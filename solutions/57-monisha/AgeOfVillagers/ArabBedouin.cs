@@ -19,15 +19,16 @@ namespace AgeOfVillagers
             return "Stonehouse";
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             ArabTree Arabtree = new ArabTree(pt);
             Arabtree.Paint(g, p);
+            return Arabtree;
         }
 
         public void DrawWaterSource(Graphics g, Point MPt)
         {
-            NullVillageItem nullWater = new NullVillageItem();
+            NullVillageItem nullWater = new NullVillageItem(MPt);
             nullWater.Paint(g,p);
         }
 

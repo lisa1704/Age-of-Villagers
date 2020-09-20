@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestTreeCostruction.cs" />
     <Compile Include="UnitTestHouseConstruction.cs" />
     <Compile Include="UnitTest2BackgroundColor.cs" />
   </ItemGroup>

@@ -15,8 +15,11 @@ namespace AgeOfVillagers
             return "No Nation";
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
+            NullVillageItem ntree = new NullVillageItem(pt);
+            //ntree.Paint(g, p);
+            return ntree;
             //throw new NotImplementedException();
         }
 

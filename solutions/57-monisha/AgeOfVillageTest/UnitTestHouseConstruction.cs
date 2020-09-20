@@ -8,6 +8,7 @@ namespace AgeOfVillageTest
     [TestClass]
     public class UnitTestHouseConstruction
     {
+        public Graphics g;
         Point pt = new Point(16, 16);
         [TestMethod]
         public void TestBangladeshiHouseConstruction()
@@ -18,5 +19,6 @@ namespace AgeOfVillageTest
 
             Assert.AreEqual(house, testString);
         }
+       
     }
 }

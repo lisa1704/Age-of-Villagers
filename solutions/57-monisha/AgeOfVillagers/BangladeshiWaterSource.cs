@@ -46,7 +46,7 @@ namespace AgeOfVillagers
     }
     public class NullVillageItem : CompositeShape
     {
-        public NullVillageItem()
+        public NullVillageItem(Point MPt)
         {
             //No Paint
         }

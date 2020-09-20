@@ -19,10 +19,11 @@ namespace AgeOfVillagers
             return "Piramid";
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             EgyptianTree EgyptTree = new EgyptianTree(pt);
             EgyptTree.Paint(g, p);
+            return EgyptTree;
         }
 
         public void DrawWaterSource(Graphics g, Point MPt)

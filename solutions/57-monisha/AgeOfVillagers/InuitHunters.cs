@@ -19,15 +19,16 @@ namespace AgeOfVillagers
             return "Igloo";
         }
 
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
-            NullVillageItem ntree = new NullVillageItem();
+            NullVillageItem ntree = new NullVillageItem(pt);
             ntree.Paint(g, p);
+            return ntree;
         }
 
         public void DrawWaterSource(Graphics g, Point MPt)
         {
-            NullVillageItem nullWater = new NullVillageItem();
+            NullVillageItem nullWater = new NullVillageItem(MPt);
             nullWater.Paint(g, p);
         }
 

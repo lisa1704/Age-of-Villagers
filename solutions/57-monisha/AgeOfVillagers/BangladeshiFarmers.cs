@@ -24,11 +24,11 @@ namespace AgeOfVillagers
         {
             return "BDHouse Constructed";
         }
-
-        public void DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
             BangladeshiTree BDtree = new BangladeshiTree(pt);
             BDtree.Paint(g, p);
+            return BDtree;
         }
         public void DrawWaterSource(Graphics g, Point MPt)
         {
