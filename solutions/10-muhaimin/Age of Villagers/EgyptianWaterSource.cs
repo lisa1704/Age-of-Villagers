@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,10 @@ namespace Age_of_Villagers
     {
         public void drawWaterSource(Axis axes, Panel drawingSpace)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = drawingSpace.CreateGraphics();
+
+            elem.DrawEllipse(pen, axes.X, axes.Y, 16, 16);
         }
     }
 }
