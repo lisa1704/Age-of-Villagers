@@ -123,14 +123,14 @@ namespace AgeOfVillagers
             previouslySavedState = new State();
 
             game = gameFactory.getGame();
-            selectedNation = Constants.BD_NATION;
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNation,previouslySavedState,g, pen);
+            
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNationforOpening,previouslySavedState,g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
             gameKeyInvoker.click();
             //itemlist
 
-
+            selectedNationforOpening = "";
 
 
         }

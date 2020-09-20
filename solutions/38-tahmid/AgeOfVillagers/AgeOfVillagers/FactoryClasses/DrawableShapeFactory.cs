@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.AbstractClass;
+using AgeOfVillagers.Drawable_Shape_Extending_Classes;
 using System.Drawing;
 
 namespace AgeOfVillagers
@@ -21,7 +22,13 @@ namespace AgeOfVillagers
         public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point topPoint, Point rightPoint, Point leftPoint, string hint)
         {
             if (hint.Equals(Constants.TRIANGLE_HINT))
+            {
                 return new Triangle(topPoint, rightPoint, leftPoint, graphics, pen);
+            }
+            else if (hint.Equals(Constants.VSHAPE_HINT))
+            {
+                return new Vshape(topPoint, rightPoint, leftPoint, graphics, pen);
+            }
             return null;
 
         }
