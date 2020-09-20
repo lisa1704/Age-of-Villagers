@@ -95,18 +95,22 @@ namespace AgeOfVillagers
         private void formRefresh()
         {
             VillageName.Text = "Enter Village Name";
-            //Nations.SelectedIndex = -1;
+            Nations.SelectedIndex = -1;
             House.Checked = false;
             Tree.Checked = false;
             WaterSource.Checked = false;
             DrawingPanel.Invalidate();
+            DrawingPanel.BackColor = Color.Empty;
             //text = "";
         }
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
         {
-            chosen_nation = Nations.SelectedItem.ToString();
-            BackColorSelect();
+            if (Nations.SelectedIndex != -1)
+            {
+                chosen_nation = Nations.SelectedItem.ToString();
+                BackColorSelect();
+            }
         }
         
         private void BackColorSelect()
