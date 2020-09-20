@@ -104,7 +104,7 @@ namespace AgeOfVillagers
             {
                 Trees.Add(e.Location);
             }
-            if (clickedObject == "Water Sourse")
+            if (clickedObject == "Water Source")
             {
                 WaterSourses.Add(e.Location);
             }

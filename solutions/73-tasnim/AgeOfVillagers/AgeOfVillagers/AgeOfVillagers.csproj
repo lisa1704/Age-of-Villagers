@@ -52,6 +52,7 @@
     <Compile Include="BangladeshiFarmerHouse.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="AbstractShape.cs" />
+    <Compile Include="BangladeshiFarmersWater.cs" />
     <Compile Include="CreateNewVillage.cs">
       <SubType>Form</SubType>
     </Compile>

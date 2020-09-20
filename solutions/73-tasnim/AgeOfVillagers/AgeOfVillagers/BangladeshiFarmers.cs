@@ -25,7 +25,8 @@ namespace AgeOfVillagers
 
         public void Draw_WaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiFarmersWater water = new BangladeshiFarmersWater(p);
+            water.Draw_Shape(g);
         }
 
         public Color Color_Terrain()
