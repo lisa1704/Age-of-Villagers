@@ -16,10 +16,4 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
         }
-
-        private void VillageMain_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-}

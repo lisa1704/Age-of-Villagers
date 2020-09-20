@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArabBedouins.cs" />
+    <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="EgyptianKings.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="INation.cs" />
+    <Compile Include="InuitHunters.cs" />
     <Compile Include="ITree.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="VillageMain.cs">
