@@ -51,11 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTestWaterRourseConstruction.cs" />
-    <Compile Include="UnitTest1NationObjectCreation.cs" />
+    <Compile Include="UnitTestNationObjectCreation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTestTreeCostruction.cs" />
     <Compile Include="UnitTestHouseConstruction.cs" />
-    <Compile Include="UnitTest2BackgroundColor.cs" />
+    <Compile Include="UnitTestBackgroundColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

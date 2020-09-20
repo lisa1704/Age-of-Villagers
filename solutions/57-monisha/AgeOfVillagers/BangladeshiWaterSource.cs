@@ -51,7 +51,7 @@ namespace AgeOfVillagers
             //No Paint
         }
 
-        internal void Paint(Graphics g, Pen p)
+        public void Paint(Graphics g, Pen p)
         {
             //No Paint
         }

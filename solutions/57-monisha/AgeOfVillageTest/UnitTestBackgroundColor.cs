@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AgeOfVillageTest
 {
     [TestClass]
-    public class UnitTest2BackgroundColor
+    public class UnitTestBackgroundColor
     {
         [TestMethod]
         public void TestBangladeshiFarmer()

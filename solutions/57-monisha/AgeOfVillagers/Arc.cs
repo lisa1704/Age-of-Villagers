@@ -4,10 +4,7 @@ namespace AgeOfVillagers
 {
     partial class ShapeArc : IShapeItem
     {
-        private readonly Point point1;
-        private readonly Point point2;
-        private float x, y, width, height, startAngle, sweepAngle;
-        
+        public float x, y, width, height, startAngle, sweepAngle;        
 
         public ShapeArc(float x, float y, float width, float height, float startAngle, float sweepAngle)
         {
@@ -25,8 +22,8 @@ namespace AgeOfVillagers
         }
         public class ShapeEllipse : CompositeShape
         {
-            private readonly Point _topleft;
-            private readonly Point _bottomright;
+            public Point _topleft;
+            public Point _bottomright;
 
             public ShapeEllipse(Point tLeft, Point bRight)
             {

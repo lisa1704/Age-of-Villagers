@@ -10,8 +10,8 @@ namespace AgeOfVillagers
 {
    public class Line : IShapeItem
     {
-        private readonly Point point1;
-        private readonly Point point2;
+        public Point point1;
+        public Point point2;
         public Line(Point pt1, Point pt2)
         {
             point1 = pt1;
