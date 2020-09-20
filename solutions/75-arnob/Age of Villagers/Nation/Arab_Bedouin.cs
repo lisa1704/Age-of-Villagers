@@ -39,7 +39,8 @@ namespace Age_of_Villagers
 
         public void GetWaterSource(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            Null_item null_object = new Null_item(_point);
+            null_object.Paint(graphics);
         }
     }
 }
