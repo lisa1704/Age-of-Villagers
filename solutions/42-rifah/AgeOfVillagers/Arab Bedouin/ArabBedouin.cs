@@ -9,7 +9,8 @@ namespace AgeOfVillagers.Arab_Bedouin
     {
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            ArabBedouinHouse arabBedouinHouse = new ArabBedouinHouse(point);
+            arabBedouinHouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point point)
