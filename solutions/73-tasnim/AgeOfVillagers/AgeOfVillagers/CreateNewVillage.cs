@@ -58,6 +58,7 @@ namespace AgeOfVillagers
         {
             Houses.Clear();
             Draw_Panel.Refresh();
+            Village_Name.Text = "Enter Village Name";
 
         }
 
