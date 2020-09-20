@@ -22,6 +22,7 @@ public class Arab_Bedouins implements INations{
         //Rectangle
         house.add(new Line(x+(3*houseWidth/4),y,x+houseWidth,y-(houseHeight/4)));
         house.add(new Line(x+(3*houseWidth/4)/2,y-(3*houseHeight/4),x+((3*houseWidth/4)/2)+(houseWidth/4),y-houseHeight));
+        house.add(new Line(x+(3*houseWidth/4)+.5,y-.5,x+.5+(3*houseWidth/4)/2,y-(3*houseHeight/4)-.5));
         house.add(new Line(x+houseWidth,y-(houseHeight/4),x+((3*houseWidth/4)/2)+(houseWidth/4),y-houseHeight));
         return house;
     }
