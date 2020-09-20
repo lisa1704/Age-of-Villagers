@@ -7,10 +7,9 @@ namespace age_of_villagers.shape
 {
     class triangle : Ishape
     {
-        public void Draw(Graphics g, int x, int y, int height, int width)
+        public void draw(Graphics g, Pen p)
         {
             throw new NotImplementedException();
         }
-        
     }
 }

@@ -7,7 +7,7 @@ namespace age_of_villagers.shape
 {
     interface Ishape
     {
-        void Draw(Graphics g, int x, int y, int height, int width);
+        void draw(Graphics g, Pen p);
 
     }
 }
