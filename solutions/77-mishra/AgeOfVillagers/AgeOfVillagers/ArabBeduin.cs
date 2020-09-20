@@ -6,10 +6,9 @@ namespace AgeOfVillagers
 {
 	public class ArabBeduin : INation
 	{
-        private Panel drawingBoard;
-		public ArabBeduin(Panel drawingBoard)
+        //private Panel drawingBoard;
+		public ArabBeduin()
 		{
-            this.drawingBoard = drawingBoard;
 
         }
 

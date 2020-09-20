@@ -8,10 +8,10 @@ namespace AgeOfVillagers
 {
     public class BdFarmer : INation
     {
-        private Panel drawingBoard;
-        public BdFarmer(Panel drawingBoard)
+        //private Panel drawingBoard;
+        public BdFarmer()
         {
-            this.drawingBoard = drawingBoard;
+            
         }
         public void DrawHouse(Point p, Panel drawingBoard)
         {

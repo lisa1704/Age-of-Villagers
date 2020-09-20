@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,9 +20,9 @@ namespace AgeOfVillagers
 
         //public IShape arabhouse;
 
-        public INation arabBeduin;
-        public INation bdfarmer;
-        public INation egKing;
+        public INation arabBeduin = new ArabBeduin();
+        public INation bdfarmer = new BdFarmer();
+        public INation egKing = new EgyptianKing();
 
         public VillageForm()
         {
@@ -49,6 +50,7 @@ namespace AgeOfVillagers
             {
                 //arabhouse.draw(p, drawingBoard);
                 arabBeduin.DrawHouse(p, drawingBoard);
+                
                 bdfarmer.DrawHouse(p, drawingBoard);
                 egKing.DrawHouse(p, drawingBoard);
 

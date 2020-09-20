@@ -8,6 +8,10 @@ namespace AgeOfVillagers
 {
     public class EgyptianKing : INation
     {
+        public EgyptianKing()
+        {
+
+        }
         public void DrawHouse(Point p, Panel drawingBoard)
         {
             EgyptianKingHouse egKingHouse = new EgyptianKingHouse(drawingBoard);

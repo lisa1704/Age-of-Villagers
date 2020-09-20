@@ -18,14 +18,19 @@ namespace AgeOfVillagers
 
             if(nationtype == "Arab Beduins")
             {
-                nation = new ArabBeduin(drawingBoard);
+                nation = new ArabBeduin();
             }
             else if(nationtype == "Bangladeshi Farmer")
             {
-                nation = new BdFarmer(drawingBoard);
+                nation = new BdFarmer();
 
             }
-            
+            else if (nationtype == "Egyptian King ")
+            {
+                nation = new EgyptianKing();
+
+            }
+
         }
 
         public INation getnationtype()
