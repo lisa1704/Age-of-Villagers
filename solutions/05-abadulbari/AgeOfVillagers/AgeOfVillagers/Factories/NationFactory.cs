@@ -22,6 +22,10 @@ namespace AgeOfVillagers.Factories
             {
                 return new EgyptianKings();
             }
+            if (nationName == "Arab Bedouin")
+            {
+                return new ArabBedouin();
+            }
             return null;
         }
     }
