@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Egyptian_Kings implements INations{
     private double WaterBodyWidth = 12;
     private double WaterBodyheight = 12;
-    private String TerrainColor = "yellow";
+    private String TerrainColor = "#fcd556";
     public Egyptian_Kings(){
         super();
     }
