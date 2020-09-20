@@ -19,13 +19,18 @@ namespace Age_of_Villagers
             elem.DrawRectangle(pen, axes.X, axes.Y, 2, 12);
 
             //drawng the branches
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 1, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 4, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 6, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 8, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 3, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 5, axes.Y - 12));
-            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 7, axes.Y - 12));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 1, axes.Y - 26));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 5, axes.Y - 21));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 9, axes.Y - 16));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 13, axes.Y - 11));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 17, axes.Y - 5));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X + 21, axes.Y - 1));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 1, axes.Y - 26));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 5, axes.Y - 21));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 9, axes.Y - 16));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 13, axes.Y - 11));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 17, axes.Y - 6));
+            elem.DrawLine(pen, new PointF(axes.X + 1, axes.Y), new PointF(axes.X - 21, axes.Y - 1));
         }
     }
 }
