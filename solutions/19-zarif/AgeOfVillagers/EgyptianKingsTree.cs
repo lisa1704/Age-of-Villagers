@@ -5,10 +5,13 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public class EgyptianKingsTree : CompositeShape
+    public class EgyptianKingsTree : CompositeShape 
     {
+        private Point _point;
+
         public EgyptianKingsTree(Point point)
         {
+            _point = point;
             Point _upbranchright = new Point(point.X + 16, point.Y - 18);
             Point _upbranchleft = new Point(point.X - 16, point.Y - 18);
             addShape(new BaseLine(point,_upbranchright));
@@ -24,5 +27,7 @@ namespace AgeOfVillagers
 
 
         }
+
+       
     }
 }

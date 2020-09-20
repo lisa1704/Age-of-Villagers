@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public abstract class CompositeShape : IGraphicShape
+    public abstract class CompositeShape : IGraphicShape 
     {
         private List<IGraphicShape> shapes = new List<IGraphicShape>();
 
@@ -21,5 +21,9 @@ namespace AgeOfVillagers
                 _comp.draw(g, pen);
             }
         }
+
+       
     }
+
+    
 }

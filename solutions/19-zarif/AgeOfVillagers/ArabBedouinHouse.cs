@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    public class ArabBedouinHouse : CompositeShape
+    public class ArabBedouinHouse : CompositeShape 
     {
+        private Point _toppoint;
         public ArabBedouinHouse(Point point)
         {
             Point _toppoint = point;
@@ -16,6 +18,9 @@ namespace AgeOfVillagers
             addShape(new BaseTriangle(_toppoint, _topLeft, _bottomRight));
 
             addShape(new BaseRectangle(_toppoint,_bottomRight,new Point(_bottomRight.X+12,_bottomRight.Y-10), new Point(_toppoint.X+12, _toppoint.Y -10)));
+
         }
+
+      
     }
 }

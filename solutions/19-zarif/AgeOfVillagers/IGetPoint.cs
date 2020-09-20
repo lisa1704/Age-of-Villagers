@@ -7,6 +7,6 @@ namespace AgeOfVillagers
 {
     public interface IGetPoint
     {
-         Point GetPointLocation();
+        abstract Point GetPointLocation();
     }
 }

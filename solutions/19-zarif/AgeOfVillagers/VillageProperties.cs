@@ -5,9 +5,13 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-   public interface IGraphicShape
+   public class VillageProperties
     {
-        void draw(Graphics g, Pen pen);
-      
+        public VillageProperties(Point point)
+        {
+
+                
+        }
+
     }
 }

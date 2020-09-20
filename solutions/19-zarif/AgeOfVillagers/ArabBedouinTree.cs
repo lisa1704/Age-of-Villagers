@@ -7,10 +7,12 @@ namespace AgeOfVillagers
 {
     public class ArabBedouinTree : CompositeShape
     {
+        Point _toppoint;
         public ArabBedouinTree(Point point)
         {
-
-            Point _toppoint = point;
+            
+            
+            _toppoint = point;
 
             Point _topRight = new Point(_toppoint.X + 3, _toppoint.Y);
             Point _bottomLeft = new Point(_toppoint.X, _toppoint.Y + 12);
@@ -25,7 +27,9 @@ namespace AgeOfVillagers
             addShape(new BaseLine(mid, new Point(_topRight.X+12, _topRight.Y - 10)));
             addShape(new BaseLine(mid, new Point(mid_x - 6, mid_y - 12)));
             addShape(new BaseLine(_toppoint, new Point(_toppoint.X - 10, _toppoint.Y - 10)));
-
+           
         }
+
+      
     }
 }

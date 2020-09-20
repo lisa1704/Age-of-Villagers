@@ -7,10 +7,11 @@ namespace AgeOfVillagers
 {
     public class BdFarmerWaterSc : CompositeShape
     {
-       
-        public BdFarmerWaterSc(Point _point)
+        Point _point;
+        public BdFarmerWaterSc(Point point)
         {
 
+            _point = point;
             Point sec_point = new Point(_point.X + 8, _point.Y - 8);
             Point th_point = new Point(sec_point.X+10 , sec_point.Y + 8);
             Point fou_point = new Point(th_point.X + 8, _point.Y - 12);
@@ -38,5 +39,6 @@ namespace AgeOfVillagers
 
         }
 
+        
     }
 }

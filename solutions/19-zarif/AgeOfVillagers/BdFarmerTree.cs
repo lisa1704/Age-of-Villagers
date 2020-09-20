@@ -7,9 +7,10 @@ namespace AgeOfVillagers
 {
     public class BdFarmerTree : CompositeShape
     {
+        Point exlocation;
         public BdFarmerTree(Point point)
         {
-            Point exlocation = point;
+            exlocation = point;
             Point _toppoint = new Point(exlocation.X + 6, exlocation.Y+10);
 
             Point _topRight = new Point(_toppoint.X + 3, _toppoint.Y);
@@ -23,6 +24,6 @@ namespace AgeOfVillagers
 
         }
 
-       
+        
     }
 }

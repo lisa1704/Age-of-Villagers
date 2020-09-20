@@ -6,10 +6,10 @@ namespace AgeOfVillagers
 {
     public class BdFarmerHouse : CompositeShape
     {
-
+        Point _toppoint;
         public BdFarmerHouse(Point p)
         {
-            Point _toppoint = p;
+            _toppoint = p;
             Point _topLeft = new Point(_toppoint.X - 8, _toppoint.Y + 8);
             Point _bottomRight = new Point(_toppoint.X + 8, _toppoint.Y + 16);
             Point _topRight = new Point(_bottomRight.X, _topLeft.Y);
@@ -21,7 +21,6 @@ namespace AgeOfVillagers
           
         }
 
-       
        
     }
 }
