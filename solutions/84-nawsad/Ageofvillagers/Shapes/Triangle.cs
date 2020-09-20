@@ -19,7 +19,7 @@ namespace Ageofvillagers
             this.p = p;
             this.X = X;
             this.Y = Y;
-            drawshape();
+            
         }
         public void drawshape()
         {

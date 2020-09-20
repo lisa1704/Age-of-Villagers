@@ -58,8 +58,11 @@
     <Compile Include="AgeofVillagers.Designer.cs">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nations\ArabBeduin.cs" />
     <Compile Include="Nations\BangladeshiFarmer.cs" />
+    <Compile Include="Nations\EgyptianKing.cs" />
     <Compile Include="Nations\INation.cs" />
+    <Compile Include="Nations\InuitHunters.cs" />
     <Compile Include="NewDrawingBoard.cs">
       <SubType>Form</SubType>
     </Compile>

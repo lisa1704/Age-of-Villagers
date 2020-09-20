@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ageofvillagers.Nations
 {
-    class ArabBeduin
+    class ArabBeduin : INation
     {
+        public void drawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void drawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void drawWaterSource()
+        {
+            
+        }
     }
 }
