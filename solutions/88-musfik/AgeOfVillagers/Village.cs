@@ -88,6 +88,10 @@ namespace AgeOfVillagers
             waterResource_items.Add(water);
             DrawItem(g, p, point, water);
         }
+        internal VillageState createState()
+        {
+            return new VillageState(this, villageName, tree_items, house_items, waterResource_items);
+        }
     }
 
     internal class VillageState
