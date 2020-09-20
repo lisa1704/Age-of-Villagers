@@ -5,19 +5,21 @@ namespace Age_of_villagers.Shapes
 {
     class Triangle : IShape
     {
-        public void Draw(Graphics g, int x, int y, int height, int width)
-        {
-            Pen p = new Pen(Color.Red);
-            g.DrawLine(p, x, y, x + width, y);
-            g.DrawLine(p, x, y, x, y - height);
-            g.DrawLine(p, x, y - height, x + width, y - height);
-            g.DrawLine(p, x + width, y - height, x + width, y);
+        private readonly Point top;
+        private readonly Point bottomLeft;
+        private readonly Point bottomRight;
 
+        public Triangle(Point top, Point bottomLeft, Point bottomRight)
+        {
+            this.top = top;
+            this.bottomLeft = bottomLeft;
+            this.bottomRight = bottomRight;
         }
-
-        public Rectangle shape()
+        public void draw(Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            new Line(top, bottomLeft).draw(g, p);
+            new Line(top, bottomRight).draw(g, p);
+            new Line(bottomLeft, bottomRight).draw(g, p);
         }
     }
 }
