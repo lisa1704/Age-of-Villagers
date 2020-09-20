@@ -23,7 +23,6 @@ namespace AgeOfVillagers
         {
 
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -60,7 +59,7 @@ namespace AgeOfVillagers
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
-
+            Graphics g = e.Graphics ;
         }
     }
 }
