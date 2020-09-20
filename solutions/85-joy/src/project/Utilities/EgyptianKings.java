@@ -1,5 +1,8 @@
 package project.Utilities;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Arc;
+import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
 
@@ -7,6 +10,8 @@ import java.util.ArrayList;
 
 public class EgyptianKings implements INation{
     private  String TerrainColor = "#F9D423";
+    private double WaterSourceWidth = 12.0;
+    private double WaterSourceHeight = 12.0;
 
     public EgyptianKings(){
         super();
@@ -65,7 +70,21 @@ public class EgyptianKings implements INation{
 
     @Override
     public ArrayList<Shape> DrawWaterSource(double x1, double y1) {
-        return null;
+        ArrayList<Shape> WaterSource = new ArrayList<Shape>();
+
+        Arc arc = new Arc();
+        arc.setCenterX(x1);
+        arc.setCenterY(y1);
+        arc.setRadiusX(WaterSourceHeight/2.0);
+        arc.setRadiusY(WaterSourceWidth/2.0);
+        arc.setStartAngle(0.0);
+        arc.setLength(100000.0);
+        arc.setType(ArcType.OPEN);
+        arc.setStroke(Color.BLACK);
+        arc.setFill(Color.TRANSPARENT);
+
+        WaterSource.add(arc);
+        return WaterSource;
     }
 
     @Override
