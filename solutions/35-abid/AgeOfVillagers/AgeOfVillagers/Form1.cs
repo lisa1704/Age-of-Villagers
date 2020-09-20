@@ -66,15 +66,15 @@ namespace AgeOfVillagers
             //g.DrawString(text, Font, brush, new Point(x, y));
             if (chosen_component == "tree")
             {
-                nation.drawtree(p,g,pen);
+                nation.drawtree(p);
             }
             if (chosen_component == "house")
             {
-                nation.drawhouse(p,g,pen);
+                nation.drawhouse(p);
             }
             if (chosen_component == "watersrc")
             {
-                nation.drawwatersrc(p,g,pen);
+                nation.drawwatersrc(p);
             }
         }
 

@@ -18,7 +18,7 @@ namespace AgeOfVillagers
         {
             if (selectedIndex == 0)
             {
-                return new BangladeshiFarmers();
+                return new BangladeshiFarmers(this.drawingPanel);
             }
             else if (selectedIndex == 1)
             {
