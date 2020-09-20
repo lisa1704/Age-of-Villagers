@@ -43,7 +43,7 @@
             // 
             // SaveVillage
             // 
-            this.SaveVillage.Location = new System.Drawing.Point(700, 335);
+            this.SaveVillage.Location = new System.Drawing.Point(700, 326);
             this.SaveVillage.Name = "SaveVillage";
             this.SaveVillage.Size = new System.Drawing.Size(75, 23);
             this.SaveVillage.TabIndex = 3;
@@ -53,7 +53,7 @@
             // 
             // Tree
             // 
-            this.Tree.Location = new System.Drawing.Point(636, 209);
+            this.Tree.Location = new System.Drawing.Point(636, 234);
             this.Tree.Name = "Tree";
             this.Tree.Size = new System.Drawing.Size(75, 23);
             this.Tree.TabIndex = 6;
@@ -63,7 +63,7 @@
             // 
             // House
             // 
-            this.House.Location = new System.Drawing.Point(759, 209);
+            this.House.Location = new System.Drawing.Point(759, 234);
             this.House.Name = "House";
             this.House.Size = new System.Drawing.Size(75, 23);
             this.House.TabIndex = 7;
@@ -73,9 +73,9 @@
             // 
             // WaterSource
             // 
-            this.WaterSource.Location = new System.Drawing.Point(675, 238);
+            this.WaterSource.Location = new System.Drawing.Point(680, 273);
             this.WaterSource.Name = "WaterSource";
-            this.WaterSource.Size = new System.Drawing.Size(111, 23);
+            this.WaterSource.Size = new System.Drawing.Size(116, 23);
             this.WaterSource.TabIndex = 8;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             // VillageName
             // 
             this.VillageName.AutoSize = true;
-            this.VillageName.Location = new System.Drawing.Point(697, 137);
+            this.VillageName.Location = new System.Drawing.Point(706, 139);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(69, 13);
             this.VillageName.TabIndex = 11;
@@ -130,9 +130,9 @@
             "Arab Bedouin",
             "Egytian Kings",
             "Inuit HUnters"});
-            this.NationList.Location = new System.Drawing.Point(675, 167);
+            this.NationList.Location = new System.Drawing.Point(680, 180);
             this.NationList.Name = "NationList";
-            this.NationList.Size = new System.Drawing.Size(121, 21);
+            this.NationList.Size = new System.Drawing.Size(116, 21);
             this.NationList.TabIndex = 0;
             this.NationList.Text = "Nation";
             this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
@@ -141,7 +141,7 @@
             // 
             this.AgeofVillagers.AutoSize = true;
             this.AgeofVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeofVillagers.Location = new System.Drawing.Point(676, 63);
+            this.AgeofVillagers.Location = new System.Drawing.Point(676, 54);
             this.AgeofVillagers.Name = "AgeofVillagers";
             this.AgeofVillagers.Size = new System.Drawing.Size(120, 20);
             this.AgeofVillagers.TabIndex = 14;
@@ -150,9 +150,9 @@
             // 
             // VillageNametextBox
             // 
-            this.VillageNametextBox.Location = new System.Drawing.Point(686, 104);
+            this.VillageNametextBox.Location = new System.Drawing.Point(680, 99);
             this.VillageNametextBox.Name = "VillageNametextBox";
-            this.VillageNametextBox.Size = new System.Drawing.Size(100, 20);
+            this.VillageNametextBox.Size = new System.Drawing.Size(116, 20);
             this.VillageNametextBox.TabIndex = 0;
             this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
             // 
