@@ -6,7 +6,7 @@ namespace AgeOfVillagers
 {
     class NationBuilder
     {
-       public INations BuildNations(string text)
+        public INations BuildNations(string text)
         {
             if(text == "Bangladeshi Farmers")
             {
@@ -23,9 +23,14 @@ namespace AgeOfVillagers
                 return new EgyptianKings();
             }
 
-            else
+            else if(text == "Inuit Hunters")
             {
                 return new InuitHunters();
+            }
+
+            else
+            {
+                return new NoNation();
             }
         }
     }

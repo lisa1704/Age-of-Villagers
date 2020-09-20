@@ -16,8 +16,8 @@ namespace AgeOfVillagers
         int x;
         int y;
         string text;
-        string nation;
-        INations currentNation;
+        string nation = " ";
+        INations currentNation = new NoNation();
         Graphics g;
 
         NationBuilder builder = new NationBuilder();
@@ -27,18 +27,6 @@ namespace AgeOfVillagers
 
             InitializeComponent();
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
 
         private void drawingAreaPanel_MouseClick(object sender, MouseEventArgs e)
         {
@@ -116,7 +104,7 @@ namespace AgeOfVillagers
             drawingAreaPanel.Refresh();
             drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
-            nationTypeCombo.Refresh();
+            nationTypeCombo.SelectedItem = null;
         }
     }
 }

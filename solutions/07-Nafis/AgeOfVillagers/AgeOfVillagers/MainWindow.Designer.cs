@@ -97,7 +97,6 @@ namespace AgeOfVillagers
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Save Village";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.button6_Click);
             // 
             // openButton
             // 
@@ -177,7 +176,6 @@ namespace AgeOfVillagers
             this.gameHeaderLabel.TabIndex = 0;
             this.gameHeaderLabel.Text = "Age of Villagers";
             this.gameHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gameHeaderLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // MainWindow
             // 
