@@ -8,6 +8,7 @@ namespace AgeOfVillagers
     abstract class Constants
     {
         public static string error_message = "Please enter your village name";
+        public static string conversion_error_message = "is not available";
 
         //state elements
         public static string VILLAGE_NAME_ELEMENT_HINT = "Village Name";

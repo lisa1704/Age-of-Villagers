@@ -50,7 +50,7 @@ namespace AgeOfVillagers
                 return new InuitHouseIglooShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
             }
 
-            return null;
+            return new NullShape(hint);
         }
 
        
