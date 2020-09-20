@@ -11,22 +11,27 @@ import java.util.ArrayList;
 
 public class ShowWindow extends Application {
     public Stage window;
-//    public ShowWindow(INation nation) {
-//        this.nation = nation;
-//    }
-
-    public MouseClickManager mouseClickManager = new MouseClickManager();
-
     Group drawSpace = new Group();
     INation nation = new BangladeshiFarmers(drawSpace);
+
+//    public ShowWindow(INation nation, Group group) {
+//        this.nation = nation;
+//        this.drawSpace = group;
+//    }
+    public MouseClickManager mouseClickManager = new MouseClickManager();
+
+
+    public void setNation(INation nation) {
+        this.nation = nation;
+    }
 
     StateOfComponent stateOfComponent = null;
     ArrayList<StateOfComponent> stateOfComponents = new ArrayList<StateOfComponent>();
 
-    InuitHunters inuitHunters = new InuitHunters(drawSpace);
-    BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
-    EgyptianKings egyptianKings = new EgyptianKings(drawSpace);
-    ArabBedouin arabBedouin = new ArabBedouin(drawSpace);
+//    InuitHunters inuitHunters = new InuitHunters(drawSpace);
+//    BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
+//    EgyptianKings egyptianKings = new EgyptianKings(drawSpace);
+//    ArabBedouin arabBedouin = new ArabBedouin(drawSpace);
 
     DrawHouse house = this.nation.getHouse();
     DrawTree tree = this.nation.getTree();
