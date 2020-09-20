@@ -23,7 +23,8 @@ namespace AgeOfVillagers
 
         public void Draw_Tree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ArabbedouinTree tree = new ArabbedouinTree(p);
+            tree.Draw_Shape(g);
         }
 
         public void Draw_WaterSource(Graphics g, Point p)
