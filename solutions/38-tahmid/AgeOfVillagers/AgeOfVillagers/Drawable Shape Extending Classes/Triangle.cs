@@ -3,24 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
     class Triangle : DrawableShapes
     {
-        Point startPoint, rightPoint, topPoint;
+        private Point  rightPoint, topPoint;
         Graphics g;
         Pen p;
         int height, base_length;
         DrawableShapes rightLine,leftLine,baseLine;
+        private Point leftPoint;
 
-        public Triangle(Graphics g, Pen p, Point startPoint, int height, int base_length)
+        public Triangle(Point topPoint, Point rightPoint, Point leftPoint)
         {
-            this.startPoint = startPoint;
-            this.height = height;
-            this.base_length = base_length;
-            this.g = g;
-            this.p = p;
+            this.topPoint = topPoint;
+            this.rightPoint = rightPoint;
+            this.leftPoint = leftPoint;
         }
 
         public override void drawShape()
@@ -30,23 +30,19 @@ namespace AgeOfVillagers
             baseLine.drawShape();
         }
 
-        public Point getTopPoint()
+        public Point getTop()
         {
             return topPoint;
-        }
-        public Point getRightPoint()
-        {
-            return rightPoint;
         }
 
         public override void makeShape()
         {
-            rightPoint = new Point(startPoint.X + base_length, startPoint.Y);
-            topPoint = new Point(startPoint.X + (base_length / 2), startPoint.Y - height);
+            
+           
 
             rightLine = base.getLines(rightPoint, topPoint, g, p);
-            leftLine = base.getLines(startPoint, topPoint, g, p);
-            baseLine = base.getLines(startPoint, rightPoint, g, p);
+            leftLine = base.getLines(leftPoint, topPoint, g, p);
+            baseLine = base.getLines(leftPoint, rightPoint, g, p);
 
             drawShape();
         }

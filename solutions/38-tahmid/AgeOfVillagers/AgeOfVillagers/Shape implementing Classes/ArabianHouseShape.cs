@@ -15,6 +15,9 @@ namespace AgeOfVillagers.Shape_implementing_Classes
         private int hOUSE_HEIGHT;
         private int hOUSE_WIDTH;
 
+        DrawableShapeFactory drablerShapeFactory;
+
+
         public ArabianHouseShape(Graphics g, Pen pen, Point point, int hOUSE_HEIGHT, int hOUSE_WIDTH)
         {
             this.g = g;
