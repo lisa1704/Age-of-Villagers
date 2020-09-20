@@ -50,15 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Axis.cs" />
-    <Compile Include="House.cs" />
     <Compile Include="AbstractPainter.cs" />
     <Compile Include="ITree.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="SelectNation.cs" />
-    <Compile Include="Tree.cs" />
     <Compile Include="Village.cs" />
     <Compile Include="VillageSerializer.cs" />
-    <Compile Include="WaterSource.cs" />
     <Compile Include="ArabPainter.cs" />
     <Compile Include="ArabTree.cs" />
     <Compile Include="ArabWaterSource.cs" />

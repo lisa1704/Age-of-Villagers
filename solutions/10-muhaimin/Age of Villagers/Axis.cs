@@ -8,7 +8,7 @@ namespace Age_of_Villagers
 {
     class Axis
     {
-        public Axes(int x, int y)
+        public Axis(int x, int y)
         {
             X = x;
             Y = y;

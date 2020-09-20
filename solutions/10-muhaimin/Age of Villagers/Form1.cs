@@ -25,7 +25,7 @@ namespace Age_of_Villagers
             InitializeComponent();
             myVillage = new Village();
             myVS = new VillageSerializer(myVillage);
-            Nation.SelectedIndex = 1;
+            //Nation.SelectedIndex = 1;
             selectNation = new SelectNation(panel1);
         }
 
@@ -144,12 +144,5 @@ namespace Age_of_Villagers
             Refresh();
             myVillage.repaint(nation);
         }
-        public void RefreshVillage()
-        {
-            houses.Clear();
-            trees.Clear();
-            wSources.Clear();
-        }
-
     }
 }
