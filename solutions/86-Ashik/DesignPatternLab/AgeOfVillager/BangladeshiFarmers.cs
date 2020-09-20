@@ -9,10 +9,12 @@ namespace AgeOfVillager
     class BangladeshiFarmers : INation
     {
         private readonly Graphics g;
-        
-        public BangladeshiFarmers(Graphics graphics)
+        private readonly Form1 form;
+
+        public BangladeshiFarmers(Graphics graphics, Form1 form)
         {
             this.g = graphics;
+            this.form = form;
         }
 
         public void drawHouse(MouseEventArgs e)
@@ -31,6 +33,10 @@ namespace AgeOfVillager
         {
             BDFarmersWaterSource bDFarmersWaterSource = new BDFarmersWaterSource(g);
             bDFarmersWaterSource.draw(e);
+        }
+        public void setColor()
+        {
+            form.BackColor = Color.FromArgb(70, 209, 0);
         }
     }
 }

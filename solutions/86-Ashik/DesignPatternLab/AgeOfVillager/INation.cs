@@ -11,5 +11,6 @@ namespace AgeOfVillager
         void drawTree(MouseEventArgs e);
         void drawHouse(MouseEventArgs e);
         void drawWaterSource(MouseEventArgs e);
+        void setColor();
     }
 }

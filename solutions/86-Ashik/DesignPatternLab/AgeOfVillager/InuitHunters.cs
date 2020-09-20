@@ -9,10 +9,12 @@ namespace AgeOfVillager
     class InuitHunters : INation
     {
         private readonly Graphics g;
+        private readonly Form1 form;
 
-        public InuitHunters(Graphics graphics)
+        public InuitHunters(Graphics graphics, Form1 form)
         {
             this.g = graphics;
+            this.form = form;
         }
 
         public void drawHouse(MouseEventArgs e)
@@ -29,6 +31,10 @@ namespace AgeOfVillager
         public void drawWaterSource(MouseEventArgs e)
         {
             MessageBox.Show("Relies on natural water sources so it is not possible to place water sources");
+        }
+        public void setColor()
+        {
+            form.BackColor = Color.FromArgb(246, 246, 236);
         }
     }
 }

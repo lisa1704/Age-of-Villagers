@@ -16,28 +16,10 @@ namespace AgeOfVillager
         {
             Graphics g = this.CreateGraphics();
             string myNation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
-            var nationManager = new NationManager(myNation, new NationFactory(g));
+            var nationManager = new NationManager(myNation, new NationFactory(g, this));
 
-            if(myNation == "Bangladeshi Farmers")
-            {
-                this.BackColor = Color.FromArgb(70, 209, 0);
-                panel1.BackColor = Color.FromArgb(255, 255, 255);
-            }
-            else if(myNation == "Arab Bedouins")
-            {
-                this.BackColor = Color.FromArgb(210, 213, 24);
-                panel1.BackColor = Color.FromArgb(255, 255, 255);
-            }
-            else if (myNation == "Egyptian Kings")
-            {
-                this.BackColor = Color.FromArgb(250, 253, 2);
-                panel1.BackColor = Color.FromArgb(255, 255, 255);
-            }
-            else if (myNation == "Inuit Hunters")
-            {
-                this.BackColor = Color.FromArgb(246, 246, 236);
-                panel1.BackColor = Color.FromArgb(255, 255, 255);
-            }
+            nationManager.SetColor();
+            panel1.BackColor = Color.FromArgb(255, 255, 255);
 
             //tree
             if (radioButton1.Checked)
@@ -69,6 +51,11 @@ namespace AgeOfVillager
         private void button3_MouseClick(object sender, MouseEventArgs e)
         {
             this.Refresh();
+        }
+
+        public void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

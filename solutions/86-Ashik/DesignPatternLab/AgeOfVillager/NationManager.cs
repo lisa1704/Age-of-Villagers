@@ -32,5 +32,10 @@ namespace AgeOfVillager
             INation nation = nationFactory.GetNation(myNation);
             nation.drawWaterSource(e);
         }
+        public void SetColor()
+        {
+            INation nation = nationFactory.GetNation(myNation);
+            nation.setColor();
+        }
     }
 }

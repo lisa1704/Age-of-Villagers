@@ -9,9 +9,12 @@ namespace AgeOfVillager
     class EgyptianKings : INation
     {
         private readonly Graphics g;
-        public EgyptianKings(Graphics graphics)
+        private readonly Form1 form;
+
+        public EgyptianKings(Graphics graphics, Form1 form)
         {
             this.g = graphics;
+            this.form = form;
         }
 
         public void drawHouse(MouseEventArgs e)
@@ -30,6 +33,10 @@ namespace AgeOfVillager
         {
             EgyptianKingsWaterSource egyptianKingsWaterSource = new EgyptianKingsWaterSource(g);
             egyptianKingsWaterSource.draw(e);
+        }
+        public void setColor()
+        {
+            form.BackColor = Color.FromArgb(250, 253, 2);
         }
     }
 }
