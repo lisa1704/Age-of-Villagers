@@ -72,7 +72,6 @@
     <Compile Include="InuitHuntersHouse.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="Line.cs" />
-    <Compile Include="NullNation.cs" />
     <Compile Include="NullObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
