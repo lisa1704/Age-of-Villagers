@@ -15,10 +15,16 @@ namespace empty_project
         INation nation;
         SelectNation chooseNation;
         String element_text;
+        VillageSaveOpen saveOpenVillage;
+        Village village;
 
         public Form1()
         {
             InitializeComponent();
+            village = new Village();
+            saveOpenVillage = new VillageSaveOpen(village);
+            chooseNation = new SelectNation(DrawingPanel);
+            NationBox.SelectedIndex = 1;
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs paint)
@@ -28,6 +34,7 @@ namespace empty_project
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
+            saveOpenVillage.saveVillageState(village);
             MessageBox.Show("Village Saved");
         }
 
@@ -43,11 +50,15 @@ namespace empty_project
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-
+            Refresh();
+            village.RefreshVillage();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
+            village = saveOpenVillage.openVillageState();
+            Refresh();
+            village.draw(nation);
             MessageBox.Show("Village Opened");
         }
 
@@ -63,19 +74,18 @@ namespace empty_project
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs click)
         {
-            if (element_text == "Tree")
-            {
-                
-            }
             if (element_text == "House")
             {
-                
+                village.insertHouse(new Axis(click.X, click.Y), nation);
+            }
+            if (element_text == "Tree")
+            {
+                village.insertTree(new Axis(click.X, click.Y), nation);
             }
             if (element_text == "WaterSource")
             {
-                
+                village.insertWaterSource(new Axis(click.X, click.Y), nation);
             }
-            DrawingPanel.Invalidate();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,6 +96,8 @@ namespace empty_project
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = chooseNation.NationIndex(NationBox.SelectedIndex);
+            Refresh();
+            village.draw(nation);
         }
     }
 }
