@@ -65,9 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arab_house.cs" />
-    <Compile Include="Bangladeshi_house.cs" />
-    <Compile Include="Egyptian_house.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,8 +72,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Icommand.cs" />
-    <Compile Include="Inuit_house.cs" />
-    <Compile Include="IObject.cs" />
+    <Compile Include="Itemclass\Arab_house.cs" />
+    <Compile Include="Itemclass\Bangladeshi_house.cs" />
+    <Compile Include="Itemclass\Egyptian_house.cs" />
+    <Compile Include="Itemclass\Inuit_house.cs" />
+    <Compile Include="Itemclass\IObject.cs" />
     <Compile Include="Nationclass\Arab.cs" />
     <Compile Include="Nationclass\Bangladeshi.cs" />
     <Compile Include="Nationclass\Egyptian.cs" />
