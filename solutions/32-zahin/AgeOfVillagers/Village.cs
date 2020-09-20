@@ -29,4 +29,5 @@ namespace AgeOfVillagers
 Arab Bedouin
 Bangladeshi Farmers
 Egyptian Kings
-Inuit Hunters*/
+Inuit Hunters
+*/

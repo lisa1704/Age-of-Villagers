@@ -10,7 +10,7 @@ using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         Pen pen = new Pen(Color.Black);
          public ArabBedouin()

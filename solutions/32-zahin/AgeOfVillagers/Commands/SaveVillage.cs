@@ -11,6 +11,10 @@ namespace AgeOfVillagers
 {
     class SaveVillage : ICommand
     {
+        public SaveVillage()
+        {
+
+        }
         public void execute()
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();

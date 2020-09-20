@@ -9,7 +9,7 @@ using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKing : INation
+    public class EgyptianKing : INation
     {
         Pen pen = new Pen(Color.Black);
         public EgyptianKing()

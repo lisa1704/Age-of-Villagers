@@ -9,7 +9,7 @@ using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         Pen pen = new Pen(Color.Black);
         public InuitHunters()

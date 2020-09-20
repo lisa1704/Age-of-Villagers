@@ -19,10 +19,8 @@ namespace AgeOfVillagers
             {
                 JsonSerializer serializer = new JsonSerializer();
                 //VillageState state = new VillageState();
-                serializer.Serialize(sw, null);
-                sw.Close();
+                serializer.Deserialize(sr, null);
             }
-            fs.Close();
         }
     }
 }
