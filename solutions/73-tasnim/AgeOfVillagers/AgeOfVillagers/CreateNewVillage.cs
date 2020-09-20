@@ -78,6 +78,12 @@ namespace AgeOfVillagers
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);
                 Inputnation.NationType(nationType).Draw_House(g, point);
             }
+            foreach (Point point in Trees)
+            {
+                nationType = Select_Nation.Text;
+                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
+                Inputnation.NationType(nationType).Draw_Tree(g, point);
+            }
 
         }
 
@@ -88,6 +94,10 @@ namespace AgeOfVillagers
             if (clickedObject == "House")
             {
                 Houses.Add(e.Location);
+            }
+            if (clickedObject == "Tree")
+            {
+                Trees.Add(e.Location);
             }
             Draw_Panel.Invalidate();
 
