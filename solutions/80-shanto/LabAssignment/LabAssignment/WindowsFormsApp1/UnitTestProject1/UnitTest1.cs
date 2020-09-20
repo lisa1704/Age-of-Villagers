@@ -12,8 +12,8 @@ namespace WindowsFormsApp1_Test
             var actual = 2;
             var expected = 2;
             Assert.AreEqual(actual, expected);
-            
+
         }
-        
+    }
 }
 

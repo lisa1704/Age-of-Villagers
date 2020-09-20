@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1_Test
 {
-    class EgyptianKing : INation
+    public class EgyptianKing : INation
     {
         private readonly Graphics g;
         Pen mypen = new Pen(Color.Black,2);
@@ -34,6 +34,11 @@ namespace WindowsFormsApp1_Test
         {
             EgyptKingsWaterSource ekw = new EgyptKingsWaterSource(g);
             ekw.Draw(e);
+        }
+
+        public Color drawcolor()
+        {
+            return Color.Yellow;
         }
     }
 }

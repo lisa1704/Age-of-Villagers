@@ -19,11 +19,19 @@ namespace TestWindowsFormsApp1.UnitTests
 
         }
         [TestMethod]
-        public void test2()
+        public void Test2()
         {
             BangladeshiFarmers bd = new BangladeshiFarmers(g);
             Color expected = Color.Green;
             Color actual = bd.drawcolor();
+            Assert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        public void Test3()
+        {
+            EgyptianKing ek = new EgyptianKing(g);
+            Color expected = Color.Yellow;
+            Color actual = ek.drawcolor();
             Assert.AreEqual(actual, expected);
         }
     }

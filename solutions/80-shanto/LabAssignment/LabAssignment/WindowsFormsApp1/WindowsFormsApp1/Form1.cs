@@ -118,7 +118,7 @@ namespace WindowsFormsApp1_Test
                 BackColor = Color.Green;
             }
 
-            else if (nation == "Egypt Kings")
+             if (nation == "Egypt Kings")
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.Yellow;
