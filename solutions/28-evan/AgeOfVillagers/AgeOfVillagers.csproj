@@ -48,11 +48,15 @@
   <ItemGroup>
     <Compile Include="ArabBedouins.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="BDHouse.cs" />
+    <Compile Include="BDTree.cs" />
+    <Compile Include="BDWaterSource.cs" />
     <Compile Include="EgyptianKings.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />
     <Compile Include="ITree.cs" />
+    <Compile Include="IVillages.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="VillageMain.cs">
       <SubType>Form</SubType>
