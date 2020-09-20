@@ -10,31 +10,33 @@ namespace AgeOfVillagers
         private string vname;
         private Graphics gr;
         private Pen pen;
-        void set_graphics(Graphics gr)
+        void SetGraphics(Graphics gr)
         {
             this.gr = gr;
         }
-        void set_pen(Pen pen)
+        void SetPen(Pen pen)
         {
             this.pen = pen;
         }
-        void set_villagename(string vname)
+        void SetVillagename(string vname)
         {
             this.vname = vname;
         }
-        string get_villagename()
+        string GetVillagename()
         {
             return vname;
         }
-        IShapes draw_house()
+        IShapes DrawHouse(Point p)
         {
+            
+        }
+        IShapes DrawTree(Point p)
+        {
+            
 
         }
-        IShapes draw_tree()
-        {
 
-        }
-        IShapes draw_watercource()
+        IShapes DrawWaterSource(Point p)
         {
 
         }

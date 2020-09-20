@@ -18,6 +18,7 @@ namespace AgeOfVillagers
         bool PencilDown;
         int x,y;
         string vname,item;
+        INation nation;
         public VillageEditorWindow()
         {
             InitializeComponent();
@@ -29,9 +30,14 @@ namespace AgeOfVillagers
 
         private void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point();
-            x = p.X;
-            y = p.X;
+            //Point p = new Point();
+            x = e.X;
+            y = e.X;
+            Pen pen = new Pen(Color.Blue);
+            if(item == "Tree")
+            {
+                IShapes tree = nation.DrawTree(new Point(x,y);
+            }
             
         }
 
