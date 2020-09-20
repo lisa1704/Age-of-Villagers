@@ -26,15 +26,15 @@ namespace AgeOfVillagers
         {
             return vname;
         }
-        void draw_house()
+        IShapes draw_house()
         {
 
         }
-        void draw_tree()
+        IShapes draw_tree()
         {
 
         }
-        void draw_watercource()
+        IShapes draw_watercource()
         {
 
         }

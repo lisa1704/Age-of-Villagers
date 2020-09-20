@@ -11,8 +11,8 @@ namespace AgeOfVillagers
         void set_pen(Pen pen);
         void set_villagename(string vname);
         string get_villagename();
-        void draw_house(Point p);
-        void draw_tree(Point p);
-        void draw_watersource(Point p);
+        IShapes draw_house(Point p);
+        IShapes draw_tree(Point p);
+        IShapes draw_watersource(Point p);
     }
 }
