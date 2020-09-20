@@ -9,7 +9,7 @@ import javafx.scene.shape.ArcType;
 
 public class EgyptKingHouse implements IHouse {
 
-    boolean active= false;
+    boolean active= true;
     public EgyptKingHouse(){
     }
 
@@ -24,8 +24,8 @@ public class EgyptKingHouse implements IHouse {
                 if(active) {
                     graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 20, 30, 200, 360, ArcType.OPEN);
                     graphicsContext.strokeText("     Egypt house", mouseEvent.getX(), mouseEvent.getY());
-                    active = false;
                     radioButton.setSelected(false);
+                    active = false;
                 }
             }
         });

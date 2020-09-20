@@ -9,7 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class ArabBedouinHouse implements IHouse {
-    boolean active = false;
+    boolean active = true;
 
     public ArabBedouinHouse() {
     }
@@ -25,8 +25,8 @@ public class ArabBedouinHouse implements IHouse {
                 if (active) {
                     graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 10, 50, 200, 360, ArcType.OPEN);
                     graphicsContext.strokeText("arab        house", mouseEvent.getX(), mouseEvent.getY());
-                    active = false;
                     radioButton.setSelected(false);
+                    active = false;
                 }
             }
         });

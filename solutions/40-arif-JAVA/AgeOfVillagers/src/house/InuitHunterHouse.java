@@ -10,11 +10,8 @@ import javafx.scene.shape.ArcType;
 
 public class InuitHunterHouse implements IHouse {
 
-    boolean active = false;
-//    Canvas canvas;
+    boolean active = true;
     public InuitHunterHouse(){
-//        MyCanvas myCanvas = MyCanvas.getInstance();
-//        this.canvas = myCanvas.getCanvas();
     }
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
