@@ -24,11 +24,10 @@ namespace Ageofvillagers
         }
         public void drawTree(int x, int y)
         {
-            Circle C = new Circle(g,p,x,y)
+            Circle C = new Circle(g, p, x, y);
             C.drawshape();
-            Line L = new Line(g, p, x, y,10);
-
-
+            Rectangle rec = new Rectangle(g, p, x+48, y+30,5,100);
+            rec.drawshape();
         }
 
         public void drawWaterSource()

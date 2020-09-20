@@ -23,8 +23,6 @@ namespace Ageofvillagers
             this.p = p;
             this.X = X;
             this.Y = Y;
-            
-          
         }
         public Rectangle(Graphics g, Pen p, int X, int Y,int Xlength,int Ylength)
         {

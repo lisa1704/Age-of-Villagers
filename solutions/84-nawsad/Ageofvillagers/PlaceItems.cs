@@ -15,15 +15,15 @@ namespace Ageofvillagers
             Graphics g = panel2.CreateGraphics();
             Pen p = new Pen(Color.Black, 1);
             INation B = new BangladeshiFarmer(g,p);
-            B.drawHouse(e.Location.X, e.Location.Y);
+          //  B.drawHouse(e.Location.X, e.Location.Y);
+            B.drawTree(e.Location.X, e.Location.Y);
 
-            
-         //   IShape rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
-         //   rec.drawshape();
-          //Ishape l = new Line(g, p, e.Location.X, e.Location.Y);
-           // IShape T = new Triangle(g, p, e.Location.X, e.Location.Y);
-           // T.drawshape();
-          //  IShape S = new Circle(g, p, e.Location.X, e.Location.Y);
+            //   IShape rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
+            //   rec.drawshape();
+            //Ishape l = new Line(g, p, e.Location.X, e.Location.Y);
+            // IShape T = new Triangle(g, p, e.Location.X, e.Location.Y);
+            // T.drawshape();
+            //  IShape S = new Circle(g, p, e.Location.X, e.Location.Y);
 
 
         }

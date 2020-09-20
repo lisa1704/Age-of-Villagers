@@ -13,7 +13,7 @@ namespace Ageofvillagers.Nations
             throw new NotImplementedException();
         }
 
-        public void drawTree()
+        public void drawTree(int x, int y)
         {
             throw new NotImplementedException();
         }

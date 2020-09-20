@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace Ageofvillagers
 {
      class Line : IShape
-    {
+     {
         private Graphics g;
         private Pen p;
         private int X;
