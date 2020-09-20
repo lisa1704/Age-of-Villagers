@@ -11,7 +11,7 @@ namespace Age_of_Villagers
     {
         public void GetHouse(Graphics graphics, Point _point)
         {
-            InuitHouse inuit_house = new InuitHouse(new Point(_point.X, _point.Y), new Point(_point.X + 16, _point.Y));
+            Inuit_House inuit_house = new Inuit_House(new Point(_point.X, _point.Y), new Point(_point.X + 16, _point.Y));
             inuit_house.Paint(graphics);
         }
 
@@ -28,7 +28,7 @@ namespace Age_of_Villagers
 
         public Color getTerrainColour()
         {
-            throw new NotImplementedException();
+            return Color.White;
         }
 
         public void GetTree(Graphics graphics, Point _point)
