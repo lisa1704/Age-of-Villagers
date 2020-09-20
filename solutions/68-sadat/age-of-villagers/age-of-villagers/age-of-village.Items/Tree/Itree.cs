@@ -4,7 +4,8 @@ using System.Text;
 
 namespace age_of_villagers
 {
-    interface Interface1
+    interface Itree
     {
+        void createTree();
     }
 }
