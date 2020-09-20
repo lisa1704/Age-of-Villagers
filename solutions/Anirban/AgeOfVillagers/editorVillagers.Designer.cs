@@ -64,6 +64,7 @@
             this.New.TabIndex = 2;
             this.New.Text = "New";
             this.New.UseVisualStyleBackColor = true;
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // open
             // 
@@ -73,6 +74,7 @@
             this.open.TabIndex = 3;
             this.open.Text = "Open";
             this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // save
             // 
@@ -82,7 +84,7 @@
             this.save.TabIndex = 4;
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = true;
-            this.save.Click += new System.EventHandler(this.button3_Click);
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // comboBox1
             // 
@@ -108,6 +110,7 @@
             this.house_rb.TabStop = true;
             this.house_rb.Text = "House";
             this.house_rb.UseVisualStyleBackColor = true;
+            this.house_rb.CheckedChanged += new System.EventHandler(this.house_rb_CheckedChanged);
             // 
             // tree_rb
             // 
@@ -119,6 +122,7 @@
             this.tree_rb.TabStop = true;
             this.tree_rb.Text = "Tree";
             this.tree_rb.UseVisualStyleBackColor = true;
+            this.tree_rb.CheckedChanged += new System.EventHandler(this.tree_rb_CheckedChanged);
             // 
             // water_rb
             // 
@@ -130,7 +134,7 @@
             this.water_rb.TabStop = true;
             this.water_rb.Text = "Water source";
             this.water_rb.UseVisualStyleBackColor = true;
-            this.water_rb.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.water_rb.CheckedChanged += new System.EventHandler(this.water_rb_CheckedChanged);
             // 
             // editorVillagers
             // 

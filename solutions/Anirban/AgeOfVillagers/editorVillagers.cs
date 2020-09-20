@@ -20,15 +20,7 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void villageNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -52,6 +44,36 @@ namespace AgeOfVillagers
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void house_rb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tree_rb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void water_rb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void New_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void open_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void save_Click(object sender, EventArgs e)
         {
 
         }
