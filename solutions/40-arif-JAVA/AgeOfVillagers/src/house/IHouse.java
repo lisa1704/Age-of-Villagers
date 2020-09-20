@@ -2,11 +2,8 @@ package house;
 
 
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.RadioButton;
 
 public interface IHouse {
-    void draw(Canvas canvas, String item);
-
-    void releaseCanvas();
-
-    void getCanvas();
+    void draw(Canvas canvas, RadioButton radioButton);
 }
