@@ -22,10 +22,7 @@ namespace Age_of_Villagers.Bangladeshi_Farmer
             throw new NotImplementedException();
         }
 
-        private void AddComponent(Rectangle rectangle)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
     
