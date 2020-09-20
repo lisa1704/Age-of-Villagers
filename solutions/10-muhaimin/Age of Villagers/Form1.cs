@@ -19,9 +19,11 @@ namespace Age_of_Villagers
         Village myVillage = new Village();
         VillageSerializer myVS = new VillageSerializer();
         OpenFileDialog ofd = new OpenFileDialog();
+        IPainter nation;
         public Form1()
         {
             InitializeComponent();
+            nation = new BangladeshiPainter(panel1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace Age_of_Villagers
                 string fileName = ofd.FileName;
                 myVillage = myVS.openState(fileName);
                 comboBox1.Text = myVillage.getName();
-                myVillage.repaint();
+                myVillage.repaint(nation);
             }
         }
 
@@ -99,15 +101,15 @@ namespace Age_of_Villagers
         {
             if (radioButton2.Checked == true)
             {
-                myVillage.addHouse(new Axis(e.X, e.Y));
+                myVillage.addHouse(new Axis(e.X, e.Y),nation);
             }
             else if (radioButton1.Checked == true)
             {
-                myVillage.addTree(new Axis(e.X, e.Y));
+                myVillage.addTree(new Axis(e.X, e.Y), nation);
             }
             else if (radioButton3.Checked == true)
             {
-                myVillage.addWSource(new Axis(e.X, e.Y));
+                myVillage.addWSource(new Axis(e.X, e.Y), nation);
             }
         }
 
@@ -142,27 +144,24 @@ namespace Age_of_Villagers
             if (Nation.Text == "Arab Bedouin")
             {
                 panel1.Invalidate();
-                myVillage.setNation(new ArabPainter(panel1));
-                myVillage.repaint();
+                nation = new ArabPainter(panel1);
             }
             else if (Nation.Text == "Bangladeshi Farmers")
             {
                 panel1.Invalidate();
-                myVillage.setNation(new BangladeshiPainter(panel1));
-                myVillage.repaint();
+                nation = new BangladeshiPainter(panel1);
             }
             else if (Nation.Text == "Egyptian Kings")
             {
                 panel1.Invalidate();
-                myVillage.setNation(new EgyptianPainter(panel1));
-                myVillage.repaint();
+                nation = new EgyptianPainter(panel1);
             }
             else if (Nation.Text == "Inuit Hunters")
             {
                 panel1.Invalidate();
-                myVillage.setNation(new InuitPainter(panel1));
-                myVillage.repaint();
+                nation = new InuitPainter(panel1);
             }
+            myVillage.repaint(nation);
         }
     }
 }
