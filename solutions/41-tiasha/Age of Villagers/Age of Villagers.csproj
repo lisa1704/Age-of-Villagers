@@ -50,6 +50,7 @@
     <Compile Include="Bangladeshi.cs" />
     <Compile Include="Components\Arc.cs" />
     <Compile Include="Components\CompositeShape.cs" />
+    <Compile Include="Egyptian.cs" />
     <Compile Include="ElementSize.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
