@@ -11,6 +11,8 @@ public class Nation : INation
             nation = new ArabBedouin();
         else if (nationName == "Egyptian_Kings")
             nation = new EgyptianKings();
+        else if (nationName == "Inuit_Hunters")
+            nation = new InuitHunters();
         return nation;
     }
 }
