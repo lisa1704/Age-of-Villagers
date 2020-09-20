@@ -16,10 +16,6 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
-        private void textbox_VillageName_TextChanged(object sender, EventArgs e)
-        { 
-        }
-
         private void save_villName_Click(object sender, EventArgs e)
         {
             if(textbox_VillageName.Text != "")

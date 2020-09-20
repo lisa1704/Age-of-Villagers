@@ -50,7 +50,6 @@
             this.textbox_VillageName.Name = "textbox_VillageName";
             this.textbox_VillageName.Size = new System.Drawing.Size(313, 27);
             this.textbox_VillageName.TabIndex = 1;
-            this.textbox_VillageName.TextChanged += new System.EventHandler(this.textbox_VillageName_TextChanged);
             // 
             // save_villName
             // 
