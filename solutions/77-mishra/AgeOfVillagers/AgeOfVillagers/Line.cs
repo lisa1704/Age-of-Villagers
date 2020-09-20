@@ -16,12 +16,11 @@ namespace AgeOfVillagers
             this.p1 = p1;
             this.p2 = p2;
         }
-        public void draw(Point p, Panel drawingBoard)
+
+        public void draw(Point p, Graphics g)
         {
-            Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Black);
             g.DrawLine(pen, p1, p2);
-            
         }
     }
 }

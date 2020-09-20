@@ -8,7 +8,8 @@ namespace AgeOfVillagers
 {
     class InuitHunterHouse : IShape
     {
-        public void draw(Point p, Panel drawingBoard)
+
+        public void draw(Point p, Graphics g)
         {
             throw new NotImplementedException();
         }

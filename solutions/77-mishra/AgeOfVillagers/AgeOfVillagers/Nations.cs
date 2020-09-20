@@ -12,9 +12,6 @@ namespace AgeOfVillagers
         {
             this.nationtype = nationtype;
 
-        
-        
-        
             if (nationtype == "Bangladeshi Farmers")
             {
                 nation = new BdFarmer();

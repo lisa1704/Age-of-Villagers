@@ -12,23 +12,27 @@ namespace AgeOfVillagers
         {
 
         }
-        public void DrawHouse(Point p, Panel drawingBoard)
+
+        public IShape DrawHouse(Point p)
         {
-            EgyptianKingHouse egKingHouse = new EgyptianKingHouse(drawingBoard);
-            egKingHouse.draw(p, drawingBoard);
+            return new EgyptianKingHouse(p);
         }
 
-        public void DrawTree(Point p, Panel drawingBoard)
+        public IShape DrawTree(Point p)
         {
-            EgyptianKingTree egKingTree = new EgyptianKingTree(drawingBoard);
-            egKingTree.draw(p, drawingBoard);
+            return new EgyptianKingTree(p);
         }
 
-        public void DrawWaterSource(Point p, Panel drawingBoard)
+        public IShape DrawWaterSource(Point p)
         {
-            EgyptianKingWater egKingWater = new EgyptianKingWater(drawingBoard);
-            egKingWater.draw(p, drawingBoard);
+            return new EgyptianKingWater(p);
         }
+
+        public Color PaintTerrain(Point p)
+        {
+            return Color.Yellow;
+        }
+
 
         /*public Color PaintTerrain(Point p, Panel drawingBoard)
         {

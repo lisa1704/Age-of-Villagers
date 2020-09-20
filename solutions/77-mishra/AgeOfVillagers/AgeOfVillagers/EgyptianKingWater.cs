@@ -8,14 +8,13 @@ namespace AgeOfVillagers
 {
     public class EgyptianKingWater : IShape
     {
-        private Panel drawingBoard;
-        public EgyptianKingWater(Panel drawingBoard)
+        
+        public EgyptianKingWater(Point p)
         {
-            this.drawingBoard = drawingBoard;
+            
         }
-        public void draw(Point p, Panel drawingBoard)
+        public void draw(Point p, Graphics g)
         {
-            Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Blue);
             g.DrawArc(pen, p.X, p.Y, 12, 12, 45, 360);
         }

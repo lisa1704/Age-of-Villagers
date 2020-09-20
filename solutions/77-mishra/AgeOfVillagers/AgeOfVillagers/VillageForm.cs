@@ -42,7 +42,7 @@ namespace AgeOfVillagers
 
             if(radioButton1.Checked == true)
             {
-                nations.GetNation().DrawTree(p, drawingBoard);
+                nations.GetNation().DrawTree(p);
 
                 /*arabBeduin.DrawTree(p, drawingBoard);
                 bdfarmer.DrawTree(p, drawingBoard);
@@ -54,7 +54,7 @@ namespace AgeOfVillagers
             if(radioButton3.Checked == true)
             {
 
-                nations.GetNation().DrawHouse(p, drawingBoard);
+                nations.GetNation().DrawHouse(p);
                 /*arabBeduin.DrawHouse(p, drawingBoard);
                 
                 bdfarmer.DrawHouse(p, drawingBoard);
@@ -64,7 +64,7 @@ namespace AgeOfVillagers
 
             if(radioButton2.Checked == true)
             {
-                nations.GetNation().DrawWaterSource(p, drawingBoard);
+                nations.GetNation().DrawWaterSource(p);
                 //bdfarmer.DrawWaterSource(p, drawingBoard);
             }
 

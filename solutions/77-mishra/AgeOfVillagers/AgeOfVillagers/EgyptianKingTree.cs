@@ -8,19 +8,19 @@ namespace AgeOfVillagers
 {
     public class EgyptianKingTree : IShape
     {
-        private Panel drawingBoard;
-        public EgyptianKingTree(Panel drawingBoard)
+        
+        public EgyptianKingTree(Point p)
         {
-            this.drawingBoard = drawingBoard;
+           
         }
-        public void draw(Point p, Panel drawingBoard)
+
+        public void draw(Point p, Graphics g)
         {
-            Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.GreenYellow);
 
             g.DrawLine(pen, p.X, p.Y, p.X + 12, p.Y - 16);
             g.DrawLine(pen, p.X, p.Y, p.X - 12, p.Y - 16);
-            g.DrawLine(pen, p.X - 6, p.Y - 8, p.X  - 6, p.Y - 16);
+            g.DrawLine(pen, p.X - 6, p.Y - 8, p.X - 6, p.Y - 16);
             g.DrawLine(pen, p.X - 6, p.Y - 8, p.X - 12, p.Y - 7);
             g.DrawLine(pen, p.X + 6, p.Y - 8, p.X + 12, p.Y - 7);
             g.DrawLine(pen, p.X + 6, p.Y - 8, p.X + 6, p.Y - 16);
