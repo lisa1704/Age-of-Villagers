@@ -9,7 +9,7 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class BangladeshiFarmers implements INation{
-    private  String TerrainColor = "GREEN";
+    private  String TerrainColor = "#9DE0AD";
     private  double WaterSourceWidth = 24.0;
     private  double WaterSourceHeight = 16.0;
 

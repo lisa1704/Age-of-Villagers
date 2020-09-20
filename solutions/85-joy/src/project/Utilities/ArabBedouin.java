@@ -32,11 +32,15 @@ public class ArabBedouin implements  INation{
         House.add(line5);
         Line line6 = new Line(x1+((HouseWidth-4)-2),y1-HouseHeight,x1+((HouseWidth-4)/2),y1-12);
         House.add(line6);
+
         return House;
     }
 
     @Override
     public ArrayList<Shape> DrawTree(double x1, double y1) {
+        ArrayList<Shape> Tree = new ArrayList<Shape>();
+
+
         return null;
     }
 
