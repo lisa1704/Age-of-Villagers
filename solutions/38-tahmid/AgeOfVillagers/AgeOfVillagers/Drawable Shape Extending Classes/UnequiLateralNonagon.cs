@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class CrookedOctagon : DrawableShapes
+    class UnequilateralNonagon : DrawableShapes
     {
         Graphics graphics;
         Pen pen;
@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         DrawableShapes topLeftLine, topMidLeftLine, topMidRightLine, topRightLine, bottomLeftLine, bottomMidLeftLine, bottomMidRightLine, bottomRightLine,topMidLine,topEndLine,bottomEndLine;
         Point topLeftPoint, topMidLeftPoint, topMidRightPoint,  bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint,endPoint,topMidPoint;
 
-        public CrookedOctagon(Graphics graphics,Pen pen,Point startingPoint,int unitHeight,int uintWidth)
+        public UnequilateralNonagon(Graphics graphics,Pen pen,Point startingPoint,int unitHeight,int uintWidth)
         {
             this.graphics = graphics;
             this.pen = pen;

@@ -10,7 +10,7 @@ namespace AgeOfVillagers
             
             
              if(hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
-                return new CrookedOctagon(g, pen, point, height, width);
+                return new UnequilateralNonagon(g, pen, point, height, width);
             else if (hint.Equals(Constants.OVAL_HINT))
             {
                 return new Oval(g, pen, point, height, width);
