@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace AgeOfVillagers.Nations
 {
     class Inuit_hunters : INations
     {
+
+        string nation_type;
         public void Draw_House()
         {
             throw new NotImplementedException();
@@ -23,7 +26,7 @@ namespace AgeOfVillagers.Nations
             throw new NotImplementedException();
         }
 
-        public void terrain_Color()
+        public Color terrain_Color()
         {
             throw new NotImplementedException();
         }

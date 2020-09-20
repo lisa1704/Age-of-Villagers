@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace AgeOfVillagers.Nations
 {
@@ -12,6 +13,6 @@ namespace AgeOfVillagers.Nations
         void Draw_House();
         void Draw_Water();
 
-        void terrain_Color();
+        Color terrain_Color();
     }
 }

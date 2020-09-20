@@ -8,5 +8,9 @@ namespace AgeOfVillagers
 {
     class Water
     {
+        string water_type;
+
+        int height = 12;
+        int width = 12;
     }
 }
