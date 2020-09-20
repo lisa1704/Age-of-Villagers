@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmerHouse : AbstractShape
+    class BangladeshiFarmersHouse : AbstractShape
     {
-        public BangladeshiFarmerHouse(Point top, Point topleft, Point bottomright)
+        public BangladeshiFarmersHouse(Point top, Point topleft, Point bottomright)
         {
             Point topright = new Point(bottomright.X, topleft.Y);
             addShape(new Rectangle(topleft, bottomright));
