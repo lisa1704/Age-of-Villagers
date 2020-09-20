@@ -27,6 +27,7 @@ namespace AgeOfVillagers
         private List<Point> Waterpoints { get; set; } = new List<Point>();
         private List<Point> Treepoints { get; set; } = new List<Point>();
 
+        IGraphicShape _shape;
         public void get_state()
         {
             this._villagestate = new VillageState(VillageName.Text, Housepoints, Treepoints, Waterpoints);
@@ -100,19 +101,45 @@ namespace AgeOfVillagers
 
             if (Houseradiobtn.Checked)
             {
-                manager.getNation().GetHouse(_location).draw(g,pen);
-               
-                
+                manager.getNation(_location).GetHouse().draw(g,pen);
+                Point hp = manager.getNation(_location).GetHousePoint();
+                if (!hp.IsEmpty)
+                {
+
+                    Housepoints.Add(hp);
+
+                }
+
+
             }
             else if (Treeradiobtn.Checked)
             {
-                manager.getNation().GetTrees(_location).draw(g,pen);
+
+                 
+               manager.getNation(_location).GetTrees().draw(g,pen);
+               Point tp= (manager.getNation(_location).GetTreePoint());
+
+
+                if (!tp.IsEmpty)
+                {
+
+                    Treepoints.Add(tp);
+
+                }
                 
+
             }
             else if (WaterRadiobtn.Checked)
             {
-                manager.getNation().GetWaterSources(_location).draw(g, pen);
-              
+                manager.getNation(_location).GetWaterSources().draw(g,pen);
+                Point wp=(manager.getNation(_location).GetWaterPoint());
+
+                if (!wp.IsEmpty)
+                {
+
+                    Waterpoints.Add(wp);
+
+                }
             } 
 
             else
