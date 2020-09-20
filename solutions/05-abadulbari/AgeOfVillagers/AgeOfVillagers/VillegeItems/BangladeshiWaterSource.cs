@@ -29,16 +29,5 @@ namespace AgeOfVillagers.VillegeItems
             addItem(new Line(point7, point8));
             addItem(new Line(point8, point1));
         }
-        public override void draw(Graphics g, Pen p)
-        {
-            new Line(point1, point2).draw(g, p);
-            new Line(point2, point3).draw(g, p);
-            new Line(point3, point4).draw(g, p);
-            new Line(point4, point5).draw(g, p);
-            new Line(point5, point6).draw(g, p);
-            new Line(point6, point7).draw(g, p);
-            new Line(point7, point8).draw(g, p);
-            new Line(point8, point1).draw(g, p);
-        }
     }
 }
