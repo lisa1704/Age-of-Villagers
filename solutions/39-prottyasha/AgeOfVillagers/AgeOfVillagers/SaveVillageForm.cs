@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
+//using System.Text.Json;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace AgeOfVillagers
 {
@@ -26,5 +29,14 @@ namespace AgeOfVillagers
             vill.village_name = village_name;
         }
 
+        public void Save_Village()
+        {
+            string path = vill.village_name + ".aov";
+            using (StreamWriter aovfile = File.CreateText(path))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(aovfile, vill);
+            }
+        }
     }
 }
