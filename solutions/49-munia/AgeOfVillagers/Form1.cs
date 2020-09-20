@@ -26,6 +26,11 @@ namespace AgeOfVillagers
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+
+            canvas.BackColor = Color.Gainsboro;
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -45,8 +50,7 @@ namespace AgeOfVillagers
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e) //house
         {
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-            e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e) //water
         {
