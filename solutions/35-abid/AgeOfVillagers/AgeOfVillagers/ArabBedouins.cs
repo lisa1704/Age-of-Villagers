@@ -6,17 +6,17 @@ namespace AgeOfVillagers
 {
     class ArabBedouins : INation
     {
-        void INation.drawhouse()
+        public void drawhouse()
         {
             throw new NotImplementedException();
         }
 
-        void INation.drawtree()
+        public void drawtree()
         {
             throw new NotImplementedException();
         }
 
-        void INation.drawwatersrc()
+        public void drawwatersrc()
         {
             throw new NotImplementedException();
         }
