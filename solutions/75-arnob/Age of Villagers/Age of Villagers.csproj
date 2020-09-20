@@ -52,11 +52,13 @@
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Arab_Creator.cs" />
     <Compile Include="ArcShape.cs" />
-    <Compile Include="Bangladeshi Farmer\BDfarmer_tree.cs" />
+    <Compile Include="Bangladeshi Farmer\BDfarmer_Tree.cs" />
     <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
     <Compile Include="Bangladeshi Farmer\BDfarmer_House.cs" />
     <Compile Include="CompositeShaping.cs" />
+    <Compile Include="Egyptian King\Egyptian_House.cs" />
+    <Compile Include="Egyptian King\Egyptian_Tree.cs" />
     <Compile Include="Egyptian_Creator.cs" />
     <Compile Include="Egyptian_King.cs" />
     <Compile Include="EllipseShape.cs" />
@@ -67,6 +69,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="INation.cs" />
+    <Compile Include="Inuit Hunter\Inuit_House.cs" />
     <Compile Include="Inuit_Creator.cs" />
     <Compile Include="Inuit_Hunter.cs" />
     <Compile Include="IShape.cs" />
