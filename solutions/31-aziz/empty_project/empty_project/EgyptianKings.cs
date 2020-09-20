@@ -13,6 +13,8 @@ namespace empty_project
             base.house = new EgyptianKingsHouse();
             base.tree = new EgyptianKingsTree();
             base.waterSource = new EgyptianKingsWaterSource();
+            base.color = System.Drawing.Color.Yellow;
+            colorBackground();
         }
     }
 }
