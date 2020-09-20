@@ -15,6 +15,8 @@ namespace empty_project
         protected OpenFileDialog open = new OpenFileDialog();
         protected SaveFileDialog save = new SaveFileDialog();
         protected string pathSave;
+        protected string file;
+        protected string jsonText;
         public VillageSaveOpen(Village village)
         {
             villageState = village;
@@ -38,6 +40,23 @@ namespace empty_project
             {
                 return;
             }
+        }
+        public Village openVillageState()
+        {
+            open.Filter = "AoV|*.AoV";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                    file = open.FileName;
+            }
+            if (file == null)
+            {
+                    return villageState;
+            }
+            Stream stream = File.Open(file, FileMode.Open);
+            StreamReader streamreader = new StreamReader(stream);
+            jsonText = streamreader.ReadLine();
+            streamreader.Close();
+            return JsonConvert.DeserializeObject<Village>(jsonText);
         }
     }
 }
