@@ -12,6 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        Pen pen = new Pen(Color.Black);
         //int x, y;
         Graphics g;
         //Brush brush = new SolidBrush(Color.Black);
@@ -64,15 +65,15 @@ namespace AgeOfVillagers
             //g.DrawString(text, Font, brush, new Point(x, y));
             if (chosen_component == "tree")
             {
-                nation.drawtree(p,g);
+                nation.drawtree(p,g,pen);
             }
             if (chosen_component == "house")
             {
-                nation.drawhouse(p,g);
+                nation.drawhouse(p,g,pen);
             }
             if (chosen_component == "watersrc")
             {
-                nation.drawwatersrc(p,g);
+                nation.drawwatersrc(p,g,pen);
             }
         }
 
