@@ -9,10 +9,8 @@ namespace AOV
 {
     class NullShape : CompoundShape
     {
-        public NullShape(Point clicked)
+        public NullShape(Point p)
         {
-            Point x1 = new Point(clicked.X, clicked.Y);
-            addShape(new DrawLine(x1, x1));
         }
     }
 }
