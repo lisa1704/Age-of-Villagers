@@ -23,9 +23,9 @@ namespace age_of_villagers
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"C:\Users\User-PC\source\repos\age-of-villagers-swe-17\solutions\81-nawshin\age_of_villagers\SavedVillages";
-            sfd.FileName = "*.txt";
-            sfd.DefaultExt = "txt";
-            sfd.Filter = "txt file(*.txt)|*.txt";
+            sfd.FileName = "*.aov";
+            sfd.DefaultExt = "aov";
+            sfd.Filter = "aov file(*.aov)|*.aov";
             if(sfd.ShowDialog()==DialogResult.OK)
             {
                 Stream stream = sfd.OpenFile();
