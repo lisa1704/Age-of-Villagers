@@ -89,6 +89,15 @@ namespace AgeOfVillagers
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected_nation = nation_selector.Items[nation_selector.SelectedIndex].ToString();
+            if(selected_nation == "arab")
+            {
+                rbtn_waterSource.Visible = false;
+            }
+            if (selected_nation == "inuit")
+            {
+                rbtn_waterSource.Visible = false;
+                rbtn_tree.Visible = false;
+            }
         }
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
