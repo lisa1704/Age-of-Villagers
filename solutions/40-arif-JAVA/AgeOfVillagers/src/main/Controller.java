@@ -20,6 +20,8 @@ import javafx.scene.shape.ArcType;
 import javafx.stage.FileChooser;
 import nation.BDFarmers;
 import nation.NationManager;
+import statemanager.CareTaker;
+import statemanager.Originator;
 import terrain.BDFarmerTerrain;
 import terrain.ITerrain;
 import tree.ITree;
@@ -35,6 +37,8 @@ public class Controller {
     IHouse house;
     ITree tree;
     IWater water;
+    Originator originator = new Originator();
+    CareTaker careTaker = new CareTaker();
 
 
 
@@ -112,6 +116,9 @@ public class Controller {
 
         house = nationManager.getHouse();
         house.draw();
+
+        originator.setState("home");
+        careTaker.add(originator.saveStateToMemento());
     }
     @FXML
     void treeRBCon(ActionEvent actionEvent){
@@ -121,6 +128,9 @@ public class Controller {
 
         tree = nationManager.getTree();
         tree.draw();
+
+        originator.setState("tree");
+        careTaker.add(originator.saveStateToMemento());
     }
     @FXML
     void waterRBCon(ActionEvent actionEvent){
@@ -130,6 +140,9 @@ public class Controller {
 
         water = nationManager.getWater();
         water.draw();
+
+        originator.setState("water");
+        careTaker.add(originator.saveStateToMemento());
     }
 
     @FXML
