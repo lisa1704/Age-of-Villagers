@@ -115,7 +115,7 @@
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.NationBox.Location = new System.Drawing.Point(638, 68);
+            this.NationBox.Location = new System.Drawing.Point(640, 123);
             this.NationBox.Name = "NationBox";
             this.NationBox.Size = new System.Drawing.Size(121, 23);
             this.NationBox.TabIndex = 0;
