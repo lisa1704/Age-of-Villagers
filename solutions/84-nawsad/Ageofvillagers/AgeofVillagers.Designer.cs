@@ -295,7 +295,7 @@
         private System.Windows.Forms.ComboBox Select_Nation_Combo_box;
         private System.Windows.Forms.TextBox SelectNationText;
         private System.Windows.Forms.Button RefreshButton;
-        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel2;
     }
 }
 

@@ -21,14 +21,7 @@ namespace Ageofvillagers
 
         }
 
-        private void panel2_MouseClick(object sender, MouseEventArgs e)
-        {
-            Graphics g = panel2.CreateGraphics();
-            Pen p = new Pen(Color.Black, 4);
-            g.DrawLine(p,e.Location.X,e.Location.Y, e.Location.X+100, e.Location.Y);
-            Console.WriteLine(e.Location.X);
-            Console.WriteLine(e.Location.Y);
-        }
+      
     }
     
 }
