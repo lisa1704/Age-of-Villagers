@@ -13,6 +13,11 @@ namespace Age_of_Villagers
 {
     public partial class VillageCreator : Form
     {
+        int x, y;
+        string text = "";
+        string name = "";
+        public Graphics g;
+        public Pen p;
         public VillageCreator()
         {
             InitializeComponent();
@@ -54,6 +59,7 @@ namespace Age_of_Villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
             
         }
 
@@ -61,5 +67,25 @@ namespace Age_of_Villagers
         {
 
         }
+        private void main_panelMouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = new Point(e.X, e.Y);
+            Graphics g = panel1.CreateGraphics();
+            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            if (Tree.Checked)
+            {
+
+            }
+            else if (House.Checked)
+            {
+
+            }
+            else if (WaterSource.Checked)
+            {
+
+            }
+
+        }
+
     }
 }
