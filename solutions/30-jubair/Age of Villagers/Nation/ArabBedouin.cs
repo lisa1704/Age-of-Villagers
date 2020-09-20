@@ -29,15 +29,16 @@ namespace Age_of_Villagers.Nation
 
         public void GetHouse(Graphics graphics, Point _point)
         {
-            ArabHouse arab_house = new ArabHouse(new Point(_point.X - 8, _point.Y - 16), new Point(_point.X - 16, _point.Y ), new Point(_point.X , _point.Y), new Point(_point.X - 24, _point.Y - 16), new Point(_point.X-32, _point.Y));
+            ArabHouse arab_house = new ArabHouse(new Point(_point.X, _point.Y), new Point(_point.X - 4, _point.Y + 13), new Point(_point.X + 4, _point.Y + 13), new Point(_point.X + 8, _point.Y - 3), new Point(_point.X + 12, _point.Y + 11));
             arab_house.Paint(graphics);
             //Point baseLeft , Point baseMedium , Point topOne, Point baseRight , Point topTwo
-            //new Point(_point.X - 4, _point.Y - 8), new Point(_point.X - 8, _point.Y ), new Point(_point.X , _point.Y), new Point(_point.X - 12, _point.Y - 8), new Point(_point.X-16, _point.Y)
+            
+
         }
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            ArabTree arab_tree = new ArabTree(new Point(_point.X, _point.Y), new Point(_point.X+10, _point.Y-6), new Point(_point.X - 10, _point.Y - 6), new Point(_point.X + 6, _point.Y - 10), new Point(_point.X - 6, _point.Y - 10), new Point(_point.X, _point.Y-12), new Point(_point.X-1, _point.Y+8), new Point(_point.X+1, _point.Y));
+            ArabTree arab_tree = new ArabTree(new Point(_point.X, _point.Y), new Point(_point.X + 8, _point.Y - 4), new Point(_point.X - 8, _point.Y - 4), new Point(_point.X + 6, _point.Y - 10), new Point(_point.X - 6, _point.Y - 10), new Point(_point.X, _point.Y - 13), new Point(_point.X - 1, _point.Y + 8), new Point(_point.X + 1, _point.Y));
             arab_tree.Paint(graphics);        
         }
 

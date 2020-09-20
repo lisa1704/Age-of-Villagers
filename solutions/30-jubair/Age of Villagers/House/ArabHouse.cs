@@ -8,13 +8,14 @@ namespace Age_of_Villagers.House
 {
     class ArabHouse : CompositeShape
     {
-        public ArabHouse( Point baseLeft , Point baseMedium , Point topOne, Point baseRight , Point topTwo)
+        public ArabHouse(Point topOne, Point baseLeft , Point baseMedium, Point topTwo, Point baseRight)
+           
         {
             //Triangle
             //AddComponent(new Line(baseLeft, baseMedium)); ////////
             AddComponent(new Line(baseMedium, topOne));
             AddComponent(new Line(topOne, baseLeft));
-            AddComponent(new Line(baseRight, baseLeft)); ////*****
+            AddComponent(new Line(baseMedium, baseLeft)); ////*****
             //Rectangle
            AddComponent(new Line(baseMedium,baseRight));
            AddComponent(new Line(topOne, topTwo));

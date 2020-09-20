@@ -19,6 +19,18 @@ namespace Age_of_Villagers.Village_Saving
         }
 
 
+        public string getVillageName()
+        {
+            return villageName;
+        }
+        public void setVillageName(string name)
+        {
+            villageName = name;
+        }
+
+
+
+
         public void ReDrawVillage(Graphics graphics, INation ination)
         {
             foreach (Point house in houseList)

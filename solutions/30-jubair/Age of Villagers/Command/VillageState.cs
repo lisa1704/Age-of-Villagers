@@ -8,10 +8,12 @@ namespace Age_of_Villagers.Village_Saving
 {
     public class VillageState
     {
-
         public List<Point> houseList = new List<Point>();
         public List<Point> treeList = new List<Point>();
         public List<Point> waterResourceList = new List<Point>();
+
+
+        
 
         public void AddHouse(Graphics graphics, Point house, INation ination)
 
