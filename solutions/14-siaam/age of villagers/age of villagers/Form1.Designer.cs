@@ -96,6 +96,12 @@
             this.nation.Size = new System.Drawing.Size(165, 24);
             this.nation.TabIndex = 5;
             this.nation.Text = "Select Nation";
+            this.nation.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            //"Arab Beduin",
+            //"Egyptian king",
+            //"Inuit Hunter"
+            });
             this.nation.SelectedIndexChanged += new System.EventHandler(this.nation_SelectedIndexChanged);
             // 
             // vill_name
