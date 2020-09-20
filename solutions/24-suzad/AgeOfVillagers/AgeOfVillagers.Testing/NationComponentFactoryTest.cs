@@ -34,5 +34,14 @@ namespace AgeOfVillagers.Testing
             var expected = typeof(EgyptianKingHouse);
             Assert.IsType(expected, egyptianKingComponentFactory.getComponent("House", p));
         }
+
+        [Fact]
+        public void InuitHunterComponentFactoryTesting()
+        {
+            Point p = new Point(100, 100);
+            InuitHunterComponentFactory inuitHunterComponentFactory = new InuitHunterComponentFactory();
+            var expected = typeof(InuitHunterHouse);
+            Assert.IsType(expected, inuitHunterComponentFactory.getComponent("House", p));
+        }
     }
 }

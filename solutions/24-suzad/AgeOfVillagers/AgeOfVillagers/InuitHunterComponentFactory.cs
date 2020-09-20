@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunterComponentFactory : VillageComponentFactory
+    public class InuitHunterComponentFactory : VillageComponentFactory
     {
         public override VillageComponent getComponent(string radiobtn,Point e)
         {
