@@ -25,5 +25,14 @@ namespace AgeOfVillagers.Testing
             Point actual = obj.getPoint();
             Assert.Equal(actual, p);
         }
+
+        [Fact]
+        public void EgyptianKingRiverTest()
+        {
+            Point p = new Point(10, 10);
+            EgyptianKingRiver obj = new EgyptianKingRiver(p);
+            Point actual = obj.getPoint();
+            Assert.Equal(actual, p);
+        }
     }
 }
