@@ -23,7 +23,7 @@ namespace AgeOfVillagers
 
         public void Draw_Tree(Graphics g, Point p)
         {
-            ArabbedouinTree tree = new ArabbedouinTree(p);
+            ArabBedouinTree tree = new ArabBedouinTree(p);
             tree.Draw_Shape(g);
         }
 

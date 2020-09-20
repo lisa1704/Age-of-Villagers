@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class ArabbedouinTree : AbstractShape
+    class ArabBedouinTree : AbstractShape
     {
-        public ArabbedouinTree(Point Initialpoint)
+        public ArabBedouinTree(Point Initialpoint)
         {
             Point TopRight = new Point(Initialpoint.X + 22, Initialpoint.Y + 20);
             Point RightTopLeftPoint = new Point(Initialpoint.X + 20, Initialpoint.Y + 20);
