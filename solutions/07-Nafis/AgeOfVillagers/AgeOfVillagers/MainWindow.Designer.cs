@@ -45,7 +45,7 @@ namespace AgeOfVillagers
             this.SuspendLayout();
             // 
             // drawingAreaPanel
-            //
+            // 
             this.drawingAreaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.drawingAreaPanel.Location = new System.Drawing.Point(12, 12);
             this.drawingAreaPanel.Name = "drawingAreaPanel";
@@ -120,6 +120,7 @@ namespace AgeOfVillagers
             this.newButton.TabIndex = 3;
             this.newButton.Text = "New Village";
             this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // waterButton
             // 

@@ -111,7 +111,12 @@ namespace AgeOfVillagers
 
         }
 
-        
-
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            drawingAreaPanel.Refresh();
+            drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            villageNameBox.Clear();
+            nationTypeCombo.Refresh();
+        }
     }
 }
