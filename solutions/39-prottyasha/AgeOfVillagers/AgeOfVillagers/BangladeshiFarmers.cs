@@ -9,9 +9,9 @@ namespace AgeOfVillagers
     {
         public void drawhouse(Point p, Graphics g, Pen pen)
         {
-            Point p1 = new Point(p.X - 8, p.Y - 8);
+            Point p1 = new Point(p.X - 8, p.Y + 8);
             Point p2 = new Point(p1.X + 16, p1.Y);
-            Point p3 = new Point(p1.X, p1.Y - 8);
+            Point p3 = new Point(p1.X, p1.Y + 8);
             Point p4 = new Point(p3.X + 16, p3.Y);
             g.DrawLine(pen, p, p1);
             g.DrawLine(pen, p, p2);
@@ -24,9 +24,10 @@ namespace AgeOfVillagers
         public void drawtree(Point p, Graphics g, Pen pen)
         {
             g.DrawArc(pen, p.X, p.Y, 16, 16, 0, 360);
-            Point p1 = new Point(p.X - 2, p.Y);
-            Point p2 = new Point(p.X + 2, p.Y);
-            Point p3 = new Point(p1.X, p1.Y - 8);
+            Point pc = new Point(p.X + 8, p.Y + 16);
+            Point p1 = new Point(pc.X - 2, pc.Y);
+            Point p2 = new Point(pc.X + 2, pc.Y);
+            Point p3 = new Point(p1.X, p1.Y + 16);
             Point p4 = new Point(p2.X, p3.Y);
             g.DrawLine(pen, p1, p2);
             g.DrawLine(pen, p1, p3);

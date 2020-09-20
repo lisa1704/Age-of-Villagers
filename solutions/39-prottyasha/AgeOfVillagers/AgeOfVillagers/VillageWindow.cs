@@ -89,8 +89,9 @@ namespace AgeOfVillagers
             selected_nation = nation_selector.Items[nation_selector.SelectedIndex].ToString();
             if(selected_nation == "Arab Bedouins")
             {
-                DrawingPanel.BackColor = Color.Gold;
+                DrawingPanel.BackColor = Color.GreenYellow;
                 rbtn_waterSource.Visible = false;
+                rbtn_tree.Visible = true;
             }
             if (selected_nation == "Inuit Hunters")
             {
@@ -101,10 +102,14 @@ namespace AgeOfVillagers
             if (selected_nation == "Bangladeshi Farmers")
             {
                 DrawingPanel.BackColor = Color.Green;
+                rbtn_waterSource.Visible = true;
+                rbtn_tree.Visible = true;
             }
             if (selected_nation == "Egyptian Kings")
             {
                 DrawingPanel.BackColor = Color.Yellow;
+                rbtn_waterSource.Visible = true;
+                rbtn_tree.Visible = true;
             }
         }
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
