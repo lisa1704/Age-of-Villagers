@@ -1,6 +1,6 @@
 ﻿namespace AgeOfVillagers
 {
-    partial class Form1
+    partial class VillageMain
     {
         /// <summary>
         /// Required designer variable.
@@ -50,12 +50,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Inuit Hunters",
+            "Egyptian Kings",
+            "Arab Bedouin",
+            "Bangladeshi Farmers"});
             this.comboBox1.Location = new System.Drawing.Point(743, 115);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
             // 
-            // Form1
+            // VillageMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -63,8 +68,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "VillageMain";
+            this.Text = "Age Of Villagers";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
