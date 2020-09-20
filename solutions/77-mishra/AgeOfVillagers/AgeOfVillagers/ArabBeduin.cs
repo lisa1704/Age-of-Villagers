@@ -26,12 +26,14 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public Color PaintTerrain(Point p, Panel drawingBoard)
+        /*public Color PaintTerrain(Point p, Panel drawingBoard)
         {
             throw new NotImplementedException();
         }
+        */
+        
     }
 }

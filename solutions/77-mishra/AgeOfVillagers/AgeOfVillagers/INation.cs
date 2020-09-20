@@ -9,6 +9,6 @@ namespace AgeOfVillagers
 		public void DrawHouse(Point p, Panel drawingBoard);
 		public void DrawTree(Point p, Panel drawingBoard);
 		public void DrawWaterSource(Point p, Panel drawingBoard);
-		public Color PaintTerrain(Point p, Panel drawingBoard);
+		//public Color PaintTerrain(Point p, Panel drawingBoard);
 	}
 }

@@ -118,8 +118,23 @@ namespace AgeOfVillagers
         {
             Nations nations = new Nations(nationtype);
             nationtype = Nation.Text;
-            //drawingBoard.BackColor = nations.GetNation().PaintTerrain(p, drawingBoard);
-            
+            if (nationtype == "Bangladeshi Farmers")
+            {
+                drawingBoard.BackColor = Color.Green;
+            }
+            else if (nationtype == "Arab Beduins")
+            {
+                drawingBoard.BackColor = Color.Transparent;
+            }
+            else if (nationtype == "Egyptian King")
+            {
+                drawingBoard.BackColor = Color.Yellow;
+            }
+            else if (nationtype == "Iniut Hunter")
+            {
+                drawingBoard.BackColor = Color.White;
+            }
+
         }
     }
 }

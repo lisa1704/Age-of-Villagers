@@ -32,10 +32,7 @@ namespace AgeOfVillagers
             {
                 nation = new InuitHunter();
             }
-            else
-            {
-                nation = new Nullnation();
-            }
+            
         }
         public INation GetNation()
         {
