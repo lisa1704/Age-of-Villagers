@@ -8,21 +8,16 @@ namespace AgeOfVillagers
 {
     public class BdTree : IShape
     {
-        private Panel drawingBoard;
-
-        public BdTree(Panel drawingBoard)
+        public BdTree(Point p)
         {
-            this.drawingBoard = drawingBoard;
+            
         }
-        public void draw(Point p, Panel drawingBoard)
+        public void draw(Point p, Graphics g)
         {
-            Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Green);
 
             g.DrawArc(pen, p.X, p.Y, 16, 24, 90, 360);
             g.DrawLine(pen, p.X + 8, p.Y, p.X + 8, p.Y + 16);
-
-            
         }
     }
 }

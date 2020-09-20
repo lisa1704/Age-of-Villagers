@@ -13,23 +13,27 @@ namespace AgeOfVillagers
         {
             
         }
-        public void DrawHouse(Point p, Panel drawingBoard)
+        public IShape DrawHouse(Point p)
         {
-            BdFarmerHouse bdHouse = new BdFarmerHouse(drawingBoard);
-            bdHouse.draw(p, drawingBoard);
+            return new BdFarmerHouse(p);
         }
 
-        public void DrawTree(Point p, Panel drawingBoard)
-        {
-            BdTree bdTree = new BdTree(drawingBoard);
-            bdTree.draw(p, drawingBoard);
+       
 
+        public IShape DrawTree(Point p)
+        {
+            return new BdTree(p);
         }
 
-        public void DrawWaterSource(Point p, Panel drawingBoard)
+
+        public IShape DrawWaterSource(Point p)
         {
-            BdWater bdWater = new BdWater(drawingBoard);
-            bdWater.draw(p, drawingBoard);
+            return new BdWater(p);
+        }
+
+        public Color PaintTerrain(Point p)
+        {
+            return Color.Green;
         }
 
         /*public Color PaintTerrain(Point p, Panel drawingBoard)
@@ -38,6 +42,6 @@ namespace AgeOfVillagers
             
         }*/
 
-        
+
     }
 }

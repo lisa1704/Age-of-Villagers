@@ -8,15 +8,12 @@ namespace AgeOfVillagers
 {
     public class BdFarmerHouse : IShape
     {
-        private Panel drawingBoard;
-        
-        public BdFarmerHouse(Panel drawingBoard)
+        public BdFarmerHouse(Point p)
         {
-            this.drawingBoard = drawingBoard;
+          
         }
-        public void draw(Point p, Panel drawingBoard)
+        public void draw(Point p, Graphics g)
         {
-            Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Brown);
 
             g.DrawLine(pen, p.X, p.Y, p.X + 8, p.Y + 8);

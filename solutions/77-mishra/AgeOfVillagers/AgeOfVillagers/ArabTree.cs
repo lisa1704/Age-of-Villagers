@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         
        
 
-        public ArabTree(Point point)
+        public ArabTree(Point p)
         {
 
         }
