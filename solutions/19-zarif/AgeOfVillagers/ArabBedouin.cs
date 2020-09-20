@@ -7,10 +7,22 @@ namespace AgeOfVillagers
 {
     class ArabBedouin : INation
     {
-        public IGraphicShape GetHouse(Point point)
+        private Point _point;
+
+
+        public ArabBedouin(Point point)
+        {
+            _point = point;
+        }
+        public IGraphicShape GetHouse()
         {
 
-            return new ArabBedouinHouse(point);
+            return new ArabBedouinHouse(_point);
+        }
+
+        public Point GetHousePoint()
+        {
+            return _point;
         }
 
         public Color GetTerritoryColor()
@@ -18,12 +30,22 @@ namespace AgeOfVillagers
             return Color.GreenYellow;
         }
 
-        public IGraphicShape GetTrees(Point point)
+        public Point GetTreePoint()
         {
-            return new ArabBedouinTree(point);
+            return _point;
         }
 
-        public IGraphicShape GetWaterSources(Point point)
+        public IGraphicShape GetTrees()
+        {
+            return new ArabBedouinTree(_point);
+        }
+
+        public Point GetWaterPoint()
+        {
+            return Point.Empty;
+        }
+
+        public IGraphicShape GetWaterSources()
         {
             return new NullHandler();
         }
