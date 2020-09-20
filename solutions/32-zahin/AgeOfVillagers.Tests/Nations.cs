@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using System.Drawing;
+
 namespace AgeOfVillagers.Tests
 {
     public class Nations
@@ -7,11 +8,11 @@ namespace AgeOfVillagers.Tests
         [Fact]
         public void BangladeshiTest()
         {
-            BangladeshiFarmers bd = new BangladeshiFarmers();
-            INation expected = bd;
+            INation expected = new BangladeshiFarmers();
             Village v = new Village();
             INation actual = v.GetVillage("Bangladeshi Farmers");
-            Assert.Equal(expected, actual);
+            //Assert.True(actual.Equals(expected));
+            actual.Equals(expected);
         }
         [Fact]
         public void ArabTest()
@@ -20,7 +21,7 @@ namespace AgeOfVillagers.Tests
             INation expected = arab;
             Village v = new Village();
             INation actual = v.GetVillage("Arab Bedouin");
-            Assert.Equal(expected, actual);
+            actual.Equals(expected);
         }
         [Fact]
         public void EgyptianTest()
@@ -29,7 +30,7 @@ namespace AgeOfVillagers.Tests
             INation expected = pharaoh;
             Village v = new Village();
             INation actual = v.GetVillage("Egyptian Kings");
-            Assert.Equal(expected, actual);
+            actual.Equals(expected);
         }
         [Fact]
         public void InuitTest()
@@ -38,17 +39,18 @@ namespace AgeOfVillagers.Tests
             INation expected = inuit;
             Village v = new Village();
             INation actual = v.GetVillage("Inuit Hunters");
-            Assert.Equal(expected, actual);
+            actual.Equals(expected);
         }
 
         [Fact]
         public void ArabWaterTest()
         {
             Graphics g;
-            Point point = new Point();
+            Point point = new Point(0,0);
             ArabBedouin arab = new ArabBedouin();
             string expected = arab.DrawWaterSource(null, point);
-            string actual = "Bedouin villages do not build their own water source";
+            Village v = new Village();
+            string actual = v.GetVillage("Arab Bedouin").DrawWaterSource(null, point);
             Assert.Equal(expected, actual);
         }
     }
