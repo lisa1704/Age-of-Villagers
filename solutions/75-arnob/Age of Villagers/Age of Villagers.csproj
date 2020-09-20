@@ -53,7 +53,7 @@
     <Compile Include="ArcShape.cs" />
     <Compile Include="BangladeshiFarmer_Creator.cs" />
     <Compile Include="Bangladeshi_Farmer.cs" />
-    <Compile Include="BD Farmer\BDfarmer_House.cs" />
+    <Compile Include="Bangladeshi Farmer\BDfarmer_House.cs" />
     <Compile Include="CompositeShaping.cs" />
     <Compile Include="Egyptian_Creator.cs" />
     <Compile Include="Egyptian_King.cs" />
