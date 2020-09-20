@@ -22,11 +22,12 @@ public class ShowWindow extends Application {
     InuitHunters inuitHunters = new InuitHunters(drawSpace);
     BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
     EgyptianKings egyptianKings = new EgyptianKings(drawSpace);
+    ArabBedouin arabBedouin = new ArabBedouin(drawSpace);
 
-    DrawHouse house = egyptianKings.house;
-    DrawTree tree = egyptianKings.tree;
-    DrawWater water = egyptianKings.water;
-    public GridOfControls gridOfControls = new GridOfControls(house, tree, water, egyptianKings.nationName);
+    DrawHouse house = arabBedouin.house;
+    DrawTree tree = arabBedouin.tree;
+    DrawWater water = arabBedouin.water;
+    public GridOfControls gridOfControls = new GridOfControls(house, tree, water, arabBedouin.nationName);
 
     public void setDrawSpace(Group drawSpace) {
         this.drawSpace = drawSpace;
