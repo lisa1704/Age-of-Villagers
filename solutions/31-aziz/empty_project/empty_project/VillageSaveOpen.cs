@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace empty_project
 {
@@ -11,15 +12,32 @@ namespace empty_project
     {
         protected Village villageState;
         protected string villageSerialized;
-
+        protected OpenFileDialog open = new OpenFileDialog();
+        protected SaveFileDialog save = new SaveFileDialog();
+        protected string pathSave;
         public VillageSaveOpen(Village village)
         {
             villageState = village;
         }
-        public void saveVillage(Village village)
+        public void saveVillageState(Village village)
         {
             villageState = village;
             villageSerialized = JsonConvert.SerializeObject(villageState);
+            save.Filter = "AoV|*.AoV";
+            if(save.ShowDialog()==DialogResult.OK)
+            {
+                pathSave = save.FileName;
+            }
+            if(pathSave != null)
+            {
+                using (Stream stream = File.Open(pathSave, FileMode.Create))
+                using (StreamWriter streamWriter = new StreamWriter(stream))
+                streamWriter.Write(villageSerialized);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
