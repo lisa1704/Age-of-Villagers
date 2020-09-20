@@ -2,6 +2,7 @@ package Project.Controllers;
 
 import Project.Utilities.Bangladeshi_Farmers;
 import Project.Utilities.INations;
+import Project.Utilities.NationFactory;
 import Project.Utilities.Village;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -30,6 +31,7 @@ public class VillageView_controller implements Initializable {
     @FXML public ComboBox NationList = new ComboBox();
     @FXML private Pane DrawingCanvas;
     public String flag;
+    public INations nation;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -129,12 +131,8 @@ public class VillageView_controller implements Initializable {
     }
 
     public void ChangeNation(ActionEvent actionEvent) {
-        if((String) NationList.getValue() == "Bangladeshi Farmers"){
-            INations BDFarmers = new Bangladeshi_Farmers();
-            DrawingCanvas.setStyle("-fx-background-color:"+BDFarmers.GetTerrainColor());
-        }
-        else{
-            DrawingCanvas.setStyle("-fx-background-color:"+"White");
-        }
+        NationFactory FNation = new NationFactory((String) NationList.getValue());
+        nation = FNation.createNation();
+        DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
     }
 }
