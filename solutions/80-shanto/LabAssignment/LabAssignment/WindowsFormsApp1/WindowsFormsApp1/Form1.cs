@@ -130,12 +130,7 @@ namespace WindowsFormsApp1
             {
                 BackColor = Color.White;
 
-                if (radioButton2.Checked)
-                {
-                    InuitHunters iht = new InuitHunters(g);
-                    iht.DrawTree(e);
-
-                }
+                
                 if (radioButton3.Checked)
                 {
                     InuitHunters iht = new InuitHunters(g);
@@ -148,14 +143,6 @@ namespace WindowsFormsApp1
                 panel1.BackColor = Color.White;
                 BackColor = Color.YellowGreen;
 
-
-                
-                if (radioButton2.Checked)
-                {
-                    ArabBedouin abt = new ArabBedouin(g);
-                    abt.DrawTree(e);
-
-                }
                 if (radioButton3.Checked)
                 {
                     ArabBedouin abt = new ArabBedouin(g);
