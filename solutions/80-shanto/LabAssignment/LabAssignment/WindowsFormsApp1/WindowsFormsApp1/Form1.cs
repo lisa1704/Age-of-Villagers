@@ -115,12 +115,7 @@ namespace WindowsFormsApp1
 
                 }
             }
-            if (radioButton1.Checked)
-            {
-
-                nationManager.DrawHouse(e);
-
-            }
+            
 
 
             else if (nation == "Egypt Kings")
@@ -129,12 +124,7 @@ namespace WindowsFormsApp1
                 panel1.BackColor = Color.White;
                 BackColor = Color.Yellow;
 
-                /*if (radioButton1.Checked)
-                {
-                    EgyptianKing ekh = new EgyptianKing(g);
-                    ekh.DrawHouse(e);
 
-                }*/
                 if (radioButton2.Checked)
                 {
                     EgyptianKing ekt = new EgyptianKing(g);
@@ -177,12 +167,9 @@ namespace WindowsFormsApp1
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.YellowGreen;
-                if (radioButton1.Checked)
-                {
-                    ArabBedouin abt = new ArabBedouin(g);
-                    abt.DrawHouse(e);
 
-                }
+
+                
                 if (radioButton2.Checked)
                 {
                     ArabBedouin abt = new ArabBedouin(g);
@@ -197,7 +184,12 @@ namespace WindowsFormsApp1
                 }
             }
 
-            
+            if (radioButton1.Checked)
+            {
+
+                nationManager.DrawHouse(e);
+
+            }
 
         }
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)

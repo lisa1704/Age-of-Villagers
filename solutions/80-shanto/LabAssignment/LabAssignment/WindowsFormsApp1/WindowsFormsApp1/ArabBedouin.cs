@@ -20,19 +20,9 @@ namespace WindowsFormsApp1
         }
         public void DrawHouse(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
 
-
-
-            g.DrawLine(mypen, x+25, y-25, x + 50, y - 30);
-            g.DrawLine(mypen, x + 50, y - 30, x + 70, y - 15);
-            g.DrawLine(mypen, x+50, y, x + 70, y -15);
-
-            g.DrawLine(mypen, x, y, x + 25, y - 25);
-            g.DrawLine(mypen, x + 25, y - 25, x + 50, y);
-            g.DrawLine(mypen, x , y , x + 50, y);
-
+            ArabBedouinHouse abh = new ArabBedouinHouse(g);
+            abh.Draw(e);
         }
 
         public void DrawTree(MouseEventArgs e)
