@@ -1,10 +1,12 @@
 ﻿using System;
+
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers.Bangladeshi_Farmer
+namespace Age_of_Villagers.Bangladeshi_Farmer_Item
 {
     class BDfarmer_WaterSource : CompositeShaping
     {
@@ -20,6 +22,7 @@ namespace Age_of_Villagers.Bangladeshi_Farmer
             AddComponent(new Line(pt7, pt8));
             AddComponent(new Line(pt8, startPoint));
         }
+
 
     }
 }
