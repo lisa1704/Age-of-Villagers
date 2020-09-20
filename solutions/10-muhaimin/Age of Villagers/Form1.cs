@@ -19,12 +19,14 @@ namespace Age_of_Villagers
         Village myVillage;
         VillageSerializer myVS;
         IPainter nation;
+        SelectNation selectNation;
         public Form1()
         {
             InitializeComponent();
             myVillage = new Village();
             myVS = new VillageSerializer(myVillage);
-            nationList.SelectedIndex = 1;
+            Nation.SelectedIndex = 1;
+            selectNation = new SelectNation(panel1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -138,22 +140,7 @@ namespace Age_of_Villagers
 
         private void Nation_TextChanged(object sender, EventArgs e)
         {
-            if (Nation.Text == "Arab Bedouin")
-            {
-                nation = new ArabPainter(panel1);
-            }
-            else if (Nation.Text == "Bangladeshi Farmers")
-            {
-                nation = new BangladeshiPainter(panel1);
-            }
-            else if (Nation.Text == "Egyptian Kings")
-            {
-                nation = new EgyptianPainter(panel1);
-            }
-            else if (Nation.Text == "Inuit Hunters")
-            {
-                nation = new InuitPainter(panel1);
-            }
+            nation = selectNation.selectedNationUpdate(Nation.SelectedIndex);
             Refresh();
             myVillage.repaint(nation);
         }
