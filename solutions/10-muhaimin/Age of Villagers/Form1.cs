@@ -18,7 +18,6 @@ namespace Age_of_Villagers
         String text = "";
         Village myVillage = new Village();
         VillageSerializer myVS = new VillageSerializer();
-        OpenFileDialog ofd = new OpenFileDialog();
         IPainter nation;
         public Form1()
         {
@@ -38,20 +37,15 @@ namespace Age_of_Villagers
 
         private void button4_Click(object sender, EventArgs e)
         {
-            myVS.saveState(myVillage);
+            Refresh();
+            myVillage.RefreshVillage();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ofd.Filter = "aov|*.aov";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                string fileName = ofd.FileName;
-                myVillage = myVS.openState(fileName);
-                comboBox1.Text = myVillage.getName();
-                myVillage.repaint(nation);
-                nation.paintTerrain();
-            }
+            myVillage = myVS.restoreState();
+            Refresh();
+            myVillage.repaint(nation);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -160,6 +154,12 @@ namespace Age_of_Villagers
             }
             Refresh();
             myVillage.repaint(nation);
+        }
+        public void RefreshVillage()
+        {
+            houses.Clear();
+            trees.Clear();
+            wSources.Clear();
         }
     }
 }
