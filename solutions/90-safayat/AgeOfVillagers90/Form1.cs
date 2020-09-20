@@ -12,9 +12,6 @@ namespace AgeOfVillagers90
 {
     public partial class Form1 : Form
     {
-        int x;
-        int y;
-        Graphics g;
         string ItemText = "";
         string NameofVillage = "";
         string typeofNation = "";
