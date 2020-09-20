@@ -11,15 +11,19 @@ namespace AgeOfVillagers
 {
     class OpenVillage : ICommand
     {
+        public VillageState state;
+        public OpenVillage(VillageState state)
+        {
+            this.state = state;
+        }
         public void execute()
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             FileStream fs = (FileStream)openFileDialog1.OpenFile();
             using (StreamReader sr = new StreamReader(fs))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                //VillageState state = new VillageState();
-                serializer.Deserialize(sr, null);
+                string json = sr.ReadToEnd();
+                state = JsonConvert.DeserializeObject<VillageState>(json);
             }
         }
     }

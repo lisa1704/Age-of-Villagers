@@ -19,6 +19,7 @@ namespace AgeOfVillagers
         public List<Point> house { get; set; } = new List<Point>();
         public List<Point> tree { get; set; } = new List<Point>();
         public List<Point> water { get; set; } = new List<Point>();
+        public VillageState state = new VillageState();
         public VillageActions() { InitializeComponent(); }
 
         private void VillageActions_Load(object sender, EventArgs e){}
@@ -42,14 +43,14 @@ namespace AgeOfVillagers
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            VillageState state = new VillageState(villageName, house, tree, water);
-            SaveVillage saveVillage = new SaveVillage();
+            state.setState(villageName, house, tree, water);
+            SaveVillage saveVillage = new SaveVillage(state.getState());
             saveVillage.execute();
         }
 
         private void OpenVIllage_Click(object sender, EventArgs e)
         {
-            OpenVillage openVillage = new OpenVillage();
+            OpenVillage openVillage = new OpenVillage(state);
             openVillage.execute();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) 

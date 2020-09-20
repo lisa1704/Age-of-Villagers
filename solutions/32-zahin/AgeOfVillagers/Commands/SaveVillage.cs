@@ -11,9 +11,10 @@ namespace AgeOfVillagers
 {
     class SaveVillage : ICommand
     {
-        public SaveVillage()
+        public VillageState state;
+        public SaveVillage(VillageState state)
         {
-
+            this.state = state;
         }
         public void execute()
         {
@@ -28,8 +29,7 @@ namespace AgeOfVillagers
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     JsonSerializer serializer = new JsonSerializer();
-                    //VillageState state = new VillageState();
-                    serializer.Serialize(sw, null);
+                    serializer.Serialize(sw, state);
                     sw.Close();
                 }
                 fs.Close();

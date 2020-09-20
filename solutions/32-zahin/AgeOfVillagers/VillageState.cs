@@ -7,25 +7,27 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class VillageState
+    public class VillageState
     {
         public string villagename;
         public List<Point> house;
         public List<Point> tree;
         public List<Point> water;
-        public VillageState(string villagename, List<Point> house, List<Point> tree, List<Point> water)
-        {
-            this.villagename = villagename;
-            this.house = house;
-            this.tree = tree;
-            this.water = water;
-        }
-        void setState() 
+
+        VillageState villagestate = new VillageState();
+        public VillageState()
         {
         }
-        string getState() 
+        public void setState(string villagename, List<Point> house, List<Point> tree, List<Point> water) 
         {
-            return villagename;
+            villagestate.villagename = villagename;
+            villagestate.house = house;
+            villagestate.tree = tree;
+            villagestate.water = water;
+        }
+        public VillageState getState() 
+        {
+            return villagestate;
         }
     }
 }
