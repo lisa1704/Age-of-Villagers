@@ -31,7 +31,6 @@
             this.SaveVillage = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,6 +38,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.canvas = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -70,14 +70,6 @@
             this.button6.Text = "Open Village";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(38, 33);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 400);
-            this.panel1.TabIndex = 7;
             // 
             // label1
             // 
@@ -147,19 +139,27 @@
             this.radioButton3.Text = "Water Source";
             this.radioButton3.UseVisualStyleBackColor = false;
             // 
+            // canvas
+            // 
+            this.canvas.Location = new System.Drawing.Point(24, 33);
+            this.canvas.Name = "canvas";
+            this.canvas.Size = new System.Drawing.Size(600, 400);
+            this.canvas.TabIndex = 14;
+            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(988, 488);
+            this.Controls.Add(this.canvas);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.SaveVillage);
@@ -175,8 +175,6 @@
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.TextBox textBox1;
@@ -185,6 +183,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Panel canvas;
     }
 }
 

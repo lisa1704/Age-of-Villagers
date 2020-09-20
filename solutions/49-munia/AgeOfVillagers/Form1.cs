@@ -50,7 +50,7 @@ namespace AgeOfVillagers
         }
         private void button5_Click(object sender, EventArgs e) // New
         {
-            panel1.Invalidate();
+            canvas.Invalidate();
         }
 
         private void button6_Click(object sender, EventArgs e) //Open
@@ -58,5 +58,9 @@ namespace AgeOfVillagers
 
         }
 
+        private void canvas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
