@@ -9,11 +9,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class ArabTree implements ITree {
-    Canvas canvas;
+    boolean active =true;
 
     public ArabTree(){
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
+
     }
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
@@ -23,8 +22,12 @@ public class ArabTree implements ITree {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),100,50,200,360, ArcType.OPEN);
-                graphicsContext.strokeText("Arab tree", mouseEvent.getX(),mouseEvent.getY());
+                if(active) {
+                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 100, 50, 200, 360, ArcType.OPEN);
+                    graphicsContext.strokeText("Arab tree", mouseEvent.getX(), mouseEvent.getY());
+                    radioButton.setSelected(false);
+                    active= false;
+                }
 
             }
         });

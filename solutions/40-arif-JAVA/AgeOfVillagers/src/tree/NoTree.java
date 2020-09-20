@@ -9,7 +9,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class NoTree implements ITree{
-    boolean active;
     public NoTree(){
     }
 
