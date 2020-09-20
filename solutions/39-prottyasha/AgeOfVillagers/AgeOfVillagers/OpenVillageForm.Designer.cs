@@ -40,6 +40,7 @@
             this.SavedVillageList.Name = "SavedVillageList";
             this.SavedVillageList.Size = new System.Drawing.Size(355, 28);
             this.SavedVillageList.TabIndex = 0;
+            this.SavedVillageList.Click += new System.EventHandler(this.SavedVillageList_Click);
             // 
             // openvillagelabel
             // 

@@ -10,9 +10,16 @@ namespace AgeOfVillagers
 {
     public partial class OpenVillageForm : Form
     {
+        SaveVillageForm svf;
         public OpenVillageForm()
         {
             InitializeComponent();
+        }
+
+        private void SavedVillageList_Click(object sender, EventArgs e)
+        {
+            SavedVillageList.Items.Clear();
+            SavedVillageList.Items.Add(svf.savedVillList);
         }
     }
 }

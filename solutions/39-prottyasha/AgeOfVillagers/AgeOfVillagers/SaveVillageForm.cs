@@ -15,6 +15,7 @@ namespace AgeOfVillagers
     {
         Village vill;
         string village_name = "untitled";
+        public List<string> savedVillList;
         public SaveVillageForm()
         {
             InitializeComponent();
@@ -38,6 +39,8 @@ namespace AgeOfVillagers
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(aovfile, vill);
             }
+
+            savedVillList.Add(path);
         }
     }
 }
