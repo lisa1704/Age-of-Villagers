@@ -19,6 +19,9 @@ namespace AgeOfVillagers
             Graphics g = drawingBoard.CreateGraphics();
             Pen pen = new Pen(Color.Green);
 
+            g.DrawArc(pen, p.X, p.Y, 16, 24, 90, 360);
+            g.DrawLine(pen, p.X - 8, p.Y, p.X - 8, p.Y + 16);
+
             
         }
     }

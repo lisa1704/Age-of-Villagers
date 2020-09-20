@@ -21,6 +21,7 @@ namespace AgeOfVillagers
 
         public INation arabBeduin;
         public INation bdfarmer;
+       
 
         //public IShape arabhouse;
         public VillageForm()
@@ -38,6 +39,7 @@ namespace AgeOfVillagers
             {
                 //arabtree.draw(p, drawingBoard);
                 arabBeduin.DrawTree(p, drawingBoard);
+                bdfarmer.DrawTree(p, drawingBoard);
                 
             }
 
@@ -45,6 +47,12 @@ namespace AgeOfVillagers
             {
                 //arabhouse.draw(p, drawingBoard);
                 arabBeduin.DrawHouse(p, drawingBoard);
+                bdfarmer.DrawHouse(p, drawingBoard);
+            }
+
+            if(radioButton2.Checked == true)
+            {
+                bdfarmer.DrawWaterSource(p, drawingBoard);
             }
 
           
