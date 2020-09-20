@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Age_of_Villagers.Inuit_Hunter;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers.Nation
 {
     public class Inuit_Hunter : INation
     {
