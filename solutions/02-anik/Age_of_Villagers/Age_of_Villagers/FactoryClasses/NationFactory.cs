@@ -10,21 +10,21 @@ namespace Age_of_Villagers.FactoryClasses
     class NationFactory
     {
         string name;
-        public Nation.INation GetNation(string NationType)
+        public Nation.INation getNationName(string NationType)
         {
             if (NationType == "Bangladeshi Farmers")
             {
                 return new BangladeshiFarmers();
             }
-            else if (NationType == "Arab Bedouin")
+            else if (NationType == "Arab Beduin")
             {
                 return new ArabBeduin();
             }
-            else if (NationType == "Egytian Kings")
+            else if (NationType == "Egytian King")
             {
                 return new EgyptianKing();
             }
-            else if (NationType == "Inuit HUnters")
+            else if (NationType == "Inuit Hunters")
             {
                 return new InuitHunters();
             }
