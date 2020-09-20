@@ -54,7 +54,10 @@
     <Compile Include="CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
     <Compile Include="DrawLine.cs" />
+    <Compile Include="EgyptHouse.cs" />
     <Compile Include="EgyptianNation.cs" />
+    <Compile Include="EgyptTree.cs" />
+    <Compile Include="EgyptWater.cs" />
     <Compile Include="Ellipse.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

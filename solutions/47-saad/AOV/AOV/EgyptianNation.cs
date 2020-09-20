@@ -11,17 +11,20 @@ namespace AOV
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptHouse egyptHouse=new EgyptHouse(p);
+            egyptHouse.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptTree egyptTree = new EgyptTree(p);
+            egyptTree.draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptWater egyptWater=new EgyptWater(p);
+            egyptWater.draw(g);
         }
 
         public Color GetColor()
