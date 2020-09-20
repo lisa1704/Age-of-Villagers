@@ -13,11 +13,14 @@ namespace AgeOfVillagers
     {
         public static string VillageName;
         //Nations nation;
-        
+        VillageState village;
+        private List<Point> house_locations = new List<Point>();
+        private List<Point> tree_locations = new List<Point>();
+        private List<Point> watersource_locations = new List<Point>();
         public DrawingWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent(); 
+
         }
         private void DrawingWindow_Load(object sender, EventArgs e)
         {
@@ -40,10 +43,12 @@ namespace AgeOfVillagers
             
 
         }
+        
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            
+            this.village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
+
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -61,24 +66,27 @@ namespace AgeOfVillagers
             Point P = new Point(e.X, e.Y);
            
             Nations nation = new Nations(Form1.NationName, Drawingpanel);
-
+            this.village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
             {
                 nation.getNation().DrawHouse(P, Drawingpanel);
+                village.setHouseState(P);
 
             }
             if (radioButton1.Checked == true)
             {
 
                 nation.getNation().DrawTree(P, Drawingpanel);
-                
+                village.setTreeState(P);
+
             }
             if (radioButton3.Checked == true)
             {
 
                 nation.getNation().DrawWaterSource(P, Drawingpanel);
+                village.setWsourceState(P);
             }
         }
 
