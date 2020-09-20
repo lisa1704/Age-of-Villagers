@@ -12,14 +12,14 @@ namespace AgeOfVillagers.Test
         public void ArabhouseTest()
         {
             IObject actual = nationfactory.GetNation("Arab").Draw_house(lptop);
-            IObject expected = new Arab_house(lptop);
+            IObject expected = new Arab_house(lptop,16,16);
             actual.Equals(expected);
         }
         [Fact]
         public void ArabtreeTest()
         {
             IObject actual = nationfactory.GetNation("Arab").Draw_tree(lptop);
-            IObject expected = new Arab_tree(lptop);
+            IObject expected = new Arab_tree(lptop,24,16);
             actual.Equals(expected);
         }
         [Fact]

@@ -17,7 +17,9 @@ namespace Age_of_villagers
 
         public IObject Draw_tree(Point mptop)
         {
-            IObject tree = new Arab_tree(mptop);
+            int height = treesize.GetHeight();
+            int weidth = treesize.GetWeidth();
+            IObject tree = new Arab_tree(mptop, height, weidth);
             return tree;
         }
 
