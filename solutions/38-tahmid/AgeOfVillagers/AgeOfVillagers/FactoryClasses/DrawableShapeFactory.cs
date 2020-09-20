@@ -38,9 +38,16 @@ namespace AgeOfVillagers
             if (hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
                 return new UnequilateralNonagon(startingPoint, topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint, bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint, endPoint, graphics, pen);
             return null;
-
-
-
         }
+
+        public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point startingPoint, Point endPoint, string hint)
+            {
+                if (hint.Equals(Constants.LINE_HINT))
+                    return new Line(startingPoint, endPoint, graphics, pen);
+                return null;
+
+            
+
+            }
     }
 }

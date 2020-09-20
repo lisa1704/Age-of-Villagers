@@ -19,9 +19,10 @@ namespace AgeOfVillagers
         public static string OVAL_HINT = "OVAL";
         public static string PARALELLOGRAM_HINT = "Paralellogram";
         public static string UNEQUAL_NONAGON_HINT = "Unequal Nonago";
+        public static string LINE_HINT = "Line";
 
 
-       
+
 
 
         //house pixell range
