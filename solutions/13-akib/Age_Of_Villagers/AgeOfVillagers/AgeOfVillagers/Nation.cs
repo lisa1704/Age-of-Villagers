@@ -16,6 +16,9 @@ public class Nation : I_Nation
         else if (nation == "Egyptian_Kings")
             nation = new Egyptian_Kings();
 
+        else if (nation == "Inuit_Hunters")
+            nation = new Inuit_Hunters();
+
         return nation;
     }
 }
