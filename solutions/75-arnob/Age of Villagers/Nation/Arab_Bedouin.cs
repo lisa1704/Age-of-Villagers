@@ -33,7 +33,8 @@ namespace Age_of_Villagers
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            Arab_Tree arab_tree = new Arab_Tree(new Point(_point.X, _point.Y), new Point(_point.X + 8, _point.Y - 4), new Point(_point.X - 8, _point.Y - 4), new Point(_point.X + 6, _point.Y - 10), new Point(_point.X - 6, _point.Y - 10), new Point(_point.X, _point.Y - 13), new Point(_point.X - 1, _point.Y + 8), new Point(_point.X + 1, _point.Y));
+            arab_tree.Paint(graphics);
         }
 
         public void GetWaterSource(Graphics graphics, Point _point)
