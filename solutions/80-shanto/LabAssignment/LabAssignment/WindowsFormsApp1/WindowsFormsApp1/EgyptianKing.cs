@@ -20,13 +20,8 @@ namespace WindowsFormsApp1
 
         public void DrawHouse(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(mypen, x, y, x + 24, y - 28);
-            g.DrawLine(mypen, x + 24, y - 28, x - 12, y - 64);
-            g.DrawLine(mypen, x - 12, y - 64, x - 40, y - 16);
-            g.DrawLine(mypen, x - 40, y - 16, x, y);
-            g.DrawLine(mypen, x - 12, y - 64, x, y);
+            EgyptianKingsHouse ekh = new EgyptianKingsHouse(g);
+            ekh.Draw(e);
         }
 
         public void DrawTree(MouseEventArgs e)

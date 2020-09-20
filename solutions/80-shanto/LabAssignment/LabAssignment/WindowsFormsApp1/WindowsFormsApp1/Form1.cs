@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.IO;
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -89,29 +90,17 @@ namespace WindowsFormsApp1
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            
-
-            x =e.X;
-            y = e.Y;
-            //h = 100;
-            //w = 200;
             Graphics g = this.CreateGraphics();
-
             string nation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+
+            var nationManager = new NationManager(nation, new NationFactory(g));
 
             if (nation == "Bangladeshi Farmers")
             {
                 panel1.BackColor = Color.White;
                 BackColor = Color.Green;
 
-                if (radioButton1.Checked)
-                {
-                    BangladeshiFarmers bdh = new BangladeshiFarmers(g);
-                    bdh.DrawHouse(e);
-
-
-
-                }
+                
 
                 if (radioButton2.Checked)
                 {
@@ -121,13 +110,18 @@ namespace WindowsFormsApp1
                 }
                 if (radioButton3.Checked)
                 {
-                    //g.DrawLine(myPen, x, y, h, w);
-
                     BangladeshiFarmers bds = new BangladeshiFarmers(g);
                     bds.DrawWaterSource(e);
 
                 }
             }
+            if (radioButton1.Checked)
+            {
+
+                nationManager.DrawHouse(e);
+
+            }
+
 
             else if (nation == "Egypt Kings")
             {
@@ -135,14 +129,12 @@ namespace WindowsFormsApp1
                 panel1.BackColor = Color.White;
                 BackColor = Color.Yellow;
 
-                if (radioButton1.Checked)
+                /*if (radioButton1.Checked)
                 {
-
                     EgyptianKing ekh = new EgyptianKing(g);
                     ekh.DrawHouse(e);
 
-                }
-
+                }*/
                 if (radioButton2.Checked)
                 {
                     EgyptianKing ekt = new EgyptianKing(g);
@@ -163,14 +155,11 @@ namespace WindowsFormsApp1
             {
                 BackColor = Color.White;
 
-                if (radioButton1.Checked)
+                /*if (radioButton1.Checked)
                 {
-
                     InuitHunters iht = new InuitHunters(g);
                     iht.DrawHouse(e);
-
-                }
-
+                }*/
                 if (radioButton2.Checked)
                 {
                     InuitHunters iht = new InuitHunters(g);
@@ -179,27 +168,21 @@ namespace WindowsFormsApp1
                 }
                 if (radioButton3.Checked)
                 {
-
-
                     InuitHunters iht = new InuitHunters(g);
                     iht.DrawWaterSource(e);
-
                 }
-                
             }
 
             else if (nation == "Arab Bedouin")
             {
                 panel1.BackColor = Color.White;
-                BackColor = Color.YellowGreen; 
+                BackColor = Color.YellowGreen;
                 if (radioButton1.Checked)
                 {
-
                     ArabBedouin abt = new ArabBedouin(g);
                     abt.DrawHouse(e);
 
                 }
-
                 if (radioButton2.Checked)
                 {
                     ArabBedouin abt = new ArabBedouin(g);
@@ -208,27 +191,19 @@ namespace WindowsFormsApp1
                 }
                 if (radioButton3.Checked)
                 {
-
-
                     ArabBedouin abt = new ArabBedouin(g);
                     abt.DrawWaterSource(e);
 
                 }
-                
             }
 
+            
 
         }
-
-
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
              //x = e.X;
              //y = e.Y;
         }
-
-
-
-
     }
 }

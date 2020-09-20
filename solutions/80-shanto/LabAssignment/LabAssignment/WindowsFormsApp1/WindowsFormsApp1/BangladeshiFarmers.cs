@@ -20,14 +20,8 @@ namespace WindowsFormsApp1
 
         public void DrawHouse(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(mypen, x, y, x + 50, y);
-            g.DrawLine(mypen, x + 50, y, x + 50, y + 25);
-            g.DrawLine(mypen, x + 50, y + 25, x, y + 25);
-            g.DrawLine(mypen, x, y + 25, x, y);
-            g.DrawLine(mypen, x, y, x + 25, y - 25);
-            g.DrawLine(mypen, x + 25, y - 25, x + 50, y);
+            BangladeshiFarrmersHouse bdh = new BangladeshiFarrmersHouse(g);
+            bdh.Draw(e);
         }
 
         
@@ -65,29 +59,4 @@ namespace WindowsFormsApp1
 
         
     }
-
-    /*public interface IShapeItem
-    {
-        void Paint(Point e, Graphics g, Pen mypen);
-    }
-
-    public abstract class CompositeShape : IShapeItem
-    {
-        private List<IShapeItem> SComponents;
-
-        protected CompositeShape()
-        {
-            SComponents = new List<IShapeItem>();
-        }
-
-        public void AddComp(IShapeItem shape)
-        {
-            SComponents.Add(shape);
-        }
-        public void Paint(Point e, Graphics g, Pen mypen)
-        {
-            foreach (var component in SComponents)
-                component.Paint(e,g, mypen);
-        }
-    }*/
 }
