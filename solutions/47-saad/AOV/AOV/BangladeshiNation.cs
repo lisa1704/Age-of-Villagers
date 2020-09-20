@@ -11,7 +11,9 @@ namespace AOV
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            
+            Console.WriteLine("Bangladeshi House");            
+
         }
 
         public void DrawTree(Graphics g, Point p)

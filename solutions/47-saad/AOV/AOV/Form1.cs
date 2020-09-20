@@ -18,7 +18,6 @@ namespace AOV
         List<Point> housePoint = new List<Point>();
         List<Point> treePoint = new List<Point>();
         List<Point> waterSourcePoint = new List<Point>();
-
         public AgeOfVillagers()
         {
             InitializeComponent();
@@ -59,7 +58,19 @@ namespace AOV
 
         private void Canvas_Paint(object sender, PaintEventArgs e)
         {
-          
+            Graphics g = Canvas.CreateGraphics();
+            foreach(Point point in treePoint)
+            {
+                typeOfNation.SelectNation(selectedNation).DrawTree(g, point);               
+            }
+            foreach (Point point in housePoint)
+            {
+                typeOfNation.SelectNation(selectedNation).DrawHouse(g, point);
+            }
+            foreach (Point point in waterSourcePoint)
+            {
+                typeOfNation.SelectNation(selectedNation).DrawWaterSource(g, point);
+            }
         }
 
         private void Canvas_MouseClick(object sender, MouseEventArgs e)
@@ -75,7 +86,8 @@ namespace AOV
             if(itemSelected=="water source")
             {
                 waterSourcePoint.Add(e.Location);
-            }           
+            }
+            Canvas.Invalidate();
         }
     }
 }
