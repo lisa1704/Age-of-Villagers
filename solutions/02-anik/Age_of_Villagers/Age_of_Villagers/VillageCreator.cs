@@ -69,6 +69,10 @@ namespace Age_of_Villagers
         {
 
         }
+        private void drawhouse(int x,int y)
+        {
+
+        }
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
@@ -80,6 +84,7 @@ namespace Age_of_Villagers
             }
             else if (House.Checked)
             {
+                drawhouse(x, y);
 
             }
             else if (WaterSource.Checked)
