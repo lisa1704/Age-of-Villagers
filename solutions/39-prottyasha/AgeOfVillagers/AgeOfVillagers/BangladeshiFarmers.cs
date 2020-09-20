@@ -7,6 +7,7 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INations
     {
+        Pen pen = new Pen(Color.Green);
         public void drawhouse(Point p, Graphics g)
         {
             throw new NotImplementedException();
