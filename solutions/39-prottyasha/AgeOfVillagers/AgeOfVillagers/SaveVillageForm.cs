@@ -27,6 +27,7 @@ namespace AgeOfVillagers
                 village_name = textbox_VillageName.Text;
             }
             vill.village_name = village_name;
+            this.Save_Village();
         }
 
         public void Save_Village()
