@@ -10,17 +10,20 @@ namespace AgeOfVillagers
     {
         public void DrawHouse(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            EgyptianKingHouse egKingHouse = new EgyptianKingHouse(drawingBoard);
+            egKingHouse.draw(p, drawingBoard);
         }
 
         public void DrawTree(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            EgyptianKingTree egKingTree = new EgyptianKingTree(drawingBoard);
+            egKingTree.draw(p, drawingBoard);
         }
 
         public void DrawWaterSource(Point p, Panel drawingBoard)
         {
-            throw new NotImplementedException();
+            EgyptianKingWater egKingWater = new EgyptianKingWater(drawingBoard);
+            egKingWater.draw(p, drawingBoard);
         }
 
         public void PaintTerrain(Point p, Panel drawingBoard)

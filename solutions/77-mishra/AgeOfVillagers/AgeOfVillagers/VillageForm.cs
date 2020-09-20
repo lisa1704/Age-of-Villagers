@@ -21,13 +21,14 @@ namespace AgeOfVillagers
 
         public INation arabBeduin;
         public INation bdfarmer;
-       
+        public INation egKing;
 
-        //public IShape arabhouse;
         public VillageForm()
         {
             InitializeComponent();
+            
         }
+        
 
         private void drawingBoard_MouseClick(object sender, MouseEventArgs e)
         {
@@ -40,6 +41,7 @@ namespace AgeOfVillagers
                 //arabtree.draw(p, drawingBoard);
                 arabBeduin.DrawTree(p, drawingBoard);
                 bdfarmer.DrawTree(p, drawingBoard);
+                egKing.DrawTree(p, drawingBoard);
                 
             }
 
@@ -48,6 +50,8 @@ namespace AgeOfVillagers
                 //arabhouse.draw(p, drawingBoard);
                 arabBeduin.DrawHouse(p, drawingBoard);
                 bdfarmer.DrawHouse(p, drawingBoard);
+                egKing.DrawHouse(p, drawingBoard);
+
             }
 
             if(radioButton2.Checked == true)
