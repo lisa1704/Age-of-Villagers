@@ -35,15 +35,21 @@ namespace AgeOfVillagers
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            vw.villageLabel.Text = nameBox.Text;
-            vw.nationLabel.Text = nationBox.Text;
-            NationFactory nFactory = new NationFactory(nationBox.Text); 
-            INation nation = nFactory.getNation();
-            vw.village = new Village(nation, nameBox.Text);
-            //vw.drawingPanel.BackColor = nation.getTerrainColor();
-            vw.g.Clear(nation.getTerrainColor());
-            this.Dispose();
-
+            if (nameBox.Text == "")
+            {
+                DialogResult dialog = MessageBox.Show("Giva a name to the Village!");
+            }
+            else
+            {
+                vw.villageLabel.Text = nameBox.Text;
+                vw.nationLabel.Text = nationBox.Text;
+                NationFactory nFactory = new NationFactory(nationBox.Text);
+                INation nation = nFactory.getNation();
+                vw.village = new Village(nation, nameBox.Text);
+                //vw.drawingPanel.BackColor = nation.getTerrainColor();
+                vw.g.Clear(nation.getTerrainColor());
+                this.Dispose();
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

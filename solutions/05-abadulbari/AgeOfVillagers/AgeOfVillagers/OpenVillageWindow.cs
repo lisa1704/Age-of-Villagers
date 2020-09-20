@@ -17,7 +17,7 @@ namespace AgeOfVillagers
     public partial class OpenVillageWindow : Form
     {
         private readonly VillageWindow villageWin;
-        private string filePath;
+        private string filePath = "";
 
         public OpenVillageWindow(VillageWindow vw)
         {
@@ -47,7 +47,7 @@ namespace AgeOfVillagers
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,20 +57,24 @@ namespace AgeOfVillagers
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            villageWin.nationLabel.Text = nationComBox.Text;
-            NationFactory nFactory = new NationFactory(nationComBox.Text);
-            INation newnation = nFactory.getNation();
-
-            var dataString = System.IO.File.ReadAllText(filePath);
-            var settings = new JsonSerializerSettings()
+            if (filePath != "")
             {
-                TypeNameHandling = TypeNameHandling.All
-            };
-            villageWin.village = JsonConvert.DeserializeObject<Village>(dataString, settings);
-            villageWin.village.nation = newnation;
-            villageWin.villageLabel.Text = villageWin.village.villageName;
-            new VillagerManager(villageWin.village).loadVillage(villageWin.g, villageWin.p);
-            this.Dispose();
+                villageWin.nationLabel.Text = nationComBox.Text;
+                NationFactory nFactory = new NationFactory(nationComBox.Text);
+                INation newnation = nFactory.getNation();
+
+                var dataString = System.IO.File.ReadAllText(filePath);
+                var settings = new JsonSerializerSettings()
+                {
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                villageWin.village = JsonConvert.DeserializeObject<Village>(dataString, settings);
+                villageWin.village.nation = newnation;
+                villageWin.villageLabel.Text = villageWin.village.villageName;
+                new VillagerManager(villageWin.village).loadVillage(villageWin.g, villageWin.p);
+                this.Dispose();
+            }
+            DialogResult dialog = MessageBox.Show("Choose Village file !");
         }
 
         private void villageLabel_Click(object sender, EventArgs e)

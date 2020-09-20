@@ -83,7 +83,11 @@ namespace AgeOfVillagers
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            if (treeRadioBtn.Checked)
+            if (village == null)
+            {
+                DialogResult dialog = MessageBox.Show("Create / Open a Village First!");
+            }
+            else if (treeRadioBtn.Checked)
             {
                 village.nation.getTree(point).draw(g, p);
                 village.trees.Add(point);
@@ -98,6 +102,8 @@ namespace AgeOfVillagers
                 village.nation.getWaterSource(point).draw(g, p);
                 village.waterSources.Add(point);
             }
+            
+            
         }
     }
 }
