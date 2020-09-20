@@ -36,6 +36,7 @@
             this.WaterSource = new System.Windows.Forms.Button();
             this.DrawingPanel = new System.Windows.Forms.Panel();
             this.NationBox = new System.Windows.Forms.ComboBox();
+            this.GameTitle = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -121,11 +122,21 @@
             this.NationBox.TabIndex = 0;
             this.NationBox.SelectedIndexChanged += new System.EventHandler(this.NationBox_SelectedIndexChanged);
             // 
+            // GameTitle
+            // 
+            this.GameTitle.Location = new System.Drawing.Point(616, 54);
+            this.GameTitle.Name = "GameTitle";
+            this.GameTitle.Size = new System.Drawing.Size(172, 23);
+            this.GameTitle.TabIndex = 8;
+            this.GameTitle.Text = "AGE OF VILLEGERS";
+            this.GameTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GameTitle);
             this.Controls.Add(this.NationBox);
             this.Controls.Add(this.DrawingPanel);
             this.Controls.Add(this.WaterSource);
@@ -139,6 +150,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Button WaterSource;
         private System.Windows.Forms.Panel DrawingPanel;
         private System.Windows.Forms.ComboBox NationBox;
+        private System.Windows.Forms.TextBox GameTitle;
     }
 }
 
