@@ -9,27 +9,43 @@ namespace AgeOfVillagers.Shape_implementing_Classes
 {
     class ArabianHouseShape :Shapes
     {
-        private Graphics g;
+        private Graphics graphics;
         private Pen pen;
-        private Point point;
-        private int hOUSE_HEIGHT;
-        private int hOUSE_WIDTH;
+        private Point startingPoint;
+        private int house_height;
+        private int house_width;
+        private Point frontTopPoint, frontRightPoint;
+        private Point backTopLeftPoint, backTopRightPoint, backBottomLeftPoint, backBottomRightPoint;
+        DrawableShapeFactory drawableShapeFactory;
+        private DrawableShapes frontSide, backSide;
 
-        DrawableShapeFactory drablerShapeFactory;
 
-
-        public ArabianHouseShape(Graphics g, Pen pen, Point point, int hOUSE_HEIGHT, int hOUSE_WIDTH)
+        public ArabianHouseShape(Graphics g, Pen pen, Point point, int house_height, int house_width)
         {
-            this.g = g;
+            this.graphics = g;
             this.pen = pen;
-            this.point = point;
-            this.hOUSE_HEIGHT = hOUSE_HEIGHT;
-            this.hOUSE_WIDTH = hOUSE_WIDTH;
+            this.startingPoint = point;
+            this.house_height = house_height;
+            this.house_width = house_width;
+            drawableShapeFactory = new DrawableShapeFactory();
         }
 
         public void makeShape()
         {
-            
+            frontRightPoint = new Point(startingPoint.X + 2 * (house_width / 5), startingPoint.Y);
+            frontTopPoint = new Point((startingPoint.X + frontRightPoint.X) / 2, startingPoint.Y - house_height);
+            frontSide=drawableShapeFactory.GetDrawableShape(graphics, pen, frontTopPoint, frontRightPoint, startingPoint, Constants.TRIANGLE_HINT);
+            frontSide.makeShape();
+            backBottomLeftPoint = frontRightPoint;
+            backTopLeftPoint = frontTopPoint;
+            backTopRightPoint = new Point(backTopLeftPoint.X + 3 * (house_width / 5), backTopLeftPoint.Y);
+            backBottomRightPoint = new Point(backBottomLeftPoint.X + 3 * (house_width / 5), backBottomLeftPoint.Y);
+            backSide=drawableShapeFactory.GetDrawableShape(graphics, pen, backTopLeftPoint, backTopRightPoint, backBottomLeftPoint, backBottomRightPoint, Constants.RECT_HINT);
+            backSide.makeShape();
+
+
+
+
         }
     }
 }
