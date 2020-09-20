@@ -27,8 +27,8 @@ namespace AgeOfVillagers.Arab_Bedouin
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            NullItems NullWaterSource = new NullItems();
-            NullWaterSource.drawing();
+            NullItems arabBedouinWaterSource = new NullItems();
+            arabBedouinWaterSource.drawing();
         }
     }
 }
