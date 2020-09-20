@@ -8,9 +8,9 @@ namespace AgeOfVillagers.Nation
 {
     class ArabBedouin : INation
     {
-        public VillageItem getHouse(Point p)
+        public VillageItem getHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new ArabianHouse(point);
         }
 
         public string getNationName()
