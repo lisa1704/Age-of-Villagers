@@ -15,7 +15,8 @@ namespace AgeOfVillagers.Arab_Bedouin
 
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            ArabBedouinTrees arabBedouinTree = new ArabBedouinTrees(point);
+            arabBedouinTree.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point point)
