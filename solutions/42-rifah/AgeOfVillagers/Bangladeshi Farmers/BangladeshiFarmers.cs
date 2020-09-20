@@ -23,5 +23,10 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
             BDFarmersWatersource bdFarmersWaterSource = new BDFarmersWatersource(point);
             bdFarmersWaterSource.Draw(g);
         }
+
+        public Color BackgroundColor()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

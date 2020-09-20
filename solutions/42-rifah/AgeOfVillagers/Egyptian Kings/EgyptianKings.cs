@@ -7,6 +7,11 @@ namespace AgeOfVillagers.Egyptian_Kings
 {
     class EgyptianKings : INation
     {
+        public Color BackgroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point point)
         {
             EgyptianKingsHouse egyptianHouse = new EgyptianKingsHouse(point);

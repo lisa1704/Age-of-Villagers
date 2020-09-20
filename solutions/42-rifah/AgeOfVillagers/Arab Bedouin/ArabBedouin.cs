@@ -7,6 +7,11 @@ namespace AgeOfVillagers.Arab_Bedouin
 {
     class ArabBedouin : INation
     {
+        public Color BackgroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point point)
         {
             ArabBedouinHouse arabBedouinHouse = new ArabBedouinHouse(point);

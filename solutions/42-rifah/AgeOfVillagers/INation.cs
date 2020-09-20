@@ -14,6 +14,7 @@ namespace AgeOfVillagers
         void DrawTree(Graphics g, Point point);
         void DrawHouse(Graphics g, Point point);
         void DrawWaterSource(Graphics g, Point point);
+        Color BackgroundColor();
     }
     internal class Factory_Nation
     {

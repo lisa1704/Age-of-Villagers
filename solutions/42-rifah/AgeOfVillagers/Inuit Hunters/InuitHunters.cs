@@ -8,6 +8,11 @@ namespace AgeOfVillagers.Inuit_Hunters
 {
     class InuitHunters : INation
     {
+        public Color BackgroundColor()
+        {
+            throw new NotImplementedException();
+        }
+
         public void DrawHouse(Graphics g, Point point)
         {
             InuitHuntersHouse inuitHunterHouse = new InuitHuntersHouse(point);
