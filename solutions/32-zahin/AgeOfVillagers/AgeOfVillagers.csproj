@@ -69,7 +69,6 @@
     <Compile Include="Nations\BangladeshiFarmers.cs" />
     <Compile Include="NullValuesHandler.cs" />
     <Compile Include="Commands\OpenVillage.cs" />
-    <Compile Include="Commands\NewVillage.cs" />
     <Compile Include="Commands\SaveVillage.cs" />
     <Compile Include="Nations\INation.cs" />
     <Compile Include="Commands\ICommand.cs" />

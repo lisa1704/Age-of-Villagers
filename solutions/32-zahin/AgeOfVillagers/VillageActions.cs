@@ -15,7 +15,7 @@ namespace AgeOfVillagers
         string item;
         string villageName;
         string villageType;
-        Village newVillage = new Village();
+        public Village newVillage = new Village();
         public List<Point> house { get; set; } = new List<Point>();
         public List<Point> tree { get; set; } = new List<Point>();
         public List<Point> water { get; set; } = new List<Point>();
