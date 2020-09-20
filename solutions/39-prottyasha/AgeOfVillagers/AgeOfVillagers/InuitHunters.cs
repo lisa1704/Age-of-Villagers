@@ -17,7 +17,12 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
-        public void drawwatersource(Point p, Graphics g)
+        public void drawtree(Point p, Graphics g, Pen pen)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void drawwatersource(Point p, Graphics g, Pen pen)
         {
             g.DrawArc(pen, p.X, p.Y, 6, 6, 0, 360);
         }

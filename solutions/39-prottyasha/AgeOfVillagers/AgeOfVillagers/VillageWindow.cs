@@ -26,9 +26,6 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = DrawingPanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-
         }
 
         private void SidePanel_Paint(object sender, PaintEventArgs e)
@@ -90,17 +87,26 @@ namespace AgeOfVillagers
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected_nation = nation_selector.Items[nation_selector.SelectedIndex].ToString();
-            if(selected_nation == "arab")
+            if(selected_nation == "Arab Bedouins")
             {
+                DrawingPanel.BackColor = Color.Gold;
                 rbtn_waterSource.Visible = false;
             }
-            if (selected_nation == "inuit")
+            if (selected_nation == "Inuit Hunters")
             {
+                DrawingPanel.BackColor = Color.White;
                 rbtn_waterSource.Visible = false;
                 rbtn_tree.Visible = false;
             }
+            if (selected_nation == "Bangladeshi Farmers")
+            {
+                DrawingPanel.BackColor = Color.Green;
+            }
+            if (selected_nation == "Egyptian Kings")
+            {
+                DrawingPanel.BackColor = Color.Yellow;
+            }
         }
-
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point p = new Point();

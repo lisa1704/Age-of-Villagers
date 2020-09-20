@@ -12,12 +12,12 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
-        public void drawtree(Point p, Graphics g)
+        public void drawtree(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }
 
-        public void drawwatersource(Point p, Graphics g)
+        public void drawwatersource(Point p, Graphics g, Pen pen)
         {
             throw new NotImplementedException();
         }

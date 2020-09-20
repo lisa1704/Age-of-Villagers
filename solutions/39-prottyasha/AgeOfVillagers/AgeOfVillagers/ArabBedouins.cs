@@ -20,7 +20,7 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p2, p4);
         }
 
-        public void drawtree(Point p, Graphics g)
+        public void drawtree(Point p, Graphics g, Pen pen)
         {
             Point p1 = new Point(p.X, p.Y - 12);
             Point p2 = new Point(p1.X - 2, p1.Y);
@@ -42,7 +42,7 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p9, p1);
         }
 
-        public void drawwatersource(Point p, Graphics g)
+        public void drawwatersource(Point p, Graphics g, Pen pen)
         {
             //do nothing
         }
