@@ -28,7 +28,7 @@ namespace AgeOfVillagers
 
         public override void drawShape()
         {
-            g.DrawArc(p, start.X, start.Y, width,lenght, 0,360);
+            g.DrawArc(p, start.X, start.Y, width,lenght, startAng,endAng);
         }
 
         public override void makeShape()

@@ -47,6 +47,9 @@ namespace AgeOfVillagers
         public static int FULL_CIRCLE_STARTING_ANGLE = 0;
         public static int FULL_CIRCLE_ENDING_ANGLE = 360;
 
+        public static int HALF_CIRCLE_STARTING_ANGLE = 180;
+        public static int HALF_CIRCLE_ENDING_ANGLE = 180;
+
         //Items
         public static string HOUSE_ITEM = ",HOUSE";
         public static string TREE_ITEM = ",TREE";
