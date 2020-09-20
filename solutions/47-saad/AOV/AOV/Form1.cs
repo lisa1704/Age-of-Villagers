@@ -15,6 +15,10 @@ namespace AOV
         NationFactory typeOfNation = new NationFactory();
         string selectedNation;
         string itemSelected;
+        List<Point> housePoint = new List<Point>();
+        List<Point> treePoint = new List<Point>();
+        List<Point> waterSourcePoint = new List<Point>();
+
         public AgeOfVillagers()
         {
             InitializeComponent();
@@ -51,6 +55,27 @@ namespace AOV
                 itemSelected = "water source";
                 Console.WriteLine(itemSelected);
             }
+        }
+
+        private void Canvas_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
+
+        private void Canvas_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (itemSelected == "house")
+            {
+                housePoint.Add(e.Location);
+            }
+            if (itemSelected == "tree")
+            {
+                treePoint.Add(e.Location);
+            }
+            if(itemSelected=="water source")
+            {
+                waterSourcePoint.Add(e.Location);
+            }           
         }
     }
 }

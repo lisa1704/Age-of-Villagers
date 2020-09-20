@@ -89,6 +89,8 @@
             this.Canvas.Name = "Canvas";
             this.Canvas.Size = new System.Drawing.Size(600, 400);
             this.Canvas.TabIndex = 7;
+            this.Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Canvas_Paint);
+            this.Canvas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
             // 
             // Label
             // 
