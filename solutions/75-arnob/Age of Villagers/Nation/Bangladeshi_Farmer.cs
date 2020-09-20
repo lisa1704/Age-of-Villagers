@@ -27,9 +27,9 @@ namespace Age_of_Villagers
             throw new NotImplementedException();
         }
 
-        public Colour getTerrainColour()
+        public Color getTerrainColour()
         {
-            throw new NotImplementedException();
+            return Color.PaleGreen;
         }
 
         public void GetTree(Graphics graphics, Point _point)
