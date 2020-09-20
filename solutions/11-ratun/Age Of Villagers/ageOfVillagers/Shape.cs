@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Shape
+public abstract class Shape
 {
-	
+	public abstract void Draw();
 }
