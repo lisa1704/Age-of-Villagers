@@ -20,11 +20,7 @@ namespace AgeOfVillagers.VillegeItems
             addItem(new Triangle(top, midLeft, midRight));
             addItem(new Rectangle(midLeft, bottomRight));
         }
-        public override void draw(Graphics g, Pen p)
-        {
-            new Triangle(top, midLeft, midRight).draw(g, p);
-            new Rectangle(midLeft, bottomRight).draw(g, p);
-        }
+        
 
 
     }
