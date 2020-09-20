@@ -29,7 +29,6 @@ namespace AgeOfVillagers.Test
             IObject expected = new null_obj();
             actual.Equals(expected);
         }
-        
 
     }
 }

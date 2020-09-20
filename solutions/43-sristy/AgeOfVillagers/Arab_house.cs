@@ -11,10 +11,10 @@ namespace Age_of_villagers
     {
         public Arab_house(Point mptop)
         {
-            Point rptop = new Point(mptop.X +8, mptop.Y+16);
-            Point lptop = new Point(mptop.X-8, mptop.Y + 16);
-            Point mpback = new Point(mptop.X + 16, mptop.Y - 8);
-            Point rpback = new Point(mptop.X + 24, mptop.Y + 8);
+            Point rptop = new Point(mptop.X +4, mptop.Y+11);
+            Point lptop = new Point(mptop.X-4, mptop.Y + 11);
+            Point mpback = new Point(mptop.X + 8, mptop.Y - 5);
+            Point rpback = new Point(mptop.X + 12, mptop.Y + 5);
             AddComponent(new obj_triangle(lptop, rptop, mptop));
             AddComponent(new obj_rectangle(mptop, mpback, rptop, rpback));
         }
