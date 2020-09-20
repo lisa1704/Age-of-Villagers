@@ -8,15 +8,15 @@ namespace AgeOfVillagers
     {
         public INations GetNations(string nation)
         {
-            if (nation == "arab")
+            if (nation == "Arab Bedouins")
             {
                 return new ArabBedouins();
             }
-            if (nation == "bd")
+            if (nation == "Bangladeshi Farmers")
             {
                 return new BangladeshiFarmers();
             }
-            if (nation == "egypt")
+            if (nation == "Egyptian Kings")
             {
                 return new EgyptianKings();
             }
