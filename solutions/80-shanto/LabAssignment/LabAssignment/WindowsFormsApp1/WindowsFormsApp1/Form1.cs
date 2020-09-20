@@ -54,14 +54,14 @@ namespace WindowsFormsApp1
         private void button12_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Open Village");
-            /*OpenFileDialog open = new OpenFileDialog();
+            OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Text Files(*.txt)|*.txt| All Files (*.*)|*.*";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
                 textBox4.Text = read.ReadToEnd();
                 read.Dispose();
-            }*/
+            }
             
         }
 
