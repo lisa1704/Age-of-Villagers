@@ -13,19 +13,24 @@ namespace Age_of_villagers.Nations
             throw new NotImplementedException();
         }
 
-        public void DrawTree()
+        public string GetNation()
+        {
+            return "BangladeshiFarmers";
+        }
+
+        public Color GetTerrainColor()
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource()
+        void INation.DrawTree(Graphics g, Point pt)
         {
             throw new NotImplementedException();
         }
 
-        public string getNationName()
+        void INation.DrawWaterSource(Graphics g, Point MPt)
         {
-            return "Bangladeshi Farmers";
+            throw new NotImplementedException();
         }
     }
 }

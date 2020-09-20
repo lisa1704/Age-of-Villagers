@@ -11,7 +11,7 @@ namespace Age_of_villagers.Nations
         {
             this.nationName = NationType;
         }
-        public INation getNation()
+        public INation GetNation()
         {
             if (nationName == "BangladeshiFarmers")
             {
