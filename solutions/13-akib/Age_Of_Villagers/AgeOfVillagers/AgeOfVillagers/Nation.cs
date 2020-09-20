@@ -9,6 +9,9 @@ public class Nation : I_Nation
     {
         if (nation == "BD_Farmers")
             nation = new Bangladeshi_Farmer();
+
+        else if (nation == "Arab_Beduin")
+            nation = new Arab_Bedouin();
         return nation;
     }
 }
