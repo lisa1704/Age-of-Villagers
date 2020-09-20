@@ -11,12 +11,14 @@ namespace AOV
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ArabHouse arabHouse=new ArabHouse(p);
+            arabHouse.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ArabTree arabTree = new ArabTree(p);
+            arabTree.draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)

@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArabHouse.cs" />
     <Compile Include="ArabNation.cs" />
+    <Compile Include="ArabTree.cs" />
     <Compile Include="BangladeshiNation.cs" />
     <Compile Include="BdHouse.cs" />
     <Compile Include="BdTree.cs" />
