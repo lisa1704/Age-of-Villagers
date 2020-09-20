@@ -16,14 +16,6 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
         }
-
-      
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -49,5 +41,19 @@ namespace AgeOfVillagers
         {
 
         }
+        private void button4_Click(object sender, EventArgs e) // Save
+        {
+
+        }
+        private void button5_Click(object sender, EventArgs e) // New
+        {
+            panel1.Invalidate();
+        }
+
+        private void button6_Click(object sender, EventArgs e) //Open
+        {
+
+        }
+
     }
 }
