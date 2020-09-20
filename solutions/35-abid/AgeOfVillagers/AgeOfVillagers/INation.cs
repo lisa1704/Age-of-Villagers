@@ -7,8 +7,8 @@ namespace AgeOfVillagers
 {
     interface INation
     {
-        public void drawtree(Point p);
-        public void drawhouse(Point p);
-        public void drawwatersrc(Point p);
+        public void drawtree(Point p, Graphics g);
+        public void drawhouse(Point p, Graphics g);
+        public void drawwatersrc(Point p, Graphics g);
     }
 }

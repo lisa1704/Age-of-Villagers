@@ -14,8 +14,8 @@ namespace AgeOfVillagers
     {
         //int x, y;
         Graphics g;
-        Brush brush = new SolidBrush(Color.Black);
-        string text = "";
+        //Brush brush = new SolidBrush(Color.Black);
+        //string text = "";
         string chosen_nation = "";
         string chosen_component = "";
         NationFactory NF = new NationFactory();
@@ -60,19 +60,19 @@ namespace AgeOfVillagers
             p.Y = e.Y;
 
             nation = NF.GetNations(chosen_nation);
-            //g = DrawingPanel.CreateGraphics();
+            g = DrawingPanel.CreateGraphics();
             //g.DrawString(text, Font, brush, new Point(x, y));
             if (chosen_component == "tree")
             {
-                nation.drawtree(p);
+                nation.drawtree(p,g);
             }
             if (chosen_component == "house")
             {
-                nation.drawhouse(p);
+                nation.drawhouse(p,g);
             }
             if (chosen_component == "watersrc")
             {
-                nation.drawwatersrc(p);
+                nation.drawwatersrc(p,g);
             }
         }
 
@@ -99,7 +99,7 @@ namespace AgeOfVillagers
             Tree.Checked = false;
             WaterSource.Checked = false;
             DrawingPanel.Invalidate();
-            text = "";
+            //text = "";
         }
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,6 +147,13 @@ namespace AgeOfVillagers
             {
                 chosen_component = "watersrc";
             }
+        }
+
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = DrawingPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+
         }
     }
 }
