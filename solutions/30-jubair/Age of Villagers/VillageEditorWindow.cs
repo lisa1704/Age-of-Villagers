@@ -226,6 +226,7 @@ namespace Age_of_Villagers
             AbstractNationCreator abstractNationCreator = nationFactory.GetNation(nation_type);
             iNation = abstractNationCreator.CreateNation();
             newVillageEdit = villageOpen.ReformVillage();
+            button1.Text = newVillageEdit.GetVillageName();
             Refresh();
             newVillageEdit.ReDrawVillage(graphics, iNation);
         }

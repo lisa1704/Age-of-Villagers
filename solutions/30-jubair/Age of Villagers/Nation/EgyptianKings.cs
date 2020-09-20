@@ -31,7 +31,7 @@ namespace Age_of_Villagers.Nation
         public void GetHouse(Graphics graphics, Point _point)
         {
 
-            EgyptianHouse egyptian_house = new EgyptianHouse(new Point(_point.X, _point.Y), new Point(_point.X - 10, _point.Y + 12), new Point(_point.X + 3, _point.Y + 15), new Point(_point.X + 8, _point.Y + 8));
+            EgyptianHouse egyptian_house = new EgyptianHouse(new Point(_point.X, _point.Y), new Point(_point.X - 8, _point.Y + 12), new Point(_point.X + 3, _point.Y + 15), new Point(_point.X + 8, _point.Y + 8));
             egyptian_house.Paint(graphics);
         }
 

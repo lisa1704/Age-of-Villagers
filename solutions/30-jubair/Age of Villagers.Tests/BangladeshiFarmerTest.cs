@@ -15,8 +15,6 @@ namespace Age_of_Villagers.Tests
     public class BangladeshiFarmerTest
     {
 
-        INation nation = new BangladeshiFarmer("Bangladeshi Farmers");
-
         BangladeshiFarmer bdFarmer = new BangladeshiFarmer("Bangladeshi Farmers");
 
 

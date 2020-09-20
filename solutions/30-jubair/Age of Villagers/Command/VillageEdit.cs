@@ -18,12 +18,11 @@ namespace Age_of_Villagers.Village_Saving
 
         }
 
-
-        public string getVillageName()
+        public string GetVillageName()
         {
             return villageName;
         }
-        public void setVillageName(string name)
+        public void SetVillageName(string name)
         {
             villageName = name;
         }
