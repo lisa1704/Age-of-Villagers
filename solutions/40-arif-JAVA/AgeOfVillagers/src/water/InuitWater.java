@@ -4,23 +4,23 @@ import canvas.MyCanvas;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class InuitWater implements IWater {
-
-
+    boolean active= true;
     public InuitWater(){
     }
     @Override
-    public void draw(Canvas canvas, String item) {
+    public void draw(Canvas canvas, RadioButton radioButton) {
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (item.equals("water")) {
+                if (active) {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
 
@@ -28,9 +28,8 @@ public class InuitWater implements IWater {
                     graphicsContext.lineTo(x, y);
                     graphicsContext.lineTo(x + 10, y + 20);
                     graphicsContext.strokeText("inuit water", mouseEvent.getX(), mouseEvent.getY());
-
-//                canvas.removeEventHandler(MouseEvent.MOUSE_RELEASED,this);
-                    System.out.println("kfdjksdflk");
+                    radioButton.setSelected(false);
+                    active = false;
                 }
             }
         });

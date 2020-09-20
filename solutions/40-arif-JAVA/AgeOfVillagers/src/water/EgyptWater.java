@@ -27,7 +27,7 @@ public class EgyptWater implements IWater {
                     graphicsContext.strokeArc(x, y, 50, 50, 200, 360, ArcType.OPEN);
                     graphicsContext.lineTo(x, y);
                     graphicsContext.lineTo(x + 10, y + 20);
-                    graphicsContext.strokeText("bd tree", mouseEvent.getX(), mouseEvent.getY());
+                    graphicsContext.strokeText("egypt water", mouseEvent.getX(), mouseEvent.getY());
                     radioButton.setSelected(false);
                     active = false;
                 }
