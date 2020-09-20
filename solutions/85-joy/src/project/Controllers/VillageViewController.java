@@ -45,18 +45,15 @@ public class VillageViewController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if(Flag == 1){
-                    INation BangladeshiFarmers = new BangladeshiFarmers();
-                    Object = BangladeshiFarmers.DrawTree(event.getSceneX(),event.getSceneY());
+                    Object = nation.DrawTree(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
                 else if(Flag == 2){
-                    INation BangladeshiFarmers = new BangladeshiFarmers();
-                    Object = BangladeshiFarmers.DrawHouse(event.getSceneX(),event.getSceneY());
+                    Object = nation.DrawHouse(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
                 else if(Flag == 3){
-                    INation BangladeshiFarmers = new BangladeshiFarmers();
-                    Object = BangladeshiFarmers.DrawWaterSource(event.getSceneX(),event.getSceneY());
+                    Object = nation.DrawWaterSource(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
             }
