@@ -125,6 +125,7 @@
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeClick);
+            this.radioButton1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tree_MouseClick);
             // 
             // radioButton2
             // 
@@ -140,6 +141,7 @@
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.WaterSourceClick);
+            this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WaterSource_MouseClick);
             // 
             // radioButton3
             // 
@@ -155,6 +157,7 @@
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.HouseClick);
+            this.radioButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.House_MouseClick);
             // 
             // NationBox
             // 

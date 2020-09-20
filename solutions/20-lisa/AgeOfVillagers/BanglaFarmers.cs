@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
+
 {
     class BanglaFarmers : INation
     {

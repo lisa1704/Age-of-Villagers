@@ -15,12 +15,13 @@ namespace AgeOfVillagers
         private int x;
         private int y;
         string s;
-        string vName;
+        string vName="";
 
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> watersource_point = new List<Point>();
-        NationFactory nationFactory = new NationFactory();
+        INationFactory nationFactory = new NationFactory();
+        INation nation = null;
 
         public VillageEditor()
         {
@@ -35,15 +36,15 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                nationFactory.GetNation(vName).DrawTree(graphics, point);
+                ((INationFactory)nationFactory).GetNation(vName).DrawTree(graphics, point);
             }
             foreach (Point point in house_point)
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                ((INationFactory)nationFactory).GetNation(vName).DrawHouse(graphics, point);
             }
             foreach (Point point in watersource_point)
             {
-                graphics.DrawLine(pen, point.X, point.Y, 100, 100);
+                ((INationFactory)nationFactory).GetNation(vName).DrawWaterSource(graphics, point);
             }
 
 
@@ -95,17 +96,17 @@ namespace AgeOfVillagers
 
         private void TreeClick(object sender, EventArgs e)
         {
-            s = "Tree";
+            
         }
 
         private void WaterSourceClick(object sender, EventArgs e)
         {
-            s = "WaterSource";
+            
         }
 
         private void HouseClick(object sender, EventArgs e)
         {
-            s = "House";
+            
         }
 
         private void SaveVillage_Click(object sender, EventArgs e)
@@ -115,7 +116,11 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-
+            house_point.Clear();
+            tree_point.Clear();
+            watersource_point.Clear();
+            NationBox.ResetText();
+            drawingPanel.Refresh();
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
@@ -129,6 +134,20 @@ namespace AgeOfVillagers
             MessageBox.Show(selectNation);
             
         }
-    
+
+        private void Tree_MouseClick(object sender, MouseEventArgs e)
+        {
+            s = "Tree";
+        }
+
+        private void House_MouseClick(object sender, MouseEventArgs e)
+        {
+            s = "WaterSource";
+        }
+
+        private void WaterSource_MouseClick(object sender, MouseEventArgs e)
+        {
+            s = "House";
+        }
     }
 }
