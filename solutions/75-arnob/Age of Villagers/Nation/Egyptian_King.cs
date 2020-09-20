@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.Egyptian_King;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace Age_of_Villagers.Nation
         }
         public void GetHouse(Graphics graphics, Point _point)
         {
-            throw new NotImplementedException();
+            Egyptian_House Egyptian_house = new Egyptian_House(new Point(_point.X, _point.Y), new Point(_point.X - 8, _point.Y + 12), new Point(_point.X + 3, _point.Y + 15), new Point(_point.X + 8, _point.Y + 8));
+            Egyptian_house.Paint(graphics);
         }
 
 
