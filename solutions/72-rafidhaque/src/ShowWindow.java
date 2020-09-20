@@ -1,4 +1,3 @@
-import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -9,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class ShowWindow extends Application {
+public class ShowWindow {
     public Stage window;
     Group drawSpace;
     INation nation;
@@ -47,10 +46,7 @@ public class ShowWindow extends Application {
         this.drawSpace = drawSpace;
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        window = primaryStage;
-        window.setTitle("Age of Villagers");
+    public Scene display() {
 
         Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
         rectangle2.draw();
@@ -81,7 +77,6 @@ public class ShowWindow extends Application {
             newRectangle.draw();
         });
 
-        window.setScene(scene);
-        window.show();
+        return scene;
     }
 }
