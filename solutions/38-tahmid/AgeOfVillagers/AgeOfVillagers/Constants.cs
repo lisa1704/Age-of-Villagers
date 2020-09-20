@@ -65,6 +65,12 @@ namespace AgeOfVillagers
         public static string BDHOUSE_HINT = "Bangladeshi_Farmer" + ",HOUSE";
         public static string ARABIAN_HOUSE_HINT = "ARAB BEDOUIN" + ",HOUSE";
         public static string ARABIAN_TREE_HINT = "ARAB BEDOUIN" + ",TREE";
+        public static string EGYPTIAN_HOUSE_HINT = "EGYPTIAN KING" + ",HOUSE";
+        public static string EGYPTIAN_TREE_HINT = "EGYPTIAN KING" + ",TREE";
+        public static string EGYPTIAN_HINT = "EGYPTIAN KING" + ",WATER SOURCE";
+
+
+
         //Panel Size
         public static int PANEL_HEIGHT = 600;
         public static int PANEL_WIDTH = 400;
