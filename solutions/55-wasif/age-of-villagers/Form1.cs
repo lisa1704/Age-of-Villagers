@@ -14,6 +14,8 @@ namespace age_of_villagers
     {
         public string village_name;
         public string village_type;
+        public string item;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,8 +44,40 @@ namespace age_of_villagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             village_type = comboBox1.Text;
-            newVillage.GetVillage(village_type);
-            panel1.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            item = "house";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            item = "tree";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            item = "water";
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics gp = panel1.CreateGraphics();
+            Pen p = new Pen(Color.Violet);
+            Point p1 = new Point(100, 100);
+            Point p2 = new Point();
+
+            gp.DrawLine(p, p1, p2);
+
+            village_factory new_village = new village_factory();
+
+            if (item == "house")
+                new_village.get_nation(village_type).draw_house();
+            else if (item == "tree")
+                new_village.get_nation(village_type).draw_tree();
+            else if (item == "water")
+                new_village.get_nation(village_type).draw_watersource();
         }
     }
 }

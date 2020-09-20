@@ -51,6 +51,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(593, 355);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // panel2
             // 
@@ -111,6 +112,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Water Source";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -120,6 +122,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Tree";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -129,6 +132,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "House";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
