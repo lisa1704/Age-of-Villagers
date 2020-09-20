@@ -5,12 +5,8 @@ namespace Age_Of_Villagers
 {
     public abstract class CompositeShape : IShape
     {
-        private List<IShape> ShapeComponents;
+        protected List<IShape> ShapeComponents = new List<IShape>();
 
-        protected CompositeShape()
-        {
-            ShapeComponents = new List<IShape>();
-        }
 
         protected void AddComponent(IShape shape)
         {
