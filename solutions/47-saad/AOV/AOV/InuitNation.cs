@@ -11,7 +11,8 @@ namespace AOV
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            InuitHouse igloo = new InuitHouse(p);
+            igloo.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)

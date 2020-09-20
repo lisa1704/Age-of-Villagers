@@ -11,8 +11,8 @@ namespace AOV
     {
         public void DrawHouse(Graphics g, Point p)
         {
-            EgyptHouse egyptHouse=new EgyptHouse(p);
-            egyptHouse.draw(g);
+            EgyptHouse pyramid=new EgyptHouse(p);
+            pyramid.draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
