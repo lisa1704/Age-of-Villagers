@@ -45,6 +45,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(470, 403);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // villageNameBox
             // 
@@ -145,7 +147,7 @@
             this.Controls.Add(this.villageNameBox);
             this.Controls.Add(this.panel1);
             this.Name = "editorVillagers";
-            this.Text = "Form1";
+            this.Text = "Age of villagers";
             this.ResumeLayout(false);
             this.PerformLayout();
 
