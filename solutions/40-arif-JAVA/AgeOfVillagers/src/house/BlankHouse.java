@@ -2,22 +2,11 @@ package house;
 
 
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.RadioButton;
 
 public class BlankHouse implements IHouse {
-    boolean active = false;
     @Override
-    public void draw(Canvas canvas, String item) {
-
+    public void draw(Canvas canvas, RadioButton radioButton) {
         System.out.println("blank house");
-    }
-
-    @Override
-    public void releaseCanvas() {
-
-    }
-
-    @Override
-    public void getCanvas() {
-
     }
 }
