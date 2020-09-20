@@ -4,9 +4,20 @@ namespace AgeOfVillagers
 {
     internal class NullHandlingNation : INation
     {
-        public IGraphicShape GetHouse(Point point)
+
+
+        public NullHandlingNation(Point point)
+        {
+
+        }
+        public IGraphicShape GetHouse()
         {
             return new NullHandler();
+        }
+
+        public Point GetHousePoint()
+        {
+            return new Point();
         }
 
         public Color GetTerritoryColor()
@@ -14,12 +25,22 @@ namespace AgeOfVillagers
             return Color.Empty; 
         }
 
-        public IGraphicShape GetTrees(Point point)
+        public Point GetTreePoint()
+        {
+            return new Point();
+        }
+
+        public IGraphicShape GetTrees()
         {
             return new NullHandler();
         }
 
-        public IGraphicShape GetWaterSources(Point point)
+        public Point GetWaterPoint()
+        {
+            return new Point();
+        }
+
+        public IGraphicShape GetWaterSources()
         {
             return new NullHandler();
         }
