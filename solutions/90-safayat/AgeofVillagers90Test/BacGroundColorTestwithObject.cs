@@ -23,6 +23,18 @@ namespace AgeofVillagers90Test
 
             Assert.AreEqual(color, colorObject);
         }
+
+        [TestMethod]
+        public void EKColorTestWithObject()
+        {
+            NationFactory EKcolorObject = new NationFactory();
+            INation NationType = EKcolorObject.GetNation("Egytian Kings");
+            EgyptianKings EK = new EgyptianKings();
+            Color color = EK.BackGroundColor();
+            Color colorObject = NationType.BackGroundColor();
+
+            Assert.AreEqual(color, colorObject);
+        }
         [TestMethod]
         public void NullNationColorTestWithObject()
         {
