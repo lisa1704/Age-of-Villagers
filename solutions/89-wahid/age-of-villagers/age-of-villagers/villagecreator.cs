@@ -104,7 +104,6 @@ namespace age_of_villagers
             g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
             if (tree.Checked)
             {
-
             }
             else if (house.Checked)
             {
