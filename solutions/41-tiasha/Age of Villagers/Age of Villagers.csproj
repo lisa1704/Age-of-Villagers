@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Components\IComponent.cs" />
     <Compile Include="Components\Line.cs" />
+    <Compile Include="Inuit.cs" />
     <Compile Include="Nation.cs" />
     <Compile Include="NationCreator.cs" />
     <Compile Include="Program.cs" />
