@@ -21,12 +21,14 @@ namespace AgeOfVillagers.Inuit_Hunters
 
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            NullItems NullTree = new NullItems();
+            NullTree.drawing();
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            NullItems NullWaterSource = new NullItems();
+            NullWaterSource.drawing();
         }
     }
 }
