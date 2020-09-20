@@ -72,7 +72,8 @@ namespace age_of_villagers
 
         private void new_vill_Click(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.Transparent;
+            nation.ResetText();
         }
     }
 }
