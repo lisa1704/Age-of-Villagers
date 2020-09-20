@@ -37,7 +37,6 @@ namespace Age_Of_Villagers
             {
                 return new Null_Nation();
             }
-            throw new Exception();
         }
     }
 }
