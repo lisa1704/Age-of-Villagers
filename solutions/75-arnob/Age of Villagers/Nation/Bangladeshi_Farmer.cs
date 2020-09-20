@@ -1,4 +1,5 @@
 ﻿using Age_of_Villagers.Bangladeshi_Farmer;
+using Age_of_Villagers.BD_Farmer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -20,7 +21,7 @@ namespace Age_of_Villagers
         public void GetHouse(Graphics graphics, Point _point)
         {
 
-            Bdfarmer_House bangladeshi_house = new BDfarmer_House(new Point(_point.X, _point.Y - 8), new Point(_point.X - 8, _point.Y), new Point(_point.X + 8, _point.Y + 8));
+            BDfarmer_House bangladeshi_house = new BDfarmer_House(new Point(_point.X, _point.Y - 8), new Point(_point.X - 8, _point.Y), new Point(_point.X + 8, _point.Y + 8));
             bangladeshi_house.Paint(graphics);
         }
 
