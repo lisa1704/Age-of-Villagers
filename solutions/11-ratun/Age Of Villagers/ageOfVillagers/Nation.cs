@@ -1,10 +1,12 @@
 ﻿using System;
 
-public class Nation
+public class Nation : INation
 {
-    public INation nationtype;
-    public String getBackground()
+    INation nation;
+    public INation getNation(string nationName)
     {
-        return nationtype.backgroundcolor();
+        if (nationName == "Bangladeshi_farmer")
+            nation = new BangladeshiFarmer();
+        return nation;
     }
 }

@@ -4,6 +4,6 @@ namespace ageOfVillagers
 {
     public interface INation
     {
-        String backgroundcolor();
+        INation getNation(string nationName);
     }
 }
