@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Age_of_Villagers.Nation
 {
-    class InunitHunters
+    class InunitHunters : INation
     {
 
     }
+
 }
