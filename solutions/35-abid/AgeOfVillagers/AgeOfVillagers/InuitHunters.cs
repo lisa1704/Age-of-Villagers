@@ -8,16 +8,19 @@ namespace AgeOfVillagers
 {
     class InuitHunters : INation
     {
-        private Panel drawingPanel;
+        protected Panel drawingPanel;
+        protected IHouse house = new InuitHouse();
+        protected ITree tree = new InuitTree();
+        protected IWatersrc waterSrc = new InuitWatersrc();
 
-        public InuitHunters(Panel drawingPanel)
+        public InuitHunters(Panel panel)
         {
-            this.drawingPanel = drawingPanel;
+            drawingPanel = panel;
         }
 
         public void drawhouse(Point p)
         {
-          
+            house.drawHouse(p, drawingPanel);
         }
 
         public void drawtree(Point p)
