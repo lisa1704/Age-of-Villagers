@@ -82,7 +82,7 @@ namespace empty_project
             {
                 village.insertTree(new Axis(click.X, click.Y), nation);
             }
-            if (element_text == "WaterSource")
+            if (element_text == "Water Source")
             {
                 village.insertWaterSource(new Axis(click.X, click.Y), nation);
             }
