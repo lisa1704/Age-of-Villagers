@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IWaterResource.cs" />
     <Compile Include="WaterSourceContext.cs" />
     <Compile Include="Nations\Arab.cs" />
     <Compile Include="Nations\Bangladeshi.cs" />
