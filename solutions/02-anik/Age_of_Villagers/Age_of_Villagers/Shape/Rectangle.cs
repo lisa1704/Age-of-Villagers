@@ -20,7 +20,7 @@ namespace Age_of_Villagers.Shape
             this.bottomRight = bottomRight;
         }
 
-        public void draw(Graphics g, Pen p)
+        public void Draw(Graphics g, Pen p)
         {
             new Line(topLeft, topRight).Draw(g, p);
             new Line(topLeft, bottomLeft).Draw(g, p);
@@ -28,7 +28,7 @@ namespace Age_of_Villagers.Shape
             new Line(bottomRight, topRight).Draw(g, p);
         }
 
-
+      
     }
 }
 
