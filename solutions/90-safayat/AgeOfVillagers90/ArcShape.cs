@@ -9,8 +9,6 @@ namespace AgeOfVillagers90
 {
     class ArcShape : IShapeIItem
     {
-        private readonly Point point1;
-        private readonly Point point2;
         public float x, y, width, heigth, initialangle, sweepAngle;
         public ArcShape(float x, float y, float width, float heigth,float initialangle,float sweepAngle)
         {
