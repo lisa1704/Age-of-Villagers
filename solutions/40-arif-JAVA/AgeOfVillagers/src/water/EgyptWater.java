@@ -8,29 +8,34 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class EgyptWater implements IWater {
-    Canvas canvas;
+//    Canvas canvas;
 
     public EgyptWater(){
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
+//        MyCanvas myCanvas = MyCanvas.getInstance();
+//        this.canvas = myCanvas.getCanvas();
     }
     @Override
-    public void draw() {
+    public void draw(Canvas canvas, String item) {
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                double x= mouseEvent.getX();
-                double y= mouseEvent.getY();
+                if(item.equals("water")) {
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
 
-                graphicsContext.strokeArc(x, y,50,50,200,360, ArcType.OPEN);
-                graphicsContext.lineTo(x,y);
-                graphicsContext.lineTo(x+10,y+20);
-                graphicsContext.strokeText("bd tree", mouseEvent.getX(),mouseEvent.getY());
+                    graphicsContext.strokeArc(x, y, 50, 50, 200, 360, ArcType.OPEN);
+                    graphicsContext.lineTo(x, y);
+                    graphicsContext.lineTo(x + 10, y + 20);
+                    graphicsContext.strokeText("bd tree", mouseEvent.getX(), mouseEvent.getY());
+                    System.out.println("okok");
+                }
+
             }
         });
+
 
     }
 }

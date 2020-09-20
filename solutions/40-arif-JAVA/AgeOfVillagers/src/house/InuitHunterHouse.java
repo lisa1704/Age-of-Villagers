@@ -9,22 +9,24 @@ import javafx.scene.shape.ArcType;
 
 public class InuitHunterHouse implements IHouse {
 
-    Canvas canvas;
+//    Canvas canvas;
     public InuitHunterHouse(){
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
+//        MyCanvas myCanvas = MyCanvas.getInstance();
+//        this.canvas = myCanvas.getCanvas();
     }
     @Override
-    public void draw() {
+    public void draw(Canvas canvas, String item) {
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(),50,10,200,360, ArcType.OPEN);
-                graphicsContext.strokeText("Inuit house", mouseEvent.getX(),mouseEvent.getY());
-                System.out.println("ok");
+                if(item.equals("house")) {
+                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 50, 10, 200, 360, ArcType.OPEN);
+                    graphicsContext.strokeText("Inuit house", mouseEvent.getX(), mouseEvent.getY());
+                    System.out.println("ok");
+                }
             }
         });
 

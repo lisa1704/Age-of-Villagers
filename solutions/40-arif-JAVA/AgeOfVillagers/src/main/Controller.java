@@ -63,7 +63,6 @@ public class Controller {
     private RadioButton treeRB;
     @FXML
     private RadioButton waterRB;
-
     @FXML
     private AnchorPane terrain;
 
@@ -114,11 +113,17 @@ public class Controller {
         treeRB.setSelected(false);
         waterRB.setSelected(false);
 
+//        Canvas canvas1 = new Canvas(525,500);
+//        terrain.getChildren().remove(canvas);
+//        terrain.getChildren().add(canvas1);
+//        terrain.getChildren().add(canvas);
+
         house = nationManager.getHouse();
-        house.draw();
+        house.draw(canvas,"house");
 
         originator.setState("home");
         careTaker.add(originator.saveStateToMemento());
+        System.out.println("hooooooo");
     }
     @FXML
     void treeRBCon(ActionEvent actionEvent){
@@ -131,6 +136,7 @@ public class Controller {
 
         originator.setState("tree");
         careTaker.add(originator.saveStateToMemento());
+        System.out.println("treeeeeeeee");
     }
     @FXML
     void waterRBCon(ActionEvent actionEvent){
@@ -139,10 +145,11 @@ public class Controller {
         waterRB.setSelected(true);
 
         water = nationManager.getWater();
-        water.draw();
+        water.draw(canvas,"water");
 
         originator.setState("water");
         careTaker.add(originator.saveStateToMemento());
+        System.out.println("waaaaaaaaaa");
     }
 
     @FXML
