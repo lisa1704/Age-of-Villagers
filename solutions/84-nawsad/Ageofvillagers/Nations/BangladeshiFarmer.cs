@@ -15,17 +15,20 @@ namespace Ageofvillagers
             this.g = g;
             this.p = p;
         }
-        public void drawHouse(int x,int y)
+        public void drawHouse(int x, int y)
         {
             Rectangle rec = new Rectangle(g, p, x, y);
             rec.drawshape();
             Triangle T = new Triangle(g, p, x, y);
             T.drawshape();
         }
-
-        public void drawTree()
+        public void drawTree(int x, int y)
         {
-            throw new NotImplementedException();
+            Circle C = new Circle(g,p,x,y)
+            C.drawshape();
+            Line L = new Line(g, p, x, y,10);
+
+
         }
 
         public void drawWaterSource()

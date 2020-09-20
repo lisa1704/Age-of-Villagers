@@ -13,6 +13,8 @@ namespace Ageofvillagers
         private Pen p;
         private int X;
         private int Y;
+        private int Xlength =100;
+        private int Ylength = 0;
         public Line(Graphics g, Pen p, int X, int Y)
         {
             this.g = g;
@@ -21,10 +23,19 @@ namespace Ageofvillagers
             this.Y = Y;
             
         }
+        public Line(Graphics g, Pen p, int X, int Y,int Xlength)
+        {
+            this.g = g;
+            this.p = p;
+            this.X = X;
+            this.Y = Y;
+            this.Xlength = Xlength;
+
+        }
         public void drawshape()
         {
-            g.DrawLine(p, X, Y, X + 100, Y);
-            Console.WriteLine("Line Drawn Correctly with lenghth "+100);
+            g.DrawLine(p, X, Y, X + Xlength, Y+Ylength);
+            Console.WriteLine("Line Drawn Correctly with length "+Xlength);
         }
 
        
