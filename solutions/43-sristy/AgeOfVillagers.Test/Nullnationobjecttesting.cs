@@ -22,6 +22,13 @@ namespace AgeOfVillagers.Test
             IObject expected = new null_obj();
             actual.Equals(expected);
         }
+        [Fact]
+        public void InuitwatersourceTest()
+        {
+            IObject actual = nationfactory.GetNation("").Draw_watersource(lptop);
+            IObject expected = new null_obj();
+            actual.Equals(expected);
+        }
 
     }
 }
