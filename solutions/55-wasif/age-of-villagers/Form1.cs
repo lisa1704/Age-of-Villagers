@@ -79,5 +79,10 @@ namespace age_of_villagers
             else if (item == "water")
                 new_village.get_nation(village_type).draw_watersource();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
