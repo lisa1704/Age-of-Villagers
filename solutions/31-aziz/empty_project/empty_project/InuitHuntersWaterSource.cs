@@ -10,7 +10,7 @@ namespace empty_project
     {
         public void drawWaterSource(Axis axis, Panel panel)
         {
-            //No implementation
+            MessageBox.Show("We can't plant trees -_- ");
         }
     }
 }
