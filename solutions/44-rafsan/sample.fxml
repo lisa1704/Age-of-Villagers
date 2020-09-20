@@ -21,19 +21,13 @@
                                         </Label>
                                         <TextField fx:id="inputVillageName" alignment="CENTER" layoutX="40.0" layoutY="46.0" promptText="Village Name" />
                                         <ComboBox fx:id="inputNationName" layoutX="43.0" layoutY="94.0" prefWidth="150.0" promptText="Nation" />
-                                        <Button fx:id="createVillage" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="142.0" mnemonicParsing="false" onAction="#b7" text="Create" />
-                                    </children>
+                                                                            </children>
                                 </AnchorPane>
                             </children></AnchorPane>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <RadioButton fx:id="tree" layoutX="31.0" layoutY="150.0" mnemonicParsing="True" onAction="#b1" text="Tree" />
-                        <RadioButton fx:id="house" layoutX="31.0" layoutY="181.0" mnemonicParsing="false" onAction="#b2" text="House" />
-                        <RadioButton fx:id="waterSource" layoutX="32.0" layoutY="211.0" mnemonicParsing="false" onAction="#b3" text="Water Source" />
-                        <Button fx:id="saveVillage" layoutX="40.0" layoutY="349.0" mnemonicParsing="false" onAction="#b4" text="Save Village" />
-                        <Button fx:id="newVillage" layoutX="41.0" layoutY="310.0" mnemonicParsing="false" onAction="#b5" text="New Village" />
-                        <Button fx:id="openVillage" layoutX="39.0" layoutY="271.0" mnemonicParsing="false" onAction="#b6" text="Open Village" />
-                        <Label layoutX="29.0" layoutY="21.0" text="Age of Villagers" textAlignment="CENTER" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="11.0">
+                        <RadioButton fx:id="house" layoutX="31.0" layoutY="181.0" mnemonicParsing="false" onAction="#selectHouse" text="House" />
+                      <Label layoutX="29.0" layoutY="21.0" text="Age of Villagers" textAlignment="CENTER" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="11.0">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
