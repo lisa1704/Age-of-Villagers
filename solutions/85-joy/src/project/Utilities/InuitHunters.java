@@ -33,8 +33,8 @@ public class InuitHunters implements INation{
         Arc arc2 = new Arc();
         arc2.setCenterX(x1);
         arc2.setCenterY(y1);
-        arc2.setRadiusX((HouseHeight/2.0)-4);
-        arc2.setRadiusY((HouseWidth/2.0)-4);
+        arc2.setRadiusX((HouseHeight/2.0)-5);
+        arc2.setRadiusY((HouseWidth/2.0)-5);
         arc2.setStartAngle(0.0);
         arc2.setLength(180.0);
         arc2.setType(ArcType.ROUND);
