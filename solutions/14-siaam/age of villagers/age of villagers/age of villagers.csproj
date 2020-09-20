@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="INation.cs" />
     <Compile Include="Inuithunter.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
