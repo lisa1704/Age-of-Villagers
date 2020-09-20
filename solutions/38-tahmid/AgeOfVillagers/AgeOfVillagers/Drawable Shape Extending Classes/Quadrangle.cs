@@ -8,21 +8,21 @@ namespace AgeOfVillagers
 {
     class Quadrangle : DrawableShapes
     {
-        Point start,topRight,bottomRight,bottomLeft;
+        Point topLeftPoint,topRightPoint,bottomRightPoint,bottomLeftPoint;
         Graphics g;
         Pen p;
         int height,width;
         DrawableShapes upLine,downLine,leftLine,rightLine;
-        public Quadrangle(Graphics g, Pen p, Point start,int height, int width)
+        private Point bottomRighttPoint;
+
+        public Quadrangle(Point topLeftPoint, Point topRightPoint, Point bottomLeftPoint, Point bottomRighttPoint)
         {
-            this.start = start;
-            this.height = height;
-            this.width = width;
-            this.g = g;
-            this.p = p;
-            
-            
+            this.topLeftPoint = topLeftPoint;
+            this.topRightPoint = topRightPoint;
+            this.bottomLeftPoint = bottomLeftPoint;
+            this.bottomRighttPoint = bottomRighttPoint;
         }
+
         public override void drawShape()
         {
             upLine.drawShape();
@@ -34,13 +34,11 @@ namespace AgeOfVillagers
 
         public override void makeShape()
         {
-            topRight = new Point(start.X + width, start.Y);
-            bottomLeft = new Point(start.X, start.Y + height);
-            bottomRight = new Point(start.X + width, start.Y + height);
-            upLine = base.getLines(start, topRight, g, p);
-            downLine = base.getLines(bottomLeft, bottomRight, g, p);
-            rightLine = base.getLines(topRight, bottomRight, g, p);
-            leftLine = base.getLines(start, bottomLeft, g, p);
+           
+            upLine = base.getLines(topLeftPoint, topRightPoint, g, p);
+            downLine = base.getLines(bottomLeftPoint, bottomRightPoint, g, p);
+            rightLine = base.getLines(topRightPoint, bottomRightPoint, g, p);
+            leftLine = base.getLines(topLeftPoint, bottomLeftPoint, g, p);
             drawShape();
         }
     }

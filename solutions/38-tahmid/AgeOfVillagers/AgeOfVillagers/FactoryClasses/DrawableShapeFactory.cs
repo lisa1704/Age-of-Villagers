@@ -29,7 +29,15 @@ namespace AgeOfVillagers
             
         }
 
-
+        public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point topLeftPoint, Point topRightPoint, Point bottomLeftPoint, Point bottomRighttPoint, string hint)
+        {
+            if (hint.Equals(Constants.RECT_HINT))
+                new Quadrangle(topLeftPoint,topRightPoint,bottomLeftPoint,bottomRighttPoint);
+            return null;
 
         }
+
+
+
+    }
 }
