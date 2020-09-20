@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BangladeshiWaterSource.cs" />
-    <Compile Include="EgyptianWaterSource.cs" />
-    <Compile Include="IWaterResource.cs" />
-    <Compile Include="WaterSourceContext.cs" />
+    <Compile Include="Water Source\BangladeshiWaterSource.cs" />
+    <Compile Include="Water Source\EgyptianWaterSource.cs" />
+    <Compile Include="Water Source\IWaterResource.cs" />
+    <Compile Include="Water Source\WaterSourceContext.cs" />
     <Compile Include="Nations\Arab.cs" />
     <Compile Include="Nations\Bangladeshi.cs" />
     <Compile Include="Components\Arc.cs" />
