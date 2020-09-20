@@ -109,7 +109,7 @@ namespace AgeOfVillagers
             this.trees = trees;
         }
 
-        public void SetState()
+        public void restoreState()
         {
             village.SetVillageName(villageName);
             village.SetTreeItems(trees);
