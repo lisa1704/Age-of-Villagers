@@ -8,6 +8,8 @@ namespace age_of_villagers
 {
     public interface INations
     {
-
+         void draw_house();
+         void draw_watersource();
+         void draw_tree();
     }
 }

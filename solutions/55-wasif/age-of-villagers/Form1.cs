@@ -12,6 +12,8 @@ namespace age_of_villagers
 {
     public partial class Form1 : Form
     {
+        public string village_name;
+        public string village_type;
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,23 @@ namespace age_of_villagers
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            village_name = textBox2.Text;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = comboBox1.Text;
+            newVillage.GetVillage(village_type);
+            panel1.Refresh();
         }
     }
 }
