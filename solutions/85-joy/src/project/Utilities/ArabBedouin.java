@@ -68,8 +68,8 @@ public class ArabBedouin implements  INation{
     @Override
     public ArrayList<Shape> DrawWaterSource(double x1, double y1) {
         //Null Object Implementation
-
-        return null;
+        ArrayList<Shape> WaterSource = new ArrayList<Shape>();
+        return WaterSource;
     }
 
     @Override

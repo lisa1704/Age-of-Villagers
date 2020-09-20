@@ -46,12 +46,14 @@ public class InuitHunters implements INation{
 
     @Override
     public ArrayList<Shape> DrawTree(double x1, double y1) {
-        return null;
+        ArrayList<Shape> Tree = new ArrayList<Shape>();
+        return  Tree;
     }
 
     @Override
     public ArrayList<Shape> DrawWaterSource(double x1, double y1) {
-        return null;
+        ArrayList<Shape> WaterSource = new ArrayList<Shape>();
+        return WaterSource;
     }
 
     @Override
