@@ -23,9 +23,9 @@ namespace AgeOfVillagers.Nation
             return Color.LightYellow;
         }
 
-        public VillageItem getTree(Point p)
+        public VillageItem getTree(Point point)
         {
-            throw new NotImplementedException();
+            return new ArabianTree(point);
         }
 
         public VillageItem getWaterSource(Point p)

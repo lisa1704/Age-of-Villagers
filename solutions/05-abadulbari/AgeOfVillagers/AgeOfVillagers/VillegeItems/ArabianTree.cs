@@ -18,8 +18,8 @@ namespace AgeOfVillagers.VillegeItems
             branch1 = new Point(centre.X - 19, centre.Y - 2);
             branch2 = new Point(centre.X - 15, centre.Y - 14);
             branch3 = new Point(centre.X, centre.Y - 20);
-            branch4 = new Point(centre.X + 15, centre.Y + 14);
-            branch5 = new Point(centre.X + 19, centre.Y + 2);
+            branch4 = new Point(centre.X + 15, centre.Y - 14);
+            branch5 = new Point(centre.X + 19, centre.Y - 2);
             logTopLeft = new Point(centre.X - 2, centre.Y);
             logBottomRight = new Point(centre.X + 2, centre.Y + 20);
 
