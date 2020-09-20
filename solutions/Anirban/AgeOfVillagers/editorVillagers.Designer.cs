@@ -41,16 +41,16 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(37, 35);
+            this.panel1.Location = new System.Drawing.Point(35, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 403);
+            this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // villageNameBox
             // 
-            this.villageNameBox.Location = new System.Drawing.Point(616, 89);
+            this.villageNameBox.Location = new System.Drawing.Point(734, 89);
             this.villageNameBox.Name = "villageNameBox";
             this.villageNameBox.Size = new System.Drawing.Size(186, 22);
             this.villageNameBox.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // New
             // 
-            this.New.Location = new System.Drawing.Point(570, 352);
+            this.New.Location = new System.Drawing.Point(688, 352);
             this.New.Name = "New";
             this.New.Size = new System.Drawing.Size(71, 27);
             this.New.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // open
             // 
-            this.open.Location = new System.Drawing.Point(677, 352);
+            this.open.Location = new System.Drawing.Point(795, 352);
             this.open.Name = "open";
             this.open.Size = new System.Drawing.Size(66, 26);
             this.open.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(774, 352);
+            this.save.Location = new System.Drawing.Point(892, 352);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(79, 26);
             this.save.TabIndex = 4;
@@ -94,7 +94,7 @@
             "Arab Bedouins",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.comboBox1.Location = new System.Drawing.Point(599, 155);
+            this.comboBox1.Location = new System.Drawing.Point(717, 155);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(217, 24);
             this.comboBox1.TabIndex = 5;
@@ -103,7 +103,7 @@
             // house_rb
             // 
             this.house_rb.AutoSize = true;
-            this.house_rb.Location = new System.Drawing.Point(649, 217);
+            this.house_rb.Location = new System.Drawing.Point(767, 217);
             this.house_rb.Name = "house_rb";
             this.house_rb.Size = new System.Drawing.Size(70, 21);
             this.house_rb.TabIndex = 6;
@@ -115,7 +115,7 @@
             // tree_rb
             // 
             this.tree_rb.AutoSize = true;
-            this.tree_rb.Location = new System.Drawing.Point(649, 245);
+            this.tree_rb.Location = new System.Drawing.Point(767, 245);
             this.tree_rb.Name = "tree_rb";
             this.tree_rb.Size = new System.Drawing.Size(59, 21);
             this.tree_rb.TabIndex = 7;
@@ -127,7 +127,7 @@
             // water_rb
             // 
             this.water_rb.AutoSize = true;
-            this.water_rb.Location = new System.Drawing.Point(649, 273);
+            this.water_rb.Location = new System.Drawing.Point(767, 273);
             this.water_rb.Name = "water_rb";
             this.water_rb.Size = new System.Drawing.Size(114, 21);
             this.water_rb.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 481);
+            this.ClientSize = new System.Drawing.Size(1016, 465);
             this.Controls.Add(this.water_rb);
             this.Controls.Add(this.tree_rb);
             this.Controls.Add(this.house_rb);
