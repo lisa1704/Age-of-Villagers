@@ -11,46 +11,31 @@ namespace Age_of_Villagers
     abstract class AbstractPainter : IPainter
     {
         protected Panel drawingSpace;
-        protected List<House> houses = new List<House>();
-        protected List<Tree> trees = new List<Tree>();
-        protected List<WaterSource> wSources = new List<WaterSource>();
+        protected IHouse house;
+        protected ITree tree;
+        protected IWaterSource wSource;
+        protected Color color;
         public AbstractPainter(Panel panel)
         {
             drawingSpace = panel;
             paintTerrain();
         }
-        public void drawVillage()
+        public void drawHouse(Axis axes)
         {
-            drawHouses();
-            drawTrees();
-            drawWaterSources();
+            house.drawHouse(axes, drawingSpace);
         }
 
-        public void drawHouses()
+        public void drawTree(Axis axes)
         {
-            foreach (House house in houses)
-            {
-                drawHouse(house.getX(), house.getY());
-            }
+            tree.drawTree(axes, drawingSpace);
         }
-        public void drawTrees()
+        public void drawWaterSource(Axis axes)
         {
-            foreach (Tree tree in trees)
-            {
-                drawTree(tree.getX(), tree.getY());
-            }
+            wSource.drawWaterSource(axes, drawingSpace);
         }
-        public void drawWaterSources()
+        public void paintTerrain()
         {
-            foreach (WaterSource wSource in wSources)
-            {
-                drawWaterSource(wSource.getX(), wSource.getY());
-            }
+            drawingSpace.BackColor = color;
         }
-
-        public abstract void drawHouse(int x, int y);
-        public abstract void drawTree(int x, int y);
-        public abstract void drawWaterSource(int x, int y);
-        public abstract void paintTerrain();
     }
 }
