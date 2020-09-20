@@ -5,7 +5,7 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class Arab_Bedouins implements INations{
-    private String TerrainColor = "#fffec4";
+    private String TerrainColor = "#fffde3";
     public Arab_Bedouins(){
         super();
     }
