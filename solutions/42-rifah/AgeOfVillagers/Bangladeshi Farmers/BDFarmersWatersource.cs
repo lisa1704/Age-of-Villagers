@@ -9,14 +9,14 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
     {
         public BDFarmersWatersource(Point Point1)
         {
-            Point point2 = new Point(Point1.X-25, Point1.Y+50);
-            Point point3 = new Point(Point1.X, Point1.Y+75);
-            Point point4 = new Point(Point1.X+25, Point1.Y+50);
-            Point point5 = new Point(Point1.X+50, Point1.Y+75);
-            Point point6 = new Point(Point1.X+75, Point1.Y+25);
-            Point point7 = new Point(Point1.X+50, Point1.Y);
-            Point point8 = new Point(Point1.X+25, Point1.Y+25);
-            Point point9 = new Point(Point1.X+25, Point1.Y);
+            Point point2 = new Point(Point1.X - 30, Point1.Y + 55);
+            Point point3 = new Point(Point1.X, Point1.Y + 80);
+            Point point4 = new Point(Point1.X + 30, Point1.Y + 55);
+            Point point5 = new Point(Point1.X + 55, Point1.Y + 80);
+            Point point6 = new Point(Point1.X + 80, Point1.Y + 30);
+            Point point7 = new Point(Point1.X + 55, Point1.Y);
+            Point point8 = new Point(Point1.X + 30, Point1.Y + 30);
+            Point point9 = new Point(Point1.X + 30, Point1.Y);
 
             AddComponent(new Line(Point1, point2));
             AddComponent(new Line(point2, point3));
