@@ -9,11 +9,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class BDTree implements ITree {
-    Canvas canvas;
+
+    boolean active = true;
 
     public BDTree(){
-        MyCanvas myCanvas = MyCanvas.getInstance();
-        this.canvas = myCanvas.getCanvas();
     }
 
     @Override
@@ -24,13 +23,17 @@ public class BDTree implements ITree {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                double x= mouseEvent.getX();
-                double y= mouseEvent.getY();
+                if(active) {
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
 
-                graphicsContext.strokeArc(x, y,50,50,200,360, ArcType.OPEN);
-                graphicsContext.lineTo(x,y);
-                graphicsContext.lineTo(x+10,y+20);
-                graphicsContext.strokeText("bd tree", mouseEvent.getX(),mouseEvent.getY());
+                    graphicsContext.strokeArc(x, y, 50, 50, 200, 360, ArcType.OPEN);
+                    graphicsContext.lineTo(x, y);
+                    graphicsContext.lineTo(x + 10, y + 20);
+                    graphicsContext.strokeText("bd tree", mouseEvent.getX(), mouseEvent.getY());
+                    radioButton.setSelected(false);
+                    active = false;
+                }
             }
         });
     }
