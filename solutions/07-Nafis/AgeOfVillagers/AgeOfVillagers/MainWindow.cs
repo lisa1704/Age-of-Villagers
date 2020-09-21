@@ -22,9 +22,6 @@ namespace AgeOfVillagers
         Color background;
         VillageState village = new VillageState();
         
-
-       
-
         List<Point> houseLocations = new List<Point>();
         List<Point> treeLocations = new List<Point>();
         List<Point> waterLocation = new List<Point>();
@@ -123,6 +120,15 @@ namespace AgeOfVillagers
             //drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
             nationTypeCombo.SelectedItem = null;
+        }
+
+        public void SaveState()
+        {
+            village.Name = villageNameBox.Text;
+            village.H_locations = houseLocations;
+            village.T_locations = treeLocations;
+            village.W_locations = waterLocation;
+
         }
 
         private void saveButton_Click(object sender, EventArgs e)
