@@ -5,6 +5,6 @@ namespace AgeOfVillagers
     interface IVillageItem
     {
         Point getItemLocation();
-        CompositeShape getItemShape(Point point);
+        IShape getItemShape(Point point);
     }
 }
