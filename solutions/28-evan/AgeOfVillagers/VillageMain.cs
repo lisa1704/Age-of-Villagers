@@ -12,6 +12,11 @@ namespace AgeOfVillagers
 {
     public partial class VillageMain : Form
     {
+        Color getColor;
+        string villageName;
+        string nation;
+        string selectedItem;
+        
         public VillageMain()
         {
             InitializeComponent();

@@ -60,6 +60,7 @@
     <Compile Include="IShape.cs" />
     <Compile Include="ITree.cs" />
     <Compile Include="IWaterSource.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="VillageMain.cs">
       <SubType>Form</SubType>
     </Compile>

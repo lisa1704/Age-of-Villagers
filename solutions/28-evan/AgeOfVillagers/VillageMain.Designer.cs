@@ -37,17 +37,20 @@
             this.open_btn = new System.Windows.Forms.Button();
             this.new_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(754, 38);
+            this.textBox1.Location = new System.Drawing.Point(754, 63);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(12, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 400);
@@ -101,7 +104,7 @@
             // 
             // open_btn
             // 
-            this.open_btn.Location = new System.Drawing.Point(647, 335);
+            this.open_btn.Location = new System.Drawing.Point(673, 320);
             this.open_btn.Name = "open_btn";
             this.open_btn.Size = new System.Drawing.Size(75, 23);
             this.open_btn.TabIndex = 6;
@@ -119,18 +122,41 @@
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(859, 335);
+            this.save_btn.Location = new System.Drawing.Point(835, 352);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(75, 23);
             this.save_btn.TabIndex = 8;
             this.save_btn.Text = "Save";
             this.save_btn.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(232, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Drawing Panel";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(689, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "AGE OF VILLAGERS";
+            // 
             // VillageMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(986, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.new_btn);
             this.Controls.Add(this.open_btn);
@@ -158,6 +184,8 @@
         private System.Windows.Forms.Button open_btn;
         private System.Windows.Forms.Button new_btn;
         private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

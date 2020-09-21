@@ -8,7 +8,17 @@ namespace AgeOfVillagers
 {
     class ConcreteNation
     {
-        public INation GetNation(String nationType);
+        public INation nationType(String nation)
+        {
+            if (nation == "Bangladeshi Farmers")
+                return new BangladeshiFarmers();
+            else if(nation == "Arab Bedouins")
+                return new ArabBedouins();
+            else if(nation == "Egyptian Kings")
+                return new EgyptianKings();
+            else
+                return new InuitHunters();
+        }
 
     }
 }

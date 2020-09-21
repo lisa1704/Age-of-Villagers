@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface IShape
+    class Line : IShape
     {
-        void Draw();
-        void DrawShape();
+        public void DrawShape()
+        {
+
+        }
     }
 }

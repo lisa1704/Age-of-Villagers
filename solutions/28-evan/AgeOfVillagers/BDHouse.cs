@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BDHouse : IVillages
+    class BDHouse
     {
         public void Draw(Graphics gr, Point pt, Pen pn)
         {
