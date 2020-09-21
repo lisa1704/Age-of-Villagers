@@ -9,26 +9,27 @@ namespace XUnitTestProject_AgeOfVilager
 {
     public class ArabBedouinUnitTest
     {
-       private string checkstring = "Arab Bedouin";
+       private static string checkstring = "Arab Bedouin";
 
-        
+        NationManager man = new NationManager(checkstring);
         Point point = new Point(100, 100);
         [Fact]
         public void ArabbackcolorTest()
         {
-            NationManager man = new NationManager(checkstring);
+           
 
             var result = man.getNation(new Point()).GetTerritoryColor();
             Assert.Equal(Color.GreenYellow, result);
 
         }
 
+        
         [Fact]
         public void ArabHousepointTest()
         {
 
 
-            NationManager man = new NationManager(checkstring);
+     
             Point result = man.getNation(point).GetHousePoint();
             Assert.Equal(point, result);
 
@@ -39,7 +40,6 @@ namespace XUnitTestProject_AgeOfVilager
 
 
 
-            NationManager man = new NationManager(checkstring);
             Point result = man.getNation(point).GetTreePoint();
             Assert.Equal(point, result);
 
@@ -49,8 +49,7 @@ namespace XUnitTestProject_AgeOfVilager
         {
 
 
-            NationManager man = new NationManager(checkstring);
-
+          
             Point result = man.getNation(point).GetWaterPoint();
             Assert.Equal(new Point(), result);
 
@@ -60,21 +59,21 @@ namespace XUnitTestProject_AgeOfVilager
         public void ArabNationTest()
         {
 
-            NationManager man = new NationManager(checkstring);
+           
             Assert.IsType<ArabBedouin>(man.getNation(new Point()));
 
         }
         [Fact]
         public void ArabConstructHouseTest()
         {
-            NationManager man = new NationManager(checkstring);
+          
             Assert.IsType<ArabBedouinHouse>(man.getNation(point).GetHouse());
 
         }
         [Fact]
         public void ArabConstrucTreeTest()
         {
-            NationManager man = new NationManager(checkstring);
+           
             Assert.IsType<ArabBedouinTree>(man.getNation(point).GetTrees());
         }
 
@@ -82,7 +81,7 @@ namespace XUnitTestProject_AgeOfVilager
         [Fact]
         public void ArabConstructWaterTest()
         {
-            NationManager man = new NationManager(checkstring);
+            
             Assert.IsType<NullHandler>(man.getNation(point).GetWaterSources());
         }
     }
