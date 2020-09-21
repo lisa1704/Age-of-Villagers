@@ -4,9 +4,9 @@ public interface ITree {
 
     void draw(Point point);
 
-    String canvasController();
+    public void canvasController();
 
-    String releaseCanvas();
+    public void releaseCanvas();
 
-    String getCanvas();
+    public void getCanvas();
 }
