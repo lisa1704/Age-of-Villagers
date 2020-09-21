@@ -37,7 +37,6 @@ namespace Age_of_Villagers
             this.radioButton_House = new System.Windows.Forms.RadioButton();
             this.Open_village_button = new System.Windows.Forms.Button();
             this.Save_village_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.drawing_space = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Menu_bar = new System.Windows.Forms.Panel();
@@ -114,16 +113,6 @@ namespace Age_of_Villagers
             this.Save_village_button.UseVisualStyleBackColor = true;
             this.Save_village_button.Click += new System.EventHandler(this.Save_Village_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(747, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // drawing_space
             // 
             this.drawing_space.Location = new System.Drawing.Point(12, 12);
@@ -151,7 +140,7 @@ namespace Age_of_Villagers
             this.Menu_bar.Controls.Add(this.Save_village_button);
             this.Menu_bar.Location = new System.Drawing.Point(609, 12);
             this.Menu_bar.Name = "Menu_bar";
-            this.Menu_bar.Size = new System.Drawing.Size(213, 400);
+            this.Menu_bar.Size = new System.Drawing.Size(222, 400);
             this.Menu_bar.TabIndex = 9;
             // 
             // label_ageOfVillagers
@@ -193,12 +182,10 @@ namespace Age_of_Villagers
             this.ClientSize = new System.Drawing.Size(832, 420);
             this.Controls.Add(this.Menu_bar);
             this.Controls.Add(this.drawing_space);
-            this.Controls.Add(this.label1);
             this.Name = "Village_Editor_Window";
             this.Menu_bar.ResumeLayout(false);
             this.Menu_bar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -214,7 +201,6 @@ namespace Age_of_Villagers
         private System.Windows.Forms.RadioButton radioButton_House;
         private System.Windows.Forms.Button Open_village_button;
         private System.Windows.Forms.Button Save_village_button;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel drawing_space;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel Menu_bar;
