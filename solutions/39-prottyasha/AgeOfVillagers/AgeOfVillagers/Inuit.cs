@@ -12,6 +12,7 @@ namespace AgeOfVillagers
             {
                 return new InuitHouse();
             }
+            return null;
        
         }
     }
