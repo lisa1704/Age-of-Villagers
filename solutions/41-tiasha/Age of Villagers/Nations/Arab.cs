@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Age_of_Villagers;
+using System.Diagnostics;
+using System.Drawing;
 
-namespace Age_of_Villagers
+namespace AgeOfVillagers
 {
-    class Arab
+    public class Arab
     {
+       
     }
 }
