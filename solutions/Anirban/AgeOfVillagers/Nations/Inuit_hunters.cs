@@ -10,7 +10,6 @@ namespace AgeOfVillagers.Nations
     class Inuit_hunters : INations
     {
 
-        string nation_type;
         Color bg_color = Color.White;
         public void Draw_House()
         {

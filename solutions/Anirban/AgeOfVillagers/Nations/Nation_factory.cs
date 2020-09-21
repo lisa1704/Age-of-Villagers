@@ -8,7 +8,7 @@ namespace AgeOfVillagers.Nations
 {
     class Nation_factory
     {
-        public INations Nation_type(string nation_name)
+        public INations Check_nation(string nation_name)
         {
             if (nation_name == "Bangladeshi Farmers")
             {

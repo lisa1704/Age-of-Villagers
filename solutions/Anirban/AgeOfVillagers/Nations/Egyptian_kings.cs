@@ -10,7 +10,6 @@ namespace AgeOfVillagers.Nations
     class Egyptian_kings : INations
     {
 
-        string nation_type = "E";
         Color bg_color = Color.Yellow;
         public void Draw_House()
         {

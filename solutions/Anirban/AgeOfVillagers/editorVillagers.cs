@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgeOfVillagers.Nations;
 
 namespace AgeOfVillagers
 {
     public partial class editorVillagers : Form
     {
+        Color GetColor;
         string villageName;
         string nation;
         string selected_item;
+
+        Nation_factory nation_type = new Nation_factory();
 
         public editorVillagers()
         {
@@ -37,6 +41,8 @@ namespace AgeOfVillagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = comboBox1.Text;
+            GetColor = nation_type.Check_nation(nation).terrain_Color();
+            panel1.BackColor = GetColor;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

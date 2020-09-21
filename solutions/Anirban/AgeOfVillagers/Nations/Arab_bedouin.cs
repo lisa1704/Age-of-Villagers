@@ -10,7 +10,7 @@ namespace AgeOfVillagers.Nations
     class Arab_bedouin : INations
     {
 
-        string nation_type;
+
         Color bg_color = Color.Orange;
         public void Draw_House()
         {

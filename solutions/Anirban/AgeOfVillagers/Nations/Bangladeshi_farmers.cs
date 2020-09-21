@@ -10,7 +10,6 @@ namespace AgeOfVillagers.Nations
     class Bangladeshi_farmers : INations
     {
 
-        string nation_type = "B";
         Color bg_color = Color.Green;
 
         public void Draw_House()
