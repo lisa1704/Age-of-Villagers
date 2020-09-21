@@ -2,32 +2,35 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using Age_of_villagers.Components;
 
 
 namespace Age_of_villagers.Nations
 {
     class BangladeshiFarmers : INation
     {
-        Pen p = new Pen(Color.Black);
-        string testBdHouse;
-        public object DrawHouse(Graphics g, Point pt)
+        public string getNationName()
         {
-            BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
+            return "Bangladeshi Farmers";
+        }
 
-            house.Paint(g, p);
-            testBdHouse = "BDHouse Constructed";
-            //return "KureGhor";
-            return house;
-        }
-        public string testHouse()
+        public Color getTerrainColor()
         {
-            return "BDHouse Constructed";
+            return Color.Green;
         }
-        public object DrawTree(Graphics g, Point pt)
+        public VillageComponent getHouse(Point point)
         {
-            BangladeshiTree BDtree = new BangladeshiTree(pt);
-            BDtree.Paint(g, p);
-            return BDtree;
+            return new BangladeshiHouse(point);
+        }
+
+        public VillageComponent getTree(Point point)
+        {
+            return new BangladeshiTree(point);
+        }
+
+        public VillageComponent getWaterSource(Point point)
+        {
+            return new BangladeshiWaterSource(point);
         }
     }
 }

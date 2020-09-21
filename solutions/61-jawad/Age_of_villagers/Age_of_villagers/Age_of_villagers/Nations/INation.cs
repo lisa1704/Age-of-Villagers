@@ -2,14 +2,16 @@
 using System.Drawing;
 using System.Collections.Generic;
 using System.Text;
+using Age_of_villagers.Components;
 
 namespace Age_of_villagers.Nations
 {
     interface INation
     {
-        string DrawHouse(Graphics g, Point pt);
-        void DrawTree(Graphics g, Point pt);
-        void DrawWaterSource(Graphics g, Point MPt);
-        Color GetTerrainColor();
+        string getNationName();
+        Color getTerrainColor();
+        VillageComponent getHouse(Point p);
+        VillageComponent getTree(Point p);
+        VillageComponent getWaterSource(Point p);
     }
 }

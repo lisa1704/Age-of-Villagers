@@ -13,7 +13,7 @@ namespace Age_of_villagers.Nations
         }
         public INation GetNation()
         {
-            if (nationName == "BangladeshiFarmers")
+            if (nationName == "Bangladeshi Farmers")
             {
                 return new BangladeshiFarmers();
             }
