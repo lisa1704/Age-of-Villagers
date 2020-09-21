@@ -35,6 +35,8 @@
             this.House = new System.Windows.Forms.RadioButton();
             this.Water_source = new System.Windows.Forms.RadioButton();
             this.Age_of_villagers = new System.Windows.Forms.Label();
+            this.VIllage_name = new System.Windows.Forms.TextBox();
+            this.Nation_name = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Save_village
@@ -113,11 +115,30 @@
             this.Age_of_villagers.TabIndex = 6;
             this.Age_of_villagers.Text = "Age of Villagers";
             // 
+            // VIllage_name
+            // 
+            this.VIllage_name.Location = new System.Drawing.Point(654, 82);
+            this.VIllage_name.Name = "VIllage_name";
+            this.VIllage_name.Size = new System.Drawing.Size(100, 20);
+            this.VIllage_name.TabIndex = 7;
+            this.VIllage_name.TextChanged += new System.EventHandler(this.VIllage_name_TextChanged);
+            // 
+            // Nation_name
+            // 
+            this.Nation_name.FormattingEnabled = true;
+            this.Nation_name.Location = new System.Drawing.Point(643, 108);
+            this.Nation_name.Name = "Nation_name";
+            this.Nation_name.Size = new System.Drawing.Size(121, 21);
+            this.Nation_name.TabIndex = 8;
+            this.Nation_name.SelectedIndexChanged += new System.EventHandler(this.Nation_name_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Nation_name);
+            this.Controls.Add(this.VIllage_name);
             this.Controls.Add(this.Age_of_villagers);
             this.Controls.Add(this.Water_source);
             this.Controls.Add(this.House);
@@ -141,6 +162,8 @@
         private System.Windows.Forms.RadioButton House;
         private System.Windows.Forms.RadioButton Water_source;
         private System.Windows.Forms.Label Age_of_villagers;
+        private System.Windows.Forms.TextBox VIllage_name;
+        private System.Windows.Forms.ComboBox Nation_name;
     }
 }
 

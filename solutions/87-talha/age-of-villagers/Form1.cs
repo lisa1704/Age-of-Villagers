@@ -46,5 +46,15 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void VIllage_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nation_name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
