@@ -57,11 +57,11 @@
     <Compile Include="Water Source\EgyptianWaterSource.cs" />
     <Compile Include="Water Source\IWaterResource.cs" />
     <Compile Include="Water Source\WaterSourceContext.cs" />
-    <Compile Include="Nations\Arab.cs" />
-    <Compile Include="Nations\Bangladeshi.cs" />
+    <Compile Include="Nation\Arab.cs" />
+    <Compile Include="Nation\Bangladeshi.cs" />
     <Compile Include="Components\Arc.cs" />
     <Compile Include="Components\CompositeShape.cs" />
-    <Compile Include="Nations\Egyptian.cs" />
+    <Compile Include="Nation\Egyptian.cs" />
     <Compile Include="ElementSize.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -71,10 +71,10 @@
     </Compile>
     <Compile Include="Components\IComponent.cs" />
     <Compile Include="Components\Line.cs" />
-    <Compile Include="Nations\INation.cs" />
-    <Compile Include="Nations\Inuit.cs" />
-    <Compile Include="Nations\Nation.cs" />
-    <Compile Include="Nations\NationCreator.cs" />
+    <Compile Include="Nation\INation.cs" />
+    <Compile Include="Nation\Inuit.cs" />
+    <Compile Include="Nation\Nation.cs" />
+    <Compile Include="Nation\NationCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Rectangle.cs" />
