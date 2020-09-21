@@ -36,12 +36,7 @@ namespace Age_of_Villagers
         {
 
         }
-        private void VillageText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        private void VillageNameText_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -78,7 +73,7 @@ namespace Age_of_Villagers
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void NationBoxCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

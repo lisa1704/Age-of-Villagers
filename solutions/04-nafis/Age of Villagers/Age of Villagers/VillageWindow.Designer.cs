@@ -37,7 +37,7 @@
             this.HouseRB = new System.Windows.Forms.RadioButton();
             this.TreeRB = new System.Windows.Forms.RadioButton();
             this.WaterSourceRB = new System.Windows.Forms.RadioButton();
-            this.NationBox = new System.Windows.Forms.ComboBox();
+            this.NationBoxCombo = new System.Windows.Forms.ComboBox();
             this.MenuBar = new System.Windows.Forms.Panel();
             this.MenuBar.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +54,8 @@
             this.VillageDrawing.TabIndex = 0;
             this.VillageDrawing.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageDrawing_Paint);
             this.VillageDrawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseDown);
-            this.VillageDrawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseUp);
             this.VillageDrawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseMove);
+            this.VillageDrawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseUp);
             // 
             // NewVillage
             // 
@@ -107,7 +107,7 @@
             // 
             // VillageText
             // 
-            this.VillageText.AccessibleName = "VillageText";
+            this.VillageText.AccessibleName = "VillageNameText";
             this.VillageText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.VillageText.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.VillageText.Location = new System.Drawing.Point(31, 63);
@@ -116,7 +116,7 @@
             this.VillageText.TabIndex = 2;
             this.VillageText.Text = "Village Name";
             this.VillageText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VillageText.TextChanged += new System.EventHandler(this.VillageText_TextChanged);
+            this.VillageText.TextChanged += new System.EventHandler(this.VillageNameText_TextChanged);
             // 
             // HouseRB
             // 
@@ -157,28 +157,28 @@
             this.WaterSourceRB.UseVisualStyleBackColor = true;
             this.WaterSourceRB.CheckedChanged += new System.EventHandler(this.WaterSourceRB_CheckedChanged);
             // 
-            // NationBox
+            // NationBoxCombo
             // 
-            this.NationBox.AccessibleName = "NationBox";
-            this.NationBox.FormattingEnabled = true;
-            this.NationBox.Items.AddRange(new object[] {
+            this.NationBoxCombo.AccessibleName = "NationBoxCombo";
+            this.NationBoxCombo.FormattingEnabled = true;
+            this.NationBoxCombo.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.NationBox.Location = new System.Drawing.Point(31, 103);
-            this.NationBox.Name = "NationBox";
-            this.NationBox.Size = new System.Drawing.Size(194, 25);
-            this.NationBox.TabIndex = 5;
-            this.NationBox.Text = "Select Nation";
-            this.NationBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.NationBoxCombo.Location = new System.Drawing.Point(31, 103);
+            this.NationBoxCombo.Name = "NationBoxCombo";
+            this.NationBoxCombo.Size = new System.Drawing.Size(194, 25);
+            this.NationBoxCombo.TabIndex = 5;
+            this.NationBoxCombo.Text = "Select Nation";
+            this.NationBoxCombo.SelectedIndexChanged += new System.EventHandler(this.NationBoxCombo_SelectedIndexChanged);
             // 
             // MenuBar
             // 
             this.MenuBar.AccessibleName = "MenuBar";
             this.MenuBar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.MenuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MenuBar.Controls.Add(this.NationBox);
+            this.MenuBar.Controls.Add(this.NationBoxCombo);
             this.MenuBar.Controls.Add(this.WaterSourceRB);
             this.MenuBar.Controls.Add(this.TreeRB);
             this.MenuBar.Controls.Add(this.HouseRB);
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855,405);
+            this.ClientSize = new System.Drawing.Size(855, 405);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
@@ -221,7 +221,7 @@
         private System.Windows.Forms.RadioButton HouseRB;
         private System.Windows.Forms.RadioButton TreeRB;
         private System.Windows.Forms.RadioButton WaterSourceRB;
-        private System.Windows.Forms.ComboBox NationBox;
+        private System.Windows.Forms.ComboBox NationBoxCombo;
         private System.Windows.Forms.Panel MenuBar;
     }
 }
