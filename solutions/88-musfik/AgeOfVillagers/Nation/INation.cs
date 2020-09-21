@@ -7,7 +7,6 @@ namespace AgeOfVillagers
     {
         string nationName { get; set; }
         Color getTerrainColor();
-        string getNationName();
         IShape getItemShape(Point point, String itemType);
     }
 }
