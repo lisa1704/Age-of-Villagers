@@ -1,4 +1,5 @@
 ﻿using System;
+using Age_of_Villagers.Nation;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace Age_of_Villagers
     public partial class Village_Editor_Window : Form
     {
         string village_name;
+        string nType;
+        string item;
         Village savepoints;
 
         List<Point> house_point { get; set; } = new List<Point>();
@@ -42,6 +45,11 @@ namespace Age_of_Villagers
             }
 
         }
+
+        
+        NationFactory n = new NationFactory();
+        INation Nation;
+
         public Village_Editor_Window()
         {
             InitializeComponent();
@@ -49,17 +57,50 @@ namespace Age_of_Villagers
 
         private void Menu_Bar_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Graphics g = Menu_bar.CreateGraphics();
+            Font font = new Font("Calibri", 10, FontStyle.Regular);
+            Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            AbstractNationFactoryCreator abstractNationCreator = n.GetNation(nType);
+            Nation = abstractNationCreator.CreateNation();
+
+            foreach (Point pt in house_point)
+            {
+                Nation.GetHouse(g, pt);
+            }
+
+            foreach (Point pt in tree_point)
+            {
+                Nation.GetTree(g, pt);
+            }
+
+            foreach (Point pt in water_point)
+            {
+                Nation.GetWaterSource(g, pt);
+            }
         }
 
-        private void drawing_space_Paint(object sender, PaintEventArgs e)
+        private void drawing_space_Paint(object sender, MouseEventArgs e)
         {
-
+            if (item == "house")
+            {
+                house_point.Add(e.Location);
+            }
+            else if (item == "tree")
+            {
+                tree_point.Add(e.Location);
+            }
+            else if (item == "water")
+            {
+                water_point.Add(e.Location);
+            }
+            Menu_bar.Invalidate();
         }
 
         private void Nation_Type(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            nType = comboBox_NationList.Text;
+            Menu_bar.BackColor = Nation.getTerrainColour();
+            Menu_bar.Refresh();
         }
 
 

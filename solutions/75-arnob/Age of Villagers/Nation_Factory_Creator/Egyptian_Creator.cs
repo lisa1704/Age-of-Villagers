@@ -24,10 +24,6 @@ namespace Age_of_Villagers
             }
         }
 
-        public override INation CreateNation()
-        {
-            return new Egyptian_King(nationName);
-           
-        }
+        public override INation CreateNation => new Egyptian_King(nationName);
     }
 }

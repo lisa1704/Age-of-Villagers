@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class NationFactory
+   public class NationFactory
     {
-        public class NationFactoryApplication
-        {
+        
+        
             public AbstractNationFactoryCreator GetNation(string nation_name)
             {
                 if (nation_name == "Bangladeshi Farmers")
@@ -34,6 +34,6 @@ namespace Age_of_Villagers
 
                 return null;
             }
-        }
+        
     }
 }

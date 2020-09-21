@@ -24,10 +24,6 @@ namespace Age_of_Villagers
             }
         }
 
-        public override INation CreateNation()
-        {
-            return new Arab_Bedouin(nationName);
-            
-        }
+        public override INation CreateNation => new Arab_Bedouin(nationName);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class AbstractNationFactoryCreator
+   public abstract class AbstractNationFactoryCreator
     {
         string GetNationName
         {

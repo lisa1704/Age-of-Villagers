@@ -24,10 +24,6 @@ namespace Age_of_Villagers
             }
         }
 
-        public override INation CreateNation()
-        {
-            return new Inuit_Hunter(nationName);
-            
-        }
+        public override INation CreateNation => new Inuit_Hunter(nationName);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class BangladeshiFarmer_Creator : AbstractNationFactoryCreator
+    public class BangladeshiFarmer_Creator : AbstractNationFactoryCreator
     {
         private String nationName = "Bangladeshi Farmers";
 
@@ -24,10 +24,6 @@ namespace Age_of_Villagers
             }
         }
 
-        public override INation CreateNation()
-        {
-            return new Bangladeshi_Farmer(nationName);
-            
-        }
+        public override INation CreateNation => new Bangladeshi_Farmer(nationName);
     }
 }
