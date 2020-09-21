@@ -89,25 +89,17 @@ namespace AgeOfVillagers
                 Point hp = manager.getNation(_location).GetHousePoint();
                 if (!hp.IsEmpty)
                 {
-
                     Housepoints.Add(hp);
-
                 }
 
             }
             else if (Treeradiobtn.Checked)
             {
-
-                 
                manager.getNation(_location).GetTrees().draw(g,pen);
                Point tp= (manager.getNation(_location).GetTreePoint());
-
-
                 if (!tp.IsEmpty)
                 {
-
                     Treepoints.Add(tp);
-
                 }
             }
             else if (WaterRadiobtn.Checked)
@@ -143,15 +135,11 @@ namespace AgeOfVillagers
                 Waterpoints = _villagestate._WaterScPoints;
                 Treepoints = _villagestate._treePoints;
                 Form opennation = new OpenVillageNation(this,_villagestate,g,pen,DrawPanel);
-
-
-            
+  
             opennation.Show();
                
         }
 
-        
-        
 
         private void DrawPanel_MouseUp(object sender, MouseEventArgs e)
         {

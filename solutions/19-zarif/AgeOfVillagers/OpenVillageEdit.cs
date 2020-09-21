@@ -22,9 +22,7 @@ namespace AgeOfVillagers
         }
         public void ResetState(VillageState village, string check)
         {
-            
            
-
             foreach (Point pt in village._housePoints)
             {
                 manager.getNation(pt).GetHouse().draw(g, pen);

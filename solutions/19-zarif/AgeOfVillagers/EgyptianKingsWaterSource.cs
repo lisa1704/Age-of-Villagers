@@ -11,12 +11,8 @@ namespace AgeOfVillagers
 
         public EgyptianKingsWaterSource(Point point)
         {
-           
-
             addShape(new BaseArc(point,12,12,0,-180));
             addShape(new BaseArc(point, 12, 12, 0, 180));
-
-
         }
 
         
