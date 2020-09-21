@@ -33,21 +33,23 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Tree = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.village_name = new System.Windows.Forms.Label();
+            this.village_name_label = new System.Windows.Forms.Label();
             this.Nation_Name = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.tbVillageName = new System.Windows.Forms.TextBox();
+            this.villageName_inputField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BD = new System.Windows.Forms.RadioButton();
-            this.Hunters = new System.Windows.Forms.RadioButton();
-            this.Egyptians = new System.Windows.Forms.RadioButton();
-            this.Arabians = new System.Windows.Forms.RadioButton();
+            this.bangladesh_Nation_radioButton = new System.Windows.Forms.RadioButton();
+            this.inuit_nation_radioButton = new System.Windows.Forms.RadioButton();
+            this.egypt_nation_radioButton = new System.Windows.Forms.RadioButton();
+            this.arab_nation_radioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.WaterSource = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.drawing_panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,7 +93,6 @@
             this.Tree.TabStop = true;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = true;
-            
             this.Tree.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickTree);
             // 
             // label1
@@ -107,23 +108,21 @@
             // 
             // village_name
             // 
-            this.village_name.AutoSize = true;
-            this.village_name.Location = new System.Drawing.Point(658, 35);
-            this.village_name.Name = "village_name";
-            this.village_name.Size = new System.Drawing.Size(56, 15);
-            this.village_name.TabIndex = 1;
-            this.village_name.Text = "KataKhali";
-            this.village_name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.village_name.Click += new System.EventHandler(this.label1_Click);
+            this.village_name_label.AutoSize = true;
+            this.village_name_label.Location = new System.Drawing.Point(658, 35);
+            this.village_name_label.Name = "village_name";
+            this.village_name_label.Size = new System.Drawing.Size(0, 15);
+            this.village_name_label.TabIndex = 1;
+            this.village_name_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.village_name_label.Click += new System.EventHandler(this.label1_Click);
             // 
             // Nation_Name
             // 
             this.Nation_Name.AutoSize = true;
             this.Nation_Name.Location = new System.Drawing.Point(671, 60);
             this.Nation_Name.Name = "Nation_Name";
-            this.Nation_Name.Size = new System.Drawing.Size(43, 15);
+            this.Nation_Name.Size = new System.Drawing.Size(0, 15);
             this.Nation_Name.TabIndex = 1;
-            this.Nation_Name.Text = "Nation";
             this.Nation_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nation_Name.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -159,11 +158,11 @@
             // 
             // tbVillageName
             // 
-            this.tbVillageName.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.tbVillageName.Location = new System.Drawing.Point(706, 287);
-            this.tbVillageName.Name = "tbVillageName";
-            this.tbVillageName.Size = new System.Drawing.Size(95, 23);
-            this.tbVillageName.TabIndex = 4;
+            this.villageName_inputField.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.villageName_inputField.Location = new System.Drawing.Point(706, 287);
+            this.villageName_inputField.Name = "tbVillageName";
+            this.villageName_inputField.Size = new System.Drawing.Size(95, 23);
+            this.villageName_inputField.TabIndex = 4;
             // 
             // label2
             // 
@@ -178,62 +177,58 @@
             // 
             // BD
             // 
-            this.BD.AutoSize = true;
-            this.BD.Location = new System.Drawing.Point(0, 22);
-            this.BD.Name = "BD";
-            this.BD.Size = new System.Drawing.Size(134, 19);
-            this.BD.TabIndex = 6;
-            this.BD.TabStop = true;
-            this.BD.Text = "Bangladeshi Farmers";
-            this.BD.UseVisualStyleBackColor = true;
-           
-            this.BD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Bangladeshi_Farmer);
+            this.bangladesh_Nation_radioButton.AutoSize = true;
+            this.bangladesh_Nation_radioButton.Location = new System.Drawing.Point(0, 22);
+            this.bangladesh_Nation_radioButton.Name = "BD";
+            this.bangladesh_Nation_radioButton.Size = new System.Drawing.Size(134, 19);
+            this.bangladesh_Nation_radioButton.TabIndex = 6;
+            this.bangladesh_Nation_radioButton.TabStop = true;
+            this.bangladesh_Nation_radioButton.Text = "Bangladeshi Farmers";
+            this.bangladesh_Nation_radioButton.UseVisualStyleBackColor = true;
+            this.bangladesh_Nation_radioButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Bangladeshi_Farmer);
             // 
             // Hunters
             // 
-            this.Hunters.AutoSize = true;
-            this.Hunters.Location = new System.Drawing.Point(100, 38);
-            this.Hunters.Name = "Hunters";
-            this.Hunters.Size = new System.Drawing.Size(94, 19);
-            this.Hunters.TabIndex = 6;
-            this.Hunters.TabStop = true;
-            this.Hunters.Text = "Inuit Hunters";
-            this.Hunters.UseVisualStyleBackColor = true;
-           
-            this.Hunters.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Inuit_Hunters);
+            this.inuit_nation_radioButton.AutoSize = true;
+            this.inuit_nation_radioButton.Location = new System.Drawing.Point(100, 38);
+            this.inuit_nation_radioButton.Name = "Hunters";
+            this.inuit_nation_radioButton.Size = new System.Drawing.Size(94, 19);
+            this.inuit_nation_radioButton.TabIndex = 6;
+            this.inuit_nation_radioButton.TabStop = true;
+            this.inuit_nation_radioButton.Text = "Inuit Hunters";
+            this.inuit_nation_radioButton.UseVisualStyleBackColor = true;
+            this.inuit_nation_radioButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Inuit_Hunters);
             // 
             // Egyptians
             // 
-            this.Egyptians.AutoSize = true;
-            this.Egyptians.Location = new System.Drawing.Point(0, 63);
-            this.Egyptians.Name = "Egyptians";
-            this.Egyptians.Size = new System.Drawing.Size(103, 19);
-            this.Egyptians.TabIndex = 6;
-            this.Egyptians.TabStop = true;
-            this.Egyptians.Text = "Egyptian Kings";
-            this.Egyptians.UseVisualStyleBackColor = true;
-            
-            this.Egyptians.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Egyptian_Kings);
+            this.egypt_nation_radioButton.AutoSize = true;
+            this.egypt_nation_radioButton.Location = new System.Drawing.Point(0, 63);
+            this.egypt_nation_radioButton.Name = "Egyptians";
+            this.egypt_nation_radioButton.Size = new System.Drawing.Size(103, 19);
+            this.egypt_nation_radioButton.TabIndex = 6;
+            this.egypt_nation_radioButton.TabStop = true;
+            this.egypt_nation_radioButton.Text = "Egyptian Kings";
+            this.egypt_nation_radioButton.UseVisualStyleBackColor = true;
+            this.egypt_nation_radioButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Egyptian_Kings);
             // 
             // Arabians
             // 
-            this.Arabians.AutoSize = true;
-            this.Arabians.Location = new System.Drawing.Point(100, 75);
-            this.Arabians.Name = "Arabians";
-            this.Arabians.Size = new System.Drawing.Size(97, 19);
-            this.Arabians.TabIndex = 6;
-            this.Arabians.TabStop = true;
-            this.Arabians.Text = "Arab Bedouin";
-            this.Arabians.UseVisualStyleBackColor = true;
-           
-            this.Arabians.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Arab_Bedouin);
+            this.arab_nation_radioButton.AutoSize = true;
+            this.arab_nation_radioButton.Location = new System.Drawing.Point(100, 75);
+            this.arab_nation_radioButton.Name = "Arabians";
+            this.arab_nation_radioButton.Size = new System.Drawing.Size(97, 19);
+            this.arab_nation_radioButton.TabIndex = 6;
+            this.arab_nation_radioButton.TabStop = true;
+            this.arab_nation_radioButton.Text = "Arab Bedouin";
+            this.arab_nation_radioButton.UseVisualStyleBackColor = true;
+            this.arab_nation_radioButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Click_Arab_Bedouin);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.BD);
-            this.groupBox1.Controls.Add(this.Arabians);
-            this.groupBox1.Controls.Add(this.Egyptians);
-            this.groupBox1.Controls.Add(this.Hunters);
+            this.groupBox1.Controls.Add(this.bangladesh_Nation_radioButton);
+            this.groupBox1.Controls.Add(this.arab_nation_radioButton);
+            this.groupBox1.Controls.Add(this.egypt_nation_radioButton);
+            this.groupBox1.Controls.Add(this.inuit_nation_radioButton);
             this.groupBox1.Location = new System.Drawing.Point(601, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -263,7 +258,6 @@
             this.WaterSource.TabStop = true;
             this.WaterSource.Text = "Water Source";
             this.WaterSource.UseVisualStyleBackColor = true;
-           
             this.WaterSource.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickWaterSource);
             // 
             // House
@@ -276,23 +270,42 @@
             this.House.TabStop = true;
             this.House.Text = "House";
             this.House.UseVisualStyleBackColor = true;
-            
             this.House.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_ClickHouse);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(601, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Village:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(601, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Nation:";
             // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 401);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbVillageName);
+            this.Controls.Add(this.villageName_inputField);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Nation_Name);
-            this.Controls.Add(this.village_name);
+            this.Controls.Add(this.village_name_label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.drawing_panel);
             this.Name = "VillageWindow";
@@ -313,18 +326,18 @@
         private System.Windows.Forms.Panel drawing_panel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label village_name;
+        private System.Windows.Forms.Label village_name_label;
         private System.Windows.Forms.Label Nation_Name;
         
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox tbVillageName;
+        private System.Windows.Forms.TextBox villageName_inputField;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton BD;
-        private System.Windows.Forms.RadioButton Hunters;
-        private System.Windows.Forms.RadioButton Egyptians;
-        private System.Windows.Forms.RadioButton Arabians;
+        private System.Windows.Forms.RadioButton bangladesh_Nation_radioButton;
+        private System.Windows.Forms.RadioButton inuit_nation_radioButton;
+        private System.Windows.Forms.RadioButton egypt_nation_radioButton;
+        private System.Windows.Forms.RadioButton arab_nation_radioButton;
         private System.Windows.Forms.GroupBox groupBox1;
        
        
@@ -333,6 +346,8 @@
         private System.Windows.Forms.RadioButton Tree;
         private System.Windows.Forms.RadioButton WaterSource;
         private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

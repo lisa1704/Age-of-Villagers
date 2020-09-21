@@ -11,6 +11,9 @@ namespace AgeOfVillagers
         public static string string_invalid_message = "Please enter all needed information";
         public static string conversion_error_message = "is not available";
         public static string point_invalid_message = "Your Selected Point Is Invalid";
+        public static string saving_invalid_message = "To save you have to create or open a villag first";
+        public static string creating_invalid_message = "To create your village,you have to give it a name first ";
+        public static string opening_invalid_message = "To open your village,you have to choose a nation first ";
 
 
         //state elements

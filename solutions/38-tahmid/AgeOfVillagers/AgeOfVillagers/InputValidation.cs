@@ -9,16 +9,16 @@ namespace AgeOfVillagers
 {
     class InputValidation
     {
-        private string inputString;
+        
         public Boolean checkStringInput(String inputString)
         {
-            Regex pattern = new Regex(@"^[a-zA-Z]+$");
+            
 
             
-            if (!pattern.IsMatch(inputString))
+            if (inputString=="" || inputString==null)
             {
 
-                MessageBox.Show(Constants.string_invalid_message);
+                
                 return true;
             }
             return false;
@@ -28,7 +28,7 @@ namespace AgeOfVillagers
         {
             if(point.X<Constants.PANEL_BORDER || point.X>Constants.PANEL_WIDTH- Constants.PANEL_BORDER ||point.Y< Constants.PANEL_BORDER || point.Y> Constants.PANEL_HEIGHT - Constants.PANEL_BORDER)
             {
-                MessageBox.Show(Constants.string_invalid_message);
+                
                 return true;
             }
             return false;

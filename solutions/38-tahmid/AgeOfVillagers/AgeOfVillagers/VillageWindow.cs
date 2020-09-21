@@ -72,10 +72,13 @@ namespace AgeOfVillagers
 
         private void Save_Village(object sender, EventArgs e)
         {
-            if (inputValidation.checkStringInput(tbVillageName.Text))
+            if (inputValidation.checkStringInput(village_name_label.Text))
+            {
+                MessageBox.Show(Constants.saving_invalid_message);
                 return;
+            }
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, tbVillageName.Text, drawnItemsInfosList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, villageName_inputField.Text, drawnItemsInfosList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
@@ -85,16 +88,19 @@ namespace AgeOfVillagers
         {
 
             selectedNationforOpening = "";
-            if(inputValidation.checkStringInput(tbVillageName.Text))
+            if (inputValidation.checkStringInput(villageName_inputField.Text))
+            {
+                MessageBox.Show(Constants.creating_invalid_message);
                 return;
+            }
 
-            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
             environment.setEnvironment();
 
             
             game = gameFactory.getGame();
             
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name,tbVillageName.Text);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name_label,villageName_inputField.Text);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             drawnItemsInfosList = new List<DrawnItemsInformation>();
@@ -115,9 +121,9 @@ namespace AgeOfVillagers
             
             if (inputValidation.checkStringInput(selectedNationforOpening))
             {
-                environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+                environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
                 environment.setEnvironment();
-                MessageBox.Show("Choose Your Nation First");
+                MessageBox.Show(Constants.opening_invalid_message);
                 return;
             }
 
@@ -125,7 +131,7 @@ namespace AgeOfVillagers
 
             game = gameFactory.getGame();
             
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name, selectedNationforOpening,previouslySavedState,g, pen);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name_label, selectedNationforOpening,previouslySavedState,g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
             gameKeyInvoker.click();
@@ -146,8 +152,16 @@ namespace AgeOfVillagers
             selectedNationforOpening = "";
             Point point = new Point(e.X, e.Y);
 
-            if (inputValidation.checkPoints(point)|| inputValidation.checkStringInput(tbVillageName.Text)|| inputValidation.checkStringInput(selectedNation)|| inputValidation.checkStringInput(selectedItem))
+            if ( inputValidation.checkStringInput(villageName_inputField.Text) || inputValidation.checkStringInput(selectedNation) || inputValidation.checkStringInput(selectedItem))
+            {
+                MessageBox.Show(Constants.string_invalid_message);
                 return;
+            }
+            if (inputValidation.checkPoints(point))
+            {
+                MessageBox.Show(Constants.point_invalid_message);
+                return;
+            }
 
             drawnItemsInfo = new DrawnItemsInformation
             {
@@ -176,7 +190,7 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.BD_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, BD, Egyptians, Arabians, Hunters, Tree, House, WaterSource, g, selectedNation,Constants.BANGLADESHI_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, selectedNation,Constants.BANGLADESHI_COLOR);
             environment.setEnvironment();
 
         }
@@ -185,7 +199,7 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.INUIT_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, Hunters, BD, Egyptians, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.INUIT_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, inuit_nation_radioButton, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.INUIT_COLOR);
             environment.setEnvironment();
 
         }
@@ -194,7 +208,7 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.EGYPT_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, Egyptians, Hunters, BD, Arabians, Tree, House, WaterSource, g, selectedNation, Constants.EGYPTIAN_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.EGYPTIAN_COLOR);
             environment.setEnvironment();
         }
 
@@ -217,7 +231,7 @@ namespace AgeOfVillagers
         {
             selectedNation = Constants.ARAB_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, Arabians, Egyptians, Hunters, BD, Tree, House, WaterSource, g, selectedNation, Constants.ARABIAN_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, arab_nation_radioButton, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.ARABIAN_COLOR);
             environment.setEnvironment();
         }
 
