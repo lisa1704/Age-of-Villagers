@@ -26,5 +26,40 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Tree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Watersource_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Savevillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Newvillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Openvillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
