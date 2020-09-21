@@ -25,7 +25,7 @@ namespace AgeOfVillagers
         public VillageWindow()
         {
             InitializeComponent();
-            
+            g = DrawingPanel.CreateGraphics();
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e)
@@ -39,14 +39,14 @@ namespace AgeOfVillagers
                 
         private void btn_saveVillage_Click(object sender, EventArgs e)
         {
-            SaveVillageForm svf = new SaveVillageForm();
-            svf.Show();
+            //SaveVillageForm svf = new SaveVillageForm();
+            //svf.Show();
         }
 
         private void btn_openVillage_Click(object sender, EventArgs e)
         {
-            OpenVillageForm ovf = new OpenVillageForm();
-            ovf.Show();
+            //OpenVillageForm ovf = new OpenVillageForm();
+            //ovf.Show();
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace AgeOfVillagers
             Point p = new Point();
             p.X = e.X;
             p.Y = e.Y;
-            g = DrawingPanel.CreateGraphics();
+            
 
             if (selected_nation=="" || selected_component == "")
             {
