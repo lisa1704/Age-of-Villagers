@@ -11,7 +11,7 @@
         }
         public string Draw()
         {
-            return "Drawing a circle";
+            return "Drawing a circle. ";
         }
     }
 }

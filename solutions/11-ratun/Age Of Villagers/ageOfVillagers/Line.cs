@@ -12,7 +12,7 @@
         }
         public string Draw()
         {
-            return "Drawing a line";
+            return "Drawing a line. ";
         }
     }
 }

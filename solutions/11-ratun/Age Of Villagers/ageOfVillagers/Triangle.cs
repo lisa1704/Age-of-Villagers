@@ -14,7 +14,7 @@
         }
         public string Draw()
         {
-            return "Drawing a triangle";
+            return "Drawing a triangle. ";
         }
     }
 }

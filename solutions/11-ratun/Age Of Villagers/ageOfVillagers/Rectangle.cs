@@ -16,7 +16,7 @@
         }
         public string Draw()
         {
-            return "Drawing a Rectangle";
+            return "Drawing a Rectangle. ";
         }
     }
 }
