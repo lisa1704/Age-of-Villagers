@@ -21,5 +21,35 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaterSource_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewVillage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenVillage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

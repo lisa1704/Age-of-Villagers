@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3AC2989-E268-40E1-8FE3-A5C143D40885}</ProjectGuid>
+    <ProjectGuid>{CAC5B275-671B-41D8-B88E-56C861E2528B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AgeOfVillagers_Test</RootNamespace>
