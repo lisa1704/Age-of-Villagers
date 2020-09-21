@@ -33,7 +33,7 @@
             this.OpenVillage = new System.Windows.Forms.Button();
             this.SaveVillage = new System.Windows.Forms.Button();
             this.GameLabel = new System.Windows.Forms.Label();
-            this.VillageText = new System.Windows.Forms.TextBox();
+            this.VillageNameText = new System.Windows.Forms.TextBox();
             this.HouseRB = new System.Windows.Forms.RadioButton();
             this.TreeRB = new System.Windows.Forms.RadioButton();
             this.WaterSourceRB = new System.Windows.Forms.RadioButton();
@@ -105,18 +105,18 @@
             this.GameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.GameLabel.Click += new System.EventHandler(this.GameLabel_Click);
             // 
-            // VillageText
+            // VillageNameText
             // 
-            this.VillageText.AccessibleName = "VillageNameText";
-            this.VillageText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.VillageText.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VillageText.Location = new System.Drawing.Point(31, 63);
-            this.VillageText.Name = "VillageText";
-            this.VillageText.Size = new System.Drawing.Size(194, 24);
-            this.VillageText.TabIndex = 2;
-            this.VillageText.Text = "Village Name";
-            this.VillageText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VillageText.TextChanged += new System.EventHandler(this.VillageNameText_TextChanged);
+            this.VillageNameText.AccessibleName = "VillageNameText";
+            this.VillageNameText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VillageNameText.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageNameText.Location = new System.Drawing.Point(31, 63);
+            this.VillageNameText.Name = "VillageNameText";
+            this.VillageNameText.Size = new System.Drawing.Size(194, 24);
+            this.VillageNameText.TabIndex = 2;
+            this.VillageNameText.Text = "Village Name";
+            this.VillageNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.VillageNameText.TextChanged += new System.EventHandler(this.VillageNameText_TextChanged);
             // 
             // HouseRB
             // 
@@ -182,7 +182,7 @@
             this.MenuBar.Controls.Add(this.WaterSourceRB);
             this.MenuBar.Controls.Add(this.TreeRB);
             this.MenuBar.Controls.Add(this.HouseRB);
-            this.MenuBar.Controls.Add(this.VillageText);
+            this.MenuBar.Controls.Add(this.VillageNameText);
             this.MenuBar.Controls.Add(this.GameLabel);
             this.MenuBar.Controls.Add(this.SaveVillage);
             this.MenuBar.Controls.Add(this.OpenVillage);
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 405);
+            this.ClientSize = new System.Drawing.Size(857, 413);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
@@ -217,7 +217,7 @@
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Label GameLabel;
-        private System.Windows.Forms.TextBox VillageText;
+        private System.Windows.Forms.TextBox VillageNameText;
         private System.Windows.Forms.RadioButton HouseRB;
         private System.Windows.Forms.RadioButton TreeRB;
         private System.Windows.Forms.RadioButton WaterSourceRB;
