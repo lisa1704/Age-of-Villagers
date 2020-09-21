@@ -22,7 +22,7 @@ namespace AgeOfVillagers.Shapes
         }
         public void CreateShape()
         {
-            grap.DrawLine(pen, p1, p2);
+            g.DrawLine(pen, p1, p2);
         }
     }
 }
