@@ -100,13 +100,13 @@ namespace ageOfVillagers
             return text;
         }
 
-        public string testShape(string currentNationName, string currentselect, int x, int y) { 
-        //private void panel2_Paint(object sender, PaintEventArgs e)
-        //{
+        //public string testShape(string currentNationName, string currentselect, int x, int y) { 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
             Shape nation = NationFactory.GetNation(currentNationName);
             IShape shape = nation.GetItem(currentselect);
-            //shape.draw(Cursor.Position.X, Cursor.Position.Y);
-            return shape.draw(x, y);
+            shape.draw(Cursor.Position.X, Cursor.Position.Y);
+            //return shape.draw(x, y);
         }
 
     }
