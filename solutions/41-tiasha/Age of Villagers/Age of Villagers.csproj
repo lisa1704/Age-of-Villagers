@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArabianHouse.cs" />
     <Compile Include="Water Source\BangladeshiWaterSource.cs" />
     <Compile Include="Water Source\EgyptianWaterSource.cs" />
     <Compile Include="Water Source\IWaterResource.cs" />
