@@ -35,7 +35,7 @@ namespace AgeOfVillagers
         {
             NationManager manager = new NationManager(Opencombobox.Text);
 
-            OpenVillageEdit opn = new OpenVillageEdit(g,pen,panel);
+            OpenVillageEdit opn = new OpenVillageEdit(g,pen,panel,manager);
             main.NationName.Text = Opencombobox.Text;
             main.VillageName.Text = villageState._name;
 

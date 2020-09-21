@@ -11,16 +11,18 @@ namespace AgeOfVillagers
         private readonly Graphics g;
         private readonly Pen pen;
         private readonly Panel panel;
+        private readonly NationManager manager;
 
-        public OpenVillageEdit(Graphics g , Pen pen,Panel panel)
+        public OpenVillageEdit(Graphics g , Pen pen,Panel panel,NationManager manager)
         {
             this.g = g;
             this.pen = pen;
             this.panel = panel;
+            this.manager = manager;
         }
         public void ResetState(VillageState village, string check)
         {
-            NationManager manager = new NationManager(check);
+            
            
 
             foreach (Point pt in village._housePoints)
