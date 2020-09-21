@@ -1,16 +1,13 @@
 ﻿using System.Windows.Forms;
-
 namespace ageOfVillagers
 {
-    interface IDraw
+    internal class NationFactory
     {
-        void Draw(string nationName, string currentselect, int x, int y);
-    }
-    public class NationFactory : IDraw
-    {
-        public void Draw(string nationName, string currentselect, int x, int y)
+        public static Shape GetNation(string currentNationName)
         {
-
+            if (currentNationName == "Bangladeshi Farmer")
+                return new BangladeshFactory();
+            return null;
         }
     }
 }

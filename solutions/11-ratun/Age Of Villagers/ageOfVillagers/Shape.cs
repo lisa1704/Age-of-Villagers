@@ -1,6 +1,7 @@
-﻿using System;
-
-public abstract class Shape
+﻿namespace ageOfVillagers
 {
-	public abstract void Draw();
+    internal abstract class Shape
+    {
+        public abstract IShape GetItem(string nationName);
+    }
 }

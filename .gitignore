@@ -438,3 +438,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/solutions/11-ratun/Age Of Villagers/ageOfVillagers/IDraw.cs

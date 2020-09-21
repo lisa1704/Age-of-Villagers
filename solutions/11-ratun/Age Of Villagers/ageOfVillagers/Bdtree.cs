@@ -1,12 +1,15 @@
-﻿using System;
-
-public class Bdtree : Tree
+﻿namespace ageOfVillagers
 {
-	public void CreateTree(int x, int y)
+    internal class Bdtree : IShape
     {
-        Circle c=new Circle(x,y+2,8);
-        c.Draw();
-        Rectangle r= new Rectangle(x-1,y,x+1,y,x+1,y-12,x-1,y-12);
-        r.Draw();
+        private string drawing = "";
+        public string draw(int x, int y)
+        {
+            Circle c = new Circle(x, y + 2, 8);
+            drawing += c.Draw();
+            Rectangle r = new Rectangle(x - 1, y, x + 1, y, x + 1, y - 12, x - 1, y - 12);
+            drawing += r.Draw();
+            return drawing;
+        }
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace ageOfVillagers
+﻿namespace ageOfVillagers
 {
-    public interface IShape
+    internal interface IShape
     {
-        IShape getShape(string shapetype);
+        string draw(int x, int y);
     }
 }
