@@ -17,7 +17,11 @@ namespace Age_of_villagers.Nations
             {
                 return new BangladeshiFarmers();
             }
-            return null;
+            else if (nationName == "Arab Beduins")
+            {
+                return new ArabBeduin();
+            }
+                return null;
         }
     }
 }
