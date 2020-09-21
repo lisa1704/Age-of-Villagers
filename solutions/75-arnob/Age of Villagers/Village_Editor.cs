@@ -17,6 +17,17 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
+        private void Menu_Bar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void drawing_space_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
         private void New_Village_Click(object sender, EventArgs e)
         {
 
@@ -28,11 +39,6 @@ namespace Age_of_Villagers
         }
 
         private void Open_Village_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -52,14 +58,24 @@ namespace Age_of_Villagers
 
         }
 
-        private void label_ageOfVillagers_Click(object sender, EventArgs e)
+
+        private void Nation_Type(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        private void Village_Name_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        private void AgeOfVillagers_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void drawing_space_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

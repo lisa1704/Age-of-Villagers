@@ -50,7 +50,7 @@ namespace Age_of_Villagers
             // 
             this.New_village_button.Location = new System.Drawing.Point(19, 352);
             this.New_village_button.Name = "New_village_button";
-            this.New_village_button.Size = new System.Drawing.Size(80, 23);
+            this.New_village_button.Size = new System.Drawing.Size(80, 34);
             this.New_village_button.TabIndex = 0;
             this.New_village_button.Text = "New";
             this.New_village_button.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@ namespace Age_of_Villagers
             // 
             this.Open_village_button.Location = new System.Drawing.Point(117, 352);
             this.Open_village_button.Name = "Open_village_button";
-            this.Open_village_button.Size = new System.Drawing.Size(81, 23);
+            this.Open_village_button.Size = new System.Drawing.Size(81, 34);
             this.Open_village_button.TabIndex = 4;
             this.Open_village_button.Text = "Open";
             this.Open_village_button.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@ namespace Age_of_Villagers
             // 
             // Save_village_button
             // 
-            this.Save_village_button.Location = new System.Drawing.Point(66, 314);
+            this.Save_village_button.Location = new System.Drawing.Point(66, 309);
             this.Save_village_button.Name = "Save_village_button";
-            this.Save_village_button.Size = new System.Drawing.Size(82, 23);
+            this.Save_village_button.Size = new System.Drawing.Size(82, 28);
             this.Save_village_button.TabIndex = 5;
             this.Save_village_button.Text = "Save";
             this.Save_village_button.UseVisualStyleBackColor = true;
@@ -142,17 +142,18 @@ namespace Age_of_Villagers
             this.Menu_bar.Name = "Menu_bar";
             this.Menu_bar.Size = new System.Drawing.Size(222, 400);
             this.Menu_bar.TabIndex = 9;
+            this.Menu_bar.Click += new System.EventHandler(this.Menu_Bar_Click);
             // 
             // label_ageOfVillagers
             // 
             this.label_ageOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ageOfVillagers.Location = new System.Drawing.Point(56, 20);
+            this.label_ageOfVillagers.Location = new System.Drawing.Point(19, 20);
             this.label_ageOfVillagers.Name = "label_ageOfVillagers";
-            this.label_ageOfVillagers.Size = new System.Drawing.Size(142, 65);
+            this.label_ageOfVillagers.Size = new System.Drawing.Size(200, 69);
             this.label_ageOfVillagers.TabIndex = 8;
             this.label_ageOfVillagers.Text = "Age of Villagers";
             this.label_ageOfVillagers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_ageOfVillagers.Click += new System.EventHandler(this.label_ageOfVillagers_Click);
+            this.label_ageOfVillagers.Click += new System.EventHandler(this.AgeOfVillagers_Click);
             // 
             // comboBox_NationList
             // 
@@ -164,22 +165,24 @@ namespace Age_of_Villagers
             "Inuit Hunters"});
             this.comboBox_NationList.Location = new System.Drawing.Point(35, 146);
             this.comboBox_NationList.Name = "comboBox_NationList";
-            this.comboBox_NationList.Size = new System.Drawing.Size(97, 28);
+            this.comboBox_NationList.Size = new System.Drawing.Size(113, 28);
             this.comboBox_NationList.TabIndex = 7;
             this.comboBox_NationList.Text = " Nation";
+            this.comboBox_NationList.SelectedIndexChanged += new System.EventHandler(this.Nation_Type);
             // 
             // Village_Name_textBox
             // 
-            this.Village_Name_textBox.Location = new System.Drawing.Point(35, 106);
+            this.Village_Name_textBox.Location = new System.Drawing.Point(35, 101);
             this.Village_Name_textBox.Name = "Village_Name_textBox";
-            this.Village_Name_textBox.Size = new System.Drawing.Size(97, 26);
+            this.Village_Name_textBox.Size = new System.Drawing.Size(113, 26);
             this.Village_Name_textBox.TabIndex = 6;
             this.Village_Name_textBox.Text = "Village Name";
             this.Village_Name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Village_Name_textBox.Click += new System.EventHandler(this.Village_Name_Click);
             // 
             // Village_Editor_Window
             // 
-            this.ClientSize = new System.Drawing.Size(832, 420);
+            this.ClientSize = new System.Drawing.Size(845, 420);
             this.Controls.Add(this.Menu_bar);
             this.Controls.Add(this.drawing_space);
             this.Name = "Village_Editor_Window";
@@ -188,6 +191,8 @@ namespace Age_of_Villagers
             this.ResumeLayout(false);
 
         }
+
+
 
 
 
