@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AgeOfVillageTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestNationObjectThroughTerrianColor
     {
         [TestMethod]
         public void TestBangladeshiNationObjectThroughColor()
