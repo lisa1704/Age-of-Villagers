@@ -17,8 +17,11 @@ namespace AgeOfVillagers
         public string selected_nation = "";
         public string selected_component = "";
         NationFactory nf = new NationFactory();
-        INations nation;
-        
+        //INations nation;
+        //abstract factory implement
+        AbstractComponentFactory nation;
+
+
         public VillageWindow()
         {
             InitializeComponent();
@@ -77,8 +80,9 @@ namespace AgeOfVillagers
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected_nation = nation_selector.Text;
-                      
-            if(selected_nation == "Arab Bedouins")
+            nation = ComponentFactoryProducer.getComponentFactory(selected_nation);
+
+            if (selected_nation == "Arab Bedouins")
             {
                 DrawingPanel.BackColor = Color.GreenYellow;
                 rbtn_waterSource.Visible = false;
@@ -116,20 +120,10 @@ namespace AgeOfVillagers
             else
             {
                 g = DrawingPanel.CreateGraphics();
-
-                nation = nf.GetNation(selected_nation);
-                if (selected_component == "tree")
-                {
-                    nation.drawtree(p,g,pen);                    
-                }
-                if (selected_component == "house")
-                {
-                    nation.drawhouse(p,g,pen);                    
-                }
-                if (selected_component == "water_source")
-                {
-                    nation.drawwatersource(p,g,pen);                    
-                }
+                IComponent component = nation.getComponent(selected_component);
+                component.draw();
+                //nation = nf.GetNation(selected_nation);
+                
             }
         }
     }
