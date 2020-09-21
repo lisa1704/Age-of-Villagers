@@ -74,13 +74,9 @@ namespace Age_of_Villagers
 
         private void Save_Village_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            if (save.ShowDialog() == DialogResult.OK)
-            {
-                StreamWriter write = new StreamWriter(File.Create(save.FileName));
-                write.Write(Village.Text);
-                write.Dispose();
-            }
+            getPoints();
+            Save_Village save = new Save_Village(savepoints);
+            save.action();
         }
 
         private void Open_Village_Click(object sender, EventArgs e)
