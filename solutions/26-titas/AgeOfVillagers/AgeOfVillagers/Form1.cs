@@ -66,5 +66,13 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void mouseClick_MouseClick(object sender, MouseEventArgs e)
+        {
+            int x, y;
+            x = e.X;
+            y = e.Y;
+            MessageBox.Show(x + "," + y);
+        }
     }
 }
