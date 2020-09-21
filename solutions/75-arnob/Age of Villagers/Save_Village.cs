@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-   public class Save_Village
+    public class Save_Village
     {
         Village village;
 
@@ -38,4 +38,5 @@ namespace Age_of_Villagers
                 stream.Close();
             }
         }
+    }
 }
