@@ -48,5 +48,10 @@ namespace AgeOfVillagers
         {
             g.DrawArc(pen, p.X, p.Y, 12, 12, 0, 360);
         }
+
+        public void setbgcolor(Graphics g)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

@@ -55,5 +55,10 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p6, p4);
             g.DrawLine(pen, p3, p7);
         }
+
+        public void setbgcolor(Graphics g)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

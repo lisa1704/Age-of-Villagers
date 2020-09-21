@@ -18,8 +18,7 @@ namespace AgeOfVillagers
         public string selected_component = "";
         NationFactory nf = new NationFactory();
         INations nation;
-        Village vill;
-
+        
         public VillageWindow()
         {
             InitializeComponent();
@@ -33,17 +32,7 @@ namespace AgeOfVillagers
         {
 
         }
-
-        private void Lbl_aovtitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label_villName_Click(object sender, EventArgs e)
-        {
-
-        }
-
+                
         private void btn_saveVillage_Click(object sender, EventArgs e)
         {
             SaveVillageForm svf = new SaveVillageForm();
@@ -87,10 +76,8 @@ namespace AgeOfVillagers
 
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selected_nation = nation_selector.Items[nation_selector.SelectedIndex].ToString();
-            vill = new Village();
-            vill.nation = selected_nation;
-
+            selected_nation = nation_selector.Text;
+                      
             if(selected_nation == "Arab Bedouins")
             {
                 DrawingPanel.BackColor = Color.GreenYellow;
@@ -133,18 +120,15 @@ namespace AgeOfVillagers
                 nation = nf.GetNation(selected_nation);
                 if (selected_component == "tree")
                 {
-                    nation.drawtree(p,g,pen);
-                    vill.trees_drawn.Add(p);
+                    nation.drawtree(p,g,pen);                    
                 }
                 if (selected_component == "house")
                 {
-                    nation.drawhouse(p,g,pen);
-                    vill.houses_drawn.Add(p);
+                    nation.drawhouse(p,g,pen);                    
                 }
                 if (selected_component == "water_source")
                 {
-                    nation.drawwatersource(p,g,pen);
-                    vill.rivers_drawn.Add(p);
+                    nation.drawwatersource(p,g,pen);                    
                 }
             }
         }

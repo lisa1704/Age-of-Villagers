@@ -131,7 +131,6 @@
             this.Label_villName.TabIndex = 5;
             this.Label_villName.Text = "untitled";
             this.Label_villName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Label_villName.Click += new System.EventHandler(this.Label_villName_Click);
             // 
             // btn_saveVillage
             // 
@@ -178,7 +177,7 @@
             this.Lbl_aovtitle.TabIndex = 0;
             this.Lbl_aovtitle.Text = "Age of Villagers";
             this.Lbl_aovtitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Lbl_aovtitle.Click += new System.EventHandler(this.Lbl_aovtitle_Click);
+            
             // 
             // btn_openVillage
             // 

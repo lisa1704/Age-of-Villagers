@@ -25,5 +25,10 @@ namespace AgeOfVillagers
         {
             //do nothing
         }
+
+        public void setbgcolor(Graphics g)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }
