@@ -12,18 +12,18 @@ namespace AgeOfVillagers
         {
 
             _point = point;
-            Point sec_point = new Point(_point.X + 8, _point.Y - 8);
-            Point th_point = new Point(sec_point.X+10 , sec_point.Y + 8);
-            Point fou_point = new Point(th_point.X + 8, _point.Y - 12);
+            Point sec_point = new Point(_point.X + 4, _point.Y - 4);
+            Point th_point = new Point(sec_point.X+5 , sec_point.Y + 4);
+            Point fou_point = new Point(th_point.X + 4, _point.Y - 6);
 
-            Point fift_point = new Point(fou_point.X + 8, _point.Y+5);
+            Point fift_point = new Point(fou_point.X + 4, _point.Y+5);
 
-            Point six_point = new Point(fift_point.X + 8, _point.Y - 8);
+            Point six_point = new Point(fift_point.X + 4, _point.Y - 4);
 
-            Point sev_point = new Point(six_point.X , six_point.Y + 16);
-            Point eig_point = new Point(sev_point.X-8 , sev_point.Y + 8);
-            Point nin_point = new Point(eig_point.X - 8, sev_point.Y + 8);
-            Point ten_point = new Point(nin_point.X - 10, sev_point.Y + 8);
+            Point sev_point = new Point(six_point.X , six_point.Y + 8);
+            Point eig_point = new Point(sev_point.X-4 , sev_point.Y + 4);
+            Point nin_point = new Point(eig_point.X - 4, sev_point.Y + 4);
+            Point ten_point = new Point(nin_point.X - 5, sev_point.Y + 4);
 
             addShape(new BaseLine(_point,sec_point));
             addShape(new BaseLine(sec_point,th_point));
