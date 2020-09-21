@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class ChoiceWindow implements IWindow {
     String boxValue;
     Scene scene;
@@ -76,7 +78,7 @@ public class ChoiceWindow implements IWindow {
             nation1 = new InuitHunters(g);
         }
 
-        ShowWindow showWindow = new ShowWindow(nation1, g);
+        ShowWindow showWindow = new ShowWindow(nation1, g, new ArrayList<StateOfComponent>());
 
         System.out.println(nation);
         return showWindow.getDisplay();

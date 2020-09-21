@@ -16,14 +16,16 @@ public class ShowWindow implements IWindow{
     DrawTree tree;
     DrawWater water;
     GridOfControls gridOfControls;
+    ArrayList<StateOfComponent> stateOfComponents;
 
-    public ShowWindow(INation nation, Group drawSpace) {
+    public ShowWindow(INation nation, Group drawSpace, ArrayList<StateOfComponent> arrayList) {
         this.nation = nation;
         this.drawSpace = drawSpace;
         house = this.nation.getHouse();
         tree = this.nation.getTree();
         water = this.nation.getWater();
         gridOfControls = new GridOfControls(house, tree, water, this.nation.getNationName());
+        this.stateOfComponents = stateOfComponents;
     }
 
     public MouseClickManager mouseClickManager = new MouseClickManager();
@@ -34,7 +36,6 @@ public class ShowWindow implements IWindow{
     }
 
     StateOfComponent stateOfComponent = null;
-    ArrayList<StateOfComponent> stateOfComponents = new ArrayList<StateOfComponent>();
 
 //    InuitHunters inuitHunters = new InuitHunters(drawSpace);
 //    BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
