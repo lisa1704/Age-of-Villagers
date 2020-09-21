@@ -18,9 +18,6 @@ namespace AgeOfVillager
             string myNation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
             var nationManager = new NationManager(myNation, new NationFactory(g, this));
 
-            nationManager.SetColor();
-            panel1.BackColor = Color.FromArgb(255, 255, 255);
-
             //tree
             if (radioButton1.Checked)
             {
@@ -56,6 +53,16 @@ namespace AgeOfVillager
         public void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            string myNation = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            var nationManager = new NationManager(myNation, new NationFactory(g, this));
+
+            nationManager.SetColor();
+            panel1.BackColor = Color.FromArgb(255, 255, 255);
         }
     }
 }
