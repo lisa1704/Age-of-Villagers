@@ -12,9 +12,9 @@ namespace AgeOfVillagers
 {
     public partial class CreateNewVillage : Form
     {
-        string ItemNames = "";
+        string SelectedItemName = "";
         string village_name = "";
-        string village_type = "";
+        string nationName = "";
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
@@ -57,17 +57,17 @@ namespace AgeOfVillagers
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "Tree";
+            SelectedItemName = "Tree";
         }
 
         private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "House";
+            SelectedItemName = "House";
         }
 
         private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "WaterSource";
+            SelectedItemName = "WaterSource";
         }
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace AgeOfVillagers
             villageSaveState();
             VillageSaveOpen save_Village = new VillageSaveOpen(myItems);
             save_Village.saveMyVillage();
-            MessageBox.Show(villageName.Text + "Village is saved");
+            MessageBox.Show(villageName.Text + " Village is saved");
         }
 
         private void newVillagebutton_Click(object sender, EventArgs e)
@@ -99,34 +99,34 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                nationfactory.GetNation(village_type).DrawTree(g, point);
+                nationfactory.GetNation(nationName).DrawTree(g, point);
             }
 
             foreach (Point point in house_point)
             {
-                nationfactory.GetNation(village_type).DrawHouse(g, point);
+                nationfactory.GetNation(nationName).DrawHouse(g, point);
             }
 
             foreach (Point point in waterSource_point)
             {
-                nationfactory.GetNation(village_type).DrawWaterSource(g, point);
+                nationfactory.GetNation(nationName).DrawWaterSource(g, point);
             }
 
         }
 
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            if (ItemNames == "Tree")
+            if (SelectedItemName == "Tree")
             {
                 tree_point.Add(e.Location);
             }
 
-            if (ItemNames == "House")
+            if (SelectedItemName == "House")
             {
                 house_point.Add(e.Location);
             }
          
-            if (ItemNames == "WaterSource")
+            if (SelectedItemName == "WaterSource")
             {
                 waterSource_point.Add(e.Location);
             }
@@ -136,8 +136,8 @@ namespace AgeOfVillagers
 
         private void NationName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            village_type = NationName.Text;
-            drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
+            nationName = NationName.Text;
+            drawingPanel.BackColor = nationfactory.GetNation(nationName).BackgroundColor();
         }
 
         private void VillageNametextBox_TextChanged(object sender, EventArgs e)
