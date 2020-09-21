@@ -13,13 +13,13 @@ namespace AgeOfVillagers
     public partial class VillageActions : Form
     {
         string item;
-        string villageName;
+        string villageName = "NotSpecified";
         string villageType;
         public Village newVillage = new Village();
         public List<Point> house { get; set; } = new List<Point>();
         public List<Point> tree { get; set; } = new List<Point>();
         public List<Point> water { get; set; } = new List<Point>();
-        public VillageState state = new VillageState();
+        public VillageState state;
         public VillageActions() { InitializeComponent(); }
 
         private void VillageActions_Load(object sender, EventArgs e){}
@@ -43,15 +43,17 @@ namespace AgeOfVillagers
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            state.setState(villageName, house, tree, water);
-            SaveVillage saveVillage = new SaveVillage(state.getState());
+            state = new VillageState(villageName, house, tree, water);
+            state.getState();
+            SaveVillage saveVillage = new SaveVillage(state);
             saveVillage.execute();
         }
 
         private void OpenVIllage_Click(object sender, EventArgs e)
         {
-            OpenVillage openVillage = new OpenVillage(state);
+            OpenVillage openVillage = new OpenVillage();
             openVillage.execute();
+            state = openVillage.getVillage();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) 
         { 
@@ -94,8 +96,6 @@ namespace AgeOfVillagers
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             villageName = textBox1.Text;
-            if (textBox1.Text == null)
-                villageName = "Not Specified";
         }
     }
 }

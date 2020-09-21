@@ -69,6 +69,7 @@
     <Compile Include="Items\BangladeshiHouse.cs" />
     <Compile Include="Items\BangladeshiTree.cs" />
     <Compile Include="Items\BangladeshiWater.cs" />
+    <Compile Include="Items\InuitHouse.cs" />
     <Compile Include="Items\EgyptWater.cs" />
     <Compile Include="Items\EgyptTree.cs" />
     <Compile Include="Items\EgyptHouse.cs" />

@@ -202,7 +202,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 7.8F);
             this.Name = "VillageActions";
-            this.Text = "VillageBoard";
+            this.Text = "g";
             this.Load += new System.EventHandler(this.VillageActions_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
