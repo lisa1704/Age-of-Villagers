@@ -22,11 +22,11 @@ namespace age_of_villagers
             if (village_type == "Bangladeshi Farmers")
                 return new Bangladeshi_Farmers(gp, p);
             else if (village_type == "Arab Bedouin")
-                return new Arab_Beduin(gp);
+                return new Arab_Beduin(gp, p);
             else if (village_type == "Egyptian Kings")
-                return new Egyptian_Kings(gp);
+                return new Egyptian_Kings(gp, p);
             else if (village_type == "Inuit Hunters")
-                return new Inuit_Hunters(gp);
+                return new Inuit_Hunters(gp, p);
             else return null;
         }
     }
