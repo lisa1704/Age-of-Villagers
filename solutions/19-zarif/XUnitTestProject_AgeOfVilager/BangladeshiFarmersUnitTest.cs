@@ -24,10 +24,6 @@ namespace XUnitTestProject_AgeOfVilager
         [Fact]
         public void BDHousepointTest()
         {
-            
-          
-
-            
             Point result = man.getNation(point).GetHousePoint();
             Assert.Equal(point, result);
 
@@ -62,9 +58,6 @@ namespace XUnitTestProject_AgeOfVilager
         [Fact]
         public void BDConstructHouseTest()
         {
-      
-      
-           
 
             Assert.IsType<BdFarmerHouse>(man.getNation(new Point(200, 200)).GetHouse());
 
@@ -73,9 +66,6 @@ namespace XUnitTestProject_AgeOfVilager
         public void BDConstrucTreeTest()
         {
 
-           
-
-
             Assert.IsType<BdFarmerTree>(man.getNation(new Point(200, 200)).GetTrees());
         }
 
@@ -83,8 +73,6 @@ namespace XUnitTestProject_AgeOfVilager
         [Fact]
         public void BDConstructWaterTest()
         {
-
-
 
             Assert.IsType<BdFarmerWaterSc>(man.getNation(new Point(200, 200)).GetWaterSources());
 
