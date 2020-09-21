@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactoryClasses\NationFactory.cs" />
+    <Compile Include="FactoryClasses\NullNation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
