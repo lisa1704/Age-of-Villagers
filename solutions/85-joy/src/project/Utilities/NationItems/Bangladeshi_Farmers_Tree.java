@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Bangladeshi_Farmers_Tree implements  ITree{
     @Override
-    public ArrayList<Shape> DrawTree(double x1, double y1) {
+    public ArrayList<Shape> drawAsset(double x1, double y1) {
         ArrayList<Shape> Tree = new ArrayList<Shape>();
 
         //Top Circle

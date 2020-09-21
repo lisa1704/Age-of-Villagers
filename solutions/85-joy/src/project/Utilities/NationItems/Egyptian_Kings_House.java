@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Egyptian_Kings_House implements IHouse{
     @Override
-    public ArrayList<Shape> DrawHouse(double x1, double y1) {
+    public ArrayList<Shape> drawAsset(double x1, double y1) {
         ArrayList<Shape> House = new ArrayList<Shape>();
 
         Line line1 = new Line(x1,y1,x1+12,y1+3);

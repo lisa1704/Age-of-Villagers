@@ -33,6 +33,7 @@ public class VillageViewController implements Initializable {
     @FXML private Pane DrawPane;
 
     public INation nation;
+    public NationFactory nationFactory;
     public int Flag = 0;
     public ArrayList<Shape> Object ;
 
@@ -49,7 +50,7 @@ public class VillageViewController implements Initializable {
                     DrawShape(Object);
                 }
                 else if(Flag == 2){
-                    Object = nation.DrawHouse(event.getSceneX(),event.getSceneY());
+                    Object = nationFactory.drawHouse(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
                 else if(Flag == 3){
@@ -130,9 +131,9 @@ public class VillageViewController implements Initializable {
     }
 
     public void NationChanged(ActionEvent actionEvent) {
-        NationFactory nationFactory = new NationFactory((String) NationDropDown.getValue());
-        this.nation = nationFactory.createNation();
-        DrawPane.setStyle("-fx-background-color:"+nation.getTerrainColor());
+        nationFactory = new NationFactory((String) NationDropDown.getValue());
+
+//        DrawPane.setStyle("-fx-background-color:"+nation.getTerrainColor());
 
     }
 }

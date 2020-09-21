@@ -1,11 +1,24 @@
 package project.Utilities;
 
+import javafx.scene.shape.Shape;
+import project.Utilities.Factories.HouseFactory;
+import project.Utilities.Factories.IAssetFactory;
+import project.Utilities.NationItems.IHouse;
+import project.Utilities.NationItems.ITree;
+
+import java.awt.*;
+import java.util.ArrayList;
+
 public class NationFactory {
+    public IHouse house;
+    public ITree tree;
+
     public INation nation;
     public String SelectedNation;
 
     public NationFactory(String SelectedNation){
-        this.SelectedNation = SelectedNation;
+        IAssetFactory houseFactory = new HouseFactory();
+        house = (IHouse) houseFactory.createAsset(SelectedNation);
     }
 
     public INation createNation(){
@@ -26,5 +39,8 @@ public class NationFactory {
         return nation;
     }
 
-    public
+    public ArrayList<Shape> drawHouse(double x, double y){
+        return this.house.drawAsset(x,y);
+    }
+
 }

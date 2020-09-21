@@ -1,5 +1,7 @@
 package project.Utilities.Factories;
 
-public interface IAssetFactory {
+import project.Utilities.NationItems.IAssets;
 
+public interface IAssetFactory {
+    IAssets createAsset(String nationType);
 }
