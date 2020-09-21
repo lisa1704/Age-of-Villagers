@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Null_House implements IHouse{
     @Override
-    public ArrayList<Shape> drawHouse(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         return new ArrayList<>();
     }
 }

@@ -9,7 +9,7 @@ public class Arab_Bedouin_House implements IHouse{
     public Arab_Bedouin_House(){ super(); }
 
     @Override
-    public ArrayList<Shape> drawHouse(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> house = new ArrayList<Shape>();
         //Triangle
         house.add(new Line(x,y,x+(3*houseWidth/4),y));

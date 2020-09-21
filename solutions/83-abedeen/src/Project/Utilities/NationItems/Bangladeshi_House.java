@@ -10,7 +10,7 @@ public class Bangladeshi_House implements IHouse{
         super();
     }
     @Override
-    public ArrayList<Shape> drawHouse(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> House = new ArrayList<Shape>();
         double halfWidth = houseWidth/2;
         double halfHeight = houseHeight/2;

@@ -9,7 +9,7 @@ public class Bangladeshi_Waterbody implements IWaterBody{
     private double WaterBodyWidth = 24;
     private double WaterBodyHeight = 16;
     @Override
-    public ArrayList<Shape> drawWaterBody(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> pond = new ArrayList<Shape>();
         Line l1 = new Line(x,y,x+(this.WaterBodyWidth/4),y+(this.WaterBodyHeight /2));
         pond.add(l1);

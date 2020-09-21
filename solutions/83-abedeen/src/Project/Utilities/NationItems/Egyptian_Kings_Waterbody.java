@@ -12,7 +12,7 @@ public class Egyptian_Kings_Waterbody implements IWaterBody{
     private double WaterBodyHeight = 12;
 
     @Override
-    public ArrayList<Shape> drawWaterBody(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> WaterSource = new ArrayList<Shape>();
         Arc arc = new Arc();
         arc.setCenterX(x);

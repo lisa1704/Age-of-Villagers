@@ -44,9 +44,9 @@ public class Nation {
     }
 
     public ArrayList<Shape> drawHouse(double x, double y){
-        return this.house.drawHouse(x,y);
+        return this.house.drawAsset(x,y);
     }
-    public ArrayList<Shape> drawTree(double x, double y){ return this.tree.drawTree(x,y); }
-    public ArrayList<Shape> drawWaterBody(double x, double y){ return this.water_body.drawWaterBody(x,y); }
+    public ArrayList<Shape> drawTree(double x, double y){ return this.tree.drawAsset(x,y); }
+    public ArrayList<Shape> drawWaterBody(double x, double y){ return this.water_body.drawAsset(x,y); }
     public String GetTerrainColor(){ return this.terrainColor.GetNationColor(); }
 }

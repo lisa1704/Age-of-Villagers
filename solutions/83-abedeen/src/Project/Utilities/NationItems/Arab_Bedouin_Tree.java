@@ -9,7 +9,7 @@ public class Arab_Bedouin_Tree implements ITree{
     public Arab_Bedouin_Tree(){ super(); }
 
     @Override
-    public ArrayList<Shape> drawTree(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> tree = new ArrayList<Shape>();
         double trunk_height = TreeHeight - (TreeWidth/2);
         double half_width = TreeWidth/2;

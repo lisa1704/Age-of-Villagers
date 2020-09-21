@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Inuit_Hunters_House implements IHouse{
     public Inuit_Hunters_House(){ super(); }
     @Override
-    public ArrayList<Shape> drawHouse(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> igloo = new ArrayList<>();
         Arc Dome = new Arc();
         Dome.setCenterX(x);

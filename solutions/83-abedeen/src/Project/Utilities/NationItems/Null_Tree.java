@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Null_Tree implements ITree{
     @Override
-    public ArrayList<Shape> drawTree(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         return new ArrayList<>();
     }
 }

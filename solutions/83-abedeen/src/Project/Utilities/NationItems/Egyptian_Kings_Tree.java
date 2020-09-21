@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Egyptian_Kings_Tree implements ITree{
     @Override
-    public ArrayList<Shape> drawTree(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         double half_width = TreeWidth/2;
         ArrayList<Shape> tree = new ArrayList<>();
         tree.add(new Line(x,y,x-half_width+2,y-TreeHeight));

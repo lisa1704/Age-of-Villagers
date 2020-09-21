@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Null_Water_Body implements IWaterBody{
     @Override
-    public ArrayList<Shape> drawWaterBody(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         return new ArrayList<>();
     }
 }

@@ -10,7 +10,7 @@ public class Egyptian_Kings_House  implements IHouse{
     public Egyptian_Kings_House(){ super(); }
 
     @Override
-    public ArrayList<Shape> drawHouse(double x, double y) {
+    public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> pyramid = new ArrayList<>();
         Line l1 = new Line(x,y,x+houseWidth*3/5,y+houseHeight/4);
         l1.setStrokeWidth(2);
