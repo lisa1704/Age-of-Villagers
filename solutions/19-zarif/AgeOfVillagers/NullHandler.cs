@@ -10,7 +10,8 @@ namespace AgeOfVillagers
     {
         public void draw(Graphics g, Pen pen)
         {
-            MessageBox.Show("Doesn't Have Any Implementation");
+            //MessageBox.Show("Doesn't Have Any Implementation");
+ 
         }
 
        
