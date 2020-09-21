@@ -13,6 +13,7 @@ namespace AgeOfVillagers
     public struct VillageState
     {
         public string Vname;
+        public int NationIndex;
         public List<Point> HPoint;
         public List<Point> TPoint;
         public List<Point> WPoint;

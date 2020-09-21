@@ -94,6 +94,7 @@ namespace AgeOfVillagers
             else
             {
                 villageState.Vname = VillageName.Text;
+                villageState.NationIndex = Nations.SelectedIndex;
                 villageState.HPoint = HousePoints;
                 villageState.TPoint = TreePoints;
                 villageState.WPoint = WatersrcPoints;
@@ -111,7 +112,34 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
+            OpenVillage openVillage = new OpenVillage();
+            openVillage.execute();
+            villageState = openVillage.getsavedvillage();
+            repaint(villageState);
             MessageBox.Show("Village Opened!");
+        }
+
+        public void repaint(VillageState villageState)
+        {
+            nation = NF.nationUpdate(villageState.NationIndex);
+            VillageName.Text = villageState.Vname;
+            foreach (Point point in villageState.HPoint)
+            {
+                HousePoints.Add(point);
+                nation.drawhouse(point);
+            }
+
+            foreach (Point point in villageState.TPoint)
+            {
+                TreePoints.Add(point);
+                nation.drawtree(point);
+            }
+
+            foreach (Point point in villageState.WPoint)
+            {
+                WatersrcPoints.Add(point);
+                nation.drawwatersrc(point);
+            }
         }
 
         private void formRefresh()
