@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Egyptians : INation
+    public class Egyptians : INation
     {
         public void DrawHouse(Graphics graphics, Point point)
         {
@@ -18,6 +18,11 @@ namespace AgeOfVillagers
         }
 
         public void DrawWaterSource(Graphics graphics, Point point)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetVillageName()
         {
             throw new NotImplementedException();
         }

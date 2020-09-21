@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class NullNationHandler : INation
+    public class NullNationHandler : INation
     {
         public void DrawHouse(Graphics graphics, Point point)
         {
@@ -23,6 +23,11 @@ namespace AgeOfVillagers
         {
             NullItemHandler nullWsource = new NullItemHandler();
             nullWsource.Draw();
+        }
+
+        public string GetVillageName()
+        {
+            throw new NotImplementedException();
         }
 
         public Color SetTerrain()

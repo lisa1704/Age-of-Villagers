@@ -24,7 +24,9 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            NullItemHandler nullWS = new NullItemHandler();
+            nullWS.Draw();
+
         }
 
         public string GetVillageName()
