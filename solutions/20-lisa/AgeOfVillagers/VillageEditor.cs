@@ -69,7 +69,7 @@ namespace AgeOfVillagers
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-            n.SetVillageName(VillageName.Text);
+           n.SetVillageName(VillageName.Text);
         }
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
