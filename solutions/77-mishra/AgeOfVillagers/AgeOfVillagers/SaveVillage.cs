@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -20,6 +21,16 @@ namespace AgeOfVillagers
             saveFile.RestoreDirectory = true;
             saveFile.FileName = "*.aov";
             saveFile.Filter = "AOV files(*.aov)| *.aov";
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                Stream stream = saveFile.OpenFile();
+                using(StreamWriter streamWriter = new StreamWriter(stream))
+                {
+                    Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
+                }
+                stream.Close();
+            }
         }
 
     }
