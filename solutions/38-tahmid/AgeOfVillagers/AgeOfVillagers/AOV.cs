@@ -67,18 +67,17 @@ namespace AgeOfVillagers
 
         public State saveVillage(State currentState, string villageName)
         {
-            
-
-            
-
-            
-
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "save village|*.aov";
             saveFileDialog1.Title = "Save village";
             saveFileDialog1.ShowDialog();
             objectToJson = new JsonConversion();
-            objectToJson.serialize(currentState, saveFileDialog1.FileName);
+
+            if (saveFileDialog1.FileName != "")
+            {
+                string json = objectToJson.serialize(currentState);
+                System.IO.File.WriteAllText(saveFileDialog1.FileName, json);
+            }
 
             return currentState;
         }

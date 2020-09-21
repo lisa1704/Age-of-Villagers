@@ -9,14 +9,12 @@ namespace AgeOfVillagers.JSON_Handling_Classes_Folder
     class JsonConversion
     {
         String jsonData;
-        public void serialize(State currentState,string fileName)
+        public string serialize(State currentState)
         {
-            if (fileName != "")
-            {
+            
                 var dataString = JsonConvert.SerializeObject(currentState, Formatting.Indented);
-                System.IO.File.WriteAllText(fileName, dataString);
-                jsonData = dataString;
-            }
+                return dataString;
+                
             
         }
 

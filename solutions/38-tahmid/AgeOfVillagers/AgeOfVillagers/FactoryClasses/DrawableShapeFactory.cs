@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.AbstractClass;
 using AgeOfVillagers.Drawable_Shape_Extending_Classes;
+using AgeOfVillagers.Shape_implementing_Classes;
 using System.Drawing;
 
 namespace AgeOfVillagers
@@ -16,7 +17,7 @@ namespace AgeOfVillagers
             }
 
 
-            return null;
+            return new NullClass(hint);
         }
 
         public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point topPoint, Point rightPoint, Point leftPoint, string hint)
@@ -29,7 +30,7 @@ namespace AgeOfVillagers
             {
                 return new Vshape(topPoint, rightPoint, leftPoint, graphics, pen);
             }
-            return null;
+            return new NullClass(hint);
 
         }
 
@@ -37,21 +38,21 @@ namespace AgeOfVillagers
         {
             if (hint.Equals(Constants.RECT_HINT))
                 return new Quadrangle(topLeftPoint, topRightPoint, bottomLeftPoint, bottomRighttPoint, graphics, pen);
-            return null;
+            return new NullClass(hint);
 
         }
         public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point startingPoint, Point topLeftPoint, Point topMidLeftPoint, Point topMidPoint, Point topMidRightPoint, Point bottomLeftPoint, Point bottomMidLeftPoint, Point bottomMidRightPoint, Point endPoint, string hint)
         {
             if (hint.Equals(Constants.UNEQUAL_NONAGON_HINT))
                 return new UnequilateralNonagon(startingPoint, topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint, bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint, endPoint, graphics, pen);
-            return null;
+            return new NullClass(hint);
         }
 
         public DrawableShapes GetDrawableShape(Graphics graphics, Pen pen, Point startingPoint, Point endPoint, string hint)
             {
                 if (hint.Equals(Constants.LINE_HINT))
                     return new Line(startingPoint, endPoint, graphics, pen);
-                return null;
+                return new NullClass(hint);
 
             
 

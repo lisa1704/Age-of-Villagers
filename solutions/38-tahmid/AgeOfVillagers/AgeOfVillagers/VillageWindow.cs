@@ -83,6 +83,7 @@ namespace AgeOfVillagers
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, gameState);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
+            
 
         }
         
@@ -130,15 +131,15 @@ namespace AgeOfVillagers
             }
 
 
-            State previouslySavedState=new State();
+            
             game = gameFactory.getGame();
 
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game, village_name_label, selectedNationforOpening, g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
-            previouslySavedState = gameKeyInvoker.click();
+            gameState = gameKeyInvoker.click();
            
-            drawnItemsInfosList = previouslySavedState.DrawnItemsInformationList;
+            drawnItemsInfosList =gameState.DrawnItemsInformationList;
             
             selectedNationforOpening = "";
 
@@ -155,7 +156,7 @@ namespace AgeOfVillagers
             selectedNationforOpening = "";
             Point point = new Point(e.X, e.Y);
 
-            if ( inputValidation.checkStringInput(villageName_inputField.Text) || inputValidation.checkStringInput(selectedNation) || inputValidation.checkStringInput(selectedItem))
+            if ( inputValidation.checkStringInput(village_name_label.Text) || inputValidation.checkStringInput(selectedNation) || inputValidation.checkStringInput(selectedItem))
             {
                 MessageBox.Show(Constants.string_invalid_message);
                 return;
