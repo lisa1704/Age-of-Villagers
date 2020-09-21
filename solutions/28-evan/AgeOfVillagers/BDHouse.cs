@@ -13,8 +13,6 @@ namespace AgeOfVillagers
         {
             int a = pt.X;
             int b = pt.Y;
-
-            gr.DrawLine();
         }
 
     }

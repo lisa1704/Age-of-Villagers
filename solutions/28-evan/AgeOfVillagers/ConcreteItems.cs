@@ -8,6 +8,6 @@ namespace AgeOfVillagers
 {
     public abstract class ConcreteItems
     {
-        public abstract IVillage getItem(string button);
+        //public abstract IVillage getItem(string button);
     }
 }

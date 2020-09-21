@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface INation
+    public interface INation
     {
-        String DrawHouse();
-        String DrawTree();
-        String DrawWaterSource();
+        void DrawHouse();
+        void DrawTree();
+        void DrawWaterSource();
         Color DrawTerrain();
 
     }

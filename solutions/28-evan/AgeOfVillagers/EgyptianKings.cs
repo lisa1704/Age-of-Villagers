@@ -9,22 +9,23 @@ namespace AgeOfVillagers
 {
     class EgyptianKings : INation
     {
-        public string DrawHouse()
-        {
-            throw new NotImplementedException();
-        }
-
+        Color bkgColor = Color.LightYellow;
         public Color DrawTerrain()
         {
-            throw new NotImplementedException();
+            return bkgColor;
         }
 
-        public string DrawTree()
+        public void DrawTree()
         {
             throw new NotImplementedException();
         }
 
-        public string DrawWaterSource()
+        public void DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawHouse()
         {
             throw new NotImplementedException();
         }

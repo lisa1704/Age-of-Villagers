@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class ConcreteNation
     {
-        public INation nationType(String nation)
+        public INation checkNation(String nation)
         {
             if (nation == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
