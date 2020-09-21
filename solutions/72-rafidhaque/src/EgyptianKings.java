@@ -14,9 +14,12 @@ public class EgyptianKings implements INation {
         Rectangle fillColor = new Rectangle(0,0, 600, 400);
         fillColor.setFill(Color.LIGHTYELLOW);
         drawSpace.getChildren().add(fillColor);
-        house = new EgyptianKingsHouse(drawSpace);
-        tree = new EgyptianKingsTree(drawSpace);
-        water = new EgyptianKingsWater(drawSpace, 12, 12);
+        house = new EgyptianKingsHouse();
+        tree = new EgyptianKingsTree();
+        water = new EgyptianKingsWater(12, 12);
+        drawSpace.getChildren().addAll(house.draw());
+        drawSpace.getChildren().addAll(tree.draw());
+        drawSpace.getChildren().addAll(water.draw());
     }
 
     public String getNationName() {

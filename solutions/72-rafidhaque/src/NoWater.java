@@ -9,6 +9,7 @@ public class NoWater extends DrawWater{
 
     @Override
     public ArrayList<Shape> draw() {
-        return null;
+        ArrayList<Shape> arrayList = new ArrayList<>();
+        return arrayList;
     }
 }

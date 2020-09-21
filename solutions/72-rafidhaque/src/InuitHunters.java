@@ -14,9 +14,12 @@ public class InuitHunters implements INation {
         Rectangle fillColor = new Rectangle(0,0, 600, 400);
         fillColor.setFill(Color.WHITE);
         drawSpace.getChildren().add(fillColor);
-        this.house = new InuitHuntersHouse(drawSpace);
-        this.tree = new NoTree(drawSpace);
-        this.water = new NoWater(drawSpace, 0, 0);
+        this.house = new InuitHuntersHouse();
+        this.tree = new NoTree();
+        this.water = new NoWater( 0, 0);
+        drawSpace.getChildren().addAll(house.draw());
+        drawSpace.getChildren().addAll(tree.draw());
+        drawSpace.getChildren().addAll(water.draw());
     }
 
     public String getNationName() {

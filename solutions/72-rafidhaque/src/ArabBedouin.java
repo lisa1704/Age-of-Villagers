@@ -15,9 +15,12 @@ public class ArabBedouin implements INation {
         Rectangle fillColor = new Rectangle(0,0, 600, 400);
         fillColor.setFill(Color.LIGHTYELLOW);
         drawSpace.getChildren().add(fillColor);
-        house = new ArabBedouinHouse(drawSpace);
-        tree = new ArabBedouinTree(drawSpace);
-        water = new NoWater(drawSpace, 0, 0);
+        house = new ArabBedouinHouse();
+        tree = new ArabBedouinTree();
+        water = new NoWater( 0, 0);
+        drawSpace.getChildren().addAll(house.draw());
+        drawSpace.getChildren().addAll(tree.draw());
+        drawSpace.getChildren().addAll(water.draw());
     }
 
     public String getNationName() {

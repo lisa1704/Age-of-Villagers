@@ -6,6 +6,7 @@ public class NoTree extends DrawTree{
 
     @Override
     public ArrayList<Shape> draw() {
-        return null;
+        ArrayList<Shape> arrayList = new ArrayList<>();
+        return arrayList;
     }
 }

@@ -15,9 +15,12 @@ public class BangladeshiFarmers implements INation {
         Rectangle fillColor = new Rectangle(0,0, 600, 400);
         fillColor.setFill(Color.GREENYELLOW);
         drawSpace.getChildren().add(fillColor);
-        house = new BangladeshiFarmersHouse(drawSpace);
-        tree = new BangladeshiFarmersTree(drawSpace);
-        water = new BangladeshiFarmersWater(drawSpace, 24, 16);
+        house = new BangladeshiFarmersHouse();
+        tree = new BangladeshiFarmersTree();
+        water = new BangladeshiFarmersWater(24, 16);
+        drawSpace.getChildren().addAll(house.draw());
+        drawSpace.getChildren().addAll(tree.draw());
+        drawSpace.getChildren().addAll(water.draw());
     }
 
     public String getNationName() {

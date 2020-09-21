@@ -1,5 +1,4 @@
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -19,8 +18,8 @@ public class Main extends Application {
         mainWindow = primaryStage;
         mainWindow.setTitle("Age of Villagers");
 
-        Group g = new Group();
-        INation bd = new ArabBedouin(g);
+//        Group g = new Group();
+//        INation bd = new ArabBedouin(g);
 
         ChoiceWindow choiceWindow = new ChoiceWindow();
 

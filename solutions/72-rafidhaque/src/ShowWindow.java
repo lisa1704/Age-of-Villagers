@@ -38,8 +38,8 @@ public class ShowWindow implements IWindow{
 
     public Scene getDisplay() {
 
-        Rectangle rectangle2 = new Rectangle(drawSpace, 0, 0, 600, 400);
-        rectangle2.draw();
+        Rectangle rectangle2 = new Rectangle( 0, 0, 600, 400);
+        drawSpace.getChildren().addAll(rectangle2.draw());
 
         GridPane gridPane = gridOfControls.createGrid();
 
@@ -55,7 +55,7 @@ public class ShowWindow implements IWindow{
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                StateOfComponent stateOfComponent = mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
+                StateOfComponent stateOfComponent = mouseClickManager.onMousePressed(drawSpace, event, gridOfControls.getNowDrawing());
                 stateOfComponents.add(stateOfComponent);
             }
         });

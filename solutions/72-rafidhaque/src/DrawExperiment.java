@@ -16,13 +16,13 @@ public class DrawExperiment extends Application {
 
         int x1 = 200, y1 = 30, x2 = 300, y2 = 100;
 
-        Rectangle rectangle = new Rectangle(root, x1, y1, x2, y2);
-        Rectangle rectangle2 = new Rectangle(root, 230, 250, 10, 30);
-        rectangle.draw();
-        rectangle2.draw();
-
-        Circle circle = new Circle(root, 100, 100, 40);
-        circle.draw();
+//        Rectangle rectangle = new Rectangle(root, x1, y1, x2, y2);
+//        Rectangle rectangle2 = new Rectangle(root, 230, 250, 10, 30);
+//        rectangle.draw();
+//        rectangle2.draw();
+//
+//        Circle circle = new Circle(root, 100, 100, 40);
+//        circle.draw();
 
 
         Scene scene = new Scene(root, 400, 300, Color.AQUA);
