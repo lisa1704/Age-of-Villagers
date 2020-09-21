@@ -40,7 +40,7 @@ namespace age_of_villagers
             Pen skyBluePen = new Pen(Brushes.DeepSkyBlue);
             g = panel1.CreateGraphics();
 
-            IShape s = new Line(new Point(100, 100), new Point(200, 200));
+            IShape s = new Rectangle(new Point(100, 100), new Point(200, 100), new Point(200, 200), new Point(100, 200));
             s.draw(g, skyBluePen);
         }
 
