@@ -17,7 +17,8 @@ namespace AgeofVillagers
 
         public void DrawTree(Graphics g, Point pt)
         {
-            
+            BangladeshiTree bdtree = new BangladeshiTree(pt);
+            bdtree.Paint(g, pen);
         }
 
         public void DrawWaterSource()
