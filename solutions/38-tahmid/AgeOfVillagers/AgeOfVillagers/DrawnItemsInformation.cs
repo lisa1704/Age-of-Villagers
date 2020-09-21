@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class DrawnItemsInformation
+    public class DrawnItemsInformation
     {
         public string Item_type { get; set; }
         public Point Clicked_point { get; set; }

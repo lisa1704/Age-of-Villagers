@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class AOV : IGames
+     public class AOVGame : IGames
     {
         
         private IElementOpener village_itemOpener, village_name_opener;
         private JsonConversion jsonToObejct;
         private JsonConversion objectToJson;
         private ElementOpenerFactory elementOpenerFactory;
-        private State gameState;
+        public State gameState;
 
-        
 
-        public State createVillage(Panel drawing_panel, Label village_name,string villageName_value)
+
+        public State createVillage(Panel drawing_panel, Label village_name, string villageName_value)
         {
             village_name.Text = villageName_value;
             drawing_panel.Invalidate();

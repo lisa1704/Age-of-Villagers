@@ -9,7 +9,7 @@ namespace AgeOfVillagers
         public IGames getGame()
         {
             Console.WriteLine("xx");
-            return new AOV();
+            return new AOVGame();
         }
     }
 }

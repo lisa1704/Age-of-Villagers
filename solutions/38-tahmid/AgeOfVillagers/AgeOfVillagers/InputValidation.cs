@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InputValidation
+    public class InputValidation
     {
         
         public Boolean checkStringInput(String inputString)

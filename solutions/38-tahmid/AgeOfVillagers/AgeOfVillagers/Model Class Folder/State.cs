@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Model_Class_Folder
 {
-    class State
+    public class State
     {
        
         

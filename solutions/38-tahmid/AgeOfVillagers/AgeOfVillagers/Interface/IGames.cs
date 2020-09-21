@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    interface IGames
+     interface IGames
     {
 
         
