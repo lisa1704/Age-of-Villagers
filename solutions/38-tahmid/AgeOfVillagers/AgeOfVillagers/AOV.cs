@@ -51,9 +51,9 @@ namespace AgeOfVillagers
 
                 elementOpenerFactory = new ElementOpenerFactory();
 
-                village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, labelVillageName, gameState.VillageName);
+                village_name_opener = elementOpenerFactory.GetElementOpener(DefaultValue.VILLAGE_NAME_OPENER, labelVillageName, gameState.VillageName);
                 village_name_opener.displayElements();
-                village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, gameState.DrawnItemsInformationList, graphics, pen);
+                village_itemOpener = elementOpenerFactory.GetElementOpener(DefaultValue.VILLAGE_ITEM_OPENER, selectedNation, gameState.DrawnItemsInformationList, graphics, pen);
                 village_itemOpener.displayElements();
 
                 return gameState;

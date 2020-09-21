@@ -29,7 +29,7 @@ namespace AgeOfVillagers.Shape_implementing_Classes
 
         public void makeShape()
         {
-            waterSource=drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, Constants.FULL_CIRCLE_STARTING_ANGLE, Constants.FULL_CIRCLE_ENDING_ANGLE, egyptian_WATER_SOURCE_HEIGHT, egyptian_WATER_SOURCE_WIDTH, Constants.CIRCULAR_HINT);
+            waterSource=drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, DefaultValue.FULL_CIRCLE_STARTING_ANGLE, DefaultValue.FULL_CIRCLE_ENDING_ANGLE, egyptian_WATER_SOURCE_HEIGHT, egyptian_WATER_SOURCE_WIDTH, DefaultValue.CIRCULAR_HINT);
             waterSource.makeShape();
         }
     }

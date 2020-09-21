@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class OpenVillage : GameControlCommand
+    class OpenVillage : IGameControlCommand
     {
         private IGames game;
         private Label villageNameLabel;

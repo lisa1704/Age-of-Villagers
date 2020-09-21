@@ -35,9 +35,9 @@ namespace AgeOfVillagers.Shape_implementing_Classes
             tentBottomPoint = new Point(startingPoint.X + house_width/16, startingPoint.Y+house_height);
             tentBottomRightPoint = new Point(startingPoint.X + house_width / 2, startingPoint.Y + 3 * house_height / 4);
             tentBottomLeftPoint = new Point(startingPoint.X - house_width / 2, startingPoint.Y + 3 * house_height / 4);
-            tent = drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, tentBottomRightPoint, tentBottomLeftPoint,tentBottomPoint, Constants.RECT_HINT);
+            tent = drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, tentBottomRightPoint, tentBottomLeftPoint,tentBottomPoint, DefaultValue.RECT_HINT);
             tent.makeShape();
-            frontSide = drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, tentBottomPoint, Constants.LINE_HINT);
+            frontSide = drawableShapeFactory.GetDrawableShape(graphics, pen, startingPoint, tentBottomPoint, DefaultValue.LINE_HINT);
             frontSide.makeShape();
 
         }

@@ -34,13 +34,13 @@ namespace AgeOfVillagers.Shape_implementing_Classes
         {
             frontRightPoint = new Point(startingPoint.X + 2 * (house_width / 5), startingPoint.Y);
             frontTopPoint = new Point((startingPoint.X + frontRightPoint.X) / 2, startingPoint.Y - house_height);
-            frontSide=drawableShapeFactory.GetDrawableShape(graphics, pen, frontTopPoint, frontRightPoint, startingPoint, Constants.TRIANGLE_HINT);
+            frontSide=drawableShapeFactory.GetDrawableShape(graphics, pen, frontTopPoint, frontRightPoint, startingPoint, DefaultValue.TRIANGLE_HINT);
             frontSide.makeShape();
             backBottomLeftPoint = frontRightPoint;
             backTopLeftPoint = frontTopPoint;
             backTopRightPoint = new Point(backTopLeftPoint.X + 3 * (house_width / 5), backTopLeftPoint.Y);
             backBottomRightPoint = new Point(backBottomLeftPoint.X + 3 * (house_width / 5), backBottomLeftPoint.Y);
-            backSide=drawableShapeFactory.GetDrawableShape(graphics, pen, backTopLeftPoint, backTopRightPoint, backBottomLeftPoint, backBottomRightPoint, Constants.RECT_HINT);
+            backSide=drawableShapeFactory.GetDrawableShape(graphics, pen, backTopLeftPoint, backTopRightPoint, backBottomLeftPoint, backBottomRightPoint, DefaultValue.RECT_HINT);
             backSide.makeShape();
 
 

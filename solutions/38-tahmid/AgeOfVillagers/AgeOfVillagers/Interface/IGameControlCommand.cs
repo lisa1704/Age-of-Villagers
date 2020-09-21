@@ -6,7 +6,7 @@ using AgeOfVillagers.Model_Class_Folder;
 
 namespace AgeOfVillagers
 {
-    interface GameControlCommand
+    interface IGameControlCommand
     {
         
         public State execute();

@@ -17,37 +17,37 @@ namespace AgeOfVillagers
         {
 
 
-            if (hint.Equals(Constants.BDTREE_HINT))
+            if (hint.Equals(DefaultValue.BDTREE_HINT))
             {
-                return new BangladeshiTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
+                return new BangladeshiTreeShape(graphics, pen, startingPoint, DefaultValue.TREE_HEIGHT, DefaultValue.TREE_WIDTH);
             }
-            else if (hint.Equals(Constants.BDWATERSOURCE_HINT))
+            else if (hint.Equals(DefaultValue.BDWATERSOURCE_HINT))
             {
 
-                return new BangladeshiWaterSourceShape(graphics, pen, startingPoint, Constants.BDWaterSource_HEIGHT, Constants.BDWATERSOURCE_WIDTH);
+                return new BangladeshiWaterSourceShape(graphics, pen, startingPoint, DefaultValue.BDWaterSource_HEIGHT, DefaultValue.BDWATERSOURCE_WIDTH);
             }
-            else if (hint.Equals(Constants.BDHOUSE_HINT))
-                return new BangladeshiHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+            else if (hint.Equals(DefaultValue.BDHOUSE_HINT))
+                return new BangladeshiHouseShape(graphics, pen, startingPoint, DefaultValue.HOUSE_HEIGHT, DefaultValue.HOUSE_WIDTH);
 
-            else if (hint.Equals(Constants.ARABIAN_HOUSE_HINT))
-                return new ArabianHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+            else if (hint.Equals(DefaultValue.ARABIAN_HOUSE_HINT))
+                return new ArabianHouseShape(graphics, pen, startingPoint, DefaultValue.HOUSE_HEIGHT, DefaultValue.HOUSE_WIDTH);
 
-            else if (hint.Equals(Constants.ARABIAN_TREE_HINT))
-                return new ArabianTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
-            else if (hint.Equals(Constants.EGYPTIAN_HOUSE_HINT))
-                return new EgyptianHouseShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
-            else if (hint.Equals(Constants.EGYPTIAN_TREE_HINT))
+            else if (hint.Equals(DefaultValue.ARABIAN_TREE_HINT))
+                return new ArabianTreeShape(graphics, pen, startingPoint, DefaultValue.TREE_HEIGHT, DefaultValue.TREE_WIDTH);
+            else if (hint.Equals(DefaultValue.EGYPTIAN_HOUSE_HINT))
+                return new EgyptianHouseShape(graphics, pen, startingPoint, DefaultValue.HOUSE_HEIGHT, DefaultValue.HOUSE_WIDTH);
+            else if (hint.Equals(DefaultValue.EGYPTIAN_TREE_HINT))
             {
-                return new EgyptianTreeShape(graphics, pen, startingPoint, Constants.TREE_HEIGHT, Constants.TREE_WIDTH);
+                return new EgyptianTreeShape(graphics, pen, startingPoint, DefaultValue.TREE_HEIGHT, DefaultValue.TREE_WIDTH);
             }
-            else if (hint.Equals(Constants.EGYPTIAN_WATER_SOURCE_HINT))
+            else if (hint.Equals(DefaultValue.EGYPTIAN_WATER_SOURCE_HINT))
             {
-                return new EgyptianWaterSourceShape(graphics, pen, startingPoint, Constants.Egyptian_WATER_SOURCE_HEIGHT, Constants.Egyptian_WATER_SOURCE_WIDTH);
+                return new EgyptianWaterSourceShape(graphics, pen, startingPoint, DefaultValue.Egyptian_WATER_SOURCE_HEIGHT, DefaultValue.Egyptian_WATER_SOURCE_WIDTH);
             }
 
-            else if (hint.Equals(Constants.INUIT_HOUSE_HINT))
+            else if (hint.Equals(DefaultValue.INUIT_HOUSE_HINT))
             {
-                return new InuitHouseIglooShape(graphics, pen, startingPoint, Constants.HOUSE_HEIGHT, Constants.HOUSE_WIDTH);
+                return new InuitHouseIglooShape(graphics, pen, startingPoint, DefaultValue.HOUSE_HEIGHT, DefaultValue.HOUSE_WIDTH);
             }
 
             return new NullClass(hint);

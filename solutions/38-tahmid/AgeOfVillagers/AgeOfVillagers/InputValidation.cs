@@ -26,7 +26,7 @@ namespace AgeOfVillagers
 
         public Boolean checkPoints(Point point)
         {
-            if(point.X<Constants.PANEL_BORDER || point.X>Constants.PANEL_WIDTH- Constants.PANEL_BORDER ||point.Y< Constants.PANEL_BORDER || point.Y> Constants.PANEL_HEIGHT - Constants.PANEL_BORDER)
+            if(point.X<DefaultValue.PANEL_BORDER || point.X>DefaultValue.PANEL_LENGTH - DefaultValue.PANEL_BORDER ||point.Y< DefaultValue.PANEL_BORDER || point.Y> DefaultValue.PANEL_WIDTH - DefaultValue.PANEL_BORDER)
             {
                 
                 return true;

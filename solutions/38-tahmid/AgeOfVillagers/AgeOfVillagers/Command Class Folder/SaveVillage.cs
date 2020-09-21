@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class SaveVillage : GameControlCommand
+    class SaveVillage : IGameControlCommand
     {
         private IGames game;
         private string sVillageName;

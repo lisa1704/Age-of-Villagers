@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    abstract class Constants
+    abstract class DefaultValue
     {
         public static string string_invalid_message = "Please enter all needed information";
         public static string conversion_error_message = "is not available";
@@ -84,7 +84,7 @@ namespace AgeOfVillagers
 
 
         //Panel Size
-        public static int PANEL_HEIGHT = 600;
+        public static int PANEL_LENGTH = 600;
         public static int PANEL_WIDTH = 400;
         public static int PANEL_STARTING_POINT_X = 0;
         public static int PANEL_STARTING_POINT_y = 0;

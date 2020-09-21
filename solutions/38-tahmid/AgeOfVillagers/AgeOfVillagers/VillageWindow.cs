@@ -66,25 +66,19 @@ namespace AgeOfVillagers
         {
 
         }
-
-        
-
-       
-
         private void Save_Village(object sender, EventArgs e)
         {
             if (inputValidation.checkStringInput(village_name_label.Text))
             {
-                MessageBox.Show(Constants.saving_invalid_message);
+                MessageBox.Show(DefaultValue.saving_invalid_message);
                 return;
             }
 
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, gameState);
+            IGameControlCommand onCommand = commandFactory.GetGameControlCommand(DefaultValue.SAVE_KEY, game, village_name_label.Text, gameState);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
             
-
         }
         
         private void New_Village(object sender, EventArgs e)
@@ -93,26 +87,20 @@ namespace AgeOfVillagers
             selectedNationforOpening = "";
             if (inputValidation.checkStringInput(villageName_inputField.Text))
             {
-                MessageBox.Show(Constants.creating_invalid_message);
+                MessageBox.Show(DefaultValue.creating_invalid_message);
                 return;
             }
 
-            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, DefaultValue.DEFAULT_NATION, DefaultValue.DEFAULT_COLOR);
             environment.setEnvironment();
 
             
             game = gameFactory.getGame();
             
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name_label,villageName_inputField.Text);
+            IGameControlCommand onCommand = commandFactory.GetGameControlCommand(DefaultValue.NEW_KEY, game, drawing_panel, village_name_label,villageName_inputField.Text);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameState=gameKeyInvoker.click();
             drawnItemsInfosList = gameState.DrawnItemsInformationList;
-            
-
-
-
-
-
 
     }
         
@@ -121,20 +109,16 @@ namespace AgeOfVillagers
         private void Open_village(object sender, EventArgs e)
         {
             
-            
             if (inputValidation.checkStringInput(selectedNationforOpening))
             {
-                environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, Constants.DEFAULT_NATION, Constants.DEFAULT_COLOR);
+                environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, DefaultValue.DEFAULT_NATION, DefaultValue.DEFAULT_COLOR);
                 environment.setEnvironment();
-                MessageBox.Show(Constants.opening_invalid_message);
+                MessageBox.Show(DefaultValue.opening_invalid_message);
                 return;
             }
-
-
-            
             game = gameFactory.getGame();
 
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game, village_name_label, selectedNationforOpening, g, pen);
+            IGameControlCommand onCommand = commandFactory.GetGameControlCommand(DefaultValue.OPEN_KEY, game, village_name_label, selectedNationforOpening, g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
             gameState = gameKeyInvoker.click();
@@ -142,12 +126,6 @@ namespace AgeOfVillagers
             drawnItemsInfosList =gameState.DrawnItemsInformationList;
             
             selectedNationforOpening = "";
-
-
-        }
-
-        private void VillageWindow_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -158,12 +136,12 @@ namespace AgeOfVillagers
 
             if ( inputValidation.checkStringInput(village_name_label.Text) || inputValidation.checkStringInput(selectedNation) || inputValidation.checkStringInput(selectedItem))
             {
-                MessageBox.Show(Constants.string_invalid_message);
+                MessageBox.Show(DefaultValue.string_invalid_message);
                 return;
             }
             if (inputValidation.checkPoints(point))
             {
-                MessageBox.Show(Constants.point_invalid_message);
+                MessageBox.Show(DefaultValue.point_invalid_message);
                 return;
             }
 
@@ -176,70 +154,63 @@ namespace AgeOfVillagers
             item.placeItem(selectedNation); ;
             drawnItemsInfosList.Add(drawnItemsInfo);
             
-            
-
-            
-            
+  
         }
-
-       
-
-       
-
-        
-
-        
 
         private void Mouse_Click_Bangladeshi_Farmer(object sender, MouseEventArgs e)
         {
-            selectedNation = Constants.BD_NATION;
+            selectedNation = DefaultValue.BD_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, selectedNation,Constants.BANGLADESHI_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, inuit_nation_radioButton, Tree, House, WaterSource, g, selectedNation,DefaultValue.BANGLADESHI_COLOR);
             environment.setEnvironment();
 
         }
 
         private void Mouse_Click_Inuit_Hunters(object sender, MouseEventArgs e)
         {
-            selectedNation = Constants.INUIT_NATION;
+            selectedNation = DefaultValue.INUIT_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, inuit_nation_radioButton, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.INUIT_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, inuit_nation_radioButton, bangladesh_Nation_radioButton, egypt_nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, DefaultValue.INUIT_COLOR);
             environment.setEnvironment();
 
         }
 
         private void Mouse_Click_Egyptian_Kings(object sender, MouseEventArgs e)
         {
-            selectedNation = Constants.EGYPT_NATION;
+            selectedNation = DefaultValue.EGYPT_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.EGYPTIAN_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, arab_nation_radioButton, Tree, House, WaterSource, g, selectedNation, DefaultValue.EGYPTIAN_COLOR);
             environment.setEnvironment();
         }
 
         private void Mouse_ClickTree(object sender, MouseEventArgs e)
         {
-            selectedItem = Constants.TREE_ITEM;
+            selectedItem = DefaultValue.TREE_ITEM;
         }
 
         private void Mouse_ClickHouse(object sender, MouseEventArgs e)
         {
-            selectedItem = Constants.HOUSE_ITEM;
+            selectedItem = DefaultValue.HOUSE_ITEM;
         }
 
         private void Mouse_ClickWaterSource(object sender, MouseEventArgs e)
         {
-            selectedItem = Constants.WATER_SOURCE_ITEM;
+            selectedItem = DefaultValue.WATER_SOURCE_ITEM;
         }
 
         private void Mouse_Click_Arab_Bedouin(object sender, MouseEventArgs e)
         {
-            selectedNation = Constants.ARAB_NATION;
+            selectedNation = DefaultValue.ARAB_NATION;
             selectedNationforOpening = selectedNation;
-            environment = environmentFactory.getEnvironment(Nation_Name, arab_nation_radioButton, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, Tree, House, WaterSource, g, selectedNation, Constants.ARABIAN_COLOR);
+            environment = environmentFactory.getEnvironment(Nation_Name, arab_nation_radioButton, egypt_nation_radioButton, inuit_nation_radioButton, bangladesh_Nation_radioButton, Tree, House, WaterSource, g, selectedNation, DefaultValue.ARABIAN_COLOR);
             environment.setEnvironment();
         }
 
         private void drawing_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void VillageWindow_Load(object sender, EventArgs e)
         {
 
         }

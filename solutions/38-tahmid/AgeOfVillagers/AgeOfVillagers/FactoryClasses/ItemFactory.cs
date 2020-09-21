@@ -15,13 +15,13 @@ namespace AgeOfVillagers.FactoryClasses
         public IItem GetItem(Point point,string hint,Graphics graphics,Pen pen)
         {
            
-            if (hint.Equals(Constants.TREE_ITEM))
+            if (hint.Equals(DefaultValue.TREE_ITEM))
             {
                 return new Tree(point,graphics,pen);
             }
-            else if (hint.Equals(Constants.HOUSE_ITEM))
+            else if (hint.Equals(DefaultValue.HOUSE_ITEM))
                 return new House(point, graphics, pen);
-            else if (hint.Equals(Constants.WATER_SOURCE_ITEM))
+            else if (hint.Equals(DefaultValue.WATER_SOURCE_ITEM))
                 return new WaterSource(point, graphics, pen);
             return new NullClass(hint);
         }

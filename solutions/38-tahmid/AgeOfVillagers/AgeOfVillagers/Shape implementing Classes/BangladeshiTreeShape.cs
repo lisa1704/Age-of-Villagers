@@ -34,14 +34,14 @@ namespace AgeOfVillagers.Shape_extended_classes
 
         public void makeShape()
         {
-            DrawableShapes leaf = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, Constants.FULL_CIRCLE_STARTING_ANGLE, Constants.FULL_CIRCLE_ENDING_ANGLE, 3 * (height / 4), width, Constants.CIRCULAR_HINT);
+            DrawableShapes leaf = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, DefaultValue.FULL_CIRCLE_STARTING_ANGLE, DefaultValue.FULL_CIRCLE_ENDING_ANGLE, 3 * (height / 4), width, DefaultValue.CIRCULAR_HINT);
             leaf.makeShape();
             leafCenterPoint = new Point(startingPoint.X + 3 * (width / 8), startingPoint.Y + width / 2);
             rootTopLeftPoint = leafCenterPoint;
             rootTopRightPoint = new Point(rootTopLeftPoint.X +  (width / 4),rootTopLeftPoint.Y);
             rootbottomLeftPoint= new Point(rootTopLeftPoint.X , rootTopLeftPoint.Y+ 5 * (height / 8));
             rootBottomRightPoint = new Point(rootTopLeftPoint.X + (width / 4), rootTopLeftPoint.Y + 5 * (height / 8));
-            DrawableShapes root = basicShapeFactory.GetDrawableShape(graphics, pen, rootTopLeftPoint,rootTopRightPoint,rootbottomLeftPoint,rootBottomRightPoint, Constants.RECT_HINT);
+            DrawableShapes root = basicShapeFactory.GetDrawableShape(graphics, pen, rootTopLeftPoint,rootTopRightPoint,rootbottomLeftPoint,rootBottomRightPoint, DefaultValue.RECT_HINT);
             root.makeShape();
         }
 

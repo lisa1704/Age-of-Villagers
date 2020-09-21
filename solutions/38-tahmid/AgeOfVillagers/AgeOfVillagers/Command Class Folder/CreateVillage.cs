@@ -8,7 +8,7 @@ using AgeOfVillagers.Model_Class_Folder;
 
 namespace AgeOfVillagers
 {
-    class CreateVillage : GameControlCommand
+    class CreateVillage : IGameControlCommand
     {
         public IGames game;
         Panel drawing_panel;

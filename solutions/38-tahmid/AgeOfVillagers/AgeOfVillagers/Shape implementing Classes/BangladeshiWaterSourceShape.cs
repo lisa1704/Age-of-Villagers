@@ -38,7 +38,7 @@ namespace AgeOfVillagers.IItem_implementing_Classes
             bottomMidLeftPoint = new Point(bottomLeftPoint.X + unitWidth, startingPoint.Y + unitHeight);
             bottomMidRightPoint = new Point(bottomMidLeftPoint.X + unitWidth, startingPoint.Y + 3 * unitHeight);
             endPoint = new Point(startingPoint.X + 8 * unitWidth, startingPoint.Y);
-            DrawableShapes nonagon = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint, bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint, endPoint, Constants.UNEQUAL_NONAGON_HINT);
+            DrawableShapes nonagon = basicShapeFactory.GetDrawableShape(graphics, pen, startingPoint, topLeftPoint, topMidLeftPoint, topMidPoint, topMidRightPoint, bottomLeftPoint, bottomMidLeftPoint, bottomMidRightPoint, endPoint, DefaultValue.UNEQUAL_NONAGON_HINT);
             nonagon.makeShape();
         }
 
