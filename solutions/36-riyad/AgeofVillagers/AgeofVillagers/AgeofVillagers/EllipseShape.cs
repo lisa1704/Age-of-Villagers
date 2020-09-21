@@ -5,12 +5,12 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class Ellipse : CompositeShape
+    public class EllipseShape : CompositeShape
     {
         private Point leftTop;
         private Point rightBottom;
 
-        public Ellipse(Point Left, Point Right)
+        public EllipseShape(Point Left, Point Right)
         {
             leftTop = Left;
             rightBottom = Right;
