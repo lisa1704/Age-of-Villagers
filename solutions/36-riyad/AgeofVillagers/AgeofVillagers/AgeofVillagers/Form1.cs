@@ -22,6 +22,8 @@ namespace AgeofVillagers
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
 
+        FactoryPattern nationFactory = new FactoryPattern();
+
         public Form1()
         {
             InitializeComponent();
@@ -82,6 +84,7 @@ namespace AgeofVillagers
             foreach (Point pt in HousePoints)
             {
                 g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+                nationFactory.GetNation(VType).DrawHouse(g, pt);
             }
             foreach (Point pt in TreePoints)
             {
@@ -105,7 +108,7 @@ namespace AgeofVillagers
 
         private void NationList_Select(object sender, EventArgs e)
         {
-           
+            VType = nation.Text;
         }
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)

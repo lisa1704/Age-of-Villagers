@@ -5,26 +5,24 @@ using System.Text;
 
 namespace AgeofVillagers
 {
-    public class RectangleShape : IShapeItem
+    public class RectangleShape : CompositeShape
     {
-        private Point leftTop;
-        private Point RightBottom;
+        //private Point leftTop;
+        //private Point RightBottom;
 
         public RectangleShape(Point leftTop, Point RightBottom)
         {
-            this.leftTop = leftTop;
-            this.RightBottom = RightBottom;
+            var topRight = new Point(RightBottom.X, leftTop.Y);
+            var bottomLeft = new Point(leftTop.X, RightBottom.Y);
+
+
+            AddComponents(new LineShape(leftTop, topRight));
+            AddComponents(new LineShape(leftTop, bottomLeft));
+            AddComponents(new LineShape(bottomLeft, RightBottom));
+            AddComponents(new LineShape(RightBottom, topRight));
+
         }
 
-        public void Paint(Graphics g, Pen p)
-        {
-            var pen = new Pen(Color.Black, 1);
-
-
-            g.DrawLine(pen, leftTop.X, leftTop.Y, RightBottom.X, leftTop.Y);
-            g.DrawLine(pen, leftTop.X, leftTop.Y, leftTop.X, RightBottom.Y);
-            g.DrawLine(pen, leftTop.X, RightBottom.Y, RightBottom.X, RightBottom.Y);
-            g.DrawLine(pen, RightBottom.X, leftTop.Y, RightBottom.X, RightBottom.Y);
-        }
+        
     }
 }
