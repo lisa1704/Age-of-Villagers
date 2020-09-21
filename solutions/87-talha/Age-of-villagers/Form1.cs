@@ -71,5 +71,10 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Main_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

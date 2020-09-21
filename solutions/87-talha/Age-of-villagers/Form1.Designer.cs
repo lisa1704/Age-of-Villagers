@@ -39,6 +39,7 @@
             this.Nation_name = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Main_panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Save_village
@@ -160,11 +161,20 @@
             this.label2.Text = "Nation";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // Main_panel
+            // 
+            this.Main_panel.Location = new System.Drawing.Point(0, 0);
+            this.Main_panel.Name = "Main_panel";
+            this.Main_panel.Size = new System.Drawing.Size(600, 400);
+            this.Main_panel.TabIndex = 11;
+            this.Main_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_panel_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Nation_name);
@@ -196,6 +206,7 @@
         private System.Windows.Forms.ComboBox Nation_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel Main_panel;
     }
 }
 
