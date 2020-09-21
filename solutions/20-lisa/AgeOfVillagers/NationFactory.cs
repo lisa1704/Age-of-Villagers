@@ -4,29 +4,34 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class NationFactory:INationFactory
+    class NationFactory
     {
         INation nation;
 
-        public INation GetNation(string NationBox)
+        public INation GetNation(string selectNation)
         {
 
-            if (NationBox == "Bangladeshi Farmers")
+            if (selectNation == "Bangladeshi Farmers")
             {
                 nation = new BanglaFarmers();
             }
-            else if (NationBox == "Arab Bedouin")
+            else if (selectNation == "Arab Bedouin")
             {
                 nation = new Arabs();
             }
-            else if (NationBox == "Egyptian Kings")
+            else if (selectNation == "Egyptian Kings")
             {
                 nation = new Egyptians();
             }
-            else 
+            else if(selectNation == "Inuit Hunters")
             {
                 nation = new InuitHunters();
             }
+            else
+            {
+                return new NullNationHandler();
+            }
+      
         }
     }
 }

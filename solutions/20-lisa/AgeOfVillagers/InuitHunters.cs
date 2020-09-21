@@ -22,7 +22,12 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
-        public void SetTerrain()
+        public Color SetTerrain()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetVillageName(string vName)
         {
             throw new NotImplementedException();
         }

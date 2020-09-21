@@ -16,12 +16,13 @@ namespace AgeOfVillagers
         private int y;
         string s;
         string vName="";
+        string selectNation;
 
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> watersource_point = new List<Point>();
-        INationFactory nationFactory = new NationFactory();
-        INation nation = null;
+        INation n;
+        NationFactory nationFactory;
 
         public VillageEditor()
         {
@@ -36,15 +37,15 @@ namespace AgeOfVillagers
 
             foreach (Point point in tree_point)
             {
-                ((INationFactory)nationFactory).GetNation(vName).DrawTree(graphics, point);
+                nationFactory.GetNation(selectNation).DrawTree(graphics, point);
             }
             foreach (Point point in house_point)
             {
-                ((INationFactory)nationFactory).GetNation(vName).DrawHouse(graphics, point);
+                nationFactory.GetNation(selectNation).DrawHouse(graphics, point);
             }
             foreach (Point point in watersource_point)
             {
-                ((INationFactory)nationFactory).GetNation(vName).DrawWaterSource(graphics, point);
+                nationFactory.GetNation(selectNation).DrawWaterSource(graphics, point);
             }
 
 
@@ -68,7 +69,7 @@ namespace AgeOfVillagers
 
         private void VillageName_TextChanged(object sender, EventArgs e)
         {
-            vName = VillageName.Text;
+            n.SetVillageName(VillageName.Text);
         }
 
         private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
@@ -129,9 +130,10 @@ namespace AgeOfVillagers
         }
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            string selectNation = NationBox.Text;
-            MessageBox.Show(selectNation);
+
+            selectNation = NationBox.Items[NationBox.SelectedIndex].ToString();
+            n = nationFactory.GetNation(selectNation);
+            n.SetVillageName(vName);
             
         }
 
@@ -149,5 +151,7 @@ namespace AgeOfVillagers
         {
             s = "House";
         }
+
+  
     }
 }

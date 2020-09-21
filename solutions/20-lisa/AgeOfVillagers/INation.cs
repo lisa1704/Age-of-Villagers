@@ -10,8 +10,10 @@ namespace AgeOfVillagers
         void DrawTree(Graphics graphics, Point point);
         void DrawHouse(Graphics graphics, Point point);
         void DrawWaterSource(Graphics graphics, Point point);
+        void SetVillageName(string vName);
         void SetWaterSource();
-        void SetTerrain();
+        Color SetTerrain();
+        
     }
 
     
