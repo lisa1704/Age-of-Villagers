@@ -62,6 +62,7 @@
     <Compile Include="Bdwater.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="EgyptFactory.cs" />
+    <Compile Include="EgyptTree.cs" />
     <Compile Include="House.cs" />
     <Compile Include="InuitFactory.cs" />
     <Compile Include="IShape.cs" />
