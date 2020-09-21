@@ -31,18 +31,18 @@ public class VillageView_controller implements Initializable {
             public void handle(MouseEvent event) {
                 double x1 = event.getSceneX();
                 double y1 = event.getSceneY();
-                if(flag == "Tree"){
-                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
-                    DrawShape(tree);
-                }
-                else if (flag == "House"){
+//                if(flag == "Tree"){
+//                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
+//                    DrawShape(tree);
+//                }
+                if (flag == "House"){
                     ArrayList<Shape> house = nation.drawHouse(x1,y1);
                     DrawShape(house);
                 }
-                else if(flag == "WaterSource"){
-                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
-                    DrawShape(WaterBody);
-                }
+//                else if(flag == "WaterSource"){
+//                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
+//                    DrawShape(WaterBody);
+//                }
             }
         });
     }
@@ -115,6 +115,6 @@ public class VillageView_controller implements Initializable {
 
     public void ChangeNation(ActionEvent actionEvent) {
         nation = new Nation((String) NationList.getValue());
-        DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
+//        DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
     }
 }
