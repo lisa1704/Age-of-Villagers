@@ -26,6 +26,7 @@ public class VillageView_controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NationList.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouins"),("Egyptian Kings"),("Inuit Hunters"));
+        nation = new Nation("No Nation");
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

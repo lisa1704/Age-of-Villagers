@@ -1,6 +1,5 @@
 package Project.Utilities.NationItems;
 
-import Project.Utilities.Inuit_Hunters;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;

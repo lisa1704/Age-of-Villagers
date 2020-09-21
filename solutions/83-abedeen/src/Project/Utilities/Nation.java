@@ -34,6 +34,12 @@ public class Nation {
             this.water_body = new Null_Water_Body();
             this.terrainColor = new Inuit_Hunters_Terrain();
         }
+        else {
+            this.house = new Null_House();
+            this.tree = new Null_Tree();
+            this.water_body = new Null_Water_Body();
+            this.terrainColor = new Null_Color();
+        }
 
     }
 
