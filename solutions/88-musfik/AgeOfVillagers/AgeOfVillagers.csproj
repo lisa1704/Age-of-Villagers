@@ -65,7 +65,6 @@
     <Compile Include="Nation\BangladeshiFarmers.cs" />
     <Compile Include="Nation\EgyptianKings.cs" />
     <Compile Include="Nation\INation.cs" />
-    <Compile Include="INationFactory.cs" />
     <Compile Include="Nation\InuitHunters.cs" />
     <Compile Include="Shape\CompositeShapes\CompositeShape.cs" />
     <Compile Include="Shape\IShape.cs" />
