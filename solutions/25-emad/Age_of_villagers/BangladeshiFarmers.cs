@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,22 @@ namespace Age_of_villagers
 {
     class BangladeshiFarmers : INations
     {
-        public void drawhouse()
+        public string DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public void drawtree()
+        public Color DrawTerrain()
         {
             throw new NotImplementedException();
         }
 
-        public void drawwatersource()
+        public string DrawTree(Graphics graphics, Point point)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string DrawWaterSource(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
