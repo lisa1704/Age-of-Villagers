@@ -10,22 +10,26 @@ namespace ageOfVillagers
     {
         private string nation;
         private string villagename;
+        private string work;
         public void Draw(string currentselect, int x, int y)
         {
             if (currentselect == "tree") 
             {
-                Tree t = new Tree();
-                t.Draw(x, y);
+                //Tree t = new Tree();
+                //t.Draw(x, y);
+                work = "Drawing a tree";
             }
             else if (currentselect == "house")
             {
-                House h = new House();
-                h.Draw(x, y);
+                //House h = new House();
+                //h.Draw(x, y);
+                work = "Drawing a house";
             }
             else if( currentselect=="water")
             {
-                Water w = new Water();
-                w.Draw(x, y);
+                //Water w = new Water();
+                //w.Draw(x, y);
+                work = "Drawing water";
             }
             else
             {
