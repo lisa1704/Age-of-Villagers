@@ -82,24 +82,28 @@ namespace AgeOfVillagers
         {
             Graphics g = drawinPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
-            if (nationType.GetNation(nationName).get)
+            if (nationType.GetNation(nationName).getNationName() == "NullNation")
             {
+                nationType.GetNation(nationName).DrawHouse(g, new Point(200,200));
+            }
+            else
+            {
+                foreach (Point points in houseLocations)
+                {
+                    nationType.GetNation(nationName).DrawHouse(g, points);
+                }
 
-            }
-            foreach (Point points in houseLocations)
-            {
-                nationType.GetNation(nationName).DrawHouse(g, points);
-            }
+                foreach (Point points in treeLocations)
+                {
+                    nationType.GetNation(nationName).DrawTree(g, points);
+                }
 
-            foreach (Point points in treeLocations)
-            {
-                nationType.GetNation(nationName).DrawTree(g, points);
+                foreach (Point points in sourceLocations)
+                {
+                    nationType.GetNation(nationName).DrawWaterResource(g, points);
+                }
             }
-
-            foreach(Point points in sourceLocations)
-            {
-                nationType.GetNation(nationName).DrawWaterResource(g, points);
-            }
+            
         }
 
         private void drawinPanel_MouseClick(object sender, MouseEventArgs e)
