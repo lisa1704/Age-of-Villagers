@@ -23,7 +23,7 @@ namespace AgeOfVillagers
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.InitialDirectory = @"D:\AoV";
             sfd.RestoreDirectory = true;
-            sfd.FileName = "*.aov";
+            sfd.FileName = villageState.Vname + ".aov";
             sfd.DefaultExt = "aov";
             sfd.Filter = "AoV file(*.aov) | *.aov";
 
