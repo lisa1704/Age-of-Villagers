@@ -11,6 +11,7 @@ namespace AgeOfVillagers
     public class VillageSaveOpen
     {
         private Items myItems;
+        Items savedVillageItems;
 
         public VillageSaveOpen(Items myItems)
         {
@@ -43,6 +44,16 @@ namespace AgeOfVillagers
 
         public void openMyVillage()
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Stream openStream = openFileDialog.OpenFile();
+                using (StreamReader streamReader = new StreamReader(openStream))
+                {
+                    string jsonDeserializer = streamReader.ReadToEnd();
+                    savedVillageItems = JsonConvert.DeserializeObject<Items>(jsonDeserializer);
+                }
+            }
 
         }
     }
