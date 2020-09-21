@@ -23,14 +23,14 @@ namespace AgeOfVillagers.Nation
             return Color.White;
         }
 
-        public VillageItem getTree(Point pointp)
+        public VillageItem getTree(Point point)
         {
-            throw new NotImplementedException();
+            return new NullItem(point);
         }
 
-        public VillageItem getWaterSource(Point pointp)
+        public VillageItem getWaterSource(Point point)
         {
-            throw new NotImplementedException();
+            return new NullItem(point);
         }
     }
 }
