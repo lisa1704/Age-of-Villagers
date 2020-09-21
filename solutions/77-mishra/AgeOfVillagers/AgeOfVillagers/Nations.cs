@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
@@ -8,18 +9,20 @@ namespace AgeOfVillagers
     {
         public INation nation;
         public string nationtype;
+        private Point point;
+
         public Nations( string nationtype)
         {
             this.nationtype = nationtype;
 
             if (nationtype == "Bangladeshi Farmers")
             {
-                nation = new BdFarmer();
+                nation = new BdFarmer(point);
 
             }
             else if (nationtype == "Arab Beduins")
             {
-                nation = new ArabBeduin();
+                nation = new ArabBeduin(point);
             }
             else if (nationtype == "Egyptian King")
             {
