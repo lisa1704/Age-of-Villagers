@@ -8,7 +8,11 @@ namespace AgeOfVillagers
     {
         public override IComponent getComponent(string component_type)
         {
-            throw new NotImplementedException();
+            if (component_type == "house")
+            {
+                return new InuitHouse();
+            }
+       
         }
     }
 }
