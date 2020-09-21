@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Save;
+﻿using AgeOfVillagers.Open;
+using AgeOfVillagers.Save;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +84,8 @@ namespace AgeOfVillagers
         {
             //OpenVillageForm ovf = new OpenVillageForm();
             //ovf.Show();
-
+            OpenVillage ov = new OpenVillage();
+            ov.open();
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
