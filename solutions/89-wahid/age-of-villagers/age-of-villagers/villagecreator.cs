@@ -115,7 +115,8 @@ namespace age_of_villagers
             }
             else if (watersource.Checked)
             {
-                
+                village.nation.getHouse(point).draw(g, p);
+                village.watersource.Add(point);
             }
 
         }
