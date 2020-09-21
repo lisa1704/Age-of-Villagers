@@ -25,4 +25,6 @@ public class NationFactory {
 
         return nation;
     }
+
+    public
 }
