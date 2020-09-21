@@ -12,15 +12,15 @@ namespace age_of_villagers
     {
         Pen pen = new Pen(Color.Black);
         Graphics gp;
+        Point point;
 
-        public Arab_Beduin(Graphics gp)
+        public Arab_Beduin(Graphics gp, Point point)
         {
             this.gp = gp;
+            this.point = point;
         }
-
         public void draw_house()
         {
-            Point point = new Point(50, 50);
             Point p1 = new Point(point.X + 25, point.Y + 50);
             Point p2 = new Point(point.X - 25, point.Y + 50);
             Point p3 = new Point(point.X + 50, point.Y - 25);
@@ -36,7 +36,7 @@ namespace age_of_villagers
 
         public void draw_tree()
         {
-            Point p0 = new Point(50, 50);
+            Point p0 = new Point(point.X, point.Y);
             Point p1 = new Point(p0.X - 2, p0.Y);
             Point p2 = new Point(p0.X + 2, p0.Y);
             Point p3 = new Point(p0.X - 2, p0.Y + 50);
@@ -63,3 +63,4 @@ namespace age_of_villagers
         }
     }
 }
+
