@@ -1,12 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Nation
+    public abstract class Nation : INation
     {
+
+        public bool hasTree, hasWaterSource;
+        public ElementSize houseSize, treeSize, waterSourceSize;
+
+        public Nation()
+        {
+            this.houseSize = new ElementSize(16, 16);
+            this.treeSize = new ElementSize(24, 16);
+        }
+
+        public abstract void BackgoundColor(Graphics g);
+
+        public abstract void DrawHouse(Graphics g, Point location);
+
+        public abstract void DrawTree(Graphics g, Point location);
+
+        public abstract void DrawWaterResource(Graphics g, Point location);
+
+
+
     }
 }
