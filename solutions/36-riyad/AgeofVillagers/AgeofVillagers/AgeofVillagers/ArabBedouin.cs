@@ -23,5 +23,10 @@ namespace AgeofVillagers
         {
             throw new NotImplementedException();
         }
+
+        public Color TerrainColor()
+        {
+            return System.Drawing.Color.LightGoldenrodYellow; //yellowish
+        }
     }
 }

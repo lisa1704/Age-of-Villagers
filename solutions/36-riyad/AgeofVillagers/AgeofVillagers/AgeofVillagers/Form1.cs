@@ -83,7 +83,6 @@ namespace AgeofVillagers
 
             foreach (Point pt in HousePoints)
             {
-                //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.Y + 16);
                 nationFactory.GetNation(VType).DrawHouse(g, pt);
             }
             foreach (Point pt in TreePoints)
@@ -108,8 +107,14 @@ namespace AgeofVillagers
 
         private void NationList_Select(object sender, EventArgs e)
         {
-            VType = nation.Text;
+            
         }
+
+       /* private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VType = nation.Text;
+            DrawPanel.BackColor = nationFactory.GetNation(VType).TerrainColor();
+        }*/
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -141,6 +146,7 @@ namespace AgeofVillagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             VType = nation.Text;
+            DrawPanel.BackColor = nationFactory.GetNation(VType).TerrainColor();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

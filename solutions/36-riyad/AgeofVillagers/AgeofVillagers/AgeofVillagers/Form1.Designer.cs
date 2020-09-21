@@ -44,11 +44,12 @@
             // 
             // DrawPanel
             // 
+            this.DrawPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DrawPanel.Location = new System.Drawing.Point(0, 0);
             this.DrawPanel.Name = "DrawPanel";
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 0;
-            //this.DrawPanel.BackColorChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
+            this.DrawPanel.BackColorChanged += new System.EventHandler(this.NationList_Select);
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
             // 

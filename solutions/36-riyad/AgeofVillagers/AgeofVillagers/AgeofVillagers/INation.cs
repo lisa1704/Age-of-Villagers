@@ -7,9 +7,10 @@ namespace AgeofVillagers
 {
     public interface INation
     {
-        string DrawHouse(Graphics g, Point p);
-        void DrawTree(Graphics g, Point p);
-        void DrawWaterSource();
+        public string DrawHouse(Graphics g, Point p);
+        public void DrawTree(Graphics g, Point p);
+        public void DrawWaterSource();
+        public Color TerrainColor();
     }
 
     internal class FactoryPattern
