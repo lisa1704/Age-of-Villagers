@@ -58,6 +58,7 @@
     <Compile Include="Nations\Egyptian_kings.cs" />
     <Compile Include="Nations\INations.cs" />
     <Compile Include="Nations\Inuit_hunters.cs" />
+    <Compile Include="Nations\Nation_factory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree.cs" />

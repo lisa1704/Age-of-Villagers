@@ -11,6 +11,7 @@ namespace AgeOfVillagers.Nations
     {
 
         string nation_type = "E";
+        Color bg_color = Color.Yellow;
         public void Draw_House()
         {
             throw new NotImplementedException();
@@ -28,7 +29,7 @@ namespace AgeOfVillagers.Nations
 
         public Color terrain_Color()
         {
-            throw new NotImplementedException();
+            return bg_color;
         }
     }
 }
