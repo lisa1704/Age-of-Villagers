@@ -30,16 +30,22 @@ namespace AgeOfVillagers
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            _parent.VillageName.Text = nametextbx.Text;
-            _parent.NationName.Text = comboBox1.Text;
+            
 
             NationManager nationManager = new NationManager(comboBox1.Text);
 
+            if (nametextbx.Text.Equals("")|| comboBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Please Fil up The Requirements");
+            }
+            else
+            {
+                _parent.VillageName.Text = nametextbx.Text;
+                _parent.NationName.Text = comboBox1.Text;
+                _drawpanel.BackColor = nationManager.getNation(new Point()).GetTerritoryColor();
+                this.Hide();
 
-            _drawpanel.BackColor = nationManager.getNation(new Point()).GetTerritoryColor();
-                        
-
-            this.Hide();
+            }
         }
     }
 }

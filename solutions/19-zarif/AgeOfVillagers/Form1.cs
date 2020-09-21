@@ -27,7 +27,7 @@ namespace AgeOfVillagers
         private List<Point> Waterpoints { get; set; } = new List<Point>();
         private List<Point> Treepoints { get; set; } = new List<Point>();
      
-        public void get_state()
+        public void getState()
         {
             this._villagestate = new VillageState(VillageName.Text, Housepoints, Treepoints, Waterpoints);
         }
@@ -59,7 +59,7 @@ namespace AgeOfVillagers
 
         private void SaveVillagebtn_Click(object sender, EventArgs e)
         {
-            get_state();
+            getState();
             SaveVillageState command = new SaveVillageState(_villagestate);
             command.Execute();
             MessageBox.Show("Village Saved");
