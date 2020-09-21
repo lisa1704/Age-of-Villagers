@@ -22,6 +22,14 @@ namespace AgeofVillagers
 
         }
 
-        
+        public RectangleShape(Point topLeft, Point bottomRight, Point topRight, Point bottomLeft)
+        {
+            AddComponents(new LineShape(topLeft, topRight));
+            AddComponents(new LineShape(topLeft, bottomLeft));
+            AddComponents(new LineShape(bottomLeft, bottomRight));
+            AddComponents(new LineShape(bottomRight, topRight));
+        }
+
+
     }
 }

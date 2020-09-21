@@ -11,6 +11,8 @@ namespace AgeofVillagers
         Pen pen = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point p)
         {
+            ArabBedouinHouse arabHouse = new ArabBedouinHouse(p);
+            arabHouse.Paint(g, pen);
             return "Stonehouse";
         }
 
