@@ -18,7 +18,7 @@ namespace AgeOfVillagers
             Point corner = new Point(point1.X + 12, point1.Y - 8);
 
             addshapes(new Triangle(point1, left, right));
-            addshapes(new Rectangleshape(point1, right, corner, cornerUp));
+            addshapes(new Rectangleshape(point1, right, cornerUp, corner));
            
         }
 
