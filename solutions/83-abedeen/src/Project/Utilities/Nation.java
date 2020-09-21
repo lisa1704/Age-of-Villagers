@@ -18,6 +18,12 @@ public class Nation {
             this.water_body = new Bangladeshi_Waterbody();
             this.terrainColor = new BangladeshiFarmersColor();
         }
+        else if(nation_type == "Arab Bedouins"){
+            this.house = new Arab_Bedouin_House();
+            this.tree = new Arab_Bedouin_Tree();
+            this.water_body = new Null_Water_Body();
+            this.terrainColor = new Arab_Bedouin_TerrainColor();
+        }
     }
 
     public ArrayList<Shape> drawHouse(double x, double y){
