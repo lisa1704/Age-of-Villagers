@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    interface IComponent
+    public interface IComponent
     {
-        public void draw();
+        public void draw(Point p, Graphics g, Pen pen);
     }
 }

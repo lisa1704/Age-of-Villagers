@@ -1,26 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Text;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKings : INations
+    class EgyptTree : IComponent
     {
-        public void drawhouse(Point p, Graphics g, Pen pen)
-        {
-            Point p1 = new Point(p.X + 4, p.Y + 16);
-            Point p2 = new Point(p.X - 8, p.Y + 13);
-            Point p3 = new Point(p.X + 8, p.Y + 9);
-            
-            g.DrawLine(pen, p, p1);
-            g.DrawLine(pen, p, p2);
-            g.DrawLine(pen, p, p3);
-            g.DrawLine(pen, p3, p1);
-            g.DrawLine(pen, p2, p1);
-        }
-
-        public void drawtree(Point p, Graphics g, Pen pen)
+        public void draw(Point p, Graphics g, Pen pen)
         {
             Point p1 = new Point(p.X, p.Y + 24);
 
@@ -42,16 +29,6 @@ namespace AgeOfVillagers
             g.DrawLine(pen, p3, p9);
             g.DrawLine(pen, p5, p9);
             g.DrawLine(pen, p6, p9);
-        }
-
-        public void drawwatersource(Point p, Graphics g, Pen pen)
-        {
-            g.DrawArc(pen, p.X, p.Y, 12, 12, 0, 360);
-        }
-
-        public void setbgcolor(Graphics g)
-        {
-            //throw new NotImplementedException();
         }
     }
 }

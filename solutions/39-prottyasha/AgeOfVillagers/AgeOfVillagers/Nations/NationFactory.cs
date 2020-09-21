@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class ComponentFactoryProducer
+    class NationFactory
     {
-        public static AbstractComponentFactory getComponentFactory(string nation)
+        public AbstractNation getNation(string nation)
         {
             if (nation == "Arab Bedouins")
             {
