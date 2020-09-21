@@ -77,11 +77,11 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(58, 36);
+            this.textBox2.Font = new System.Drawing.Font("Adobe Gothic Std B", 15F, System.Drawing.FontStyle.Bold);
+            this.textBox2.Location = new System.Drawing.Point(49, 36);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 36);
+            this.textBox2.Size = new System.Drawing.Size(234, 36);
             this.textBox2.TabIndex = 10;
             this.textBox2.Text = "AGE OF VILLAGERS";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -99,7 +99,7 @@
             "Inuit Hunters"});
             this.VillageNation.Location = new System.Drawing.Point(87, 111);
             this.VillageNation.Name = "VillageNation";
-            this.VillageNation.Size = new System.Drawing.Size(143, 22);
+            this.VillageNation.Size = new System.Drawing.Size(143, 24);
             this.VillageNation.TabIndex = 9;
             this.VillageNation.Text = "Enter Nation";
             this.VillageNation.UseWaitCursor = true;
@@ -195,7 +195,7 @@
             // 
             // VillageActions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 403);
             this.Controls.Add(this.panel2);

@@ -94,6 +94,8 @@ namespace AgeOfVillagers
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             villageName = textBox1.Text;
+            if (textBox1.Text == null)
+                villageName = "Not Specified";
         }
     }
 }

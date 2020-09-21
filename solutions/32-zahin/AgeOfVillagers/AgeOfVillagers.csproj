@@ -64,6 +64,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\ArabTree.cs" />
+    <Compile Include="Items\ArabHouse.cs" />
+    <Compile Include="Items\BangladeshiHouse.cs" />
+    <Compile Include="Items\BangladeshiTree.cs" />
+    <Compile Include="Items\BangladeshiWater.cs" />
+    <Compile Include="Items\EgyptWater.cs" />
+    <Compile Include="Items\EgyptTree.cs" />
+    <Compile Include="Items\EgyptHouse.cs" />
+    <Compile Include="Items\IItem.cs" />
     <Compile Include="VillageState.cs" />
     <Compile Include="Nations\ArabBedouin.cs" />
     <Compile Include="Nations\BangladeshiFarmers.cs" />
