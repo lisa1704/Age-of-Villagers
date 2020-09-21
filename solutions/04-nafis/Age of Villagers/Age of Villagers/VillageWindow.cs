@@ -74,7 +74,7 @@ namespace Age_of_Villagers
 
         }
 
-        private void NationBoxCombo_SelectedIndexChanged(object sender, EventArgs e)
+        private void NationNameCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -90,7 +90,7 @@ namespace Age_of_Villagers
             if (move && x != -1 && y != -1)
             {
                 move = true;
-                /* x = e.X;
+                /*x = e.X;
                 y = e.Y */
             }
         }

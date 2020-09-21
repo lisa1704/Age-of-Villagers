@@ -31,7 +31,8 @@ namespace Age_of_Villagers
 
         private void ConfirmVillage_Click(object sender, EventArgs e)
         {
-
+            primary.VillageNameText.Text = VillageNameText.Text;
+            primary.NationNameCombo.Text = NationNameCombo.Text;
         }
 
         private void VillageNameLabel_Click_(object sender, EventArgs e)
