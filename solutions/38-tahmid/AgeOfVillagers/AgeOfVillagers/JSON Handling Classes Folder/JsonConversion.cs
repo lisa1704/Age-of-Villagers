@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.JSON_Handling_Classes_Folder
 {
-    class JsonConversion
+    public class JsonConversion
     {
         String jsonData;
         public string serialize(State currentState)

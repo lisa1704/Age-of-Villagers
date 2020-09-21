@@ -16,9 +16,10 @@ namespace AgeOfVillagers_Test
             Label label = new Label();
 
             State state = aOVGame.createVillage(panel, label, "villageName");
-            Assert.Equal(state.VillageName, "villageName");
+            Assert.Equal("villageName", state.VillageName);
 
 
         }
+       
     }
 }
