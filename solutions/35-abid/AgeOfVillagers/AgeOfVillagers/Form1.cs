@@ -66,7 +66,7 @@ namespace AgeOfVillagers
             p.Y = e.Y;
 
             //nation = NF.nationUpdate(Nations.SelectedIndex);
-            g = DrawingPanel.CreateGraphics();
+            //g = DrawingPanel.CreateGraphics();
             //g.DrawString(text, Font, brush, new Point(x, y));
             if (chosen_component == "tree")
             {
@@ -94,10 +94,11 @@ namespace AgeOfVillagers
             else
             {
                 villageState.Vname = VillageName.Text;
-                villageState.NationIndex = Nations.SelectedIndex;
+                //villageState.NationIndex = Nations.SelectedIndex;
                 villageState.HPoint = HousePoints;
                 villageState.TPoint = TreePoints;
                 villageState.WPoint = WatersrcPoints;
+                //villageState.TerrainColor = DrawingPanel.BackColor;
                 SaveVillage saveVillage = new SaveVillage(villageState);
                 saveVillage.execute();
                 MessageBox.Show(VillageName.Text + " Saved!");
@@ -116,29 +117,39 @@ namespace AgeOfVillagers
             openVillage.execute();
             villageState = openVillage.getsavedvillage();
             repaint(villageState);
-            MessageBox.Show("Village Opened!");
         }
 
         public void repaint(VillageState villageState)
         {
-            nation = NF.nationUpdate(villageState.NationIndex);
-            VillageName.Text = villageState.Vname;
-            foreach (Point point in villageState.HPoint)
+            //Nations.SelectedIndex = villageState.NationIndex;
+            if (Nations.SelectedIndex < 0)
             {
-                HousePoints.Add(point);
-                nation.drawhouse(point);
+                MessageBox.Show("Select Nation Type");
             }
-
-            foreach (Point point in villageState.TPoint)
+            if (Nations.SelectedIndex > -1)
             {
-                TreePoints.Add(point);
-                nation.drawtree(point);
-            }
+                //nation = (INation)Nations.SelectedItem;
+                //nation = NF.nationUpdate(villageState.NationIndex);
+                nation = NF.nationUpdate(Nations.SelectedIndex);
+                VillageName.Text = villageState.Vname;
+                foreach (Point point in villageState.HPoint)
+                {
+                    HousePoints.Add(point);
+                    nation.drawhouse(point);
+                }
 
-            foreach (Point point in villageState.WPoint)
-            {
-                WatersrcPoints.Add(point);
-                nation.drawwatersrc(point);
+                foreach (Point point in villageState.TPoint)
+                {
+                    TreePoints.Add(point);
+                    nation.drawtree(point);
+                }
+
+                foreach (Point point in villageState.WPoint)
+                {
+                    WatersrcPoints.Add(point);
+                    nation.drawwatersrc(point);
+                }
+                MessageBox.Show("Village Opened!");
             }
         }
 
