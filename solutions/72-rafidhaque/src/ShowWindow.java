@@ -9,9 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ShowWindow implements IWindow{
@@ -82,6 +80,39 @@ public class ShowWindow implements IWindow{
 
             ArrayList<StateOfComponent> stateOfComponents2 = gson.fromJson(newJsonString, ArrayList.class);
             System.out.println(stateOfComponents2.get(1));
+
+
+            // java serialize
+
+            FileOutputStream fileOutputStream = null;
+            try {
+                fileOutputStream = new FileOutputStream("./"+this.villageName+".bov");
+                ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
+                out.writeObject(this.stateOfComponents);
+                out.close();
+                fileOutputStream.close();
+                System.out.println("Data saved");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // java deserialize
+
+            ArrayList<StateOfComponent> stateOfComponents10 = null;
+            try {
+                FileInputStream fileIn = new FileInputStream("./"+this.villageName+".bov");
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
+                in.close();
+                fileIn.close();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
+            System.out.println("Rafidd");
+            System.out.println(stateOfComponents10.get(1));
 
             // write file
             try {

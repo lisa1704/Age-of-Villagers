@@ -2,7 +2,7 @@ import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 
-public interface IDrawComponent {
+public interface IDrawComponent extends java.io.Serializable{
 
     ArrayList<Shape> draw();
 

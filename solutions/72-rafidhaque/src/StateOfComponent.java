@@ -1,4 +1,4 @@
-public class StateOfComponent {
+public class StateOfComponent implements java.io.Serializable{
     double x, y;
     IDrawComponent drawComponent;
     String className;
@@ -16,6 +16,7 @@ public class StateOfComponent {
                 "x=" + x +
                 ", y=" + y +
                 ", className=" + className +
+                ", classNameDrawComponent=" + drawComponent +
                 '}';
     }
 }
