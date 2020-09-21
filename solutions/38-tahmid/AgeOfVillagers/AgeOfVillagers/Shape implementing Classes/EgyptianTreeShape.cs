@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class EgyptianTreeShape : Shapes
+    public class EgyptianTreeShape : Shapes
     {
         private Graphics graphics;
         private Pen pen;

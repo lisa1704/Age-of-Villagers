@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.FactoryClasses
 {
-    class EnvironmentFactory
+    public class EnvironmentFactory
     {
         public Environment getEnvironment(Label nation_Name,RadioButton firstNation, RadioButton secondNation, RadioButton thirdNation, RadioButton fourthNation,RadioButton tree,RadioButton house,RadioButton waterSource, Graphics graphics, string selectedNation,Color color)
         {

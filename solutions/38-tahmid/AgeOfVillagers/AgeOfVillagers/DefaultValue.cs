@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    abstract class DefaultValue
+    public abstract class DefaultValue
     {
         public static string string_invalid_message = "Please enter all needed information";
         public static string conversion_error_message = "is not available";

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class InuitHouseIglooShape : Shapes
+    public class InuitHouseIglooShape : Shapes
     {
         private Graphics graphics;
         private Pen pen;

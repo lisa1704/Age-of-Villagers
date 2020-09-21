@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.AbstractClass
 {
-    abstract class DrawableShapes : Shapes
+    public abstract class DrawableShapes : Shapes
     {
         public abstract void drawShape();
 

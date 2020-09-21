@@ -19,7 +19,10 @@ namespace AgeOfVillagers_Test
                 DrawnItemsInformationList = new List<AgeOfVillagers.DrawnItemsInformation>()
                 
             };
+            
             Assert.IsType<String>(jsonConversion.serialize(state));
         }
+        
+       
     }
 }

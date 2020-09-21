@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Quadrangle : DrawableShapes
+    public class Quadrangle : DrawableShapes
     {
         private Point topLeftPoint,topRightPoint,bottomRightPoint,bottomLeftPoint;
         DrawableShapes upLine,downLine,leftLine,rightLine;

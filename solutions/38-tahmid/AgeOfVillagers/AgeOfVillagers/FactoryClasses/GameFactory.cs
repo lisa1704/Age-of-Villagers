@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class GameFactory
+    public class GameFactory
     {
         public IGames getGame()
         {

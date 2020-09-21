@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.IItem_Implementing_Classes
 {
-    class Tree : IItem
+    public class Tree : IItem
     {
         Point point;
         private Graphics graphics;

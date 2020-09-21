@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-     class GameKeyInvoker
+    public class GameKeyInvoker
     {
         IGameControlCommand theCommand;
         

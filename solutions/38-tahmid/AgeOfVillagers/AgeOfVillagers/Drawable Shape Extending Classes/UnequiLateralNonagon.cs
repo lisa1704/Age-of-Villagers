@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class UnequilateralNonagon : DrawableShapes
+    public class UnequilateralNonagon : DrawableShapes
     {
         Graphics graphics;
         Pen pen;

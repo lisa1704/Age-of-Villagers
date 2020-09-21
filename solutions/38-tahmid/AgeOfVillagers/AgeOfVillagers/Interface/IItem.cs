@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Interface
 {
-    interface IItem
+    public interface IItem
     {
         public void placeItem(String nationHint);
     }

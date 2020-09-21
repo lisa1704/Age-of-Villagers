@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class NullClass : DrawableShapes, Shapes, IItem
+    public class NullClass : DrawableShapes, Shapes, IItem
     {
         private string hint;
         private string[] splittedHints;

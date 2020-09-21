@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class CircularShape : DrawableShapes
+    public class CircularShape : DrawableShapes
     {
         Point startingPoint;
         

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Drawable_Shape_Extending_Classes
 {
-    class Vshape : DrawableShapes
+    public class Vshape : DrawableShapes
     {
         private Point centerPoint;
         private Point rightPoint;

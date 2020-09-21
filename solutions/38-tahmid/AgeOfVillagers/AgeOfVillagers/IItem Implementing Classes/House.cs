@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.IItem_Implementing_Classes
 {
-    class House : IItem
+    public class House : IItem
     {
         Point point;
         private Graphics graphics;

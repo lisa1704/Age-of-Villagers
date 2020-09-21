@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class DrawableShapeFactory
+    public class DrawableShapeFactory
     {
         public DrawableShapes GetDrawableShape(Graphics g, Pen pen, Point point,int startingAngle,int endingAngle, int height, int width, string hint)
         {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.FactoryClasses
 {
-    class ItemFactory
+    public class ItemFactory
     {
         public IItem GetItem(Point point,string hint,Graphics graphics,Pen pen)
         {

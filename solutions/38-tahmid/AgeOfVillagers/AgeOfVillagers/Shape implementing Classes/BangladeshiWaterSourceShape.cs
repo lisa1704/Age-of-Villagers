@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.IItem_implementing_Classes
 {
-    class BangladeshiWaterSourceShape : Shapes
+    public class BangladeshiWaterSourceShape : Shapes
     {
         Graphics graphics;
         Pen pen;

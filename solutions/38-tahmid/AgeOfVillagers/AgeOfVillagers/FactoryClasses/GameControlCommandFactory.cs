@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class GameControlCommandFactory
+    public class GameControlCommandFactory
     {
         public IGameControlCommand GetGameControlCommand(String hint, IGames game, Panel drawing_panel, Label village_name,string sVillageName)
         {

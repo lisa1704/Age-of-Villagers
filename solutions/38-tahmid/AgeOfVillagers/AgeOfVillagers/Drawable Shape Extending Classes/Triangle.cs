@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class Triangle : DrawableShapes
+    public class Triangle : DrawableShapes
     {
         private Point  rightPoint, topPoint;
         DrawableShapes rightLine,leftLine,baseLine;

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class Arc : DrawableShapes
+    public class Arc : DrawableShapes
     {
         Point start;
         Pen p;

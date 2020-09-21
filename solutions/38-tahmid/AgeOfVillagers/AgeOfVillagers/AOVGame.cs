@@ -75,6 +75,7 @@ namespace AgeOfVillagers
 
             if (saveFileDialog1.FileName != "")
             {
+
                 string json = objectToJson.serialize(currentState);
                 System.IO.File.WriteAllText(saveFileDialog1.FileName, json);
             }

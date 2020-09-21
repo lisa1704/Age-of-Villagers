@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Village_extended_classes
 {
-    class BangladeshiHouseShape : Shapes
+    public class BangladeshiHouseShape : Shapes
     {
         private Graphics g;
         private Pen pen;

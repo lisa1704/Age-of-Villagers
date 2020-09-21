@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class EgyptianWaterSourceShape : Shapes
+    public class EgyptianWaterSourceShape : Shapes
     {
         private Graphics graphics;
         private Pen pen;

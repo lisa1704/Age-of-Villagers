@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.IItem_Implementing_Classes
 {
-    class WaterSource : IItem
+    public class WaterSource : IItem
     {
         Point point;
         private Graphics graphics;

@@ -8,7 +8,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace AgeOfVillagers.Shape_extended_classes
 {
-    class BangladeshiTreeShape : Shapes
+    public class BangladeshiTreeShape : Shapes
     {
         private Graphics graphics;
         private Pen pen;

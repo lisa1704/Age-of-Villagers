@@ -7,7 +7,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Shape_implementing_Classes
 {
-    class ArabianHouseShape :Shapes
+    public class ArabianHouseShape :Shapes
     {
         private Graphics graphics;
         private Pen pen;

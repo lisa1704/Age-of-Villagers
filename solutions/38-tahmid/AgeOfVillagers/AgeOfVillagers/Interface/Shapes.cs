@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Interface
 {
-    interface Shapes
+    public interface Shapes
     {
         public void makeShape();
     }
