@@ -22,6 +22,12 @@ public class Nation {
             this.water_body = new Null_Water_Body();
             this.terrainColor = new Arab_Bedouin_TerrainColor();
         }
+        else if(nation_type == "Egyptian Kings"){
+            this.house = new Egyptian_Kings_House();
+            this.tree = new Egyptian_Kings_Tree();
+            this.water_body = new Egyptian_Kings_Waterbody();
+            this.terrainColor = new Egyptian_Kings_Terrain();
+        }
     }
 
     public ArrayList<Shape> drawHouse(double x, double y){
