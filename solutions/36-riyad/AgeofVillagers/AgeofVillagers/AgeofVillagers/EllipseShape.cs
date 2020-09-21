@@ -7,8 +7,8 @@ namespace AgeofVillagers
 {
     public class EllipseShape : CompositeShape
     {
-        private Point leftTop;
-        private Point rightBottom;
+        public Point leftTop;
+        public Point rightBottom;
 
         public EllipseShape(Point Left, Point Right)
         {

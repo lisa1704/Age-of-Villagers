@@ -7,8 +7,7 @@ namespace AgeofVillagers
 {
     public class RectangleShape : CompositeShape
     {
-        //private Point leftTop;
-        //private Point RightBottom;
+
 
         public RectangleShape(Point leftTop, Point RightBottom)
         {

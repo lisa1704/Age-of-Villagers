@@ -8,7 +8,7 @@ namespace AgeofVillagers
     public interface INation
     {
         string DrawHouse(Graphics g, Point p);
-        void DrawTree();
+        void DrawTree(Graphics g, Point p);
         void DrawWaterSource();
     }
 

@@ -10,14 +10,15 @@ namespace AgeofVillagers
         Pen pen = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point pt)
         {
-            BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y), new Point(pt.X - 50, pt.Y + 25), new Point(pt.X + 50, pt.Y + 60));
+            BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y), new Point(pt.X - 50, pt.Y + 25), new Point(pt.X + 50, pt.Y + 50));
             house.Paint(g, pen);
             return "KureGhor";
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
+            BangladeshiTree bdtree = new BangladeshiTree(pt);
+            bdtree.Paint(g, pen);
         }
 
         public void DrawWaterSource()
