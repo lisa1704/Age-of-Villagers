@@ -21,12 +21,11 @@ public class VillageView_controller implements Initializable {
     @FXML public ComboBox NationList = new ComboBox();
     @FXML private Pane DrawingCanvas;
     public String flag;
-    public INations nation;
+    public Nation nation;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NationList.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouins"),("Egyptian Kings"),("Inuit Hunters"));
-        nation = new Null_Nation();
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -115,8 +114,7 @@ public class VillageView_controller implements Initializable {
     }
 
     public void ChangeNation(ActionEvent actionEvent) {
-        NationFactory FNation = new NationFactory((String) NationList.getValue());
-        nation = FNation.createNation();
+        nation = new Nation((String) NationList.getValue());
         DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
     }
 }
