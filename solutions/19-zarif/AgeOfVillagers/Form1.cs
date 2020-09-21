@@ -109,8 +109,6 @@ namespace AgeOfVillagers
                     Treepoints.Add(tp);
 
                 }
-                
-
             }
             else if (WaterRadiobtn.Checked)
             {
@@ -139,13 +137,15 @@ namespace AgeOfVillagers
                 OpenVillageState opencommand = new OpenVillageState();
                
                 opencommand.Execute();
-
+                
                 _villagestate = opencommand.get_villageState();
+                Housepoints =  _villagestate._housePoints;
+                Waterpoints = _villagestate._WaterScPoints;
+                Treepoints = _villagestate._treePoints;
                 Form opennation = new OpenVillageNation(this,_villagestate,g,pen,DrawPanel);
 
 
-            DrawPanel.Invalidate();
-            DrawPanel.Refresh();
+            
             opennation.Show();
                
         }
