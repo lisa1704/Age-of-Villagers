@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    public abstract class WaterResource : IVillageItem
+    public class WaterResource : IVillageItem
     {
         private readonly Point point;
         public WaterResource(Point point)
@@ -15,7 +15,10 @@ namespace AgeOfVillagers
         {
             return point;
         }
-        public abstract CompositeShape getItemShape(Point point);
+        public virtual IShape getItemShape(Point point)
+        {
+            return new NullShape(point);
+        }
     }
 
     public class BangladeshiWaterResource : WaterResource
@@ -24,7 +27,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new BangladeshiWaterSourceShape(point);
         }
@@ -36,7 +39,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new EgyptianWaterSourceShape(point);
         }
@@ -48,7 +51,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new NoShape();
         }

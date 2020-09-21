@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    public abstract class Tree : IVillageItem
+    public class Tree : IVillageItem
     {
         private readonly Point point;
         public Tree(Point point)
@@ -15,7 +15,10 @@ namespace AgeOfVillagers
         {
             return point;
         }
-        public abstract CompositeShape getItemShape(Point point);
+        public virtual IShape getItemShape(Point point)
+        {
+            return new NullShape(point);
+        }
     }
 
     public class ArabTree : Tree
@@ -24,7 +27,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new ArabTreeShape(point);
         }
@@ -36,7 +39,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new BangladeshiTreeShape(point);
         }
@@ -48,19 +51,19 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new EgyptianTreeShape(point);
         }
     }
-
+    
     public class NoTree : Tree
     {
         public NoTree(Point point) : base(point)
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new NoShape();
         }

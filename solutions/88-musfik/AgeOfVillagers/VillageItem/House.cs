@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    public abstract class House : IVillageItem
+    public class House : IVillageItem
     {
         private readonly Point point;
         protected House(Point point)
@@ -14,7 +14,10 @@ namespace AgeOfVillagers
         {
             return point;
         }
-        public abstract CompositeShape getItemShape(Point point);
+        public virtual IShape getItemShape(Point point)
+        {
+            return new NullShape(point);
+        }
     }
 
 
@@ -24,7 +27,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new ArabHouseShape(point);
         }
@@ -36,7 +39,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new BangladeshiHouseShape(point);
         }
@@ -48,7 +51,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new EgyptianHouseShape(point);
         }
@@ -60,7 +63,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public override CompositeShape getItemShape(Point point)
+        public override IShape getItemShape(Point point)
         {
             return new InuitHuntersHouseShape(point);
         }
