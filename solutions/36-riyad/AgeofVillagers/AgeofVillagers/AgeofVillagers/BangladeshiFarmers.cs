@@ -8,8 +8,9 @@ namespace AgeofVillagers
     public class BangladeshiFarmers : INation
     {
         Pen pen = new Pen(Color.Green);
-        public string DrawHouse(Graphics g, Point p)
+        public string DrawHouse(Graphics g, Point pt)
         {
+           
             return "KureGhor";
         }
 
