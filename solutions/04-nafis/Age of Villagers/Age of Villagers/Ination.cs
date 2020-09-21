@@ -6,8 +6,8 @@ namespace Age_of_Villagers
 {
     interface INation
     {
-        void HouseDraw();
-        void TreeDraw();
-        void WaterSourceDraw();
+        IShape HouseDraw();
+        IShape TreeDraw();
+        IShape WaterSourceDraw();
     }
 }

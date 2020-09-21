@@ -4,21 +4,20 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    class BangladeshiFarmers:INation
+    class BangladeshiFarmers : INation
     {
-        public void HouseDraw()
+
+        IShape INation.HouseDraw()
         {
             throw new NotImplementedException();
         }
 
-
-        public void TreeDraw()
+        IShape INation.TreeDraw()
         {
             throw new NotImplementedException();
         }
 
-
-        public void WaterSourceDraw()
+        IShape INation.WaterSourceDraw()
         {
             throw new NotImplementedException();
         }
