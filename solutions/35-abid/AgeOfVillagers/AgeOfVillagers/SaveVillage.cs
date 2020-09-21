@@ -6,5 +6,9 @@ namespace AgeOfVillagers
 {
     class SaveVillage : IOpenSave
     {
+        public void execute()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
