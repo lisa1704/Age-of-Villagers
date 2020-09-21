@@ -26,6 +26,10 @@ namespace AgeOfVillagers.Factories
             {
                 return new ArabBedouin();
             }
+            if (nationName == "Inuit Hunters")
+            {
+                return new InuitHunters();
+            }
             return null;
         }
     }
