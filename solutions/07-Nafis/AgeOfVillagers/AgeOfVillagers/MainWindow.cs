@@ -21,15 +21,14 @@ namespace AgeOfVillagers
         string nation;
         Color background;
         VillageState village = new VillageState();
-        
+        NationBuilder builder = new NationBuilder();
+
         List<Point> houseLocations = new List<Point>();
         List<Point> treeLocations = new List<Point>();
         List<Point> waterLocation = new List<Point>();
 
         INations currentNation = new NoNation();
         Graphics g;
-
-        NationBuilder builder = new NationBuilder();
 
         public MainWindow()
         {
@@ -135,5 +134,7 @@ namespace AgeOfVillagers
         {
 
         }
+
+        
     }
 }

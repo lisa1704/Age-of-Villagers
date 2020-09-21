@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class NationBuilder
+    public class NationBuilder
     {
         public INations BuildNations(string text)
         {
