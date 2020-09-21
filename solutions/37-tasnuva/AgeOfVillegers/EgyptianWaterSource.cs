@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace AgeOfVillagers
 {
-	class BangladeshiWaterSource : IVillageItem
+	class EgyptianWaterSource : IVillageItem
 	{
 		public void Draw(Point e, Graphics g, Pen p)
-        {
+		{
 
-        }
+		}
 	}
 }
+
