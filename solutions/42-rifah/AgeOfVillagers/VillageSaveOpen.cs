@@ -14,5 +14,15 @@ namespace AgeOfVillagers
             public List<Point> Tree;
             public List<Point> WaterSource;
         }
+
+        public void saveMyVillage()
+        {
+
+        }
+
+        public void openMyVillage()
+        {
+
+        }
     }
 }
