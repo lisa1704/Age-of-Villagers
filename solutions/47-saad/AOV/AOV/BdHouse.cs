@@ -9,11 +9,16 @@ namespace AOV
 {
     class BdHouse : CompoundShape
     {
-        public BdHouse(Point head, Point x1,Point x3)
+        public BdHouse(Point clicked)
         {
-            x1.Y = x1.Y + 25;
-            addShape(new Rectangle(x1, x3));
-            addShape(new Triangle(head, x1, new Point(x3.X, x1.Y)));
+            int baseLine = clicked.Y + 8;
+
+            Point x1 = new Point(clicked.X - 8, baseLine);
+            Point x2 = new Point(clicked.X + 8, baseLine);
+            Point bottomRightCorner = new Point(clicked.X + 8, x2.Y + 8);
+
+            addShape(new Rectangle(x1, bottomRightCorner));
+            addShape(new Triangle(clicked, x1, x2));
         }
     }
 }

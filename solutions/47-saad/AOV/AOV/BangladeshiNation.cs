@@ -12,7 +12,7 @@ namespace AOV
         public void DrawHouse(Graphics g, Point p)
         {
             
-            BdHouse bdHouse=new BdHouse(new Point(p.X,p.Y),new Point(p.X-60,p.Y+30),new Point(p.X+60,p.Y+110));            
+            BdHouse bdHouse=new BdHouse(p);            
             bdHouse.draw(g);
         }
 
