@@ -61,5 +61,10 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Drawinpanel_mouse(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
