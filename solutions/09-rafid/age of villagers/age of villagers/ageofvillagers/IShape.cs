@@ -2,9 +2,9 @@
 
 namespace ageofvillagers
 {
-    public interface IShape
+    internal interface IShape
     {
-        INation getShape(string shapetype);
+        string draw(int x, int y);
     }
 
 

@@ -59,6 +59,9 @@
     <Compile Include="Gameform.Designer.cs">
       <DependentUpon>Gameform.cs</DependentUpon>
     </Compile>
+    <Compile Include="IShape.cs" />
+    <Compile Include="NationFactory.cs" />
+    <Compile Include="Shape.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

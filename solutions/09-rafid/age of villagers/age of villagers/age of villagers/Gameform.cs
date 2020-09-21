@@ -85,5 +85,12 @@ namespace age_of_villagers
         {
             return text;
         }
+
+        private void panel2_paint(object sender, PaintEventArgs e)
+        {
+            Shape nation = NationFactory.GetNation("currentNation");
+            IShape shape = nation.GetItem("currentselect");
+            shape.draw(Cursor.Position.X, Cursor.Position.Y);
+        }
     }
 }

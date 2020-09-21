@@ -2,12 +2,16 @@
 
 public class Bdtree : Tree
 {
-	public void CreateTree(int x, int y)
-    {
-        Circle bdtCircle = new Circle(x, y + 1, 8);
-        bdtCirlce.Draw_Shape();
+    private string drawing = "";
 
-        Rectangle bdtRectangle = new Rectangle(x + 1, y, x + 1, y - 12, x - 1, y - 12, x - 1, y);
-        bdtRectangle.Draw_Shape();
+    private string draw(int x, int y)
+    {
+        Circle c = new Cicrcle(x, y + 2, 8);
+        drawing += c.Draw();
+        Rectangle r = new Rectangle(x - 1, y, x + 1, y, x + 1, y - 12, x - 1,y - 12);
+        drawing += r.Draw();
+        return drawing;
+
     }
+	
 }
