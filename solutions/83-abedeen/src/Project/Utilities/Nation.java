@@ -1,4 +1,8 @@
 package Project.Utilities;
+import Project.Utilities.Factory.HouseFactory;
+import Project.Utilities.Factory.IAssetFactory;
+import Project.Utilities.Factory.TreeFactory;
+import Project.Utilities.Factory.WaterbodyFactory;
 import Project.Utilities.NationItems.*;
 import javafx.scene.shape.Shape;
 import java.util.ArrayList;
@@ -10,39 +14,35 @@ public class Nation {
     private INationColor terrainColor;
 
     public Nation(String nation_type){
-        if(nation_type == "Bangladeshi Farmers"){
-            this.house = new Bangladeshi_House();
-            this.tree = new Bangladeshi_Tree();
-            this.water_body = new Bangladeshi_Waterbody();
-            this.terrainColor = new BangladeshiFarmersColor();
+        IAssetFactory houseFactory = new HouseFactory();
+        IAssetFactory treeFactory = new TreeFactory();
+        IAssetFactory waterbodyFactory = new WaterbodyFactory();
+
+        house = (IHouse) houseFactory.CreateAsset(nation_type);
+        tree = (ITree) treeFactory.CreateAsset(nation_type);
+        water_body = (IWaterBody) waterbodyFactory.CreateAsset(nation_type);
+
+        ColorFactory(nation_type);
+
+    }
+    private void ColorFactory(String nationType){
+        if(nationType == "Bangladeshi Farmers"){
+            terrainColor = new BangladeshiFarmers();
         }
-        else if(nation_type == "Arab Bedouins"){
-            this.house = new Arab_Bedouin_House();
-            this.tree = new Arab_Bedouin_Tree();
-            this.water_body = new Null_Water_Body();
-            this.terrainColor = new Arab_Bedouin_TerrainColor();
+        else if(nationType == "Arab Bedouins"){
+            terrainColor = new Arab_Bedouin_Terrain();
         }
-        else if(nation_type == "Egyptian Kings"){
-            this.house = new Egyptian_Kings_House();
-            this.tree = new Egyptian_Kings_Tree();
-            this.water_body = new Egyptian_Kings_Waterbody();
-            this.terrainColor = new Egyptian_Kings_Terrain();
+        else if(nationType == "Egyptian Kings"){
+            terrainColor = new Egyptian_Kings_Terrain();
         }
-        else if(nation_type == "Inuit Hunters"){
-            this.house = new Inuit_Hunters_House();
-            this.tree = new Null_Tree();
-            this.water_body = new Null_Water_Body();
-            this.terrainColor = new Inuit_Hunters_Terrain();
+        else if(nationType == "Inuit Hunters"){
+            terrainColor = new Inuit_Hunters_Terrain();
         }
         else {
-            this.house = new Null_House();
-            this.tree = new Null_Tree();
-            this.water_body = new Null_Water_Body();
-            this.terrainColor = new Null_Color();
+            terrainColor = new Null_Color();
         }
 
     }
-
     public ArrayList<Shape> drawHouse(double x, double y){
         return this.house.drawAsset(x,y);
     }
