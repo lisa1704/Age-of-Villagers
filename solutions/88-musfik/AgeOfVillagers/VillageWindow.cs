@@ -82,7 +82,7 @@ namespace AgeOfVillagers
             else if (villageName.Length == 0)
             {
                 if(village != null)
-                    Village_name_textBox.Text = village.GetVillageName();
+                    Village_name_textBox.Text = villageName = village.GetVillageName();
                 else
                     villageName = null;
 
@@ -151,28 +151,28 @@ namespace AgeOfVillagers
 
         private void open_village_btn_Click(object sender, EventArgs e)
         {
-            if(nation == null)
+            try
             {
-                MessageBox.Show("Please select a nation first", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (openFileDialog.ShowDialog() == DialogResult.OK)
-            { 
-                if (openFileDialog.FileName.Trim() != string.Empty)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string jsonString = File.ReadAllText(openFileDialog.FileName);
-                    VillageState state = JsonConvert.DeserializeObject<VillageState>(jsonString);
-                    if(village == null)
-                        village = new Village("", nation);
-                    village.SetState(state);
-                    village.initiate(g, p);
-                    Village_name_textBox.Text = village.GetVillageName();
-                    openFileDialog.Dispose();
+                    if (openFileDialog.FileName.Trim() != string.Empty)
+                    {
+                        string jsonString = File.ReadAllText(openFileDialog.FileName);
+                        VillageState state = JsonConvert.DeserializeObject<VillageState>(jsonString);
+                        if (village == null)
+                            village = new Village("", nation);
+                        village.SetState(state);
+                        village.initiate(g, p);
+                        villageName = Village_name_textBox.Text = village.GetVillageName();
+                        openFileDialog.Dispose();
+                    }
                 }
-            }
-        }
 
-        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
-        {
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error occured while opening file\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
