@@ -33,7 +33,7 @@ namespace AgeOfVillagers
 
         IGames game;
 
-        List<IItem> itemList;
+        State gameState;
         Label l;
 
         
@@ -78,6 +78,7 @@ namespace AgeOfVillagers
                 MessageBox.Show(Constants.saving_invalid_message);
                 return;
             }
+
             game = gameFactory.getGame();
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, drawnItemsInfosList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
@@ -103,8 +104,8 @@ namespace AgeOfVillagers
             
             GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.NEW_KEY, game, drawing_panel, village_name_label,villageName_inputField.Text);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
-            gameKeyInvoker.click();
-            drawnItemsInfosList = new List<DrawnItemsInformation>();
+            gameState=gameKeyInvoker.click();
+            drawnItemsInfosList = gameState.DrawnItemsInformationList;
             
 
 

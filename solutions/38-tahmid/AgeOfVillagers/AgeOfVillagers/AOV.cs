@@ -23,11 +23,11 @@ namespace AgeOfVillagers
 
         
 
-        public State createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
+        public State createVillage(Panel drawing_panel, Label village_name,string villageName_value)
         {
-            village_name.Text = sVillageName;
+            village_name.Text = villageName_value;
             drawing_panel.Invalidate();
-
+            gameState= new State { VillageName = villageName_value, DrawnItemsInformationList = new List<DrawnItemsInformation>() };
             return gameState;
         }
 
