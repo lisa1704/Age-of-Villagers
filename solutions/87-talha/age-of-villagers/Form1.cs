@@ -31,5 +31,15 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Tree_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void House_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,11 +31,13 @@
             this.Save_village = new System.Windows.Forms.Button();
             this.New_village = new System.Windows.Forms.Button();
             this.Open_village = new System.Windows.Forms.Button();
+            this.Tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // Save_village
             // 
-            this.Save_village.Location = new System.Drawing.Point(651, 91);
+            this.Save_village.Location = new System.Drawing.Point(663, 275);
             this.Save_village.Name = "Save_village";
             this.Save_village.Size = new System.Drawing.Size(75, 23);
             this.Save_village.TabIndex = 0;
@@ -45,7 +47,7 @@
             // 
             // New_village
             // 
-            this.New_village.Location = new System.Drawing.Point(651, 62);
+            this.New_village.Location = new System.Drawing.Point(628, 304);
             this.New_village.Name = "New_village";
             this.New_village.Size = new System.Drawing.Size(75, 23);
             this.New_village.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // Open_village
             // 
-            this.Open_village.Location = new System.Drawing.Point(651, 120);
+            this.Open_village.Location = new System.Drawing.Point(709, 304);
             this.Open_village.Name = "Open_village";
             this.Open_village.Size = new System.Drawing.Size(75, 23);
             this.Open_village.TabIndex = 2;
@@ -63,17 +65,44 @@
             this.Open_village.UseVisualStyleBackColor = true;
             this.Open_village.Click += new System.EventHandler(this.Open_village_Click);
             // 
+            // Tree
+            // 
+            this.Tree.AutoSize = true;
+            this.Tree.Location = new System.Drawing.Point(628, 103);
+            this.Tree.Name = "Tree";
+            this.Tree.Size = new System.Drawing.Size(47, 17);
+            this.Tree.TabIndex = 3;
+            this.Tree.TabStop = true;
+            this.Tree.Text = "Tree";
+            this.Tree.UseVisualStyleBackColor = true;
+            this.Tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
+            // 
+            // House
+            // 
+            this.House.AutoSize = true;
+            this.House.Location = new System.Drawing.Point(618, 80);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(56, 17);
+            this.House.TabIndex = 4;
+            this.House.TabStop = true;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.House);
+            this.Controls.Add(this.Tree);
             this.Controls.Add(this.Open_village);
             this.Controls.Add(this.New_village);
             this.Controls.Add(this.Save_village);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,6 +111,8 @@
         private System.Windows.Forms.Button Save_village;
         private System.Windows.Forms.Button New_village;
         private System.Windows.Forms.Button Open_village;
+        private System.Windows.Forms.RadioButton Tree;
+        private System.Windows.Forms.RadioButton House;
     }
 }
 
