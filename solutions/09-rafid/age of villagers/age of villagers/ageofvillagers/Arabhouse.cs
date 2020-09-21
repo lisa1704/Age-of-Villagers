@@ -4,9 +4,10 @@ public class Arabhouse
 {
     public void CreateHouse(int x, int y)
     {
-        //Triangle(x - 12, y, x, y + 8, x + 12, y);
-        //t.Draw();
-        //new Rectangle(x - 12, y, x + 12, y, x + 12, y - 12, x - 12, y - 12);
-        //r.Draw();
+        Triangle arabh_triangle = new Triangle(x, y, x - 8, y, x - 4, y + 12);
+        arabh_triangle.Draw_Shape();
+
+        Rectangle arabh_rectangle = new Rectangle(x, y, x + 8, y + 4, x, y + 16, x - 4, y + 12);
+        arabh_rectangle.Draw_Shape();
     }
 }
