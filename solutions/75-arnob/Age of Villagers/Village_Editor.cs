@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,13 @@ namespace Age_of_Villagers
 
         private void Save_Village_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter write = new StreamWriter(File.Create(save.FileName));
+                write.Write(Village.Text);
+                write.Dispose();
+            }
         }
 
         private void Open_Village_Click(object sender, EventArgs e)
