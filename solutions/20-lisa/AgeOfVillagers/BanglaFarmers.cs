@@ -9,6 +9,8 @@ namespace AgeOfVillagers
     class BanglaFarmers : INation
     {
         Pen pen = new Pen(Color.Green);
+        private string vName;
+
         public void DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
@@ -25,6 +27,11 @@ namespace AgeOfVillagers
             throw new NotImplementedException();
         }
 
+        public string GetVillageName()
+        {
+            return vName;
+        }
+
         public Color SetTerrain()
         {
             throw new NotImplementedException();
@@ -32,12 +39,13 @@ namespace AgeOfVillagers
 
         public void SetVillageName(string vName)
         {
-            throw new NotImplementedException();
+            this.vName = vName;
         }
 
         public void SetWaterSource()
         {
             throw new NotImplementedException();
         }
+
     }
 }

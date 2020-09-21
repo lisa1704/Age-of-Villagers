@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Text;
 
 namespace AgeOfVillagers
 {
-    public interface IShape
+    public class BanglaWaterSource: CompositeShape
     {
-        void Draw(Graphics graphics,Pen pen);
     }
 }

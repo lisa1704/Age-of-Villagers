@@ -5,8 +5,11 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public interface IShape
+    public class BanglaHouse : CompositeShape
     {
-        void Draw(Graphics graphics,Pen pen);
+        public BanglaHouse(Point p)
+        {
+            
+        }
     }
 }
