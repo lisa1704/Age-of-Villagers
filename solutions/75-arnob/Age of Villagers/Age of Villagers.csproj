@@ -65,6 +65,7 @@
     <Compile Include="Nation_Factory_Creator\Egyptian_Creator.cs" />
     <Compile Include="Nation\Egyptian_King.cs" />
     <Compile Include="Shape\EllipseShape.cs" />
+    <Compile Include="Village.cs" />
     <Compile Include="Village_Editor.cs">
       <SubType>Form</SubType>
     </Compile>
