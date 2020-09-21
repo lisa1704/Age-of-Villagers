@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
     public class ArabBedouin : INation
     {
@@ -40,9 +40,22 @@ namespace WindowsFormsApp1_Test
         {
             return Color.YellowGreen;
         }
+        
+
         public string NationName()
         {
             return "Arab Bedouin";
+        }
+    }
+    interface ITerrain
+    {
+        void draw();
+    }
+    class ArabBedouinTerrain : ITerrain
+    {
+        public void draw()
+        {
+            
         }
     }
 }

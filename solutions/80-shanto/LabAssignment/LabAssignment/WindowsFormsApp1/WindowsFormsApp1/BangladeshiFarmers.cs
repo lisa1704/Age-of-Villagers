@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
     public class BangladeshiFarmers : INation
     {

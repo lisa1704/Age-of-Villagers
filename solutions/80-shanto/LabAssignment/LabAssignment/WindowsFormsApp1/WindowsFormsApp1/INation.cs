@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
     public interface INation
     {
@@ -14,6 +14,7 @@ namespace WindowsFormsApp1_Test
         void DrawTree(MouseEventArgs e);
         void DrawWaterSource(MouseEventArgs e);
         //string villageName();
+        Color drawcolor();
     }
 
 

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
     class InutHuntersHouse : IHouse
     {

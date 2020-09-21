@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
      public class NationFactory
     {
@@ -61,6 +61,11 @@ namespace WindowsFormsApp1_Test
         {
             INation nation = nationFactory.GetNation(Nation);
             nation.DrawWaterSource(e);
+        }
+        public Color drawcolor()
+        {
+            INation nation = nationFactory.GetNation(Nation);
+            return nation.drawcolor();
         }
 
     }

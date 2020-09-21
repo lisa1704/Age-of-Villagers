@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using System.Windows;
-namespace WindowsFormsApp1_Test
+namespace WindowsFormsApp1
 {
     [TestClass]
     public class UnitTest1

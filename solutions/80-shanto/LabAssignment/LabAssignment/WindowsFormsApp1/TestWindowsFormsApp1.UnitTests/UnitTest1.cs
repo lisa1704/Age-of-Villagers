@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WindowsFormsApp1_Test;
+using WindowsFormsApp1;
 using System.Drawing;
 
 namespace TestWindowsFormsApp1.UnitTests
