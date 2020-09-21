@@ -1,5 +1,10 @@
 package Project.Utilities.Factory;
 
-public interface IAssetFactory {
+import Project.Utilities.NationItems.IAsset;
+import javafx.scene.shape.Shape;
 
+import java.util.ArrayList;
+
+public interface IAssetFactory {
+    IAsset CreateAsset(String nationType);
 }
