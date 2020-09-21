@@ -1,6 +1,6 @@
-﻿using System;
-
-public class InuitFactory
+﻿namespace ageOfVillagers
 {
-	
+    internal class InuitFactory : Shape
+    {
+    }
 }

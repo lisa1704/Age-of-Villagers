@@ -1,6 +1,6 @@
-﻿using System;
-
-public class ArabFactory
+﻿namespace ageOfVillagers
 {
-	
+    internal class ArabFactory : Shape
+    {
+    }
 }
