@@ -31,7 +31,7 @@ namespace AgeOfVillagers
             }
             else if (nationtype == "Egyptian King")
             {
-                nation = new EgyptianKing();
+                nation = new EgyptianKing(point);
             }
             else if (nationtype == "Inuit Hunter")
             {
