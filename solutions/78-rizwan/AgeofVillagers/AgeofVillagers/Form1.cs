@@ -22,7 +22,7 @@ namespace AgeofVillagers
 
         private void newvillage_Click(object sender, EventArgs e)
         {
-            //Form1.Refresh();
+            Refresh();
         }
 
         private void button6_Click(object sender, EventArgs e)

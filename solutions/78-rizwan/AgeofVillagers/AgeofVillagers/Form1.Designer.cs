@@ -84,6 +84,7 @@
             this.newvillage.TabIndex = 8;
             this.newvillage.Text = "New Village";
             this.newvillage.UseVisualStyleBackColor = true;
+            this.newvillage.Click += new System.EventHandler(this.newvillage_Click);
             // 
             // textBox2
             // 
