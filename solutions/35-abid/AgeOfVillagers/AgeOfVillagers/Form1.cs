@@ -15,8 +15,10 @@ namespace AgeOfVillagers
         Pen pen = new Pen(Color.Black);
         //int x, y;
         Graphics g;
-        //Brush brush = new SolidBrush(Color.Black);
-        //string text = "";
+        public List<Point> HousePoints { get; set; } = new List<Point>();
+        public List<Point> TreePoints { get; set; } = new List<Point>();
+        public List<Point> WatersrcPoints { get; set; } = new List<Point>();
+
         string chosen_nation = "";
         string chosen_component = "";
         NationFactory NF;
@@ -67,14 +69,17 @@ namespace AgeOfVillagers
             if (chosen_component == "tree")
             {
                 nation.drawtree(p);
+                TreePoints.Add(p);
             }
             if (chosen_component == "house")
             {
                 nation.drawhouse(p);
+                HousePoints.Add(p);
             }
             if (chosen_component == "watersrc")
             {
                 nation.drawwatersrc(p);
+                WatersrcPoints.Add(p);
             }
         }
 
