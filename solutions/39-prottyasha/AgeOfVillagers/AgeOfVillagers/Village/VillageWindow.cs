@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Save;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,8 +58,9 @@ namespace AgeOfVillagers
         }
         private void btn_saveVillage_Click(object sender, EventArgs e)
         {
-            SaveVillageForm svf = new SaveVillageForm();
-            svf.Show();
+            //SaveVillageForm svf = new SaveVillageForm();
+            //svf.Show();
+            SaveVillage sv = new SaveVillage(vill);
         }
 
         public void SaveState(string selected_nation, string selected_component, Point p)
