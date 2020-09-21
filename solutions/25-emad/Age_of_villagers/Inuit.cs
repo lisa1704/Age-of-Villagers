@@ -9,33 +9,33 @@ namespace Age_of_villagers
 {
     class Inuit : INations
     {
-        
+        Color bg_color = Color.White;
 
-        public string DrawHouse(Graphics graphics, Point point)
+        public void DrawHouse(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
         public Color DrawBackground()
         {
-            throw new NotImplementedException();
+            return bg_color;
         }
 
        
 
-        public string DrawTree(Graphics graphics, Point point)
+        public void DrawTree(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
        
 
-        public string DrawWaterSource(Graphics graphics, Point point)
+        public void DrawWaterSource(Graphics graphics, Point point)
         {
             throw new NotImplementedException();
         }
 
-        public string getName()
+        public void getName()
         {
             throw new NotImplementedException();
         }

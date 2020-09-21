@@ -42,6 +42,7 @@
             // 
             // panel
             // 
+            this.panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel.Location = new System.Drawing.Point(3, 2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(600, 400);
@@ -131,9 +132,9 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
-            "Egyptian King",
+            "Egyptian Kings",
             "Arab Bedouin",
-            "Inuit Hunter"});
+            "Inuit Hunters"});
             this.comboBox1.Location = new System.Drawing.Point(659, 120);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
@@ -151,6 +152,7 @@
             // 
             // Form1
             // 
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(949, 441);
             this.Controls.Add(this.Villagename);
             this.Controls.Add(this.comboBox1);
@@ -163,6 +165,7 @@
             this.Controls.Add(this.Age_of_Villagers);
             this.Controls.Add(this.panel);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

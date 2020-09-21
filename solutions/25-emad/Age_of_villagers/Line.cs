@@ -12,5 +12,10 @@ namespace Age_of_villagers
          Point p1;
          Point p2;
 
+        public void Draw(Graphics g, Pen p)
+        {
+            throw new NotImplementedException();
+        }
     }
+    
 }

@@ -35,6 +35,9 @@ namespace Age_of_villagers
             return Color.Empty;
         }
 
-        
+        public Color DrawBackground()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

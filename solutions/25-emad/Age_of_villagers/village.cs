@@ -9,8 +9,8 @@ namespace Age_of_villagers
     public class Village
     {
         public INations village;
-        public Village() { }
-        public INations GetVillage(string villageType)
+        
+        public INations CheckVillage(string villageType)
         {
             if (villageType == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
@@ -25,7 +25,7 @@ namespace Age_of_villagers
                 return new Inuit();
 
             else
-                return new NullvalueHandler();
+                return new NullValuesHandler();
         }
     }
 }
