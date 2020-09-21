@@ -117,11 +117,21 @@ namespace AgeOfVillagers
 
         private void new_village_btn_Click(object sender, EventArgs e)
         {
-            if (villageName != null && nation != null)
+            try
             {
-                village = new Village(villageName, nation);
-                village.initiate(g, p);
+                if (villageName != null)
+                {
+                    village = new Village(villageName, nation);
+                    village.initiate(g, p);
+                }
+                else
+                    MessageBox.Show("Valid village name required to create new village ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error occured!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void save_village_btn_Click(object sender, EventArgs e)
@@ -139,9 +149,7 @@ namespace AgeOfVillagers
                     }
                 }
                 else
-                {
                     MessageBox.Show("No village to save. Create new village first ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
             catch(Exception ex)
             {
@@ -167,12 +175,12 @@ namespace AgeOfVillagers
                         openFileDialog.Dispose();
                     }
                 }
-
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error occured while opening file\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
