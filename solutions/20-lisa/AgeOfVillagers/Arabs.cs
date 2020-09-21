@@ -8,15 +8,18 @@ namespace AgeOfVillagers
     class Arabs : INation
     {
         private string vName;
+        Pen pen = new Pen(Color.Black);
 
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            ArabHouse arabHouse = new ArabHouse(point);
+            arabHouse.Draw(graphics,pen);
         }
 
         public void DrawTree(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            ArabTree arabTree = new ArabTree(point);
+            arabTree.Draw(graphics, pen);
         }
 
         public void DrawWaterSource(Graphics graphics, Point point)
