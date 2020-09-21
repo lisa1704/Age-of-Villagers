@@ -11,10 +11,7 @@ namespace AgeOfVillagers
     {
         public void Draw_House(Graphics g, Point p)
         {
-            Point top = new Point(p.X, p.Y);
-            Point topleft = new Point(p.X - 70, p.Y + 40);
-            Point bottomright = new Point(p.X + 70, p.Y + 120);
-            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(top, topleft, bottomright);
+            BangladeshiFarmersHouse house = new BangladeshiFarmersHouse(p);
             house.Draw_Shape(g);
         }
 
