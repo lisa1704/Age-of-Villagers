@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         private Point _point;
 
