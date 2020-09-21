@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace AgeOfVillagers
 {
@@ -16,7 +18,17 @@ namespace AgeOfVillagers
         int x;
         int y;
         string text;
-        string nation = " ";
+        string nation;
+        Color background;
+        VillageState village = new VillageState();
+        
+
+       
+
+        List<Point> houseLocations = new List<Point>();
+        List<Point> treeLocations = new List<Point>();
+        List<Point> waterLocation = new List<Point>();
+
         INations currentNation = new NoNation();
         Graphics g;
 
@@ -38,14 +50,18 @@ namespace AgeOfVillagers
 
             if(text == "TREE")
             {
+                treeLocations.Add(e.Location);
                 currentNation.DrawTree(e.X, e.Y, g);
             }
             else if(text == "HOUSE")
             {
+                houseLocations.Add(e.Location);
                 currentNation.DrawHouse(e.X, e.Y, g);
+                
             }
             else
             {
+                waterLocation.Add(e.Location);
                 currentNation.DrawWater(e.X, e.Y, g);
             }
 
@@ -71,8 +87,10 @@ namespace AgeOfVillagers
         {
             nation = nationTypeCombo.Text;
             currentNation = builder.BuildNations(nation);
+            background = currentNation.SetColor();
+            drawingAreaPanel.BackColor = background;
 
-            if(nation == "Bangladeshi Farmers")
+            /*if(nation == "Bangladeshi Farmers")
             {
                 drawingAreaPanel.BackColor = Color.Green;
             }
@@ -94,17 +112,22 @@ namespace AgeOfVillagers
 
             else
             {
-                drawingAreaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            }
+                drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            }*/
 
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
             drawingAreaPanel.Refresh();
-            drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            //drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
             nationTypeCombo.SelectedItem = null;
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

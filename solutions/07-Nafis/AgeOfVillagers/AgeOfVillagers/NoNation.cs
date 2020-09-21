@@ -23,6 +23,11 @@ namespace AgeOfVillagers
             ShowError();
         }
 
+        public Color SetColor()
+        {
+            return Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+        }
+
         private void ShowError()
         {
             MessageBox.Show("Please select a Nation.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

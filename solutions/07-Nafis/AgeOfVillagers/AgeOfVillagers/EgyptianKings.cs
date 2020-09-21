@@ -8,6 +8,7 @@ namespace AgeOfVillagers
     class EgyptianKings : INations
     {
         Pen pen = new Pen(Color.Black);
+        MainWindow mw = new MainWindow();
         
         public void DrawHouse(int x, int y, Graphics g)
         {
@@ -33,6 +34,11 @@ namespace AgeOfVillagers
         public void DrawWater(int x, int y, Graphics g)
         {
             g.DrawArc(pen, x - 6, y - 6, 12, 12, 0, 360);
+        }
+
+        public Color SetColor()
+        {
+            return Color.Yellow;
         }
     }
 }

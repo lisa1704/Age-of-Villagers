@@ -10,6 +10,7 @@ namespace AgeOfVillagers
     {
 
         Pen pen = new Pen(Color.Black);
+        MainWindow mw = new MainWindow();
         
         public void DrawHouse(int x, int y, Graphics g)
         {
@@ -40,6 +41,11 @@ namespace AgeOfVillagers
         public void DrawWater(int x, int y, Graphics g)
         {
             g.DrawLine(pen, new Point(10, 10), new Point(10, 10));
+        }
+
+        public Color SetColor()
+        {
+            return Color.LightYellow;
         }
     }
 }

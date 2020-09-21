@@ -9,6 +9,7 @@ namespace AgeOfVillagers
     {
         
         Pen pen = new Pen(Color.Black, 1);
+        MainWindow mw = new MainWindow();
 
         public void DrawHouse(int x, int y, Graphics g)
         {
@@ -43,5 +44,9 @@ namespace AgeOfVillagers
 
         }
 
+        public Color SetColor()
+        {
+            return Color.Green;
+        }
     }
 }
