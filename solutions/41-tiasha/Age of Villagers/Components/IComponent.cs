@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    interface IComponent
+    public interface IComponent
     {  
         void Draw(Graphics g);
 
