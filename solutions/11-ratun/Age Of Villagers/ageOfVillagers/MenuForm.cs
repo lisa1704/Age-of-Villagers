@@ -34,6 +34,7 @@ namespace ageOfVillagers
         public void Nation_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(Nation.Text);
+            currentNationName = Nation.Text;
         }
 
         public void button1_Click(object sender, EventArgs e)
