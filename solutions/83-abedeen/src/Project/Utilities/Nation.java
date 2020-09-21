@@ -1,9 +1,6 @@
 package Project.Utilities;
 
-import Project.Utilities.NationItems.Bangladeshi_House;
-import Project.Utilities.NationItems.Bangladeshi_Tree;
-import Project.Utilities.NationItems.IHouse;
-import Project.Utilities.NationItems.ITree;
+import Project.Utilities.NationItems.*;
 import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
@@ -11,6 +8,7 @@ import java.util.ArrayList;
 public class Nation {
     private IHouse house;
     private ITree tree;
+    private IWaterBody water_body;
 
     public Nation(String nation_type){
         if(nation_type == "Bangladeshi Farmers"){
@@ -22,7 +20,6 @@ public class Nation {
     public ArrayList<Shape> drawHouse(double x, double y){
         return this.house.drawHouse(x,y);
     }
-    public ArrayList<Shape> drawTree(double x, double y){
-        return this.tree.drawTree(x,y);
-    }
+    public ArrayList<Shape> drawTree(double x, double y){ return this.tree.drawTree(x,y); }
+    public ArrayList<Shape> drawWaterBody(double x, double y){ return this.water_body.drawWaterBody(x,y); }
 }

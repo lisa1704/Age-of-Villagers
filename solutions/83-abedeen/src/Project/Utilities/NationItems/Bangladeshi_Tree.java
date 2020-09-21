@@ -9,6 +9,7 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class Bangladeshi_Tree implements ITree{
+    public Bangladeshi_Tree(){ super();}
     @Override
     public ArrayList<Shape> drawTree(double x, double y) {
         ArrayList<Shape> tree = new ArrayList<Shape>();
