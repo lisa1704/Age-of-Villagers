@@ -21,7 +21,7 @@ namespace AgeofVillagers
             bdtree.Paint(g, pen);
         }
 
-        public void DrawWaterSource()
+        public void DrawWaterSource(Graphics g, Point mid)
         {
             throw new NotImplementedException();
         }
