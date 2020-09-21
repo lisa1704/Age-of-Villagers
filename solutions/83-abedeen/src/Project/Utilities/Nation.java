@@ -28,6 +28,13 @@ public class Nation {
             this.water_body = new Egyptian_Kings_Waterbody();
             this.terrainColor = new Egyptian_Kings_Terrain();
         }
+        else if(nation_type == "Inuit Hunters"){
+            this.house = new Inuit_Hunters_House();
+            this.tree = new Null_Tree();
+            this.water_body = new Null_Water_Body();
+            this.terrainColor = new Inuit_Hunters_Terrain();
+        }
+
     }
 
     public ArrayList<Shape> drawHouse(double x, double y){
