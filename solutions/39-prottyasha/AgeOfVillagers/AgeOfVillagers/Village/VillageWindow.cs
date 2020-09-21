@@ -16,6 +16,7 @@ namespace AgeOfVillagers
         Pen pen = new Pen(Color.Black);
         public string selected_nation = "";
         public string selected_component = "";
+        Village vill = new Village();
         
         //abstract factory implement
         AbstractNation nation;
@@ -28,32 +29,8 @@ namespace AgeOfVillagers
             g = DrawingPanel.CreateGraphics();
         }
 
-        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void SidePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-                
-        private void btn_saveVillage_Click(object sender, EventArgs e)
-        {
-            //SaveVillageForm svf = new SaveVillageForm();
-            //svf.Show();
-        }
-
-        private void btn_openVillage_Click(object sender, EventArgs e)
-        {
-            //OpenVillageForm ovf = new OpenVillageForm();
-            //ovf.Show();
-        }
-
-        private void btn_newVillage_Click(object sender, EventArgs e)
-        {
-            DrawingPanel.Invalidate();
-            g.Clear(DrawingPanel.BackColor);
-        }
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e) { }
+        private void SidePanel_Paint(object sender, PaintEventArgs e) { }
 
         private void rbtn_house_CheckedChanged(object sender, EventArgs e)
         {
@@ -78,6 +55,41 @@ namespace AgeOfVillagers
                 selected_component = "water_source";
             }
         }
+        private void btn_saveVillage_Click(object sender, EventArgs e)
+        {
+            SaveVillageForm svf = new SaveVillageForm();
+            svf.Show();
+        }
+
+        public void SaveState(string selected_nation, string selected_component, Point p)
+        {
+            vill.nation = selected_nation;
+            if (selected_component== "tree")
+            {
+                vill.trees_drawn.Add(p);
+            }
+            if (selected_component == "house")
+            {
+                vill.houses_drawn.Add(p);
+            }
+            if (selected_component == "water_source")
+            {
+                vill.rivers_drawn.Add(p);
+            }
+        }
+
+        private void btn_openVillage_Click(object sender, EventArgs e)
+        {
+            //OpenVillageForm ovf = new OpenVillageForm();
+            //ovf.Show();
+        }
+
+        private void btn_newVillage_Click(object sender, EventArgs e)
+        {
+            DrawingPanel.Invalidate();
+            g.Clear(DrawingPanel.BackColor);
+            vill = new Village();
+        }
 
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,6 +97,7 @@ namespace AgeOfVillagers
             nf = new NationFactory();
             nation = nf.getNation(selected_nation); 
             nation.setBgColor(g);
+            vill = new Village();
 
             if (selected_nation == "Arab Bedouins")
             {
@@ -123,7 +136,7 @@ namespace AgeOfVillagers
                 IComponent component;
                 component = nation.getComponent(selected_component);
                 component.draw(p, g, pen);
-                               
+                this.SaveState(selected_component, selected_nation, p);               
             }
         }
     }
