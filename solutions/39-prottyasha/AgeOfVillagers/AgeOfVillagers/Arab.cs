@@ -16,6 +16,7 @@ namespace AgeOfVillagers
             {
                 return new ArabHouse();
             }
+            return null;
 
         }
     }
