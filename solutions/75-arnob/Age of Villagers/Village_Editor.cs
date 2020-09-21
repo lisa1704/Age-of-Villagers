@@ -12,6 +12,12 @@ namespace Age_of_Villagers
 {
     public partial class Village_Editor_Window : Form
     {
+
+        Village savepoints;
+
+        List<Point> house_point { get; set; } = new List<Point>();
+        List<Point> tree_point { get; set; } = new List<Point>();
+        List<Point> water_point { get; set; } = new List<Point>();
         public Village_Editor_Window()
         {
             InitializeComponent();
@@ -25,6 +31,11 @@ namespace Age_of_Villagers
         private void drawing_space_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Nation_Type(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
 
@@ -56,12 +67,6 @@ namespace Age_of_Villagers
         private void WaterSource_Clicked(object sender, EventArgs e)
         {
 
-        }
-
-
-        private void Nation_Type(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
 
