@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -33,9 +33,10 @@ namespace AgeOfVillager
         {
             MessageBox.Show("Bedouin villages do not build their own water source");
         }
-        public void setColor()
+        public Color setColor()
         {
             form.BackColor = Color.FromArgb(210, 213, 24);
+            return form.BackColor;
         }
     }
 }

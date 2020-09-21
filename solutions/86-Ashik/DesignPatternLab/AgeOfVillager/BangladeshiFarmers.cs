@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -34,9 +34,10 @@ namespace AgeOfVillager
             BDFarmersWaterSource bDFarmersWaterSource = new BDFarmersWaterSource(g);
             bDFarmersWaterSource.draw(e);
         }
-        public void setColor()
+        public Color setColor()
         {
             form.BackColor = Color.FromArgb(70, 209, 0);
+            return form.BackColor;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -32,9 +32,10 @@ namespace AgeOfVillager
         {
             MessageBox.Show("Relies on natural water sources so it is not possible to place water sources");
         }
-        public void setColor()
+        public Color setColor()
         {
             form.BackColor = Color.FromArgb(246, 246, 236);
+            return form.BackColor;
         }
     }
 }

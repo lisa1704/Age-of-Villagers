@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class EgyptianKings : INation
+    public class EgyptianKings : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -34,9 +34,10 @@ namespace AgeOfVillager
             EgyptianKingsWaterSource egyptianKingsWaterSource = new EgyptianKingsWaterSource(g);
             egyptianKingsWaterSource.draw(e);
         }
-        public void setColor()
+        public Color setColor()
         {
             form.BackColor = Color.FromArgb(250, 253, 2);
+            return form.BackColor;
         }
     }
 }

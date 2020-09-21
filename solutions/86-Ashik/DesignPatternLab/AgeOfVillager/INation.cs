@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,6 +12,6 @@ namespace AgeOfVillager
         void drawTree(MouseEventArgs e);
         void drawHouse(MouseEventArgs e);
         void drawWaterSource(MouseEventArgs e);
-        void setColor();
+        Color setColor();
     }
 }
