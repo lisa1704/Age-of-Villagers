@@ -8,24 +8,26 @@ namespace AgeOfVillagers
 {
     class Circle : IShape
     {
-        //private Point point;
-        private int x;
-        private int y;
+
+        private Point point;
         private int h;
         private int w;
+        int startAngle = 0;
+        int sweepAngle = 360;
 
-        public Circle(int x, int y, int h, int w)
+
+        public Circle(Point point, int h, int w)
         {
-            //this.point = point;
+            this.point = point;
             this.h = h;
-            this.x = x;
-            this.y = y;
             this.w = w;
+                        
         }
+
         public void draw(Pen pen, Graphics graphics)
         {
-            graphics.DrawEllipse(pen, x, y, h, w);
-            
+            Rectangle rectangle = new Rectangle(point.X, point.Y, w, h);
+            graphics.DrawEllipse(pen, rectangle);
         }
     }
 }

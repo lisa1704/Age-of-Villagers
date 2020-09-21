@@ -6,6 +6,10 @@ namespace AgeOfVillagers
 {
 	public class ArabBeduin : INation
 	{
+        public ArabBeduin(Point point)
+        {
+
+        }
         //private Panel drawingBoard;
         public IShape DrawHouse(Point p)
         {

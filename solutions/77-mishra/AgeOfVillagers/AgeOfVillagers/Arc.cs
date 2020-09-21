@@ -7,9 +7,7 @@ namespace AgeOfVillagers
 {
     class Arc : IShape
     {
-        //private Point point;
-        private int x;
-        private int y;
+        private Point point;
         private int h;
         private int w;
         private int startAngle;
@@ -17,16 +15,19 @@ namespace AgeOfVillagers
 
         public Arc(Point point, int h, int w, int startAngle, int sweepAngle)
         {
-            //this.point = point;
+            this.point = point;
             this.h = h;
             this.w = w;
             this.startAngle = startAngle;
             this.sweepAngle = sweepAngle;
         }
+
+
+
         public void draw(Pen pen, Graphics graphics)
         {
-            //Rectangle shape = new Rectangle(point.X, point.Y, h, w);
-            graphics.DrawArc(pen, x, y, h, w, startAngle, sweepAngle);
+            Rectangle rectangle = new Rectangle(point.X, point.Y, point)
         }
+            
     }
 }

@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     public class BdFarmer : INation
     {
+        private Point point;
+        public BdFarmer(Point point)
+        {
+            this.point = point;
+        }
         //private Panel drawingBoard;
         
         public IShape DrawHouse(Point point)

@@ -5,12 +5,14 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Rectangle : CompositeShapes
+    class Rectangleshape : CompositeShapes
     {
-        private Point p1;
+        /*private Point p1;
         private Point p2;
-        private Point p3, p4;
-        public Rectangle(Point p1, Point p2, Point p3, Point p4)
+        private Point p3;
+        private Point p4;*/
+
+        public Rectangleshape(Point p1, Point p2, Point p3, Point p4)
         {
 
 

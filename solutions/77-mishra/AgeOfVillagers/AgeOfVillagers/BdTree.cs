@@ -6,16 +6,16 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class BdTree : IShape
+    public class BdTree : CompositeShapes
     {
         public BdTree(Point point)
         {
-            
+            Point point1 = point;
+            Point point2 = new Point(point1.X + 8, point1.Y + 16);
+            Point point3 = new Point(point1.X + 8, point1.Y + 40);
+            addshapes(new Line(point2, point3));
+            addshapes(new Circle(point1, 16, 16));
         }
-        public void draw(Pen pen, Graphics graphics)
-        {
-
-           
-        }
+        
     }
 }
