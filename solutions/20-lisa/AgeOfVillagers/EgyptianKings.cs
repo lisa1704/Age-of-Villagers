@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public class Egyptians : INation
+    public class EgyptianKings : INation
     {
         public void DrawHouse(Graphics graphics, Point point)
         {

@@ -19,7 +19,7 @@ namespace AgeOfVillagers
             }
             else if (NationBox == "Egyptian Kings")
             {
-                return new Egyptians();
+                return new EgyptianKings();
             }
             else if(NationBox == "Inuit Hunters")
             {
