@@ -20,21 +20,24 @@ namespace AgeOfVillagers
 
         internal void AddTree(Graphics g, Pen p, Point point)
         {
-            var tree = nation.getTree(point);
+            var tree = nation.getItemShape(point, "Tree");
             tree_items.Add(point);
-            DrawItem(g, p, point, tree);
+            tree.Draw(g, p);
+            //DrawItem(g, p, point, tree);
         }
         internal void AddHouse(Graphics g, Pen p, Point point)
         {
-            var house = nation.getHouse(point);
+            var house = nation.getItemShape(point, "House");
             house_items.Add(point);
-            DrawItem(g, p, point, house);
+            house.Draw(g, p);
+            //DrawItem(g, p, point, house);
         }
         internal void AddWaterResource(Graphics g, Pen p, Point point)
         {
-            var water = nation.getWaterResource(point);
+            var water = nation.getItemShape(point, "Water");
             waterResource_items.Add(point);
-            DrawItem(g, p, point, water);
+            water.Draw(g, p);
+            //DrawItem(g, p, point, water);
         }
 
         private void DrawItem(Graphics g, Pen p, Point point, IVillageItem item)
@@ -62,16 +65,22 @@ namespace AgeOfVillagers
             g.Clear(nation.getTerrainColor());
             
             foreach (var point in tree_items)
-            { 
-                DrawItem(g, p, point, nation.getTree(point));
+            {
+                var shape = nation.getItemShape(point, "Tree");
+                shape.Draw(g, p);
+                //DrawItem(g, p, point, nation.getTree(point));
             }
             foreach (var point in house_items)
             {
-                DrawItem(g, p, point, nation.getHouse(point));
+                var shape = nation.getItemShape(point, "House");
+                shape.Draw(g, p);
+                //DrawItem(g, p, point, nation.getHouse(point));
             }
             foreach (var point in waterResource_items)
             {
-                DrawItem(g, p, point, nation.getWaterResource(point));
+                var shape = nation.getItemShape(point, "Water");
+                shape.Draw(g, p);
+                //DrawItem(g, p, point, nation.getWaterResource(point));
             }
         }
 
