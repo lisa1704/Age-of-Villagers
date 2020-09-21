@@ -68,7 +68,8 @@ namespace Age_of_Villagers
 
         private void NewVillageButton_Click(object sender, EventArgs e)
         {
-
+            Form VillageName = new ConfirmName();
+            VillageName.Show();
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
