@@ -51,5 +51,10 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void Tree_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,6 +69,7 @@
             this.Tree.TabIndex = 2;
             this.Tree.Text = "Tree";
             this.Tree.UseVisualStyleBackColor = true;
+            this.Tree.Click += new System.EventHandler(this.Tree_Click);
             // 
             // House
             // 
