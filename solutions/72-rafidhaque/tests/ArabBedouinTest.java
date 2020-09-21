@@ -10,7 +10,6 @@ public class ArabBedouinTest {
     private ArabBedouin arabBedouin;
     private JFXPanel panel = new JFXPanel();
     private String nationName;
-    private DrawHouse newHouse;
 
     @Before
     public void setUp() throws Exception {
@@ -30,11 +29,11 @@ public class ArabBedouinTest {
 
     @Test
     public void getTree() {
-        assertEquals("ArabBedouinTree", arabBedouin.getHouse().getClass().getSimpleName());
+        assertEquals("ArabBedouinTree", arabBedouin.getTree().getClass().getSimpleName());
     }
 
     @Test
     public void getWater() {
-        assertEquals("ArabBedouinWater", arabBedouin.getHouse().getClass().getSimpleName());
+        assertEquals("NoWater", arabBedouin.getWater().getClass().getSimpleName());
     }
 }
