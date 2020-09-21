@@ -5,7 +5,7 @@ using System.Text;
 
 namespace age_of_villagers.shape
 {
-    class line : Ishape
+   class line : Ishape
     {
         private Point point1, point2;
         public line(Point point1, Point point2)

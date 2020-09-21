@@ -5,7 +5,7 @@ using System.Text;
 
 namespace age_of_villagers.shape
 {
-    class arc : Ishape
+   class arc : Ishape
     {
         private readonly Point point;
         private float x, y, width, height, startAngle, sweepAngle;

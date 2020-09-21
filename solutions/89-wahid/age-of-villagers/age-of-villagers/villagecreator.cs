@@ -1,4 +1,7 @@
-﻿using System;
+﻿using age_of_villagers.nation;
+using age_of_villagers.villageitem;
+using age_of_villagers.shape;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +20,7 @@ namespace age_of_villagers
         string name = "";
         public Graphics g;
         public Pen p;
-
+        private village village;
         List<Point> HousePoints = new List<Point>();
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
@@ -93,10 +96,6 @@ namespace age_of_villagers
 
         }
 
-        private void drawhouse(int X, int Y)
-        {
-
-        }
         private void panel1MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
@@ -105,11 +104,10 @@ namespace age_of_villagers
             if (tree.Checked)
             {
 
-
             }
             else if (house.Checked)
             {
-                drawhouse(x, y);
+               
 
             }
             else if (watersource.Checked)

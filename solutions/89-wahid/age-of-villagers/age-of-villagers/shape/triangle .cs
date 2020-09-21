@@ -5,7 +5,7 @@ using System.Text;
 
 namespace age_of_villagers.shape
 {
-    class triangle : Ishape
+   class triangle : Ishape
     {
         private readonly Point top;
         private readonly Point bottomLeft;
