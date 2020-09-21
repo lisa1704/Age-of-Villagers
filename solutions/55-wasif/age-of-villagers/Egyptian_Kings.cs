@@ -11,14 +11,14 @@ namespace age_of_villagers
     {
         Pen pen = new Pen(Color.Black);
         Graphics gp;
-
-        public Egyptian_Kings(Graphics gp)
+        Point p0;
+        public Egyptian_Kings(Graphics gp, Point p0)
         {
             this.gp = gp;
+            this.p0 = p0;
         }
         public void draw_house()
         {
-            Point p0 = new Point(50, 50);
             Point p1 = new Point(p0.X + 50, p0.Y + 25);
             Point p2 = new Point(p0.X + 50, p0.Y - 75);
             Point p3 = new Point(p0.X + 100, p0.Y - 25);
@@ -33,7 +33,6 @@ namespace age_of_villagers
 
         public void draw_tree()
         {
-            Point p0 = new Point(50, 50);
             Point p1 = new Point(p0.X + 25, p0.Y - 25);
             Point p2 = new Point(p0.X - 25, p0.Y - 25);
             Point p3 = new Point(p1.X + 25, p1.Y - 25);
@@ -54,7 +53,6 @@ namespace age_of_villagers
 
         public void draw_watersource()
         {
-            Point p0 = new Point(50, 50);
             gp.DrawArc(pen, p0.X, p0.Y, 50, 50, 0, 360);
 
         }
