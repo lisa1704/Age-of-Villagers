@@ -32,6 +32,8 @@
             this.New_village = new System.Windows.Forms.Button();
             this.Open_village = new System.Windows.Forms.Button();
             this.Tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
+            this.Water_source = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // Save_village
@@ -76,11 +78,37 @@
             this.Tree.UseVisualStyleBackColor = true;
             this.Tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
             // 
+            // House
+            // 
+            this.House.AutoSize = true;
+            this.House.Location = new System.Drawing.Point(618, 80);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(56, 17);
+            this.House.TabIndex = 4;
+            this.House.TabStop = true;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
+            // 
+            // Water_source
+            // 
+            this.Water_source.AutoSize = true;
+            this.Water_source.Location = new System.Drawing.Point(618, 144);
+            this.Water_source.Name = "Water_source";
+            this.Water_source.Size = new System.Drawing.Size(91, 17);
+            this.Water_source.TabIndex = 5;
+            this.Water_source.TabStop = true;
+            this.Water_source.Text = "Water Source";
+            this.Water_source.UseVisualStyleBackColor = true;
+            this.Water_source.CheckedChanged += new System.EventHandler(this.Water_source_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Water_source);
+            this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Open_village);
             this.Controls.Add(this.New_village);
@@ -98,6 +126,8 @@
         private System.Windows.Forms.Button New_village;
         private System.Windows.Forms.Button Open_village;
         private System.Windows.Forms.RadioButton Tree;
+        private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.RadioButton Water_source;
     }
 }
 
