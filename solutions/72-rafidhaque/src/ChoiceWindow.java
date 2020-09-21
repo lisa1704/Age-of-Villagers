@@ -1,12 +1,13 @@
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class ChoiceWindow implements IWindow {
@@ -38,11 +39,9 @@ public class ChoiceWindow implements IWindow {
         TextField villageName = new TextField("Type Village Name");
 
         Button newVillage = new Button("New Village");
-        Button openVillage = new Button("Open Village");
 
         GridPane.setConstraints(villageName, 2, 9);
         GridPane.setConstraints(newVillage, 2, 10);
-        GridPane.setConstraints(openVillage, 3, 10);
         GridPane.setMargin(villageName, new Insets(50, 0, 0, 0));
         GridPane.setMargin(choiceBox, new Insets(10, 0, 0, 0));
 
@@ -53,14 +52,9 @@ public class ChoiceWindow implements IWindow {
             Main.mainWindow.setScene(scene);
         });
 
-        openVillage.setOnAction(event -> {
-            FileChooser fileChooser = new FileChooser();
-            File selectedFile = fileChooser.showOpenDialog(Main.mainWindow);
-        });
 
 
-
-        gridPane.getChildren().addAll(chooseNation, choiceBox, newVillage, openVillage, villageName);
+        gridPane.getChildren().addAll(chooseNation, choiceBox, newVillage, villageName);
         scene = new Scene(gridPane, 400, 250);
         return scene;
     }
