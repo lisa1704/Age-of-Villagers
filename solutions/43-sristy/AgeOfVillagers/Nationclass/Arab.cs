@@ -25,7 +25,7 @@ namespace Age_of_villagers
 
         public IObject Draw_watersource(Point P1)
         {
-            IObject waterresource = new null_obj();
+            IObject waterresource = null_obj.Instance;
             return waterresource;
         }
 

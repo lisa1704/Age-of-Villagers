@@ -17,14 +17,14 @@ namespace Age_of_villagers
 
         public IObject Draw_tree(Point mptop)
         {
-            IObject tree = new null_obj();
+            IObject tree = null_obj.Instance;
             return tree;
 
         }
 
         public IObject Draw_watersource(Point mptop)
         {
-            IObject waterresource = new null_obj();
+            IObject waterresource = null_obj.Instance;
             return waterresource;
         }
 

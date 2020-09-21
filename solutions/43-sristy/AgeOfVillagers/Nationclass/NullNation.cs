@@ -13,19 +13,19 @@ namespace Age_of_villagers
         public IObject Draw_house(Point p)
         {
             warning();
-            return new null_obj();
+            return null_obj.Instance;
         }
 
         public IObject Draw_tree(Point p)
         {
             warning();
-            return new null_obj();
+            return null_obj.Instance;
         }
 
         public IObject Draw_watersource(Point p)
         {
             warning();
-            return new null_obj();
+            return null_obj.Instance;
         }
 
         public Color get_backcolor()

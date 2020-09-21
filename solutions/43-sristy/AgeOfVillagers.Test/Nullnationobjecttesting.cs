@@ -12,21 +12,21 @@ namespace AgeOfVillagers.Test
         public void nullhouseTest()
         {
             IObject actual = nationfactory.GetNation("").Draw_house(lptop);
-            IObject expected = new null_obj();
+            IObject expected = null_obj.Instance;
             actual.Equals(expected);
         }
         [Fact]
         public void nulltreeTest()
         {
             IObject actual = nationfactory.GetNation("").Draw_tree(lptop);
-            IObject expected = new null_obj();
+            IObject expected = null_obj.Instance;
             actual.Equals(expected);
         }
         [Fact]
         public void nullwatersourceTest()
         {
             IObject actual = nationfactory.GetNation("").Draw_watersource(lptop);
-            IObject expected = new null_obj();
+            IObject expected = null_obj.Instance;
             actual.Equals(expected);
         }
 

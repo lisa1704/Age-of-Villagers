@@ -26,7 +26,7 @@ namespace AgeOfVillagers.Test
         public void ArabtwatersourceTest()
         {
             IObject actual = nationfactory.GetNation("Arab").Draw_watersource(lptop);
-            IObject expected = new null_obj();
+            IObject expected = null_obj.Instance;
             actual.Equals(expected);
         }
     }
