@@ -13,7 +13,8 @@ namespace AgeOfVillagers
 
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            BanglaHouse bdH = new BanglaHouse(point);
+            bdH.Draw(graphics, pen);
         }
 
         public void DrawTree(Graphics graphics, Point point)
@@ -24,7 +25,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            BanglaWaterSource bdWS = new BanglaWaterSource(point);
+            bdWS.Draw(graphics, pen);
         }
 
         public string GetVillageName()
@@ -34,7 +36,7 @@ namespace AgeOfVillagers
 
         public Color SetTerrain()
         {
-            throw new NotImplementedException();
+            return Color.Green;
         }
 
         public void SetVillageName(string vName)
