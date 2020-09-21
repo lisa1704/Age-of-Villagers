@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-	class BangladeshiTree : IVillageItem
+	class BangladeshiHouse : IVillageItem
 	{
 		public void Draw(Point e, Graphics g, Pen p)
         {
-            
+
         }
-    }
+	}
 }
