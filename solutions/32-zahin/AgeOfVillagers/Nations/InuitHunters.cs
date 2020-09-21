@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         {
 
         }
-        public string DrawHouse(Graphics g, Point point)
+        public void DrawHouse(Graphics g, Point point)
         {
             Point p1 = new Point(point.X - 75, point.Y);
             Point p2 = new Point(point.X + 75, point.Y);
@@ -26,22 +26,17 @@ namespace AgeOfVillagers
             Circle outerCircle = new Circle(g, pen, p3, 150, 150, 180, 180);
             outerCircle.DrawShape();
             g.DrawLine(pen, p1, p2);
-
-            return "Inuit House";
         }
 
-        public string DrawTree(Graphics g, Point point)
+        public void DrawTree(Graphics g, Point point)
         {
             MessageBox.Show("Inuit Hunters can not plant trees");
-
-            return "Inuit Hunters can not plant trees";
         }
 
-        public string DrawWaterSource(Graphics g, Point point)
+        public void DrawWaterSource(Graphics g, Point point)
         {
             var message = new StringBuilder();
             MessageBox.Show("Inuit Hunters relies on natural water sources so it is not possible to place water sources");
-            return "Inuit Hunters relies on natural water sources so it is not possible to place water sources";
         }
         public Color DrawTerrain()
         {

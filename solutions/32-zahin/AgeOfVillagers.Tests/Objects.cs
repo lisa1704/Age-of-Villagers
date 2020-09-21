@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers.Tests
 {
-    public class Nations
+    public class Objects
     {
         [Fact]
         public void BangladeshiTest()
