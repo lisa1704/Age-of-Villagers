@@ -3,11 +3,11 @@ import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 
-public class Rectangle {
+public class Rctangle {
     private double x1, y1, x2, y2;
     public Line line1, line2, line3, line4;
 
-    public Rectangle(double startX, double startY, double endX, double endY) {
+    public Rctangle(double startX, double startY, double endX, double endY) {
         this.x1 = startX;
         this.y1 = startY;
         this.x2 = endX;

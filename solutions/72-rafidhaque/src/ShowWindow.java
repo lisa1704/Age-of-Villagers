@@ -4,6 +4,9 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -40,7 +43,7 @@ public class ShowWindow implements IWindow{
 
     public Scene getDisplay() {
 
-        Rectangle rectangle2 = new Rectangle( 0, 0, 600, 400);
+        Rctangle rectangle2 = new Rctangle( 0, 0, 600, 400);
         drawSpace.getChildren().addAll(rectangle2.draw());
 
         GridPane gridPane = gridOfControls.createGrid();
@@ -106,8 +109,30 @@ public class ShowWindow implements IWindow{
 
             FileChooser fileChooser = new FileChooser();
             File selectedFile = fileChooser.showOpenDialog(Main.mainWindow);
+            String filePath = selectedFile.getAbsolutePath();
 
+            ArrayList<StateOfComponent> stateOfComponents10 = null;
 
+            try {
+                FileInputStream fileIn = new FileInputStream(filePath);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
+                in.close();
+                fileIn.close();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
+            Rectangle rectangle = new Rectangle(0,0, 600,400);
+            rectangle.setFill(Color.RED);
+            drawSpace.getChildren().addAll(rectangle);
+
+            int sizee = stateOfComponents10.size();
+
+            for (int k = 0; k < sizee; k++) {
+                ArrayList<Shape> drawing = stateOfComponents10.get(k).drawComponent.draw();
+                drawSpace.getChildren().addAll(drawing);
+            }
         });
 
         return scene;

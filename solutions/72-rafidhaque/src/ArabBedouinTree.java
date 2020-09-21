@@ -11,7 +11,7 @@ public class ArabBedouinTree extends DrawTree {
         Line line2 = new Line(x + 16, y, x + 8, y + 12);
         Line line3 = new Line(x, y + 12, x + 16, y + 12);
         Line line4 = new Line(x + 8, y + 12, x + 8, y);
-        Rectangle rectangle = new Rectangle(x + 8, y + 12, x + 10, y + 24);
+        Rctangle rectangle = new Rctangle(x + 8, y + 12, x + 10, y + 24);
 
         ArrayList<Shape> lines = rectangle.draw();
         lines.add(line1);
