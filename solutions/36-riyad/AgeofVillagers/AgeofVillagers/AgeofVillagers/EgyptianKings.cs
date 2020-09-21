@@ -7,7 +7,7 @@ namespace AgeofVillagers
 {
     public class EgyptianKings : INation
     {
-        Pen pen = new Pen(Color.SkyBlue);
+        Pen pen = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point p)
         {
             return "Piramid";
