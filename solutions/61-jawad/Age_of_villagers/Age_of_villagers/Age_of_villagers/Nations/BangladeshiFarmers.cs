@@ -8,29 +8,26 @@ namespace Age_of_villagers.Nations
 {
     class BangladeshiFarmers : INation
     {
-        public string DrawHouse(Graphics g, Point pt)
+        Pen p = new Pen(Color.Black);
+        string testBdHouse;
+        public object DrawHouse(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
-        }
+            BangladeshiHouse house = new BangladeshiHouse(new Point(pt.X, pt.Y));
 
-        public string GetNation()
-        {
-            return "BangladeshiFarmers";
+            house.Paint(g, p);
+            testBdHouse = "BDHouse Constructed";
+            //return "KureGhor";
+            return house;
         }
-
-        public Color GetTerrainColor()
+        public string testHouse()
         {
-            throw new NotImplementedException();
+            return "BDHouse Constructed";
         }
-
-        void INation.DrawTree(Graphics g, Point pt)
+        public object DrawTree(Graphics g, Point pt)
         {
-            throw new NotImplementedException();
-        }
-
-        void INation.DrawWaterSource(Graphics g, Point MPt)
-        {
-            throw new NotImplementedException();
+            BangladeshiTree BDtree = new BangladeshiTree(pt);
+            BDtree.Paint(g, p);
+            return BDtree;
         }
     }
 }
