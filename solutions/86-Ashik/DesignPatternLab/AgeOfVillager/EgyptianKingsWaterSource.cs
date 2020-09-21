@@ -21,8 +21,8 @@ namespace AgeOfVillager
         {
             x = e.X;
             y = e.Y;
-            width = 24;
-            height = 24;
+            width = 12;
+            height = 12;
             startAngle = 0;
             sweepAngle = 360;
             g.DrawArc(myPen, x, y, width, height, startAngle, sweepAngle);
