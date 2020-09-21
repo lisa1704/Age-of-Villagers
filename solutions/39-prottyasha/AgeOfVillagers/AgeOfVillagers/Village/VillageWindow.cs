@@ -58,8 +58,6 @@ namespace AgeOfVillagers
         }
         private void btn_saveVillage_Click(object sender, EventArgs e)
         {
-            //SaveVillageForm svf = new SaveVillageForm();
-            //svf.Show();
             SaveVillage sv = new SaveVillage(vill);
             sv.SaveFile();
         }
@@ -85,6 +83,7 @@ namespace AgeOfVillagers
         {
             //OpenVillageForm ovf = new OpenVillageForm();
             //ovf.Show();
+
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
