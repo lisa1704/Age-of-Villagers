@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArabFactory.cs" />
+    <Compile Include="ArabHouse.cs" />
     <Compile Include="ArabTree.cs" />
     <Compile Include="BangladeshFactory.cs" />
     <Compile Include="Bdhouse.cs" />
