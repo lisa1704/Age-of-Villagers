@@ -1,0 +1,1 @@
+{"villageName":"istanbul","housePoints":["167, 90"],"treePoints":["224, 172","271, 138"],"waterSourcePoints":[]}

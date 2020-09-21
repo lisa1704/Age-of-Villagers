@@ -20,7 +20,23 @@ namespace Age_Of_Villagers.Command
 
         public void execute()
         {
-            
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.InitialDirectory = @"C:\Users\User\Desktop\age-of-villagers\solutions\34-meem\Files";
+            saveFile.Title = "Save text Files";
+            saveFile.CheckFileExists = false;
+            saveFile.CheckPathExists = false;
+            saveFile.DefaultExt = "txt";
+            saveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            saveFile.RestoreDirectory = true;
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                string json = JsonConvert.SerializeObject(_village);
+                System.IO.File.WriteAllText(saveFile.FileName, json);
+            }
+
+            MessageBox.Show("Your village is saved");
+
 
 
         }

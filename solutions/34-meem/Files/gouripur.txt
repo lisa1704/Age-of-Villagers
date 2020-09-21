@@ -1,0 +1,1 @@
+{"villageName":null,"housePoints":["163, 83"],"treePoints":["73, 161"],"waterSourcePoints":["404, 202"]}

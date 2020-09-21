@@ -1,0 +1,1 @@
+{"villageName":"Alaska","housePoints":["117, 100","216, 92","108, 234"],"treePoints":[],"waterSourcePoints":[]}

@@ -1,0 +1,1 @@
+{"villageName":"hunhan","housePoints":["162, 121","188, 183"],"treePoints":[],"waterSourcePoints":[]}

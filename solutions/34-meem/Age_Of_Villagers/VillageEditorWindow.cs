@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_Of_Villagers.Command;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,10 @@ namespace Age_Of_Villagers
 {
     public partial class VillageEditorWindow : Form
     {
-        string name;
+        string villageName;
         string nation;
         string rdButton;
-        //Village village;
+        Village village;
         INation ination;
         
 
@@ -31,6 +32,28 @@ namespace Age_Of_Villagers
             
         }
 
+
+        public List<Point> House_points = new List<Point>();
+        public List<Point> Tree_points = new List<Point>();
+        public List<Point> WaterSrc_points = new List<Point>();
+
+        
+
+       
+
+        public void getState()
+        {
+            village.villageName = villNameBox.Text;
+
+            village.housePoints = this.House_points;
+            village.treePoints = this.Tree_points;
+            village.waterSourcePoints = this.WaterSrc_points;
+
+        }
+
+
+
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
@@ -38,7 +61,7 @@ namespace Age_Of_Villagers
         public void setVillageName(string Name)
         {
             villNameBox.Text = Name;
-            string villageName = Name;
+            villageName = Name;
 
         }
 
@@ -87,12 +110,36 @@ namespace Age_Of_Villagers
 
         private void saveVill_Click(object sender, EventArgs e)
         {
+            getState();
+            SaveVillage sv = new SaveVillage(village);
+            sv.execute();
+
             
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
+
+        }
+
+        public void AddPoints(MouseEventArgs e)
+        {
+            if (rdButton == "House")
+            {
+                House_points.Add(e.Location);
+
+            }
+            else if (rdButton == "Tree")
+            {
+                Tree_points.Add(e.Location);
+
+            }
+            else if (rdButton == "WaterSource")
+            {
+                WaterSrc_points.Add(e.Location);
+
+            }
 
         }
 
@@ -106,13 +153,18 @@ namespace Age_Of_Villagers
             ItemFactory itemFactory = NationFactory.getNation(nation);
             IVillageItem item = itemFactory.getItem(rdButton);
             item.Draw(e.Location, graphics, pen);
+            AddPoints( e);
+
+
+            
+
 
 
 
 
         }
 
-        
+
 
         private void newVill_Click(object sender, EventArgs e)
         {
@@ -134,6 +186,7 @@ namespace Age_Of_Villagers
 
         private void saveVill_MouseClick(object sender, MouseEventArgs e)
         {
+            
 
         }
     }

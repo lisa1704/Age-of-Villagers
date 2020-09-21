@@ -1,0 +1,1 @@
+{"villageName":"china","housePoints":["144, 72","238, 220"],"treePoints":["298, 59","106, 202"],"waterSourcePoints":[]}
