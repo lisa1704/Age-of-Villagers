@@ -42,6 +42,10 @@ namespace Age_of_Villagers
 
         private void New_Village_Click(object sender, EventArgs e)
         {
+            house_point.Clear();
+            tree_point.Clear();
+            water_point.Clear();
+            Menu_bar.Refresh();
 
         }
 
