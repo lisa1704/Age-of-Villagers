@@ -58,7 +58,16 @@ namespace Age_of_Villagers
 
         private void Open_Village_Click(object sender, EventArgs e)
         {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader read = new StreamReader(File.OpenRead(open.FileName));
 
+                Village.Text = read.ReadToEnd();
+                read.Dispose();
+
+
+            }
         }
 
         private void House_Click(object sender, EventArgs e)

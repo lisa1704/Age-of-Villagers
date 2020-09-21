@@ -9,7 +9,7 @@ namespace Age_of_Villagers
 {
     public class Village
     {
-        
+        internal static string Text;
         public string village;
         public List<Point> house_point;
         public List<Point> tree_point;
