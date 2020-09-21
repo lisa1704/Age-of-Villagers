@@ -15,7 +15,8 @@ namespace Age_of_Villagers.EgyptianKings
 
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianHouse egyptianhouse = new EgyptianHouse(point);
+            egyptianhouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point point)

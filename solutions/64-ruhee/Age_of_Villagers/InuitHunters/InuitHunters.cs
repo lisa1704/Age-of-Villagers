@@ -10,7 +10,8 @@ namespace Age_of_Villagers.InuitHunters
     {
         public void DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            NullElements InuitHouse = new NullElements();
+            InuitHouse.drawing();
         }
 
         public void DrawHouse(Graphics g, Point point)
@@ -20,7 +21,8 @@ namespace Age_of_Villagers.InuitHunters
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            NullElements InuitWaterSource = new NullElements();
+            InuitWaterSource.drawing();
         }
 
         public Color BackgroundColor()
