@@ -8,20 +8,20 @@ namespace Age_of_Villagers.Nation
 {
     public class Bangladeshi_Farmer : INation
     {
-        private string nationName;
+         string name;
 
       
 
         public Bangladeshi_Farmer(string name)
         {
-            this.nationName = name;
+            this.name = name;
         }
 
 
 
         public String getName()
         {
-            return nationName;
+            return name;
         }
 
         public void GetHouse(Graphics graphics, Point _point)
