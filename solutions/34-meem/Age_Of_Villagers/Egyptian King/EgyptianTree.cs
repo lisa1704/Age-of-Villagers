@@ -2,7 +2,7 @@
 
 namespace Age_Of_Villagers
 {
-    internal class EgyptianTree : IVillageItem
+    public class EgyptianTree : IVillageItem
     {
         public void Draw(Point e, Graphics g, Pen p)
         {
@@ -20,6 +20,11 @@ namespace Age_Of_Villagers
             g.DrawLine(p, x + 30, y - 5, x + 20, y);
 
 
+        }
+
+        public string TestTree()
+        {
+            return "EgyptTree";
         }
     }
 }

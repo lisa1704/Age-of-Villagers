@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_Of_Villagers
 {
-    class BangladeshiHouse : IVillageItem
+    public class BangladeshiHouse : IVillageItem
     {
         
 
@@ -24,6 +24,11 @@ namespace Age_Of_Villagers
             g.DrawLine(p, x + 50, y, x + 25, y - 25);
 
 
+        }
+
+        public string Testbdhouse()
+        {
+            return "BDhouse";
         }
     }
 }
