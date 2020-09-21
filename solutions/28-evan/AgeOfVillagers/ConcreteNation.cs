@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     class ConcreteNation
     {
-        public static ConcreteNation getNation(String nation);
+        public INation GetNation(String nationType);
 
     }
 }

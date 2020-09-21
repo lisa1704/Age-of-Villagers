@@ -8,6 +8,6 @@ namespace AgeOfVillagers
 {
     interface IWaterSource
     {
-
+        void DrawWaterSoursce();
     }
 }

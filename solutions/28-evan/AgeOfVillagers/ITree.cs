@@ -8,6 +8,6 @@ namespace AgeOfVillagers
 {
     interface ITree
     {
-
+        void DrawTree();
     }
 }
