@@ -3,9 +3,9 @@ package sample;
 public interface IWaterSource {
     void draw(Point point);
 
-    String canvasController(int point1,int pont2);
+    public void canvasControlle();
 
-    String releaseCanvas(int point1,int pont2);
+    public void releaseCanvas();
 
-    String getCanvas(int point1,int pont2);
+    public void getCanvas();
 }
