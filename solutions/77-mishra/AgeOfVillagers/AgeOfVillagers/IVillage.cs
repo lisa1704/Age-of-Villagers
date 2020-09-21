@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface IVillage
+    public interface IVillage
     {
+
     }
 }

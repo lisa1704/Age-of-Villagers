@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class VillageState : IVillageState
+    class VillageState 
     {
         private string villageName;
         private string nationName;
@@ -21,19 +21,6 @@ namespace AgeOfVillagers
             this.treeLoc = treeLoc;
             this.waterLoc = waterLoc;
         }
-        public void setHouseState(Point p)
-        {
-            houseLoc.Add(p);
-        }
-
-        public void setTreeState(Point p)
-        {
-            treeLoc.Add(p);
-        }
-
-        public void setwaterState(Point p)
-        {
-            waterLoc.Add(p);
-        }
+        
     }
 }
