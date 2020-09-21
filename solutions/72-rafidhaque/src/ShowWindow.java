@@ -124,8 +124,22 @@ public class ShowWindow implements IWindow{
             }
 
             Rectangle rectangle = new Rectangle(0,0, 600,400);
-            rectangle.setFill(Color.RED);
+
+            System.out.println(stateOfComponents10.get(0).drawComponent);
+
+            if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Arab")) {
+                rectangle.setFill(Color.LIGHTYELLOW);
+            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Bangladesh")) {
+                rectangle.setFill(Color.GREENYELLOW);
+            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Egypt")) {
+                rectangle.setFill(Color.LIGHTYELLOW);
+            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Inuit")) {
+                rectangle.setFill(Color.WHITE);
+            } else {
+                rectangle.setFill(Color.GRAY);
+            }
             drawSpace.getChildren().addAll(rectangle);
+
 
             int sizee = stateOfComponents10.size();
 
