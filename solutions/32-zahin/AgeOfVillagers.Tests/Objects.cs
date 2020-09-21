@@ -1,5 +1,4 @@
 ﻿using Xunit;
-using System.Drawing;
 
 namespace AgeOfVillagers.Tests
 {

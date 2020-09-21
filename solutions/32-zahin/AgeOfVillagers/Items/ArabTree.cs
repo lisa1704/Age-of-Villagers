@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AgeOfVillagers.Items;
+﻿using System.Drawing;
 using AgeOfVillagers.Shapes;
-using System.Drawing;
 
 namespace AgeOfVillagers.Items
 {
