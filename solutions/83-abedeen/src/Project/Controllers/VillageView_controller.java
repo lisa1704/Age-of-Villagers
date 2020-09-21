@@ -1,9 +1,6 @@
 package Project.Controllers;
 
-import Project.Utilities.Bangladeshi_Farmers;
-import Project.Utilities.INations;
-import Project.Utilities.NationFactory;
-import Project.Utilities.Village;
+import Project.Utilities.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -27,11 +24,12 @@ public class VillageView_controller implements Initializable {
     @FXML public ComboBox NationList = new ComboBox();
     @FXML private Pane DrawingCanvas;
     public String flag;
-    public INations nation = new Bangladeshi_Farmers();
+    public INations nation;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NationList.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouins"),("Egyptian Kings"),("Inuit Hunters"));
+        nation = new Null_Nation();
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

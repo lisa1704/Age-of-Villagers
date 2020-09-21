@@ -21,6 +21,9 @@ public class NationFactory {
         else if (this.nationName == "Inuit Hunters"){
             nation = new Inuit_Hunters();
         }
+        else {
+            nation = new Null_Nation();
+        }
         return nation;
     }
 }
