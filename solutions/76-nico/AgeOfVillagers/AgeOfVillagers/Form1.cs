@@ -16,5 +16,10 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
         }
+
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
