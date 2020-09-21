@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Nation\ArabBeduin.cs" />
     <Compile Include="Nation\BangladeshiFarmers.cs" />
+    <Compile Include="Nation\EgyptianKing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
