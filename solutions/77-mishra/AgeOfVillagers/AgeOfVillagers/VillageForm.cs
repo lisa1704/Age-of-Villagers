@@ -13,46 +13,47 @@ namespace AgeOfVillagers
 {
     public partial class VillageForm : Form
     {
-        readonly Graphics graphics;
-        private int x;
-        private int y;
+        
+        public int x;
+        public int y;
+        Graphics graphics;
         Pen pen;
+        private Nations nationsform;
 
         public string nationtype;
-        //Nations nations = new Nations(nationtype);
-        //private Point p;
-
-        /*public INation arabBeduin = new ArabBeduin();
-        public INation bdfarmer = new BdFarmer();
-        public INation egKing = new EgyptianKing();*/
+        
 
 
         public VillageForm()
         {
             InitializeComponent();
+            graphics = drawingBoard.CreateGraphics();
+            pen = new Pen(Color.Black);
             
         }
         
 
         private void drawingBoard_MouseClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point(e.X, e.Y);
-            x = p.X;
-            y = p.Y;
+            x = e.X;
+            y = e.Y;
+
+            Point point = new Point(x, y);
             
-            Nations nations = new Nations(nationtype);
+            
+            Nations nations = new Nations(Nation.Text);
 
             if(radioButton1.Checked == true)
             {
                 
-                nations.GetNation().DrawTree(p).draw(pen, graphics);
+                nations.GetNation(point).DrawTree(point).draw(pen, graphics);
                 
             }
 
             if(radioButton3.Checked == true)
             {
 
-                nations.GetNation().DrawHouse(p).draw(pen, graphics);
+                nations.GetNation(point).DrawHouse(point).draw(pen, graphics);
                 /*arabBeduin.DrawHouse(p, drawingBoard);
                 
                 bdfarmer.DrawHouse(p, drawingBoard);
@@ -62,7 +63,7 @@ namespace AgeOfVillagers
 
             if(radioButton2.Checked == true)
             {
-                nations.GetNation().DrawWaterSource(p).draw(pen, graphics);
+                nations.GetNation(point).DrawWaterSource(point).draw(pen, graphics);
                 //bdfarmer.DrawWaterSource(p, drawingBoard);
             }
 
@@ -71,8 +72,8 @@ namespace AgeOfVillagers
         }
         private void drawingBoard_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = drawingBoard.CreateGraphics();
-            Pen p = new Pen(Color.Black);
+            Graphics graphics = drawingBoard.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
         }
         private void header_Click(object sender, EventArgs e)
         {
@@ -116,7 +117,7 @@ namespace AgeOfVillagers
         {
             Nations nations = new Nations(nationtype);
             nationtype = Nation.Text;
-            if (nationtype == "Bangladeshi Farmers")
+            /*if (nationtype == "Bangladeshi Farmers")
             {
                 drawingBoard.BackColor = Color.Green;
             }
@@ -131,7 +132,7 @@ namespace AgeOfVillagers
             else if (nationtype == "Iniut Hunter")
             {
                 drawingBoard.BackColor = Color.White;
-            }
+            }*/
 
         }
     }

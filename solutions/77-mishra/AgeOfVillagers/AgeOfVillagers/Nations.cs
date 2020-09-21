@@ -15,6 +15,11 @@ namespace AgeOfVillagers
         {
             this.nationtype = nationtype;
 
+
+        }
+        public INation GetNation(Point point)
+        {
+            
             if (nationtype == "Bangladeshi Farmers")
             {
                 nation = new BdFarmer(point);
@@ -32,10 +37,10 @@ namespace AgeOfVillagers
             {
                 nation = new InuitHunter();
             }
-            
-        }
-        public INation GetNation()
-        {
+            else
+            {
+                return new NullNation(point);
+            }
             return nation;
         }
     }
