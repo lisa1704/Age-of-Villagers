@@ -9,6 +9,8 @@ namespace Age_of_Villagers.Nation
     {
         public interface INation
         {
+            string getNationName();
+            Color BgColor();
             void DrawHouse();
 
             void DrawTree();
