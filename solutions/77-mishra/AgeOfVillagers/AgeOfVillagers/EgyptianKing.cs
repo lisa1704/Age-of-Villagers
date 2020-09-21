@@ -8,6 +8,11 @@ namespace AgeOfVillagers
 {
     public class EgyptianKing : INation
     {
+        private Point point;
+        public EgyptianKing(Point point)
+        {
+            this.point = point;
+        }
        
         public IShape DrawHouse(Point point)
         {
