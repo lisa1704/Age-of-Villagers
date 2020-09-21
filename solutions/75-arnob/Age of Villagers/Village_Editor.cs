@@ -13,12 +13,35 @@ namespace Age_of_Villagers
 {
     public partial class Village_Editor_Window : Form
     {
-
+        string village_name;
         Village savepoints;
 
         List<Point> house_point { get; set; } = new List<Point>();
         List<Point> tree_point { get; set; } = new List<Point>();
         List<Point> water_point { get; set; } = new List<Point>();
+
+        public void getPoints()
+        {
+            this.savepoints = new Village(village_name, house_point, tree_point, water_point);
+        }
+
+        public void setPoints(Village saveVillage)
+        {
+            village_name = saveVillage.village;
+            foreach (Point pt in saveVillage.house_point)
+            {
+                house_point.Add(pt);
+            }
+            foreach (Point pt in saveVillage.tree_point)
+            {
+                tree_point.Add(pt);
+            }
+            foreach (Point pt in saveVillage.water_point)
+            {
+                water_point.Add(pt);
+            }
+
+        }
         public Village_Editor_Window()
         {
             InitializeComponent();
