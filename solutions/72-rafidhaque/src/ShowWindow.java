@@ -6,8 +6,10 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -91,6 +93,13 @@ public class ShowWindow implements IWindow{
                 System.out.println("An error occurred.");
                 e.printStackTrace();
             }
+
+        });
+
+        gridOfControls.openButton.setOnAction(event -> {
+
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(Main.mainWindow);
 
 
         });

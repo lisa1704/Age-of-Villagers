@@ -3,8 +3,10 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class ChoiceWindow implements IWindow {
@@ -49,6 +51,11 @@ public class ChoiceWindow implements IWindow {
             village = villageName.getText();
             scene = getChoice(choiceBox, village);
             Main.mainWindow.setScene(scene);
+        });
+
+        openVillage.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(Main.mainWindow);
         });
 
 
