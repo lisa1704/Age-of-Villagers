@@ -17,7 +17,8 @@ namespace AgeofVillagers
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianKingsTree egyptTree = new EgyptianKingsTree(p);
+            egyptTree.Paint(g, pen);
         }
 
         public void DrawWaterSource(Graphics g, Point mid)
