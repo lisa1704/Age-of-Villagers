@@ -115,6 +115,6 @@ public class VillageView_controller implements Initializable {
 
     public void ChangeNation(ActionEvent actionEvent) {
         nation = new Nation((String) NationList.getValue());
-//        DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
+        DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
     }
 }
