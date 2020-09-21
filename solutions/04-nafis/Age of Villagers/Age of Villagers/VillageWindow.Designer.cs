@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 413);
+            this.ClientSize = new System.Drawing.Size(855,405);
             this.Controls.Add(this.MenuBar);
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
@@ -217,11 +217,11 @@
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Label GameLabel;
-        private System.Windows.Forms.TextBox VillageNameText;
         private System.Windows.Forms.RadioButton HouseRB;
         private System.Windows.Forms.RadioButton TreeRB;
         private System.Windows.Forms.RadioButton WaterSourceRB;
-        private System.Windows.Forms.ComboBox NationBoxCombo;
         private System.Windows.Forms.Panel MenuBar;
+        public System.Windows.Forms.TextBox VillageNameText;
+        public System.Windows.Forms.ComboBox NationBoxCombo;
     }
 }

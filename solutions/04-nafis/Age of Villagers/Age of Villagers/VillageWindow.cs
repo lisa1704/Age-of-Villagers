@@ -58,12 +58,13 @@ namespace Age_of_Villagers
 
         private void SaveVillageButton_Click(object sender, EventArgs e)
         {
+            
 
         }
 
         private void NewVillageButton_Click(object sender, EventArgs e)
         {
-            Form VillageName = new ConfirmName();
+            Form VillageName = new ConfirmName(this,VillageDrawing);
             VillageName.Show();
             VillageDrawing.Invalidate();
         }

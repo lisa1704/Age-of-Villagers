@@ -10,9 +10,13 @@ namespace Age_of_Villagers
 {
     public partial class ConfirmName : Form
     {
-        public ConfirmName()
+        private Panel VillageDrawing;
+        private readonly VillageWindow primary;
+        public ConfirmName(VillageWindow villageWindow,Panel panel)
         {
             InitializeComponent();
+            primary = villageWindow;
+            VillageDrawing = panel;
         }
 
         private void SaveName_Load(object sender, EventArgs e)
@@ -34,5 +38,21 @@ namespace Age_of_Villagers
         {
 
         }
+
+        private void VillageNameText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public string GetVillageName()
+        {
+            return VillageNameText.Text;
+        }
+
+        public string GetNationName()
+        {
+            return NationNameCombo.Text;
+        }
+
     }
 }
