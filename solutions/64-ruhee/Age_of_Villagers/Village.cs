@@ -33,21 +33,6 @@ namespace Age_of_Villagers
         }
 
 
-        private void CreateNewVillage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void villageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nation_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
             if (treeButton.Checked == true)
@@ -85,7 +70,6 @@ namespace Age_of_Villagers
             house_point.Clear();
             tree_point.Clear();
             waterSource_point.Clear();
-            NationName.Text = "Select Nation";
             drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
             MessageBox.Show("Panel is ready for new village to be created");
         }

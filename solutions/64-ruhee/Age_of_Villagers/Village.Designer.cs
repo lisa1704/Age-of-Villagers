@@ -56,7 +56,6 @@ namespace Age_of_Villagers
             this.AgeOfVillagers.Size = new System.Drawing.Size(320, 36);
             this.AgeOfVillagers.TabIndex = 0;
             this.AgeOfVillagers.Text = "AGE OF VILLAGERS";
-            this.AgeOfVillagers.Click += new System.EventHandler(this.AgeOfVillagers_Click);
             // 
             // drawingPanel
             // 
@@ -79,7 +78,6 @@ namespace Age_of_Villagers
             this.villageName.Size = new System.Drawing.Size(157, 32);
             this.villageName.TabIndex = 2;
             this.villageName.Text = "Village Name";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // saveVillagebutton
             // 
@@ -190,7 +188,6 @@ namespace Age_of_Villagers
             this.label1.Size = new System.Drawing.Size(157, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Nation";
-            this.label1.Click += new System.EventHandler(this.villageName_Click);
             // 
             // label2
             // 
@@ -202,7 +199,6 @@ namespace Age_of_Villagers
             this.label2.Size = new System.Drawing.Size(143, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Select Items";
-            this.label2.Click += new System.EventHandler(this.villageName_Click);
             // 
             // Village
             // 
@@ -227,7 +223,6 @@ namespace Age_of_Villagers
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Village";
             this.Text = "Age Of Villagers";
-            this.Load += new System.EventHandler(this.CreateNewVillage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
