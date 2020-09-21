@@ -11,7 +11,7 @@ namespace Age_of_villagers
         String DrawTree(Graphics graphics, Point point);
         String DrawHouse(Graphics graphics, Point point);
         String DrawWaterSource(Graphics graphics, Point point);
-        Color DrawTerrain();
+        Color DrawBackground();
 
     }
 }

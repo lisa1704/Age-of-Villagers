@@ -16,7 +16,7 @@ namespace Age_of_villagers
             throw new NotImplementedException();
         }
 
-        public Color DrawTerrain()
+        public Color DrawBackground()
         {
             throw new NotImplementedException();
         }
