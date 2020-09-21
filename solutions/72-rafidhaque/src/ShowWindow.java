@@ -1,5 +1,3 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -70,23 +68,11 @@ public class ShowWindow implements IWindow{
         });
 
         gridOfControls.saveButton.setOnAction(event -> {
-            GsonBuilder builder = new GsonBuilder();
-            builder.setPrettyPrinting();
-
-            Gson gson = builder.create();
-
-            String newJsonString = gson.toJson(this.stateOfComponents);
-            System.out.println(newJsonString);
-
-            ArrayList<StateOfComponent> stateOfComponents2 = gson.fromJson(newJsonString, ArrayList.class);
-            System.out.println(stateOfComponents2.get(1));
-
-
             // java serialize
 
             FileOutputStream fileOutputStream = null;
             try {
-                fileOutputStream = new FileOutputStream("./"+this.villageName+".bov");
+                fileOutputStream = new FileOutputStream("./"+this.villageName+".aov");
                 ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
                 out.writeObject(this.stateOfComponents);
                 out.close();
@@ -102,7 +88,7 @@ public class ShowWindow implements IWindow{
 
             ArrayList<StateOfComponent> stateOfComponents10 = null;
             try {
-                FileInputStream fileIn = new FileInputStream("./"+this.villageName+".bov");
+                FileInputStream fileIn = new FileInputStream("./"+this.villageName+".aov");
                 ObjectInputStream in = new ObjectInputStream(fileIn);
                 stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
                 in.close();
@@ -113,17 +99,6 @@ public class ShowWindow implements IWindow{
 
             System.out.println("Rafidd");
             System.out.println(stateOfComponents10.get(1));
-
-            // write file
-            try {
-                FileWriter myWriter = new FileWriter(this.villageName+".aov");
-                myWriter.write(newJsonString);
-                myWriter.close();
-                System.out.println("Successfully wrote to the file.");
-            } catch (IOException e) {
-                System.out.println("An error occurred.");
-                e.printStackTrace();
-            }
 
         });
 
