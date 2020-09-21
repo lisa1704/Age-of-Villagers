@@ -34,6 +34,9 @@ namespace AgeOfVillagers
             return backGroundColor;
         }
 
-        
+        public string getNationName()
+        {
+            return "Bangladeshi Farmers";
+        }
     }
 }

@@ -16,5 +16,7 @@ namespace AgeOfVillagers
         void DrawWaterResource(Graphics g, Point p);
 
         Color GetColor();
+
+        string getNationName();
     }
 }

@@ -29,5 +29,10 @@ namespace AgeOfVillagers
         {
             return Color.Empty;
         }
+
+        public string getNationName()
+        {
+            return "NullNation";
+        }
     }
 }

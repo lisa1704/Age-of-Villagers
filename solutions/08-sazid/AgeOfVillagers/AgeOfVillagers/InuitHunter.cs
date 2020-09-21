@@ -30,5 +30,10 @@ namespace AgeOfVillagers
         {
             return backGroundColor;
         }
+
+        public string getNationName()
+        {
+            return "Inuit Hunter";
+        }
     }
 }

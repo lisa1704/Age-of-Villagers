@@ -82,6 +82,10 @@ namespace AgeOfVillagers
         {
             Graphics g = drawinPanel.CreateGraphics();
             Pen p = new Pen(Color.Black);
+            if (nationType.GetNation(nationName).get)
+            {
+
+            }
             foreach (Point points in houseLocations)
             {
                 nationType.GetNation(nationName).DrawHouse(g, points);

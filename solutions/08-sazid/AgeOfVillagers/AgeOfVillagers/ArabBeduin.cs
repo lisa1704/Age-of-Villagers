@@ -32,5 +32,10 @@ namespace AgeOfVillagers
         {
             return backGroundColor;
         }
+
+        public string getNationName()
+        {
+            return "Arab Beduin";
+        }
     }
 }
