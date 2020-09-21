@@ -71,6 +71,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Half_Circle.cs" />
+    <Compile Include="InuitHunters_House.cs" />
+    <Compile Include="Inuit_Factory.cs" />
     <Compile Include="I_Shape.cs" />
     <Compile Include="Lines.cs" />
     <Compile Include="Nation_Factory.cs" />

@@ -16,6 +16,10 @@
             {
                 return new Egyptian_Factory();
             }
+            else if (Nation_Name == "Inuit_Hunters")
+            {
+                return new Inuit_Factory();
+            }
 
             return null;
         }

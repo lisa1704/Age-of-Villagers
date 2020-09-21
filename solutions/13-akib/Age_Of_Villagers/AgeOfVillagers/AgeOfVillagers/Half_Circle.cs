@@ -1,6 +1,4 @@
-﻿using System;
-
-public class Half_Circle
+﻿internal class Half_Circle
 {
     private int x, y, radius;
     public Half_Circle(int x, int y, int radius)

@@ -1,15 +1,16 @@
-﻿using System;
-
-public class InuitHunters_House : I_Shape
+﻿namespace AgeOfVillagers
 {
-	private string draw = "";
-
-	public string Draw(int x, int y)
+    internal class InuitHunters_House : I_Shape
     {
-        Half_Circle ihh_circle = new Half_Circle(x, y, 8);
+        private string draw = "";
 
-        draw = draw + ihh_circle.Draw_Shape();
+        public string Draw(int x, int y)
+        {
+            Half_Circle ihh_circle = new Half_Circle(x, y, 8);
 
-        return draw;
+            draw = draw + ihh_circle.Draw_Shape();
+
+            return draw;
+        }
     }
 }
