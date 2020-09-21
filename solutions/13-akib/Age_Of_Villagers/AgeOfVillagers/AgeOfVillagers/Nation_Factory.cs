@@ -12,6 +12,10 @@
             {
                 return new Arab_Factory();
             }
+            else if (Nation_Name == "Egyptian_Kings")
+            {
+                return new Egyptian_Factory();
+            }
 
             return null;
         }
