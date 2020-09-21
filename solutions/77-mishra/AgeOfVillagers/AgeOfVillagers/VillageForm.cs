@@ -117,7 +117,7 @@ namespace AgeOfVillagers
         {
             Nations nations = new Nations(nationtype);
             nationtype = Nation.Text;
-            /*if (nationtype == "Bangladeshi Farmers")
+            if (nationtype == "Bangladeshi Farmers")
             {
                 drawingBoard.BackColor = Color.Green;
             }
@@ -132,7 +132,7 @@ namespace AgeOfVillagers
             else if (nationtype == "Iniut Hunter")
             {
                 drawingBoard.BackColor = Color.White;
-            }*/
+            }
 
         }
     }

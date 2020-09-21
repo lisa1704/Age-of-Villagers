@@ -10,27 +10,27 @@ namespace AgeOfVillagers
     {
        
 
-        public IShape DrawHouse(Point p)
+        public IShape DrawHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new InuitHunterHouse(point);
         }
 
         
 
-        public IShape DrawTree(Point p)
+        public IShape DrawTree(Point point)
         {
-            throw new NotImplementedException();
+            return new NullItems();
         }
 
 
-        public IShape DrawWaterSource(Point p)
+        public IShape DrawWaterSource(Point point)
         {
-            throw new NotImplementedException();
+            return new NullItems();
         }
 
-        public Color PaintTerrain(Point p)
+        public Color PaintTerrain(Point point)
         {
-            throw new NotImplementedException();
+            return Color.White;
         }
 
         /*public Color PaintTerrain(Point p, Panel drawingBoard)

@@ -6,12 +6,22 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunterHouse : IShape
+    class InuitHunterHouse : CompositeShapes
     {
 
-        public void draw(Pen pen, Graphics g)
+        private Point point;
+        
+        public InuitHunterHouse(Point point)
         {
-            throw new NotImplementedException();
+            this.point = point;
+            Point sarc = new Point(point.X + 8, point.Y + 8);
+            Point p1 = new Point(point.X, point.Y + 12);
+            Point p2 = new Point(point.X + 24, point.Y + 12);
+
+            addshapes(new Arc(sarc, 8, 8, 0, -180));
+            addshapes(new Arc(point, 24, 24, 0, -180));
+            addshapes(new Line(p1, p2));
         }
+
     }
 }
