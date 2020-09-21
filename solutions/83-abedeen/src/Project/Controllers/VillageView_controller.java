@@ -1,5 +1,4 @@
 package Project.Controllers;
-
 import Project.Utilities.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,11 +9,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.*;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.*;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
