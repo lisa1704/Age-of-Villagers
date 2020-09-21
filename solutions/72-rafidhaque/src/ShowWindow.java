@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -25,23 +27,10 @@ public class ShowWindow implements IWindow{
         tree = this.nation.getTree();
         water = this.nation.getWater();
         gridOfControls = new GridOfControls(house, tree, water, this.nation.getNationName());
-        this.stateOfComponents = stateOfComponents;
+        this.stateOfComponents = arrayList;
     }
 
     public MouseClickManager mouseClickManager = new MouseClickManager();
-
-
-    public void setNation(INation nation) {
-
-    }
-
-    StateOfComponent stateOfComponent = null;
-
-//    InuitHunters inuitHunters = new InuitHunters(drawSpace);
-//    BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers(drawSpace);
-//    EgyptianKings egyptianKings = new EgyptianKings(drawSpace);
-//    ArabBedouin arabBedouin = new ArabBedouin(drawSpace);
-
 
     public void setDrawSpace(Group drawSpace) {
         this.drawSpace = drawSpace;
@@ -66,20 +55,24 @@ public class ShowWindow implements IWindow{
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                stateOfComponent = mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
+                StateOfComponent stateOfComponent = mouseClickManager.onMousePressed(event, gridOfControls.getNowDrawing());
                 stateOfComponents.add(stateOfComponent);
             }
         });
 
         gridOfControls.newButton.setOnAction(event -> {
-
             ChoiceWindow choiceWindow = new ChoiceWindow();
             Main.mainWindow.setScene(choiceWindow.getDisplay());
+        });
 
-            drawSpace.getChildren().clear();
-            stateOfComponents.clear();
-            Rectangle newRectangle = new Rectangle(drawSpace, 0, 0, 600, 400);
-            newRectangle.draw();
+        gridOfControls.saveButton.setOnAction(event -> {
+            GsonBuilder builder = new GsonBuilder();
+            builder.setPrettyPrinting();
+
+            Gson gson = builder.create();
+
+            String newJsonString = gson.toJson(this.stateOfComponents);
+            System.out.println(newJsonString);
         });
 
         return scene;

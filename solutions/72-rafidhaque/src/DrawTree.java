@@ -1,8 +1,7 @@
-import javafx.scene.Group;
+
 
 public abstract class DrawTree implements IDrawComponent{
     double x, y;
-    Group g;
 
     @Override
     public void setX(double x) {
@@ -12,17 +11,6 @@ public abstract class DrawTree implements IDrawComponent{
     @Override
     public void setY(double y) {
         this.y = y;
-    }
-
-    Rectangle outerArea;
-    public DrawTree(Group g) {
-        this.g = g;
-    }
-
-    @Override
-    public void drawOuterLayer() {
-        outerArea = new Rectangle(g, x, y, x + 16, y + 24);
-        outerArea.draw();
     }
 
     @Override

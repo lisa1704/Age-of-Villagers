@@ -1,12 +1,11 @@
-import javafx.scene.Group;
+import javafx.scene.shape.Shape;
+
+import java.util.ArrayList;
 
 public class NoTree extends DrawTree{
-    public NoTree(Group g) {
-        super(g);
-    }
 
     @Override
-    public void draw() {
-
+    public ArrayList<Shape> draw() {
+        return null;
     }
 }

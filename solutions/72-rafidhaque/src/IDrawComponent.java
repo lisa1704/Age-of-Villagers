@@ -1,12 +1,12 @@
+import javafx.scene.shape.Shape;
 
+import java.util.ArrayList;
 
 public interface IDrawComponent {
 
-    void draw();
+    ArrayList<Shape> draw();
 
     void setX(double x);
 
     void setY(double y);
-
-    void drawOuterLayer();
 }

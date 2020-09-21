@@ -1,9 +1,7 @@
-import javafx.scene.Group;
+
 
 public abstract class DrawWater implements IDrawComponent{
     double x, y, width, height;
-    Group g;
-    Rectangle outerArea;
 
     @Override
     public void setX(double x) {
@@ -15,16 +13,9 @@ public abstract class DrawWater implements IDrawComponent{
         this.y = y;
     }
 
-    public DrawWater(Group g, double width, double height) {
-        this.g = g;
+    public DrawWater(double width, double height) {
         this.width = width;
         this.height = height;
-    }
-
-    @Override
-    public void drawOuterLayer() {
-        outerArea = new Rectangle(g, x, y, x + width, y + height);
-        outerArea.draw();
     }
 
     @Override

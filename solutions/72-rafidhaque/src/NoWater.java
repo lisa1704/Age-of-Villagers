@@ -1,12 +1,14 @@
-import javafx.scene.Group;
+import javafx.scene.shape.Shape;
+
+import java.util.ArrayList;
 
 public class NoWater extends DrawWater{
-    public NoWater(Group g, double width, double height) {
-        super(g, width, height);
+    public NoWater(double width, double height) {
+        super(width, height);
     }
 
     @Override
-    public void draw() {
-
+    public ArrayList<Shape> draw() {
+        return null;
     }
 }

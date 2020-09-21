@@ -1,15 +1,13 @@
-import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
+import javafx.scene.shape.Shape;
 
 public class Circle {
-    Group g;
     Arc arc;
     double x, y, diameter;
 
-    public Circle(Group g, double centerX, double centerY, double diameter) {
-        this.g = g;
+    public Circle(double centerX, double centerY, double diameter) {
         this.x = centerX;
         this.y = centerY;
         this.diameter = diameter;
@@ -19,8 +17,8 @@ public class Circle {
         arc.setType(ArcType.ROUND);
     }
 
-    public void draw() {
-        g.getChildren().addAll(arc);
+    public Shape draw() {
+        return arc;
     }
 
 }

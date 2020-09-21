@@ -1,14 +1,19 @@
-import javafx.scene.Group;
+import javafx.scene.shape.Shape;
+
+import java.util.ArrayList;
 
 public class EgyptianKingsWater extends DrawWater {
-    public EgyptianKingsWater(Group g, int width, int height) {
-        super(g, width, height);
+    public EgyptianKingsWater(int width, int height) {
+        super(width, height);
     }
 
     @Override
-    public void draw() {
-        Circle water = new Circle(g, x + 6, y + 6, 6);
-        drawOuterLayer();
-        water.draw();
+    public ArrayList<Shape> draw() {
+        Circle water = new Circle(x + 6, y + 6, 6);
+
+        ArrayList<Shape> lines = new ArrayList<>();
+        lines.add(water.draw());
+
+        return lines;
     }
 }
