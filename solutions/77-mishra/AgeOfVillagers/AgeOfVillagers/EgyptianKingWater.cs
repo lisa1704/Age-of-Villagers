@@ -6,17 +6,13 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    public class EgyptianKingWater : IShape
+    public class EgyptianKingWater : CompositeShapes
     {
         
         public EgyptianKingWater(Point point)
         {
-            
+            addshapes(new Circle(point, 12, 12));    
         }
-        public void draw(Pen pen, Graphics graphics)
-        {
-
-            
-        }
+        
     }
 }
