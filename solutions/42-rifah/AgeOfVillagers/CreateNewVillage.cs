@@ -29,6 +29,7 @@ namespace AgeOfVillagers
 
         public void villageSaveState() //getting the info from form design
         {
+            myItems.NationName = NationName.Text;
             myItems.VillageName = VillageNametextBox.Text;
             myItems.Tree = this.tree_point;
             myItems.House = this.house_point;
@@ -100,6 +101,7 @@ namespace AgeOfVillagers
 
         public void setSavedVillage(Items myitem)
         {
+            NationName.Text = myitem.NationName;
             VillageNametextBox.Text = myitem.VillageName;
 
             foreach (Point point in myitem.House)

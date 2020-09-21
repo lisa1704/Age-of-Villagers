@@ -65,6 +65,7 @@ namespace AgeOfVillagers
 
     public struct Items
     {
+        public string NationName;
         public string VillageName;
         public List<Point> House;
         public List<Point> Tree;
