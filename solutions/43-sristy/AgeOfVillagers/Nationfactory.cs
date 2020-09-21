@@ -7,19 +7,19 @@ namespace Age_of_villagers
     {
         public INation GetNation(string type)
         {
-            if (type == "Bangladeshi")
+            if (type == "Bangladeshi Farmers")
             {
                 return new Bangladeshi();
             }
-            else if (type == "Egyptian")
+            else if (type == "Egyptian Kings")
             {
                 return new Egyptian();
             }
-            else if (type == "Arab")
+            else if (type == "Arab Beduin")
             {
                 return new Arab();
             }
-            else if (type == "Inuit")
+            else if (type == "Inuit Hunters")
             {
                 return new Inuit();
             }

@@ -11,21 +11,21 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void ArabhouseTest()
         {
-            IObject actual = nationfactory.GetNation("Arab").Draw_house(lptop);
+            IObject actual = nationfactory.GetNation("Arab Beduin").Draw_house(lptop);
             IObject expected = new Arab_house(lptop,16,16);
             actual.Equals(expected);
         }
         [Fact]
         public void ArabtreeTest()
         {
-            IObject actual = nationfactory.GetNation("Arab").Draw_tree(lptop);
+            IObject actual = nationfactory.GetNation("Arab Beduin").Draw_tree(lptop);
             IObject expected = new Arab_tree(lptop,24,16);
             actual.Equals(expected);
         }
         [Fact]
         public void ArabtwatersourceTest()
         {
-            IObject actual = nationfactory.GetNation("Arab").Draw_watersource(lptop);
+            IObject actual = nationfactory.GetNation("Arab Beduin").Draw_watersource(lptop);
             IObject expected = null_obj.Instance;
             actual.Equals(expected);
         }

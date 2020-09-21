@@ -66,15 +66,15 @@
             // 
             this.villagetype.FormattingEnabled = true;
             this.villagetype.Items.AddRange(new object[] {
-            "Bangladeshi",
-            "Egyptian",
-            "Arab",
-            "Inuit"});
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Arab Beduin",
+            "Inuit Hunters"});
             this.villagetype.Location = new System.Drawing.Point(23, 102);
             this.villagetype.Name = "villagetype";
             this.villagetype.Size = new System.Drawing.Size(185, 24);
             this.villagetype.TabIndex = 10;
-            this.villagetype.Text = "Village type";
+            this.villagetype.Text = "Nation";
             this.villagetype.SelectedIndexChanged += new System.EventHandler(this.vallagetype_SelectedIndexChanged);
             // 
             // newvillage
