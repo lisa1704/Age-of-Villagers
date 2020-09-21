@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ArabFactory.cs" />
     <Compile Include="BangladeshFactory.cs" />
+    <Compile Include="Bdhouse.cs" />
     <Compile Include="Bdtree.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="EgyptFactory.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="SaveVillageState.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Tree.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Village.cs" />
