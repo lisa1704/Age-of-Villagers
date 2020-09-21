@@ -13,9 +13,9 @@ namespace Age_of_Villagers
 {
     public partial class Village : Form
     {
-        string ItemNames = "";
-        string village_name = "";
-        string village_type = "";
+        string ItemNames ;
+        string village_name ;
+        string village_type ;
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
@@ -24,6 +24,14 @@ namespace Age_of_Villagers
         {
             InitializeComponent();
         }
+
+
+        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            village_type = NationName.Text;
+            drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
+        }
+
 
         private void CreateNewVillage_Load(object sender, EventArgs e)
         {
@@ -42,17 +50,29 @@ namespace Age_of_Villagers
 
         private void treeButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "Tree";
+            if (treeButton.Checked == true)
+            {
+                ItemNames = "Tree";
+                Console.WriteLine(ItemNames);
+            }      
         }
 
         private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "House";
+            if (houseButton.Checked == true)
+            {
+                ItemNames = "House";
+                Console.WriteLine(ItemNames);
+            }
         }
 
         private void waterSourceButton_CheckedChanged(object sender, EventArgs e)
         {
-            ItemNames = "WaterSource";
+            if (waterSourceButton.Checked == true)
+            {
+                ItemNames = "Water Source";
+                Console.WriteLine(ItemNames);
+            }
         }
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
@@ -65,8 +85,8 @@ namespace Age_of_Villagers
             house_point.Clear();
             tree_point.Clear();
             waterSource_point.Clear();
-            drawingPanel.Refresh();
-            NationName.ResetText();
+            NationName.Text = "Select Nation";
+            drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
             MessageBox.Show("Panel is ready for new village to be created");
         }
 
@@ -116,13 +136,6 @@ namespace Age_of_Villagers
 
             drawingPanel.Invalidate();
         }
-
-        private void NationName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            village_type = NationName.Text;
-            drawingPanel.BackColor = nationfactory.GetNation(village_type).BackgroundColor();
-        }
-
 
     }
 }

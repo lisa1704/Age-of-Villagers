@@ -33,9 +33,5 @@ namespace Age_of_Villagers.ArabBedouin
         }
 
 
-        Color INation.BackgroundColor()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

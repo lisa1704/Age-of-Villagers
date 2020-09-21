@@ -63,7 +63,7 @@ namespace Age_of_Villagers
             this.drawingPanel.BackColor = System.Drawing.SystemColors.Window;
             this.drawingPanel.ForeColor = System.Drawing.Color.DarkCyan;
             this.drawingPanel.Location = new System.Drawing.Point(4, 0);
-            this.drawingPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drawingPanel.Margin = new System.Windows.Forms.Padding(4);
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(750, 500);
             this.drawingPanel.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace Age_of_Villagers
             // saveVillagebutton
             // 
             this.saveVillagebutton.Location = new System.Drawing.Point(779, 379);
-            this.saveVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveVillagebutton.Margin = new System.Windows.Forms.Padding(4);
             this.saveVillagebutton.Name = "saveVillagebutton";
             this.saveVillagebutton.Size = new System.Drawing.Size(200, 38);
             this.saveVillagebutton.TabIndex = 8;
@@ -95,7 +95,7 @@ namespace Age_of_Villagers
             // newVillagebutton
             // 
             this.newVillagebutton.Location = new System.Drawing.Point(779, 333);
-            this.newVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newVillagebutton.Margin = new System.Windows.Forms.Padding(4);
             this.newVillagebutton.Name = "newVillagebutton";
             this.newVillagebutton.Size = new System.Drawing.Size(200, 38);
             this.newVillagebutton.TabIndex = 9;
@@ -106,7 +106,7 @@ namespace Age_of_Villagers
             // openVillagebutton
             // 
             this.openVillagebutton.Location = new System.Drawing.Point(779, 425);
-            this.openVillagebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openVillagebutton.Margin = new System.Windows.Forms.Padding(4);
             this.openVillagebutton.Name = "openVillagebutton";
             this.openVillagebutton.Size = new System.Drawing.Size(200, 38);
             this.openVillagebutton.TabIndex = 10;
@@ -118,7 +118,7 @@ namespace Age_of_Villagers
             // 
             this.treeButton.AutoSize = true;
             this.treeButton.Location = new System.Drawing.Point(969, 197);
-            this.treeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeButton.Margin = new System.Windows.Forms.Padding(4);
             this.treeButton.Name = "treeButton";
             this.treeButton.Size = new System.Drawing.Size(68, 29);
             this.treeButton.TabIndex = 11;
@@ -131,7 +131,7 @@ namespace Age_of_Villagers
             // 
             this.houseButton.AutoSize = true;
             this.houseButton.Location = new System.Drawing.Point(969, 234);
-            this.houseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.houseButton.Margin = new System.Windows.Forms.Padding(4);
             this.houseButton.Name = "houseButton";
             this.houseButton.Size = new System.Drawing.Size(88, 29);
             this.houseButton.TabIndex = 12;
@@ -144,7 +144,7 @@ namespace Age_of_Villagers
             // 
             this.waterSourceButton.AutoSize = true;
             this.waterSourceButton.Location = new System.Drawing.Point(969, 271);
-            this.waterSourceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.waterSourceButton.Margin = new System.Windows.Forms.Padding(4);
             this.waterSourceButton.Name = "waterSourceButton";
             this.waterSourceButton.Size = new System.Drawing.Size(142, 29);
             this.waterSourceButton.TabIndex = 13;
@@ -162,10 +162,12 @@ namespace Age_of_Villagers
             "Egyptian Kings",
             "Inuit Hunters"});
             this.NationName.Location = new System.Drawing.Point(949, 138);
-            this.NationName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NationName.Margin = new System.Windows.Forms.Padding(4);
             this.NationName.Name = "NationName";
             this.NationName.Size = new System.Drawing.Size(249, 33);
             this.NationName.TabIndex = 14;
+            this.NationName.SelectedIndexChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
+            this.NationName.BackColorChanged += new System.EventHandler(this.NationName_SelectedIndexChanged);
             // 
             // VillageNametextBox
             // 
@@ -173,11 +175,10 @@ namespace Age_of_Villagers
             this.VillageNametextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.VillageNametextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.VillageNametextBox.Location = new System.Drawing.Point(949, 96);
-            this.VillageNametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VillageNametextBox.Margin = new System.Windows.Forms.Padding(4);
             this.VillageNametextBox.Name = "VillageNametextBox";
             this.VillageNametextBox.Size = new System.Drawing.Size(199, 34);
             this.VillageNametextBox.TabIndex = 15;
-            this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
             // 
             // label1
             // 
@@ -223,7 +224,7 @@ namespace Age_of_Villagers
             this.Controls.Add(this.drawingPanel);
             this.Controls.Add(this.AgeOfVillagers);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Village";
             this.Text = "Age Of Villagers";
             this.Load += new System.EventHandler(this.CreateNewVillage_Load);
