@@ -31,11 +31,11 @@ public class VillageView_controller implements Initializable {
             public void handle(MouseEvent event) {
                 double x1 = event.getSceneX();
                 double y1 = event.getSceneY();
-//                if(flag == "Tree"){
-//                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
-//                    DrawShape(tree);
-//                }
-                if (flag == "House"){
+                if(flag == "Tree"){
+                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
+                    DrawShape(tree);
+                }
+                else if (flag == "House"){
                     ArrayList<Shape> house = nation.drawHouse(x1,y1);
                     DrawShape(house);
                 }
