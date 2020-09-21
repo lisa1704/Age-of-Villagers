@@ -13,24 +13,27 @@ namespace AgeOfVillagers
         private IGames game;
         private Label villageNameLabel;
         private string selectedNation;
-        List<IItem> itemList;
         private State previouslySavedState;
         private Graphics graphics;
         private Pen pen;
 
-        public OpenVillage(IGames game, Label villageNameLabel, string selectedNation, State previouslySavedState, Graphics graphics, Pen pen)
+        
+
+        public OpenVillage(IGames game, Label villageNameLabel, string selectedNation, Graphics graphics, Pen pen)
         {
             this.game = game;
             this.villageNameLabel = villageNameLabel;
             this.selectedNation = selectedNation;
-            this.previouslySavedState = previouslySavedState;
+
             this.graphics = graphics;
             this.pen = pen;
         }
 
-        public void execute()
+        public State execute()
         {
-            game.openVillage(selectedNation, villageNameLabel,previouslySavedState, graphics, pen);
+            
+           return game.openVillage(selectedNation, villageNameLabel, graphics, pen);
+            //MessageBox.Show(previouslySavedState.VillageName);
         }
     }
 }

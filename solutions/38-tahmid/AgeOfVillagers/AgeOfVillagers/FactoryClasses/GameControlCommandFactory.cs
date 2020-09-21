@@ -22,10 +22,10 @@ namespace AgeOfVillagers
             return new SaveVillage(game, sVillageName, drawnItemsInfoList);
         }
 
-        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,State previouslySavedState,Graphics graphics, Pen pen)
+        public GameControlCommand GetGameControlCommand(String hint, IGames game, Label villageNameLabel, string selectedNation,Graphics graphics, Pen pen)
         {
 
-            return new OpenVillage(game,villageNameLabel,selectedNation,previouslySavedState, graphics, pen);
+            return new OpenVillage(game, villageNameLabel, selectedNation, graphics, pen);
         }
 
     }

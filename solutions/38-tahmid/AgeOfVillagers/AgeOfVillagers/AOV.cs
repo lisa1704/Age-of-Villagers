@@ -14,43 +14,58 @@ namespace AgeOfVillagers
 {
     class AOV : IGames
     {
-        private List<DrawnItemsInformation> drawnItemsInformationList;
+        
         private IElementOpener village_itemOpener, village_name_opener;
         private JsonConversion jsonToObejct;
         private JsonConversion objectToJson;
         private ElementOpenerFactory elementOpenerFactory;
-        public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
+        private State gameState;
+
+        
+
+        public State createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName)
         {
             village_name.Text = sVillageName;
             drawing_panel.Invalidate();
+
+            return gameState;
         }
 
-        public void openVillage(string selectedNation, Label labelVillageName, State previouslySavedState, Graphics graphics, Pen pen)
+        public State openVillage(string selectedNation, Label labelVillageName,  Graphics graphics, Pen pen)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "age of villagers file|*.aov";
             openFileDialog.Title = "open village";
             openFileDialog.ShowDialog();
             //exception needed
-            var dataString = System.IO.File.ReadAllText(openFileDialog.FileName);
-            
+            if (openFileDialog.FileName != "")
+            {
+                var dataString = System.IO.File.ReadAllText(openFileDialog.FileName);
 
-            string json = dataString;
-            jsonToObejct = new JsonConversion();
-            jsonToObejct.deserialize(json);
 
-            previouslySavedState = jsonToObejct.deserialize(json);
-            
-            elementOpenerFactory = new ElementOpenerFactory();
-            village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, labelVillageName, previouslySavedState.VillageName);
-            village_name_opener.displayElements();
-            village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, previouslySavedState.DrawnItemsInformationList,graphics,pen);
-            village_itemOpener.displayElements();
-            
-           
+                string json = dataString;
+                jsonToObejct = new JsonConversion();
+                jsonToObejct.deserialize(json);
+
+                gameState = jsonToObejct.deserialize(json);
+
+                elementOpenerFactory = new ElementOpenerFactory();
+
+                village_name_opener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_NAME_OPENER, labelVillageName, gameState.VillageName);
+                village_name_opener.displayElements();
+                village_itemOpener = elementOpenerFactory.GetElementOpener(Constants.VILLAGE_ITEM_OPENER, selectedNation, gameState.DrawnItemsInformationList, graphics, pen);
+                village_itemOpener.displayElements();
+
+                return gameState;
+            }
+            else
+            {
+                gameState = new State { VillageName= "",DrawnItemsInformationList= new List<DrawnItemsInformation>() };
+                return gameState;
+            }
         }
 
-        public void saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName)
+        public State saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName)
         {
             
 
@@ -70,7 +85,7 @@ namespace AgeOfVillagers
             objectToJson = new JsonConversion();
             objectToJson.serialize(currentState, saveFileDialog1.FileName);
 
-           
+            return currentState;
         }
     }
 }

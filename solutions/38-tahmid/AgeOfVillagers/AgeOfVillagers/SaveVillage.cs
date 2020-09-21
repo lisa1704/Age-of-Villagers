@@ -1,7 +1,9 @@
 ﻿using AgeOfVillagers.Interface;
+using AgeOfVillagers.Model_Class_Folder;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -19,9 +21,11 @@ namespace AgeOfVillagers
             this.drawnItemsInfoList = drawnItemsInfoList;
         }
 
-        public void execute()
+        public State execute()
         {
-            game.saveVillage(drawnItemsInfoList, sVillageName);
+            return game.saveVillage(drawnItemsInfoList, sVillageName);
         }
+
+       
     }
 }

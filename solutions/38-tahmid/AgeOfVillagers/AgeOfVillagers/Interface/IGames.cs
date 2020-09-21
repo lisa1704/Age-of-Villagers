@@ -10,8 +10,10 @@ namespace AgeOfVillagers
 {
     interface IGames
     {
-        public void createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName);
-        public void saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName);
-        public void openVillage(String selectedNation, Label villageName,State previouslySavedState, Graphics graphics, Pen pen);
+
+        
+        public State createVillage(Panel drawing_panel, System.Windows.Forms.Label village_name,string sVillageName);
+        public State saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName);
+        public State openVillage(String selectedNation, Label villageName, Graphics graphics, Pen pen);
     }
 }

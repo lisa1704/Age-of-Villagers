@@ -34,8 +34,9 @@ namespace AgeOfVillagers
         IGames game;
 
         List<IItem> itemList;
+        Label l;
 
-        State previouslySavedState;
+        
 
         InputValidation inputValidation;
 
@@ -78,7 +79,7 @@ namespace AgeOfVillagers
                 return;
             }
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, villageName_inputField.Text, drawnItemsInfosList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, drawnItemsInfosList);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
@@ -127,16 +128,17 @@ namespace AgeOfVillagers
                 return;
             }
 
-            previouslySavedState = new State();
 
+            State previouslySavedState=new State();
             game = gameFactory.getGame();
-            
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game,  village_name_label, selectedNationforOpening,previouslySavedState,g, pen);
+
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.OPEN_KEY, game, village_name_label, selectedNationforOpening, g, pen);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
 
-            gameKeyInvoker.click();
-            //itemlist
-
+            previouslySavedState = gameKeyInvoker.click();
+           
+            drawnItemsInfosList = previouslySavedState.DrawnItemsInformationList;
+            
             selectedNationforOpening = "";
 
 

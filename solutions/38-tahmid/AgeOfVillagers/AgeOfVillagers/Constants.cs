@@ -68,7 +68,7 @@ namespace AgeOfVillagers
         public static string ARAB_NATION = "ARAB BEDOUIN";
         public static string EGYPT_NATION = "EGYPTIAN KING";
         public static string INUIT_NATION = "Inuit Hunters";
-        public static string DEFAULT_NATION = "Nation";
+        public static string DEFAULT_NATION = "";
 
         //Shape hints
         public static string BDTREE_HINT = "Bangladeshi_Farmer" + ",TREE";
