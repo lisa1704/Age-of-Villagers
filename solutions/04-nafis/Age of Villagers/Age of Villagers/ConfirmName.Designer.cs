@@ -53,9 +53,9 @@
             this.NationCombo.Font = new System.Drawing.Font("Californian FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NationCombo.FormattingEnabled = true;
             this.NationCombo.Items.AddRange(new object[] {
-            "Bangladeshi Farmers,",
-            "Arab Bedouin,",
-            "Egyptian Kings,",
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
             "Inuit Hunters"});
             this.NationCombo.Location = new System.Drawing.Point(100, 159);
             this.NationCombo.Name = "NationCombo";
