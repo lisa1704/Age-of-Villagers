@@ -51,6 +51,7 @@
     <Compile Include="BDHouse.cs" />
     <Compile Include="BDTree.cs" />
     <Compile Include="BDWaterSource.cs" />
+    <Compile Include="Circle.cs" />
     <Compile Include="ConcreteItems.cs" />
     <Compile Include="ConcreteNation.cs" />
     <Compile Include="EgyptianKings.cs" />
@@ -61,6 +62,8 @@
     <Compile Include="ITree.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="Line.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="VillageMain.cs">
       <SubType>Form</SubType>
     </Compile>
