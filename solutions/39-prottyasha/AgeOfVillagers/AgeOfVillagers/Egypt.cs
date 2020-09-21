@@ -20,6 +20,7 @@ namespace AgeOfVillagers
             {
                 return new EgyptRiver();
             }
+            return null;
         }
     }
 }
