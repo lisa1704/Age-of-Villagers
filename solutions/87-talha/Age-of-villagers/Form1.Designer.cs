@@ -116,6 +116,7 @@
             this.Age_of_villagers.Size = new System.Drawing.Size(158, 24);
             this.Age_of_villagers.TabIndex = 6;
             this.Age_of_villagers.Text = "Age of Villagers";
+            this.Age_of_villagers.Click += new System.EventHandler(this.Age_of_villagers_Click);
             // 
             // VIllage_name
             // 
@@ -128,6 +129,11 @@
             // Nation_name
             // 
             this.Nation_name.FormattingEnabled = true;
+            this.Nation_name.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Beduins",
+            "Inuits Hunters",
+            "Egyptian Kings"});
             this.Nation_name.Location = new System.Drawing.Point(661, 108);
             this.Nation_name.Name = "Nation_name";
             this.Nation_name.Size = new System.Drawing.Size(121, 21);
@@ -142,6 +148,7 @@
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Village Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -151,6 +158,7 @@
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nation";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
