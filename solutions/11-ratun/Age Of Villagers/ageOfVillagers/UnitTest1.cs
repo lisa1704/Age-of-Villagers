@@ -7,9 +7,10 @@ namespace ageOfVillagers
     public class UnitTest1
     {
         [TestMethod]
-        public void test1()
+        public void Test()
         {
-            Assert.AreEqual(1, 1);
+            MenuForm menuform = new MenuForm();
+            Assert.AreEqual("Drawing a circle. Drawing a Rectangle. ", menuform.testShape("Bangladeshi Farmer","tree",0,0));
         }
     }
 }

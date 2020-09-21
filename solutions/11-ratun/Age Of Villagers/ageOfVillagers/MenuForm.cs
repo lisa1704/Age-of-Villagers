@@ -51,7 +51,7 @@ namespace ageOfVillagers
 
         public void Water_Click(object sender, EventArgs e)
         {
-            currentselect = "house";
+            currentselect = "water";
             text += "Adding new Water Source. ";
         }
 
@@ -100,11 +100,14 @@ namespace ageOfVillagers
             return text;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+        public string testShape(string currentNationName, string currentselect, int x, int y) { 
+        //private void panel2_Paint(object sender, PaintEventArgs e)
+        //{
             Shape nation = NationFactory.GetNation(currentNationName);
             IShape shape = nation.GetItem(currentselect);
-            shape.draw(Cursor.Position.X, Cursor.Position.Y);
+            //shape.draw(Cursor.Position.X, Cursor.Position.Y);
+            return shape.draw(x, y);
         }
+
     }
 }
