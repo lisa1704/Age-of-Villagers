@@ -95,7 +95,7 @@ namespace AgeOfVillagers
             nation = (INation)NationlistBox.SelectedItem;
             if(village!= null)
             {
-                village.changeVillageNation(nation);
+                village.ChangeVillageNation(nation);
                 village.initiate(g, p);
             }
         }
@@ -142,7 +142,7 @@ namespace AgeOfVillagers
                 {
                     if(saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        VillageState state = village.createState();
+                        VillageState state = village.CreateState();
                         string jsonString = JsonConvert.SerializeObject(state, Formatting.Indented);
                         File.WriteAllText(saveFileDialog.FileName, jsonString);
                         saveFileDialog.Dispose();

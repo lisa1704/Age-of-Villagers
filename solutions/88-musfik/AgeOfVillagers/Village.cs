@@ -20,48 +20,7 @@ namespace AgeOfVillagers
             house_items = new List<Point>();
             waterResource_items = new List<Point>();
         }
-        public void changeVillageNation(INation nation)
-        {
-            this.nation = nation;
-        }
-        public string GetVillageName()
-        {
-            return villageName;
-        }
-        public void SetVillageName(string value)
-        {
-            villageName = value;
-        }
 
-        internal void SetState(VillageState state)
-        {
-            villageName = state.villageName;
-            tree_items = state.trees;
-            house_items = state.houses;
-            waterResource_items = state.watersources;
-        }
-        internal void initiate(Graphics g, Pen p)
-        {
-            g.Clear(nation.getTerrainColor());
-            
-            foreach (var point in tree_items)
-            { 
-                DrawItem(g, p, point, nation.getTree(point));
-            }
-            foreach (var point in house_items)
-            {
-                DrawItem(g, p, point, nation.getHouse(point));
-            }
-            foreach (var point in waterResource_items)
-            {
-                DrawItem(g, p, point, nation.getWaterResource(point));
-            }
-        }
-        internal void DrawItem(Graphics g, Pen p, Point point,IVillageItem item)
-        {
-            IShape shape = item.getItemShape(point);
-            shape.Draw(g, p);
-        }
         internal void AddTree(Graphics g, Pen p, Point point)
         {
             var tree = nation.getTree(point);
@@ -80,11 +39,58 @@ namespace AgeOfVillagers
             waterResource_items.Add(point);
             DrawItem(g, p, point, water);
         }
-        internal VillageState createState()
+
+        private void DrawItem(Graphics g, Pen p, Point point, IVillageItem item)
+        {
+            IShape shape = item.getItemShape(point);
+            shape.Draw(g, p);
+        }
+
+        public string GetVillageName()
+        {
+            return villageName;
+        }
+        public void SetVillageName(string value)
+        {
+            villageName = value;
+        }
+
+        public void ChangeVillageNation(INation nation)
+        {
+            this.nation = nation;
+        }
+
+        internal void initiate(Graphics g, Pen p)
+        {
+            g.Clear(nation.getTerrainColor());
+            
+            foreach (var point in tree_items)
+            { 
+                DrawItem(g, p, point, nation.getTree(point));
+            }
+            foreach (var point in house_items)
+            {
+                DrawItem(g, p, point, nation.getHouse(point));
+            }
+            foreach (var point in waterResource_items)
+            {
+                DrawItem(g, p, point, nation.getWaterResource(point));
+            }
+        }
+
+        internal void SetState(VillageState state)
+        {
+            villageName = state.villageName;
+            tree_items = state.trees;
+            house_items = state.houses;
+            waterResource_items = state.watersources;
+        }
+        internal VillageState CreateState()
         {
             return new VillageState(villageName, tree_items, house_items, waterResource_items);
         }
     }
+
 
     internal class VillageState
     {
