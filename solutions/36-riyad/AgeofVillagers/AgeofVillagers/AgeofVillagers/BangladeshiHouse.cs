@@ -10,6 +10,7 @@ namespace AgeofVillagers
         public BangladeshiHouse(Point top, Point leftTop, Point RightBottom)
         {
             AddComponents(new RectangleShape(leftTop, RightBottom));
+            AddComponents(new TriangleShape(top, leftTop, RightBottom));
         }
     }
 }
