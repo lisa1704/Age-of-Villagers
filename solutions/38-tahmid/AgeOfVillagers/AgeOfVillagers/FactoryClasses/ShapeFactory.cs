@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ShapeFactory
+    public class ShapeFactory
     {
         public  Shapes GetShape(Graphics graphics, Pen pen, Point startingPoint,string hint)
         {
