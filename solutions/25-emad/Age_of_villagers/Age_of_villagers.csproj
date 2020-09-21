@@ -48,7 +48,10 @@
   <ItemGroup>
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="ArabBedouin.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="NullvalueHandler.cs" />
+    <Compile Include="Rectangular.cs" />
+    <Compile Include="Triangle.cs" />
     <Compile Include="village.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="Inuit.cs" />

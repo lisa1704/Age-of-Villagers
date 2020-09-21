@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Age_of_villagers
 {
-    public interface IShape
+    class Line : IShape
     {
-         void Draw(Graphics g, Pen p);
-       
+         Point p1;
+         Point p2;
+
     }
 }
