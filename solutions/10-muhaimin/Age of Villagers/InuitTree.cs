@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class InuitTree : ITree
+    public class InuitTree : ITree
     {
         public void drawTree(Axis axes, Panel drawingSpace)
         {

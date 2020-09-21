@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Age_of_Villagers
 {
-    abstract class AbstractPainter : IPainter
+    public abstract class AbstractPainter : IPainter
     {
         protected Panel drawingSpace;
         protected IHouse house;
@@ -35,6 +35,20 @@ namespace Age_of_Villagers
         public void paintTerrain()
         {
             drawingSpace.BackColor = color;
+        }
+        public IHouse getHouseType()
+        {
+            return this.house;
+        }
+
+        public ITree getTreeType()
+        {
+            return this.tree;
+        }
+
+        public IWaterSource getWSourceType()
+        {
+            return this.wSource;
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class EgyptianPainter : AbstractPainter
+    public class EgyptianPainter : AbstractPainter
     {
         public EgyptianPainter(Panel panel) : base(panel)
         {

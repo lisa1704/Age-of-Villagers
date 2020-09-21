@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class EgyptianTree : ITree
+    public class EgyptianTree : ITree
     {
         public void drawTree(Axis axes, Panel drawingSpace)
         {

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class BangladeshiWaterSource : IWaterSource
+    public class BangladeshiWaterSource : IWaterSource
     {
         public void drawWaterSource(Axis axes, Panel drawingSpace)
         {

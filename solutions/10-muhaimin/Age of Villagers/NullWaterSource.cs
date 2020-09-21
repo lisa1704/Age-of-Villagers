@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class NullWaterSource : IWaterSource
+    public class NullWaterSource : IWaterSource
     {
         public void drawWaterSource(Axis axes, Panel drawingSpace)
         {

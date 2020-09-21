@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Axis
+    public class Axis
     {
         public Axis(int x, int y)
         {

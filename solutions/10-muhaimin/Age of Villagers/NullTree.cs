@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class NullTree : ITree
+    public class NullTree : ITree
     {
         public void drawTree(Axis axes, Panel drawingSpace)
         {

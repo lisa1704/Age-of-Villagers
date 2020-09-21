@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Village
+    public class Village
     {
         public string villageName = "untitled";
         public List<Axis> houses = new List<Axis>();
