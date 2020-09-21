@@ -1,4 +1,6 @@
-﻿namespace Age_of_Villagers
+﻿using System;
+
+namespace Age_of_Villagers
 {
     partial class Village_Editor_Window
     {
@@ -39,9 +41,9 @@
             this.drawing_space = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Menu_bar = new System.Windows.Forms.Panel();
-            this.Village_Name_textBox = new System.Windows.Forms.TextBox();
-            this.comboBox_NationList = new System.Windows.Forms.ComboBox();
             this.label_ageOfVillagers = new System.Windows.Forms.Label();
+            this.comboBox_NationList = new System.Windows.Forms.ComboBox();
+            this.Village_Name_textBox = new System.Windows.Forms.TextBox();
             this.Menu_bar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.New_village_button.TabIndex = 0;
             this.New_village_button.Text = "New";
             this.New_village_button.UseVisualStyleBackColor = true;
-            this.New_village_button.Click += new System.EventHandler(this.button1_Click);
+            this.New_village_button.Click += new System.EventHandler(this.New_Village_Click);
             // 
             // radiobutton_waterSource
             // 
@@ -61,35 +63,36 @@
             this.radiobutton_waterSource.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.radiobutton_waterSource.Location = new System.Drawing.Point(66, 242);
             this.radiobutton_waterSource.Name = "radiobutton_waterSource";
-            this.radiobutton_waterSource.Size = new System.Drawing.Size(91, 17);
+            this.radiobutton_waterSource.Size = new System.Drawing.Size(132, 24);
             this.radiobutton_waterSource.TabIndex = 1;
             this.radiobutton_waterSource.TabStop = true;
             this.radiobutton_waterSource.Text = "Water Source";
             this.radiobutton_waterSource.UseVisualStyleBackColor = true;
-            this.radiobutton_waterSource.CheckedChanged += new System.EventHandler(this.radiobutton_waterSource_CheckedChanged);
+            this.radiobutton_waterSource.CheckedChanged += new System.EventHandler(this.WaterSource_Clicked);
             // 
             // radioButton_tree
             // 
             this.radioButton_tree.AutoSize = true;
             this.radioButton_tree.Location = new System.Drawing.Point(35, 219);
             this.radioButton_tree.Name = "radioButton_tree";
-            this.radioButton_tree.Size = new System.Drawing.Size(47, 17);
+            this.radioButton_tree.Size = new System.Drawing.Size(66, 24);
             this.radioButton_tree.TabIndex = 2;
             this.radioButton_tree.TabStop = true;
             this.radioButton_tree.Text = "Tree";
             this.radioButton_tree.UseVisualStyleBackColor = true;
+            this.radioButton_tree.CheckedChanged += new System.EventHandler(this.Tree_Clicked);
             // 
             // radioButton_House
             // 
             this.radioButton_House.AutoSize = true;
             this.radioButton_House.Location = new System.Drawing.Point(117, 219);
             this.radioButton_House.Name = "radioButton_House";
-            this.radioButton_House.Size = new System.Drawing.Size(56, 17);
+            this.radioButton_House.Size = new System.Drawing.Size(81, 24);
             this.radioButton_House.TabIndex = 3;
             this.radioButton_House.TabStop = true;
             this.radioButton_House.Text = "House";
             this.radioButton_House.UseVisualStyleBackColor = true;
-            this.radioButton_House.CheckedChanged += new System.EventHandler(this.radioButton_House_CheckedChanged);
+            this.radioButton_House.CheckedChanged += new System.EventHandler(this.House_Click);
             // 
             // Open_village_button
             // 
@@ -99,7 +102,7 @@
             this.Open_village_button.TabIndex = 4;
             this.Open_village_button.Text = "Open";
             this.Open_village_button.UseVisualStyleBackColor = true;
-            this.Open_village_button.Click += new System.EventHandler(this.button2_Click);
+            this.Open_village_button.Click += new System.EventHandler(this.Open_Village_Click);
             // 
             // Save_village_button
             // 
@@ -109,13 +112,14 @@
             this.Save_village_button.TabIndex = 5;
             this.Save_village_button.Text = "Save";
             this.Save_village_button.UseVisualStyleBackColor = true;
+            this.Save_village_button.Click += new System.EventHandler(this.Save_Village_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(747, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -126,9 +130,11 @@
             this.drawing_space.Name = "drawing_space";
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 7;
+            this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -148,14 +154,16 @@
             this.Menu_bar.Size = new System.Drawing.Size(213, 400);
             this.Menu_bar.TabIndex = 9;
             // 
-            // Village_Name_textBox
+            // label_ageOfVillagers
             // 
-            this.Village_Name_textBox.Location = new System.Drawing.Point(35, 106);
-            this.Village_Name_textBox.Name = "Village_Name_textBox";
-            this.Village_Name_textBox.Size = new System.Drawing.Size(97, 20);
-            this.Village_Name_textBox.TabIndex = 6;
-            this.Village_Name_textBox.Text = "Village Name";
-            this.Village_Name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label_ageOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ageOfVillagers.Location = new System.Drawing.Point(56, 20);
+            this.label_ageOfVillagers.Name = "label_ageOfVillagers";
+            this.label_ageOfVillagers.Size = new System.Drawing.Size(130, 26);
+            this.label_ageOfVillagers.TabIndex = 8;
+            this.label_ageOfVillagers.Text = "Age of Villagers";
+            this.label_ageOfVillagers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_ageOfVillagers.Click += new System.EventHandler(this.label_ageOfVillagers_Click);
             // 
             // comboBox_NationList
             // 
@@ -167,20 +175,18 @@
             "Inuit Hunters"});
             this.comboBox_NationList.Location = new System.Drawing.Point(35, 146);
             this.comboBox_NationList.Name = "comboBox_NationList";
-            this.comboBox_NationList.Size = new System.Drawing.Size(97, 21);
+            this.comboBox_NationList.Size = new System.Drawing.Size(97, 28);
             this.comboBox_NationList.TabIndex = 7;
             this.comboBox_NationList.Text = " Nation";
             // 
-            // label_ageOfVillagers
+            // Village_Name_textBox
             // 
-            this.label_ageOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ageOfVillagers.Location = new System.Drawing.Point(56, 20);
-            this.label_ageOfVillagers.Name = "label_ageOfVillagers";
-            this.label_ageOfVillagers.Size = new System.Drawing.Size(130, 26);
-            this.label_ageOfVillagers.TabIndex = 8;
-            this.label_ageOfVillagers.Text = "Age of Villagers";
-            this.label_ageOfVillagers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label_ageOfVillagers.Click += new System.EventHandler(this.label_ageOfVillagers_Click);
+            this.Village_Name_textBox.Location = new System.Drawing.Point(35, 106);
+            this.Village_Name_textBox.Name = "Village_Name_textBox";
+            this.Village_Name_textBox.Size = new System.Drawing.Size(97, 26);
+            this.Village_Name_textBox.TabIndex = 6;
+            this.Village_Name_textBox.Text = "Village Name";
+            this.Village_Name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Village_Editor_Window
             // 
@@ -195,6 +201,10 @@
             this.PerformLayout();
 
         }
+
+
+
+
 
         #endregion
 

@@ -17,12 +17,17 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void New_Village_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Save_Village_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Open_Village_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,17 +37,27 @@ namespace Age_of_Villagers
 
         }
 
-        private void radioButton_House_CheckedChanged(object sender, EventArgs e)
+        private void House_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radiobutton_waterSource_CheckedChanged(object sender, EventArgs e)
+        private void Tree_Clicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void WaterSource_Clicked(object sender, EventArgs e)
         {
 
         }
 
         private void label_ageOfVillagers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drawing_space_Paint(object sender, PaintEventArgs e)
         {
 
         }
