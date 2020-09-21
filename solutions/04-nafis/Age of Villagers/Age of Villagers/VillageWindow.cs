@@ -70,6 +70,7 @@ namespace Age_of_Villagers
         {
             Form VillageName = new ConfirmName();
             VillageName.Show();
+            VillageDrawing.Invalidate();
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
