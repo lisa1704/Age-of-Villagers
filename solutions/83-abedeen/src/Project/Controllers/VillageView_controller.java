@@ -39,10 +39,10 @@ public class VillageView_controller implements Initializable {
                     ArrayList<Shape> house = nation.drawHouse(x1,y1);
                     DrawShape(house);
                 }
-//                else if(flag == "WaterSource"){
-//                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
-//                    DrawShape(WaterBody);
-//                }
+                else if(flag == "WaterSource"){
+                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
+                    DrawShape(WaterBody);
+                }
             }
         });
     }

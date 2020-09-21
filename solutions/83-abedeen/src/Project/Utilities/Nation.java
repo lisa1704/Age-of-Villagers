@@ -14,6 +14,7 @@ public class Nation {
         if(nation_type == "Bangladeshi Farmers"){
             this.house = new Bangladeshi_House();
             this.tree = new Bangladeshi_Tree();
+            this.water_body = new Bangladeshi_Waterbody();
         }
     }
 
