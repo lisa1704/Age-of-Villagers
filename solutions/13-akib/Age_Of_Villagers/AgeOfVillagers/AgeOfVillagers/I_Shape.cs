@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace AgeOfVillagers
-
-public class I_Shape
+﻿namespace AgeOfVillagers
 {
-	I_Shape Get_Shape(string shape);
+    internal interface I_Shape
+    {
+        string Draw(int x, int y);
+    }
 }

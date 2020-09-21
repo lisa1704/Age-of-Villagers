@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Nation = new System.Windows.Forms.TextBox();
+            this.VillageName = new System.Windows.Forms.TextBox();
             this.OpenVillageButton = new System.Windows.Forms.Button();
             this.NewVillageButton = new System.Windows.Forms.Button();
             this.SaveVillageButton = new System.Windows.Forms.Button();
@@ -37,8 +39,6 @@
             this.HouseButton = new System.Windows.Forms.Button();
             this.TreeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.VillageName = new System.Windows.Forms.TextBox();
-            this.Nation = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -64,6 +65,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 400);
             this.panel2.TabIndex = 1;
+            // 
+            // Nation
+            // 
+            this.Nation.Location = new System.Drawing.Point(18, 82);
+            this.Nation.Name = "Nation";
+            this.Nation.Size = new System.Drawing.Size(149, 26);
+            this.Nation.TabIndex = 8;
+            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
+            // 
+            // VillageName
+            // 
+            this.VillageName.Location = new System.Drawing.Point(18, 50);
+            this.VillageName.Name = "VillageName";
+            this.VillageName.Size = new System.Drawing.Size(149, 26);
+            this.VillageName.TabIndex = 7;
+            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
             // 
             // OpenVillageButton
             // 
@@ -135,22 +152,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Age Of Villagers";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // VillageName
-            // 
-            this.VillageName.Location = new System.Drawing.Point(18, 50);
-            this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(149, 26);
-            this.VillageName.TabIndex = 7;
-            this.VillageName.TextChanged += new System.EventHandler(this.VillageName_TextChanged);
-            // 
-            // Nation
-            // 
-            this.Nation.Location = new System.Drawing.Point(18, 82);
-            this.Nation.Name = "Nation";
-            this.Nation.Size = new System.Drawing.Size(149, 26);
-            this.Nation.TabIndex = 8;
-            this.Nation.TextChanged += new System.EventHandler(this.Nation_TextChanged);
             // 
             // Form1
             // 

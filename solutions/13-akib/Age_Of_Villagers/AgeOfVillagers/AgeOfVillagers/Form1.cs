@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,13 @@ namespace AgeOfVillagers
         public string getStatus()
         {
             return text;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Shape nation = Nation_Factory.Get_Nation("current_NationName");
+            I_Shape shape = nation.Get_Item("current_selection");
+            shape.Draw(Cursor.Position.X, Cursor.Position.Y);
         }
     }
 }
