@@ -12,6 +12,8 @@ namespace AgeOfVillager
 {
     public partial class Form1 : Form
     {
+        private EventHandler combobox1_SelectedIndexChanged;
+
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             Graphics g = this.CreateGraphics();
@@ -38,11 +40,13 @@ namespace AgeOfVillager
         public Form1()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndexChanged += combobox1_SelectedIndexChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_MouseClick(object sender, MouseEventArgs e)
