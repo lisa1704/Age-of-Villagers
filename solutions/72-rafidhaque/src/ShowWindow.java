@@ -73,6 +73,9 @@ public class ShowWindow implements IWindow{
 
             String newJsonString = gson.toJson(this.stateOfComponents);
             System.out.println(newJsonString);
+
+            ArrayList<StateOfComponent> stateOfComponents2 = gson.fromJson(newJsonString, ArrayList.class);
+            System.out.println(stateOfComponents.get(1));
         });
 
         return scene;

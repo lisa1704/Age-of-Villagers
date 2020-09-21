@@ -11,8 +11,4 @@ public abstract class DrawHouse implements IDrawComponent{
         this.y = y;
     }
 
-    @Override
-    public String toString() {
-        return "DrawHouse";
-    }
 }

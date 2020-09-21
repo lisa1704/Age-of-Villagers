@@ -13,9 +13,5 @@ public abstract class DrawTree implements IDrawComponent{
         this.y = y;
     }
 
-    @Override
-    public String toString() {
-        return "DrawTree";
-    }
 }
 

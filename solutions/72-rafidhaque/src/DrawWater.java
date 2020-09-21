@@ -18,8 +18,4 @@ public abstract class DrawWater implements IDrawComponent{
         this.height = height;
     }
 
-    @Override
-    public String toString() {
-        return "DrawWater";
-    }
 }
