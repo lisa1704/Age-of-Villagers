@@ -26,5 +26,15 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Open_village_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tree_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
