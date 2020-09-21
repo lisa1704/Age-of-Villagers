@@ -11,7 +11,7 @@ namespace AgeOfVillagers
     {
         public EgyptianKingsWater(Point Initialpoint)
         {
-            Point topPoint = new Point(Initialpoint.X + 75, Initialpoint.Y + 75);
+            Point topPoint = new Point(Initialpoint.X + 48, Initialpoint.Y + 48);
             addShape(new Circle(Initialpoint, topPoint));
         }
     }
