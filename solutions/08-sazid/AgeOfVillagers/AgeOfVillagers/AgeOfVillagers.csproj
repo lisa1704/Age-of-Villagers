@@ -73,6 +73,7 @@
     <Compile Include="LineShape.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="NullNation.cs" />
+    <Compile Include="NullVillageItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleShape.cs" />

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
@@ -25,7 +26,8 @@ namespace AgeOfVillagers
 
         public void DrawWaterResource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullVillageItem nI = new NullVillageItem();
+            nI.draw(g);
         }
 
         public Color GetColor()

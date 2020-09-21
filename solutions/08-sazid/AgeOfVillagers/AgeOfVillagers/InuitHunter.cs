@@ -18,12 +18,14 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullVillageItem nI = new NullVillageItem();
+            nI.draw(g);
         }
 
         public void DrawWaterResource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullVillageItem nI = new NullVillageItem();
+            nI.draw(g);
         }
 
         public Color GetColor()
