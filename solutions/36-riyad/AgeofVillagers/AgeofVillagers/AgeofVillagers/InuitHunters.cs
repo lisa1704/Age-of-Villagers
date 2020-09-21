@@ -7,6 +7,8 @@ namespace AgeofVillagers
 {
     public class InuitHunters : INation
     {
+
+        Pen pen = new Pen(Color.Gray);
         public string DrawHouse(Graphics g, Point p)
         {
             return "Igloo";

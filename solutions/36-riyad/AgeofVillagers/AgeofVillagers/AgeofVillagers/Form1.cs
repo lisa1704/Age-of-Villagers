@@ -105,7 +105,7 @@ namespace AgeofVillagers
 
         private void NationList_Select(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
