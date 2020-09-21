@@ -59,7 +59,7 @@ namespace Age_of_Villagers.Test
             EgyptHouse.Equals(house);
         }
 
-        [Test]
+        [Test, Order(1)]
         public void testsaving()
         {
             INation egypt = new Egypt();
@@ -70,8 +70,9 @@ namespace Age_of_Villagers.Test
             ICommandVillage save = new SaveVillage();
             villa = save.execute("D:\\game2.aov", egypt);
             expected.Equals(villa);
+            
         }
-        [Test]
+        [Test, Order(2)]
         public void testopening()
         {
             INation nation = new Egypt();

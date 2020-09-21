@@ -56,7 +56,7 @@ namespace Age_of_Villagers.Test
             bdhouse.Equals(house);
         }
 
-        [Test]
+        [Test,Order(1)]
         public void testsaving()
         {
             INation Bd = new Bangladesh();
@@ -64,10 +64,11 @@ namespace Age_of_Villagers.Test
             Bd.draw_river(riverpoint);
             Bd.draw_tree(treepoint);
             ICommandVillage save = new SaveVillage();
-            villa=save.execute("D:\\game.aov", Bd);
+            villa = save.execute("D:\\game.aov", Bd);
             expected.Equals(villa);
+            
         }
-        [Test]
+        [Test,Order(2)]
         public void testopening()
         {
             INation nation = new Bangladesh();

@@ -17,6 +17,8 @@ namespace Age_of_Villagers.Test
         {
             expected.name = name;
             expected.house_points = new List<Point>() { housepoint };
+            expected.river_points = new List<Point>();
+            expected.tree_points = new List<Point>();
         }
         [Test]
         public void Testname()
@@ -49,7 +51,7 @@ namespace Age_of_Villagers.Test
             ob_river.Equals(null_ob);
             ob_tree.Equals(null_ob);
         }
-        [Test]
+        [Test,Order(1)]
         public void testsaving()
         {
             INation inuit = new Inuit();
@@ -58,8 +60,9 @@ namespace Age_of_Villagers.Test
             ICommandVillage save = new SaveVillage();
             villa = save.execute("D:\\game3.aov", inuit);
             expected.Equals(villa);
+            
         }
-        [Test]
+        [Test, Order(2)]
         public void testopening()
         {
             INation nation = new Inuit();
