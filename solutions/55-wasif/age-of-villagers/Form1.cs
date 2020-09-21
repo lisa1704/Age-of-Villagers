@@ -47,23 +47,20 @@ namespace age_of_villagers
         {
             item = "water";
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             Graphics gp = panel1.CreateGraphics();
-            Pen p = new Pen(Color.Violet);
-            Point p1 = new Point(100, 100);
-            Point p2 = new Point();
-            gp.DrawLine(p, p1, p2);
-            village_factory new_village = new village_factory(gp);
+            village_factory new_village = new village_factory(gp, e.Location);
             if (item == "house")
                 new_village.get_nation(village_type).draw_house();
             else if (item == "tree")
                 new_village.get_nation(village_type).draw_tree();
             else if (item == "water")
                 new_village.get_nation(village_type).draw_watersource();
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
         }
     }
 }
