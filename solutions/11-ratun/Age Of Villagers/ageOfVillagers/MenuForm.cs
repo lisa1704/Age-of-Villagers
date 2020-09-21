@@ -102,8 +102,8 @@ namespace ageOfVillagers
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            Village v = new Village();
-            v.Draw(currentNationName, currentselect, Cursor.Position.X, Cursor.Position.Y);
+            NationFactory n = new NationFactory();
+            n.Draw(currentNationName, currentselect, Cursor.Position.X, Cursor.Position.Y);
         }
     }
 }
