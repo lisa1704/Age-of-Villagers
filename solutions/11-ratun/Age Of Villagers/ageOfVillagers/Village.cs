@@ -4,14 +4,14 @@ namespace ageOfVillagers
 {
     interface IDraw
     {
-        void Draw(string currentselect, int x, int y);
+        void Draw(string nationName, string currentselect, int x, int y);
     }
     public class Village: IDraw
     {
         private string nation;
         private string villagename;
         private string work;
-        public void Draw(string currentselect, int x, int y)
+        public void Draw(string nationName, string currentselect, int x, int y)
         {
             if (currentselect == "tree") 
             {

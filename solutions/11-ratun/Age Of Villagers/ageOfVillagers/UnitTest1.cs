@@ -9,7 +9,7 @@ namespace ageOfVillagers
         [TestMethod]
         public void test1()
         {
-            
+            Assert.AreEqual(1, 1);
         }
     }
 }

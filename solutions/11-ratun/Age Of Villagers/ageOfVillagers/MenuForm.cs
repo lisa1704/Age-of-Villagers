@@ -13,7 +13,8 @@ namespace ageOfVillagers
     public partial class MenuForm : Form
     {
         private string text="";
-        public string currentselect;
+        private string currentselect;
+        private string currentNationName;
         List<string> VillageNameList = new List<string>();
         public MenuForm()
         {
@@ -101,7 +102,7 @@ namespace ageOfVillagers
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Village v = new Village();
-            v.Draw(currentselect, Cursor.Position.X, Cursor.Position.Y);
+            v.Draw(currentNationName, currentselect, Cursor.Position.X, Cursor.Position.Y);
         }
     }
 }
