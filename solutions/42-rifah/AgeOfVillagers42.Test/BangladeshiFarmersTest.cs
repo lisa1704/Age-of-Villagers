@@ -14,11 +14,11 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void BackgroundColorTest()
         {
-            BangladeshiFarmers bdFarmer = new BangladeshiFarmers();
-            Color color = bdFarmer.BackgroundColor();
+            BangladeshiFarmers bdFarmersBackgroundColor = new BangladeshiFarmers();
+            Color actual = bdFarmersBackgroundColor.BackgroundColor();
             Color expected = Color.Green;
 
-            Assert.AreEqual(color, expected);
+            Assert.AreEqual(actual, expected);
         }
     }
 }
