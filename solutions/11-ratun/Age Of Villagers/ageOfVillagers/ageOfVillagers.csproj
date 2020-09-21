@@ -68,6 +68,7 @@
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NationFactory.cs" />
+    <Compile Include="Rectangle.cs" />
     <Compile Include="SaveVillageState.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Tree.cs" />

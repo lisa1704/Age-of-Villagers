@@ -1,16 +1,17 @@
-﻿using System;
-
-public class HalfCircle : Shape
+﻿namespace ageOfVillagers
 {
-    private int x, y, radius;
-    public HalfCircle(int x, int y, int radius)
+    internal class HalfCircle
     {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-    }
-    public string Draw()
-    {
-        return "Drawing a half circle";
+        private int x, y, radius;
+        public HalfCircle(int x, int y, int radius)
+        {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        public string Draw()
+        {
+            return "Drawing a half circle";
+        }
     }
 }
