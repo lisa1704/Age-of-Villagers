@@ -23,7 +23,8 @@ namespace AgeofVillagers
 
         public void DrawWaterSource(Graphics g, Point mid)
         {
-            throw new NotImplementedException();
+            EgyptianKingsWater eWater = new EgyptianKingsWater(mid);
+            eWater.Paint(g, pen);
         }
 
         public Color TerrainColor()
