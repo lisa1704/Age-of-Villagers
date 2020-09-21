@@ -91,6 +91,31 @@ namespace AgeOfVillagers
         private void openVillagebutton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Village is opened");
+            VillageSaveOpen villageOpen = new VillageSaveOpen(myItems);
+            villageOpen.openMyVillage();
+            myItems = villageOpen.getmyVillage();
+            setSavedVillage(myItems);
+            drawingPanel.Refresh();
+        }
+
+        public void setSavedVillage(Items myitem)
+        {
+            VillageNametextBox.Text = myitem.VillageName;
+
+            foreach (Point point in myitem.House)
+            {
+                house_point.Add(point);
+            }
+
+            foreach (Point point in myitem.Tree)
+            {
+                tree_point.Add(point);
+            }
+
+            foreach (Point point in myitem.WaterSource)
+            {
+                waterSource_point.Add(point);
+            }
         }
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)

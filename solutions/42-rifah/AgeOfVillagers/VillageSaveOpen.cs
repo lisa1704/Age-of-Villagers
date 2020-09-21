@@ -56,6 +56,11 @@ namespace AgeOfVillagers
             }
 
         }
+
+        public Items getmyVillage()
+        {
+            return savedVillageItems;
+        }
     }
 
     public struct Items
