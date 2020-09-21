@@ -2,7 +2,7 @@
 
 namespace Age_of_villagers.Shapes
 {
-    class Line
+    class Line : IShape
     {
         private Point point1, point2;
         public Line(Point point1, Point point2)

@@ -87,15 +87,7 @@ namespace Age_of_villagers
 
         }
 
-        private void drawHouse(int X,int Y)
-        {
-
-            g.DrawLine(p, X - 25, Y + 35, X + 25, Y - 25);
-            g.DrawLine(p, X + 25, Y - 25, X + 50, Y + 50);
-            g.DrawLine(p, X + 50, Y + 50, X - 25, Y + 35);
-            g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
-            g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
-        }
+        
 
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
