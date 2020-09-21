@@ -104,6 +104,8 @@ namespace age_of_villagers
             if (tree.Checked)
             {
 
+                village.nation.getTree(point).draw(g, p);
+                village.tree.Add(point);
             }
             else if (house.Checked)
             {
