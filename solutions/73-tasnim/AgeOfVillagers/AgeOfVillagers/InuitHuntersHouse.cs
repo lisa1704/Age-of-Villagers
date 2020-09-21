@@ -9,10 +9,10 @@ namespace AgeOfVillagers
 {
     class InuitHuntersHouse : AbstractShape
     {
-        public InuitHuntersHouse(Point mainPoint)
+        public InuitHuntersHouse(Point Iniatialpoint)
         {
-            Point linePoint1 = new Point(mainPoint.X, mainPoint.Y - 100);
-            Point linePoint2 = new Point(mainPoint.X + 200, mainPoint.Y - 100);
+            Point linePoint1 = new Point(Iniatialpoint.X, Iniatialpoint.Y - 20);
+            Point linePoint2 = new Point(Iniatialpoint.X + 50, Iniatialpoint.Y - 20);
             Point sidePoint1 = new Point(linePoint1.X - 25, linePoint1.Y + 100);
             Point sidePoint2 = new Point(sidePoint1.X + 150, sidePoint1.Y);
 
