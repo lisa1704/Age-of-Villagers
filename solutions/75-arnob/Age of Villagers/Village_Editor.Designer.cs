@@ -148,7 +148,7 @@ namespace Age_of_Villagers
             this.label_ageOfVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ageOfVillagers.Location = new System.Drawing.Point(56, 20);
             this.label_ageOfVillagers.Name = "label_ageOfVillagers";
-            this.label_ageOfVillagers.Size = new System.Drawing.Size(130, 26);
+            this.label_ageOfVillagers.Size = new System.Drawing.Size(142, 65);
             this.label_ageOfVillagers.TabIndex = 8;
             this.label_ageOfVillagers.Text = "Age of Villagers";
             this.label_ageOfVillagers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
