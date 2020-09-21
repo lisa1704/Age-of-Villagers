@@ -4,7 +4,7 @@
     {
         int Xaxis = 16;
         int Yaxis = 24;
-        public abstract void CreateTree();
+        public abstract void CreateTree(int x, int y);
         public void Draw(int x, int y)
         {
             //return "Drwaing a tree on (" + x + "," + y + ").";
