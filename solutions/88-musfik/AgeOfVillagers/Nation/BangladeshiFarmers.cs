@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.VillageItem;
+using System;
 using System.Drawing;
 
 namespace AgeOfVillagers
@@ -8,38 +9,16 @@ namespace AgeOfVillagers
         private readonly Color color = Color.GreenYellow;
         private String nation_name = "Bangladeshi Farmers";
 
-        public BangladeshiFarmers()
-        {
-            
-        }
-
         public string nationName { get => nation_name; set => nation_name = value; }
 
-        public House getHouse(Point point)
+        public IShape getItemShape(Point point, String itemType)
         {
-            return new BangladeshiHouse(point);
+            BangladeshiItemFactory factory = new BangladeshiItemFactory(itemType);
+            return factory.ItemProducer(point).getItemShape(point);
         }
-
-        
-        public string getNationName()
-        {
-            return nation_name;
-        }
-        
-
         public Color getTerrainColor()
         {
             return color;
-        }
-
-        public Tree getTree(Point point)
-        {
-            return new BangladeshiTree(point);
-        }
-
-        public WaterResource getWaterResource(Point point)
-        {
-            return new BangladeshiWaterResource(point);
         }
     }
 }
