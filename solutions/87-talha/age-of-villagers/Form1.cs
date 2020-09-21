@@ -21,5 +21,15 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void New_village_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Open_village_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
