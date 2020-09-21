@@ -36,6 +36,9 @@
             this.Water_source = new System.Windows.Forms.RadioButton();
             this.Age_of_villagers = new System.Windows.Forms.Label();
             this.VIllage_name = new System.Windows.Forms.TextBox();
+            this.Nation_name = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Save_village
@@ -116,18 +119,47 @@
             // 
             // VIllage_name
             // 
-            this.VIllage_name.Location = new System.Drawing.Point(654, 82);
+            this.VIllage_name.Location = new System.Drawing.Point(682, 82);
             this.VIllage_name.Name = "VIllage_name";
             this.VIllage_name.Size = new System.Drawing.Size(100, 20);
             this.VIllage_name.TabIndex = 7;
-            this.VIllage_name.Text = "Katakhali";
             this.VIllage_name.TextChanged += new System.EventHandler(this.VIllage_name_TextChanged);
+            // 
+            // Nation_name
+            // 
+            this.Nation_name.FormattingEnabled = true;
+            this.Nation_name.Location = new System.Drawing.Point(661, 108);
+            this.Nation_name.Name = "Nation_name";
+            this.Nation_name.Size = new System.Drawing.Size(121, 21);
+            this.Nation_name.TabIndex = 8;
+            this.Nation_name.SelectedIndexChanged += new System.EventHandler(this.Nation_name_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(607, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Village Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(617, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nation";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Nation_name);
             this.Controls.Add(this.VIllage_name);
             this.Controls.Add(this.Age_of_villagers);
             this.Controls.Add(this.Water_source);
@@ -153,6 +185,9 @@
         private System.Windows.Forms.RadioButton Water_source;
         private System.Windows.Forms.Label Age_of_villagers;
         private System.Windows.Forms.TextBox VIllage_name;
+        private System.Windows.Forms.ComboBox Nation_name;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
