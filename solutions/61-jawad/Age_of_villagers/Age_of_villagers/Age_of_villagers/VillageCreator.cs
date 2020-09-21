@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Age_of_villagers.Nations;
+using Age_of_villagers.Shapes;
+using Age_of_villagers.Components;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -18,7 +20,6 @@ namespace Age_of_villagers
         string text = "";
         string name = "";
         String villagetype = "";
-        VillageProperties village;
         public Graphics g;
         public Pen p;
 
@@ -26,7 +27,7 @@ namespace Age_of_villagers
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
 
-
+        public Village village;
         public VillageCreator()
         {
             InitializeComponent();
@@ -113,19 +114,27 @@ namespace Age_of_villagers
 
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
-            if (text == "house")
+            Point point = new Point(e.X, e.Y);
+            if (village == null)
             {
-                HousePoints.Add(e.Location);
+                DialogResult dialog = MessageBox.Show("Create / Open a Village First!");
             }
-            if (text == "tree")
+            else if (Tree.Checked)
             {
-                TreePoints.Add(e.Location);
+                village.nation.getTree(point).draw(g, p);
+                village.trees.Add(point);
             }
-            if (text == "water")
+            else if (House.Checked)
             {
-                WaterPoints.Add(e.Location);
+                village.nation.getHouse(point).draw(g, p);
+                village.houses.Add(point);
             }
-            MainPanel.Invalidate();
+            else
+            {
+                village.nation.getWaterSource(point).draw(g, p);
+                village.waterSources.Add(point);
+            }
+
 
         }
 
