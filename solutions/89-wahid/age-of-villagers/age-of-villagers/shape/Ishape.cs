@@ -9,5 +9,6 @@ namespace age_of_villagers.shape
     {
         void draw(Graphics g, Pen p);
 
+
     }
 }

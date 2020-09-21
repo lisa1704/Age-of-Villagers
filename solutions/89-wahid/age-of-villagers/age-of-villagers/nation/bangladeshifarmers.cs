@@ -7,22 +7,29 @@ namespace age_of_villagers.nation
 {
     class bangladeshifarmers : Ination
     {
-        public void drawhouse()
+        private Color colorofbackground = Color.Green;
+       
+        public villageitem.villageitem getHouse(Point p)
         {
             throw new NotImplementedException();
         }
 
-        public void drawtree()
+        public string getNationName()
         {
             throw new NotImplementedException();
         }
 
-        public void drawwatersource()
+        public Color getTerrainColor()
+        {
+            return colorofbackground;
+        }
+
+        public villageitem.villageitem getTree(Point p)
         {
             throw new NotImplementedException();
         }
 
-        public string Getnation()
+        public villageitem.villageitem getWaterSource(Point p)
         {
             throw new NotImplementedException();
         }

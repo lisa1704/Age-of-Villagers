@@ -105,6 +105,7 @@ namespace age_of_villagers
             if (tree.Checked)
             {
 
+
             }
             else if (house.Checked)
             {
@@ -113,7 +114,7 @@ namespace age_of_villagers
             }
             else if (watersource.Checked)
             {
-
+               
             }
 
         }
