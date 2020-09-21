@@ -8,6 +8,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ShowWindow implements IWindow{
@@ -78,6 +80,19 @@ public class ShowWindow implements IWindow{
 
             ArrayList<StateOfComponent> stateOfComponents2 = gson.fromJson(newJsonString, ArrayList.class);
             System.out.println(stateOfComponents2.get(1));
+
+            // write file
+            try {
+                FileWriter myWriter = new FileWriter(this.villageName+".aov");
+                myWriter.write(newJsonString);
+                myWriter.close();
+                System.out.println("Successfully wrote to the file.");
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+
+
         });
 
         return scene;

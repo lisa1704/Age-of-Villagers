@@ -1,0 +1,156 @@
+[
+  {
+    "x": 352.0,
+    "y": 132.0,
+    "drawComponent": {
+      "x": 506.0,
+      "y": 209.0
+    },
+    "className": "BangladeshiFarmersTree"
+  },
+  {
+    "x": 314.0,
+    "y": 43.0,
+    "drawComponent": {
+      "x": 506.0,
+      "y": 209.0
+    },
+    "className": "BangladeshiFarmersTree"
+  },
+  {
+    "x": 193.0,
+    "y": 167.0,
+    "drawComponent": {
+      "x": 506.0,
+      "y": 209.0
+    },
+    "className": "BangladeshiFarmersTree"
+  },
+  {
+    "x": 400.0,
+    "y": 228.0,
+    "drawComponent": {
+      "x": 506.0,
+      "y": 209.0
+    },
+    "className": "BangladeshiFarmersTree"
+  },
+  {
+    "x": 506.0,
+    "y": 209.0,
+    "drawComponent": {
+      "x": 506.0,
+      "y": 209.0
+    },
+    "className": "BangladeshiFarmersTree"
+  },
+  {
+    "x": 485.0,
+    "y": 129.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 419.0,
+    "y": 80.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 344.0,
+    "y": 82.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 185.0,
+    "y": 83.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 115.0,
+    "y": 139.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 162.0,
+    "y": 228.0,
+    "drawComponent": {
+      "x": 162.0,
+      "y": 228.0
+    },
+    "className": "BangladeshiFarmersHouse"
+  },
+  {
+    "x": 282.0,
+    "y": 251.0,
+    "drawComponent": {
+      "x": 186.0,
+      "y": 332.0,
+      "width": 24.0,
+      "height": 16.0
+    },
+    "className": "BangladeshiFarmersWater"
+  },
+  {
+    "x": 276.0,
+    "y": 134.0,
+    "drawComponent": {
+      "x": 186.0,
+      "y": 332.0,
+      "width": 24.0,
+      "height": 16.0
+    },
+    "className": "BangladeshiFarmersWater"
+  },
+  {
+    "x": 231.0,
+    "y": 126.0,
+    "drawComponent": {
+      "x": 186.0,
+      "y": 332.0,
+      "width": 24.0,
+      "height": 16.0
+    },
+    "className": "BangladeshiFarmersWater"
+  },
+  {
+    "x": 249.0,
+    "y": 258.0,
+    "drawComponent": {
+      "x": 186.0,
+      "y": 332.0,
+      "width": 24.0,
+      "height": 16.0
+    },
+    "className": "BangladeshiFarmersWater"
+  },
+  {
+    "x": 186.0,
+    "y": 332.0,
+    "drawComponent": {
+      "x": 186.0,
+      "y": 332.0,
+      "width": 24.0,
+      "height": 16.0
+    },
+    "className": "BangladeshiFarmersWater"
+  }
+]
