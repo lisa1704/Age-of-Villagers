@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    interface IVillages
+    class ConcreteNation
     {
-        void Draw();
+        public static ConcreteNation getNation(String nation);
+
     }
 }
