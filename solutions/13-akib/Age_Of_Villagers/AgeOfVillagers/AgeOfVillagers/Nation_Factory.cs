@@ -8,6 +8,10 @@
             {
                 return new Bangladeshi_Factory();
             }
+            else if (Nation_Name == "Arab_Bedouin")
+            {
+                return new Arab_Factory();
+            }
 
             return null;
         }
