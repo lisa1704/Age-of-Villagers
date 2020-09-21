@@ -11,6 +11,14 @@ namespace AgeOfVillagers
     public class VillageSaveOpen
     {
         private Items myItems;
+
+        public VillageSaveOpen(Items myItems)
+        {
+            this.myItems = myItems;
+        }
+
+
+
         public void saveMyVillage()
         {
             SaveFileDialog savefiledialog = new SaveFileDialog();

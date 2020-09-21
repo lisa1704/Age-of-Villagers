@@ -20,9 +20,19 @@ namespace AgeOfVillagers
         List<Point> waterSource_point = new List<Point>();
 
         Factory_Nation nationfactory = new Factory_Nation();
+
+        Items myItems;
         public CreateNewVillage()
         {
             InitializeComponent();
+        }
+
+        public void villageSaveState() //getting the info from form design
+        {
+            myItems.VillageName = VillageNametextBox.Text;
+            myItems.Tree = this.tree_point;
+            myItems.House = this.house_point;
+            myItems.WaterSource = this.waterSource_point;
         }
 
         private void CreateNewVillage_Load(object sender, EventArgs e)
@@ -62,6 +72,9 @@ namespace AgeOfVillagers
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
         {
+            villageSaveState();
+            VillageSaveOpen save_Village = new VillageSaveOpen(myItems);
+            save_Village.saveMyVillage();
             MessageBox.Show(villageName.Text + "Village is saved");
         }
 
