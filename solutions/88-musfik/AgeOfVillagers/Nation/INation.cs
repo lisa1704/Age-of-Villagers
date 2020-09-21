@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
@@ -7,8 +8,6 @@ namespace AgeOfVillagers
         string nationName { get; set; }
         Color getTerrainColor();
         string getNationName();
-        Tree getTree(Point point);
-        House getHouse(Point point);
-        WaterResource getWaterResource(Point point);
+        IShape getItemShape(Point point, String itemType);
     }
 }
