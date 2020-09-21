@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 
-public class Egyptian_House
+public class Egyptian_House : I_Shape
 {
 	public void Create_House(int x, int y)
     {

@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 
-public class Bangladeshi_Tree : Tree
+public class Bangladeshi_Tree : I_Shape
 {
 	public void Create_Tree(int x, int y)
     {

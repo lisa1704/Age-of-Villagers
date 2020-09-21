@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Egyptian_Tree
+public class Egyptian_Tree : I_Shape
 {
 	public void Create_Tree(int x, int y)
     {

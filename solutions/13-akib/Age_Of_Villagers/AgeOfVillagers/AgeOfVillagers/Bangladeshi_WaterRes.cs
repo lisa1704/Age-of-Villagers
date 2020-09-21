@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 
-public class Bangladeshi_WaterRes : Water_Resource
+public class Bangladeshi_WaterRes : I_Shape
 {
 	private int x_size = 24;
 	private int y_size = 16;

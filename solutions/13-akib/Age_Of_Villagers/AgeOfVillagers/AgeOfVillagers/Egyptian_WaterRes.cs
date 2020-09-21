@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 
-public class Egyptian_WaterRes
+public class Egyptian_WaterRes : I_Shape
 {
 	private int x_size = 12;
 	private int y_size = 12;
