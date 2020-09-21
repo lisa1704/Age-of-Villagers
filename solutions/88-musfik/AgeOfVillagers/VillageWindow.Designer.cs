@@ -42,6 +42,7 @@ namespace AgeOfVillagers
             this.NationlistBox = new System.Windows.Forms.ListBox();
             this.Village_name_textBox = new System.Windows.Forms.TextBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             MenuTopLabel = new System.Windows.Forms.Label();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
@@ -211,6 +212,12 @@ namespace AgeOfVillagers
             this.saveFileDialog.CreatePrompt = true;
             this.saveFileDialog.Filter = "Age of villagers file|*.aov";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            this.openFileDialog.Filter = "Age of villagers file|*.aov";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
+            // 
             // VillageWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +249,7 @@ namespace AgeOfVillagers
         private System.Windows.Forms.RadioButton tree_btn;
         private System.Windows.Forms.RadioButton House_btn;
         private SaveFileDialog saveFileDialog;
+        private OpenFileDialog openFileDialog;
     }
 }
 

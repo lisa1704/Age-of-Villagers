@@ -11,14 +11,14 @@ namespace AgeOfVillagers
     {
         private String villageName;
         private INation nation;
-        private List<IVillageItem> house_items, waterResource_items, tree_items;
+        private List<Point> house_items, waterResource_items, tree_items;
         public Village(string villageName, INation nation)
         {
             this.villageName = villageName;
             this.nation = nation;
-            tree_items = new List<IVillageItem>();
-            house_items = new List<IVillageItem>();
-            waterResource_items = new List<IVillageItem>();
+            tree_items = new List<Point>();
+            house_items = new List<Point>();
+            waterResource_items = new List<Point>();
         }
         public void changeVillageNation(INation nation)
         {
@@ -32,37 +32,29 @@ namespace AgeOfVillagers
         {
             villageName = value;
         }
-        internal void SetTreeItems(List<IVillageItem> list_items)
-        {
-            tree_items = list_items.ConvertAll(tree => tree = nation.getTree(tree.getItemLocation()));
-        }
-        internal void SetHouseItems(List<IVillageItem> list_items)
-        {
-            house_items = list_items.ConvertAll(house => house = nation.getHouse(house.getItemLocation()));
-        }
-        internal void SetWaterSourceItems(List<IVillageItem> list_items)
-        {
-            waterResource_items = list_items.ConvertAll(water => water = nation.getHouse(water.getItemLocation()));
-        }
 
+        internal void SetState(VillageState state)
+        {
+            villageName = state.villageName;
+            tree_items = state.trees;
+            house_items = state.houses;
+            waterResource_items = state.watersources;
+        }
         internal void initiate(Graphics g, Pen p)
         {
             g.Clear(nation.getTerrainColor());
-
-            SetTreeItems(tree_items);
-            SetHouseItems(house_items);
-            SetWaterSourceItems(waterResource_items);
-
-            fetchItems(g, p, tree_items);
-            fetchItems(g, p, house_items);
-            fetchItems(g, p, waterResource_items);
-        }
-        internal void fetchItems(Graphics g, Pen p, List<IVillageItem> villageItems)
-        {
-            foreach( var item in villageItems)
+            
+            foreach (var point in tree_items)
+            { 
+                DrawItem(g, p, point, nation.getTree(point));
+            }
+            foreach (var point in house_items)
             {
-                Point point = item.getItemLocation();
-                DrawItem(g, p, point, item);
+                DrawItem(g, p, point, nation.getHouse(point));
+            }
+            foreach (var point in waterResource_items)
+            {
+                DrawItem(g, p, point, nation.getWaterResource(point));
             }
         }
         internal void DrawItem(Graphics g, Pen p, Point point,IVillageItem item)
@@ -73,48 +65,38 @@ namespace AgeOfVillagers
         internal void AddTree(Graphics g, Pen p, Point point)
         {
             var tree = nation.getTree(point);
-            tree_items.Add(tree);
+            tree_items.Add(point);
             DrawItem(g, p, point, tree);
         }
         internal void AddHouse(Graphics g, Pen p, Point point)
         {
             var house = nation.getHouse(point);
-            house_items.Add(house);
+            house_items.Add(point);
             DrawItem(g, p, point, house);
         }
         internal void AddWaterResource(Graphics g, Pen p, Point point)
         {
             var water = nation.getWaterResource(point);
-            waterResource_items.Add(water);
+            waterResource_items.Add(point);
             DrawItem(g, p, point, water);
         }
         internal VillageState createState()
         {
-            return new VillageState(this, villageName, tree_items, house_items, waterResource_items);
+            return new VillageState(villageName, tree_items, house_items, waterResource_items);
         }
     }
 
     internal class VillageState
     {
-        private Village village;
-        private String villageName;
-        private List<IVillageItem> trees, houses, watersources;
+        public String villageName;
+        public List<Point> trees, houses, watersources;
 
-        public VillageState(Village village, String villageName, List<IVillageItem> trees, List<IVillageItem> houses, List<IVillageItem> watersources)
+        public VillageState(String villageName, List<Point> trees, List<Point> houses, List<Point> watersources)
         {
-            this.village = village;
             this.villageName = villageName;
             this.watersources = watersources;
             this.houses = houses;
             this.trees = trees;
-        }
-
-        public void restoreState()
-        {
-            village.SetVillageName(villageName);
-            village.SetTreeItems(trees);
-            village.SetHouseItems(houses);
-            village.SetWaterSourceItems(watersources);
         }
     }
 }

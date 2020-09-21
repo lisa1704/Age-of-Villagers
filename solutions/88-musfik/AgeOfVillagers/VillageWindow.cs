@@ -15,7 +15,7 @@ namespace AgeOfVillagers
     public partial class VillageWindow : Form
     {
         List<INation> nationlist = new List<INation>();
-        INation nation = null;
+        INation nation;
         Village village = null;
         Graphics g;
         public Pen p; 
@@ -29,7 +29,7 @@ namespace AgeOfVillagers
 
         private void VillageWindow_Load(object sender, EventArgs e)
         {
-            nation = null;
+            nation = (INation)NationlistBox.SelectedItem;
             villageName = null;
             selectedItem = null;
             g = drawing_space.CreateGraphics();
@@ -73,11 +73,21 @@ namespace AgeOfVillagers
 
         private void Village_name_textBox_TextChanged(object sender, EventArgs e)
         {
-            TextBox objTextBox = (TextBox)sender;
-            villageName = objTextBox.Text;
-            if (villageName.Length == 0){
-                villageName = null;
-            }             
+            villageName = Village_name_textBox.Text;
+            
+            if (villageName.Length != 0  &  village != null)
+            {
+                village.SetVillageName(villageName);
+            }
+            else if (villageName.Length == 0)
+            {
+                if(village != null)
+                    Village_name_textBox.Text = village.GetVillageName();
+                else
+                    villageName = null;
+
+                MessageBox.Show(" Villge name cannot be empty ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }                 
         }
 
         private void NationlistBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -123,22 +133,46 @@ namespace AgeOfVillagers
                     if(saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         VillageState state = village.createState();
-                        state.restoreState();
                         string jsonString = JsonConvert.SerializeObject(state, Formatting.Indented);
                         File.WriteAllText(saveFileDialog.FileName, jsonString);
                         saveFileDialog.Dispose();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("No village to save. Create new village first ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("An error occured! File not saved", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error occured! File not saved\n"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void open_village_btn_Click(object sender, EventArgs e)
         {
+            if(nation == null)
+            {
+                MessageBox.Show("Please select a nation first", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (openFileDialog.ShowDialog() == DialogResult.OK)
+            { 
+                if (openFileDialog.FileName.Trim() != string.Empty)
+                {
+                    string jsonString = File.ReadAllText(openFileDialog.FileName);
+                    VillageState state = JsonConvert.DeserializeObject<VillageState>(jsonString);
+                    if(village == null)
+                        village = new Village("", nation);
+                    village.SetState(state);
+                    village.initiate(g, p);
+                    Village_name_textBox.Text = village.GetVillageName();
+                    openFileDialog.Dispose();
+                }
+            }
+        }
 
+        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
         }
     }
 }
