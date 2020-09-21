@@ -8,7 +8,7 @@ namespace AgeOfVillagers
 {
     public class ArabBedouinHouse : CompositeShape 
     {
-        private Point _toppoint;
+       
         public ArabBedouinHouse(Point point)
         {
             Point _toppoint = point;
