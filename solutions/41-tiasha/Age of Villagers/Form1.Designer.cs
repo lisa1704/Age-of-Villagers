@@ -42,7 +42,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(124, 30);
+            this.radioButton1.Location = new System.Drawing.Point(608, 214);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(56, 17);
             this.radioButton1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(124, 84);
+            this.radioButton2.Location = new System.Drawing.Point(706, 214);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(47, 17);
             this.radioButton2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(124, 143);
+            this.radioButton3.Location = new System.Drawing.Point(643, 248);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(91, 17);
             this.radioButton3.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 30);
+            this.button1.Location = new System.Drawing.Point(623, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 81);
+            this.button2.Location = new System.Drawing.Point(623, 298);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 143);
+            this.button3.Location = new System.Drawing.Point(623, 348);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 189);
+            this.textBox1.Location = new System.Drawing.Point(590, 103);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(198, 20);
             this.textBox1.TabIndex = 6;
@@ -109,7 +109,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 229);
+            this.comboBox1.Items.AddRange(new object[] {
+            "Village Type"});
+            this.comboBox1.Location = new System.Drawing.Point(590, 153);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
@@ -117,9 +119,9 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(285, 21);
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(435, 319);
+            this.checkedListBox1.Size = new System.Drawing.Size(455, 409);
             this.checkedListBox1.TabIndex = 8;
             // 
             // Form1
