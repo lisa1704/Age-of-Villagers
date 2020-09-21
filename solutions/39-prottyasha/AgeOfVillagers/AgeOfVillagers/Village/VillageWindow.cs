@@ -61,6 +61,7 @@ namespace AgeOfVillagers
             //SaveVillageForm svf = new SaveVillageForm();
             //svf.Show();
             SaveVillage sv = new SaveVillage(vill);
+            sv.SaveFile();
         }
 
         public void SaveState(string selected_nation, string selected_component, Point p)
