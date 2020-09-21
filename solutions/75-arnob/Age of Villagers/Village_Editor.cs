@@ -81,15 +81,17 @@ namespace Age_of_Villagers
 
         private void Open_Village_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
+            if (comboBox_NationList.Text == "")
             {
-                StreamReader read = new StreamReader(File.OpenRead(open.FileName));
-
-                Village.Text = read.ReadToEnd();
-                read.Dispose();
-
-
+                MessageBox.Show("Select nation.");
+            }
+            else
+            {
+                Open_Village open = new Open_Village();
+                open.action();
+                savepoints = open.openVillage();
+                setPoints(savepoints);
+                Menu_bar.Refresh();
             }
         }
 
