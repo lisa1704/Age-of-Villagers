@@ -65,8 +65,10 @@
     <Compile Include="EgyptHouse.cs" />
     <Compile Include="EgyptTree.cs" />
     <Compile Include="EgyptWater.cs" />
+    <Compile Include="HalfCircle.cs" />
     <Compile Include="House.cs" />
     <Compile Include="InuitFactory.cs" />
+    <Compile Include="InuitHouse.cs" />
     <Compile Include="IShape.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="MenuForm.cs">
