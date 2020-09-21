@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class ShowWindow implements IWindow{
 
+    String villageName;
     Group drawSpace;
     INation nation;
     DrawHouse house;
@@ -20,13 +21,14 @@ public class ShowWindow implements IWindow{
     GridOfControls gridOfControls;
     ArrayList<StateOfComponent> stateOfComponents;
 
-    public ShowWindow(INation nation, Group drawSpace, ArrayList<StateOfComponent> arrayList) {
+    public ShowWindow(INation nation, String villageName, Group drawSpace, ArrayList<StateOfComponent> arrayList) {
         this.nation = nation;
+        this.villageName = villageName;
         this.drawSpace = drawSpace;
         house = this.nation.getHouse();
         tree = this.nation.getTree();
         water = this.nation.getWater();
-        gridOfControls = new GridOfControls(house, tree, water, this.nation.getNationName());
+        gridOfControls = new GridOfControls(house, tree, water, this.nation.getNationName(), this.villageName);
         this.stateOfComponents = arrayList;
     }
 

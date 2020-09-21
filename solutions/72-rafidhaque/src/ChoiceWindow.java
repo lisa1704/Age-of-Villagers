@@ -1,9 +1,7 @@
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -12,6 +10,7 @@ import java.util.ArrayList;
 public class ChoiceWindow implements IWindow {
     String boxValue;
     Scene scene;
+    String village;
 
     public String getBoxValue() {
         return boxValue;
@@ -34,24 +33,27 @@ public class ChoiceWindow implements IWindow {
         choiceBox.setValue("Bangladeshi Farmers");
         GridPane.setConstraints(choiceBox, 2, 4);
 
+        TextField villageName = new TextField("Type Village Name");
+
         Button newVillage = new Button("New Village");
         Button openVillage = new Button("Open Village");
 
+        GridPane.setConstraints(villageName, 2, 9);
         GridPane.setConstraints(newVillage, 2, 10);
         GridPane.setConstraints(openVillage, 3, 10);
-        GridPane.setMargin(newVillage, new Insets(50, 0, 0, 0));
-        GridPane.setMargin(openVillage, new Insets(50, 0, 0, 0));
+        GridPane.setMargin(villageName, new Insets(50, 0, 0, 0));
         GridPane.setMargin(choiceBox, new Insets(10, 0, 0, 0));
 
 
         newVillage.setOnAction(event -> {
-            scene = getChoice(choiceBox);
+            village = villageName.getText();
+            scene = getChoice(choiceBox, village);
             Main.mainWindow.setScene(scene);
         });
 
 
 
-        gridPane.getChildren().addAll(chooseNation, choiceBox, newVillage, openVillage);
+        gridPane.getChildren().addAll(chooseNation, choiceBox, newVillage, openVillage, villageName);
         scene = new Scene(gridPane, 400, 250);
         return scene;
     }
@@ -62,7 +64,7 @@ public class ChoiceWindow implements IWindow {
         return Main.mainWindow;
     }
 
-    private Scene getChoice(ChoiceBox<String> choiceBox) {
+    private Scene getChoice(ChoiceBox<String> choiceBox, String village) {
         String nation = choiceBox.getValue();
 
         Group g = new Group();
@@ -78,7 +80,7 @@ public class ChoiceWindow implements IWindow {
             nation1 = new InuitHunters(g);
         }
 
-        ShowWindow showWindow = new ShowWindow(nation1, g, new ArrayList<StateOfComponent>());
+        ShowWindow showWindow = new ShowWindow(nation1, village, g, new ArrayList<StateOfComponent>());
 
         System.out.println(nation);
         return showWindow.getDisplay();

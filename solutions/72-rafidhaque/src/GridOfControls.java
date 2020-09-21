@@ -21,13 +21,15 @@ public class GridOfControls {
     Button openButton = new Button(" Open");
 
     String nationName;
+    String villageName;
 
 
-    public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water, String nationName) {
+    public GridOfControls(DrawHouse house, DrawTree tree, DrawWater water, String nationName, String villageName) {
         this.house = house;
         this.tree = tree;
         this.water = water;
         this.nationName = nationName;
+        this.villageName = villageName;
     }
 
     GridPane createGrid() {
@@ -46,7 +48,7 @@ public class GridOfControls {
 
         Label gameName = new Label("Age of Villagers");
         gameName.setFont(new Font(20.0));
-        Label villageName = new Label("Bangladesh");
+        Label villageName = new Label(this.villageName);
         Label nationName = new Label(this.nationName);
 
         ToggleGroup tg = new ToggleGroup();
