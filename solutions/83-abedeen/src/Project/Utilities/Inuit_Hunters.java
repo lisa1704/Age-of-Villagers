@@ -3,12 +3,11 @@ package Project.Utilities;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 
-public class Inuit_Hunters implements INations{
+public class Inuit_Hunters implements INations {
     private String TerrainColor = "WHITE";
 
     public Inuit_Hunters(){

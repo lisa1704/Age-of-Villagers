@@ -4,7 +4,7 @@ import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 
-public class Null_Nation implements INations{
+public class Null_Nation implements INations {
     private String TerrainColor = "WHITE";
 
     @Override

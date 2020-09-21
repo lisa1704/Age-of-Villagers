@@ -8,7 +8,7 @@ import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 
-public class Egyptian_Kings implements INations{
+public class Egyptian_Kings implements INations {
     private double WaterBodyWidth = 12;
     private double WaterBodyHeight = 12;
     private String TerrainColor = "#fcd556";

@@ -2,11 +2,10 @@ package Project.Utilities;
 
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
-import javafx.scene.transform.Rotate;
 
 import java.util.ArrayList;
 
-public class Arab_Bedouins implements INations{
+public class Arab_Bedouins implements INations {
     private String TerrainColor = "#fffde3";
     public Arab_Bedouins(){
         super();
