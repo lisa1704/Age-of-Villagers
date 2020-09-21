@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class SaveVillage : IOpenSave
+    interface IOpenSave
     {
     }
 }
