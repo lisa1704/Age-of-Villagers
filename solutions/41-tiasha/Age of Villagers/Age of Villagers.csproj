@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArabianTree.cs" />
+    <Compile Include="EgyptianTree.cs" />
     <Compile Include="House\ArabianHouse.cs" />
     <Compile Include="House\BangladeshiHouse.cs" />
     <Compile Include="House\EgyptianHouse.cs" />
