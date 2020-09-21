@@ -1,12 +1,12 @@
-﻿using System;
-
-public class EgyptHouse : House
+﻿namespace ageOfVillagers
 {
-	public void CreateHouse(int x, int y)
+    internal class EgyptHouse : IShape
     {
-        Triangle t1 = new Triangle(x,y+8,x-8,y-4,x+2,y-8);
-        t1.Draw();
-        Triangle t2 = new Triangle(x,y+8,x+8,y,x+2,y-8);
-        t2.Draw();
+        public string draw(int x, int y)
+        {
+            Triangle t1 = new Triangle(x, y + 8, x - 8, y - 4, x + 2, y - 8);
+            Triangle t2 = new Triangle(x, y + 8, x + 8, y, x + 2, y - 8);
+            return t1.Draw() + t2.Draw();
+        }
     }
 }
