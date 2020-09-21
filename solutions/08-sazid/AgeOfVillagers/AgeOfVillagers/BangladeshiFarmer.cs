@@ -10,7 +10,6 @@ namespace AgeOfVillagers
     public class BangladeshiFarmer : INation
     {
         private Color backGroundColor = Color.Green;
-        Pen pen = new Pen(Color.Pink);
         public void DrawHouse(Graphics g, Point p)
         {
             BangladeshiHouse bdHouse = new BangladeshiHouse(new Point(p.X, p.Y), new Point(p.X - 60, p.Y + 30), new Point(p.X + 60, p.Y + 110));

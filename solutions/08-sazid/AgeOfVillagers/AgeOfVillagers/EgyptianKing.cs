@@ -9,7 +9,6 @@ namespace AgeOfVillagers
 {
     public class EgyptianKing : INation
     {
-        Pen pen = new Pen(Color.Black);
         private Color backGroundColor = Color.Yellow;
         public void DrawHouse(Graphics g, Point p)
         {

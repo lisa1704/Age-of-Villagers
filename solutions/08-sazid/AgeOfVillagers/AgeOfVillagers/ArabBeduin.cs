@@ -11,7 +11,6 @@ namespace AgeOfVillagers
     public class ArabBeduin : INation
     {
         private Color backGroundColor = Color.Orange;
-        Pen pen = new Pen(Color.Black);
         public void DrawHouse(Graphics g, Point p)
         {
             ArabBeduinHouse arabBeduinHouse = new ArabBeduinHouse(p);

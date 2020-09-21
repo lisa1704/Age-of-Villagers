@@ -19,7 +19,6 @@ namespace AgeOfVillagers
         List<Point> houseLocations = new List<Point>();
         List<Point> treeLocations = new List<Point>();
         List<Point> sourceLocations = new List<Point>();
-        Graphics g;
 
 
         public Form1()
@@ -72,8 +71,6 @@ namespace AgeOfVillagers
         private void nationList_SelectedIndexChanged(object sender, EventArgs e)
         {
             nationName = nationList.Text;
-            //Console.WriteLine(nationName);
-            //nationType=NationFactory
             backGroundColor = nationType.GetNation(nationName).GetColor();
             drawinPanel.BackColor = backGroundColor;
         }
@@ -81,7 +78,6 @@ namespace AgeOfVillagers
         private void drawinPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = drawinPanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
             if (nationType.GetNation(nationName).getNationName() == "NullNation")
             {
                 nationType.GetNation(nationName).DrawHouse(g, new Point(200,200));
