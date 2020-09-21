@@ -20,9 +20,9 @@ namespace AgeOfVillager
         {
             x = e.X;
             y = e.Y;
-            g.DrawLine(myPen, x, y, x + 32, y);
-            Rectangle rect1 = new Rectangle(x, y-12, 32, 24);
-            Rectangle rect2 = new Rectangle(x + 8, y - 6, 16, 12);
+            g.DrawLine(myPen, x, y, x + 16, y);
+            Rectangle rect1 = new Rectangle(x, y-8, 16, 16);
+            Rectangle rect2 = new Rectangle(x + 4, y - 4, 8, 8);
             g.DrawArc(myPen, rect1, 0,-180);
             g.DrawArc(myPen, rect2, 0, -180);
         }

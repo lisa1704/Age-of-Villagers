@@ -20,12 +20,15 @@ namespace AgeOfVillager
         {
             x = e.X;
             y = e.Y;
-            g.DrawLine(myPen, x, y, x - 24, y + 24);
-            g.DrawLine(myPen, x, y, x + 24, y + 24);
-            g.DrawLine(myPen, x - 24, y + 24, x + 24, y + 24);
-            g.DrawLine(myPen, x, y, x + 20, y - 12);
-            g.DrawLine(myPen, x + 20, y - 12, x + 42, y + 12);
-            g.DrawLine(myPen, x + 24, y + 24, x + 42, y + 12);
+
+            //16*16px
+            g.DrawLine(myPen, x, y, x + 16, y);
+            g.DrawLine(myPen, x, y, x + 8, y - 16);
+            g.DrawLine(myPen, x + 16, y, x + 8, y - 16);
+
+            g.DrawLine(myPen, x + 8, y - 16, x + 16, y - 24);
+            g.DrawLine(myPen, x + 16, y, x + 24, y - 8);
+            g.DrawLine(myPen, x + 16, y - 24, x + 24, y - 8);
         }
     }
 }
