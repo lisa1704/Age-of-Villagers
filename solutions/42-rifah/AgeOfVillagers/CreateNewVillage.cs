@@ -94,7 +94,6 @@ namespace AgeOfVillagers
 
         private void openVillagebutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Village is opened");
             VillageSaveOpen villageOpen = new VillageSaveOpen(myItems);
             villageOpen.openMyVillage();
             myItems = villageOpen.getmyVillage();
