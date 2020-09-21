@@ -19,6 +19,8 @@ namespace AgeOfVillagers
         public List<Point> TreePoints { get; set; } = new List<Point>();
         public List<Point> WatersrcPoints { get; set; } = new List<Point>();
 
+        VillageState villageState;
+
         string chosen_nation = "";
         string chosen_component = "";
         NationFactory NF;
@@ -93,6 +95,12 @@ namespace AgeOfVillagers
             {
                 MessageBox.Show(VillageName.Text + " Saved!");
             }
+
+            villageState.Vname = VillageName.Text;
+            villageState.HPoint = HousePoints;
+            villageState.TPoint = TreePoints;
+            villageState.WPoint = WatersrcPoints;
+
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
