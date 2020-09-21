@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Age_of_Villagers.VillageComponents
 
-namespace Age_of_Villagers.Nation
+ namespace Age_of_Villagers.Nation
 {
     class BangladeshiFarmers : INation
     {
@@ -25,6 +26,21 @@ namespace Age_of_Villagers.Nation
         public void DrawWaterSource()
         {
             throw new NotImplementedException();
+        }
+
+        public VillageComponents GetHouse(Point point)
+        {
+            return new BangladeshiHouse(point);
+        }
+
+        public VillageComponets getTree(Point point)
+        {
+            return new BangladeshiTree(point);
+        }
+
+        public VillageComponents getWaterSource(Point point)
+        {
+            return new BangladeshiWaterSource(point);
         }
     }
 }
