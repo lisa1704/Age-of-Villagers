@@ -1,6 +1,8 @@
 package project.Utilities.NationItems;
 
-import java.awt.*;
+
+import javafx.scene.shape.Shape;
+
 import java.util.ArrayList;
 
 public interface IAssets {

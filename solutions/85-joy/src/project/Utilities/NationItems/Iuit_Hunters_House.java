@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Iuit_Hunters_House implements IHouse{
     @Override
-    public ArrayList<Shape> DrawHouse(double x1, double y1) {
+    public ArrayList<Shape> drawAsset(double x1, double y1) {
         ArrayList<Shape> House = new ArrayList<Shape>();
 
         Arc arc1 = new Arc();

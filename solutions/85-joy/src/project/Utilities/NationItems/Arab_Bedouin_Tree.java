@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Arab_Bedouin_Tree implements ITree{
     @Override
-    public ArrayList<Shape> DrawTree(double x1, double y1) {
+    public ArrayList<Shape> drawAsset(double x1, double y1) {
         ArrayList<Shape> Tree = new ArrayList<Shape>();
 
         Line line1 = new Line(x1,y1,x1-(TreeWidth/2),y1-4);
