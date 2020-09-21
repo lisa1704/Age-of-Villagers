@@ -13,11 +13,11 @@ namespace Age_of_Villagers.Age_of_Villagers
         {
             My_components.Add(shape);
         }
-        public void Draw(Graphics g)
+        public void Draw(Graphics g,Pen pen)
         {
             foreach (var component in My_components)
             {
-                component.Draw(g);
+                component.Draw(g,pen);
             }
         }
 

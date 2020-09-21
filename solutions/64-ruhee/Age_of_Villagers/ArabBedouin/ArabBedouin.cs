@@ -8,6 +8,8 @@ namespace Age_of_Villagers.ArabBedouin
 {
     public class ArabBedouin : INation
     {
+        Graphics g;
+        Pen pen = new Pen(Color.Black);
         public Color BackgroundColor()
         {
 
@@ -17,13 +19,13 @@ namespace Age_of_Villagers.ArabBedouin
         public void DrawHouse(Graphics g, Point point)
         {
             ArabHouse arabBedouinHouse = new ArabHouse(point);
-            arabBedouinHouse.Draw(g);
+            arabBedouinHouse.Draw(g,pen);
         }
 
         public void DrawTree(Graphics g, Point point)
         {
             ArabTrees arabBedouinTree = new ArabTrees(point);
-            arabBedouinTree.Draw(g);
+            arabBedouinTree.Draw(g,pen);
         }
 
         public void DrawWaterSource(Graphics g, Point point)

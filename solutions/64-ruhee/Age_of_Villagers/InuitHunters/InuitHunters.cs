@@ -8,21 +8,24 @@ namespace Age_of_Villagers.InuitHunters
 {
     public class InuitHunters: INation
     {
+        Graphics g;
+        Pen pen = new Pen(Color.Black);
         public void DrawTree(Graphics g, Point point)
         {
             NullElements InuitHouse = new NullElements();
-            InuitHouse.drawing();
+            InuitHouse.Draw(g,pen);
         }
 
         public void DrawHouse(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            NullElements InuitWaterSource = new NullElements();
+            InuitWaterSource.Draw(g, pen);
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
             NullElements InuitWaterSource = new NullElements();
-            InuitWaterSource.drawing();
+            InuitWaterSource.Draw(g, pen);
         }
 
         public Color BackgroundColor()

@@ -8,16 +8,17 @@ namespace Age_of_Villagers.BangladeshiFarmers
 {
     public class BangladeshiFarmers : INation
     {
-        Pen p = new Pen(Color.Black);
+        Graphics g;
+        Pen pen = new Pen(Color.Black);
         public void DrawTree(Graphics g, Point point)
         {
             BangladeshiTrees bdFarmersTree = new BangladeshiTrees(point);
-            bdFarmersTree.Draw(g);
+            bdFarmersTree.Draw(g,pen);
         }
         public void DrawHouse(Graphics g, Point point)
         {
             BangladeshiHouse bdFarmersHouse = new BangladeshiHouse(point);
-            bdFarmersHouse.Draw(g);
+            bdFarmersHouse.Draw(g,pen);
         }
 
         public string BangladeshiFarmerTest()
@@ -29,7 +30,7 @@ namespace Age_of_Villagers.BangladeshiFarmers
         public void DrawWaterSource(Graphics g, Point point)
         {
             BangladeshiWaterS bdWater = new BangladeshiWaterS(point);
-            bdWater.Draw(g);
+            bdWater.Draw(g,pen);
         }
 
         public Color BackgroundColor()

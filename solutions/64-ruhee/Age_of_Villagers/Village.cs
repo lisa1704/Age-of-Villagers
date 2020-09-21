@@ -19,6 +19,7 @@ namespace Age_of_Villagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
+        public INation nation;
         Factory_Nation nationfactory = new Factory_Nation();
         public Village()
         {
@@ -103,6 +104,8 @@ namespace Age_of_Villagers
 
         private void drawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
+            Pen pen = new Pen(Color.Black);
+            Graphics g = drawingPanel.CreateGraphics();
             if (ItemNames == "Tree")
             {
                 tree_point.Add(e.Location);

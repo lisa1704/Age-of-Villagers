@@ -8,6 +8,8 @@ namespace Age_of_Villagers.EgyptianKings
 {
     public class EgyptianKings:INation
     {
+        Graphics g;
+        Pen pen = new Pen(Color.Black);
         public Color BackgroundColor()
         {
             return Color.Yellow;
@@ -16,19 +18,19 @@ namespace Age_of_Villagers.EgyptianKings
         public void DrawHouse(Graphics g, Point point)
         {
             EgyptianHouse egyptianhouse = new EgyptianHouse(point);
-            egyptianhouse.Draw(g);
+            egyptianhouse.Draw(g,pen);
         }
 
         public void DrawTree(Graphics g, Point point)
         {
             EgyptianTrees egyptiantree = new EgyptianTrees(point);
-            egyptiantree.Draw(g);
+            egyptiantree.Draw(g,pen);
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
             EgyptianWaterS egyptianWater= new EgyptianWaterS(point);
-            egyptianWater.Draw(g);
+            egyptianWater.Draw(g,pen);
         }
     }
 }
