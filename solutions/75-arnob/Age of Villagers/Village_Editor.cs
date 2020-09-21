@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Age_of_Villagers.Nation_Factory_Creator;
 
 namespace Age_of_Villagers
 {
@@ -55,7 +56,7 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-        private void Menu_Bar_Click(object sender, EventArgs e)
+        private void _Click(object sender, EventArgs e)
         {
             Graphics g = Menu_bar.CreateGraphics();
             Font font = new Font("Calibri", 10, FontStyle.Regular);
@@ -79,7 +80,7 @@ namespace Age_of_Villagers
             }
         }
 
-        private void drawing_space_Paint(object sender, MouseEventArgs e)
+        private void drawing_click(object sender, MouseEventArgs e)
         {
             if (item == "house")
             {
@@ -138,17 +139,17 @@ namespace Age_of_Villagers
 
         private void House_Click(object sender, EventArgs e)
         {
-
+            item = "house";
         }
 
         private void Tree_Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            item = "tree";
         }
 
         private void WaterSource_Clicked(object sender, EventArgs e)
         {
-
+            item = "Water_source";
         }
 
 

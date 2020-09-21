@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
@@ -119,7 +120,8 @@ namespace Age_of_Villagers
             this.drawing_space.Name = "drawing_space";
             this.drawing_space.Size = new System.Drawing.Size(600, 400);
             this.drawing_space.TabIndex = 7;
-            this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this.drawing_space_Paint);
+            this.drawing_space.Paint += new System.Windows.Forms.PaintEventHandler(this._Click);
+            this.drawing_space.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawing_click);
             // 
             // contextMenuStrip1
             // 
@@ -142,7 +144,7 @@ namespace Age_of_Villagers
             this.Menu_bar.Name = "Menu_bar";
             this.Menu_bar.Size = new System.Drawing.Size(222, 400);
             this.Menu_bar.TabIndex = 9;
-            this.Menu_bar.Click += new System.EventHandler(this.Menu_Bar_Click);
+            this.Menu_bar.Click += new System.EventHandler(this._Click);
             // 
             // label_ageOfVillagers
             // 
@@ -191,6 +193,7 @@ namespace Age_of_Villagers
             this.ResumeLayout(false);
 
         }
+
 
 
 

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Age_of_Villagers.Nation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers.Nation_Factory_Creator
 {
-    class Arab_Creator : AbstractNationFactoryCreator
+    public class Arab_Creator : AbstractNationFactoryCreator
     {
         private String nationName = "Arab Bedouin";
 
@@ -24,6 +25,9 @@ namespace Age_of_Villagers
             }
         }
 
-        public override INation CreateNation => new Arab_Bedouin(nationName);
+        public override INation CreateNation()
+        {
+            return new Arab_Bedouin(nationName);
+        }
     }
 }

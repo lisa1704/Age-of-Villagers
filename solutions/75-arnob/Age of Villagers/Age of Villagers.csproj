@@ -78,7 +78,7 @@
       <DependentUpon>Village_Editor.cs</DependentUpon>
     </Compile>
     <Compile Include="INation.cs" />
-    <Compile Include="Inuit Hunter Items\Inuit_House.cs" />
+    <Compile Include="Inuit_Hunter_Items\Inuit_House.cs" />
     <Compile Include="Nation_Factory_Creator\Inuit_Creator.cs" />
     <Compile Include="Nation\Inuit_Hunter.cs" />
     <Compile Include="IShape.cs" />

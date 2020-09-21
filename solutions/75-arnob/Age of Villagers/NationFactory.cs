@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers.Nation_Factory_Creator
 {
    public class NationFactory
     {

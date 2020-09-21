@@ -1,14 +1,15 @@
 ﻿using System;
+using Age_of_Villagers.Nation;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers.Nation_Factory_Creator
 {
-    class Egyptian_Creator : AbstractNationFactoryCreator
+   public class Egyptian_Creator : AbstractNationFactoryCreator
     {
-        private String nationName = "Egyptian Kings";
+        private String nationName = "Egyptian King";
 
         public string GetNationName
         {
@@ -19,11 +20,14 @@ namespace Age_of_Villagers
 
             set
             {
-                if (value == "Egyptian Kings")
+                if (value == "Egyptian King")
                     nationName = value;
             }
         }
 
-        public override INation CreateNation => new Egyptian_King(nationName);
+        public override INation CreateNation()
+        {
+            return new Egyptian_King(nationName);
+        }
     }
 }
