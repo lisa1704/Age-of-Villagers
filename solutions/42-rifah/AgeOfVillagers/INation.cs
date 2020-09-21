@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         void DrawWaterSource(Graphics g, Point point);
         Color BackgroundColor();
     }
-    internal class Factory_Nation
+    public class Factory_Nation
     {
         public INation GetNation(string NationName)
         {
