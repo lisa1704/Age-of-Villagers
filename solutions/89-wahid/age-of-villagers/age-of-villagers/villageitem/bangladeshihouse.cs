@@ -16,8 +16,8 @@ namespace age_of_villagers.villageitem
             midLeft = new Point(top.X - 10, top.Y + 20);
             midRight = new Point(top.X + 10, top.Y + 20);
             bottomRight = new Point(top.X + 10, top.Y + 40);
-            Additem(new triangle(top, midLeft, midRight));
-            Additem(new rectangle(midLeft, bottomRight));
+            Additem(new shape.triangle(top, midLeft, midRight));
+            Additem(new shape.rectangle(midLeft, bottomRight));
         }
     }
 }

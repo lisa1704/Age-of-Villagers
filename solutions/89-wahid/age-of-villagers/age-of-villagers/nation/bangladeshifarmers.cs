@@ -16,7 +16,7 @@ namespace age_of_villagers.nation
 
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return "bangladeshi farmers";
         }
 
         public Color getTerrainColor()
