@@ -93,13 +93,14 @@ namespace AgeOfVillagers
             }
             else
             {
+                villageState.Vname = VillageName.Text;
+                villageState.HPoint = HousePoints;
+                villageState.TPoint = TreePoints;
+                villageState.WPoint = WatersrcPoints;
+                SaveVillage saveVillage = new SaveVillage(villageState);
+                saveVillage.execute();
                 MessageBox.Show(VillageName.Text + " Saved!");
             }
-
-            villageState.Vname = VillageName.Text;
-            villageState.HPoint = HousePoints;
-            villageState.TPoint = TreePoints;
-            villageState.WPoint = WatersrcPoints;
 
         }
 
