@@ -83,16 +83,16 @@ namespace AgeofVillagers
 
             foreach (Point pt in HousePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 16);
+                //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.Y + 16);
                 nationFactory.GetNation(VType).DrawHouse(g, pt);
             }
             foreach (Point pt in TreePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 24);
+                //g.DrawLine(p, pt.X, pt.Y, pt.X + 16, pt.X + 24);
             }
             foreach (Point pt in WaterPoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
             }
         }
 

@@ -50,7 +50,7 @@
             this.DrawPanel.TabIndex = 0;
             //this.DrawPanel.BackColorChanged += new System.EventHandler(this.NationList_SelectedIndexChanged_1);
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            //this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
+            this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.draw_panelMouseClick);
             // 
             // panel2
             // 
@@ -66,6 +66,7 @@
             this.panel2.Controls.Add(this.open_btn);
             this.panel2.Location = new System.Drawing.Point(600, 0);
             this.panel2.Name = "panel2";
+            this.panel2.Cursor = System.Windows.Forms.Cursors.PanNorth; //added later
             this.panel2.Size = new System.Drawing.Size(220, 400);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
@@ -73,6 +74,11 @@
             // nation
             // 
             this.nation.FormattingEnabled = true;
+            this.nation.Items.AddRange(new object[] {
+            "BangladeshiFarmers",
+            "ArabBedouin",
+            "EgyptianKings",
+            "InuitHunters"});
             this.nation.Location = new System.Drawing.Point(50, 117);
             this.nation.Name = "nation";
             this.nation.Size = new System.Drawing.Size(125, 28);
