@@ -86,6 +86,9 @@ namespace AgeOfVillagers
             waterSource_point.Clear();
             drawingPanel.Refresh();
             NationName.ResetText();
+            VillageNametextBox.ResetText();
+            drawingPanel.BackColor = Color.White;
+
             MessageBox.Show("Panel is ready for new village to be created");
         }
 
