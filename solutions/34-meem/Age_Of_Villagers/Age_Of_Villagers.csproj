@@ -75,7 +75,7 @@
     <Compile Include="Factories\EgyptianItemFactory.cs" />
     <Compile Include="Egyptian King\EgyptianTree.cs" />
     <Compile Include="Egyptian King\EgyptianWaterSource.cs" />
-    <Compile Include="ICommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="Inuit Hunters\InuitHunterHouse.cs" />
     <Compile Include="Factories\InuitItemFactory.cs" />

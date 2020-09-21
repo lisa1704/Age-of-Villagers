@@ -12,7 +12,7 @@ namespace Age_Of_Villagers
     {
         void setTerrain(VillageEditorWindow villageEditor);
         void setRadiobutton(VillageEditorWindow villageEditor);
-        Color getColor();
+        
 
     }
 
@@ -77,10 +77,7 @@ namespace Age_Of_Villagers
             villageEditor.Panel1.BackColor = Color.Yellow;
         }
 
-        public Color getColor()
-        {
-            return Color.Yellow;
-        }
+        
     }
 
     public class InuitHunterNation : INation
@@ -100,10 +97,7 @@ namespace Age_Of_Villagers
             villageEditor.Panel1.BackColor = Color.White;
         }
 
-        public Color getColor()
-        {
-            return Color.White;
-        }
+        
     }
 
 
