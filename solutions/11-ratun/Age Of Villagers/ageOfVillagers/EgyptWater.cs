@@ -1,12 +1,13 @@
-﻿using System;
-
-public class EgyptWater : Water
+﻿namespace ageOfVillagers
 {
-	private int Xaxis = 16;
-	private int Yaxis = 16;
-	public void CreateWater(int x, int y)
+    internal class EgyptWater : IShape
     {
-		Circle c = new Circle(x, y, 8);
-		c.Draw();
+        private int Xaxis = 16;
+        private int Yaxis = 16;
+        public string draw(int x, int y)
+        {
+            Circle c = new Circle(x, y, 8);
+            return c.Draw();
+        }
     }
 }
