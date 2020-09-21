@@ -10,7 +10,7 @@ namespace AgeOfVillagers.Nation
     {
         public VillageItem getHouse(Point point)
         {
-            throw new NotImplementedException();
+            return new InuitHouse(point);
         }
 
         public string getNationName()
