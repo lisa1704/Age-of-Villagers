@@ -11,19 +11,19 @@ namespace AgeOfVillagers
     {
         private IGames game;
         private string sVillageName;
-        private List<DrawnItemsInformation> drawnItemsInfoList;
+        private State currentState;
         
 
-        public SaveVillage(IGames game, string sVillageName, List<DrawnItemsInformation> drawnItemsInfoList)
+        public SaveVillage(IGames game, string sVillageName, State currentState)
         {
             this.game = game;
             this.sVillageName = sVillageName;
-            this.drawnItemsInfoList = drawnItemsInfoList;
+            this.currentState = currentState;
         }
 
         public State execute()
         {
-            return game.saveVillage(drawnItemsInfoList, sVillageName);
+            return game.saveVillage(currentState, sVillageName);
         }
 
        

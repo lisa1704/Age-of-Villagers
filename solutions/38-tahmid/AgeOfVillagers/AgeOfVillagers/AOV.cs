@@ -65,16 +65,11 @@ namespace AgeOfVillagers
             }
         }
 
-        public State saveVillage(List<DrawnItemsInformation> drawnItemsInfoList, string villageName)
+        public State saveVillage(State currentState, string villageName)
         {
             
 
-            State currentState = new State()
-            {
-                VillageName = villageName,
-                DrawnItemsInformationList=drawnItemsInfoList
-
-            };
+            
 
             
 

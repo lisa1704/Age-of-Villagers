@@ -80,7 +80,7 @@ namespace AgeOfVillagers
             }
 
             game = gameFactory.getGame();
-            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, drawnItemsInfosList);
+            GameControlCommand onCommand = commandFactory.GetGameControlCommand(Constants.SAVE_KEY, game, village_name_label.Text, gameState);
             GameKeyInvoker gameKeyInvoker = new GameKeyInvoker(onCommand);
             gameKeyInvoker.click();
 
