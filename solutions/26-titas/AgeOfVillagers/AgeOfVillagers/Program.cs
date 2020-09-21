@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -8,10 +9,13 @@ namespace AgeOfVillagers
 {
     static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
+        
+        public class BdFarmers:INation
+        {
+           
+        }
+
+
         static void Main()
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
