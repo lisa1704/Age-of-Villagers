@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Age_of_villagers.Nations;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -16,6 +17,7 @@ namespace Age_of_villagers
         int X, Y;
         string text = "";
         string name = "";
+        String villagetype = "";
         VillageProperties village;
         public Graphics g;
         public Pen p;
