@@ -1,8 +1,6 @@
 package Project.Utilities;
-
 import Project.Utilities.NationItems.*;
 import javafx.scene.shape.Shape;
-
 import java.util.ArrayList;
 
 public class Nation {
