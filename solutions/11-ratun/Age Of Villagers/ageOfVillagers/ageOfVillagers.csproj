@@ -56,6 +56,7 @@
     <Compile Include="ArabFactory.cs" />
     <Compile Include="ArabHouse.cs" />
     <Compile Include="ArabTree.cs" />
+    <Compile Include="Arc.cs" />
     <Compile Include="BangladeshFactory.cs" />
     <Compile Include="Bdhouse.cs" />
     <Compile Include="Bdtree.cs" />
