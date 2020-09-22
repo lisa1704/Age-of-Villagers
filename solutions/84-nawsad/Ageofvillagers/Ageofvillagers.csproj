@@ -58,6 +58,9 @@
     <Compile Include="AgeofVillagers.Designer.cs">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="INationFactory.cs" />
     <Compile Include="Items\Arab_House.cs" />
     <Compile Include="Items\Arab_Tree.cs" />

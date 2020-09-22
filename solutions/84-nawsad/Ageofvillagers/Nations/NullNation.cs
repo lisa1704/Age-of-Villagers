@@ -12,10 +12,9 @@ namespace Ageofvillagers.Nations
     {
         Graphics g;
         Pen p;
-        public NullNation(Graphics g,Pen p)
+        public NullNation()
         {
-            this.g = g;
-            this.p = p;
+            
         }
         public void drawHouse(int x, int y)
         {
