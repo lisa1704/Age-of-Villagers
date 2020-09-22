@@ -15,7 +15,7 @@ namespace Age_of_Villagers.VillageComponents
         {
             Components = new List<IShape>();
         }
-        public void AddComponent(IShape shape)
+        public void addComponent(IShape shape)
         {
             Components.Add(shape);
         }
