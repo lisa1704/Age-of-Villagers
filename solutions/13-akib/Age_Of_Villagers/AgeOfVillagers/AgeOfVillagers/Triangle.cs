@@ -14,7 +14,12 @@
         }
         public string Draw_Shape()
         {
-            return "Drawing a Triangle...";
+            Lines line1 = new Lines(x1, y1, x2, y2);
+            Lines line2 = new Lines(x2, y2, x3, y3);
+            Lines line3 = new Lines(x3, y3, x1, y1);
+
+            return line1.Draw_Shape() + line2.Draw_Shape() + line3.Draw_Shape();
+
         }
     }
 }
