@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-    class Arabbedouin: nationcreate
+    public class Arabbedouin: nationcreate
     {
 
     }

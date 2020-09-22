@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-   class Bangladeshifarmers:nationcreate
+  public class Bangladeshifarmers:nationcreate
     {
     }
 }

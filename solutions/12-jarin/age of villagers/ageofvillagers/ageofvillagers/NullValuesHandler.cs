@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-    public interface nationcreate
+   public  class NullValuesHandler:nationcreate
     {
-
     }
 }
