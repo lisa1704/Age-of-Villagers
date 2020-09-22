@@ -7,19 +7,19 @@ namespace Age_of_Villagers.Age_of_Villagers
 {
     class Rectangle: CShape
     {
-        private readonly Point UpperLeft;
-        private readonly Point BottomRight;
+        private readonly Point pt1;
+        private readonly Point pt2;
         public Rectangle(Point topLeft, Point bottomRight)
         {
-            this.UpperLeft = topLeft;
-            this.BottomRight = bottomRight;
+            this.pt1 = topLeft;
+            this.pt2 = bottomRight;
         }
         public void Draw(Graphics g,Pen pen)
         {
-            g.DrawLine(pen, UpperLeft.X, UpperLeft.Y, BottomRight.X, UpperLeft.Y);
-            g.DrawLine(pen, UpperLeft.X, UpperLeft.Y, UpperLeft.X, BottomRight.Y);
-            g.DrawLine(pen, UpperLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
-            g.DrawLine(pen, BottomRight.X, UpperLeft.Y, BottomRight.X, BottomRight.Y);
+            g.DrawLine(pen, pt1.X, pt1.Y, pt2.X, pt1.Y);
+            g.DrawLine(pen, pt1.X, pt1.Y, pt1.X, pt2.Y);
+            g.DrawLine(pen, pt1.X, pt2.Y, pt2.X, pt2.Y);
+            g.DrawLine(pen, pt2.X, pt1.Y, pt2.X, pt2.Y);
         }
     }
 }
