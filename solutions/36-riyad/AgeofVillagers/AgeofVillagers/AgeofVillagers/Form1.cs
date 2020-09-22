@@ -66,7 +66,10 @@ namespace AgeofVillagers
 
         private void new_btn_Click(object sender, EventArgs e)
         {
-            DrawPanel.Dispose();
+            HousePoints.Clear();
+            TreePoints.Clear();
+            WaterPoints.Clear();
+            DrawPanel.Refresh(); DrawPanel.Refresh();
         }
 
         private void open_btn_Click(object sender, EventArgs e)
