@@ -11,5 +11,7 @@ namespace AgeOfVillagers
         public IShapes DrawHouse(Graphics g, Point p);
         public IShapes DrawWaterSource(Graphics g, Point p);
 
+        Color TerrainColor();
+
     }
 }

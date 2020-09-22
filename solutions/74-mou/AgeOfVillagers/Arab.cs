@@ -23,5 +23,10 @@ namespace AgeOfVillagers
             return new ArabWaterSource(p);
 
         }
+
+        public Color TerrainColor()
+        {
+            return Color.LightYellow;
+        }
     }
 }

@@ -27,6 +27,11 @@ namespace AgeOfVillagers
             return w;
 
         }
-    
+
+        public Color TerrainColor()
+        {
+            return Color.Yellow;
+        }
+
     }
 }

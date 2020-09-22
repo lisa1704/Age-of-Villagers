@@ -106,11 +106,13 @@ namespace AgeOfVillagers
                 nationfactory.GetNation(checked_nation).DrawWaterSource(gr, new Point(e.X, e.Y)).DrawShapes(gr, pen);
 
             }
+            
 
         }
         private void NationTypelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             checked_nation = NationTypelistBox.Text;
+            drawingpanel.BackColor = nationfactory.GetNation(checked_nation).TerrainColor();
         }
         private void villagenameTextChanged(object sender, EventArgs e)
         {
