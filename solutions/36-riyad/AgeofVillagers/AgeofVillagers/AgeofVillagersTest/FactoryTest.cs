@@ -17,5 +17,15 @@ namespace AgeofVillagersTest
             Assert.IsType(expected, actual);
 
         }
+
+        [Fact]
+        public void ArabationFactory()
+        {
+            FactoryPattern nationFactory = new FactoryPattern();
+            var actual = nationFactory.GetNation("ArabBedouin");
+            var expected = typeof(ArabBedouin);
+            Assert.IsType(expected, actual);
+
+        }
     }
 }
