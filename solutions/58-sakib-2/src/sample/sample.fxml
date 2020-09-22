@@ -23,7 +23,7 @@
    <children>
       <SplitPane dividerPositions="0.7090909090909091" prefHeight="388.0" prefWidth="638.0">
         <items>
-          <AnchorPane fx:id="drawSpace" minHeight="400.0" minWidth="600.0" onMouseClicked="#getPositionAndObject" prefHeight="400.0" prefWidth="800.0">
+          <AnchorPane fx:id="drawSpace" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="800.0">
                <children>
                   <Canvas fx:id="canvas" height="400.0" onMouseClicked="#getPositionAndObject" width="600.0" />
                </children></AnchorPane>

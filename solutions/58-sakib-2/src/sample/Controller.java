@@ -8,7 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Shape;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 public class Controller {
@@ -22,6 +23,7 @@ public class Controller {
     public AnchorPane drawSpace;
     public Canvas canvas;
     public GraphicsContext gc;
+    public FileWriter fileWriter=null;
 
     public void selectTree(){
         rbtnHouse.setSelected(false);
@@ -38,6 +40,7 @@ public class Controller {
 
 
     public String selectObject(){
+
 
         if (rbtnTree.isSelected()){
             //System.out.println("Tree is drawn");
@@ -66,6 +69,11 @@ public class Controller {
                             x=event.getX();
                             y=event.getY();
                             gc=canvas.getGraphicsContext2D();
+                            try {
+                                fileWriter.write(object+" "+x+" "+y+"\n");
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                             if (object=="Tree")gc.fillText("T",x,y);
                             else if (object=="House")gc.fillText("H",x,y);
                             else if (object=="WS")gc.fillText("W",x,y);
@@ -80,6 +88,17 @@ public class Controller {
         }
 
     }
+    public void initialState(){
+        rbtnTree.setVisible(false);
+        rbtnHouse.setVisible(false);
+        rbtnWaterSource.setVisible(false);
+        btnSaveVillage.setVisible(false);
+        lblName.setText("Name");
+        lblNation.setText("Nation");
+        btnOpenVillage.setVisible(true);
+        btnNewVillage.setVisible(true);
+        drawSpace.getChildren().removeAll(canvas);
+    }
     public void newVillageLoader(){
 
         if (isCreating){
@@ -91,27 +110,36 @@ public class Controller {
             btnSaveVillage.setVisible(false);
             isCreating=false;
         }else{
-            rbtnTree.setVisible(true);
-            rbtnHouse.setVisible(true);
-            rbtnWaterSource.setVisible(true);
-            btnSaveVillage.setVisible(true);
-            btnNewVillage.setVisible(false);
-            lblName.setText(nameOfVillage.getText());
-            lblNation.setText(nationOfVillage.getSelectionModel().getSelectedItem());
-            nameOfVillage.setVisible(false);
-            nationOfVillage.setVisible(false);
-            isCreating=true;
+            if (nameOfVillage.getText().equals("") || nationOfVillage.getSelectionModel().isEmpty()){
+                System.out.println("Give all information!");
+            }else{try{
+                fileWriter=new FileWriter("D:\\5th Semester\\DP\\age-of-villagers-swe-17\\solutions\\58-sakib-2\\"+nameOfVillage.getText()+".txt",true);
+                fileWriter.write(nameOfVillage.getText()+" "+nationOfVillage.getSelectionModel().getSelectedItem()+"\n");
+            }catch (Exception e){
+
+            }
+                rbtnTree.setVisible(true);
+                rbtnHouse.setVisible(true);
+                rbtnWaterSource.setVisible(true);
+                btnSaveVillage.setVisible(true);
+                btnNewVillage.setVisible(false);
+                lblName.setText(nameOfVillage.getText());
+                lblNation.setText(nationOfVillage.getSelectionModel().getSelectedItem());
+                nameOfVillage.setVisible(false);
+                nationOfVillage.setVisible(false);
+                isCreating=true;
+            }
+
         }
 
     }
     public void loadVillage(){}
     public void saveVillage(){
-        btnOpenVillage.setVisible(true);
-        btnNewVillage.setVisible(true);
-        rbtnTree.setSelected(false);
-        rbtnHouse.setSelected(false);
-        rbtnWaterSource.setSelected(false);
-        lblName.setText("Name");
-        lblNation.setText("Nation");
+        try {
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        initialState();
     }
 }
