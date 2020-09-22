@@ -58,9 +58,11 @@ namespace ageOfVillagers
 
         public void NewVillage_Click(object sender, EventArgs e)
         {
-            Village v = new Village();
-            v.CreateVillage(Nation.Text, VillageName.Text);
-            VillageNameList.Add(VillageName.Text);
+            panel2.Refresh();
+            Graphics g = panel2.CreateGraphics();
+            //Village v = new Village();
+            //v.CreateVillage(Nation.Text, VillageName.Text);
+            //VillageNameList.Add(VillageName.Text);
             text += "Creating the village. ";
         }
 
@@ -80,6 +82,8 @@ namespace ageOfVillagers
 
         public void button2_Click(object sender, EventArgs e)
         {
+            Graphics g = panel2.CreateGraphics();
+            g.Save();
             Village v = new Village();
             v.Save();
             text += "Saving the village. ";
@@ -105,7 +109,7 @@ namespace ageOfVillagers
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = panel2.CreateGraphics();
-            Shape nation = NationFactory.GetNation(currentNationName);
+            Shape nation = NationFactory.GetNation(currentNationName, panel2);
             IShape shape = nation.GetItem(currentselect);
             shape.draw(Cursor.Position.X, Cursor.Position.Y, g);
             //return shape.draw(x, y);
