@@ -18,6 +18,16 @@ namespace AgeOfVillagers.Test
             actual.Equals(expected);
         }
 
+        [Fact]
+        public void BdCheck()
+        {
+            NationFactory nf = new NationFactory();
+            AbstractNation actual = nf.getNation("Bangladeshi Farmers");
+            AbstractNation expected = new Bangladesh();
+
+            actual.Equals(expected);
+        }
+
         
 
         [Fact]
