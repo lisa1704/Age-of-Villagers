@@ -9,8 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.*;
-import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -23,7 +21,7 @@ public class VillageView_controller implements Initializable {
     public String flag;
     public Nation nation;
     public SceneSate sceneSate;
-    private String villageName = "#$noNationNameYet$#";
+    private String villageName = "MY village";
     VillageSaverLoader SLD;
 
     @Override
@@ -32,6 +30,7 @@ public class VillageView_controller implements Initializable {
         nation = new Nation("No Nation");
         SLD = new VillageSaverLoader();
         sceneSate = new SceneSate(villageName);
+        VillageNameField.setText(villageName);
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -48,33 +47,20 @@ public class VillageView_controller implements Initializable {
 
 
     public void Open_new_village(ActionEvent actionEvent) {
-        File selectedFile = null;
-        final JFrame iFRAME = new JFrame();
-        iFRAME.setAlwaysOnTop(true);
-        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        iFRAME.setLocationRelativeTo(null);
-        iFRAME.requestFocus();
-
-        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
-        int returnValue = fileChooser.showOpenDialog(iFRAME);
-        iFRAME.dispose();
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            selectedFile = fileChooser.getSelectedFile();
-            try {
-                FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
-                ObjectInputStream in = new ObjectInputStream(file);
-//                JSONObject obj = (JSONObject) in.readObject();
-                Village village = (Village)in.readObject();
-
-                System.out.println(village.Name+" of Nation "+ village.Nation);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            System.out.println("No File Selected");
-        }
-        System.out.println("File read done");
+//        File selectedFile = null;
+//        final JFrame iFRAME = new JFrame();
+//        iFRAME.setAlwaysOnTop(true);
+//        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//        iFRAME.setLocationRelativeTo(null);
+//        iFRAME.requestFocus();
+//
+//        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
+//        int returnValue = fileChooser.showOpenDialog(iFRAME);
+//        iFRAME.dispose();
+        this.sceneSate = SLD.loadVillage();
+        this.villageName = sceneSate.Village_name;
+        VillageNameField.setText(villageName);
+        reDrawScene();
     }
 
     public void TreePressed(ActionEvent actionEvent){ flag = "Tree"; }
@@ -97,22 +83,22 @@ public class VillageView_controller implements Initializable {
 
     public void CreateNewVillage(ActionEvent actionEvent) {
         sceneSate = new SceneSate(VillageNameField.getText());
-        System.out.println(sceneSate.Village_name);
+        VillageNameField.setText(villageName);
         DrawingCanvas.getChildren().clear();
     }
 
     private void reDrawScene(){
         DrawingCanvas.getChildren().clear();
         for(AssetInfo i:sceneSate.assetList){
-            if(i.assetType == "Tree"){
+            if(i.assetType.equals("Tree")){
                 ArrayList<Shape> tree = nation.drawTree(i.x_coordinate,i.y_coordinate);
                 DrawShape(tree);
             }
-            else if (i.assetType == "House"){
+            else if (i.assetType.equals("House")){
                 ArrayList<Shape> house = nation.drawHouse(i.x_coordinate,i.y_coordinate);
                 DrawShape(house);
             }
-            else if(i.assetType == "WaterSource"){
+            else if(i.assetType.equals("WaterSource")){
                 ArrayList<Shape> WaterBody = nation.drawWaterBody(i.x_coordinate,i.y_coordinate);
                 DrawShape(WaterBody);
             }

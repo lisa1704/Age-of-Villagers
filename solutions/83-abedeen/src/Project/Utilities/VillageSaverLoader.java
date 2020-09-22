@@ -21,9 +21,10 @@ public class VillageSaverLoader {
         JsonElement je = new JsonParser().parse(json);
         System.out.println(gson1.toJson(je));
         try {
-            FileOutputStream file = new FileOutputStream("SavedFiles/"+FileName);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(json);
+            File jsonFile = new File("SavedFiles/"+FileName);
+            FileWriter writer = new FileWriter(jsonFile);
+            writer.write(json);
+            writer.close();
 
         } catch (IOException e) {
             e.printStackTrace();
