@@ -8,7 +8,13 @@ using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace AgeofVillegersTest
 {
-    class NationWaterSourceTest
+    public class NationWaterSourceTest
     {
+        [Fact]
+        public void WaterSourceTest()
+        {
+            AbstractNation bangladeshiFarmersWaterSource = new BangladeshiFarmers(new Panel());
+            Assert.AreEqual(bangladeshiFarmersWaterSource.getWaterSourceType().GetType(), new BangladeshiFarmersWaterSource().GetType());
+        }
     }
 }
