@@ -64,6 +64,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Inunit.cs" />
+    <Compile Include="Linecreate.cs" />
     <Compile Include="nationcreate.cs" />
     <Compile Include="NullValuesHandler.cs" />
     <Compile Include="Rectanglecreate.cs" />
