@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers 
 {
-    class Village : INation
+    class BangladeshiFarmers : INation
     {
    
         private String villageName;
     
-      public Village(String name)
+      public BangladeshiFarmers(String name)
         {
             villageName = name;
             

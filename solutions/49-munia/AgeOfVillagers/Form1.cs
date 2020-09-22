@@ -39,7 +39,7 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Village v = new Village(Text);
+            BangladeshiFarmers v = new BangladeshiFarmers(Text);
         }
 
 
