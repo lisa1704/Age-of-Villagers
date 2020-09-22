@@ -21,6 +21,9 @@ namespace AgeofVillegersTest
 
             AbstractNation egyptianKingsTree = new EgyptianKings(new Panel());
             Assert.AreEqual(egyptianKingsTree.getTreeType().GetType(), new EgyptianKingsTree().GetType());
+
+            AbstractNation inuitHuntersTree = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitHuntersTree.getTreeType().GetType(), new InuitHuntersTree().GetType());
         }
     }
 }
