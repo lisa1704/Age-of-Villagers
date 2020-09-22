@@ -12,9 +12,6 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
-        Pen pen = new Pen(Color.Black);
-        //int x, y;
-        Graphics g;
         public List<Point> HousePoints { get; set; } = new List<Point>();
         public List<Point> TreePoints { get; set; } = new List<Point>();
         public List<Point> WatersrcPoints { get; set; } = new List<Point>();
@@ -34,7 +31,7 @@ namespace AgeOfVillagers
 
         private void DrawingPanel_Click(object sender, EventArgs e)
         {
-            //ElementSelect();
+
         }
 
         private void VillageName_Click(object sender, EventArgs e)
@@ -48,41 +45,34 @@ namespace AgeOfVillagers
             }
         }
 
-        private void Nations_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void VillageName_TextChanged(object sender, EventArgs e)
-        {
-        
-        }
-
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
         {
-            //x = e.X;
-            //y = e.Y;
-            Point p = new Point();
-            p.X = e.X;
-            p.Y = e.Y;
+            if (nation == null)
+            {
+                //do nothing
+            }
+            else
+            {
 
-            //nation = NF.nationUpdate(Nations.SelectedIndex);
-            //g = DrawingPanel.CreateGraphics();
-            //g.DrawString(text, Font, brush, new Point(x, y));
-            if (chosen_component == "tree")
-            {
-                nation.drawtree(p);
-                TreePoints.Add(p);
-            }
-            if (chosen_component == "house")
-            {
-                nation.drawhouse(p);
-                HousePoints.Add(p);
-            }
-            if (chosen_component == "watersrc")
-            {
-                nation.drawwatersrc(p);
-                WatersrcPoints.Add(p);
+                Point p = new Point();
+                p.X = e.X;
+                p.Y = e.Y;
+
+                if (chosen_component == "tree")
+                {
+                    nation.drawtree(p);
+                    TreePoints.Add(p);
+                }
+                if (chosen_component == "house")
+                {
+                    nation.drawhouse(p);
+                    HousePoints.Add(p);
+                }
+                if (chosen_component == "watersrc")
+                {
+                    nation.drawwatersrc(p);
+                    WatersrcPoints.Add(p);
+                }
             }
         }
 
@@ -95,11 +85,9 @@ namespace AgeOfVillagers
             else
             {
                 villageState.Vname = VillageName.Text;
-                //villageState.NationIndex = Nations.SelectedIndex;
                 villageState.HPoint = HousePoints;
                 villageState.TPoint = TreePoints;
                 villageState.WPoint = WatersrcPoints;
-                //villageState.TerrainColor = DrawingPanel.BackColor;
                 SaveVillage saveVillage = new SaveVillage(villageState);
                 saveVillage.execute();
                 MessageBox.Show(VillageName.Text + " Saved!");
@@ -123,15 +111,12 @@ namespace AgeOfVillagers
 
         public void repaint(VillageState villageState)
         {
-            //Nations.SelectedIndex = villageState.NationIndex;
             if (Nations.SelectedIndex < 0)
             {
                 MessageBox.Show("Select Nation Type");
             }
             if (Nations.SelectedIndex > -1)
             {
-                //nation = (INation)Nations.SelectedItem;
-                //nation = NF.nationUpdate(villageState.NationIndex);
                 nation = NF.nationUpdate(Nations.SelectedIndex);
                 VillageName.Text = villageState.Vname;
                 foreach (Point point in villageState.HPoint)
@@ -162,9 +147,12 @@ namespace AgeOfVillagers
             House.Checked = false;
             Tree.Checked = false;
             WaterSource.Checked = false;
+            HousePoints.Clear();
+            TreePoints.Clear();
+            WatersrcPoints.Clear();
             DrawingPanel.Invalidate();
             DrawingPanel.BackColor = Color.Empty;
-            //text = "";
+            chosen_component = null;
         }
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
