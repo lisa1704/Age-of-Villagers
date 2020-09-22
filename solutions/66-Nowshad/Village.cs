@@ -10,10 +10,10 @@ namespace Age_of_Villagers
 
 	class Village
 	{
-		public string villageName = "untitled";
-		public List<Axes> houses = new List<Axes>();
-		public List<Axes> trees = new List<Axes>();
-		public List<Axes> waterS = new List<Axes>();
+		public string Name_of_Village = "untitled";
+		public List<Axes> house = new List<Axes>();
+		public List<Axes> tree = new List<Axes>();
+		public List<Axes> water = new List<Axes>();
 	}
 
 }
