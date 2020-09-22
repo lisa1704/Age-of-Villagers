@@ -69,5 +69,23 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void BdTreeCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Bangladeshi Farmers");
+            IComponent component = nation.getComponent("tree");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is BdTree)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
     }
 }
