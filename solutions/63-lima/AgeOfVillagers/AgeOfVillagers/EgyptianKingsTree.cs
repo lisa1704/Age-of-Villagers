@@ -7,13 +7,11 @@ public class EgyptianKingsTree : ITree
 
     public void drawTree(Graphics g, int X, int Y)
     {
-        g.DrawLine(p, X + 50, Y + 50, X + 65, Y + 25);
-        g.DrawLine(p, X + 50, Y + 50, X + 35, Y + 15);
-        g.DrawLine(p, X + 65, Y + 25, X + 90, Y);
-        g.DrawLine(p, X + 65, Y + 25, X + 65, Y);
-        g.DrawLine(p, X + 65, Y + 25, X + 90, Y + 20);
-        g.DrawLine(p, X + 35, Y + 15, X + 45, Y - 10);
-        g.DrawLine(p, X + 35, Y + 15, X + 25, Y - 10);
-        g.DrawLine(p, X + 35, Y + 15, X + 10, Y);
+        g.DrawLine(p, X - 8, Y , X - 2, Y - 24);
+        g.DrawLine(p, X - 8, Y , X - 14, Y - 24);
+        g.DrawLine(p, X - 4, Y - 10, X , Y- 16);
+        g.DrawLine(p, X - 4 , Y -10, X - 6, Y-20);
+        g.DrawLine(p, X - 12, Y - 10, X - 16, Y - 14);
+        g.DrawLine(p, X - 12, Y - 10, X - 16, Y - 20);
     }
 }

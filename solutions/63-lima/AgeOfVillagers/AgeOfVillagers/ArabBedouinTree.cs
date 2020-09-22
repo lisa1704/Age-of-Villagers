@@ -8,14 +8,14 @@ public class ArabBedouinTree : ITree
 
     public void drawTree(Graphics g, int X, int Y)
     {
-        g.DrawLine(p, X + 48, Y + 50, X + 52, Y + 50);
-        g.DrawLine(p, X + 52, Y + 50, X + 52, Y + 100);
-        g.DrawLine(p, X + 52, Y + 100, X + 48, Y + 100);
-        g.DrawLine(p, X + 48, Y + 100, X + 48, Y + 50);
-        g.DrawLine(p, X + 50, Y + 50, X + 50, Y + 15);
-        g.DrawLine(p, X + 50, Y + 50, X + 25, Y + 25);
-        g.DrawLine(p, X + 50, Y + 50, X + 75, Y + 25);
-        g.DrawLine(p, X + 50, Y + 50, X + 15, Y + 40);
-        g.DrawLine(p, X + 50, Y + 50, X + 85, Y + 40);
+        g.DrawLine(p, X - 5, Y, X - 5, Y - 14);
+        g.DrawLine(p, X - 7, Y, X - 7, Y - 14);
+        g.DrawLine(p, X - 5, Y, X - 7, Y);
+        g.DrawLine(p, X - 5, Y - 14, X - 7, Y - 14);
+        g.DrawLine(p, X - 6, Y - 14, X - 6, Y - 24);
+        g.DrawLine(p, X - 6, Y - 14, X  , Y - 17);
+        g.DrawLine(p, X - 6, Y - 14, X - 3, Y - 21);
+        g.DrawLine(p, X - 6, Y - 14, X - 9, Y - 21);
+        g.DrawLine(p, X - 6, Y - 14, X - 15, Y - 17);
     }
 }
