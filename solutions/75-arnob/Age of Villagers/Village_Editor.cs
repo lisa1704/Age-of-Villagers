@@ -59,8 +59,8 @@ namespace Age_of_Villagers
         private void _Click(object sender, EventArgs e)
         {
             Graphics g = Menu_bar.CreateGraphics();
-            Font font = new Font("Calibri", 10, FontStyle.Regular);
-            Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            //Font font = new Font("Calibri", 10, FontStyle.Regular);
+            //Brush brush = new SolidBrush(System.Drawing.Color.Black);
             AbstractNationFactoryCreator abstractNationCreator = n.GetNation(nType);
             Nation = abstractNationCreator.CreateNation();
 
