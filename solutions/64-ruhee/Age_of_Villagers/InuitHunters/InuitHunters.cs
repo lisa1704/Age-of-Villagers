@@ -12,14 +12,14 @@ namespace Age_of_Villagers.InuitHunters
         Pen pen = new Pen(Color.Black);
         public void DrawTree(Graphics g, Point point)
         {
-            NullElements InuitHouse = new NullElements();
-            InuitHouse.Draw(g,pen);
+            NullElements InuitTree = new NullElements();
+            InuitTree.Draw(g,pen);
         }
 
         public void DrawHouse(Graphics g, Point point)
         {
-            NullElements InuitWaterSource = new NullElements();
-            InuitWaterSource.Draw(g, pen);
+            InuitHouse InuitHouse = new InuitHouse(point);
+            InuitHouse.Draw(g, pen);
         }
 
         public void DrawWaterSource(Graphics g, Point point)
