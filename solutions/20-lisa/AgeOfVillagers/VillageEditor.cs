@@ -31,7 +31,23 @@ namespace AgeOfVillagers
 
         public void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics graphics = drawingPanel.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+
+            foreach (Point point in tree_point)
+            {
+                nationFactory.GetNation(selectNation).DrawTree(graphics,point);
+            }
+            foreach (Point point in house_point)
+            {
+                nationFactory.GetNation(selectNation).DrawHouse(graphics, point);
+            }
+            foreach (Point point in watersource_point)
+            {
+                nationFactory.GetNation(selectNation).DrawWaterSource(graphics, point);
+            }
+
+
 
         }
 
@@ -55,6 +71,23 @@ namespace AgeOfVillagers
             vName = VillageName.Text;
         }
 
+        private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
+        {
+
+           if(s == "Tree")
+           {
+                tree_point.Add(e.Location);
+           }
+           if (s == "House")
+           {
+                house_point.Add(e.Location);
+           }
+           if (s == "WaterSource")
+           {
+                watersource_point.Add(e.Location);
+           }
+            drawingPanel.Invalidate();
+        }
 
         private void mouseClick_NationList(object sender, MouseEventArgs e)
         {
@@ -116,23 +149,6 @@ namespace AgeOfVillagers
             s = "House";
         }
 
-        private void mouseClick_drawingPanel(object sender, MouseEventArgs e)
-        {
-            Graphics graphics = drawingPanel.CreateGraphics();
-            Pen pen = new Pen(Color.Black);
-
-            foreach (Point point in tree_point)
-            {
-                nationFactory.GetNation(selectNation).DrawTree(graphics, point);
-            }
-            foreach (Point point in house_point)
-            {
-                nationFactory.GetNation(selectNation).DrawHouse(graphics, point);
-            }
-            foreach (Point point in watersource_point)
-            {
-                nationFactory.GetNation(selectNation).DrawWaterSource(graphics, point);
-            }
-        }
+  
     }
 }
