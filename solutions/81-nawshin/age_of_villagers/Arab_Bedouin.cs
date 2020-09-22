@@ -24,7 +24,8 @@ namespace age_of_villagers
 
         public void draw_watersource(Graphics g, Point pt)
         {
-            //do nothing
+            NullShape water = new NullShape(pt);
+            water.draw(g);
         }
 
         public Color BackColor()

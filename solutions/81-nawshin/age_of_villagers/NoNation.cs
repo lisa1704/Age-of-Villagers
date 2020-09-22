@@ -12,15 +12,18 @@ namespace age_of_villagers
     {
         public void draw_house(Graphics g, Point pt)
         {
-            //do nothing
+            NullShape house = new NullShape(pt);
+            house.draw(g);
         }
         public void draw_tree(Graphics g, Point pt)
         {
-            //do nothing
+            NullShape tree = new NullShape(pt);
+            tree.draw(g);
         }
         public void draw_watersource(Graphics g, Point pt)
         {
-            //do nothing
+            NullShape water = new NullShape(pt);
+            water.draw(g);
         }
         public Color BackColor()
         {
