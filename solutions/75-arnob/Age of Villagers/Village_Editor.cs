@@ -56,11 +56,10 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
-
-
-        private void _Click(object sender, EventArgs e)
+      
+        private void Panel1(object sender, EventArgs e)
         {
-            Graphics g = Menu_bar.CreateGraphics();
+            Graphics g = drawing_space.CreateGraphics();
             //Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
             INation NationCreator = n.GetNation(nType);
