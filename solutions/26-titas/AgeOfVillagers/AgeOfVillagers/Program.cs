@@ -27,6 +27,24 @@ namespace AgeOfVillagers
             g.DrawLine(p, pt1, pt2);
 
         }
+        
+        public void paint_tree(MouseEventArgs e, Graphics g, Pen p)
+        {
+            int x, y;
+            x = e.X;
+            y = e.Y;
+            Point pt1 = new Point(x, y);
+            Point pt2 = new Point(x+3, y);
+            Point pt3 = new Point(x+3, y+16);
+            Point pt4 = new Point(x, y+16);
+            g.DrawArc(p, x - 8, y - 8, 16, 16, 0, 360);
+            g.DrawLine(p, pt1, pt2);
+            g.DrawLine(p, pt2, pt3);
+            g.DrawLine(p, pt3, pt4);
+            g.DrawLine(p, pt4, pt1);
+
+        }
+        
     }
 
 

@@ -92,6 +92,10 @@ namespace AgeOfVillagers
             {
                 bdFarmers.paint_house(e, g, p);
             }
+            else if (radioButtonTree.Checked)
+            {
+                bdFarmers.paint_tree(e, g, p);
+            }
 
         }
     }
