@@ -14,6 +14,11 @@ namespace Age_of_Villagers
         Pen pen;
         int x, y = -1;
         bool move = false;
+        private List<Point> HousePoints;
+        private List<Point> TreePoints;
+        private List<Point> WaterSourcePoints;
+
+
 
         public VillageWindow()
         {
@@ -64,13 +69,17 @@ namespace Age_of_Villagers
 
         private void NewVillageButton_Click(object sender, EventArgs e)
         {
-            Form VillageName = new ConfirmName(this,VillageDrawing);
-            VillageName.Show();
+            Form ConfirmName = new ConfirmName(this,VillageDrawing);
+            ConfirmName.Show();
             VillageDrawing.Invalidate();
+            /*HousePoints.Clear();
+            TreePoints.Clear();
+            WaterSourcePoints.Clear();*/
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
         {
+            
 
         }
 

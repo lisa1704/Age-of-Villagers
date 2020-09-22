@@ -10,14 +10,14 @@ namespace Age_of_Villagers
 {
     public partial class SelectVillage : Form
     {
-        public SelectVillage()
+        public SelectVillage(VillageWindow villageWindow, Panel panel)
         {
-            InitializeComponent();
+            
         }
 
         private void SelectNationButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void NationNameCombo_SelectedIndexChanged(object sender, EventArgs e)
