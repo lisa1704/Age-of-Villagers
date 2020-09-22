@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using empty_project;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Xunit;
 using System.Windows.Forms;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace AgeofVillegersTest
 {
@@ -13,7 +13,8 @@ namespace AgeofVillegersTest
         [Fact]
         public void HouseTest()
         {
-            
+            AbstractNation bangladeshiFarmersHouse = new BangladeshiFarmers(new Panel());
+            Assert.AreEqual(bangladeshiFarmersHouse.getHouseType().GetType(), new BangladeshiFarmersHouse().GetType());
         }
     }
 }
