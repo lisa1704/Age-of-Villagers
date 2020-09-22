@@ -64,17 +64,17 @@ namespace AgeOfVillegers
         }
         public void radioButton_Click()
         {
-            if (rdButtonHouse.Checked)
+            if (House_btn.Checked)
             {
-                rdButton = rdButtonHouse.Text;
+                rdButton = House_btn.Text;
             }
-            else if (rdButtonTree.Checked)
+            else if (Tree_btn.Checked)
             {
-                rdButton = rdButtonTree.Text;
+                rdButton = Tree_btn.Text;
             }
-            else if (rdButtonWaterSrc.Checked)
+            else if (Water_btn.Checked)
             {
-                rdButton = rdButtonWaterSrc.Text;
+                rdButton = Water_btn.Text;
             }
             else
                 rdButton = "";
