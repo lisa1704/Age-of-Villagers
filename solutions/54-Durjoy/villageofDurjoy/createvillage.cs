@@ -10,21 +10,33 @@ using System.Windows.Forms;
 
 namespace villageofDurjoy
 {
-    public partial class Form1 : Form
+    public partial class createvillage : Form
     {
-        public Form1()
+        int X, Y;
+        string text = "";
+        string name = "";
+        public Graphics g;
+        public Pen p;
+        public createvillage()
         {
             InitializeComponent();
+           
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void Housebutton_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+
+
+
+
     }
 }
+
