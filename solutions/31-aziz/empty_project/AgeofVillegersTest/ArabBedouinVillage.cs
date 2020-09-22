@@ -5,6 +5,7 @@ using empty_project;
 using Xunit;
 using System.Windows.Forms;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
+using System.Drawing;
 
 namespace AgeofVillegersTest
 {
@@ -21,6 +22,9 @@ namespace AgeofVillegersTest
 
             AbstractNation arabianVillageWaterSource = new ArabBedouin(new Panel());
             Assert.AreEqual(arabianVillageWaterSource.getWaterSourceType().GetType(), new ArabBedouinWaterSource().GetType());
+
+            AbstractNation arabianVillageBackgroundColor = new ArabBedouin(new Panel());
+            Assert.AreEqual(arabianVillageBackgroundColor.colorBackground(), Color.LightYellow);
         }
     }
 }
