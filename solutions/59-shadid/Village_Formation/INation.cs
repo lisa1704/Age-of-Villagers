@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Village_Formation
 {
-    interface INation
+    public interface INation
     {
-        void DrawTree();
+        void DrawTree(MouseEventArgs e);
 
-        void DrawHouse();
+        void DrawHouse(MouseEventArgs e);
 
-        void DrawWaterResource();
+        void DrawWaterResource(MouseEventArgs e);
 
     }
 }
