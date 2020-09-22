@@ -24,5 +24,9 @@ namespace Age_of_Villagers
                 }
             }
         }
+        public VillageCondition GetVillageCondition()
+        {
+            return this.villageCondition;
+        }
     }
 }
