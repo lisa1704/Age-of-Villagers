@@ -51,5 +51,10 @@ namespace Village_Formation
         {
 
         }
+        private void Draw(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
