@@ -73,13 +73,15 @@ namespace Village_Formation
             int y = e.Y;
             if (radioButton1.Checked)
             {
-                g.DrawLine(mypen, x, y, x + 20, y + 16);
-                g.DrawLine(mypen, x + 20, y + 16, x + 40, y - 24);
+                
             }
             else if(radioButton2.Checked)
             {
-                g.DrawLine(mypen, x, y, x + 30, y + 16);
-                g.DrawLine(mypen, x + 30, y + 16, x + 40, y - 2);
+               
+                g.DrawRectangle(mypen, x, y, 16, 16);
+                g.DrawLine(mypen, x, y, x + 8, y - 8);
+                g.DrawLine(mypen, x + 8, y - 8, x +16, y);
+
             }
             else if(radioButton3.Checked)
             {
