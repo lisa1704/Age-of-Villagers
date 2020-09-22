@@ -8,7 +8,7 @@ namespace AgeofVillagers90Test
     [TestClass]
     public class NullNationItemTest
     {
-        Graphics g;
+        readonly Graphics g;
         Point point = new Point(10, 10);
         [TestMethod]
         public void TestNNHouse()

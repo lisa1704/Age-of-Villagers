@@ -40,5 +40,21 @@ namespace AgeOfVillagers90
         {
             return Color.ForestGreen;
         }
+
+        public object testDrawHouse(Point point)
+        {
+            return new BangladeshiFarmerHouse(point);
+        }
+
+        public object testDrawTree(Point point)
+        {
+            return new BangladeshiFarmerHouse(point);
+        }
+
+
+        public object testDrawWaterSource(Point point)
+        {
+            return new BangladeshiFarmerHouse(point);
+        }
     }
 }

@@ -117,8 +117,6 @@ namespace AgeOfVillagers90
         private void DrawPanel_Paint(object sender, PaintEventArgs e) //600*400
         {
             Graphics g = DrawPanel.CreateGraphics();
-            Pen p = new Pen(Color.Black);
-
             foreach (Point pt in HousePoints)
             {
                 //g.DrawLine(p, pt.X, pt.Y, 100, 100);

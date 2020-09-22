@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ObjectTestofNation.cs" />
     <Compile Include="NullNationItemTest.cs" />
+    <Compile Include="BangladeshiFarmersItemTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
