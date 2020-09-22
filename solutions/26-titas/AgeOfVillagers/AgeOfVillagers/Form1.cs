@@ -13,6 +13,7 @@ namespace AgeOfVillagers
     public partial class Form1 : Form
     {
         BdFarmers bdFarmers = new BdFarmers();
+        ArabBedouin arabBedouin = new ArabBedouin();
         public Form1()
         {
             InitializeComponent();
@@ -90,7 +91,7 @@ namespace AgeOfVillagers
             Pen p = new Pen(new SolidBrush(Color.Red), 2);
             if (radioButtonHouse.Checked)
             {
-                bdFarmers.paint_house(e, g, p);
+                arabBedouin.paint_house(e, g, p);
             }
             else if (radioButtonTree.Checked)
             {
