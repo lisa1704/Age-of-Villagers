@@ -35,6 +35,7 @@
             this.treeButton = new System.Windows.Forms.RadioButton();
             this.Watersourcebutton = new System.Windows.Forms.RadioButton();
             this.Newbutton = new System.Windows.Forms.Button();
+            this.openbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
            
@@ -105,6 +106,16 @@
             this.Newbutton.Text = "New";
             this.Newbutton.UseVisualStyleBackColor = true;
             this.Newbutton.Click += new System.EventHandler(this.Newbutton_Click);
+            // 
+            // openbutton
+            // 
+            this.openbutton.Location = new System.Drawing.Point(619, 328);
+            this.openbutton.Name = "openbutton";
+            this.openbutton.Size = new System.Drawing.Size(75, 23);
+            this.openbutton.TabIndex = 8;
+            this.openbutton.Text = "open";
+            this.openbutton.UseVisualStyleBackColor = true;
+            this.openbutton.Click += new System.EventHandler(this.openbutton_Click);
             // 
             // createvillage
             // 
