@@ -25,7 +25,7 @@ namespace AgeOfVillagers
 
         public void PaintTerrain(Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            Drawingpanel.BackColor = Color.White;
         }
     }
 }

@@ -47,6 +47,9 @@ namespace AgeOfVillagers
                 radioButton1.Visible = false;
             }
             
+            
+
+
 
         }
         public void GetVillageState()
@@ -207,6 +210,11 @@ namespace AgeOfVillagers
                     nation.getNation().DrawWaterSource(point, Drawingpanel);
                 }
             }
+        }
+
+        private void changeNation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,7 @@ namespace AgeOfVillagers
         {
             this.Drawingpanel = new System.Windows.Forms.Panel();
             this.ToolsPanel = new System.Windows.Forms.Panel();
+            this.changeNation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@ namespace AgeOfVillagers
             // ToolsPanel
             // 
             this.ToolsPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ToolsPanel.Controls.Add(this.changeNation);
             this.ToolsPanel.Controls.Add(this.label3);
             this.ToolsPanel.Controls.Add(this.label2);
             this.ToolsPanel.Controls.Add(this.button3);
@@ -69,26 +71,40 @@ namespace AgeOfVillagers
             this.ToolsPanel.Size = new System.Drawing.Size(200, 400);
             this.ToolsPanel.TabIndex = 1;
             // 
+            // changeNation
+            // 
+            this.changeNation.FormattingEnabled = true;
+            this.changeNation.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Beduins",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.changeNation.Location = new System.Drawing.Point(15, 127);
+            this.changeNation.Name = "changeNation";
+            this.changeNation.Size = new System.Drawing.Size(174, 33);
+            this.changeNation.TabIndex = 10;
+            this.changeNation.SelectedIndexChanged += new System.EventHandler(this.changeNation_SelectedIndexChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 117);
+            this.label3.Location = new System.Drawing.Point(15, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 25);
             this.label3.TabIndex = 9;
             this.label3.Text = "Bangladeshi Farmers";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(11, 71);
+            this.label2.Location = new System.Drawing.Point(11, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 30);
+            this.label2.Size = new System.Drawing.Size(180, 30);
             this.label2.TabIndex = 8;
             this.label2.Text = "village name";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button3
             // 
@@ -197,5 +213,6 @@ namespace AgeOfVillagers
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private ComboBox changeNation;
     }
 }
