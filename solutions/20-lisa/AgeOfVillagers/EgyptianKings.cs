@@ -7,34 +7,40 @@ namespace AgeOfVillagers
 {
     public class EgyptianKings : INation
     {
+        Pen pen = new Pen(Color.Black);
+        private string vName;
+
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianHouse egyptianHouse = new EgyptianHouse(point);
+            egyptianHouse.Draw(graphics, pen);
         }
 
         public void DrawTree(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianTree egyptianTree = new EgyptianTree(point);
+            egyptianTree.Draw(graphics, pen);
         }
 
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            EgyptianWaterSource egyptianWS = new EgyptianWaterSource(point);
+            egyptianWS.Draw(graphics, pen);
         }
 
         public string GetVillageName()
         {
-            throw new NotImplementedException();
+            return vName;
         }
 
         public Color SetTerrain()
         {
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
 
         public void SetVillageName(string vName)
         {
-            throw new NotImplementedException();
+            this.vName = vName;
         }
 
         public void SetWaterSource()
