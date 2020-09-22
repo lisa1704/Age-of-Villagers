@@ -13,8 +13,8 @@ namespace AgeOfVillagers
         public BangladeshiHouse(Point p)
         {
             p1 = p;
-            p2 = new Point(p1.X - 8, p1.Y + 8);
-            p4 = new Point(p1.X + 8, p1.Y + 16);
+            p2 = new Point(p1.X - 10, p1.Y + 10);
+            p4 = new Point(p1.X + 10, p1.Y + 20);
             p3 = new Point(p2.X, p4.Y);
             p5 = new Point(p4.X, p2.Y);
 
