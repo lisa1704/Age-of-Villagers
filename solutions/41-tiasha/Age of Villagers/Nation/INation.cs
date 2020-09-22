@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    interface INation
+   public interface INation
     {
        
         void DrawWaterResource(Graphics g, Point location);
