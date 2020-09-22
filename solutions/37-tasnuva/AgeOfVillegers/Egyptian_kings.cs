@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace AgeOfVillegers   
-
-
+namespace AgeOfVillegers
 {
-    class Inuit_hunters : INations
+	class Egyptian_kings : INation
+	{
+
+	}
 }
