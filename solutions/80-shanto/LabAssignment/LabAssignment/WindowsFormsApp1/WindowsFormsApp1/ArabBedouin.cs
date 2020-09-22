@@ -34,7 +34,8 @@ namespace WindowsFormsApp1
 
         public void DrawWaterSource(MouseEventArgs e)
         {
-
+            NullWaterSource nw = new NullWaterSource(g);
+            nw.Draw(e);
         }
         public Color drawcolor()
         {

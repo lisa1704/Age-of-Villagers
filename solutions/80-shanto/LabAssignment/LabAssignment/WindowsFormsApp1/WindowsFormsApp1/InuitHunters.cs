@@ -25,12 +25,14 @@ namespace WindowsFormsApp1
 
         public void DrawTree(MouseEventArgs e)
         {
-            
+            NullTree nt = new NullTree(g);
+            nt.Draw(e);
         }
 
         public void DrawWaterSource(MouseEventArgs e)
         {
-            
+            NullWaterSource nw = new NullWaterSource(g);
+            nw.Draw(e);
         }
         public Color drawcolor()
         {
