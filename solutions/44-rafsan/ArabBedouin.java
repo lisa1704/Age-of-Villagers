@@ -2,8 +2,23 @@ package sample;
 
 public class ArabBedouin implements INation {
     @Override
+    public ITerrain getTerrain() {
+        return new ArabBedouinTerrain();
+    }
+
+    @Override
     public IHouse getHouse() {
-        System.out.println("Arab House Object Created");
         return new ArabBedouinHouse();
     }
+
+    @Override
+    public ITree getTree() {
+        return new ArabBedouinTree();
+    }
+
+    @Override
+    public IWaterSource getWaterSource() {
+        return null;
+    }
+
 }
