@@ -88,27 +88,7 @@ public class VillageViewController implements Initializable {
         village = village.LoadVillage();
         Village_Name.setText(village.VillageName);
 
-//        this.nationFactory = new NationFactory((String) NationDropDown.getValue());
-        for(VillageState x : village.assetList){
-            System.out.println((String) x.AssetType);
-            System.out.println(x.AssetType.getClass().getTypeName());
-            if(x.AssetType.equals("Tree")){
-                System.out.println("YES");
-                Object = nationFactory.drawTree(x.x,x.y);
-                DrawShape(Object);
-            }
-            else if(x.AssetType.equals("House")){
-                Object = nationFactory.drawHouse(x.x,x.y);
-                DrawShape(Object);
-            }
-            else if(x.AssetType.equals("WaterSource")){
-                Object = nationFactory.drawWaterSource(x.x,x.y);
-                DrawShape(Object);
-            }
-            else{
-                System.out.println("AMAR MUNDU!");
-            }
-        }
+
         DrawAssetList(village.assetList);
 
     }
@@ -130,15 +110,15 @@ public class VillageViewController implements Initializable {
 
     public void DrawAssetList(ArrayList<VillageState> assetList){
         for ( VillageState a: assetList){
-            if(a.AssetType == "Tree"){
+            if(a.AssetType.equals("Tree")){
                 Object = nationFactory.drawTree(a.x,a.y);
                 DrawShape(Object);
             }
-            else if(a.AssetType == "House"){
+            else if(a.AssetType.equals("House")){
                 Object = nationFactory.drawHouse(a.x,a.y);
                 DrawShape(Object);
             }
-            else if(a.AssetType == "WaterSource"){
+            else if(a.AssetType.equals("WaterSource")){
                 Object = nationFactory.drawWaterSource(a.x,a.y);
                 DrawShape(Object);
             }
