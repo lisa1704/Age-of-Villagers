@@ -41,21 +41,17 @@
             this.Nation_list = new System.Windows.Forms.ComboBox();
             this.Tree = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Water_source = new System.Windows.Forms.RadioButton();
-            this.Drawingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Drawingpanel
             // 
-            this.Drawingpanel.Controls.Add(this.radioButton1);
             this.Drawingpanel.Location = new System.Drawing.Point(0, 0);
             this.Drawingpanel.Name = "Drawingpanel";
             this.Drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.Drawingpanel.TabIndex = 0;
             this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
             this.Drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawinpanel_mouse);
-            // 
             // Savevillage
             // 
             this.Savevillage.Location = new System.Drawing.Point(667, 314);
@@ -166,17 +162,6 @@
             this.House.UseVisualStyleBackColor = true;
             this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(367, 65);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // Water_source
             // 
             this.Water_source.AutoSize = true;
@@ -209,8 +194,6 @@
             this.Name = "villagename_box";
             this.Text = "House";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Drawingpanel.ResumeLayout(false);
-            this.Drawingpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +214,6 @@
         private System.Windows.Forms.ComboBox Nation_list;
         private System.Windows.Forms.RadioButton Tree;
         private System.Windows.Forms.RadioButton House;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton Water_source;
     }
 }
