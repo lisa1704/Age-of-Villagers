@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    abstract class Water : IVillage_items
+    abstract class Tree : IVillage_items
     {
-        string water_type;
-
-        int height = 12;
-        int width = 12;
-
-        public abstract void Draw_water();
+        int height = 16;
+        int widtth = 24;
+        public abstract void createTree();
 
         public void grid_size()
         {
