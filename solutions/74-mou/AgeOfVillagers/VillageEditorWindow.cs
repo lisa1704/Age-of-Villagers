@@ -87,7 +87,7 @@ namespace AgeOfVillagers
 
         public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            Pen pen = new Pen(Color.Blue, 1);
+            Pen pen = new Pen(Color.Black, 2);
             //gr.DrawLine(pen, new Point(e.X,e.Y), new Point(e.X + 10, e.Y));
               
             if (item == "Tree")

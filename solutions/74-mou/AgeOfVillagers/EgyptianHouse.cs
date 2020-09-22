@@ -13,10 +13,10 @@ namespace AgeOfVillagers
         public EgyptianHouse(Point p)
         {
             p1 = p;
-            p2 = new Point(p1.X - 10, p1.Y + 30);
-            p3 = new Point(p1.X + 10, p1.Y + 20);
+            p2 = new Point(p1.X - 15, p1.Y + 45);
+            p3 = new Point(p1.X + 15, p1.Y + 30);
             p4 = new Point(p3.X, p2.Y);
-            p5 = new Point(p4.X + 4, p4.Y - 20);
+            p5 = new Point(p4.X + 5, p4.Y - 30);
 
             add_shapes(new Triangle(p1, p2, p4));
 
