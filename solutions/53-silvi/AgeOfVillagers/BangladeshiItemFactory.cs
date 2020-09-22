@@ -8,5 +8,9 @@ namespace AgeOfVillagers
 {
     class BangladeshiItemFactory : ItemFactory
     {
+        public override IVillageItem getItem(string button)
+        {
+            
+        }
     }
 }
