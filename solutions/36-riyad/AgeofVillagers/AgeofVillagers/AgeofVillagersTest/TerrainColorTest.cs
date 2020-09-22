@@ -33,5 +33,14 @@ namespace AgeofVillagersTest
             Color test = Color.Yellow;
             Assert.Equal(actual, test);
         }
+
+        [Fact]
+        public void IUnitTerrainColor()
+        {
+            InuitHunters iunit = new InuitHunters();
+            Color actual = iunit.TerrainColor();
+            Color test = Color.White;
+            Assert.Equal(actual, test);
+        }
     }
 }
