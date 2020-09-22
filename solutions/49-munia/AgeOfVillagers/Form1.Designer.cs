@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
+            this.Water = new System.Windows.Forms.RadioButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.canvas = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -49,7 +49,6 @@
             this.SaveVillage.TabIndex = 3;
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
-            this.SaveVillage.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -59,7 +58,6 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "New Village";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -69,7 +67,6 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Open Village";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -80,7 +77,6 @@
             this.label1.Size = new System.Drawing.Size(300, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Age of Villagers";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -90,7 +86,6 @@
             this.textBox1.Size = new System.Drawing.Size(221, 22);
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = "Enter Village Name";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -100,45 +95,42 @@
             this.textBox2.TabIndex = 10;
             this.textBox2.Text = "Enter nation ";
             // 
-            // radioButton1
+            // tree
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.radioButton1.Location = new System.Drawing.Point(743, 224);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 21);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tree";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.tree.AutoSize = true;
+            this.tree.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.tree.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tree.Location = new System.Drawing.Point(743, 224);
+            this.tree.Name = "tree";
+            this.tree.Size = new System.Drawing.Size(59, 21);
+            this.tree.TabIndex = 11;
+            this.tree.TabStop = true;
+            this.tree.Text = "Tree";
+            this.tree.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // House
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.DimGray;
-            this.radioButton2.Location = new System.Drawing.Point(834, 224);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(70, 21);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "House";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.House.AutoSize = true;
+            this.House.BackColor = System.Drawing.Color.DimGray;
+            this.House.Location = new System.Drawing.Point(834, 224);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(70, 21);
+            this.House.TabIndex = 12;
+            this.House.TabStop = true;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // Water
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.radioButton3.Location = new System.Drawing.Point(779, 278);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(116, 21);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Water Source";
-            this.radioButton3.UseVisualStyleBackColor = false;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.Water.AutoSize = true;
+            this.Water.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Water.Location = new System.Drawing.Point(779, 278);
+            this.Water.Name = "Water";
+            this.Water.Size = new System.Drawing.Size(116, 21);
+            this.Water.TabIndex = 13;
+            this.Water.TabStop = true;
+            this.Water.Text = "Water Source";
+            this.Water.UseVisualStyleBackColor = false;
             // 
             // canvas
             // 
@@ -147,8 +139,8 @@
             this.canvas.Name = "canvas";
             this.canvas.Size = new System.Drawing.Size(600, 400);
             this.canvas.TabIndex = 14;
-            this.canvas.Click += new System.EventHandler(this.canvas_Click);
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
+            this.canvas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.canvas_MouseClick);
             // 
             // Form1
             // 
@@ -157,9 +149,9 @@
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(988, 488);
             this.Controls.Add(this.canvas);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.Water);
+            this.Controls.Add(this.House);
+            this.Controls.Add(this.tree);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -168,7 +160,6 @@
             this.Controls.Add(this.SaveVillage);
             this.Name = "Form1";
             this.Text = "Village Template";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,9 +173,9 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton tree;
+        private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.RadioButton Water;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel canvas;
     }

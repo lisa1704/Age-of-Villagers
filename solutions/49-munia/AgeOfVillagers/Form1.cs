@@ -20,63 +20,29 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-        private void canvas_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            BangladeshiFarmers v = new BangladeshiFarmers();
-            v.DrawHouse(g);
-
-            canvas.BackColor = v.terrainColor();
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) //tree
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) //house
-        {
-
-        }
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) //water
-        {
-
-        }
-        private void button4_Click(object sender, EventArgs e) // Save
-        {
-
-        }
-        private void button5_Click(object sender, EventArgs e) // New
-        {
-            canvas.Invalidate();
-        }
-
-        private void button6_Click(object sender, EventArgs e) //Open
-        {
-
-        }
-
-        private void canvas_Click(object sender, EventArgs e)
+        private void canvas_MouseClick(object sender, MouseEventArgs e)
         {
             Point p = new Point(e.X, e.Y);
             x = p.X;
             y = p.Y;
-            panel1.Invalidate();
+            canvas.Invalidate();
         }
+
+        private void canvas_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = canvas.CreateGraphics();
+            Pen p = new Pen(Color.Black);
+            BangladeshiFarmers v = new BangladeshiFarmers();
+            canvas.BackColor = v.terrainColor();
+            if (tree.Checked == true)
+                v.DrawTree(g);
+            else if (House.Checked == true)
+                v.DrawHouse(g);
+            else if (Water.Checked == true)
+                v.drawWater(g);           
+
+        }
+
     }
 }
