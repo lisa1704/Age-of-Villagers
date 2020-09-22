@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Village_Formation
 {
     public partial class Form1 : Form
     {
+
+        
+        Pen mypen = new Pen(Color.Black, 2);
         public Form1()
         {
             InitializeComponent();
@@ -56,5 +60,37 @@ namespace Village_Formation
 
         }
 
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            int x = e.X;
+            int y = e.Y;
+            if (radioButton1.Checked)
+            {
+                g.DrawLine(mypen, x, y, x + 20, y + 16);
+                g.DrawLine(mypen, x + 20, y + 16, x + 40, y - 24);
+            }
+            else if(radioButton2.Checked)
+            {
+                g.DrawLine(mypen, x, y, x + 30, y + 16);
+                g.DrawLine(mypen, x + 30, y + 16, x + 40, y - 2);
+            }
+            else if(radioButton3.Checked)
+            {
+                g.DrawLine(mypen, x, y, x + 16, y);
+                g.DrawLine(mypen, x + 16, y, x + 16, y - 24);
+                g.DrawLine(mypen, x + 16, y - 24, x , y - 24);
+                g.DrawLine(mypen, x , y - 24, x , y );
+                g.DrawArc(mypen,x +2 ,y-30 , 25, 25, 0, 360);
+
+            }
+           
+        }
     }
 }
