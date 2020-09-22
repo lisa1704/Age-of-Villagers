@@ -16,13 +16,14 @@ namespace AgeOfVillagers.Open
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 Stream fileStream = ofd.OpenFile();
+                //vill.village_name = ofd.FileName;
                 using (StreamReader sr = new StreamReader(fileStream))
                 {
                     string json = sr.ReadToEnd();
                     vill = JsonConvert.DeserializeObject<Village>(json);
                 }
             }
-
+            Console.WriteLine(vill);
             return vill;
         }
     }
