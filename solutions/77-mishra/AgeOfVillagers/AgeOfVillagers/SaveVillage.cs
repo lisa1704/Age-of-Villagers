@@ -28,6 +28,8 @@ namespace AgeOfVillagers
                 using(StreamWriter streamWriter = new StreamWriter(stream))
                 {
                     Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
+                    jsonSerializer.Serialize(streamWriter, villagestate);
+                    streamWriter.Close();
                 }
                 stream.Close();
             }
