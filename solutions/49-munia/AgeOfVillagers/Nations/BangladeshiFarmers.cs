@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,7 +15,9 @@ namespace AgeOfVillagers
     
         public void DrawHouse(Graphics g)
         {
-            g.DrawLine(pen, 20, 10, 300, 100);
+            
+            Triangle t = new Triangle(g);
+            t.Draw();
         }
 
         public void DrawTree(Graphics g)
