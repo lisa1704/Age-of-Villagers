@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+//test
+
 public class MainTest {
 
     @Test
