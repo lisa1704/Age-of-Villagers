@@ -40,6 +40,7 @@
             this.Age_of_villagers = new System.Windows.Forms.Label();
             this.Village_Name = new System.Windows.Forms.Label();
             this.villagename_textbox = new System.Windows.Forms.TextBox();
+            this.Nation_name = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Drawingpanel
@@ -141,11 +142,23 @@
             this.villagename_textbox.TabIndex = 10;
             this.villagename_textbox.TextChanged += new System.EventHandler(this.villagename_textbox_TextChanged);
             // 
+            // Nation_name
+            // 
+            this.Nation_name.AutoSize = true;
+            this.Nation_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nation_name.Location = new System.Drawing.Point(622, 121);
+            this.Nation_name.Name = "Nation_name";
+            this.Nation_name.Size = new System.Drawing.Size(84, 13);
+            this.Nation_name.TabIndex = 11;
+            this.Nation_name.Text = "Nation Name:";
+            this.Nation_name.Click += new System.EventHandler(this.Nation_name_Click);
+            // 
             // villagename_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.Nation_name);
             this.Controls.Add(this.villagename_textbox);
             this.Controls.Add(this.Village_Name);
             this.Controls.Add(this.Age_of_villagers);
@@ -177,6 +190,7 @@
         private System.Windows.Forms.Label Age_of_villagers;
         private System.Windows.Forms.Label Village_Name;
         private System.Windows.Forms.TextBox villagename_textbox;
+        private System.Windows.Forms.Label Nation_name;
     }
 }
 

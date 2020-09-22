@@ -76,5 +76,10 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Nation_name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
