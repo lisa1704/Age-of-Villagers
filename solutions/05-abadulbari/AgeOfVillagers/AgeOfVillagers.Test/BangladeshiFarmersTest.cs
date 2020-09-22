@@ -33,5 +33,12 @@ namespace AgeOfVillagers.Test
             var expected = typeof(BangladeshiHouse);
             Assert.IsType(expected, bd.getHouse(new Point()));
         }
+
+        [Fact]
+        public void TreeTest()
+        {
+            var expected = typeof(BangladeshiTree);
+            Assert.IsType(expected, bd.getTree(new Point()));
+        }
     }
 }
