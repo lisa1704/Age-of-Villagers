@@ -115,7 +115,7 @@
             "Arab Beduin",
             "Bangladeshi Farmer",
             "Inuit Hunters",
-            "Arab Beduin"});
+            "Egyptian King"});
             this.Select_Nation_Combo_box.Location = new System.Drawing.Point(7, 165);
             this.Select_Nation_Combo_box.Name = "Select_Nation_Combo_box";
             this.Select_Nation_Combo_box.Size = new System.Drawing.Size(143, 21);
@@ -132,6 +132,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Water Source";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -143,6 +144,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Tree";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -154,6 +156,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "House";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // button6
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ageofvillagers.Nations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-
+        
         public Ageofvillagers()
         {
 
@@ -21,7 +22,20 @@ namespace Ageofvillagers
 
         }
 
-      
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+              
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

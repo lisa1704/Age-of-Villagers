@@ -9,9 +9,11 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
+
         private void Select_Nation_Combo_box_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Console.WriteLine();
+            Console.WriteLine(Select_Nation_Combo_box.Text);
+            
         }
 
     }
