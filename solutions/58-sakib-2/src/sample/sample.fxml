@@ -29,12 +29,12 @@
                </children></AnchorPane>
           <AnchorPane minHeight="400.0" minWidth="200.0" prefHeight="400.0" prefWidth="800.0">
                <children>
-                  <RadioButton fx:id="rbtnTree" layoutX="20.0" layoutY="130.0" mnemonicParsing="false" onAction="#selectTree" text="Tree" />
-                  <RadioButton fx:id="rbtnHouse" layoutX="87.0" layoutY="130.0" mnemonicParsing="false" onAction="#selectHouse" text="House" />
-                  <RadioButton fx:id="rbtnWaterSource" layoutX="20.0" layoutY="161.0" mnemonicParsing="false" onAction="#selectWaterSource" prefHeight="21.0" prefWidth="167.0" text="Water resource" />
+                  <RadioButton fx:id="rbtnTree" layoutX="20.0" layoutY="130.0" mnemonicParsing="false" onAction="#selectTree" text="Tree" visible="false" />
+                  <RadioButton fx:id="rbtnHouse" layoutX="87.0" layoutY="130.0" mnemonicParsing="false" onAction="#selectHouse" text="House" visible="false" />
+                  <RadioButton fx:id="rbtnWaterSource" layoutX="20.0" layoutY="161.0" mnemonicParsing="false" onAction="#selectWaterSource" prefHeight="21.0" prefWidth="167.0" text="Water resource" visible="false" />
                   <Button fx:id="btnNewVillage" layoutX="35.0" layoutY="277.0" mnemonicParsing="false" onAction="#newVillageLoader" text="New Village" />
                   <Button fx:id="btnOpenVillage" layoutX="34.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadVillage" text="Open Village" />
-                  <Button fx:id="btnSaveVillage" layoutX="34.0" layoutY="355.0" mnemonicParsing="false" onAction="#saveVillage" text="Save Village" />
+                  <Button fx:id="btnSaveVillage" layoutX="34.0" layoutY="355.0" mnemonicParsing="false" onAction="#saveVillage" text="Save Village" visible="false" />
                   <Label layoutX="11.0" layoutY="14.0" prefHeight="21.0" prefWidth="180.0" text="Age of villagers" textFill="#2fdd23">
                      <font>
                         <Font size="25.0" />

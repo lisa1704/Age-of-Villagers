@@ -91,6 +91,9 @@ public class Controller {
             btnSaveVillage.setVisible(false);
             isCreating=false;
         }else{
+            rbtnTree.setVisible(true);
+            rbtnHouse.setVisible(true);
+            rbtnWaterSource.setVisible(true);
             btnSaveVillage.setVisible(true);
             btnNewVillage.setVisible(false);
             lblName.setText(nameOfVillage.getText());
