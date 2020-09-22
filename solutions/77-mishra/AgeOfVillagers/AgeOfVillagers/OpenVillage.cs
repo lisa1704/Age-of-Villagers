@@ -19,7 +19,7 @@ namespace AgeOfVillagers
                 using (StreamReader streamReader = new StreamReader(stream))
                 {
                     string json = streamReader.ReadToEnd();
-                    villageState = JsonConverter.DeserializeObject<VillageState>(json);
+                    villageState = JsonConvert.DeserializeObject<VillageState>(json);
                 }
             }
         }
