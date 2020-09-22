@@ -12,34 +12,4 @@ namespace AgeofVillagers
         public void DrawWaterSource(Graphics g, Point mid);
         public Color TerrainColor();
     }
-
-    internal class FactoryPattern
-    {
-        public INation GetNation(string type)
-        {
-            if (type == "BangladeshiFarmers")
-            {
-                return new BangladeshiFarmers();
-            }
-            else if (type == "EgyptianKings")
-            {
-                return new EgyptianKings();
-            }
-
-            else if (type == "ArabBedouin")
-            {
-                return new ArabBedouin();
-            }
-
-            else if (type == "InuitHunters")
-            {
-                return new InuitHunters();
-            }
-            else
-            {
-                return new NullNation();
-            }
-            
-        }
-    }
 }
