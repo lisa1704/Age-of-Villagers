@@ -28,7 +28,15 @@ namespace AgeOfVillagers.Test
             actual.Equals(expected);
         }
 
-        
+        [Fact]
+        public void EgyptCheck()
+        {
+            NationFactory nf = new NationFactory();
+            AbstractNation actual = nf.getNation("Egyptian Kings");
+            AbstractNation expected = new Egypt();
+
+            actual.Equals(expected);
+        }
 
         [Fact]
         public void Test1()
