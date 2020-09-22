@@ -105,5 +105,23 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void EgyptTreeCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Egyptian Kings");
+            IComponent component = nation.getComponent("tree");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is EgyptTree)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
     }
 }
