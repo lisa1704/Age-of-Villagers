@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,11 @@ namespace age_of_villagers
         public string village_name;
         public string village_type;
         public string item;
+        Village newvillage;
         public Form1()
         {
             InitializeComponent();
+            newvillage = new Village();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -26,14 +29,13 @@ namespace age_of_villagers
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-        }
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
             village_name = textBox2.Text;
+            newvillage.setName(village_name);
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             village_type = comboBox1.Text;
+            Debug.WriteLine(village_type);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,12 +58,31 @@ namespace age_of_villagers
             Graphics gp = panel1.CreateGraphics();
             village_factory new_village = new village_factory(gp, e.Location);
             if (item == "house")
+            {
                 new_village.get_nation(village_type).draw_house();
+                newvillage.housepoint.Add(e.Location);
+            }
             else if (item == "tree")
+            {
                 new_village.get_nation(village_type).draw_tree();
+                newvillage.treepoint.Add(e.Location);
+            }
+                
             else if (item == "water")
+            {
                 new_village.get_nation(village_type).draw_watersource();
+                newvillage.waterpoint.Add(e.Location);
+
+            }
+        }
+
+        private void SaveButtonClick(object sender, EventArgs e)
+        {
+            Save_village sv = new Save_village();
+
+            sv.save(newvillage);
         }
     }
 }
+
 

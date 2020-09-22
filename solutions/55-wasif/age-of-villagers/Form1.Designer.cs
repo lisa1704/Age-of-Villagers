@@ -1,4 +1,6 @@
-﻿namespace age_of_villagers
+﻿using System;
+
+namespace age_of_villagers
 {
     partial class Form1
     {
@@ -83,7 +85,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 23);
             this.button6.TabIndex = 8;
-            this.button6.Text = "Delete Village";
+            this.button6.Text = "Open Village";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -104,6 +106,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Save Village";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.SaveButtonClick);
             // 
             // button3
             // 
@@ -156,7 +159,6 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // textBox1
             // 
@@ -184,6 +186,8 @@
 
         }
 
+
+
         #endregion
 
         private System.Windows.Forms.Panel panel1;
@@ -200,4 +204,3 @@
         private System.Windows.Forms.TextBox textBox1;
     }
 }
-

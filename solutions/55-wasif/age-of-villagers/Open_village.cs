@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace age_of_villagers
 {
-    class Openvillage
+    class Open_village
     {
         OpenFileDialog openFileDialog1 = new OpenFileDialog
         {
