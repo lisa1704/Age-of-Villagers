@@ -40,10 +40,14 @@
             this.Nation_name = new System.Windows.Forms.Label();
             this.Nation_list = new System.Windows.Forms.ComboBox();
             this.Tree = new System.Windows.Forms.RadioButton();
+            this.House = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Drawingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Drawingpanel
             // 
+            this.Drawingpanel.Controls.Add(this.radioButton1);
             this.Drawingpanel.Location = new System.Drawing.Point(0, 0);
             this.Drawingpanel.Name = "Drawingpanel";
             this.Drawingpanel.Size = new System.Drawing.Size(600, 400);
@@ -149,11 +153,35 @@
             this.Tree.UseVisualStyleBackColor = true;
             this.Tree.CheckedChanged += new System.EventHandler(this.Tree_CheckedChanged);
             // 
+            // House
+            // 
+            this.House.AutoSize = true;
+            this.House.Location = new System.Drawing.Point(667, 209);
+            this.House.Name = "House";
+            this.House.Size = new System.Drawing.Size(56, 17);
+            this.House.TabIndex = 14;
+            this.House.TabStop = true;
+            this.House.Text = "House";
+            this.House.UseVisualStyleBackColor = true;
+            this.House.CheckedChanged += new System.EventHandler(this.House_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(367, 65);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // villagename_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Nation_list);
             this.Controls.Add(this.Nation_name);
@@ -165,7 +193,10 @@
             this.Controls.Add(this.Savevillage);
             this.Controls.Add(this.Drawingpanel);
             this.Name = "villagename_box";
+            this.Text = "House";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Drawingpanel.ResumeLayout(false);
+            this.Drawingpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,6 +216,8 @@
         private System.Windows.Forms.Label Nation_name;
         private System.Windows.Forms.ComboBox Nation_list;
         private System.Windows.Forms.RadioButton Tree;
+        private System.Windows.Forms.RadioButton House;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
