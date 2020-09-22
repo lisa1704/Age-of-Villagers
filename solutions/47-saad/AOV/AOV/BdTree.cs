@@ -11,12 +11,12 @@ namespace AOV
     {
         public BdTree(Point clicked)
         {
-            Point topLeftCorner = new Point(clicked.X + 45, clicked.Y + 70);
-            Point bottomRightCorner = new Point(clicked.X + 51, clicked.Y + 130);
-            Point top = new Point(clicked.X + 85, clicked.Y + 100);
-
-            addShape(new Rectangle(topLeftCorner, bottomRightCorner));
+            Point top = new Point(clicked.X + 16, clicked.Y + 18);
+            Point topLeftCorner = new Point(clicked.X+7, clicked.Y+14);
+            Point bottomRightCorner = new Point(clicked.X + 9, clicked.Y + 24);
+            
             addShape(new Ellipse(clicked, top));
+            addShape(new Rectangle(topLeftCorner, bottomRightCorner));
         }
     }
 }
