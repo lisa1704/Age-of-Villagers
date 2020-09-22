@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    interface IWatersrc
+    public interface IWatersrc
     {
         void drawWatersrc(Point p, Panel panel);
     }

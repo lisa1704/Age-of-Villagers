@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHouse : IHouse
+    public class InuitHouse : IHouse
     {
         public void drawHouse(Point p, Panel panel)
         {

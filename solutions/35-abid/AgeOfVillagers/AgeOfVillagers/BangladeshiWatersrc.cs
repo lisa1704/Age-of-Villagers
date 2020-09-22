@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiWatersrc : IWatersrc
+    public class BangladeshiWatersrc : IWatersrc
     {
         public void drawWatersrc(Point p, Panel panel)
         {

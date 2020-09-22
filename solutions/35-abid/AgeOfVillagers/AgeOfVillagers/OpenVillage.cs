@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class OpenVillage : IOpenSave
+    public class OpenVillage : IOpenSave
     {
         VillageState savedVillageState;
         public void execute()

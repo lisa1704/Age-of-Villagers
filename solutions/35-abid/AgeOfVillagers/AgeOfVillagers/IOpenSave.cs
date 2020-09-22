@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    interface IOpenSave
+    public interface IOpenSave
     {
         void execute();
     }

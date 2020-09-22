@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class NationFactory
+    public class NationFactory
     {
         private Panel drawingPanel;
 

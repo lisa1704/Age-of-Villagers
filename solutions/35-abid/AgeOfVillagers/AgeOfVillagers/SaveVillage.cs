@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class SaveVillage : IOpenSave
+    public class SaveVillage : IOpenSave
     {
 
         private VillageState villageState;

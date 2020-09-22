@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKings : INation
+    public class EgyptianKings : INation
     {
         protected Panel drawingPanel;
         protected IHouse house = new EgyptianHouse();

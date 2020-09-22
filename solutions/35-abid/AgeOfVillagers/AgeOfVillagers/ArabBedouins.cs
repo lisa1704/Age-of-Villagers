@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouins : INation
+    public class ArabBedouins : INation
     {
         protected Panel drawingPanel;
         protected IHouse house = new ArabHouse();

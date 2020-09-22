@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabTree : ITree
+    public class ArabTree : ITree
     {
         public void drawTree(Point p, Panel panel)
         {
