@@ -22,11 +22,18 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void BdCheck()
         {
+            bool check = false;
+
             NationFactory nf = new NationFactory();
             AbstractNation actual = nf.getNation("Bangladeshi Farmers");
-            AbstractNation expected = new Bangladesh();
 
-            actual.Equals(expected);
+            Assert.NotNull(actual);  //Checks for null
+
+            if (actual is Bangladesh)
+            {
+                check = true;
+            }
+            Assert.True(check);
         }
 
         [Fact]
