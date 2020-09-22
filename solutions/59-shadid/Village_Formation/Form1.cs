@@ -60,7 +60,7 @@ namespace Village_Formation
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void DrawWaterResource(object sender, EventArgs e)
         {
            
         }
@@ -108,7 +108,12 @@ namespace Village_Formation
             Refresh();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void DrawTree(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrawHouse(object sender, EventArgs e)
         {
 
         }

@@ -106,7 +106,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Water Resource";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.DrawTree);
             // 
             // radioButton2
             // 
@@ -118,6 +118,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Houses";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.DrawHouse);
             // 
             // radioButton3
             // 
@@ -129,7 +130,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Trees ";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.DrawWaterResource);
             // 
             // Form1
             // 
