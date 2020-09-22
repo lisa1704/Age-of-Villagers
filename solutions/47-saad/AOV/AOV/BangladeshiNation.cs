@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    class BangladeshiNation : INation
+    public class BangladeshiNation : INation
     {
         public void DrawHouse(Graphics g, Point p)
         {

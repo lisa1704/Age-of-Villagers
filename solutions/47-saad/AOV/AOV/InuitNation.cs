@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    class InuitNation : INation
+    public class InuitNation : INation
     {
         public void DrawHouse(Graphics g, Point p)
         {
