@@ -3,7 +3,7 @@ using Age_of_Villagers;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace AgeOfVillagers
+namespace Age_of_Villagers
 {
     public class Arab : Nation
     {
