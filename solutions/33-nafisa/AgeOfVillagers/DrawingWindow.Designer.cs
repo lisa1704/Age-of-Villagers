@@ -46,12 +46,11 @@ namespace AgeOfVillagers
             // 
             // Drawingpanel
             // 
-           // this.Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
             this.Drawingpanel.Location = new System.Drawing.Point(3, 3);
             this.Drawingpanel.Name = "Drawingpanel";
             this.Drawingpanel.Size = new System.Drawing.Size(540, 446);
             this.Drawingpanel.TabIndex = 0;
-            //this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
+            this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
             this.Drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawingpanel_MouseClick);
             // 
             // ToolsPanel
@@ -132,8 +131,6 @@ namespace AgeOfVillagers
             this.radioButton3.Text = "WaterSource";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
-            
-            //this.radioButton3.CheckedChanged += new System.EventHandler(this.WaterButton_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -146,7 +143,6 @@ namespace AgeOfVillagers
             this.radioButton2.Text = "House";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
-            //this.radioButton2.CheckedChanged += new System.EventHandler(this.HouseButton_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -159,7 +155,6 @@ namespace AgeOfVillagers
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
-            //this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeButton_CheckedChanged);
             // 
             // label1
             // 
