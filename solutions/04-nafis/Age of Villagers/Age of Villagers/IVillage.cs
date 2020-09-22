@@ -6,5 +6,6 @@ namespace Age_of_Villagers
 {
     public interface IVillage
     {
+        void PerformOperation();
     }
 }

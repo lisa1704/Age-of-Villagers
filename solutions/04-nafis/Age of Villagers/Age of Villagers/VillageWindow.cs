@@ -17,7 +17,8 @@ namespace Age_of_Villagers
         private List<Point> HousePoints;
         private List<Point> TreePoints;
         private List<Point> WaterSourcePoints;
-
+        
+        VillageCondition villageCondition;
 
 
         public VillageWindow()
@@ -63,7 +64,6 @@ namespace Age_of_Villagers
 
         private void SaveVillageButton_Click(object sender, EventArgs e)
         {
-            
 
         }
 
@@ -109,5 +109,10 @@ namespace Age_of_Villagers
                 x = -1;
                 y = -1;
             }
+
+        public void GetCondition()
+        {
+            villageCondition = new VillageCondition(VillageNameText.Text, HousePoints, TreePoints, WaterSourcePoints);
+        }
         }
 }

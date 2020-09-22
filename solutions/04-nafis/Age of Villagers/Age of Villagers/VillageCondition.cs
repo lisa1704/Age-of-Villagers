@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    class VillageCondition
+    public class VillageCondition
     {
         public string name;
         public List<Point> HousePoint, TreePoint, WaterResourcePoint;
