@@ -32,11 +32,18 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void EgyptCheck()
         {
+            bool check = false;
+
             NationFactory nf = new NationFactory();
             AbstractNation actual = nf.getNation("Egyptian Kings");
-            AbstractNation expected = new Egypt();
 
-            actual.Equals(expected);
+            Assert.NotNull(actual);  //Checks for null
+
+            if (actual is Egypt)
+            {
+                check = true;
+            }
+            Assert.True(check);
         }
 
         [Fact]
