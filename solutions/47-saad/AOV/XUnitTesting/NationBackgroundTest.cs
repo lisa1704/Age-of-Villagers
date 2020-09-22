@@ -15,7 +15,7 @@ namespace XUnitTesting
             Color expected = Color.Green;
             INation nation = new BangladeshiNation();
             Color actual = nation.GetColor();
-            actual.Equals(expected);
+            Assert.Equal(actual,expected);
         }
 
         [Fact]
@@ -24,7 +24,7 @@ namespace XUnitTesting
             Color expected = Color.FromArgb(240, 230, 140);
             INation nation = new ArabNation();
             Color actual = nation.GetColor();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace XUnitTesting
             Color expected = Color.Yellow;
             INation nation = new EgyptianNation();
             Color actual = nation.GetColor();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace XUnitTesting
             Color expected = Color.White;
             INation nation = new InuitNation();
             Color actual = nation.GetColor();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
     }
 }
