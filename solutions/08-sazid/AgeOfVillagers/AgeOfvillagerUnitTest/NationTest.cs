@@ -12,7 +12,6 @@ namespace AgeOfvillagerUnitTest
         {
             INation expected = new BangladeshiFarmer();
             NationFactory nationFactory = new NationFactory();
-            //string villageName = "Bangladeshi Farmers";
             INation actual = nationFactory.GetNation("Bangladeshi Farmers");
             actual.Equals(expected);
         }

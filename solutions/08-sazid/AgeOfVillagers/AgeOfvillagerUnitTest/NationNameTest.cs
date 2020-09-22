@@ -15,7 +15,7 @@ namespace AgeOfvillagerUnitTest
             NationFactory nationFactory = new NationFactory();
             INation nation = nationFactory.GetNation("Bangladeshi Farmers");
             string actual = nation.getNationName();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -25,7 +25,7 @@ namespace AgeOfvillagerUnitTest
             NationFactory nationFactory = new NationFactory();
             INation nation = nationFactory.GetNation("Arab Beduin");
             string actual = nation.getNationName();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace AgeOfvillagerUnitTest
             NationFactory nationFactory = new NationFactory();
             INation nation = nationFactory.GetNation("Egyptian king");
             string actual = nation.getNationName();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -43,9 +43,9 @@ namespace AgeOfvillagerUnitTest
         {
             string expected = "Inuit Hunter";
             NationFactory nationFactory = new NationFactory();
-            INation nation = nationFactory.GetNation("Intuit Hunter");
+            INation nation = nationFactory.GetNation("Inuit Hunter");
             string actual = nation.getNationName();
-            actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
     }
 }

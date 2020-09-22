@@ -16,6 +16,7 @@ namespace AgeOfvillagerUnitTest
             INation nation = new BangladeshiFarmer();
             Color actual = nation.GetColor();
             actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
@@ -25,24 +26,27 @@ namespace AgeOfvillagerUnitTest
             INation nation = new ArabBeduin();
             Color actual = nation.GetColor();
             actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
         public void egyptianBackGroundTest()
         {
             Color expected = Color.Yellow;
-            INation nation = new BangladeshiFarmer();
+            INation nation = new EgyptianKing();
             Color actual = nation.GetColor();
             actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
         [Fact]
         public void inuitBackGroundTest()
         {
             Color expected = Color.White;
-            INation nation = new BangladeshiFarmer();
+            INation nation = new InuitHunter();
             Color actual = nation.GetColor();
             actual.Equals(expected);
+            Assert.Equal(actual, expected);
         }
 
 
