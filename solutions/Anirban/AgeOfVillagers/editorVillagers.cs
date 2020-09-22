@@ -53,6 +53,10 @@ namespace AgeOfVillagers
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
 
+            Graphics g = panel1.CreateGraphics();
+            Pen blackpen = new Pen(Color.Black);
+
+            g.DrawLine(blackpen, e.X,e.Y,e.X+10,e.Y-10);
         }
 
 

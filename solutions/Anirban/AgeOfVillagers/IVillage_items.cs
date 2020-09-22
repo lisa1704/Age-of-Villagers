@@ -8,6 +8,8 @@ namespace AgeOfVillagers
 {
     interface IVillage_items
     {
-        void grid_size();
+        int grid_height();
+
+        int grid_width();
     }
 }

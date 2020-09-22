@@ -12,9 +12,14 @@ namespace AgeOfVillagers
         int widtth = 16;
         public abstract void createHouse();
 
-        public void grid_size()
+        public int grid_height()
         {
-            throw new NotImplementedException();
+            return height;
+        }
+
+        public int grid_width()
+        {
+            return widtth;
         }
     }
 }

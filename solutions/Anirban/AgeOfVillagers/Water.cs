@@ -15,7 +15,12 @@ namespace AgeOfVillagers
 
         public abstract void Draw_water();
 
-        public void grid_size()
+        public int grid_height()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int grid_width()
         {
             throw new NotImplementedException();
         }
