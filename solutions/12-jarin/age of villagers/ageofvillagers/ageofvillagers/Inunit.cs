@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-    public class Inunit:nationcreate
+    public class Inunit 
     {
+       
     }
 }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-    abstract class nationcreate
+    class egypttree : Shapecreate
     {
-       public abstract Shapecreate item(string items);
-
-       
+        public string draw(int x, int y)
+        {
+            return "egypt tree";
+        }
     }
 }

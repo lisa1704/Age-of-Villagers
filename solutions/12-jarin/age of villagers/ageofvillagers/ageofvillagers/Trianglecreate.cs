@@ -8,5 +8,6 @@ namespace ageofvillagers
 {
     public class Trianglecreate:Shapecreate
     {
+
     }
 }

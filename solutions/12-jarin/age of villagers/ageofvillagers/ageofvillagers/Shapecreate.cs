@@ -8,6 +8,6 @@ namespace ageofvillagers
 {
     public interface Shapecreate
     {
-
+         string draw(int x ,int y );
     }
 }

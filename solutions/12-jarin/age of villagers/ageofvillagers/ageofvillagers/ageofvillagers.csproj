@@ -53,16 +53,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abngladeshiwater.cs" />
+    <Compile Include="Arab.cs" />
     <Compile Include="Arabbedouin.cs" />
+    <Compile Include="arabhouse.cs" />
+    <Compile Include="arabtree.cs" />
+    <Compile Include="Bangladesh.cs" />
     <Compile Include="Bangladeshifarmers.cs" />
+    <Compile Include="bangladeshihouse.cs" />
+    <Compile Include="Bangladeshiwater.cs" />
+    <Compile Include="Banladeshitree.cs" />
     <Compile Include="circlecreate.cs" />
+    <Compile Include="Egypt.cs" />
+    <Compile Include="egypthouse.cs" />
     <Compile Include="Egyptianking.cs" />
+    <Compile Include="egypttree.cs" />
+    <Compile Include="egyptwater.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inuit.cs" />
+    <Compile Include="inuithouse.cs" />
     <Compile Include="Inunit.cs" />
     <Compile Include="Linecreate.cs" />
     <Compile Include="nationcreate.cs" />
