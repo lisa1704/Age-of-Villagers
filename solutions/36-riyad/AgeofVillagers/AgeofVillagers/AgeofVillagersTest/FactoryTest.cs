@@ -27,5 +27,15 @@ namespace AgeofVillagersTest
             Assert.IsType(expected, actual);
 
         }
+
+        [Fact]
+        public void EgyptNationFactory()
+        {
+            FactoryPattern nationFactory = new FactoryPattern();
+            var actual = nationFactory.GetNation("EgyptianKings");
+            var expected = typeof(EgyptianKings);
+            Assert.IsType(expected, actual);
+
+        }
     }
 }
