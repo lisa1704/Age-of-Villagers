@@ -14,13 +14,13 @@ namespace AgeOfVillagers
         protected NationAbstract nation;
         Graphics newg ;
         Village myvillage = new Village();
-        SaveVillage myvillageSaver;
+        SaveOpenVillage myvillageSaver;
         NullNation nullnation = new NullNation();
         public CreateVillageWindow()
         {
             InitializeComponent();
             newg = drawing_panel.CreateGraphics();
-            myvillageSaver = new SaveVillage(myvillage);
+            myvillageSaver = new SaveOpenVillage(myvillage);
         }
 
         private void save_village_Click(object sender, EventArgs e)

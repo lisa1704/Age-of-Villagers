@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class SaveVillage
+    class SaveOpenVillage
     {
         protected OpenFileDialog ofd = new OpenFileDialog();
         protected SaveFileDialog sfd = new SaveFileDialog();
@@ -16,7 +16,7 @@ namespace AgeOfVillagers
         protected string savePath;
         protected string json;
         protected string villageSaved;
-        public SaveVillage(Village village)
+        public SaveOpenVillage(Village village)
         {
             villageState = village;
         }
