@@ -11,7 +11,7 @@ namespace Age_Of_Villagers
 {
     class BangladeshiHouse : IVillageItem
     {
-        public void Draw(Graphics g, Pen p)
+        public void Draw(Point e, Graphics g, Pen p)
         {
             int x = e.X;
             int y = e.Y;
