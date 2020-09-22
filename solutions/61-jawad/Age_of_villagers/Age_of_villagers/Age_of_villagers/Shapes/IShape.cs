@@ -2,7 +2,7 @@
 
 namespace Age_of_villagers.Shapes
 {
-    interface IShape
+    public interface IShape
     {
         void draw(Graphics g, Pen p);
 

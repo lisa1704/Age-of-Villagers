@@ -115,11 +115,7 @@ namespace Age_of_villagers
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            if (village == null)
-            {
-                DialogResult dialog = MessageBox.Show("Create / Open a Village First!");
-            }
-            else if (Tree.Checked)
+            if (Tree.Checked)
             {
                 village.nation.getTree(point).draw(g, p);
                 village.trees.Add(point);

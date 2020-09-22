@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SaveVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NationList = new System.Windows.Forms.ComboBox();
@@ -40,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -170,9 +172,14 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(600, 400);
             this.MainPanel.TabIndex = 18;
-            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             this.MainPanel.Click += new System.EventHandler(this.MainPanel_Click);
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             this.MainPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.main_panelMouseClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
             // 
             // VillageCreator
             // 
@@ -213,6 +220,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
