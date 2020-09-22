@@ -39,9 +39,14 @@ namespace AgeOfVillagers.Test
         }
 
         [Fact]
-        public void Test1()
+        public void InuitCheck()
         {
-            Assert.Equal(2, 2);
+            NationFactory nf = new NationFactory();
+            AbstractNation actual = nf.getNation("Inuit Hunters");
+            AbstractNation expected = new Inuit();
+
+            actual.Equals(expected);
         }
+        
     }
 }
