@@ -15,6 +15,9 @@ namespace AgeofVillegersTest
         {
             AbstractNation bangladeshiFarmersHouse = new BangladeshiFarmers(new Panel());
             Assert.AreEqual(bangladeshiFarmersHouse.getHouseType().GetType(), new BangladeshiFarmersHouse().GetType());
+
+            AbstractNation arabBedouinHouse = new ArabBedouin(new Panel());
+            Assert.AreEqual(arabBedouinHouse.getHouseType().GetType(), new ArabBedouinHouse().GetType());
         }
     }
 }
