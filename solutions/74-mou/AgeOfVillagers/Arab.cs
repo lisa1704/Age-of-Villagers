@@ -26,7 +26,7 @@ namespace AgeOfVillagers
 
         public Color TerrainColor()
         {
-            return Color.LightYellow;
+            return Color.PaleGoldenrod;
         }
     }
 }
