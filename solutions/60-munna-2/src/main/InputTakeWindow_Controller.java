@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -22,10 +24,6 @@ public class InputTakeWindow_Controller extends Controller implements Initializa
 
     @FXML
     private TextField villageName_Text;
-
-    public String getNationName() {
-        return NationName;
-    }
 
     private String NationName;
 
@@ -47,7 +45,6 @@ public class InputTakeWindow_Controller extends Controller implements Initializa
             stage.setScene(new Scene(root, 1000, 500));
             stage.setResizable(false);
             stage.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -55,15 +52,20 @@ public class InputTakeWindow_Controller extends Controller implements Initializa
 
     public void SelectNation(ActionEvent actionEvent) {
         this.NationName = NationNameComboBox.getSelectionModel().getSelectedItem().toString();
-        cn_label.setText(NationName);
     }
 
+    public String getNationName() {
+        return NationName;
+    }
 
     @FXML
     void CreateNewVillage(ActionEvent event) throws IOException {
         vn_label.setText(villageName_Text.getText());
+        cn_label.setText(NationName);
+        nation = getNationName();
         Stage stage2 = (Stage) CreateNewVillage_Button.getScene().getWindow();
         stage2.close();
+        NewVillageCreation();
 
     }
 }

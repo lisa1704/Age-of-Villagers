@@ -1,8 +1,8 @@
 package main;
 
 import house.BangladeshiFarmersHouse;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import house.IHouse;
+import house.NullHouse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,12 +10,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import nations.BangladeshiFarmer;
 import tree.BangladeshiFarmersTree;
+import tree.ITree;
+import tree.NullTree;
+import waterSource.IWaterSource;
+import waterSource.NullWaterResource;
 import waterSource.Pond;
 
 import java.io.IOException;
@@ -52,7 +56,7 @@ public class Controller implements Initializable {
     private RadioButton house_RadioButton;
 
     @FXML
-    private Label country_name;
+    private Label nation_name;
 
     @FXML
     private Label village_name;
@@ -61,8 +65,6 @@ public class Controller implements Initializable {
 
     @FXML
     private Canvas drawing_space_canvas;
-
-    public static Canvas d1,d2,d3;
 
 
     @FXML
@@ -75,52 +77,85 @@ public class Controller implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    private BangladeshiFarmer bangladeshiFarmer;
+    /*private BangladeshiFarmer bangladeshiFarmer;
     private BangladeshiFarmersHouse bangladeshiFarmersHouse;
     private BangladeshiFarmersTree bangladeshiFarmersTree;
-    private Pond pond;
+    private Pond pond;*/
     private Canvas canvas;
+
+
+    public static String nation;
+    private IHouse house;
+    private ITree tree;
+    private IWaterSource waterSource;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        cn_label = country_name;
+        cn_label = nation_name;
         vn_label = village_name;
         toggleGroup = new ToggleGroup();
-        bangladeshiFarmer = new BangladeshiFarmer();
-        bangladeshiFarmersHouse = new BangladeshiFarmersHouse();
-        bangladeshiFarmersTree = new BangladeshiFarmersTree();
-        pond = new Pond();
+
+        house = new BangladeshiFarmersHouse();
+        tree = new BangladeshiFarmersTree();
+        waterSource = new Pond();
+
         MainCanvas mainCanvas = MainCanvas.getInstance();
         canvas = mainCanvas.getCanvas();
         drawing_space.getChildren().add(canvas);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
     }
 
     public void RadioSelect(ActionEvent actionEvent)
     {
         if (house_RadioButton.isSelected())
         {
-            bangladeshiFarmersHouse.Draw();
-            bangladeshiFarmersHouse.draw_house();
-            bangladeshiFarmersTree.Dont_Draw();
-            pond.Dont_Draw();
+            house.Draw();
+            house.draw_house();
+            tree.Dont_Draw();
+            waterSource.Dont_Draw();
         }
         else if (tree_RadioButton.isSelected())
         {
-            bangladeshiFarmersTree.Draw();
-            bangladeshiFarmersTree.draw_Tree();
-            bangladeshiFarmersHouse.Dont_Draw();
-            pond.Dont_Draw();
+            tree.Draw();
+            tree.draw_Tree();
+            house.Dont_Draw();
+            waterSource.Dont_Draw();
         }
         else if(water_RadioButton.isSelected())
         {
-            pond.Draw();
-            pond.draw_water_resource();
-            bangladeshiFarmersHouse.Dont_Draw();
-            bangladeshiFarmersTree.Dont_Draw();
+            waterSource.Draw();
+            waterSource.draw_water_resource();
+            house.Dont_Draw();
+            tree.Dont_Draw();
         }
 
     }
 
+    public void NewVillageCreation()
+    {
+        System.out.println(nation);
+        if (nation == "Bangladeshi Farmers")
+        {
+            house = new BangladeshiFarmersHouse();
+            tree = new BangladeshiFarmersTree();
+            waterSource = new Pond();
+        }
+        else if (nation == "Egyptian Kings")
+        {
+
+        }
+        else if(nation == "Arab Bedouin")
+        {
+
+        }
+        else
+        {
+            house = new NullHouse();
+            tree = new NullTree();
+            waterSource = new NullWaterResource();
+        }
+    }
     /*@FXML
     public void House_Button_Clicked (ActionEvent event){
         if (house_RadioButton.isSelected()) {
