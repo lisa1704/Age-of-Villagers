@@ -7,7 +7,7 @@ namespace Age_of_Villagers.FactoryClasses
     {
         public Color BackGroundColor()
         {
-            return Color.White;
+            return Color.YellowGreen;
         }
 
         public Color BgColor()
