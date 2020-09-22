@@ -42,6 +42,7 @@
             this.Tree = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Water_source = new System.Windows.Forms.RadioButton();
             this.Drawingpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,11 +177,24 @@
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // Water_source
+            // 
+            this.Water_source.AutoSize = true;
+            this.Water_source.Location = new System.Drawing.Point(667, 243);
+            this.Water_source.Name = "Water_source";
+            this.Water_source.Size = new System.Drawing.Size(91, 17);
+            this.Water_source.TabIndex = 15;
+            this.Water_source.TabStop = true;
+            this.Water_source.Text = "Water Source";
+            this.Water_source.UseVisualStyleBackColor = true;
+            this.Water_source.CheckedChanged += new System.EventHandler(this.Water_source_CheckedChanged);
+            // 
             // villagename_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.Water_source);
             this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Nation_list);
@@ -218,6 +232,7 @@
         private System.Windows.Forms.RadioButton Tree;
         private System.Windows.Forms.RadioButton House;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Water_source;
     }
 }
 

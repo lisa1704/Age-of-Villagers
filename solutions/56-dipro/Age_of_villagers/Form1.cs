@@ -83,5 +83,10 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Water_source_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
