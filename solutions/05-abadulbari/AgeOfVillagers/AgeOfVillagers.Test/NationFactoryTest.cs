@@ -21,5 +21,11 @@ namespace AgeOfVillagers.Test
             Assert.IsType(expected, factory.getNation());
         }
 
+        [Fact]
+        public void EgyptianKingsTest()
+        {
+            var expected = typeof(EgyptianKings);
+            Assert.IsType(expected, new NationFactory("Egyptian Kings").getNation());
+        }
     }
 }
