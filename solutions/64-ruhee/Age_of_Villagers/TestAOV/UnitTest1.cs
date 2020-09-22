@@ -35,6 +35,14 @@ namespace TestAOV
             Assert.Equal(b1, b2);
         }
 
+        [Fact]
+        public void ArabBackground()
+        {
+            ArabBedouin back = new ArabBedouin();
+            Color b1 = back.BackgroundColor();
+            Color b2 = Color.GreenYellow;
+            Assert.Equal(b1, b2);
+        }
 
     }
 }
