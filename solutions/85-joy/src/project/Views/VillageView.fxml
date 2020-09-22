@@ -41,7 +41,7 @@
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button layoutX="31.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #7c7d80;" text="New Village" textFill="WHITE">
+            <Button fx:id="NewVillageButton" layoutX="31.0" layoutY="335.0" mnemonicParsing="false" onAction="#createNewVillage" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #7c7d80;" text="New Village" textFill="WHITE">
                <font>
                   <Font size="10.0" />
                </font>

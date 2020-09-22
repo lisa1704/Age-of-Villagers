@@ -34,6 +34,7 @@ public class VillageViewController implements Initializable {
     public NationFactory nationFactory;
     public int Flag = 0;
     public ArrayList<Shape> Object ;
+    public Villages village;
 
 
 
@@ -65,11 +66,11 @@ public class VillageViewController implements Initializable {
 //        JSONObject obj = new JSONObject();
 //        obj.put("Village_Name",Village_Name.getText());
 //        obj.put("Nation",NationDropDown.getValue());
-        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
+//        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
         try {
             FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
             ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(villages);
+//            out.writeObject(villages);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -97,7 +98,7 @@ public class VillageViewController implements Initializable {
                 Villages villages = (Villages)in.readObject();
 
                 System.out.println(villages.VillageName);
-                System.out.println(villages.Nation);
+                
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -132,6 +133,11 @@ public class VillageViewController implements Initializable {
     public void NationChanged(ActionEvent actionEvent) {
         nationFactory = new NationFactory((String) NationDropDown.getValue());
         DrawPane.setStyle("-fx-background-color:"+nationFactory.getTerrainColor((String) NationDropDown.getValue()));
+
+    }
+
+    public void createNewVillage(ActionEvent actionEvent) {
+        DrawPane.getChildren().clear();
 
     }
 }
