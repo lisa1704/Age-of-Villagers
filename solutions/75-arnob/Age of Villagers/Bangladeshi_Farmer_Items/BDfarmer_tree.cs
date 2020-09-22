@@ -11,8 +11,16 @@ namespace Age_of_Villagers
     {
 
 
-        public BDfarmer_Tree(Point mainPoint, Point bottomRight, Point topPoint, Point topLeft)
+        public BDfarmer_Tree(Point point)
+       
         {
+            Point mainPoint = new Point(point.X, point.Y);
+            Point bottomRight = new Point(point.X + 18, point.Y + 40);
+            Point topPoint = new Point(point.X + 30, point.Y + 24);
+            Point topLeft = new Point(point.X + 14, point.Y + 16);
+
+
+
             AddComponent(new Rectangle(topLeft, bottomRight));
             AddComponent(new EllipseShape(mainPoint, topPoint));
         }

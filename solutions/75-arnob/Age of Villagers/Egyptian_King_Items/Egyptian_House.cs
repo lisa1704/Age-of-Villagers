@@ -9,8 +9,12 @@ namespace Age_of_Villagers
 {
     class Egyptian_House : CompositeShaping
     {
-        public Egyptian_House(Point top, Point mediumLeft, Point bottom, Point mediumRight)
+        public Egyptian_House(Point point)
         {
+            Point top = new Point(point.X, point.Y);
+            Point mediumLeft = new Point(point.X - 16, point.Y + 24);
+            Point bottom = new Point(point.X + 3, point.Y + 30);
+            Point mediumRight = new Point(point.X + 16, point.Y + 16);
 
             AddComponent(new Line(top, mediumLeft));
             AddComponent(new Line(mediumLeft, bottom));
@@ -19,6 +23,6 @@ namespace Age_of_Villagers
             AddComponent(new Line(top, bottom));
 
 
-        }
+        } 
     }
 }

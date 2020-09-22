@@ -13,7 +13,7 @@ namespace Age_of_Villagers.Nation
     {
         string name;
 
-        public Egyptian_King(string nam
+        public Egyptian_King(string name)
         {
             this.name = name;
         }
@@ -23,7 +23,7 @@ namespace Age_of_Villagers.Nation
         }
         public void GetHouse(Graphics graphics, Point _point)
         {
-            Egyptian_House Egyptian_house = new Egyptian_House(new Point(_point.X, _point.Y), new Point(_point.X - 8, _point.Y + 12), new Point(_point.X + 3, _point.Y + 15), new Point(_point.X + 8, _point.Y + 8));
+            Egyptian_House Egyptian_house = new Egyptian_House(_point);
             Egyptian_house.Paint(graphics);
         }
 
@@ -35,7 +35,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetTree(Graphics graphics, Point _point)
         {
-            Egyptian_Tree egyptian_tree = new Egyptian_Tree(new Point(_point.X, _point.Y), new Point(_point.X - 3, _point.Y - 8), new Point(_point.X + 3, _point.Y - 8), new Point(_point.X - 5, _point.Y - 16), new Point(_point.X + 4, _point.Y - 17), new Point(_point.X - 8, _point.Y - 14), new Point(_point.X - 1, _point.Y - 17), new Point(_point.X + 1, _point.Y - 16), new Point(_point.X + 8, _point.Y - 16));
+            Egyptian_Tree egyptian_tree = new Egyptian_Tree(_point);
             egyptian_tree.Paint(graphics);
         }
 
