@@ -32,7 +32,7 @@ public class VillageViewController implements Initializable {
 
 
     public NationFactory nationFactory;
-    public int Flag = 0;
+    public String AssetType = "";
     public ArrayList<Shape> Object ;
     public Villages village;
 
@@ -44,15 +44,15 @@ public class VillageViewController implements Initializable {
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                if(Flag == 1){
+                if(AssetType == "Tree"){
                     Object = nationFactory.drawTree(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
-                else if(Flag == 2){
+                else if(AssetType == "House"){
                     Object = nationFactory.drawHouse(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
-                else if(Flag == 3){
+                else if(AssetType == "WaterSource"){
                     Object = nationFactory.drawWaterSource(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
 //                    DrawPane.getChildren().clear();
@@ -110,17 +110,17 @@ public class VillageViewController implements Initializable {
     }
 
     public void SelectTree(ActionEvent actionEvent) {
-        this.Flag = 1;
+        this.AssetType = "Tree";
         System.out.println("TREE SELECTED!");
     }
 
     public void SelectHouse(ActionEvent actionEvent) {
-        this.Flag = 2;
+        this.AssetType = "House";
         System.out.println("HOUSE SELECTED!");
     }
 
     public void SelectWaterSource(ActionEvent actionEvent) {
-        this.Flag = 3;
+        this.AssetType = "WaterSource";
         System.out.println("WATERSOURCE SELECTED!");
     }
 
