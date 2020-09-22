@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using AgeOfVillagers;
+using System.Linq.Expressions;
 
 namespace AgeOfVillagers.Test
 {
@@ -41,11 +42,18 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void InuitCheck()
         {
+            bool check = false;
+
             NationFactory nf = new NationFactory();
             AbstractNation actual = nf.getNation("Inuit Hunters");
-            AbstractNation expected = new Inuit();
-
-            actual.Equals(expected);
+                        
+            Assert.NotNull(actual);  //Checks for null
+            
+            if (actual is Inuit)
+            {
+                check = true;
+            }
+            Assert.True(check);
         }
         
     }

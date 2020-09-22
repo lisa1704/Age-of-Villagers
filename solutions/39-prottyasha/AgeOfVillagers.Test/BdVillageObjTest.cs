@@ -4,7 +4,7 @@ using AgeOfVillagers;
 
 namespace AgeOfVillagers.Test
 {
-    public class DrawBdVillage
+    public class BdVillageObjTest
     {
         Village vill;
         [Fact]
