@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Drawing;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Age_of_villagers.Shape
+namespace Age_of_Villagers.Shape
 {
     interface IShape
     {
+        void Draw(Graphics g, Pen p);
     }
 }
