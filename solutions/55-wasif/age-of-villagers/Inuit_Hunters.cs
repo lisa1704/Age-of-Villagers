@@ -10,7 +10,7 @@ namespace age_of_villagers
 {
     class Inuit_Hunters : INations
     {
-        Pen pen = new Pen(Color.Red);
+        Pen pen = new Pen(Color.Black);
         Graphics gp;
         Point p0;
         public Inuit_Hunters(Graphics gp, Point p0)
@@ -20,12 +20,16 @@ namespace age_of_villagers
         }
         public void draw_house()
         {
-            Point p1 = new Point(p0.X - 75, p0.Y);
-            Point p2 = new Point(p0.X + 75, p0.Y);
-            Point p3 = new Point(p0.X - 50, p0.Y - 50);
-            gp.DrawArc(pen, p3.X, p3.Y, 150, 150, 180, 180);
-            gp.DrawArc(pen, p2.X, p2.Y, 150, 150, 180, 180);
-            gp.DrawLine(pen, p1, p2);
+            Point p1 = new Point(p0.X, p0.Y);
+            Point p2 = new Point(p1.X + 48, p0.Y);
+            Point p3 = new Point(p1.X + 48, p0.Y + 48);
+            Point p4 = new Point(p1.X, p0.Y + 48);
+
+            gp.DrawLine(pen, p3, p4);
+            gp.DrawArc(pen, p1.X, p1.Y+3, 48, 90, 0, -180);
+            gp.DrawArc(pen, p1.X + 18, p2.Y + 33, 12, 30, 0, -180);
+            
+
         }
 
         public void draw_tree()
