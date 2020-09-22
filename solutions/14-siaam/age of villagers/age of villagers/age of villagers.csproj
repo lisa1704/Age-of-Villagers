@@ -55,6 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IComplexShape.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="Inuithunter.cs" />
     <Compile Include="IShape.cs" />

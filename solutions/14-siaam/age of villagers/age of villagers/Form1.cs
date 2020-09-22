@@ -39,7 +39,11 @@ namespace age_of_villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Pen skyBluePen = new Pen(Brushes.Red);
+            g = panel1.CreateGraphics();
+
+            IShape s = new Rectangle(new Point(100, 100), new Point(200, 100), new Point(200, 200), new Point(100, 200));
+            s.draw(g, skyBluePen);
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
