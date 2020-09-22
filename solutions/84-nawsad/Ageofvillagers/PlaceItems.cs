@@ -16,8 +16,8 @@ namespace Ageofvillagers
         {
             Graphics g = panel2.CreateGraphics();
             Pen p = new Pen(Color.Black, 1);
-            INation B = new EgyptianKing(g,p);
-            B.drawTree(e.Location.X, e.Location.Y);
+            INation B = new InuitHunters(g,p);
+            B.drawHouse(e.Location.X, e.Location.Y);
           //  B.drawHouse(e.Location.X, e.Location.Y);
 
             //   IShape rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
