@@ -44,6 +44,7 @@
             // 
             // drawingPanel
             // 
+            this.drawingPanel.BackColor = System.Drawing.SystemColors.Info;
             this.drawingPanel.Controls.Add(this.toolsPanel);
             this.drawingPanel.Location = new System.Drawing.Point(1, 1);
             this.drawingPanel.Name = "drawingPanel";
@@ -54,8 +55,11 @@
             // 
             // toolsPanel
             // 
+            this.toolsPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolsPanel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolsPanel.Location = new System.Drawing.Point(597, 0);
             this.toolsPanel.Name = "toolsPanel";
+            this.toolsPanel.Padding = new System.Windows.Forms.Padding(1);
             this.toolsPanel.Size = new System.Drawing.Size(200, 400);
             this.toolsPanel.TabIndex = 3;
             // 
@@ -72,6 +76,7 @@
             // 
             // VillageName
             // 
+            this.VillageName.BackColor = System.Drawing.SystemColors.HighlightText;
             this.VillageName.Location = new System.Drawing.Point(621, 64);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(167, 23);
@@ -80,7 +85,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(652, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 24);
@@ -91,7 +96,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(604, 367);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 24);
@@ -102,7 +107,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(704, 367);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 24);
@@ -115,7 +120,7 @@
             // 
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.Location = new System.Drawing.Point(604, 156);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(94, 24);
@@ -131,7 +136,7 @@
             // 
             this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.Location = new System.Drawing.Point(652, 186);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(109, 25);
@@ -147,7 +152,7 @@
             // 
             this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton3.Location = new System.Drawing.Point(704, 156);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(94, 24);
@@ -162,8 +167,9 @@
             // NationBox
             // 
             this.NationBox.AllowDrop = true;
+            this.NationBox.BackColor = System.Drawing.SystemColors.HighlightText;
             this.NationBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NationBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NationBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NationBox.FormattingEnabled = true;
             this.NationBox.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
