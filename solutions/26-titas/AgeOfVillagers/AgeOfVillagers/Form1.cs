@@ -111,7 +111,7 @@ namespace AgeOfVillagers
             }
             else if (nationName == "Egyptian Kings")
             {
-                
+                panel1.BackColor = Color.Yellow;
                 if (radioButtonHouse.Checked)
                 {
                     egyptianKings.paint_house(e, g, p);
