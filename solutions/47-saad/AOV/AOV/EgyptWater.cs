@@ -11,7 +11,7 @@ namespace AOV
     {
         public EgyptWater(Point clicked)
         {
-            Point p = new Point(clicked.X + 50, clicked.Y + 50);
+            Point p = new Point(clicked.X + 12, clicked.Y + 12);
             addShape(new Ellipse(clicked, p));
         }
     }
