@@ -27,27 +27,10 @@ public class Villages implements Serializable {
 
     public void SaveVillage(Villages village){
         String Filename = village.VillageName + ".aov";
-////        JSONObject obj = new JSONObject();
-////        obj.put("Village_Name",Village_Name.getText());
-////        obj.put("Nation",NationDropDown.getValue());
-////        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
-//        try {
-//            FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
-//            ObjectOutputStream out = new ObjectOutputStream(file);
-////            out.writeObject(villages);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         Gson gson = new Gson();
         String json = gson.toJson(village);
-
-        Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
-        JsonElement je = new JsonParser().parse(json);
-        System.out.println(gson1.toJson(je));
         try {
-//            FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
-//            ObjectOutputStream out = new ObjectOutputStream(file);
-//            out.writeObject(json);
+
             File jsonFile = new File("SavedVillages/"+Filename);
             FileWriter writer = new FileWriter(jsonFile);
             writer.write(json);

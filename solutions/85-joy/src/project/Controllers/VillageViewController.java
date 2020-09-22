@@ -59,7 +59,6 @@ public class VillageViewController implements Initializable {
                     Object = nationFactory.drawWaterSource(event.getSceneX(),event.getSceneY());
                     village.assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
-//                    DrawPane.getChildren().clear();
                 }
             }
         });
@@ -128,6 +127,7 @@ public class VillageViewController implements Initializable {
         DrawPane.getChildren().clear();
         this.village = new Villages(Village_Name.getText());
         DrawAssetList(village.assetList);
+        System.out.println("NEW VILLAGE CREATED!");
 
 
     }
