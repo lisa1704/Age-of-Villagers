@@ -15,6 +15,9 @@ namespace AgeofVillegersTest
         {
             AbstractNation bangladeshiFarmersWaterSource = new BangladeshiFarmers(new Panel());
             Assert.AreEqual(bangladeshiFarmersWaterSource.getWaterSourceType().GetType(), new BangladeshiFarmersWaterSource().GetType());
+
+            AbstractNation arabBedouinWaterSource = new ArabBedouin(new Panel());
+            Assert.AreEqual(arabBedouinWaterSource.getWaterSourceType().GetType(), new ArabBedouinWaterSource().GetType());
         }
     }
 }
