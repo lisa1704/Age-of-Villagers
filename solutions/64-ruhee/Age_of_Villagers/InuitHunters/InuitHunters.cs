@@ -1,37 +1,37 @@
 ﻿using Age_of_Villagers.Age_of_Villagers;
+using Age_of_Villagers.InuitHunters;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace Age_of_Villagers.InuitHunters
+namespace Age_of_Villagers.EgyptianKings
 {
-    public class InuitHunters: INation
+    public class InuitHunters : INation
     {
         Graphics g;
         Pen pen = new Pen(Color.Black);
-        public void DrawTree(Graphics g, Point point)
+        public Color BackgroundColor()
         {
-            NullElements InuitTree = new NullElements();
-            InuitTree.Draw(g,pen);
+            return Color.Yellow;
         }
 
         public void DrawHouse(Graphics g, Point point)
         {
-            InuitHouse InuitHouse = new InuitHouse(point);
-            InuitHouse.Draw(g, pen);
+            InuitHouse Inuithouse = new InuitHouse(point);
+            Inuithouse.Draw(g, pen);
+        }
+
+        public void DrawTree(Graphics g, Point point)
+        {
+            NullElements InuitTree = new NullElements();
+            InuitTree.drawing();
         }
 
         public void DrawWaterSource(Graphics g, Point point)
         {
-            NullElements InuitWaterSource = new NullElements();
-            InuitWaterSource.Draw(g, pen);
+            NullElements InuitWater = new NullElements();
+            InuitWater.drawing();
         }
-
-        public Color BackgroundColor()
-        {
-            return Color.White;
-        }
-
     }
 }

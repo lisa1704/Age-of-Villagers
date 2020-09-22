@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace XUnitTestProject1
+namespace TestAOV
 {
     public class UnitTest1
     {
@@ -10,5 +10,6 @@ namespace XUnitTestProject1
         {
             Assert.Equal(2,2);
         }
+
     }
 }
