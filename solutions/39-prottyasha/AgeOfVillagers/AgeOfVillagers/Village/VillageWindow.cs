@@ -29,7 +29,6 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
             g = DrawingPanel.CreateGraphics();
-            //Village vill = new Village();
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e) { }
@@ -83,8 +82,6 @@ namespace AgeOfVillagers
 
         private void btn_openVillage_Click(object sender, EventArgs e)
         {
-            //OpenVillageForm ovf = new OpenVillageForm();
-            //ovf.Show();
             OpenVillage ov = new OpenVillage();
             vill = ov.getVill();
             setSavedVill(vill);
@@ -92,25 +89,28 @@ namespace AgeOfVillagers
 
         public void setSavedVill(Village vill)
         {
-            DrawingPanel.Invalidate();
-            nation_selector.SelectedText = vill.nation;
-            nation_selector_SelectedIndexChanged(this, null);
-            //Label_villName.Text =;
-            foreach (Point p in vill.trees_drawn)
+            selected_nation = vill.nation;
+            nf = new NationFactory();
+            nation = nf.getNation(selected_nation);
+            
+            Label_villName.Text = vill.village_name;
+            foreach (Point p in vill.trees_drawn.ToList())
             {
                 selected_component = "tree";
                 drawInPanel(p);
             }
-            foreach (Point p in vill.houses_drawn)
+            foreach (Point p in vill.houses_drawn.ToList())
             {
                 selected_component = "house";
                 drawInPanel(p);
             }
-            foreach (Point p in vill.rivers_drawn)
+            foreach (Point p in vill.rivers_drawn.ToList())
             {
                 selected_component = "water_source";
                 drawInPanel(p);
             }
+            nation_selector.SelectedText = vill.nation;
+            //nation_selector_SelectedIndexChanged(this, null);
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
