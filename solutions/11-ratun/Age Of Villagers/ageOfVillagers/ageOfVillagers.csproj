@@ -61,6 +61,7 @@
     <Compile Include="Bdtree.cs" />
     <Compile Include="Bdwater.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="EgyptFactory.cs" />
     <Compile Include="EgyptHouse.cs" />
     <Compile Include="EgyptTree.cs" />
