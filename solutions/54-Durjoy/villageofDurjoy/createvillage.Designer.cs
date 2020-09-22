@@ -32,6 +32,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Housebutton = new System.Windows.Forms.RadioButton();
+            this.treeButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
            
@@ -67,6 +68,18 @@
             this.Housebutton.Text = "House";
             this.Housebutton.UseVisualStyleBackColor = true;
             this.Housebutton.CheckedChanged += new System.EventHandler(this.Housebutton_CheckedChanged);
+            // 
+            // treeButton
+            // 
+            this.treeButton.AutoSize = true;
+            this.treeButton.Location = new System.Drawing.Point(540, 236);
+            this.treeButton.Name = "treeButton";
+            this.treeButton.Size = new System.Drawing.Size(54, 21);
+            this.treeButton.TabIndex = 6;
+            this.treeButton.TabStop = true;
+            this.treeButton.Text = "tree";
+            this.treeButton.UseVisualStyleBackColor = true;
+            this.treeButton.CheckedChanged += new System.EventHandler(this.treeButton_CheckedChanged);
             // 
 
             // createvillage
