@@ -22,6 +22,14 @@ public class Controller {
     @FXML
     private RadioButton waterSource;
 
+    @FXML
+    private Button saveVillage;
+
+    @FXML
+    private Button newVillage;
+
+    @FXML
+    private Button openVillage;
 
     @FXML
     private AnchorPane drawingSpace;
@@ -66,7 +74,7 @@ public class Controller {
     private IWaterSource iWaterSource;
     private ITerrain iTerrain;
 
-   
+    private ReaderModule fileReader;
 
 
     @FXML
@@ -95,17 +103,51 @@ public class Controller {
         infoLayout.setVisible(true);
     }
 
+    @FXML
+    void openVillage(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Age of Villagers files (*.aov)", "*.aov");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File file = fileChooser.showOpenDialog(null);
+        fileReader = new ReaderModule(file);
+        villageName.setText(fileReader.getVillageName());
+        drawingSpace.getChildren().remove(canvas);
+        inputNationNameForOpen.setItems(FXCollections.observableArrayList(nation));
+        openLayout.setVisible(true);
+
+    }
+
+    @FXML
+    void loadVillage(ActionEvent event) {
+        CanvasSingleton canvasSingleton = CanvasSingleton.getInstance();
+        canvas = canvasSingleton.getCanvas();
+        drawingSpace.getChildren().add(canvas);
+        openLayout.setVisible(false);
+        nationManager = new NationManager(inputNationNameForOpen.getValue());
+        Loader villageLoader = new Loader(nationManager);
+        villageLoader.TerrainLoader();
+        villageLoader.TreeLoader(fileReader.getTree_axisX(), fileReader.getTree_axisY());
+        villageLoader.HouseLoader(fileReader.getHouse_axisX(), fileReader.getHouse_axisY());
+        villageLoader.WaterResourceLoader(fileReader.getWaterResource_axisX(), fileReader.getWaterResource_axisY());
+    }
+
+    @FXML
+    void saveVillage(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Age of Villagers files (*.aov)", "*.aov");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File file = fileChooser.showSaveDialog(null);
 
 
-
-
-
-
-
-
-
-
-
+        if (file != null) {
+            SaverModule fileSaver = new SaverModule(file);
+            fileSaver.FileSever();
+        }
+    }
 
     @FXML
     void selectHouse(ActionEvent event) {
