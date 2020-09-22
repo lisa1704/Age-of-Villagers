@@ -21,6 +21,9 @@ namespace AgeofVillegersTest
 
             AbstractNation egyptianKingsWaterSource = new EgyptianKings(new Panel());
             Assert.AreEqual(egyptianKingsWaterSource.getWaterSourceType().GetType(), new EgyptianKingsWaterSource().GetType());
+
+            AbstractNation inuitHuntersWaterSource = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitHuntersWaterSource.getWaterSourceType().GetType(), new InuitHuntersWaterSource().GetType());
         }
     }
 }
