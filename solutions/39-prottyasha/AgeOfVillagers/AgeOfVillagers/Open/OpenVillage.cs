@@ -9,8 +9,8 @@ namespace AgeOfVillagers.Open
 {
     class OpenVillage
     {
-        Village vill = new Village();
-        public void open()
+        Village vill;
+        public Village getVill()
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -22,6 +22,8 @@ namespace AgeOfVillagers.Open
                     vill = JsonConvert.DeserializeObject<Village>(json);
                 }
             }
+
+            return vill;
         }
     }
 }
