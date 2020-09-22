@@ -130,7 +130,22 @@ namespace AgeOfVillagers
 
         private void Drawingpanel_Paint(object sender, PaintEventArgs e)
         {
-           
+            // repaint //
+            nation_name = Form1.NationName;
+            Nations nation = new Nations(nation_name, Drawingpanel);
+
+            foreach (Point point in house_locations)
+            {
+                nation.getNation().DrawHouse(point, Drawingpanel);
+            }
+            foreach (Point point in tree_locations)
+            {
+                nation.getNation().DrawTree(point, Drawingpanel);
+            }
+            foreach (Point point in watersource_locations)
+            {
+                nation.getNation().DrawWaterSource(point, Drawingpanel);
+            }
         }
     }
 }
