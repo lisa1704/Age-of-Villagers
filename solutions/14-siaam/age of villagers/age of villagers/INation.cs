@@ -10,7 +10,7 @@ namespace age_of_villagers
 {
     interface INation
     {
-        void drawHouse();
+        void drawHouse(Graphics g, Point point);
         Color BgColor();
     }
 }
