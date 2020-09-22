@@ -17,7 +17,7 @@ namespace ageOfVillagers
             Line l7 = new Line(x + 5, y - 7, x - 1, y - 2);
             Line l8 = new Line(x - 1, y - 2, x - 6, y + 8);
             Line l9 = new Line(x - 6, y + 8, x - 12, y);
-            return l1.Draw() + l2.Draw() + l3.Draw() + l4.Draw() + l5.Draw() + l6.Draw() + l7.Draw() + l8.Draw() + l9.Draw();
+            return "Drawing BD water";
         }
     }
 }
