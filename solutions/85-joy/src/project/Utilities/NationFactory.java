@@ -19,6 +19,8 @@ public class NationFactory {
     public NationFactory(String SelectedNation){
         IAssetFactory houseFactory = new HouseFactory();
         house = (IHouse) houseFactory.createAsset(SelectedNation);
+
+
     }
 
     public INation createNation(){
