@@ -11,8 +11,6 @@ namespace AOV
     {
         public EgyptTree(Point clicked)
         {
-            int level = clicked.Y - 50;
-
             Point x1 = new Point(clicked.X, clicked.Y);
             Point x2 = new Point(clicked.X - 4, clicked.Y - 16);
             Point x3 = new Point(clicked.X-8 , clicked.Y - 20);
