@@ -73,6 +73,21 @@ namespace villageofDurjoy
        
         private void flowLayoutPanel1MouseClick(object sender, MouseEventArgs e)
         {
+            Point point = new Point(e.X, e.Y);
+            Graphics g = flowLayoutPanel1.CreateGraphics();
+            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+            if (treeButton.Checked)
+            {
+
+            }
+            else if (Housebutton.Checked)
+            {
+
+            }
+            else if (Watersourcebutton.Checked)
+            {
+
+            }
 
         }
 
