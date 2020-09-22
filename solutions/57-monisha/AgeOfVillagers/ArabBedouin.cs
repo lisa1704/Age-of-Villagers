@@ -18,6 +18,10 @@ namespace AgeOfVillagers
             //return "Stonehouse";
             return ArabHouse;
         }
+        public object testHouse(Point pt)
+        {
+            return new ArabBedouinHouse(new Point(pt.X, pt.Y));
+        }
 
         public object DrawTree(Graphics g, Point pt)
         {
@@ -37,5 +41,7 @@ namespace AgeOfVillagers
         {
             return Color.PaleGoldenrod;
         }
+
+       
     }
 }

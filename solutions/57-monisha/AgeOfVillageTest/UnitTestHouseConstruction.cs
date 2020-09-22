@@ -30,7 +30,15 @@ namespace AgeOfVillageTest
             object house = bangladeshi.testHouse(pt);
             //string testString = "BDHouse Constructed";
             BDHouseTest.Equals(house);
-
+        }
+        [TestMethod]
+        public void TestArabHouseConstruction()
+        {
+            ArabBedouinHouse ArabHouseTest = new ArabBedouinHouse(pt);
+        
+            ArabBedouin arab = new ArabBedouin();
+            object house = arab.testHouse(pt);
+            ArabHouseTest.Equals(house);
         }
         [TestMethod]
         public void TestNullHouseConstruction()

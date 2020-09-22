@@ -28,7 +28,7 @@ namespace AgeOfVillagers
             return testBdHouse;
         }
     }
-    class ArabBedouinHouse : CompositeShape
+    public class ArabBedouinHouse : CompositeShape
     {
         public ArabBedouinHouse(Point MPt)
         {
@@ -42,7 +42,7 @@ namespace AgeOfVillagers
 
         }
     }
-    class EgyptianHouse : CompositeShape
+    public class EgyptianHouse : CompositeShape
     {
         public EgyptianHouse(Point MPt)
         {
@@ -55,7 +55,7 @@ namespace AgeOfVillagers
 
         }
     }
-    class InuitHouse : CompositeShape
+    public class InuitHouse : CompositeShape
     {
         public InuitHouse(Point MPt)
         {           
