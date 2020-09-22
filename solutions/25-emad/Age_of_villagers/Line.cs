@@ -12,9 +12,18 @@ namespace Age_of_villagers
          Point p1;
          Point p2;
 
-        public void Draw(Graphics g, Pen p)
+        
+
+        public Line(Point p1, Point p2)
         {
-            throw new NotImplementedException();
+            this.p1 = p1;
+            this.p2 = p2;
+
+        }
+        public void Draw(Graphics graphics, Pen pen)
+        {
+            graphics.DrawLine(pen, p1, p2);
+
         }
     }
     
