@@ -53,7 +53,7 @@ namespace age_of_villagers
 
         public void draw_watersource()
         {
-            gp.DrawArc(pen, p0.X, p0.Y, 50, 50, 0, 360);
+            gp.DrawArc(pen, p0.X, p0.Y, 12, 12, 0, 360);
 
         }
     }
