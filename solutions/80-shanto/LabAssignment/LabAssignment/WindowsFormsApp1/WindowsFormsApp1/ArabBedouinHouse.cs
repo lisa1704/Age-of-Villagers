@@ -19,13 +19,13 @@ namespace WindowsFormsApp1
 
 
 
-            g.DrawLine(mypen, x + 25, y - 25, x + 50, y - 30);
-            g.DrawLine(mypen, x + 50, y - 30, x + 70, y - 15);
-            g.DrawLine(mypen, x + 50, y, x + 70, y - 15);
+            g.DrawLine(mypen, x + 8, y - 8, x + 16, y - 12);
+            g.DrawLine(mypen,  x + 16, y - 12, x + 24, y - 6);
+            g.DrawLine(mypen, x + 16, y, x + 24, y - 6);
 
-            g.DrawLine(mypen, x, y, x + 25, y - 25);
-            g.DrawLine(mypen, x + 25, y - 25, x + 50, y);
-            g.DrawLine(mypen, x, y, x + 50, y);
+            g.DrawLine(mypen, x, y, x + 8, y - 8);
+            g.DrawLine(mypen, x + 8, y - 8, x + 16, y);
+            g.DrawLine(mypen, x, y, x + 16, y);
         }
     }
 }

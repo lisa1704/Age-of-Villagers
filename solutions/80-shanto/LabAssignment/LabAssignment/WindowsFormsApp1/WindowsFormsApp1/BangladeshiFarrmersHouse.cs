@@ -17,12 +17,12 @@ namespace WindowsFormsApp1
             int x = e.X;
             int y = e.Y;
 
-            g.DrawLine(mypen, x, y, x + 50, y);
-            g.DrawLine(mypen, x + 50, y, x + 50, y + 25);
-            g.DrawLine(mypen, x + 50, y + 25, x, y + 25);
-            g.DrawLine(mypen, x, y + 25, x, y);
-            g.DrawLine(mypen, x, y, x + 25, y - 25);
-            g.DrawLine(mypen, x + 25, y - 25, x + 50, y);
+            g.DrawLine(mypen, x, y, x + 16, y);
+            g.DrawLine(mypen, x + 16, y, x + 16, y + 8);
+            g.DrawLine(mypen, x + 16, y + 8, x, y + 8);
+            g.DrawLine(mypen, x, y + 8, x, y);
+            g.DrawLine(mypen, x, y, x + 8, y - 8);
+            g.DrawLine(mypen, x + 8, y - 8, x + 16, y);
         }
     }
 }

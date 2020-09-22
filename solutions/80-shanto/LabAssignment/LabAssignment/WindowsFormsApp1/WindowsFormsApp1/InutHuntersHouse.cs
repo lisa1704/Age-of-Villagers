@@ -18,9 +18,9 @@ namespace WindowsFormsApp1
             int x = e.X;
             int y = e.Y;
 
-            g.DrawArc(mypen, x - 25, y - 25, 50, 50, 0, -180);
-            g.DrawArc(mypen, x - 50, y - 50, 100, 100, 0, -180);
-            g.DrawLine(mypen, x - 50, y, x + 50, y);
+            g.DrawArc(mypen, x - 4, y - 4 ,8, 8, 0, -180);
+            g.DrawArc(mypen, x - 8, y - 8, 16, 16, 0, -180);
+            g.DrawLine(mypen, x - 8, y, x + 8, y);
         }
     }
     
