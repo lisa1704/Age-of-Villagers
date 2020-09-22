@@ -6,7 +6,7 @@ namespace AgeOfVillagers.Test
 {
     public class DrawBdVillage
     {
-        
+        Village vill;
         [Fact]
         public void Test1()
         {
