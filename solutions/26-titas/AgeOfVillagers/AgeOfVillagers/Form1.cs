@@ -100,7 +100,7 @@ namespace AgeOfVillagers
             }
             else if (radioButtonWaterSource.Checked)
             {
-                bdFarmers.paint_waterSource(e, g, p);
+                egyptianKings.paint_waterSource(e, g, p);
             }
         }
     }

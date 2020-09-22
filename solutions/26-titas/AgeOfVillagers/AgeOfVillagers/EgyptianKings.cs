@@ -33,7 +33,10 @@ namespace AgeOfVillagers
 
         public void paint_waterSource(MouseEventArgs e, Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            int x, y;
+            x = e.X;
+            y = e.Y;
+            g.DrawArc(p, x - 6, y - 6, 12, 12, 0, 360);
         }
     }
 }
