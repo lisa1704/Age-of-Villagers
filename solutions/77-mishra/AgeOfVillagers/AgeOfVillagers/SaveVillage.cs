@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class SaveVillage
+    class SaveVillage : IVillage
     {
         public VillageState villagestate;
 

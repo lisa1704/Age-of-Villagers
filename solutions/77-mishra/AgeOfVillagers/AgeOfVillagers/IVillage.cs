@@ -6,6 +6,6 @@ namespace AgeOfVillagers
 {
     public interface IVillage
     {
-
+        public void execute();
     }
 }
