@@ -11,12 +11,12 @@ namespace AOV
     {
         public EgyptHouse(Point clicked)
         {
-            Point x1 = new Point(clicked.X - 28, clicked.Y + 50);
-            Point x2 = new Point(clicked.X + 16, clicked.Y + 60);
-            Point x3 = new Point(clicked.X + 35, clicked.Y + 40);
+            Point x1 = new Point(clicked.X - 7, clicked.Y + 13);
+            Point x2 = new Point(clicked.X + 4, clicked.Y + 16);
+            Point x3 = new Point(x1.X + 16, clicked.Y + 11);
 
-            addShape(new Triangle(x2, x1, clicked));
-            addShape(new Triangle(x3, x2, clicked));
+            addShape(new Triangle(clicked, x1, x2));
+            addShape(new Triangle(clicked, x2, x3));
         }
     }
 }
