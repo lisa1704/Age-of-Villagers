@@ -39,7 +39,7 @@ namespace AgeOfVillagers
                 radioButton3.Visible = false;
             }
             
-            if (nation_name == "Inuit Hunters")
+             if (nation_name == "Inuit Hunters")
             {
                 radioButton3.Visible = false;
                 radioButton1.Visible = false;
@@ -62,9 +62,37 @@ namespace AgeOfVillagers
             Drawingpanel.BackColor = village.terraincolor;
             label2.Text = village.villagename;
             label3.Text = village.nationname;
+            if (village.nationname == "Bangladeshi Farmers")
+            {
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton3.Visible = true;
+            }
+            else if (village.nationname == "Arab Beduins")
+            {
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton3.Visible = false;
+            }
+
+            else if (village.nationname == "Inuit Hunters")
+            {
+                radioButton2.Visible = true;
+                radioButton3.Visible = false;
+                radioButton1.Visible = false;
+            }
+            else if (village.nationname == "Egyptian Kings")
+            {
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton3.Visible = true;
+            }
+
+
             house_locations.Clear();
             tree_locations.Clear();
             watersource_locations.Clear();
+
             foreach (Point point in village.Houses)
             {
                 house_locations.Add(point);
@@ -77,6 +105,7 @@ namespace AgeOfVillagers
             {
                 watersource_locations.Add(point);
             }
+            
         }
 
 
@@ -98,7 +127,7 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            Refresh();
+           
             VillageStateLoader load = new VillageStateLoader();
 
             load.execute();
@@ -143,6 +172,8 @@ namespace AgeOfVillagers
         {
             // repaint //
             //nation_name = village.nationname;
+            Drawingpanel.Refresh();
+            
             Nations nation = new Nations(village.nationname, Drawingpanel);
             if (house_locations != null)
             {
