@@ -28,8 +28,7 @@ namespace age_of_villagers
         }
         public Color BackColor()
         {
-            Color color = Color.LightGreen;
-            return color;
+            return Color.LightGreen;
         }
     }
 }

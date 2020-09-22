@@ -30,8 +30,7 @@ namespace age_of_villagers
 
         public Color BackColor()
         {
-            Color color = Color.Khaki;
-            return color;
+            return Color.Khaki;
         }
     }
 }
