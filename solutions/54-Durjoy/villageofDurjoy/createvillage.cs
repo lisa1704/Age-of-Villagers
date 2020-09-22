@@ -70,6 +70,11 @@ namespace villageofDurjoy
             g.DrawLine(p, X + 25, Y - 25, X + 75, Y + 25);
             g.DrawLine(p, X + 75, Y + 25, X + 50, Y + 50);
         }
+       
+        private void flowLayoutPanel1MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
 
 
 
