@@ -9,21 +9,19 @@ namespace Age_of_villagers.Shape
 {
     class Triangle : IShape
     {
-        private readonly Point t;
-        private readonly Point bL;
-        private readonly Point bR;
-
-        public Triangle(Point t, Point bL, Point bR)
+        private readonly Point top,bottom_left,bottom_right;
+  
+        public Triangle(Point top, Point bottom_left, Point bottom_right)
         {
-            this.t = t;
-            this.bL = bL;
-            this.bR = bR;
+            this.top = top;
+            this.bottom_left = bottom_left;
+            this.bottom_right = bottom_right;
         }
         public void draw(Graphics g, Pen p)
         {
-            new Line(t, bL).draw(g, p);
-            new Line(t, bR).draw(g, p);
-            new Line(bL, bR).draw(g, p);
+            new Line(top, bottom_left).draw(g, p);
+            new Line(top, bottom_right).draw(g, p);
+            new Line(bottom_left, bottom_right).draw(g, p);
         }
     }
 }
