@@ -4,6 +4,7 @@ import javafx.scene.shape.Shape;
 import project.Utilities.Factories.HouseFactory;
 import project.Utilities.Factories.IAssetFactory;
 import project.Utilities.Factories.TreeFactory;
+import project.Utilities.Factories.WaterSourceFactory;
 import project.Utilities.NationItems.IHouse;
 import project.Utilities.NationItems.ITree;
 import project.Utilities.NationItems.IWaterSource;
@@ -26,7 +27,8 @@ public class NationFactory {
         IAssetFactory treeFactory = new TreeFactory();
         tree = (ITree) treeFactory.createAsset(SelectedNation);
 
-        IAssetFactory =
+        IAssetFactory waterSourceFactory = new WaterSourceFactory();
+        waterSource = (IWaterSource) waterSourceFactory.createAsset(SelectedNation);
 
     }
 

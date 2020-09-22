@@ -54,7 +54,7 @@ public class VillageViewController implements Initializable {
                     DrawShape(Object);
                 }
                 else if(Flag == 3){
-                    Object = nation.DrawWaterSource(event.getSceneX(),event.getSceneY());
+                    Object = nationFactory.drawWaterSource(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
             }
