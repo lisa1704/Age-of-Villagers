@@ -51,5 +51,23 @@ namespace AgeOfVillagers.Test
 
             Assert.Null(component);  //Checks for null             
         }
+
+        [Fact]
+        public void BdHouseCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Bangladeshi Farmers");
+            IComponent component = nation.getComponent("house");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is BdHouse)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
     }
 }
