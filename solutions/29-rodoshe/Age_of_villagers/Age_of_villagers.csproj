@@ -59,6 +59,9 @@
     <Compile Include="Nation\EgyptianKing.cs" />
     <Compile Include="Nation\INation.cs" />
     <Compile Include="Nation\InuitHunters.cs" />
+    <Compile Include="VillageComponents\BangladeshiHouse.cs" />
+    <Compile Include="VillageComponents\BangladeshiTree.cs" />
+    <Compile Include="VillageComponents\BangladeshiWaterSource.cs" />
     <Compile Include="VillageComponents\VillageComponents.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
