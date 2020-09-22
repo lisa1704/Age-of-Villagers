@@ -10,7 +10,7 @@ namespace AgeOfVillagers
     {
         public static ItemFactory getNation(string nation)
         {
-            if (nation == "Bangladeshi")
+            if (nation == "Bangladeshi Farmers")
             {
                 return new BangladeshiItemFactory();
             }
