@@ -6,9 +6,9 @@ namespace age_of_villagers
 {
     interface Ination
     {
-        void createHouse(string text);
-        void createTree();
-        void createWaterSource();
+        void createHouse(int x, int y);
+        void createTree(int x, int y);
+        void createWaterSource(int x, int y);
         void colorTerrain();
 
     }
