@@ -11,7 +11,7 @@ namespace AgeOfVillagers
 
             if (NationBox == "Bangladeshi Farmers")
             {
-                return new BanglaFarmers();
+                return new BangladeshiFarmers();
             }
             else if (NationBox == "Arab Bedouin")
             {
