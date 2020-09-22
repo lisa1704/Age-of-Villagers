@@ -33,6 +33,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Housebutton = new System.Windows.Forms.RadioButton();
             this.treeButton = new System.Windows.Forms.RadioButton();
+            this.Watersourcebutton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
            
@@ -80,6 +81,18 @@
             this.treeButton.Text = "tree";
             this.treeButton.UseVisualStyleBackColor = true;
             this.treeButton.CheckedChanged += new System.EventHandler(this.treeButton_CheckedChanged);
+            // 
+            // Watersourcebutton
+            // 
+            this.Watersourcebutton.AutoSize = true;
+            this.Watersourcebutton.Location = new System.Drawing.Point(540, 199);
+            this.Watersourcebutton.Name = "Watersourcebutton";
+            this.Watersourcebutton.Size = new System.Drawing.Size(110, 21);
+            this.Watersourcebutton.TabIndex = 5;
+            this.Watersourcebutton.TabStop = true;
+            this.Watersourcebutton.Text = "Watersource";
+            this.Watersourcebutton.UseVisualStyleBackColor = true;
+            this.Watersourcebutton.CheckedChanged += new System.EventHandler(this.Watersourcebutton_CheckedChanged);
             // 
 
             // createvillage
