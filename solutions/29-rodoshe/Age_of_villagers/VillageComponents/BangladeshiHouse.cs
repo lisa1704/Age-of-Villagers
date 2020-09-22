@@ -21,15 +21,5 @@ namespace AgeOfVillagers.VillegeItems
             addComponent(new Triangle(top, midLeft, midRight));
             addComponent(new Rectangle(midLeft, bottomRight));
         }
-
-        private void addComponent(Triangle triangle)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void addComponent(Rectangle rectangle)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

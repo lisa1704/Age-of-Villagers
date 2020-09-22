@@ -17,6 +17,12 @@ namespace Age_of_Villagers.Shape
             this.bottomLeft = bottomLeft;
             this.bottomRight = bottomRight;
         }
+
+        public void AddComponent(IShape shape)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Draw(Graphics g, Pen p)
         {
             new Line(top, bottomLeft).Draw(g, p);

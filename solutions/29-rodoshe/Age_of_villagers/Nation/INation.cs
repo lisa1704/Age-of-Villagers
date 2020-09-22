@@ -1,25 +1,23 @@
-﻿using Age_of_Villagers.VillageComponents;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Age_of_Villagers.VillageComponents;
 
-namespace Age_of_villagers.Nation
+namespace Age_of_Villagers.Nation
 {
+
     public interface INation
     {
-            string getNationName();
-            Color BgColor();
-            void DrawHouse();
+        string getNationName();
+        Color BgColor();
+        void DrawHouse();
 
-            void DrawTree();
+        void DrawTree();
 
-            void DrawWaterSource();
-            VillageComponents GetHouse(Point p);
-            VillageComponents getTree(Point p);
-            VillageComponents getWaterSource(Point p);
-
+        void DrawWaterSource();
+        VillageComponents.VillageComponents getHouse(Point p);
+        VillageComponents.VillageComponents getTree(Point p);
+        VillageComponents.VillageComponents getWaterSource(Point p);
     }
 }

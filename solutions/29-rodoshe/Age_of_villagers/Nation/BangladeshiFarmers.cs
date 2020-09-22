@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Age_of_Villagers.VillageComponents;
 
 namespace Age_of_Villagers.Nation
 {
@@ -23,6 +24,27 @@ namespace Age_of_Villagers.Nation
         }
 
         public void DrawWaterSource()
+        {
+            throw new NotImplementedException();
+        }
+        public string getNationName()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        VillageComponents.VillageComponents INation.getHouse(Point p)
+        {
+            throw new NotImplementedException();
+        }
+
+        VillageComponents.VillageComponents INation.getTree(Point p)
+        {
+            throw new NotImplementedException();
+        }
+
+        VillageComponents.VillageComponents INation.getWaterSource(Point p)
         {
             throw new NotImplementedException();
         }

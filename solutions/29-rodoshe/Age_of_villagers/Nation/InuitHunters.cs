@@ -27,10 +27,25 @@ namespace Age_of_Villagers.Nation
             throw new NotImplementedException();
         }
 
+        public VillageComponents.VillageComponents getHouse(Point p)
+        {
+            throw new NotImplementedException();
+        }
 
+        public string getNationName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public VillageComponents.VillageComponents getTree(Point p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public VillageComponents.VillageComponents getWaterSource(Point p)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    internal interface INation
-    {
-    }
 }

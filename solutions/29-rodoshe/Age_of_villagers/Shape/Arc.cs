@@ -19,6 +19,12 @@ namespace Age_of_Villagers.Shape
             startAngle = 0;
             sweepAngle = 180;
         }
+
+        public void AddComponent(IShape shape)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Draw(Graphics g, Pen p)
         {
             g.DrawArc(p, x, y, width, height, startAngle, sweepAngle);

@@ -13,6 +13,12 @@ namespace Age_of_Villagers.Shape
             p01 = point1;
             p02 = point2;
         }
+
+        public void AddComponent(IShape shape)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Draw(Graphics g, Pen p)
         {
             g.DrawLine(p, p01, p02);

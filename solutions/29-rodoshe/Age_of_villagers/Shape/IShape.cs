@@ -7,6 +7,7 @@ namespace Age_of_Villagers.Shape
 {
     interface IShape
     {
+        void AddComponent(IShape shape);
         void Draw(Graphics g, Pen p);
     }
 }
