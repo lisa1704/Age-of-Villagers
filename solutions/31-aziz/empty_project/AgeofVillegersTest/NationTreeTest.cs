@@ -15,6 +15,9 @@ namespace AgeofVillegersTest
         {
             AbstractNation bangladeshiFarmersTree = new BangladeshiFarmers(new Panel());
             Assert.AreEqual(bangladeshiFarmersTree.getTreeType().GetType(), new BangladeshiFarmersTree().GetType());
+
+            AbstractNation arabBedouinTree = new ArabBedouin(new Panel());
+            Assert.AreEqual(arabBedouinTree.getTreeType().GetType(), new ArabBedouinTree().GetType());
         }
     }
 }
