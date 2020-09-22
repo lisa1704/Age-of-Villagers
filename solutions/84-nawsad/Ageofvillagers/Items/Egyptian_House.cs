@@ -12,7 +12,16 @@ namespace Ageofvillagers
     {
         public void Draw(Graphics g, Pen p,int x,int y)
         {
-            throw new NotImplementedException();
+            Line L = new Line(g, p, x, y, 50, -80);
+            Line L1 = new Line(g, p, x, y, 50, 10);
+            Line L2 = new Line(g, p, x + 50, y - 80, x + 50, y + 10);
+            Line L3 = new Line(g, p, x + 50, y - 80, x + 50 + 50, y - 80 + 50);
+            Line L4 = new Line(g, p, x + 50, y + 10, x + 50 + 50, y - 80 + 50);
+            L.drawshape();
+            L1.drawshape();
+            L2.drawshape("Coordinate");
+            L3.drawshape("Coordinate");
+            L4.drawshape("Coordinate");
         }
     }
 }
