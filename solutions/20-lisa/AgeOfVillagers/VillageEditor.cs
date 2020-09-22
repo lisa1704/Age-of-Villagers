@@ -82,7 +82,7 @@ namespace AgeOfVillagers
            {
                 house_point.Add(e.Location);
            }
-           if (s == "WaterSource")
+           if (s == "Water Source")
            {
                 watersource_point.Add(e.Location);
            }
@@ -141,12 +141,12 @@ namespace AgeOfVillagers
 
         private void House_MouseClick(object sender, MouseEventArgs e)
         {
-            s = "WaterSource";
+            s = "House";
         }
 
         private void WaterSource_MouseClick(object sender, MouseEventArgs e)
         {
-            s = "House";
+            s = "Water Source";
         }
 
   
