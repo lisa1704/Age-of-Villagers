@@ -15,7 +15,6 @@ namespace AgeOfVillagers.Shapes
         public Triangle(Graphics g)
         {
             graphics = g;
-
         }
 
         public void Draw()

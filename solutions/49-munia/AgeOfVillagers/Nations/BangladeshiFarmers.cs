@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers 
 {
@@ -22,7 +23,8 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g)
         {
-            g.DrawLine(pen, 20, 100, 300, 100);
+            Rectangle r = new Rectangle(g);
+            r.Draw();
         }
 
         public void drawWater(Graphics g)
