@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Nation
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         public VillageItem getHouse(Point point)
         {
