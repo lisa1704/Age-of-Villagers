@@ -33,7 +33,28 @@ namespace AgeOfVillagers
             this.villageState = new VillageState(Village.Text, HouseLoc, TreeLoc, WaterLoc);
         }
 
-        
+        public void setState(VillageState villageState)
+        {
+            foreach (Point point in villageState.houseLoc)
+            {
+                HouseLoc.Add(point);
+            }
+            foreach (Point point in villageState.treeLoc)
+            {
+                TreeLoc.Add(point);
+            }
+            foreach (Point point in villageState.waterLoc)
+            {
+                WaterLoc.Add(point);
+            }
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            getState();
+            SaveVillage saveVillage = new SaveVillage(villageState);
+            saveVillage.execute();
+        }
 
 
         public VillageForm()
@@ -66,17 +87,14 @@ namespace AgeOfVillagers
             {
 
                 nations.GetNation(point).DrawHouse(point).draw(pen, graphics);
-                /*arabBeduin.DrawHouse(p, drawingBoard);
                 
-                bdfarmer.DrawHouse(p, drawingBoard);
-                egKing.DrawHouse(p, drawingBoard);*/
 
             }
 
             if(radioButton2.Checked == true)
             {
                 nations.GetNation(point).DrawWaterSource(point).draw(pen, graphics);
-                //bdfarmer.DrawWaterSource(p, drawingBoard);
+               
             }
 
           
@@ -102,11 +120,7 @@ namespace AgeOfVillagers
         {
             drawingBoard.Invalidate();
         }
-        private void save_Click(object sender, EventArgs e)
-        {
-            SaveVillage saveVillage = new SaveVillage(villageState);
-            saveVillage.execute();
-        }
+        
 
         private void open_button_Click(object sender, EventArgs e)
         {

@@ -9,9 +9,9 @@ namespace AgeOfVillagers
     {
         private string villageName;
        
-        private List<Point> houseLoc;
-        private List<Point> treeLoc;
-        private List<Point> waterLoc;
+        public List<Point> houseLoc;
+        public List<Point> treeLoc;
+        public List<Point> waterLoc;
 
         public VillageState(String villageName,  List<Point> houseLoc, List<Point> treeLoc, List<Point> waterLoc)
         {
