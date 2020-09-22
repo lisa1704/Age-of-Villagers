@@ -57,6 +57,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="INation.cs" />
+    <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
