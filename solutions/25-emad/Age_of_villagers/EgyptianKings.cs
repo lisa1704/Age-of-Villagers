@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Age_of_villagers
 {
@@ -33,7 +34,11 @@ namespace Age_of_villagers
         
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+
+            Circle circle = new Circle(graphics, pen, point, 30, 30, 0, 360);
+            circle.Draw();
+
         }
 
         public void getName()

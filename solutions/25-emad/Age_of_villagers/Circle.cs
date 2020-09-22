@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Age_of_villagers
 {
@@ -26,6 +27,7 @@ namespace Age_of_villagers
 
         public void Draw()
         {
+
             g.DrawArc(pen, x.X - 10, x.Y - 10, y, width, height, radius);
         }
 

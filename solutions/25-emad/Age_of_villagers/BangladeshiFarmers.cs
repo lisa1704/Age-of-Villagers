@@ -15,7 +15,7 @@ namespace Age_of_villagers
 
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+           
         }
 
         public Color DrawBackground()
@@ -51,7 +51,7 @@ namespace Age_of_villagers
                 graphics.DrawLine(pen, p5, p6);
                 graphics.DrawLine(pen, p6, p7);
                 graphics.DrawLine(pen, p7, p8);
-                graphics.DrawLine(pen, p8, point); ;
+                graphics.DrawLine(pen, p8, point); 
         }
 
         public string getName()
