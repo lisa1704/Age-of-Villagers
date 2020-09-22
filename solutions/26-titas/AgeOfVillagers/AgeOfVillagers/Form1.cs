@@ -95,6 +95,7 @@ namespace AgeOfVillagers
 
             if(nationName== "Bangladeshi Farmers")
             {
+                panel1.BackColor = Color.Green;
                 if (radioButtonHouse.Checked)
                 {
                     bdFarmers.paint_house(e, g, p);
