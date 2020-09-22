@@ -5,6 +5,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 
 public class VillageSaverLoader {
@@ -17,26 +19,42 @@ public class VillageSaverLoader {
         Gson gson = new Gson();
         String json = gson.toJson(sceneSate);
 
-        Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
-        JsonElement je = new JsonParser().parse(json);
-        System.out.println(gson1.toJson(je));
         try {
             File jsonFile = new File("SavedFiles/"+FileName);
             FileWriter writer = new FileWriter(jsonFile);
             writer.write(json);
             writer.close();
+            System.out.println("successfully saved!");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public SceneSate loadVillage(){
-        try{
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("SavedFiles/try.aov"));
-            sceneSate = new Gson().fromJson(bufferedReader,SceneSate.class);
-        }catch (Exception e) {
-            e.printStackTrace();
+        File selectedFile = null;
+        final JFrame iFRAME = new JFrame();
+        iFRAME.setAlwaysOnTop(true);
+        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        iFRAME.setLocationRelativeTo(null);
+        iFRAME.requestFocus();
+
+        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
+        int returnValue = fileChooser.showOpenDialog(iFRAME);
+        iFRAME.dispose();
+
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            selectedFile = fileChooser.getSelectedFile();
+            try{
+                BufferedReader bufferedReader = new BufferedReader(new FileReader(selectedFile));
+                sceneSate = new Gson().fromJson(bufferedReader,SceneSate.class);
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            System.out.println("No File Selected!");
         }
         return sceneSate;
 

@@ -9,7 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.*;
-import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -41,25 +40,17 @@ public class VillageView_controller implements Initializable {
     }
 
 
-    public void save_village(ActionEvent actionEvent) throws IOException {
+    public void save_village(ActionEvent actionEvent){
         SLD.saveVillage(sceneSate);
     }
 
 
     public void Open_new_village(ActionEvent actionEvent) {
-//        File selectedFile = null;
-//        final JFrame iFRAME = new JFrame();
-//        iFRAME.setAlwaysOnTop(true);
-//        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        iFRAME.setLocationRelativeTo(null);
-//        iFRAME.requestFocus();
-//
-//        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
-//        int returnValue = fileChooser.showOpenDialog(iFRAME);
-//        iFRAME.dispose();
-        this.sceneSate = SLD.loadVillage();
-        this.villageName = sceneSate.Village_name;
-        VillageNameField.setText(villageName);
+        SceneSate tempState = SLD.loadVillage();
+        if(!tempState.equals(null)){
+            this.sceneSate = tempState;
+            this.villageName = sceneSate.Village_name;
+        }
         reDrawScene();
     }
 
@@ -83,11 +74,11 @@ public class VillageView_controller implements Initializable {
 
     public void CreateNewVillage(ActionEvent actionEvent) {
         sceneSate = new SceneSate(VillageNameField.getText());
-        VillageNameField.setText(villageName);
         DrawingCanvas.getChildren().clear();
     }
 
     private void reDrawScene(){
+        VillageNameField.setText(sceneSate.Village_name);
         DrawingCanvas.getChildren().clear();
         for(AssetInfo i:sceneSate.assetList){
             if(i.assetType.equals("Tree")){
