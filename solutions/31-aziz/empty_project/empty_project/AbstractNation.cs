@@ -38,5 +38,19 @@ namespace empty_project
         {
             waterSource.drawWaterSource(axis, panel);
         }
+        public IHouse getHouseType()
+        {
+            return this.house;
+        }
+
+        public ITree getTreeType()
+        {
+            return this.tree;
+        }
+
+        public IWaterSource getWaterSourceType()
+        {
+            return this.waterSource;
+        }
     }
 }
