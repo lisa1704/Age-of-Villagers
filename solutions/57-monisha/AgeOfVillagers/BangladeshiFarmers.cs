@@ -19,11 +19,11 @@ namespace AgeOfVillagers
             house.Paint(g,p);
             testBdHouse = "BDHouse Constructed";
             //return "KureGhor";
-            return house;
+            return new BangladeshiHouse(new Point(pt.X, pt.Y));
         }
-        public string testHouse()
+        public object testHouse(Point pt)
         {
-            return "BDHouse Constructed";
+            return new BangladeshiHouse(new Point(pt.X, pt.Y));
         }
         public object DrawTree(Graphics g, Point pt)
         {

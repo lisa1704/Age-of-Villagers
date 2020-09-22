@@ -77,9 +77,8 @@ namespace AgeOfVillagers
             }
             public int GetBBox()
             {
-            int length = 12 , weight=16;
-            return (length * weight);
-
+                int length = 12 , weight=16;
+                return (length * weight);
             }
         }
     //}
