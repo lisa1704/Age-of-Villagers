@@ -138,6 +138,5 @@ public class VillageViewController implements Initializable {
 
     public void createNewVillage(ActionEvent actionEvent) {
         DrawPane.getChildren().clear();
-
     }
 }
