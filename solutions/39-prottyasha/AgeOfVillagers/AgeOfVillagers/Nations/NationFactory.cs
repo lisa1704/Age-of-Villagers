@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class NationFactory
+    public class NationFactory
     {
         public AbstractNation getNation(string nation)
         {

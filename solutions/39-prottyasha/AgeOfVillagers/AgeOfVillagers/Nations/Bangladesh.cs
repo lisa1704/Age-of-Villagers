@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class Bangladesh : AbstractNation
+    public class Bangladesh : AbstractNation
     {
         public override IComponent getComponent(string component_type)
         {
