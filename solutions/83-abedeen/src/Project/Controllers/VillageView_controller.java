@@ -29,25 +29,14 @@ public class VillageView_controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         NationList.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouins"),("Egyptian Kings"),("Inuit Hunters"));
         nation = new Nation("No Nation");
-
+        sceneSate = new SceneSate("#$noNationNameYet$#");
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 double x1 = event.getSceneX();
                 double y1 = event.getSceneY();
                 sceneSate.add_asset_to_list(flag,x1,y1);
-                if(flag == "Tree"){
-                    ArrayList<Shape> tree = nation.drawTree(x1,y1);
-                    DrawShape(tree);
-                }
-                else if (flag == "House"){
-                    ArrayList<Shape> house = nation.drawHouse(x1,y1);
-                    DrawShape(house);
-                }
-                else if(flag == "WaterSource"){
-                    ArrayList<Shape> WaterBody = nation.drawWaterBody(x1,y1);
-                    DrawShape(WaterBody);
-                }
+                reDrawScene();
 
             }
         });
@@ -105,6 +94,7 @@ public class VillageView_controller implements Initializable {
 
     public void TreePressed(ActionEvent actionEvent){
         flag = "Tree";
+        System.out.println(sceneSate.Village_name);
         for(AssetInfo i:sceneSate.assetList){
             System.out.println(i.x_coordinate);
             System.out.println(i.y_coordinate);
@@ -129,9 +119,26 @@ public class VillageView_controller implements Initializable {
     }
 
     public void CreateNewVillage(ActionEvent actionEvent) {
-        DrawingCanvas.getChildren().clear();
         sceneSate = new SceneSate(VillageNameField.getText());
         System.out.println(sceneSate.Village_name);
         DrawingCanvas.getChildren().clear();
+    }
+
+    private void reDrawScene(){
+        DrawingCanvas.getChildren().clear();
+        for(AssetInfo i:sceneSate.assetList){
+            if(i.assetType == "Tree"){
+                ArrayList<Shape> tree = nation.drawTree(i.x_coordinate,i.y_coordinate);
+                DrawShape(tree);
+            }
+            else if (i.assetType == "House"){
+                ArrayList<Shape> house = nation.drawHouse(i.x_coordinate,i.y_coordinate);
+                DrawShape(house);
+            }
+            else if(i.assetType == "WaterSource"){
+                ArrayList<Shape> WaterBody = nation.drawWaterBody(i.x_coordinate,i.y_coordinate);
+                DrawShape(WaterBody);
+            }
+        }
     }
 }
