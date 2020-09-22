@@ -9,7 +9,7 @@ namespace AgeOfVillagers
 {
     class BDHouse
     {
-        public void Draw(Graphics gr, Point pt, Pen pn)
+        public void Draw(Graphics g, Point pt, Pen p)
         {
             int a = pt.X;
             int b = pt.Y;
