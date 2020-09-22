@@ -93,7 +93,7 @@ namespace AgeOfVillagers
             nationName = comboBoxNationName.Text;
             Pen p = new Pen(new SolidBrush(Color.Red), 2);
 
-            if(nationName== "Bangladeshi Farmers")
+            if (nationName == "Bangladeshi Farmers")
             {
                 panel1.BackColor = Color.Green;
                 if (radioButtonHouse.Checked)
@@ -123,6 +123,22 @@ namespace AgeOfVillagers
                 else if (radioButtonWaterSource.Checked)
                 {
                     egyptianKings.paint_waterSource(e, g, p);
+                }
+            }
+            else if (nationName == "Arab Bedouin")
+            {
+                
+                if (radioButtonHouse.Checked)
+                {
+                    arabBedouin.paint_house(e, g, p);
+                }
+                else if (radioButtonTree.Checked)
+                {
+                    arabBedouin.paint_tree(e, g, p);
+                }
+                else if (radioButtonWaterSource.Checked)
+                {
+                    //arabBedouin.paint_waterSource(e, g, p);
                 }
             }
         }
