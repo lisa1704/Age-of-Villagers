@@ -76,7 +76,9 @@ namespace AgeofVillagers
                     //Graphics g = this.CreateGraphics();
                     BangladeshiFarmers bf = new BangladeshiFarmers(g);
                     EgyptianKing eg = new EgyptianKing(g);
-                    eg.createHouse(e);
+                    InuitHunters inu = new InuitHunters(g);
+                    inu.createHouse(e);
+                    //eg.createHouse(e);
                     //bf.createHouse(e);
                     ArabBeduoin a = new ArabBeduoin(g);
                     //a.createHouse(e);
