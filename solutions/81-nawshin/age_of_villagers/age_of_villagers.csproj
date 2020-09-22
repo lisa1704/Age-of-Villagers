@@ -61,6 +61,7 @@
     <Compile Include="EgyptWatersource.cs" />
     <Compile Include="InuitHouse.cs" />
     <Compile Include="NoNation.cs" />
+    <Compile Include="NullShape.cs" />
     <Compile Include="Openvillage.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Save.cs" />
