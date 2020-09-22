@@ -31,5 +31,20 @@ namespace AgeOfVillagers
         {
             waterSrc.drawWatersrc(p, drawingPanel);
         }
+
+        public IHouse getHouseType()
+        {
+            return this.house;
+        }
+
+        public ITree getTreeType()
+        {
+            return this.tree;
+        }
+
+        public IWatersrc getWatersrcType()
+        {
+            return this.waterSrc;
+        }
     }
 }

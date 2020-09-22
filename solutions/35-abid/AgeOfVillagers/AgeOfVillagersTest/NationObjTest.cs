@@ -9,14 +9,13 @@ namespace AgeOfVillagersTest
     [TestClass]
     public class NationObjTest
     {
-        private Panel drawingPanel;
 
         [TestMethod]
         public void TestBangladeshiNationObj()
         {
-            NationFactory BDobj = new NationFactory(drawingPanel);
+            NationFactory BDobj = new NationFactory(new Panel());
             INation nation1 = BDobj.nationUpdate(0);
-            INation nation2 = new BangladeshiFarmers(drawingPanel);
+            INation nation2 = new BangladeshiFarmers(new Panel());
             nation1.Equals(nation2);
     
         }
@@ -24,9 +23,9 @@ namespace AgeOfVillagersTest
         [TestMethod]
         public void TestArabianNationObj()
         {
-            NationFactory Arabobj = new NationFactory(drawingPanel);
+            NationFactory Arabobj = new NationFactory(new Panel());
             INation nation1 = Arabobj.nationUpdate(1);
-            INation nation2 = new ArabBedouins(drawingPanel);
+            INation nation2 = new ArabBedouins(new Panel());
             nation1.Equals(nation2);
 
         }
@@ -34,9 +33,9 @@ namespace AgeOfVillagersTest
         [TestMethod]
         public void TestEgyptianNationObj()
         {
-            NationFactory Egyobj = new NationFactory(drawingPanel);
+            NationFactory Egyobj = new NationFactory(new Panel());
             INation nation1 = Egyobj.nationUpdate(2);
-            INation nation2 = new EgyptianKings(drawingPanel);
+            INation nation2 = new EgyptianKings(new Panel());
             nation1.Equals(nation2);
 
         }
@@ -44,9 +43,9 @@ namespace AgeOfVillagersTest
         [TestMethod]
         public void TestInuitNationObj()
         {
-            NationFactory Inuitobj = new NationFactory(drawingPanel);
+            NationFactory Inuitobj = new NationFactory(new Panel());
             INation nation1 = Inuitobj.nationUpdate(3);
-            INation nation2 = new InuitHunters(drawingPanel);
+            INation nation2 = new InuitHunters(new Panel());
             nation1.Equals(nation2);
 
         }

@@ -11,5 +11,9 @@ namespace AgeOfVillagers
         public void drawtree(Point p);
         public void drawhouse(Point p);
         public void drawwatersrc(Point p);
+        IHouse getHouseType();
+        ITree getTreeType();
+        IWatersrc getWatersrcType();
+
     }
 }
