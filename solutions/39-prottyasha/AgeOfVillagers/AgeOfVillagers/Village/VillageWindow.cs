@@ -18,7 +18,7 @@ namespace AgeOfVillagers
         Pen pen = new Pen(Color.Black);
         public string selected_nation = "";
         public string selected_component = "";
-        Village vill = new Village();
+        Village vill;
         
         //abstract factory implement
         AbstractNation nation;
@@ -29,6 +29,7 @@ namespace AgeOfVillagers
         {
             InitializeComponent();
             g = DrawingPanel.CreateGraphics();
+            //Village vill = new Village();
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e) { }
@@ -63,7 +64,7 @@ namespace AgeOfVillagers
             sv.SaveFile();
         }
 
-        public void SaveState(string selected_nation, string selected_component, Point p)
+        public void SaveState(string selected_component, string selected_nation, Point p)
         {
             vill.nation = selected_nation;
             if (selected_component== "tree")
@@ -86,11 +87,12 @@ namespace AgeOfVillagers
             //ovf.Show();
             OpenVillage ov = new OpenVillage();
             vill = ov.getVill();
-            this.setSavedVill(vill);
+            setSavedVill(vill);
         }
 
         public void setSavedVill(Village vill)
         {
+            DrawingPanel.Invalidate();
             nation_selector.SelectedText = vill.nation;
             nation_selector_SelectedIndexChanged(this, null);
             //Label_villName.Text =;
@@ -165,7 +167,7 @@ namespace AgeOfVillagers
                 IComponent component;
                 component = nation.getComponent(selected_component);
                 component.draw(p, g, pen);
-                this.SaveState(selected_component, selected_nation, p);
+                SaveState(selected_component, selected_nation, p);
             }
         }
     }
