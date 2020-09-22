@@ -18,6 +18,9 @@ namespace AgeofVillegersTest
 
             AbstractNation arabBedouinTree = new ArabBedouin(new Panel());
             Assert.AreEqual(arabBedouinTree.getTreeType().GetType(), new ArabBedouinTree().GetType());
+
+            AbstractNation egyptianKingsTree = new EgyptianKings(new Panel());
+            Assert.AreEqual(egyptianKingsTree.getTreeType().GetType(), new EgyptianKingsTree().GetType());
         }
     }
 }
