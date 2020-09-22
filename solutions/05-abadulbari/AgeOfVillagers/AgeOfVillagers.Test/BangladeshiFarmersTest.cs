@@ -40,5 +40,13 @@ namespace AgeOfVillagers.Test
             var expected = typeof(BangladeshiTree);
             Assert.IsType(expected, bd.getTree(new Point()));
         }
+
+        [Fact]
+        public void WatersourceTest()
+        {
+            var expected = typeof(BangladeshiWaterSource);
+            Assert.IsType(expected, bd.getWaterSource(new Point()));
+        }
+
     }
 }
