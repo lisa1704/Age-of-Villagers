@@ -15,5 +15,14 @@ namespace AgeofVillagersTest
             Color test = Color.Green;
             Assert.Equal(actual, test);
         }
+
+        [Fact]
+        public void ArabTerrainColor()
+        {
+            ArabBedouin arab = new ArabBedouin();
+            Color actual = arab.TerrainColor();
+            Color test = Color.LightGoldenrodYellow;
+            Assert.Equal(actual, test);
+        }
     }
 }
