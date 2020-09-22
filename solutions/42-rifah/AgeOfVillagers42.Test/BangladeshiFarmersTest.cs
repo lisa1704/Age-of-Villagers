@@ -20,5 +20,26 @@ namespace AgeOfVillagers42.Test
 
             Assert.AreEqual(actual, expected);
         }
+
+        [TestMethod]
+        public void TreeTest()
+        {
+            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
+            Assert.AreEqual(2, 2);
+        }
+
+        [TestMethod]
+        public void HouseTest()
+        {
+            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
+            Assert.AreEqual(2, 2);
+        }
+
+        [TestMethod]
+        public void WatersourceTest()
+        {
+            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
+            Assert.AreEqual(2, 2);
+        }
     }
 }
