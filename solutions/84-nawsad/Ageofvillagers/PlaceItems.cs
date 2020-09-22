@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using Ageofvillagers;
+using Ageofvillagers.Nations;
+
 namespace Ageofvillagers
 {
     public partial class Ageofvillagers :Form
@@ -14,9 +16,9 @@ namespace Ageofvillagers
         {
             Graphics g = panel2.CreateGraphics();
             Pen p = new Pen(Color.Black, 4);
-            INation B = new BangladeshiFarmer(g,p);
-          //  B.drawHouse(e.Location.X, e.Location.Y);
-            B.drawWaterSource(e.Location.X, e.Location.Y);
+            INation B = new ArabBeduin(g,p);
+            B.drawHouse(e.Location.X, e.Location.Y);
+          //  B.drawWaterSource(e.Location.X, e.Location.Y);
 
             //   IShape rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
             //   rec.drawshape();
