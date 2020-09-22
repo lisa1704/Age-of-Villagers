@@ -2,9 +2,7 @@
 {
     internal class SaveVillageState
     {
-		MenuForm menuForm = new MenuForm();
-		private string nation;
-		private string villagename;
+        readonly MenuForm menuForm = new MenuForm();
 
 		public string save()
 		{

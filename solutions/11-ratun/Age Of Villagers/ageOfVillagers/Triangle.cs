@@ -4,9 +4,9 @@ namespace ageOfVillagers
 {
     internal class Triangle
     {
-        Graphics g;
-        Pen p;
-        int x1, y1, x2, y2, x3, y3;
+        readonly Graphics g;
+        readonly Pen p;
+        private readonly int x1, y1, x2, y2, x3, y3;
         public Triangle(Graphics g, Pen p, int x1, int y1, int x2, int y2, int x3, int y3)
         {
             this.g = g;

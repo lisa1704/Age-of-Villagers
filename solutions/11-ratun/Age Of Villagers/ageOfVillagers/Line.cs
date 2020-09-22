@@ -4,9 +4,9 @@ namespace ageOfVillagers
 {
     internal class Line
     {
-        Graphics g;
-        Pen p;
-        private int x1, y1, x2, y2;
+        readonly Graphics g;
+        readonly Pen p;
+        private readonly int x1, y1, x2, y2;
         public Line(Graphics g, Pen p,int x1, int y1, int x2, int y2)
         {
             this.g = g;

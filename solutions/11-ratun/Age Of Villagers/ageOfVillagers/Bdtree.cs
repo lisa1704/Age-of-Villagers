@@ -4,7 +4,7 @@ namespace ageOfVillagers
 {
     internal class Bdtree : IShape
     {
-        Pen pen = new Pen(Color.Green);
+        readonly Pen pen = new Pen(Color.Green);
         public string draw(int x, int y, Graphics g)
         {
             Circle c = new Circle(g,pen, x, y + 2, 8);

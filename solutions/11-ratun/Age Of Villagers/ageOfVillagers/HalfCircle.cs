@@ -4,9 +4,10 @@ namespace ageOfVillagers
 {
     internal class HalfCircle
     {
-        private int x, y, radius, XupperLeft, YupperLeft, height, width;
-        Graphics g;
-        Pen p;
+        private readonly int x, y, radius;
+        private int XupperLeft, YupperLeft, height, width;
+        readonly Graphics g;
+        readonly Pen p;
         public HalfCircle(Graphics g, Pen p,int x, int y, int radius)
         {
             this.g = g;

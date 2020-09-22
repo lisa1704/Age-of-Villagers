@@ -2,8 +2,8 @@
 {
     internal abstract class Tree: Village
     {
-        int Xaxis = 16;
-        int Yaxis = 24;
+        //int Xaxis = 16;
+        //int Yaxis = 24;
         public abstract void CreateTree(int x, int y);
         public void Draw(int x, int y)
         {

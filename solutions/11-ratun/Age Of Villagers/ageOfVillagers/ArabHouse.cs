@@ -4,7 +4,7 @@ namespace ageOfVillagers
 {
     internal class ArabHouse : IShape
     {
-        Pen p = new Pen(Color.LightYellow);
+        readonly Pen p = new Pen(Color.LightYellow);
         public string draw(int x, int y, Graphics g)
         {
             Triangle t = new Triangle(g,p,x - 2, y + 6, x - 8, y - 8, x + 2, y - 8);

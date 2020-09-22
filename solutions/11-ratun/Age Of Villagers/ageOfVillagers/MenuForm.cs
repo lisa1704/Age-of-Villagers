@@ -15,7 +15,7 @@ namespace ageOfVillagers
         private string text="";
         private string currentselect;
         private string currentNationName;
-        List<string> VillageNameList = new List<string>();
+        readonly List<string> VillageNameList = new List<string>();
         public MenuForm()
         {
             InitializeComponent();

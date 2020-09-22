@@ -4,9 +4,9 @@ namespace ageOfVillagers
 {
     internal class Bdwater : IShape
     {
-        private int xLength = 24;
-        private int yLength = 16;
-        Pen p = new Pen(Color.Green);
+        //private readonly int xLength = 24;
+        //private readonly int yLength = 16;
+        readonly Pen p = new Pen(Color.Green);
         public string draw(int x, int y, Graphics g)
         {
             Line l1 = new Line(g,p,x - 12, y, x - 6, y + 6);

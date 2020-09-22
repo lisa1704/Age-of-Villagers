@@ -4,7 +4,7 @@ namespace ageOfVillagers
 {
     internal class EgyptTree : IShape
     {
-        Pen p = new Pen(Color.Yellow);
+        readonly Pen p = new Pen(Color.Yellow);
         public string draw(int x, int y, Graphics g)
         {
             Line l1 = new Line(g,p,x, y - 12, x - 6, y + 10);

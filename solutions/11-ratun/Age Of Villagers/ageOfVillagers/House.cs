@@ -2,8 +2,8 @@
 {
     internal abstract class House : Village
     {
-        int Xaxis = 16;
-        int Yaxis = 16;
+        //int Xaxis = 16;
+        //int Yaxis = 16;
         public abstract void CreateHouse(int x, int y);
         public void Draw(int x, int y)
         {
