@@ -22,6 +22,8 @@ public class VillageView_controller implements Initializable {
     @FXML private Pane DrawingCanvas;
     public String flag;
     public Nation nation;
+    public SceneSate sceneSate;
+    public String villageName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -117,5 +119,10 @@ public class VillageView_controller implements Initializable {
     public void ChangeNation(ActionEvent actionEvent) {
         nation = new Nation((String) NationList.getValue());
         DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
+    }
+
+    public void CreateNewVillage(ActionEvent actionEvent) {
+        sceneSate = new SceneSate(VillageNameField.getText());
+        System.out.println(sceneSate.Village_name);
     }
 }
