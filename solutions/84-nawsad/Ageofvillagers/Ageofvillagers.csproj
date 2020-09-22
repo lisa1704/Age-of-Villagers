@@ -74,6 +74,7 @@
     <Compile Include="Nations\EgyptianKing.cs" />
     <Compile Include="Nations\INation.cs" />
     <Compile Include="Nations\InuitHunters.cs" />
+    <Compile Include="Nations\NullNation.cs" />
     <Compile Include="NewDrawingBoard.cs">
       <SubType>Form</SubType>
     </Compile>

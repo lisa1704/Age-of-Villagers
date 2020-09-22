@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace Ageofvillagers.Nations
 {
     class InuitHunters : INation
-    {   Graphics g;
+    {   
+        Graphics g;
         Pen p;
         public InuitHunters(Graphics g,Pen p)
         {
