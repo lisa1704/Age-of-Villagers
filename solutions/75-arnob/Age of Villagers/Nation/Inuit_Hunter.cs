@@ -1,4 +1,4 @@
-﻿using Age_of_Villagers.Inuit_Hunter;
+﻿using Age_of_Villagers;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

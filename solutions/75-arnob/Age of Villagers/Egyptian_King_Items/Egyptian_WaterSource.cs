@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers.Egyptian_King
+namespace Age_of_Villagers
 {
     class Egyptian_WaterSource : CompositeShaping
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers.Inuit_Hunter
+namespace Age_of_Villagers
 {
     class Inuit_House : CompositeShaping
     {

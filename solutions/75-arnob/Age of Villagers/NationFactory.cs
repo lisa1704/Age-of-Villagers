@@ -1,4 +1,6 @@
 ﻿using System;
+using Age_of_Villagers.Nation_Factory_Creator;
+using Age_of_Villagers.Nation;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +24,12 @@ namespace Age_of_Villagers.Nation_Factory_Creator
                     return new Arab_Creator();
                 }
 
-                else if (nation_name == "Egyptian Kings")
+                else if (nation_name == "Egyptian King")
                 {
                     return new Egyptian_Creator();
                 }
 
-                else if (nation_name == "Inuit Hunters")
+                else if (nation_name == "Inuit Hunter")
                 {
                     return new Inuit_Creator();
                 }

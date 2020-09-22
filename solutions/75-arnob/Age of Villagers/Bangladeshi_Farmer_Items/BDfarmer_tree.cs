@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Age_of_Villagers.Bangladeshi_Farmer
+namespace Age_of_Villagers
 {
     class BDfarmer_Tree : CompositeShaping
     {
