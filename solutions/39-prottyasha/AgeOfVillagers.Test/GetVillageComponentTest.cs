@@ -23,5 +23,25 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void ArabHouseCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Arab Bedouins");
+            IComponent component = nation.getComponent("house");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is ArabHouse)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
+
+        
     }
 }
