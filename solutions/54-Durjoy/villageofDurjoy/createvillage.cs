@@ -41,6 +41,11 @@ namespace villageofDurjoy
         {
 
         }
+        private void Newbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

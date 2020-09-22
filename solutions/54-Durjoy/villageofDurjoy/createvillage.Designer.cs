@@ -34,6 +34,7 @@
             this.Housebutton = new System.Windows.Forms.RadioButton();
             this.treeButton = new System.Windows.Forms.RadioButton();
             this.Watersourcebutton = new System.Windows.Forms.RadioButton();
+            this.Newbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
            
@@ -95,6 +96,16 @@
             this.Watersourcebutton.CheckedChanged += new System.EventHandler(this.Watersourcebutton_CheckedChanged);
             // 
 
+            // Newbutton
+            // 
+            this.Newbutton.Location = new System.Drawing.Point(476, 328);
+            this.Newbutton.Name = "Newbutton";
+            this.Newbutton.Size = new System.Drawing.Size(75, 23);
+            this.Newbutton.TabIndex = 7;
+            this.Newbutton.Text = "New";
+            this.Newbutton.UseVisualStyleBackColor = true;
+            this.Newbutton.Click += new System.EventHandler(this.Newbutton_Click);
+            // 
             // createvillage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
