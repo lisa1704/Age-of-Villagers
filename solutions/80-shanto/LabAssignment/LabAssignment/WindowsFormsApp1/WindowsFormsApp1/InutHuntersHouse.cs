@@ -7,7 +7,7 @@ namespace WindowsFormsApp1
     {
 
         private readonly Graphics g;
-        Pen mypen = new Pen(Color.Black, 2);
+        Pen mypen = new Pen(Color.Black, 1);
 
         public InutHuntersHouse(Graphics g)
         {
