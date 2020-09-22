@@ -1,4 +1,6 @@
 ﻿using Age_Of_Villagers.Command;
+
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +20,8 @@ namespace Age_Of_Villagers
         string rdButton;
         Village village;
         INation ination;
-        
+       
+
 
 
 
@@ -44,7 +47,6 @@ namespace Age_Of_Villagers
         public void getState()
         {
             village.villageName = villNameBox.Text;
-
             village.housePoints = this.House_points;
             village.treePoints = this.Tree_points;
             village.waterSourcePoints = this.WaterSrc_points;
@@ -70,7 +72,7 @@ namespace Age_Of_Villagers
 
         }
 
-        public void setNation()
+        public void setNation(string nation)
         {
             
             NationPropertyFactory nationProperty = new NationPropertyFactory();
@@ -113,8 +115,9 @@ namespace Age_Of_Villagers
             getState();
             SaveVillage sv = new SaveVillage(village);
             sv.execute();
+            MessageBox.Show("Your village is saved");
 
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -168,6 +171,15 @@ namespace Age_Of_Villagers
 
         private void newVill_Click(object sender, EventArgs e)
         {
+            House_points.Clear();
+            Tree_points.Clear();
+            WaterSrc_points.Clear();
+            villNameBox.Clear();
+            nationCombo.ResetText();
+            nation = nationCombo.Text;
+            NationPropertyFactory nationProperty = new NationPropertyFactory();
+            ination = nationProperty.getNation(nation);
+            ination.setTerrain(this);
             Panel1.Refresh();
         }
         
@@ -179,12 +191,22 @@ namespace Age_Of_Villagers
         private void nationCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = nationCombo.Text;
-            setNation();
+            setNation(nation);
 
 
         }
 
         private void saveVill_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+
+        }
+
+       
+
+        
+
+        private void openVill_Click(object sender, EventArgs e)
         {
             
 

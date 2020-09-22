@@ -68,6 +68,7 @@
             this.openVill.TabIndex = 5;
             this.openVill.Text = "Open Village";
             this.openVill.UseVisualStyleBackColor = true;
+            this.openVill.Click += new System.EventHandler(this.openVill_Click);
             // 
             // newVill
             // 

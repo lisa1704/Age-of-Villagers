@@ -33,7 +33,7 @@ namespace Age_Of_Villagers
 
 
 
-            return null;
+            return new  NullNation();
         }
     }
 }

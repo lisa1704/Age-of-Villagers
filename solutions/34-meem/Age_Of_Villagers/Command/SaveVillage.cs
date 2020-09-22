@@ -27,7 +27,6 @@ namespace Age_Of_Villagers.Command
             saveFile.CheckPathExists = false;
             saveFile.DefaultExt = "aov";
             saveFile.Filter = "Aov files (*.aov)|*.aov|All files (*.*)|*.*";
-
             saveFile.RestoreDirectory = true;
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
@@ -35,7 +34,7 @@ namespace Age_Of_Villagers.Command
                 System.IO.File.WriteAllText(saveFile.FileName, json);
             }
 
-            MessageBox.Show("Your village is saved");
+           
 
 
 

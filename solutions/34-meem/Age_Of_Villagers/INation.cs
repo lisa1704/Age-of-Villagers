@@ -100,6 +100,21 @@ namespace Age_Of_Villagers
         
     }
 
+    public class NullNation : INation
+    {
+        public void setRadiobutton(VillageEditorWindow villageEditor)
+        {
+            villageEditor.rdButtonHouse.Enabled = true;
+            villageEditor.rdButtonTree.Enabled = true;
+            villageEditor.rdButtonWaterSrc.Enabled = true;
+        }
+
+        public void setTerrain(VillageEditorWindow villageEditor)
+        {
+            villageEditor.Panel1.BackColor = Color.White;
+        }
+    }
+
 
 
 
