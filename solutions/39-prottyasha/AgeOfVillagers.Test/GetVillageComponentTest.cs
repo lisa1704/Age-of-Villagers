@@ -42,6 +42,14 @@ namespace AgeOfVillagers.Test
             Assert.True(check);
         }
 
-        
+        [Fact]
+        public void ArabRiverCheck()
+        {
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Arab Bedouins");
+            IComponent component = nation.getComponent("water_source");
+
+            Assert.Null(component);  //Checks for null             
+        }
     }
 }
