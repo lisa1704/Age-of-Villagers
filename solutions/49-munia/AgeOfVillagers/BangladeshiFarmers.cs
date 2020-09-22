@@ -17,19 +17,19 @@ namespace AgeOfVillagers
             g.DrawLine(pen, 20, 10, 300, 100);
         }
 
-        public void DrawTree()
+        public void DrawTree(Graphics g)
         {
             throw new NotImplementedException();
         }
 
-        public void drawWater()
+        public void drawWater(Graphics g)
         {
             throw new NotImplementedException();
         }
 
-        public void terrainColor()
+        public Color terrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Green;
         }
     }
 }

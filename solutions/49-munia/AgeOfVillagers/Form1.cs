@@ -29,7 +29,7 @@ namespace AgeOfVillagers
             BangladeshiFarmers v = new BangladeshiFarmers();
             v.DrawHouse(g);
 
-            canvas.BackColor = Color.Gainsboro;
+            canvas.BackColor = v.terrainColor();
 
         }
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            BangladeshiFarmers v = new BangladeshiFarmers();
+            
         }
 
 
