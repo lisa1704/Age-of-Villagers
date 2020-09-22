@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arccs.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="ArabBedouin.cs" />
+    <Compile Include="Circle.cs" />
     <Compile Include="NullValuesHandler.cs" />
     <Compile Include="Line.cs" />
-    <Compile Include="Rectangular.cs" />
+    <Compile Include="Rectangle.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="village.cs" />
     <Compile Include="IShape.cs" />

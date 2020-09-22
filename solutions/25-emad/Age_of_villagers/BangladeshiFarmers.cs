@@ -33,14 +33,16 @@ namespace Age_of_villagers
             Pen pen = new Pen(Color.Black);
            
             
-                Point p1 = new Point(point.X - 5, point.Y + 10);
-                Point p2 = new Point(point.X, point.Y + 15);
-                Point p3 = new Point(point.X + 5, point.Y + 10);
-                Point p4 = new Point(point.X + 10, point.Y + 15);
-                Point p5 = new Point(point.X + 15, point.Y + 5);
-                Point p6 = new Point(point.X + 10, point.Y);
-                Point p7 = new Point(point.X + 5, point.Y + 5);
-                Point p8 = new Point(point.X + 5, point.Y);
+                Point p1 = new Point(point.X - 10, point.Y + 20);
+                Point p2 = new Point(point.X, point.Y + 30);
+                Point p3 = new Point(point.X + 10, point.Y + 20);
+                Point p4 = new Point(point.X + 20, point.Y + 30);
+                Point p5 = new Point(point.X + 15, point.Y + 10);
+                Point p6 = new Point(point.X + 20, point.Y);
+                Point p7 = new Point(point.X + 10, point.Y + 10);
+                Point p8 = new Point(point.X + 10, point.Y);
+
+
                 graphics.DrawLine(pen, point, p1);
                 graphics.DrawLine(pen, p1, p2);
                 graphics.DrawLine(pen, p2, p3);
