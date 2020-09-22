@@ -10,4 +10,12 @@ public class Villages implements Serializable {
         this.Nation = nation;
         this.VillageName = Name;
     }
+
+    public void SaveVillage(){
+
+    }
+
+    public void LoadVillage(){
+
+    }
 }
