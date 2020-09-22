@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class VillageStateSaver : ICommand
+    class VillageStateSaver : IState
     {
         protected VillageState village;
         private Stream myStream;
