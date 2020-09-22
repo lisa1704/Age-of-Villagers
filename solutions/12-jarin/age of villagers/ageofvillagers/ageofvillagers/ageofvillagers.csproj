@@ -65,6 +65,7 @@
     <Compile Include="Inunit.cs" />
     <Compile Include="nationcreate.cs" />
     <Compile Include="NullValuesHandler.cs" />
+    <Compile Include="Shapecreate.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="village.cs" />
