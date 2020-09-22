@@ -163,6 +163,8 @@ public class VillageViewController implements Initializable {
 
     public void createNewVillage(ActionEvent actionEvent) {
         DrawPane.getChildren().clear();
+        this.assetList = new ArrayList<VillageState>();
+        DrawAssetList(this.assetList);
         this.village = new Villages(Village_Name.getText());
 
     }
