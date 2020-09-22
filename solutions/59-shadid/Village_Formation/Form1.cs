@@ -73,7 +73,15 @@ namespace Village_Formation
             int y = e.Y;
             if (radioButton1.Checked)
             {
-                
+                g.DrawLine(mypen, x, y, x + 24, y+16);
+                g.DrawLine(mypen, x + 24, y+16, x +29, y +18);
+                g.DrawLine(mypen, x +29, y + 18, x+34, y - 16);
+                g.DrawLine(mypen, x + 34, y - 16, x+41, y-13);
+                g.DrawLine(mypen, x + 41, y - 13,x+51,y-17);
+
+
+
+
             }
             else if(radioButton2.Checked)
             {
@@ -95,9 +103,14 @@ namespace Village_Formation
            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void NewVillage(object sender, EventArgs e)
         {
             Refresh();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

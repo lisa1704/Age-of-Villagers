@@ -68,7 +68,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "New Village";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.NewVillage);
             // 
             // button5
             // 
@@ -106,6 +106,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Water Resource";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
