@@ -10,7 +10,7 @@ namespace AgeOfVillagers
     {
         protected Panel drawingPanel;
         protected IHouse house = new InuitHouse();
-        protected ITree tree = new InuitTree();
+        protected ITree tree = new NullTree();
         protected IWatersrc waterSrc = new InuitWatersrc();
 
         public InuitHunters(Panel panel)

@@ -19,6 +19,7 @@ namespace AgeOfVillagers
         public List<Point> TreePoints { get; set; } = new List<Point>();
         public List<Point> WatersrcPoints { get; set; } = new List<Point>();
 
+
         VillageState villageState;
 
         string chosen_nation = "";
@@ -105,6 +106,7 @@ namespace AgeOfVillagers
             }
 
         }
+
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
