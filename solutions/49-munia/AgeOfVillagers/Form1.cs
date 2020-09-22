@@ -13,8 +13,9 @@ namespace AgeOfVillagers
    
     public partial class Form1 : Form
     {
+        int x;
+        int y;
 
-        
         public Form1()
         {
             InitializeComponent();
@@ -70,8 +71,12 @@ namespace AgeOfVillagers
 
         }
 
-
-
-
+        private void canvas_Click(object sender, EventArgs e)
+        {
+            Point p = new Point(e.X, e.Y);
+            x = p.X;
+            y = p.Y;
+            panel1.Invalidate();
+        }
     }
 }
