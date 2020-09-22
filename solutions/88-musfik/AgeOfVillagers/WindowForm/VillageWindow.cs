@@ -45,15 +45,15 @@ namespace AgeOfVillagers
                 Point point = new Point(e.X, e.Y);
                 if (tree_btn.Checked)
                 {
-                    village.AddTree(graphicPen, point);
+                    village.GetVillageMap().AddTree(graphicPen, point, nation);
                 }
                 else if (House_btn.Checked)
                 {
-                    village.AddHouse(graphicPen, point);
+                    village.GetVillageMap().AddHouse(graphicPen, point, nation);
                 }
                 else if (water_btn.Checked)
                 {
-                    village.AddWaterResource(graphicPen, point);
+                    village.GetVillageMap().AddWaterResource(graphicPen, point, nation);
                 }
             }
         }
@@ -82,8 +82,8 @@ namespace AgeOfVillagers
             nation = (INation)NationlistBox.SelectedItem;
             if(village!= null)
             {
-                village.ChangeVillageNation(nation);
-                village.initiate(graphicPen);
+                village.SetVillageNation(nation);
+                village.Initiate(graphicPen);
             }
         }
 
@@ -94,7 +94,7 @@ namespace AgeOfVillagers
                 if (villageName != null)
                 {
                     village = new Village(villageName, nation);
-                    village.initiate(graphicPen);
+                    village.Initiate(graphicPen);
                 }
                 else
                     MessageBox.Show("Valid village name required to create new village ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,7 +142,7 @@ namespace AgeOfVillagers
                         if (village == null)
                             village = new Village("", nation);
                         village.SetState(state);
-                        village.initiate(graphicPen);
+                        village.Initiate(graphicPen);
                         villageName = Village_name_textBox.Text = village.GetVillageName();
                         openFileDialog.Dispose();
                     }
