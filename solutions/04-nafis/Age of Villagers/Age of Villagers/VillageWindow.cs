@@ -64,7 +64,9 @@ namespace Age_of_Villagers
 
         private void SaveVillageButton_Click(object sender, EventArgs e)
         {
-
+            GetCondition();
+            VillageConditionSave village = new VillageConditionSave(villageCondition);
+            village.PerformOperation();
         }
 
         private void NewVillageButton_Click(object sender, EventArgs e)
