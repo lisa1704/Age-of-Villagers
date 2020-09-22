@@ -22,11 +22,11 @@ namespace Age_Of_Villagers.Command
         {
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.InitialDirectory = @"C:\Users\User\Desktop\age-of-villagers\solutions\34-meem\Files";
-            saveFile.Title = "Save text Files";
+            saveFile.Title = "Save aov files Files";
             saveFile.CheckFileExists = false;
             saveFile.CheckPathExists = false;
-            saveFile.DefaultExt = "txt";
-            saveFile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFile.DefaultExt = "aov";
+            saveFile.Filter = "Aov files (*.aov)|*.aov|All files (*.*)|*.*";
 
             saveFile.RestoreDirectory = true;
             if (saveFile.ShowDialog() == DialogResult.OK)

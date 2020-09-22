@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Arab Bedouins\ArabBedouinHouse.cs" />
     <Compile Include="Arab Bedouins\ArabBedouinTree.cs" />
+    <Compile Include="Command\OpenVillage.cs" />
     <Compile Include="Command\SaveVillage.cs" />
     <Compile Include="Factories\ArabItemFactory.cs" />
     <Compile Include="Bangladeshi Farmers\BangladeshiHouse.cs" />
