@@ -19,7 +19,7 @@ namespace AgeOfVillagers
 
         int x;
         int y;
-        string text;
+        string objectName;
         string nation;
         Color background;
         VillageState village = new VillageState();
@@ -49,13 +49,13 @@ namespace AgeOfVillagers
 
             g = drawingAreaPanel.CreateGraphics();
 
-            if(text == "TREE")
+            if(objectName == "TREE")
             {
                 treeLocations.Add(e.Location);
                 currentNation.DrawTree(e.X, e.Y, g);
                 //Debug.WriteLine(treeLocations.Count);
             }
-            else if(text == "HOUSE")
+            else if(objectName == "HOUSE")
             {
                 houseLocations.Add(e.Location);
                 currentNation.DrawHouse(e.X, e.Y, g);
@@ -72,17 +72,17 @@ namespace AgeOfVillagers
 
         private void TreeButton_MouseClick(object sender, MouseEventArgs e)
         {
-            text = "TREE";
+            objectName = "TREE";
         }
 
         private void houseButton_MouseClick(object sender, MouseEventArgs e)
         {
-            text = "HOUSE";
+            objectName = "HOUSE";
         }
 
         private void waterButton_MouseClick(object sender, MouseEventArgs e)
         {
-            text = "WATER";
+            objectName = "WATER";
         }
 
         private void nationTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,12 +103,13 @@ namespace AgeOfVillagers
             
         }
 
-        public void SaveState()
+        public void Set_to_state()
         {
             village.Name = villageNameBox.Text;
             village.H_locations = houseLocations;
             village.T_locations = treeLocations;
             village.W_locations = waterLocation;
+            village.nation = nation;
 
         }
 
@@ -118,7 +119,7 @@ namespace AgeOfVillagers
             sfd.Filter = "AOV files|*.aov";
             sfd.FileName = "New Save";
 
-            SaveState();
+            Set_to_state();
 
             if(sfd.ShowDialog() == DialogResult.OK)
             {
