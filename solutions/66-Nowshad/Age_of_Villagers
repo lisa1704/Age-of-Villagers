@@ -1,0 +1,12 @@
+using System;
+using System.Collection .Generic;
+using System.Text;
+
+namespace Age_of_Villagers 
+{
+
+	class Village
+	{
+	}
+
+}
