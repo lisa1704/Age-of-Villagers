@@ -1,4 +1,6 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class Circle
     {
@@ -9,7 +11,7 @@
             this.y = y;
             this.radius = radius;
         }
-        public string Draw()
+        public string Draw(Graphics g, Pen p)
         {
             return "Drawing a circle. ";
         }
