@@ -23,7 +23,6 @@ public class VillageView_controller implements Initializable {
     public String flag;
     public Nation nation;
     public SceneSate sceneSate;
-    public String villageName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,11 +32,8 @@ public class VillageView_controller implements Initializable {
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                double x1 = event.getSceneX();
-                double y1 = event.getSceneY();
-                sceneSate.add_asset_to_list(flag,x1,y1);
+                sceneSate.add_asset_to_list(flag,event.getSceneX(),event.getSceneY());
                 reDrawScene();
-
             }
         });
     }
@@ -92,16 +88,7 @@ public class VillageView_controller implements Initializable {
         }
     }
 
-    public void TreePressed(ActionEvent actionEvent){
-        flag = "Tree";
-        System.out.println(sceneSate.Village_name);
-        for(AssetInfo i:sceneSate.assetList){
-            System.out.println(i.x_coordinate);
-            System.out.println(i.y_coordinate);
-            System.out.println(i.assetType);
-            System.out.println();
-        }
-    }
+    public void TreePressed(ActionEvent actionEvent){ flag = "Tree"; }
 
     public void HousePressed(ActionEvent actionEvent) { flag = "House"; }
 
@@ -116,6 +103,7 @@ public class VillageView_controller implements Initializable {
     public void ChangeNation(ActionEvent actionEvent) {
         nation = new Nation((String) NationList.getValue());
         DrawingCanvas.setStyle("-fx-background-color:"+nation.GetTerrainColor());
+        reDrawScene();
     }
 
     public void CreateNewVillage(ActionEvent actionEvent) {
