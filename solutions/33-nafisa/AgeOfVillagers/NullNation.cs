@@ -10,17 +10,20 @@ namespace AgeOfVillagers
     {
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            NullItem nullH = new NullItem();
+            nullH.Draw(point, Drawingpanel);
         }
 
         public void DrawTree(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            NullItem nullT = new NullItem();
+            nullT.Draw(point, Drawingpanel);
         }
 
         public void DrawWaterSource(Point point, Panel Drawingpanel)
         {
-            throw new NotImplementedException();
+            NullItem nullW = new NullItem();
+            nullW.Draw(point, Drawingpanel);
         }
 
         public void PaintTerrain(Panel Drawingpanel)

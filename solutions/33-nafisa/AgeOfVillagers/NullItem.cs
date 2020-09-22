@@ -10,7 +10,7 @@ namespace AgeOfVillagers
     {
         public void Draw(Point point, Panel Drawingpanel)
         {
-            
+            MessageBox.Show("No Item found");
         }
     }
 }
