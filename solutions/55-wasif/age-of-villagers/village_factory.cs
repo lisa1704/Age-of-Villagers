@@ -21,7 +21,7 @@ namespace age_of_villagers
         {
             if (village_type == "Bangladeshi Farmers")
                 return new Bangladeshi_Farmers(gp, p);
-            else if (village_type == "Arab Bedouin")
+            else if (village_type == "Arab Beduin")
                 return new Arab_Beduin(gp, p);
             else if (village_type == "Egyptian Kings")
                 return new Egyptian_Kings(gp, p);
