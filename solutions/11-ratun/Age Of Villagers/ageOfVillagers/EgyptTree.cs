@@ -1,8 +1,10 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class EgyptTree : IShape
     {
-        public string draw(int x, int y)
+        public string draw(int x, int y, Graphics g)
         {
             Line l1 = new Line(x, y - 12, x - 6, y + 10);
             Line l2 = new Line(x, y - 12, x + 6, y + 10);

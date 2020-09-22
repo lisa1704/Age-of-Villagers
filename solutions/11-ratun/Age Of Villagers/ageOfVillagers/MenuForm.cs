@@ -28,7 +28,8 @@ namespace ageOfVillagers
 
         public void VillageName_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(VillageName.Text);
+            string Vname = VillageName.Text;
+            //MessageBox.Show(VillageName.Text);
         }
 
         public void Nation_TextChanged(object sender, EventArgs e)
@@ -103,11 +104,17 @@ namespace ageOfVillagers
         //public string testShape(string currentNationName, string currentselect, int x, int y) { 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+            Graphics g = panel2.CreateGraphics();
             Shape nation = NationFactory.GetNation(currentNationName);
             IShape shape = nation.GetItem(currentselect);
-            shape.draw(Cursor.Position.X, Cursor.Position.Y);
+            shape.draw(Cursor.Position.X, Cursor.Position.Y, g);
             //return shape.draw(x, y);
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            currentselect = "tree";
+            text += "Adding a tree. ";
+        }
     }
 }

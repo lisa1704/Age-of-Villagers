@@ -1,8 +1,10 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class ArabTree : IShape
     {
-        public string draw(int x, int y)
+        public string draw(int x, int y, Graphics g)
         {
             Rectangle r = new Rectangle(x - 1, y, x - 1, y - 12, x + 1, y - 12, x + 1, y);
             Line l1 = new Line(x, y, x - 8, y + 4);

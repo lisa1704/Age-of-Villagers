@@ -1,10 +1,12 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class Bdwater : IShape
     {
         private int xLength = 24;
         private int yLength = 16;
-        public string draw(int x, int y)
+        public string draw(int x, int y, Graphics g)
         {
             Line l1 = new Line(x - 12, y, x - 6, y + 6);
             Line l2 = new Line(x - 6, y + 6, x - 2, y + 7);

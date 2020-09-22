@@ -1,4 +1,6 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class Line
     {
@@ -10,9 +12,10 @@
             this.y1 = y1;
             this.y2 = y2;
         }
-        public string Draw()
+        public void Draw(Graphics g, Pen p)
         {
-            return "Drawing a line. ";
+            g.DrawLine(p, x1, y1, x2, y2);
+            //return "Drawing a line. ";
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace ageOfVillagers
+﻿using System.Drawing;
+
+namespace ageOfVillagers
 {
     internal class Bdtree : IShape
     {
         private string drawing = "";
-        public string draw(int x, int y)
+        public string draw(int x, int y, Graphics g)
         {
             Circle c = new Circle(x, y + 2, 8);
             drawing += c.Draw();
