@@ -132,8 +132,7 @@ public class VillageViewController implements Initializable {
 
     public void NationChanged(ActionEvent actionEvent) {
         nationFactory = new NationFactory((String) NationDropDown.getValue());
-
-//        DrawPane.setStyle("-fx-background-color:"+nation.getTerrainColor());
+        DrawPane.setStyle("-fx-background-color:"+nationFactory.getTerrainColor((String) NationDropDown.getValue()));
 
     }
 }

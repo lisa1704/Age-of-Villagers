@@ -16,6 +16,7 @@ public class NationFactory {
     public IHouse house;
     public ITree tree;
     public IWaterSource waterSource;
+    public String terrainColor;
 
     public INation nation;
     public String SelectedNation;
@@ -48,6 +49,22 @@ public class NationFactory {
         }
 
         return nation;
+    }
+
+    public String getTerrainColor(String SelectedNation){
+        if(SelectedNation == "Bangladeshi Farmers"){
+            terrainColor = "#9DE0AD";
+        }
+        else if(SelectedNation == "Arab Bedouin"){
+            terrainColor = "#EDE574";
+        }
+        else if(SelectedNation == "Egyptian Kings"){
+            terrainColor = "#F9D423";
+        }
+        else if(SelectedNation == "Inuit Hunters"){
+            terrainColor = "WHITE";
+        }
+        return terrainColor;
     }
 
     public ArrayList<Shape> drawHouse(double x, double y){
