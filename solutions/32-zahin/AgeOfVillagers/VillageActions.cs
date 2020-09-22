@@ -51,9 +51,12 @@ namespace AgeOfVillagers
 
         private void OpenVIllage_Click(object sender, EventArgs e)
         {
-            OpenVillage openVillage = new OpenVillage();
-            openVillage.execute();
-            state = openVillage.getVillage();
+            OpenVillage open = new OpenVillage();
+            NewVillage_Click(sender, e);
+            open.execute();
+            state = open.getVillage();
+            state.setState();
+            panel1.Refresh();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) 
         { 
@@ -91,11 +94,11 @@ namespace AgeOfVillagers
             panel2.Refresh();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e) {}
+        private void textBox1_TextChanged(object sender, EventArgs e) { villageName = textBox1.Text; }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            villageName = textBox1.Text;
+
         }
     }
 }

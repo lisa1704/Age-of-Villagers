@@ -21,7 +21,7 @@ namespace AgeOfVillagers
             else if (villageType == "Inuit Hunters")
                 return new InuitHunters();
             else
-                return new NullValuesHandler();
+                return new NullNation();
         }
     }
 }

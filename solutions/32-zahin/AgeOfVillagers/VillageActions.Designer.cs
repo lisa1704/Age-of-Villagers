@@ -72,6 +72,7 @@
             this.panel2.Size = new System.Drawing.Size(322, 402);
             this.panel2.TabIndex = 1;
             this.panel2.UseWaitCursor = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // textBox2
             // 
@@ -105,7 +106,6 @@
             this.VillageNation.UseWaitCursor = true;
             this.VillageNation.ValueMember = "Arab Bedouin";
             this.VillageNation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.VillageNation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox1
             // 
@@ -119,7 +119,6 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.UseWaitCursor = true;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // WaterButton
             // 

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class NullValuesHandler : INation
+    class NullNation : INation
     {
         public void DrawHouse(Graphics g, Point point)
         {

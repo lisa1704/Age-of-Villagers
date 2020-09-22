@@ -77,7 +77,7 @@
     <Compile Include="VillageState.cs" />
     <Compile Include="Nations\ArabBedouin.cs" />
     <Compile Include="Nations\BangladeshiFarmers.cs" />
-    <Compile Include="NullValuesHandler.cs" />
+    <Compile Include="Nations\NullNation.cs" />
     <Compile Include="Commands\OpenVillage.cs" />
     <Compile Include="Commands\SaveVillage.cs" />
     <Compile Include="Nations\INation.cs" />
