@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         public void Draw()
         {
-            MessageBox.Show("Error. Null value");
+            MessageBox.Show("This component is null");
         }
     }
 }

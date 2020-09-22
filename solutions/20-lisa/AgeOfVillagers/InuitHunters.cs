@@ -7,34 +7,40 @@ namespace AgeOfVillagers
 {
     public class InuitHunters : INation
     {
+        Pen pen = new Pen(Color.Black);
+        private string vName;
+
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            InuitHouse inuitHouse = new InuitHouse(point);
+            inuitHouse.Draw(graphics, pen);
         }
 
         public void DrawTree(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            NullItemHandler nullInuitTree = new NullItemHandler();
+            nullInuitTree.Draw();
         }
 
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            NullItemHandler nullInuitWS = new NullItemHandler();
+            nullInuitWS.Draw();
         }
 
         public string GetVillageName()
         {
-            throw new NotImplementedException();
+            return vName;
         }
 
         public Color SetTerrain()
         {
-            throw new NotImplementedException();
+            return Color.White;
         }
 
         public void SetVillageName(string vName)
         {
-            throw new NotImplementedException();
+            this.vName = vName;
         }
 
         public void SetWaterSource()
