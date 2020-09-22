@@ -11,7 +11,7 @@ namespace AgeOfVillager
         //A nation has a terrain, house, tree, water resource and so on
         ITree drawTree(MouseEventArgs e);
         IHouse drawHouse(MouseEventArgs e);
-        void drawWaterSource(MouseEventArgs e);
+        IWaterSource drawWaterSource(MouseEventArgs e);
         Color setColor();
     }
 }

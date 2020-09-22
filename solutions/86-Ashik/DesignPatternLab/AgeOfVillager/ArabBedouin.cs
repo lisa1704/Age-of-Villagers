@@ -27,9 +27,10 @@ namespace AgeOfVillager
             return new ArabBedouinsTree(g);
         }
 
-        public void drawWaterSource(MouseEventArgs e)
+        public IWaterSource drawWaterSource(MouseEventArgs e)
         {
-            MessageBox.Show("Bedouin villages do not build their own water source");
+            throw new Exception();
+            //MessageBox.Show("Bedouin villages do not build their own water source");
         }
         public Color setColor()
         {

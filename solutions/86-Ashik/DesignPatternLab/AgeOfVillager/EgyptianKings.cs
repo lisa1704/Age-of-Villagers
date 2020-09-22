@@ -27,10 +27,9 @@ namespace AgeOfVillager
             return new EgyptianKingsTree(g);
         }
 
-        public void drawWaterSource(MouseEventArgs e)
+        public IWaterSource drawWaterSource(MouseEventArgs e)
         {
-            EgyptianKingsWaterSource egyptianKingsWaterSource = new EgyptianKingsWaterSource(g);
-            egyptianKingsWaterSource.draw(e);
+            return new EgyptianKingsWaterSource(g);
         }
         public Color setColor()
         {

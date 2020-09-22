@@ -37,7 +37,7 @@ namespace AgeOfVillager
         public void DrawWaterSource(MouseEventArgs e)
         {
             INation nation = nationFactory.GetNation(myNation);
-            nation.drawWaterSource(e);
+            nation.drawWaterSource(e).draw(e);
         }
         public void SetColor()
         {

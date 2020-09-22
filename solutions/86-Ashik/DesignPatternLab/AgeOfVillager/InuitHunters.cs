@@ -27,9 +27,10 @@ namespace AgeOfVillager
             throw new Exception();
         }
 
-        public void drawWaterSource(MouseEventArgs e)
+        public IWaterSource drawWaterSource(MouseEventArgs e)
         {
-            MessageBox.Show("Relies on natural water sources so it is not possible to place water sources");
+            throw new Exception();
+            //MessageBox.Show("Relies on natural water sources so it is not possible to place water sources");
         }
         public Color setColor()
         {

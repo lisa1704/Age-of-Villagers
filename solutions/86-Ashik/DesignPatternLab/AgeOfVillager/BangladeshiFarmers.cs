@@ -27,10 +27,9 @@ namespace AgeOfVillager
             return new BDFarmersTree(g);
         }
 
-        public void drawWaterSource(MouseEventArgs e)
+        public IWaterSource drawWaterSource(MouseEventArgs e)
         {
-            BDFarmersWaterSource bDFarmersWaterSource = new BDFarmersWaterSource(g);
-            bDFarmersWaterSource.draw(e);
+            return new BDFarmersWaterSource(g);
         }
         public Color setColor()
         {
