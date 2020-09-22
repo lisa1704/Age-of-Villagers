@@ -36,6 +36,8 @@
             this.Watersourcebutton = new System.Windows.Forms.RadioButton();
             this.Newbutton = new System.Windows.Forms.Button();
             this.openbutton = new System.Windows.Forms.Button();
+            this.savebutton = new System.Windows.Forms.Button();
+
             this.SuspendLayout();
             // 
            
@@ -116,6 +118,16 @@
             this.openbutton.Text = "open";
             this.openbutton.UseVisualStyleBackColor = true;
             this.openbutton.Click += new System.EventHandler(this.openbutton_Click);
+            // 
+            // savebutton
+            // 
+            this.savebutton.Location = new System.Drawing.Point(730, 328);
+            this.savebutton.Name = "savebutton";
+            this.savebutton.Size = new System.Drawing.Size(75, 23);
+            this.savebutton.TabIndex = 9;
+            this.savebutton.Text = "save";
+            this.savebutton.UseVisualStyleBackColor = true;
+            this.savebutton.Click += new System.EventHandler(this.savebutton_Click);
             // 
             // createvillage
             // 
