@@ -27,20 +27,7 @@ namespace Age_of_villagers
 
         }
 
-        private void Tree_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void House_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Watersource_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Savevillage_Click(object sender, EventArgs e)
         {
@@ -83,6 +70,11 @@ namespace Age_of_villagers
         }
 
         private void Nation_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tree_CheckedChanged(object sender, EventArgs e)
         {
 
         }
