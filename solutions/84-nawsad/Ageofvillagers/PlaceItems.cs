@@ -16,7 +16,7 @@ namespace Ageofvillagers
         {
             Graphics g = panel2.CreateGraphics();
             Pen p = new Pen(Color.Black, 1);
-            INation Nation = new ArabBeduin(g,p);
+            INation Nation = new BangladeshiFarmer(g,p);
             Nation.drawHouse(e.Location.X, e.Location.Y);
           //  B.drawHouse(e.Location.X, e.Location.Y);
 
