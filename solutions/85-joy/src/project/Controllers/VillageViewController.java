@@ -19,6 +19,7 @@ import java.net.URL;
 import java.util.*;
 
 import project.Utilities.NationFactory;
+import project.Utilities.VillageState;
 import project.Utilities.Villages;
 
 import javax.swing.*;
@@ -35,6 +36,8 @@ public class VillageViewController implements Initializable {
     public String AssetType = "";
     public ArrayList<Shape> Object ;
     public Villages village;
+    private ArrayList<VillageState> assetList;
+
 
 
 
@@ -46,14 +49,17 @@ public class VillageViewController implements Initializable {
             public void handle(MouseEvent event) {
                 if(AssetType == "Tree"){
                     Object = nationFactory.drawTree(event.getSceneX(),event.getSceneY());
+                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
                 }
                 else if(AssetType == "House"){
                     Object = nationFactory.drawHouse(event.getSceneX(),event.getSceneY());
+                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
                 }
                 else if(AssetType == "WaterSource"){
                     Object = nationFactory.drawWaterSource(event.getSceneX(),event.getSceneY());
+                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
 //                    DrawPane.getChildren().clear();
                 }
@@ -124,6 +130,23 @@ public class VillageViewController implements Initializable {
         System.out.println("WATERSOURCE SELECTED!");
     }
 
+    public void DrawAssetList(ArrayList<VillageState> assetList){
+        for ( VillageState a: assetList){
+            if(a.AssetType == "Tree"){
+                Object = nationFactory.drawTree(a.x,a.y);
+                DrawShape(Object);
+            }
+            else if(a.AssetType == "House"){
+                Object = nationFactory.drawHouse(a.x,a.y);
+                DrawShape(Object);
+            }
+            else if(a.AssetType == "WaterSource"){
+                Object = nationFactory.drawWaterSource(a.x,a.y);
+                DrawShape(Object);
+            }
+        }
+    }
+
     public void DrawShape(ArrayList<Shape> ShapeObject){
         for (Shape x : ShapeObject){
             DrawPane.getChildren().addAll(x);
@@ -131,12 +154,16 @@ public class VillageViewController implements Initializable {
     }
 
     public void NationChanged(ActionEvent actionEvent) {
+        DrawPane.getChildren().clear();
         nationFactory = new NationFactory((String) NationDropDown.getValue());
         DrawPane.setStyle("-fx-background-color:"+nationFactory.getTerrainColor((String) NationDropDown.getValue()));
+        DrawAssetList(this.assetList);
 
     }
 
     public void createNewVillage(ActionEvent actionEvent) {
         DrawPane.getChildren().clear();
+        this.village = new Villages(Village_Name.getText());
+
     }
 }

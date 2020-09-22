@@ -1,9 +1,9 @@
 package project.Utilities;
 
 public class VillageState {
-    private double x;
-    private double y;
-    private String AssetType;
+    public double x;
+    public double y;
+    public String AssetType;
 
     public VillageState(double x, double y, String AssetType){
         this.x = x;
