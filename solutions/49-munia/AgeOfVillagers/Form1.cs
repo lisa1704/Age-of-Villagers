@@ -26,8 +26,8 @@ namespace AgeOfVillagers
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-            e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+            BangladeshiFarmers v = new BangladeshiFarmers();
+            v.DrawHouse(g);
 
             canvas.BackColor = Color.Gainsboro;
 
@@ -39,7 +39,7 @@ namespace AgeOfVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            BangladeshiFarmers v = new BangladeshiFarmers(Text);
+            BangladeshiFarmers v = new BangladeshiFarmers();
         }
 
 

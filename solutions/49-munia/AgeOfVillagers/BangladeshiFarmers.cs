@@ -10,16 +10,11 @@ namespace AgeOfVillagers
     class BangladeshiFarmers : INation
     {
    
-        private String villageName;
+        Pen pen = new Pen(Color.Black);
     
-      public BangladeshiFarmers(String name)
+        public void DrawHouse(Graphics g)
         {
-            villageName = name;
-            
-        }
-        public void DrawHouse()
-        {
-            throw new NotImplementedException();
+            g.DrawLine(pen, 20, 10, 300, 100);
         }
 
         public void DrawTree()
