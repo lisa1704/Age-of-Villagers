@@ -18,6 +18,7 @@ namespace AOV
         List<Point> housePoint = new List<Point>();
         List<Point> treePoint = new List<Point>();
         List<Point> waterSourcePoint = new List<Point>();
+
         public AgeOfVillagers()
         {
             InitializeComponent();

@@ -11,10 +11,8 @@ namespace AOV
     {
         public ArabHouse(Point clicked)
         {
-            int baseLine = clicked.Y + 10;
-
-            Point x1 = new Point(clicked.X - 4, baseLine);
-            Point x2 = new Point(clicked.X + 4, baseLine);
+            Point x1 = new Point(clicked.X - 4, clicked.Y + 10);
+            Point x2 = new Point(clicked.X + 4, clicked.Y + 10);
             Point x3 = new Point(x2.X + 4, clicked.Y - 6);
             Point x4 = new Point(x3.X + 4, x2.Y - 6);
 

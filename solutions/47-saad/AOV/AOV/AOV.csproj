@@ -68,12 +68,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IDraw.cs" />
-    <Compile Include="IHouse.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHouse.cs" />
     <Compile Include="InuitNation.cs" />
-    <Compile Include="ITree.cs" />
-    <Compile Include="IWaterSource.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="NullNation.cs" />
     <Compile Include="NullShape.cs" />

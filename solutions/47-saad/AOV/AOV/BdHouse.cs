@@ -11,10 +11,8 @@ namespace AOV
     {
         public BdHouse(Point clicked)
         {
-            int baseLine = clicked.Y + 8;
-
-            Point x1 = new Point(clicked.X - 8, baseLine);
-            Point x2 = new Point(clicked.X + 8, baseLine);
+            Point x1 = new Point(clicked.X - 8, clicked.Y + 8);
+            Point x2 = new Point(clicked.X + 8, clicked.Y + 8);
             Point topLeftCorner = new Point(clicked.X - 8, clicked.Y);
             Point bottomRightCorner = new Point(clicked.X + 8, clicked.Y + 16);
 

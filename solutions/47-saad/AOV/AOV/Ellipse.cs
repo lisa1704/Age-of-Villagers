@@ -9,8 +9,8 @@ namespace AOV
 {
     class Ellipse : CompoundShape
     {
-        float height;
-        float width;
+        readonly float height;
+        readonly float width;
 
         public Ellipse(Point x1,Point x2)
         {
