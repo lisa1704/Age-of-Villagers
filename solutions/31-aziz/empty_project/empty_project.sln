@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "empty_project", "empty_project\empty_project.csproj", "{C4841A46-4FF6-4AB4-BD07-3EA93BCEF15A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "empty_project", "empty_project\empty_project.csproj", "{C4841A46-4FF6-4AB4-BD07-3EA93BCEF15A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeofVillegersTest", "AgeofVillegersTest\AgeofVillegersTest.csproj", "{F26DC635-AB90-4F50-A507-C2C77211D86C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C4841A46-4FF6-4AB4-BD07-3EA93BCEF15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4841A46-4FF6-4AB4-BD07-3EA93BCEF15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4841A46-4FF6-4AB4-BD07-3EA93BCEF15A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26DC635-AB90-4F50-A507-C2C77211D86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26DC635-AB90-4F50-A507-C2C77211D86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26DC635-AB90-4F50-A507-C2C77211D86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26DC635-AB90-4F50-A507-C2C77211D86C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
