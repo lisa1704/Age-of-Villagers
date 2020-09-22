@@ -1,6 +1,6 @@
 ﻿namespace Age_of_villagers
 {
-    partial class Form1
+    partial class villagename_box
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@
             this.Openvillage = new System.Windows.Forms.Button();
             this.Age_of_villagers = new System.Windows.Forms.Label();
             this.Village_Name = new System.Windows.Forms.Label();
+            this.villagename_textbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Drawingpanel
@@ -130,12 +131,22 @@
             this.Village_Name.Size = new System.Drawing.Size(85, 13);
             this.Village_Name.TabIndex = 9;
             this.Village_Name.Text = "Village Name:";
+            this.Village_Name.Click += new System.EventHandler(this.Village_Name_Click);
             // 
-            // Form1
+            // villagename_textbox
+            // 
+            this.villagename_textbox.Location = new System.Drawing.Point(706, 82);
+            this.villagename_textbox.Name = "villagename_textbox";
+            this.villagename_textbox.Size = new System.Drawing.Size(84, 20);
+            this.villagename_textbox.TabIndex = 10;
+            this.villagename_textbox.TextChanged += new System.EventHandler(this.villagename_textbox_TextChanged);
+            // 
+            // villagename_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.villagename_textbox);
             this.Controls.Add(this.Village_Name);
             this.Controls.Add(this.Age_of_villagers);
             this.Controls.Add(this.Openvillage);
@@ -145,8 +156,7 @@
             this.Controls.Add(this.House);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.Drawingpanel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "villagename_box";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,6 +176,7 @@
         private System.Windows.Forms.Button Openvillage;
         private System.Windows.Forms.Label Age_of_villagers;
         private System.Windows.Forms.Label Village_Name;
+        private System.Windows.Forms.TextBox villagename_textbox;
     }
 }
 

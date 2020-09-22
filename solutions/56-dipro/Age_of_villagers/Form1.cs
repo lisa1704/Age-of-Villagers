@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Age_of_villagers
 {
-    public partial class Form1 : Form
+    public partial class villagename_box : Form
     {
-        public Form1()
+        public villagename_box()
         {
             InitializeComponent();
         }
@@ -63,6 +63,16 @@ namespace Age_of_villagers
         }
 
         private void Age_of_villagers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Village_Name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void villagename_textbox_TextChanged(object sender, EventArgs e)
         {
 
         }
