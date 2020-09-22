@@ -96,7 +96,10 @@ namespace AgeOfVillagers
             {
                 bdFarmers.paint_tree(e, g, p);
             }
-
+            else if (radioButtonWaterSource.Checked)
+            {
+                bdFarmers.paint_waterSource(e, g, p);
+            }
         }
     }
 }
