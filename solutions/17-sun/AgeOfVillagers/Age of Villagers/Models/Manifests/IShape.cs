@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Age_of_Villagers.Models.Manifests
+{
+    interface IShape
+    {
+        void Draw(Graphics gfx, Pen p);
+    }
+}

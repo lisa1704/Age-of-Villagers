@@ -52,17 +52,16 @@ namespace Age_of_Villagers
             this.VillageEditorPanel.Name = "VillageEditorPanel";
             this.VillageEditorPanel.Size = new System.Drawing.Size(600, 400);
             this.VillageEditorPanel.TabIndex = 1;
-            this.VillageEditorPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageEditorPanel_Click);
             this.VillageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageEditorPanel_Paint);
-            
+            this.VillageEditorPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageEditorPanel_Click);
             // 
             // GameTitle
             // 
             this.GameTitle.AutoSize = true;
-            this.GameTitle.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GameTitle.Location = new System.Drawing.Point(645, 32);
+            this.GameTitle.Font = new System.Drawing.Font("Impact", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GameTitle.Location = new System.Drawing.Point(645, 34);
             this.GameTitle.Name = "GameTitle";
-            this.GameTitle.Size = new System.Drawing.Size(207, 37);
+            this.GameTitle.Size = new System.Drawing.Size(214, 39);
             this.GameTitle.TabIndex = 2;
             this.GameTitle.Text = "Age of Villagers";
             // 

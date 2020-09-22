@@ -57,16 +57,16 @@ namespace Age_of_Villagers
 
             if (HouseSwitch)
             {
-                SolidBrush sb = new SolidBrush(Color.Yellow);
-                gfx.DrawRectangle(p, xAxis, yAxis, 100, 100);
-                gfx.FillRectangle(sb, xAxis, yAxis, 100, 100);
+                
+                gfx.DrawRectangle(p, xAxis, yAxis, 16, 16);
+               
 
             }
             if (TreeSwitch)
             {
-                SolidBrush sb = new SolidBrush(Color.Green);
-                gfx.DrawRectangle(p, xAxis - 50, yAxis - 50, 100, 100);
-                gfx.FillRectangle(sb, xAxis - 50, yAxis - 50, 100, 100);
+                
+                gfx.DrawRectangle(p, xAxis, yAxis, 16, 24);
+                
 
             }
             if (WaterSourceSwitch)
