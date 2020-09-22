@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gameName = new System.Windows.Forms.Label();
-            this.villageName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButtonTree = new System.Windows.Forms.RadioButton();
             this.radioButtonHouse = new System.Windows.Forms.RadioButton();
@@ -38,6 +37,7 @@
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.comboBoxNationName = new System.Windows.Forms.ComboBox();
+            this.textBoxVillageName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // gameName
@@ -50,16 +50,6 @@
             this.gameName.TabIndex = 0;
             this.gameName.Text = "Age of Villagers";
             this.gameName.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // villageName
-            // 
-            this.villageName.AutoSize = true;
-            this.villageName.Location = new System.Drawing.Point(671, 51);
-            this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(78, 20);
-            this.villageName.TabIndex = 1;
-            this.villageName.Text = "Kathakhali";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // panel1
             // 
@@ -154,11 +144,19 @@
             this.comboBoxNationName.TabIndex = 10;
             this.comboBoxNationName.SelectedIndexChanged += new System.EventHandler(this.comboBoxNationName_SelectedIndexChanged);
             // 
+            // textBoxVillageName
+            // 
+            this.textBoxVillageName.Location = new System.Drawing.Point(636, 73);
+            this.textBoxVillageName.Name = "textBoxVillageName";
+            this.textBoxVillageName.Size = new System.Drawing.Size(152, 27);
+            this.textBoxVillageName.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxVillageName);
             this.Controls.Add(this.comboBoxNationName);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.buttonNew);
@@ -167,7 +165,6 @@
             this.Controls.Add(this.radioButtonHouse);
             this.Controls.Add(this.radioButtonTree);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.villageName);
             this.Controls.Add(this.gameName);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -180,7 +177,6 @@
         #endregion
 
         private System.Windows.Forms.Label gameName;
-        private System.Windows.Forms.Label villageName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButtonTree;
         private System.Windows.Forms.RadioButton radioButtonHouse;
@@ -189,6 +185,7 @@
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.ComboBox comboBoxNationName;
+        private System.Windows.Forms.TextBox textBoxVillageName;
     }
 }
 

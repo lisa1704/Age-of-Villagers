@@ -86,28 +86,34 @@ namespace AgeOfVillagers
         private void mouse_click(object sender, MouseEventArgs e)
         {
             int x, y;
+            String nationName;
             x = e.X;
             y = e.Y;
             Graphics g = panel1.CreateGraphics();
-
+            nationName = comboBoxNationName.Text;
             Pen p = new Pen(new SolidBrush(Color.Red), 2);
-            if (radioButtonHouse.Checked)
+
+            if(nationName== "Bangladeshi Farmers")
             {
-                inuitHunters.paint_house(e, g, p);
+                if (radioButtonHouse.Checked)
+                {
+                    bdFarmers.paint_house(e, g, p);
+                }
+                else if (radioButtonTree.Checked)
+                {
+                    bdFarmers.paint_tree(e, g, p);
+                }
+                else if (radioButtonWaterSource.Checked)
+                {
+                    bdFarmers.paint_waterSource(e, g, p);
+                }
             }
-            else if (radioButtonTree.Checked)
-            {
-                egyptianKings.paint_tree(e, g, p);
-            }
-            else if (radioButtonWaterSource.Checked)
-            {
-                egyptianKings.paint_waterSource(e, g, p);
-            }
+            
         }
 
         private void comboBoxNationName_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
