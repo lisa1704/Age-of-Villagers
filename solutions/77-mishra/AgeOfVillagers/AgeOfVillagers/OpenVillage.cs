@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Windows.Forms;
 
 namespace AgeOfVillagers
@@ -18,8 +19,14 @@ namespace AgeOfVillagers
                 using (StreamReader streamReader = new StreamReader(stream))
                 {
                     string json = streamReader.ReadToEnd();
+                    villageState = JsonConverter.DeserializeObject<VillageState>(json);
                 }
             }
+        }
+
+        public VillageState GetVillage()
+        {
+            return this.villageState;
         }
     }
 }
