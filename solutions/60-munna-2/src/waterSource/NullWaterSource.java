@@ -2,7 +2,7 @@ package waterSource;
 
 import shapes.Point;
 
-public class NullWater implements IWaterSource {
+public class NullWaterSource implements IWaterSource {
     @Override
     public void draw_water_resource() {
         System.out.println("No Tree");

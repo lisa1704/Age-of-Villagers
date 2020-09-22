@@ -19,7 +19,7 @@ import tree.BangladeshiFarmersTree;
 import tree.ITree;
 import tree.NullTree;
 import waterSource.IWaterSource;
-import waterSource.NullWaterResource;
+import waterSource.NullWaterSource;
 import waterSource.Pond;
 
 import java.io.IOException;
@@ -153,7 +153,7 @@ public class Controller implements Initializable {
         {
             house = new NullHouse();
             tree = new NullTree();
-            waterSource = new NullWaterResource();
+            waterSource = new NullWaterSource();
         }
     }
     /*@FXML
