@@ -50,6 +50,7 @@ namespace AgeOfVillagers
         {
             public ArabTree(Point MPt)
             {
+                //int length = (MPt.Y+12)-MPt.Y;
                 /*//Point bottomRight = new Point(MPt.X +22, MPt.Y + 40);
                 Point L1topPt = new Point(MPt.X - 12, MPt.Y - 25);
                 Point L2topPt = new Point(MPt.X + 57, MPt.Y - 25);
@@ -73,6 +74,12 @@ namespace AgeOfVillagers
                 AddComp(new Line(RecMid, L3topPt));
                 AddComp(new Line(RecMid, L4topPt));
                 AddComp(new Line(RecMid, L5topPt));
+            }
+            public int GetBBox()
+            {
+            int length = 12 , weight=16;
+            return (length * weight);
+
             }
         }
     //}

@@ -10,12 +10,15 @@ namespace AgeOfVillageTest
     {
         public Graphics g;
         Point pt = new Point(100, 80);
-       /* [TestMethod]
+       // NationFactory nationfactory = new NationFactory();
+
+      /*  [TestMethod]
         public void TestBDTreeConstruction()
         {
+            INations actual = nationfactory.GetNation("ArabBedouin");
             INations nationType = new ArabBedouin();
-            object testObject = nationType.DrawTree(g, pt);
-            CompositeShape BDTreeTest = new ArabTree(pt);
+            object testObject = actual.DrawTree(g, pt);
+            object BDTreeTest = new ArabTree(pt);
 
             BDTreeTest.Equals(testObject);
         }*/
@@ -28,6 +31,6 @@ namespace AgeOfVillageTest
 
             NullTreeTest.Equals(testObject);
         }
-
+       
     }
 }
