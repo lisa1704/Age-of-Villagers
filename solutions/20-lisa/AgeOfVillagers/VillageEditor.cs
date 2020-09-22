@@ -119,7 +119,7 @@ namespace AgeOfVillagers
             house_point.Clear();
             tree_point.Clear();
             watersource_point.Clear();
-            NationBox.ResetText();
+            NationBox.SelectedIndex=-1;
             drawingPanel.Refresh();
             VillageName.ResetText();
             drawingPanel.BackColor = Color.White;
