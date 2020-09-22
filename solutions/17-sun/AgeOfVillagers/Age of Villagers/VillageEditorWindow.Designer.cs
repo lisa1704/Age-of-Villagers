@@ -34,6 +34,12 @@ namespace Age_of_Villagers
             this.GameTitle = new System.Windows.Forms.Label();
             this.VillageTitle = new System.Windows.Forms.Label();
             this.NationTitle = new System.Windows.Forms.Label();
+            this.TreeButton = new System.Windows.Forms.Button();
+            this.HouseButton = new System.Windows.Forms.Button();
+            this.WaterSourceButton = new System.Windows.Forms.Button();
+            this.NewVillageButton = new System.Windows.Forms.Button();
+            this.OpenVillageButton = new System.Windows.Forms.Button();
+            this.SaveVillageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VillageEditorPanel
@@ -76,11 +82,76 @@ namespace Age_of_Villagers
             this.NationTitle.Text = "Add Nation";
             this.NationTitle.Click += new System.EventHandler(this.NationTitle_Click);
             // 
+            // TreeButton
+            // 
+            this.TreeButton.Location = new System.Drawing.Point(645, 188);
+            this.TreeButton.Name = "TreeButton";
+            this.TreeButton.Size = new System.Drawing.Size(106, 29);
+            this.TreeButton.TabIndex = 5;
+            this.TreeButton.Text = "Tree";
+            this.TreeButton.UseVisualStyleBackColor = true;
+            this.TreeButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // HouseButton
+            // 
+            this.HouseButton.Location = new System.Drawing.Point(757, 188);
+            this.HouseButton.Name = "HouseButton";
+            this.HouseButton.Size = new System.Drawing.Size(113, 29);
+            this.HouseButton.TabIndex = 6;
+            this.HouseButton.Text = "House";
+            this.HouseButton.UseVisualStyleBackColor = true;
+            this.HouseButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // WaterSourceButton
+            // 
+            this.WaterSourceButton.Location = new System.Drawing.Point(691, 223);
+            this.WaterSourceButton.Name = "WaterSourceButton";
+            this.WaterSourceButton.Size = new System.Drawing.Size(122, 29);
+            this.WaterSourceButton.TabIndex = 7;
+            this.WaterSourceButton.Text = "Water Source";
+            this.WaterSourceButton.UseVisualStyleBackColor = true;
+            // 
+            // NewVillageButton
+            // 
+            this.NewVillageButton.Location = new System.Drawing.Point(645, 371);
+            this.NewVillageButton.Name = "NewVillageButton";
+            this.NewVillageButton.Size = new System.Drawing.Size(106, 29);
+            this.NewVillageButton.TabIndex = 8;
+            this.NewVillageButton.Text = "New Village";
+            this.NewVillageButton.UseVisualStyleBackColor = true;
+            this.NewVillageButton.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // OpenVillageButton
+            // 
+            this.OpenVillageButton.Location = new System.Drawing.Point(757, 371);
+            this.OpenVillageButton.Name = "OpenVillageButton";
+            this.OpenVillageButton.Size = new System.Drawing.Size(113, 29);
+            this.OpenVillageButton.TabIndex = 9;
+            this.OpenVillageButton.Text = "Open Village";
+            this.OpenVillageButton.UseVisualStyleBackColor = true;
+            this.OpenVillageButton.Click += new System.EventHandler(this.button1_Click_3);
+            // 
+            // SaveVillageButton
+            // 
+            this.SaveVillageButton.Location = new System.Drawing.Point(691, 329);
+            this.SaveVillageButton.Name = "SaveVillageButton";
+            this.SaveVillageButton.Size = new System.Drawing.Size(122, 29);
+            this.SaveVillageButton.TabIndex = 10;
+            this.SaveVillageButton.Text = "Save Village";
+            this.SaveVillageButton.UseVisualStyleBackColor = true;
+            this.SaveVillageButton.Click += new System.EventHandler(this.button1_Click_4);
+            // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 412);
+            this.ClientSize = new System.Drawing.Size(887, 412);
+            this.Controls.Add(this.SaveVillageButton);
+            this.Controls.Add(this.OpenVillageButton);
+            this.Controls.Add(this.NewVillageButton);
+            this.Controls.Add(this.WaterSourceButton);
+            this.Controls.Add(this.HouseButton);
+            this.Controls.Add(this.TreeButton);
             this.Controls.Add(this.NationTitle);
             this.Controls.Add(this.VillageTitle);
             this.Controls.Add(this.GameTitle);
@@ -100,6 +171,12 @@ namespace Age_of_Villagers
         private Label GameTitle;
         private Label VillageTitle;
         private Label NationTitle;
+        private Button TreeButton;
+        private Button HouseButton;
+        private Button WaterSourceButton;
+        private Button NewVillageButton;
+        private Button OpenVillageButton;
+        private Button SaveVillageButton;
     }
 }
 

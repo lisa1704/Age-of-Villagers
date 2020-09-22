@@ -29,7 +29,7 @@ namespace Age_of_Villagers.Models
             throw new NotImplementedException();
         }
 
-        public string Get_inhabitedVillage()
+        public string Get_inhabitedVillage() 
         {
             return inhabitedVillage;
         }
