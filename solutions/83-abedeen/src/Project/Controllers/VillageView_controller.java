@@ -23,12 +23,15 @@ public class VillageView_controller implements Initializable {
     public String flag;
     public Nation nation;
     public SceneSate sceneSate;
+    private String villageName = "#$noNationNameYet$#";
+    VillageSaverLoader SLD;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NationList.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouins"),("Egyptian Kings"),("Inuit Hunters"));
         nation = new Nation("No Nation");
-        sceneSate = new SceneSate("#$noNationNameYet$#");
+        SLD = new VillageSaverLoader();
+        sceneSate = new SceneSate(villageName);
         DrawingCanvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -40,8 +43,7 @@ public class VillageView_controller implements Initializable {
 
 
     public void save_village(ActionEvent actionEvent) throws IOException {
-        SaveVillage();
-        System.out.println("File Write done");
+        SLD.saveVillage(sceneSate);
     }
 
 
@@ -73,19 +75,6 @@ public class VillageView_controller implements Initializable {
             System.out.println("No File Selected");
         }
         System.out.println("File read done");
-    }
-
-    public void SaveVillage() throws IOException {
-        String FileName = VillageNameField.getText() + ".aov";
-        Village village = new Village(VillageNameField.getText(), (String) NationList.getValue());
-        try {
-            FileOutputStream file = new FileOutputStream("SavedFiles/"+FileName);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-            out.writeObject(village);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public void TreePressed(ActionEvent actionEvent){ flag = "Tree"; }
