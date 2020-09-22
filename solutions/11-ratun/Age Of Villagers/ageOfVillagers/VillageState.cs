@@ -1,10 +1,10 @@
 ﻿using System;
 
-interface Istate
+interface IState
 {
 	string GetState();
 }
-public class VillageState : Istate
+public class VillageState : IState
 {
     string villagename, state;
     public void SetState(string villagename)

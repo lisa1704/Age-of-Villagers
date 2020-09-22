@@ -21,7 +21,7 @@ namespace ageOfVillagers
         public void Save()
         {
             SaveVillageState s = new SaveVillageState();
-            s.save();
+            s.Save();
         }
     }
 }

@@ -80,7 +80,7 @@
             this.treebutton.TabStop = true;
             this.treebutton.Text = "Tree";
             this.treebutton.UseVisualStyleBackColor = true;
-            this.treebutton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.treebutton.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // OpenVillage
             // 
@@ -126,7 +126,7 @@
             this.SaveVillage.TabIndex = 1;
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
-            this.SaveVillage.Click += new System.EventHandler(this.button2_Click);
+            this.SaveVillage.Click += new System.EventHandler(this.Button2_Click);
             // 
             // ageOfVillagers
             // 
@@ -145,7 +145,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 400);
             this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // houseButton
             // 
@@ -157,7 +157,7 @@
             this.houseButton.TabStop = true;
             this.houseButton.Text = "House";
             this.houseButton.UseVisualStyleBackColor = true;
-            this.houseButton.CheckedChanged += new System.EventHandler(this.houseButton_CheckedChanged);
+            this.houseButton.CheckedChanged += new System.EventHandler(this.HouseButton_CheckedChanged);
             // 
             // waterButton
             // 
@@ -169,7 +169,7 @@
             this.waterButton.TabStop = true;
             this.waterButton.Text = "Water";
             this.waterButton.UseVisualStyleBackColor = true;
-            this.waterButton.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.waterButton.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
             // 
             // MenuForm
             // 

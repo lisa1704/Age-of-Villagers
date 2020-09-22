@@ -21,15 +21,9 @@ namespace ageOfVillagers
             InitializeComponent();
         }
 
-        public void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         public void VillageName_TextChanged(object sender, EventArgs e)
         {
-            string Vname = VillageName.Text;
-            //MessageBox.Show(VillageName.Text);
+            MessageBox.Show(VillageName.Text);
         }
 
         public void Nation_TextChanged(object sender, EventArgs e)
@@ -38,19 +32,19 @@ namespace ageOfVillagers
             currentNationName = Nation.Text;
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             currentselect = "tree";
             text += "Adding a tree. ";
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             currentselect = "water";
             text += "Adding water. ";
         }
 
-        private void houseButton_CheckedChanged(object sender, EventArgs e)
+        private void HouseButton_CheckedChanged(object sender, EventArgs e)
         {
             currentselect = "house";
             text += "Adding a house. ";
@@ -80,7 +74,7 @@ namespace ageOfVillagers
             text += "Opening the village. ";
         }
 
-        public void button2_Click(object sender, EventArgs e)
+        public void Button2_Click(object sender, EventArgs e)
         {
             Graphics g = panel2.CreateGraphics();
             g.Save();
@@ -106,7 +100,7 @@ namespace ageOfVillagers
         }
 
         //public string testShape(string currentNationName, string currentselect, int x, int y) { 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = panel2.CreateGraphics();
             Shape nation = NationFactory.GetNation(currentNationName, panel2);

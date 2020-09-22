@@ -2,9 +2,7 @@
 {
     internal class SaveVillageState
     {
-        readonly MenuForm menuForm = new MenuForm();
-
-		public string save()
+		public string Save()
 		{
 			VillageState state = new VillageState();
 			state.GetState();
