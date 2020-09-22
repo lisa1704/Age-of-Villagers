@@ -64,7 +64,7 @@
             <fx:reference source="toggleGroup"/>
          </toggleGroup>
       </RadioButton>
-      <Label fx:id="country_name" layoutX="769.0" layoutY="183.0" text="Country Name">
+      <Label fx:id="nation_name" layoutX="769.0" layoutY="183.0" text="Country Name">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
