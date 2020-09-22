@@ -12,18 +12,39 @@ namespace Age_of_Villagers
 {
     public partial class VillageEditorWindow : Form
     {
-        
-        
+        int xAxis;
+        int yAxis;
+        Boolean HouseSwitch;
+        Boolean TreeSwitch;
+        Boolean WaterSourceSwitch;
+
         public VillageEditorWindow()
         {
             InitializeComponent();
         }
 
-  
-   
 
-    
 
+
+        /// Demo
+        //BangladeshiFarmers BanglaVillage = new BangladeshiFarmers();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+
+
+       
+        private void VillageEditorPanel_Click(object sender, MouseEventArgs e)
+        {
+            Point p = new Point(e.X, e.Y);
+            xAxis = p.X;
+            yAxis = p.Y;
+            VillageEditorPanel.Invalidate();
+        }
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
 
@@ -31,7 +52,30 @@ namespace Age_of_Villagers
 
         private void VillageEditorPanel_Paint(object sender, PaintEventArgs e)
         {
+            Graphics gfx = VillageEditorPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
 
+            if (HouseSwitch)
+            {
+                SolidBrush sb = new SolidBrush(Color.Yellow);
+                gfx.DrawRectangle(p, xAxis, yAxis, 100, 100);
+                gfx.FillRectangle(sb, xAxis, yAxis, 100, 100);
+
+            }
+            if (TreeSwitch)
+            {
+                SolidBrush sb = new SolidBrush(Color.Green);
+                gfx.DrawRectangle(p, xAxis - 50, yAxis - 50, 100, 100);
+                gfx.FillRectangle(sb, xAxis - 50, yAxis - 50, 100, 100);
+
+            }
+            if (WaterSourceSwitch)
+            {
+                SolidBrush sb = new SolidBrush(Color.Blue);
+                gfx.DrawEllipse(p, xAxis - 50, yAxis - 50, 100, 100);
+                gfx.FillEllipse(sb, xAxis - 50, yAxis - 50, 100, 100);
+
+            }
         }
 
 
@@ -45,27 +89,40 @@ namespace Age_of_Villagers
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void WaterSourceButton_Click(object sender, EventArgs e)
+        {
+            TreeSwitch = false;
+            WaterSourceSwitch = true;
+            HouseSwitch = false;
+        }
+
+
+        private void TreeButton_Click(object sender, EventArgs e)
+        {
+            TreeSwitch = true;
+            WaterSourceSwitch = false;
+            HouseSwitch = false;
+        }
+
+        private void HouseButton_Click(object sender, EventArgs e)
+        {
+            TreeSwitch = false;
+            WaterSourceSwitch = false;
+            HouseSwitch = true;
+
+        }
+
+        private void NewVillageButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void OpenVillageButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_4(object sender, EventArgs e)
+        private void SaveVillageButton_Click(object sender, EventArgs e)
         {
 
         }

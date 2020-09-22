@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using Age_of_Villagers.Models;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
@@ -22,6 +25,7 @@ namespace Age_of_Villagers
             base.Dispose(disposing);
         }
 
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -48,7 +52,9 @@ namespace Age_of_Villagers
             this.VillageEditorPanel.Name = "VillageEditorPanel";
             this.VillageEditorPanel.Size = new System.Drawing.Size(600, 400);
             this.VillageEditorPanel.TabIndex = 1;
+            this.VillageEditorPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageEditorPanel_Click);
             this.VillageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageEditorPanel_Paint);
+            
             // 
             // GameTitle
             // 
@@ -90,7 +96,7 @@ namespace Age_of_Villagers
             this.TreeButton.TabIndex = 5;
             this.TreeButton.Text = "Tree";
             this.TreeButton.UseVisualStyleBackColor = true;
-            this.TreeButton.Click += new System.EventHandler(this.button1_Click);
+            this.TreeButton.Click += new System.EventHandler(this.TreeButton_Click);
             // 
             // HouseButton
             // 
@@ -100,7 +106,7 @@ namespace Age_of_Villagers
             this.HouseButton.TabIndex = 6;
             this.HouseButton.Text = "House";
             this.HouseButton.UseVisualStyleBackColor = true;
-            this.HouseButton.Click += new System.EventHandler(this.button1_Click_1);
+            this.HouseButton.Click += new System.EventHandler(this.HouseButton_Click);
             // 
             // WaterSourceButton
             // 
@@ -110,6 +116,7 @@ namespace Age_of_Villagers
             this.WaterSourceButton.TabIndex = 7;
             this.WaterSourceButton.Text = "Water Source";
             this.WaterSourceButton.UseVisualStyleBackColor = true;
+            this.WaterSourceButton.Click += new System.EventHandler(this.WaterSourceButton_Click);
             // 
             // NewVillageButton
             // 
@@ -119,7 +126,7 @@ namespace Age_of_Villagers
             this.NewVillageButton.TabIndex = 8;
             this.NewVillageButton.Text = "New Village";
             this.NewVillageButton.UseVisualStyleBackColor = true;
-            this.NewVillageButton.Click += new System.EventHandler(this.button1_Click_2);
+            this.NewVillageButton.Click += new System.EventHandler(this.NewVillageButton_Click);
             // 
             // OpenVillageButton
             // 
@@ -129,7 +136,7 @@ namespace Age_of_Villagers
             this.OpenVillageButton.TabIndex = 9;
             this.OpenVillageButton.Text = "Open Village";
             this.OpenVillageButton.UseVisualStyleBackColor = true;
-            this.OpenVillageButton.Click += new System.EventHandler(this.button1_Click_3);
+            this.OpenVillageButton.Click += new System.EventHandler(this.OpenVillageButton_Click);
             // 
             // SaveVillageButton
             // 
@@ -139,7 +146,7 @@ namespace Age_of_Villagers
             this.SaveVillageButton.TabIndex = 10;
             this.SaveVillageButton.Text = "Save Village";
             this.SaveVillageButton.UseVisualStyleBackColor = true;
-            this.SaveVillageButton.Click += new System.EventHandler(this.button1_Click_4);
+            this.SaveVillageButton.Click += new System.EventHandler(this.SaveVillageButton_Click);
             // 
             // VillageEditorWindow
             // 
@@ -164,6 +171,8 @@ namespace Age_of_Villagers
             this.PerformLayout();
 
         }
+
+       
 
 
         #endregion
