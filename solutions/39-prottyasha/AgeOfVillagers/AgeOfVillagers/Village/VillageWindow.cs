@@ -92,7 +92,8 @@ namespace AgeOfVillagers
             selected_nation = vill.nation;
             nf = new NationFactory();
             nation = nf.getNation(selected_nation);
-            
+            nation.setBgColor(g);
+
             Label_villName.Text = vill.village_name;
             foreach (Point p in vill.trees_drawn.ToList())
             {
@@ -109,8 +110,9 @@ namespace AgeOfVillagers
                 selected_component = "water_source";
                 drawInPanel(p);
             }
-            nation_selector.SelectedText = vill.nation;
-            //nation_selector_SelectedIndexChanged(this, null);
+            nation_selector.SelectedIndex = nation_selector.Items.IndexOf(vill.nation);
+            //nation_selector_SelectedIndexChanged(null, null);
+            disappearingUnnecessaryRb();
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
@@ -127,6 +129,19 @@ namespace AgeOfVillagers
         private void nation_selector_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            selected_nation = nation_selector.Text;
+            nf = new NationFactory();
+            nation = nf.getNation(selected_nation); 
+            nation.setBgColor(g);
+            vill = new Village();
+
+            disappearingUnnecessaryRb();            
+        }
+
+        public void disappearingUnnecessaryRb()
+        {
+            selected_component = "";
+
             var cntls = GetAll(this, typeof(RadioButton));
             foreach (Control cntrl in cntls)
             {
@@ -136,13 +151,6 @@ namespace AgeOfVillagers
                     _rb.Checked = false;
                 }
             }
-            selected_component = "";
-            selected_nation = nation_selector.Text;
-            nf = new NationFactory();
-            nation = nf.getNation(selected_nation); 
-            nation.setBgColor(g);
-            vill = new Village();
-
             if (selected_nation == "Arab Bedouins")
             {
                 rbtn_waterSource.Visible = false;
