@@ -78,6 +78,10 @@ namespace AgeOfVillagers_Test
             Color color2 = ArabT.getBackColor();
             Color expected2 = Color.LightGoldenrodYellow;
             Assert.IsType<Color>(ArabT.getBackColor());
+            NationAbstract InuitT = new InuitHunters(newg, panel);
+            Color color3 = InuitT.getBackColor();
+            Color expected3 = Color.FloralWhite;
+            Assert.IsType<Color>(InuitT.getBackColor());
 
         }
 
