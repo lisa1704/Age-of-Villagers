@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Triangle : CompositeShape
+    public class Triangle : CompositeShape
     {
         public Triangle(Point p1, Point p2, Point p3)
         {

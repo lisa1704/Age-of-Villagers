@@ -6,7 +6,7 @@ using System.Text;
 namespace AgeOfVillagers
 {
     
-    class Line : IShape
+    public class Line : IShape
     {
         private Point p1;
         private Point p2;

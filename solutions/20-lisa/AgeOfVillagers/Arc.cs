@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Arc : IShape
+    public class Arc : IShape
     {
         private float x;
         private float y;

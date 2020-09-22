@@ -10,8 +10,8 @@ namespace AgeOfVillagers
         public BanglaTree(Point point)
         {
             Point topPoint = new Point(point.X + 80, point.Y + 90);
-            Point bottomRight = new Point(point.X + 36, point.Y + 140);
-            Point topLeft = new Point(point.X + 42, point.Y + 60);
+            Point bottomRight = new Point(point.X + 50, point.Y + 120);
+            Point topLeft = new Point(point.X + 53, point.Y + 65);
             AddComponent(new Rectangle(topLeft, bottomRight));
             AddComponent(new Ellipse(point, topPoint));
            

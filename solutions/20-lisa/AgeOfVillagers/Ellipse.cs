@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Ellipse : CompositeShape
+    public class Ellipse : CompositeShape
     {
         private readonly Point topLeft;
         private readonly Point bottomRight;

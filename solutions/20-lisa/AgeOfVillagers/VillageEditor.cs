@@ -121,6 +121,9 @@ namespace AgeOfVillagers
             watersource_point.Clear();
             NationBox.ResetText();
             drawingPanel.Refresh();
+            VillageName.ResetText();
+            drawingPanel.BackColor = Color.White;
+            MessageBox.Show("Drawing space cleared. You can now create a new village");
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
@@ -131,6 +134,7 @@ namespace AgeOfVillagers
         {
 
             selectNation = NationBox.Text;
+            drawingPanel.BackColor = nationFactory.GetNation(selectNation).SetTerrain();
             
         }
 

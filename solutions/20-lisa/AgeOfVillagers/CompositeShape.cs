@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    public class CompositeShape : IShape
+    public abstract class CompositeShape : IShape
     {
         protected List<IShape> components = new List<IShape>();
         protected void AddComponent(IShape shape)
