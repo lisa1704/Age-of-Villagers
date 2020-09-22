@@ -109,7 +109,22 @@ namespace AgeOfVillagers
                     bdFarmers.paint_waterSource(e, g, p);
                 }
             }
-            
+            else if (nationName == "Egyptian Kings")
+            {
+                
+                if (radioButtonHouse.Checked)
+                {
+                    egyptianKings.paint_house(e, g, p);
+                }
+                else if (radioButtonTree.Checked)
+                {
+                    egyptianKings.paint_tree(e, g, p);
+                }
+                else if (radioButtonWaterSource.Checked)
+                {
+                    egyptianKings.paint_waterSource(e, g, p);
+                }
+            }
         }
 
         private void comboBoxNationName_SelectedIndexChanged(object sender, EventArgs e)
