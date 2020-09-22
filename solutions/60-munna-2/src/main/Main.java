@@ -11,7 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("main_page.fxml"));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("InputTakeWindow.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Age of Villagers");
         primaryStage.setScene(new Scene(root, 1000, 500));
