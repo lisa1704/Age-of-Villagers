@@ -4,7 +4,11 @@ using System.Text;
 
 namespace age_of_villagers.age_of_village.Items.Tree
 {
-    class Class1
+    class EgyptianKingTree : Itree
     {
+        public void createTree()
+        {
+
+        }
     }
 }

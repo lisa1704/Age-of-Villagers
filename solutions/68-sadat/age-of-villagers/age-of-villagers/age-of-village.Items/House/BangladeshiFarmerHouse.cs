@@ -4,11 +4,11 @@ using System.Text;
 
 namespace age_of_villagers.age_of_village.Items.House
 {
-    class InuitHunterHouse : Ihouse
+    class BangladeshiFarmerHouse : Ihouse
     {
         public void createHouse(string item)
         {
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace age_of_villagers.age_of_village.Items.House
 {
     class EgyptianKingHouse : Ihouse
     {
-        public void createHouse()
+        public void createHouse(string item)
         {
 
         }

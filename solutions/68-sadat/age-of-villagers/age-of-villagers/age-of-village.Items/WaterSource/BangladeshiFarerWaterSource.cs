@@ -4,7 +4,7 @@ using System.Text;
 
 namespace age_of_villagers.age_of_village.Items.WaterSource
 {
-    class EgyptianKingWaterSource : IwaterSource
+    class BangladeshiFarerWaterSource : IwaterSource
     {
         public void createWaterSource()
         {

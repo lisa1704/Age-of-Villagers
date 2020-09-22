@@ -6,6 +6,6 @@ namespace age_of_villagers
 {
     interface Ihouse
     {
-        void createHouse();
+        void createHouse(string item);
     }
 }

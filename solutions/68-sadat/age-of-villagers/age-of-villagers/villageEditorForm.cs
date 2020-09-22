@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace age_of_villagers
 {
     public partial class villageEditor : Form
     {
+        Ination nation;
         int xCoordinate;
         int yCoordinate;
         Graphics g;
@@ -22,6 +22,11 @@ namespace age_of_villagers
         {
             
             InitializeComponent();
+            comboBox1.Items.Add("Arab Bedouin");
+            comboBox1.Items.Add("Bangladeshi Farmers");
+            comboBox1.Items.Add("Egyptian Kings");
+            comboBox1.Items.Add("Inuit Hunters");
+            comboBox1.Text = "Bangladeshi Farmers";
 
         }
 
@@ -44,7 +49,7 @@ namespace age_of_villagers
     
         private void button2_Click(object sender, EventArgs e)
         {
-            text = "house";
+            text = comboBox1.Text + "house";
             brush = new SolidBrush(System.Drawing.Color.Black);
         }
 
@@ -85,7 +90,7 @@ namespace age_of_villagers
 
         }
 
-        private void nationNameTextBox_enter(object sender, EventArgs e)
+        /*private void nationNameTextBox_enter(object sender, EventArgs e)
         {
             if (nationNameTextBox.Text == "Enter Nation Name")
             {
@@ -100,7 +105,7 @@ namespace age_of_villagers
             {
                 nationNameTextBox.Text = "Enter Nation Name";
             }
-        }
+        }*/
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -109,6 +114,7 @@ namespace age_of_villagers
 
         private void VillageCanvas_MouseClick(object sender, MouseEventArgs e)
         {
+            
             xCoordinate = e.X;
             yCoordinate = e.Y;
             g = VillageCanvas.CreateGraphics();
@@ -117,14 +123,35 @@ namespace age_of_villagers
 
         private void treeButtonClick(object sender, EventArgs e)
         {
-            text = "tree";
+            text = comboBox1.Text + "tree";
             brush = new SolidBrush(System.Drawing.Color.Green);
         }
 
         private void WaterSourceClick(object sender, EventArgs e)
         {
-            text = "water source";
+            text = comboBox1.Text + "water source";
             brush = new SolidBrush(System.Drawing.Color.Blue);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == "Arab Bedouin")
+            {
+                nation = new age_of_villagrs.Nations.ArabBedouin();
+                nation.createHouse(comboBox1.Text);
+            }
+            else if (comboBox1.SelectedItem == "Bangladeshi Farmers")
+            {
+                comboBox1.Text = "Bangladeshi";
+            }
+            else if (comboBox1.SelectedItem == "Egyptian Kings")
+            {
+                comboBox1.Text = "Egyptian";
+            }
+            else if (comboBox1.SelectedItem == "Inuit Hunters")
+            {
+                comboBox1.Text = "Inuit";
+            }
         }
     }
 }
