@@ -14,7 +14,7 @@ import javafx.scene.shape.*;
 
 import java.lang.String;
 
-import java.io.*;
+
 import java.net.URL;
 import java.util.*;
 
@@ -22,8 +22,6 @@ import project.Utilities.NationFactory;
 import project.Utilities.VillageState;
 import project.Utilities.Villages;
 
-import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
 
 
 public class VillageViewController implements Initializable {
@@ -42,6 +40,7 @@ public class VillageViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        this.village = new Villages("FIRST INVOCATION!");
         NationDropDown.getItems().addAll(("Bangladeshi Farmers"),("Arab Bedouin"),("Egyptian Kings"),("Inuit Hunters"));
         DrawPane.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -67,27 +66,13 @@ public class VillageViewController implements Initializable {
     }
 
     public void SaveVillage(ActionEvent actionEvent) {
-//        String Filename = Village_Name.getText() + ".aov";
-////        JSONObject obj = new JSONObject();
-////        obj.put("Village_Name",Village_Name.getText());
-////        obj.put("Nation",NationDropDown.getValue());
-////        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
-//        try {
-//            FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
-//            ObjectOutputStream out = new ObjectOutputStream(file);
-////            out.writeObject(villages);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
         village.SaveVillage(this.village);
-
     }
 
     public void OpenVillage(ActionEvent actionEvent) {
         village = new Villages(Village_Name.getText());
         village = village.LoadVillage();
         Village_Name.setText(village.VillageName);
-
 
         DrawAssetList(village.assetList);
 

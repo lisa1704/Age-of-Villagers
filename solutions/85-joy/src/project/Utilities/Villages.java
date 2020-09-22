@@ -59,47 +59,32 @@ public class Villages implements Serializable {
     }
 
     public Villages LoadVillage(){
-//        File selectedFile = null;
-//        final JFrame iFRAME = new JFrame();
-//        iFRAME.setAlwaysOnTop(true);
-//        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        iFRAME.setLocationRelativeTo(null);
-//        iFRAME.requestFocus();
-//
-//        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
-//        int returnValue = fileChooser.showOpenDialog(iFRAME);
-//        iFRAME.dispose();
-//        if (returnValue == JFileChooser.APPROVE_OPTION) {
-//            selectedFile = fileChooser.getSelectedFile();
-//            try {
-//                FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
-//                ObjectInputStream in = new ObjectInputStream(file);
-////                JSONObject obj = (JSONObject) in.readObject();
-//                Villages villages = (Villages)in.readObject();
-//
-//                System.out.println(villages.VillageName);
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        else {
-//            System.out.println("No File Selected!");
-//        }
-
         Villages villages = null;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("SavedVillages/"+"check2.aov"));
-            villages = new Gson().fromJson(br,Villages.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if(villages == null){
-            System.out.println("DEAD!");
+        File selectedFile = null;
+        final JFrame iFRAME = new JFrame();
+        iFRAME.setAlwaysOnTop(true);
+        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        iFRAME.setLocationRelativeTo(null);
+        iFRAME.requestFocus();
+
+        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
+        int returnValue = fileChooser.showOpenDialog(iFRAME);
+        iFRAME.dispose();
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            selectedFile = fileChooser.getSelectedFile();
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(selectedFile));
+                villages = new Gson().fromJson(br,Villages.class);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         else {
-            System.out.println("Seems Good!");
+            System.out.println("No File Selected!");
         }
+
+
         return  villages;
 
     }

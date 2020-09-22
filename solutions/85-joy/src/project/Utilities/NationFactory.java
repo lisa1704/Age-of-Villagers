@@ -9,7 +9,7 @@ import project.Utilities.NationItems.IHouse;
 import project.Utilities.NationItems.ITree;
 import project.Utilities.NationItems.IWaterSource;
 
-import java.awt.*;
+
 import java.util.ArrayList;
 
 public class NationFactory {
@@ -18,8 +18,6 @@ public class NationFactory {
     public IWaterSource waterSource;
     public String terrainColor;
 
-
-    public String SelectedNation;
 
     public NationFactory(String SelectedNation){
         IAssetFactory houseFactory = new HouseFactory();
