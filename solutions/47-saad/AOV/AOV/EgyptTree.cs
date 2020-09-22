@@ -14,14 +14,14 @@ namespace AOV
             int level = clicked.Y - 50;
 
             Point x1 = new Point(clicked.X, clicked.Y);
-            Point x2 = new Point(clicked.X - 20, clicked.Y - 30);
-            Point x3 = new Point(clicked.X - 40, clicked.Y - 45);
-            Point x4 = new Point(clicked.X - 30, level);
-            Point x5 = new Point(clicked.X - 15, clicked.Y - 53);
-            Point x6 = new Point(clicked.X + 10, clicked.Y - 25);
-            Point x7 = new Point(clicked.X + 5, level);
-            Point x8 = new Point(clicked.X + 20, level);
-            Point x9 = new Point(clicked.X + 35, level);
+            Point x2 = new Point(clicked.X - 4, clicked.Y - 16);
+            Point x3 = new Point(clicked.X-8 , clicked.Y - 20);
+            Point x4 = new Point(clicked.X - 5, clicked.Y - 22);
+            Point x5 = new Point(clicked.X - 1, clicked.Y - 24);
+            Point x6 = new Point(clicked.X + 4, clicked.Y - 12);
+            Point x7 = new Point(clicked.X + 2, clicked.Y - 24);
+            Point x8 = new Point(clicked.X + 8, clicked.Y - 24);
+            Point x9 = new Point(clicked.X + 8, clicked.Y - 16);
 
             addShape(new DrawLine(x1, x4));
             addShape(new DrawLine(x2, x3));
