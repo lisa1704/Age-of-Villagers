@@ -19,12 +19,11 @@ namespace AgeofVillagers
         public void DrawTree(Graphics g, Point p)
         {
             NulTree nulTree = new NulTree();
-            throw new NotImplementedException();
         }
 
         public void DrawWaterSource(Graphics g, Point mid)
         {
-            throw new NotImplementedException();
+            NulTree nulTree = new NulTree();
         }
 
         public Color TerrainColor()
