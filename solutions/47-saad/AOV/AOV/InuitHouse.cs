@@ -11,13 +11,15 @@ namespace AOV
     {
         public InuitHouse(Point clicked)
         {
-            Point x1 = new Point(clicked.X - 50, clicked.Y+50);
-            Point x2 = new Point(clicked.X + 30, clicked.Y+50);
-            int innerArc = x1.X + 25;
+            Point x1 = new Point(clicked.X , clicked.Y);
+            Point x2 = new Point(x1.X + 16, clicked.Y);
+            Point x3 = new Point(x1.X + 16, clicked.Y + 16);
+            Point x4 = new Point(x1.X , clicked.Y + 16);
 
-            addShape(new DrawLine(x1, x2));
-            addShape(new DrawArc(x1.X, x2.Y-50, 80, 100, 0, -180));
-            addShape(new DrawArc(innerArc, x2.Y - 25, 30, 50, 0, -180));
+            addShape(new DrawLine(x3, x4));
+            addShape(new DrawArc(x1.X, x1.Y, 16, 30, 0, -180));
+            addShape(new DrawArc(x1.X + 6, x2.Y + 10, 4, 10, 0, -180));
+            //addShape(new Rectangle(x1, x3)); //Uncomment to check the height and width
         }
     }
 }
