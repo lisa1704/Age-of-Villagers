@@ -1,7 +1,6 @@
 using Xunit;
 using AgeOfVillagers;
 using System.Windows.Forms;
-//using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using System.Drawing;
 
 
@@ -60,6 +59,7 @@ namespace AgeOfVillagers_Test
             Assert.IsType<NullWaterSource>(inuitHuntersTree.getWaterSourceType());
 
         }
+
 
     }
 }

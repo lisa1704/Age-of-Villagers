@@ -6,11 +6,12 @@ public class ArabBedouinHouse : IHouse
     Pen p = new Pen(Color.Black);
     public void drawHouse(Graphics g, int X, int Y)
     {
-        g.DrawLine(p, X, Y + 50, X + 25, Y);
-        g.DrawLine(p, X + 25, Y, X + 50, Y + 50);
-        g.DrawLine(p, X + 50, Y + 50, X, Y + 50);
-        g.DrawLine(p, X + 25, Y, X + 75, Y - 25);
-        g.DrawLine(p, X + 75, Y - 25, X + 100, Y + 25);
-        g.DrawLine(p, X + 100, Y + 25, X + 50, Y + 50);
+
+        g.DrawLine(p, X, Y, X + 4, Y - 16);
+        g.DrawLine(p, X + 4, Y-16 , X + 8, Y);
+        g.DrawLine(p, X, Y, X , Y);
+        g.DrawLine(p, X, Y , X + 16 , Y);
+        g.DrawLine(p, X + 16, Y, X + 10, Y - 16);
+        g.DrawLine(p, X + 10, Y - 16, X + 4, Y - 16);
     }
 }
