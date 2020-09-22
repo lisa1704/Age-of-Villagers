@@ -17,16 +17,14 @@ namespace AgeOfVillager
             this.form = form;
         }
 
-        public void drawHouse(MouseEventArgs e)
+        public IHouse drawHouse(MouseEventArgs e)
         {
-            InuitHuntersHouse inuitHuntersHouse = new InuitHuntersHouse(g);
-            inuitHuntersHouse.draw(e);
+            return new InuitHuntersHouse(g);
         }
 
         public ITree drawTree(MouseEventArgs e)
         {
             throw new Exception();
-            //MessageBox.Show("Trees can not be planted");
         }
 
         public void drawWaterSource(MouseEventArgs e)

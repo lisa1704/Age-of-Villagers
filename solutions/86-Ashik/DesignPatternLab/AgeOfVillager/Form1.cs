@@ -23,7 +23,7 @@ namespace AgeOfVillager
             //tree
             if (radioButton1.Checked)
             {
-                nationManager.Draw(e);
+                nationManager.DrawTree(e);
             }
             //house
             if (radioButton2.Checked)

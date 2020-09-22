@@ -17,16 +17,14 @@ namespace AgeOfVillager
             this.form = form;
         }
 
-        public void drawHouse(MouseEventArgs e)
+        public IHouse drawHouse(MouseEventArgs e)
         {
-            ArabBedouinsHouse arabBedouinsHouse = new ArabBedouinsHouse(g);
-            arabBedouinsHouse.draw(e);
+            return new ArabBedouinsHouse(g);
         }
 
         public ITree drawTree(MouseEventArgs e)
         {
             return new ArabBedouinsTree(g);
-            //arabBedouinsTree.draw(e);
         }
 
         public void drawWaterSource(MouseEventArgs e)
