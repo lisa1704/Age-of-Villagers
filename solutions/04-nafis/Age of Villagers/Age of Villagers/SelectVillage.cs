@@ -24,5 +24,10 @@ namespace Age_of_Villagers
         {
 
         }
+
+        private void SelectVillage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -66,11 +66,12 @@
             this.AccessibleName = "SelectVillage";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 377);
+            this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.SelectNationButton);
             this.Controls.Add(this.NationNameCombo);
             this.Name = "SelectVillage";
             this.Text = "Select Village";
+            this.Load += new System.EventHandler(this.SelectVillage_Load);
             this.ResumeLayout(false);
 
         }

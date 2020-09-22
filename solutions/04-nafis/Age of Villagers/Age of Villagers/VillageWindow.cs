@@ -91,7 +91,7 @@ namespace Age_of_Villagers
             {
                 move = true;
                 /*x = e.X;
-                y = e.Y */
+                y = e.Y;*/ 
             }
         }
         private void VillageDrawing_MouseUp(object sender, EventArgs e)
