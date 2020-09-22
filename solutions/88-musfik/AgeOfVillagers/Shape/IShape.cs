@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
     public interface IShape
     {
-        void Draw(Graphics g, Pen p);
+        void Draw(GraphicsWithPen gp);
     }
 
     public class Line : IShape
@@ -20,9 +17,10 @@ namespace AgeOfVillagers
             point2 = p2;
         }
 
-        public void Draw(Graphics g, Pen p)
+        public void Draw(GraphicsWithPen gp)
         {
-            g.DrawLine(p, point1, point2);
+            gp.GetGraphics()
+                .DrawLine(gp.GetPen(), point1, point2);
         }
     }
 
@@ -42,12 +40,12 @@ namespace AgeOfVillagers
             height = Math.Abs(bottomRight.Y - topLeft.Y);
         }
 
-        public void Draw(Graphics g, Pen p)
+        public void Draw(GraphicsWithPen gp)
         {
-            g.DrawArc(p, _topLeft.X, _topLeft.Y, width, height, _startAngle, _endAngle);
+            gp.GetGraphics()
+                .DrawArc(gp.GetPen(), _topLeft.X, _topLeft.Y, width, height, _startAngle, _endAngle);
         }
     }
-
 
     public class NullShape : IShape
     {
@@ -55,7 +53,7 @@ namespace AgeOfVillagers
         {
         }
 
-        public void Draw(Graphics g, Pen p)
+        public void Draw(GraphicsWithPen gp)
         {
             //No drawing event       
         }

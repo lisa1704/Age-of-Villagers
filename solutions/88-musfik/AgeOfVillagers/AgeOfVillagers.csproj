@@ -49,11 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WindowForm\GraphicsWithPen.cs" />
     <Compile Include="Shape\CompositeShapes\NoShape.cs" />
-    <Compile Include="VillageItem\BangladeshiItemFactory.cs" />
-    <Compile Include="VillageItem\EgyptianItemFactory.cs" />
+    <Compile Include="VillageItem\Item Factories\BangladeshiItemFactory.cs" />
+    <Compile Include="VillageItem\Item Factories\EgyptianItemFactory.cs" />
     <Compile Include="VillageItem\House.cs" />
-    <Compile Include="VillageItem\InuitHuntersItemFactory.cs" />
+    <Compile Include="VillageItem\Item Factories\InuitHuntersItemFactory.cs" />
     <Compile Include="VillageItem\IVillageItem.cs" />
     <Compile Include="Nation\ArabBedouin.cs" />
     <Compile Include="Shape\HouseShapes\InuitHuntersHouseShape.cs" />
@@ -74,13 +75,13 @@
     <Compile Include="Shape\CompositeShapes\Rectangle.cs" />
     <Compile Include="Shape\CompositeShapes\VShape.cs" />
     <Compile Include="Village.cs" />
-    <Compile Include="VillageItem\ArabItemFactory.cs" />
+    <Compile Include="VillageItem\Item Factories\ArabItemFactory.cs" />
     <Compile Include="VillageItem\Tree.cs" />
     <Compile Include="VillageItem\WaterResource.cs" />
-    <Compile Include="VillageWindow.cs">
+    <Compile Include="WindowForm\VillageWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VillageWindow.Designer.cs">
+    <Compile Include="WindowForm\VillageWindow.Designer.cs">
       <DependentUpon>VillageWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -94,7 +95,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VillageWindow.resx">
+    <EmbeddedResource Include="WindowForm\VillageWindow.resx">
       <DependentUpon>VillageWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

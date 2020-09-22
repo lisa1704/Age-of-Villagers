@@ -12,8 +12,7 @@ namespace AgeOfVillagers
         List<INation> nationlist = new List<INation>();
         INation nation;
         Village village = null;
-        Graphics g;
-        public Pen p; 
+        GraphicsWithPen graphicPen;
         string villageName = null;
 
         public VillageWindow()
@@ -25,9 +24,8 @@ namespace AgeOfVillagers
         {
             nation = (INation)NationlistBox.SelectedItem;
             villageName = null;
-      
-            g = drawing_space.CreateGraphics();
-            p = new Pen(Color.Black);
+
+            graphicPen = new GraphicsWithPen(drawing_space.CreateGraphics(), new Pen(Color.Black));
 
             nationlist.Add(new BangladeshiFarmers());
             nationlist.Add(new ArabBedouin());
@@ -47,15 +45,15 @@ namespace AgeOfVillagers
                 Point point = new Point(e.X, e.Y);
                 if (tree_btn.Checked)
                 {
-                    village.AddTree(g, p, point);
+                    village.AddTree(graphicPen, point);
                 }
                 else if (House_btn.Checked)
                 {
-                    village.AddHouse(g, p, point);
+                    village.AddHouse(graphicPen, point);
                 }
                 else if (water_btn.Checked)
                 {
-                    village.AddWaterResource(g, p, point);
+                    village.AddWaterResource(graphicPen, point);
                 }
             }
         }
@@ -85,7 +83,7 @@ namespace AgeOfVillagers
             if(village!= null)
             {
                 village.ChangeVillageNation(nation);
-                village.initiate(g, p);
+                village.initiate(graphicPen);
             }
         }
 
@@ -96,7 +94,7 @@ namespace AgeOfVillagers
                 if (villageName != null)
                 {
                     village = new Village(villageName, nation);
-                    village.initiate(g, p);
+                    village.initiate(graphicPen);
                 }
                 else
                     MessageBox.Show("Valid village name required to create new village ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -144,7 +142,7 @@ namespace AgeOfVillagers
                         if (village == null)
                             village = new Village("", nation);
                         village.SetState(state);
-                        village.initiate(g, p);
+                        village.initiate(graphicPen);
                         villageName = Village_name_textBox.Text = village.GetVillageName();
                         openFileDialog.Dispose();
                     }
