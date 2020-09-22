@@ -61,8 +61,8 @@ namespace Age_of_Villagers
             Graphics g = Menu_bar.CreateGraphics();
             //Font font = new Font("Calibri", 10, FontStyle.Regular);
             Brush brush = new SolidBrush(System.Drawing.Color.Black);
-            AbstractNationFactoryCreator abstractNationCreator = n.GetNation(nType);
-            Nation = abstractNationCreator.CollectNation();
+            INation NationCreator = n.GetNation(nType);
+           // Nation = NationCreator.CollectNation();
 
             foreach (Point pt in house_point)
             {

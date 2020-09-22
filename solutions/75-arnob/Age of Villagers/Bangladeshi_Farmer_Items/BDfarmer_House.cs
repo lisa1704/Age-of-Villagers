@@ -9,10 +9,15 @@ namespace Age_of_Villagers
 {
     class BDfarmer_House : CompositeShaping
     {
-        public BDfarmer_House(Point top, Point baseTopLeft, Point baseBottomRight)
+        public BDfarmer_House(Point point)
         {
-            AddComponent(new Triangle(top, baseTopLeft, new Point(baseBottomRight.X, baseTopLeft.Y)));
-            AddComponent(new Rectangle(baseTopLeft, baseBottomRight));
+            Point Top = new Point(point.X, point.Y);
+            Point TopLeft = new Point(point.X - 50, point.Y + 30);
+            Point BottomRight = new Point(point.X + 50, point.Y + 80);
+            Point TopRight = new Point(BottomRight.X, TopLeft.Y);
+
+            AddComponent(new Rectangle(TopLeft, BottomRight));
+            AddComponent(new Triangle(Top, TopLeft, TopRight));
 
         }
     }

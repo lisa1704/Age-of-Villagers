@@ -13,7 +13,7 @@ namespace Age_of_Villagers.Nation
     {
         string name;
 
-        public Egyptian_King(string name)
+        public Egyptian_King(string nam
         {
             this.name = name;
         }
