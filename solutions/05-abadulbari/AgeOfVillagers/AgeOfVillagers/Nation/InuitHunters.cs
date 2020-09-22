@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Nation
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         public VillageItem getHouse(Point point)
         {
