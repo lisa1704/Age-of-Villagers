@@ -4,11 +4,11 @@ using System.Drawing;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class EgyptianHouse : VillageComponents
+    class EgyptianKing : VillageComponents
     {
         private readonly Point top, bottomLeft, bottomMid, bottomRight;
 
-        public EgyptianHouse(Point point)
+        public EgyptianKing(Point point)
         {
             top = point;
             bottomLeft = new Point(top.X - 40, top.Y + 35);

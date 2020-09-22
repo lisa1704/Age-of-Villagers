@@ -15,13 +15,18 @@ namespace Age_of_Villagers.VillageComponents
             {
             Components = new List<IShape>();
             }
-            public void Draw(Graphics g, Pen p)
+        public void addComponent(IShape shape)
+        {
+            Components.Add(shape);
+        }
+        public void Draw(Graphics g, Pen p)
             {
                 foreach (IShape Component in Components )
                 {
                     Component.Draw(g, p);
                 }
             }
+
 
         }
     }

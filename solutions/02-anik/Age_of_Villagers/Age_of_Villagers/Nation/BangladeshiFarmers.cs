@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using Age_of_Villagers.VillageComponents
+using Age_of_Villagers.VillageComponents;
 
- namespace Age_of_Villagers.Nation
+namespace Age_of_Villagers.Nation
 {
     class BangladeshiFarmers : INation
     {
@@ -27,20 +27,26 @@ using Age_of_Villagers.VillageComponents
         {
             throw new NotImplementedException();
         }
-
-        public VillageComponents GetHouse(Point point)
+        public string getNationName()
         {
-            return new BangladeshiHouse(point);
+            throw new NotImplementedException();
         }
 
-        public VillageComponets getTree(Point point)
+
+
+        VillageComponents.VillageComponents INation.getHouse(Point p)
         {
-            return new BangladeshiTree(point);
+            throw new NotImplementedException();
         }
 
-        public VillageComponents getWaterSource(Point point)
+        VillageComponents.VillageComponents INation.getTree(Point p)
         {
-            return new BangladeshiWaterSource(point);
+            throw new NotImplementedException();
+        }
+
+        VillageComponents.VillageComponents INation.getWaterSource(Point p)
+        {
+            throw new NotImplementedException();
         }
     }
 }

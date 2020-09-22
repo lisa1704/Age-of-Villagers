@@ -22,6 +22,7 @@ namespace AgeOfVillagers.VillegeItems
             addComponent(new Rectangle(midLeft, bottomRight));
         }
 
+
         
     }
 }
