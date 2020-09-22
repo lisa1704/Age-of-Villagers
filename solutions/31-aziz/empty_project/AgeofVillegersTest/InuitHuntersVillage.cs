@@ -8,7 +8,19 @@ using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace AgeofVillegersTest
 {
-    class InuitHuntersVillage
+    public class InuitHuntersVillage
     {
+        [Fact]
+        public void InuitVillageTest()
+        {
+            AbstractNation inuitVillageHouse = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitVillageHouse.getHouseType().GetType(), new InuitHuntersHouse().GetType());
+
+            AbstractNation inuitVillageTree = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitVillageTree.getTreeType().GetType(), new InuitHuntersTree().GetType());
+
+            AbstractNation inuitVillageWaterSource = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitVillageWaterSource.getWaterSourceType().GetType(), new InuitHuntersWaterSource().GetType());
+        }
     }
 }
