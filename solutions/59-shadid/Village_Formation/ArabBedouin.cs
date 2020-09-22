@@ -23,5 +23,10 @@ namespace Village_Formation
         {
             
         }
+
+        public string NationName()
+        {
+            return "Arab Bedouins";
+        }
     }
 }

@@ -70,22 +70,26 @@ namespace Village_Formation
         {
             Graphics g = this.CreateGraphics();
             BangladeshiFarmers bd = new BangladeshiFarmers(g);
+            EgyptianKings ek = new EgyptianKings(g);
            
             if (radioButton1.Checked)
             {
 
                 bd.DrawWaterResource(e);
+                ek.DrawWaterResource(e);
 
             }
             else if(radioButton2.Checked)
             {
                 bd.DrawHouse(e);
+                ek.DrawHouse(e);
                 
 
             }
             else if(radioButton3.Checked)
             {
                 bd.DrawTree(e);
+                ek.DrawTree(e);
             }
            
         }
@@ -106,6 +110,11 @@ namespace Village_Formation
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }

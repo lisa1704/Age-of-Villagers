@@ -44,6 +44,11 @@ namespace Village_Formation
             g.DrawLine(mypen, x + 34, y - 16, x + 41, y - 13);
             g.DrawLine(mypen, x + 41, y - 13, x + 51, y - 17);
         }
+
+        public string NationName()
+        {
+            return "Bangladeshi Farmers";
+        }
     }
 }
 
