@@ -98,7 +98,7 @@ namespace AOV
             housePoint.Clear();
             treePoint.Clear();
             waterSourcePoint.Clear();
-            Nation.Text = "Select Nation";
+            Nation.Text = "Select nation";
             Canvas.BackColor = Color.WhiteSmoke;
             NameOfVillage.Text = "Name your village";
         }
