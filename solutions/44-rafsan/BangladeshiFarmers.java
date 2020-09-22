@@ -5,4 +5,19 @@ public class BangladeshiFarmers  implements INation{
     public IHouse getHouse() {
         return new BangladeshiFarmersHouse();
     }
+
+    @Override
+    public ITree getTree() {
+        return new BangladeshiFarmersTree();
+    }
+
+    @Override
+    public IWaterSource getWaterSource() {
+        return new BangladeshiFarmersWaterSource();
+    }
+
+    @Override
+    public ITerrain getTerrain() {
+        return new BangladeshiFarmerTerrain();
+    }
 }
