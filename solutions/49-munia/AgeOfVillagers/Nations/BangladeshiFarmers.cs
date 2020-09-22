@@ -29,7 +29,7 @@ namespace AgeOfVillagers
 
         public Color terrainColor()
         {
-            return Color.Green;
+            return Color.LightGreen;
         }
     }
 }

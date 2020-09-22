@@ -32,7 +32,6 @@ namespace AgeOfVillagers
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = canvas.CreateGraphics();
-            Pen p = new Pen(Color.Black);
             BangladeshiFarmers v = new BangladeshiFarmers();
             canvas.BackColor = v.terrainColor();
             if (tree.Checked == true)
