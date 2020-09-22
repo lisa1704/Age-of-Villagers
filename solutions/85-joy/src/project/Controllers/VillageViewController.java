@@ -36,7 +36,6 @@ public class VillageViewController implements Initializable {
     public String AssetType = "";
     public ArrayList<Shape> Object ;
     public Villages village;
-    private ArrayList<VillageState> assetList;
 
 
 
@@ -49,17 +48,17 @@ public class VillageViewController implements Initializable {
             public void handle(MouseEvent event) {
                 if(AssetType == "Tree"){
                     Object = nationFactory.drawTree(event.getSceneX(),event.getSceneY());
-                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
+                    village.assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
                 }
                 else if(AssetType == "House"){
                     Object = nationFactory.drawHouse(event.getSceneX(),event.getSceneY());
-                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
+                    village.assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
                 }
                 else if(AssetType == "WaterSource"){
                     Object = nationFactory.drawWaterSource(event.getSceneX(),event.getSceneY());
-                    assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
+                    village.assetList =village.AddAsset(event.getSceneX(), event.getSceneY(), AssetType);
                     DrawShape(Object);
 //                    DrawPane.getChildren().clear();
                 }
@@ -68,50 +67,28 @@ public class VillageViewController implements Initializable {
     }
 
     public void SaveVillage(ActionEvent actionEvent) {
-        String Filename = Village_Name.getText() + ".aov";
-//        JSONObject obj = new JSONObject();
-//        obj.put("Village_Name",Village_Name.getText());
-//        obj.put("Nation",NationDropDown.getValue());
-//        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
-        try {
-            FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
-            ObjectOutputStream out = new ObjectOutputStream(file);
-//            out.writeObject(villages);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+//        String Filename = Village_Name.getText() + ".aov";
+////        JSONObject obj = new JSONObject();
+////        obj.put("Village_Name",Village_Name.getText());
+////        obj.put("Nation",NationDropDown.getValue());
+////        Villages villages = new Villages(Village_Name.getText(), (String) NationDropDown.getValue());
+//        try {
+//            FileOutputStream file = new FileOutputStream("SavedVillages/"+Filename);
+//            ObjectOutputStream out = new ObjectOutputStream(file);
+////            out.writeObject(villages);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        village.SaveVillage(this.village);
 
     }
 
     public void OpenVillage(ActionEvent actionEvent) {
-        File selectedFile = null;
-        final JFrame iFRAME = new JFrame();
-        iFRAME.setAlwaysOnTop(true);
-        iFRAME.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        iFRAME.setLocationRelativeTo(null);
-        iFRAME.requestFocus();
+        village = new Villages(Village_Name.getText());
+        village = village.LoadVillage();
+        Village_Name.setText(village.VillageName);
 
-        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView());
-        int returnValue = fileChooser.showOpenDialog(iFRAME);
-        iFRAME.dispose();
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            selectedFile = fileChooser.getSelectedFile();
-            try {
-                FileInputStream file = new FileInputStream(selectedFile.getAbsolutePath());
-                ObjectInputStream in = new ObjectInputStream(file);
-//                JSONObject obj = (JSONObject) in.readObject();
-                Villages villages = (Villages)in.readObject();
-
-                System.out.println(villages.VillageName);
-                
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            System.out.println("No File Selected!");
-        }
+        DrawAssetList(village.assetList);
 
     }
 
@@ -157,15 +134,15 @@ public class VillageViewController implements Initializable {
         DrawPane.getChildren().clear();
         nationFactory = new NationFactory((String) NationDropDown.getValue());
         DrawPane.setStyle("-fx-background-color:"+nationFactory.getTerrainColor((String) NationDropDown.getValue()));
-        DrawAssetList(this.assetList);
+        DrawAssetList(village.assetList);
 
     }
 
     public void createNewVillage(ActionEvent actionEvent) {
         DrawPane.getChildren().clear();
-        this.assetList = new ArrayList<VillageState>();
-        DrawAssetList(this.assetList);
         this.village = new Villages(Village_Name.getText());
+        DrawAssetList(village.assetList);
+
 
     }
 }

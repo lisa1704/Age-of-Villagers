@@ -10,5 +10,7 @@
     <orderEntry type="library" name="apiguardian-api-1.0.0" level="project" />
     <orderEntry type="library" name="scenebuilder-8.5.0-all" level="project" />
     <orderEntry type="library" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="library" name="gson-2.8.6" level="project" />
+    <orderEntry type="library" name="java" level="project" />
   </component>
 </module>

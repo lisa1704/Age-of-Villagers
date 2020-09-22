@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/ExternalLib/jackson-lgpl-0.9.3-sources.jar!/src/java" />
+      <root url="jar://$PROJECT_DIR$/ExternalLib/jackson-lgpl-0.9.3-sources.jar!/src/perf" />
+      <root url="jar://$PROJECT_DIR$/ExternalLib/jackson-lgpl-0.9.3-sources.jar!/src/test" />
+    </SOURCES>
+  </library>
+</component>
