@@ -1,10 +1,12 @@
 using System;
 using Xunit;
+using AgeOfVillagers;
 
 namespace AgeOfVillagers.Test
 {
-    public class UnitTest1
+    public class DrawBdVillage
     {
+        
         [Fact]
         public void Test1()
         {
