@@ -128,10 +128,10 @@
             this.water_resource.Location = new System.Drawing.Point(69, 331);
             this.water_resource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.water_resource.Name = "water_resource";
-            this.water_resource.Size = new System.Drawing.Size(163, 31);
+            this.water_resource.Size = new System.Drawing.Size(203, 33);
             this.water_resource.TabIndex = 5;
             this.water_resource.TabStop = true;
-            this.water_resource.Text = "Water Resource";
+            this.water_resource.Text = "Water Source";
             this.water_resource.UseVisualStyleBackColor = true;
             // 
             // house
