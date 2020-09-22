@@ -23,9 +23,9 @@
    <children>
       <SplitPane dividerPositions="0.7090909090909091" prefHeight="388.0" prefWidth="638.0">
         <items>
-          <AnchorPane id="canvasContainer" fx:id="canvasLoader" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="800.0">
+          <AnchorPane fx:id="drawSpace" minHeight="400.0" minWidth="600.0" onMouseClicked="#getPositionAndObject" prefHeight="400.0" prefWidth="800.0">
                <children>
-                  <Canvas fx:id="canvas" height="400.0" onMouseClicked="#selectObject" width="600.0" />
+                  <Canvas fx:id="canvas" height="400.0" onMouseClicked="#getPositionAndObject" width="600.0" />
                </children></AnchorPane>
           <AnchorPane minHeight="400.0" minWidth="200.0" prefHeight="400.0" prefWidth="800.0">
                <children>
@@ -43,7 +43,7 @@
                   <Label fx:id="lblName" layoutX="18.0" layoutY="67.0" prefHeight="21.0" prefWidth="138.0" text="Name" />
                   <Label fx:id="lblNation" layoutX="18.0" layoutY="95.0" prefHeight="21.0" prefWidth="138.0" text="Nation" />
                   <TextField fx:id="nameOfVillage" layoutX="20.0" layoutY="200.0" prefHeight="31.0" prefWidth="167.0" promptText="Name of Your village" visible="false" />
-                  <ChoiceBox fx:id="nationOfVillage" layoutX="20.0" layoutY="239.0" prefHeight="31.0" prefWidth="167.0" visible="false"  />
+                  <ChoiceBox fx:id="nationOfVillage" layoutX="20.0" layoutY="239.0" prefHeight="31.0" prefWidth="167.0" visible="false" />
                </children>
             </AnchorPane>
         </items>

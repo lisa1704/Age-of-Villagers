@@ -1,9 +1,14 @@
 package sample;
 
 import javafx.collections.FXCollections;
+import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Shape;
 
 
 public class Controller {
@@ -13,8 +18,10 @@ public class Controller {
     public ChoiceBox<String> nationOfVillage;
     public Label lblName,lblNation;
     public String[] st={"A","B","C"};
-    public Canvas canvas;
     public boolean isCreating=true;
+    public AnchorPane drawSpace;
+    public Canvas canvas;
+    public GraphicsContext gc;
 
     public void selectTree(){
         rbtnHouse.setSelected(false);
@@ -30,19 +37,48 @@ public class Controller {
     }
 
 
-    public void selectObject(){
-        GraphicsContext gc =canvas.getGraphicsContext2D();
+    public String selectObject(){
+
         if (rbtnTree.isSelected()){
-            System.out.println("Tree is drawn");
+            //System.out.println("Tree is drawn");
+            return "Tree";
         }
         else if (rbtnHouse.isSelected()){
-            rbtnTree.setSelected(false);
-            System.out.println("House is drawn");
+            //System.out.println("House is drawn");
+            return "House";
         }
         else if (rbtnWaterSource.isSelected()){
-            System.out.println("Water Source is drawn");
-
+            //System.out.println("Water Source is drawn");
+            return "WS";
         }
+        return null;
+
+    }
+    public void getPositionAndObject(){
+        if (rbtnTree.isSelected() || rbtnHouse.isSelected() || rbtnWaterSource.isSelected()){
+            canvas.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    String object=selectObject();
+                    if (event.getButton().equals(MouseButton.PRIMARY)){
+                        if (event.getClickCount()==2){
+                            double x,y;
+                            x=event.getX();
+                            y=event.getY();
+                            gc=canvas.getGraphicsContext2D();
+                            if (object=="Tree")gc.fillText("T",x,y);
+                            else if (object=="House")gc.fillText("H",x,y);
+                            else if (object=="WS")gc.fillText("W",x,y);
+                        }
+                    }
+
+                }
+            });
+        }
+        else{
+            System.out.println("Select any object to draw.");
+        }
+
     }
     public void newVillageLoader(){
 
