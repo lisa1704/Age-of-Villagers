@@ -9,7 +9,7 @@ namespace Age_of_Villagers.Models.Manifests
     {
         private Point a;
         private Point b;
-        void setPoints(Point a , Point b)
+        public Line (Point a , Point b)
         {
             this.a = a;
             this.b = b;

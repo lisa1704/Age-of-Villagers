@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.Models.Manifests;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Age_of_Villagers
     {
         int xAxis;
         int yAxis;
+        Point local;
         Boolean HouseSwitch;
         Boolean TreeSwitch;
         Boolean WaterSourceSwitch;
@@ -41,6 +43,7 @@ namespace Age_of_Villagers
         private void VillageEditorPanel_Click(object sender, MouseEventArgs e)
         {
             Point p = new Point(e.X, e.Y);
+            local = p;
             xAxis = p.X;
             yAxis = p.Y;
             VillageEditorPanel.Invalidate();
@@ -57,8 +60,9 @@ namespace Age_of_Villagers
 
             if (HouseSwitch)
             {
-                
-                gfx.DrawRectangle(p, xAxis, yAxis, 16, 16);
+
+                House hut = new House(local);
+                hut.Draw(gfx, p);
                
 
             }
