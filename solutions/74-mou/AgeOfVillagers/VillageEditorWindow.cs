@@ -15,111 +15,142 @@ namespace AgeOfVillagers
 {
     public partial class VillageEditorWindow : Form
     {
-        public int x,y;
-        public string vname,item,checked_nation;
-        public Graphics gr;
-        public INation _nation;
-        public NationFactory nationfactory;
+        public string item = "", checked_nation = "";
+        private string vname ="";
+        NationFactory nationfactory = new NationFactory();
 
-        public List<Point> PointsOfHouse { get; set; } = new List<Point>();
-        public List<Point> PointsOfTree { get; set; } = new List<Point>();
-        public List<Point> PointsOfWatersource { get; set; } = new List<Point>();
+        private List<Point> PointsOfHouse { get; set; } = new List<Point>();
+        private List<Point> PointsOfTree { get; set; } = new List<Point>();
+        private List<Point> PointsOfWatersource { get; set; } = new List<Point>();
+
+
 
         public VillageEditorWindow()
         {
             InitializeComponent();
-            gr = drawingpanel.CreateGraphics();
-            
         }
-        private void VillageWindow_Load(object sender, EventArgs e)
+        private void VillageWindow_Load(object sender, EventArgs e) 
+        {
+        
+        }
+        private void toolpanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
+        private void titlelabel_Click(object sender, EventArgs e) 
         {
-            x = e.X;
-            y = e.X;
-            Point point = new Point(x, y);
-            Pen pen = new Pen(Color.Blue);
-            NationFactory NaFact = new NationFactory(nation.Text);
-
-            if(item == "Tree")
-            {
-                NaFact.GetNation(checked_nation).DrawTree(point).DrawShapes(gr, pen);
-
-            }
-            else if (item == "House")
-            {
-                NaFact.GetNation(checked_nation).DrawHouse(point).DrawShapes(gr, pen);
-
-            }
-            else if (item == "Water Source")
-            {
-                NaFact.GetNation(checked_nation).DrawWaterSource(point).DrawShapes(gr, pen);
-
-            }
-
+        
         }
-
-        public void TreeRadioMouseClicked(object sender, MouseEventArgs e)
-        {
-            item = "Tree";
-
-        }
-
-        public void HouseRadioMouseClicked(object sender, MouseEventArgs e)
-        {
-            item = "House";
-
-        }
-
-        public void WaterSourceRadioMouseClicked(object sender, MouseEventArgs e)
-        {
-            item = "River";
-
-        }
-
-
-        private void titlelabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        public void nation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            checked_nation = nation.Items[nation.SelectedIndex].ToString();
-            _nation = nationfactory.GetNation(checked_nation);
-            _nation.SetVillagename(villagename.Text);
-
-        }
-        private void villagename_TextChanged(object sender, EventArgs e)
-        {
-            _nation.SetVillagename(villagename.Text);
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void savevillage_Click(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TreeRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            item = "Tree";
+        }
+
+        private void HouseRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            item = "House";
+        }
+
+        private void WAtersourceRadioCheckedChanged(object sender, EventArgs e)
+        {
+            item = "Water Source";
+        }
+
+
+        private void PaintDrawPanel(object sender, PaintEventArgs e)
+        {
+            Graphics gr = drawingpanel.CreateGraphics();
+            Pen pen = new Pen(Color.Blue);
+            foreach (Point j in PointsOfTree)
+            {
+                nationfactory.GetNation(checked_nation).DrawTree(gr,j);
+
+            }
+            foreach (Point j in PointsOfHouse)
+            {
+                nationfactory.GetNation(checked_nation).DrawHouse(gr,j);
+
+            }
+            foreach (Point j in PointsOfWatersource)
+            {
+                nationfactory.GetNation(checked_nation).DrawWaterSource(gr,j);
+
+            }
+
+        }
+
+        public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (item == "Tree")
+            {
+                PointsOfTree.Add(e.Location);
+
+
+            }
+            else if (item == "House")
+            {
+                PointsOfHouse.Add(e.Location);
+
+            }
+            else if (item == "Water Source")
+            {
+                PointsOfWatersource.Add(e.Location);
+
+            }
+
+        }
+
+        public void nation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checked_nation = nation.Text;
+
+        }
+        private void villagenameTextChanged(object sender, EventArgs e)
+        {
+            vname = villagename.Text;
+            VillageNamelabel.Text = vname;
+
+        }
+
+        private void savevillage_Click(object sender, EventArgs e)
+        {
+
+        }
         public void newvillage_Click(object sender, EventArgs e)
         {
             //drawingpanel.Invalidate();
 
         }
+
+
         public void openvillage_Click(object sender, EventArgs e)
         {
             //drawingpanel.Invalidate();
         }
+
+
+
+        
 
 
     }

@@ -7,37 +7,20 @@ namespace AgeOfVillagers
 {
     class Arab : INation
     {
-        private string vname;
-        private Graphics gr;
-        private Pen pen;
-        void SetGraphics(Graphics gr)
+
+        public IShapes DrawHouse(Graphics gr,Point p)
         {
-            this.gr = gr;
+            return new ArabHouse(p);
         }
-        void SetPen(Pen pen)
+        public IShapes DrawTree(Graphics gr,Point p)
         {
-            this.pen = pen;
-        }
-        void SetVillagename(string vname)
-        {
-            this.vname = vname;
-        }
-        string GetVillagename()
-        {
-            return vname;
-        }
-        IShapes DrawHouse(Point p)
-        {
-            
-        }
-        IShapes DrawTree(Point p)
-        {
-            
+            return new ArabTree(p);
 
         }
 
-        IShapes DrawWaterSource(Point p)
+        public IShapes DrawWaterSource(Graphics gr,Point p)
         {
+            return new ArabWaterSource(p);
 
         }
     }

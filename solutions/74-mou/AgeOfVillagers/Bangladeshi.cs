@@ -7,39 +7,23 @@ namespace AgeOfVillagers
 {
     class Bangladeshi : INation
     {
-        private string vname;
-        private Graphics gr;
-        private Pen pen;
-
-        public void SetGraphics(Graphics gr)
+        public IShapes DrawTree(Graphics g, Point p)
         {
-            this.gr = gr;
-        }
-        public void SetPen(Pen pen)
-        {
-            this.pen = pen;
-        }
-        public void SetVillagename(string vname)
-        {
-            this.vname = vname;
-        }
-        public string GetVillagename()
-        {
-            return vname;
-        }
-        public IShapes DrawHouse(Point p)
-        {
-            return new BangladeshiHouse(p);
-        }
-        public IShapes DrawTree(Point p)
-        {
-            return new BangladeshiTree(p);
+            BangladeshiTree t = new BangladeshiTree(p);
+            t.DrawShapes(g);
+            return t;
 
         }
-
-        public IShapes DrawWaterSource(Point p)
+        public IShapes DrawHouse(Graphics g, Point p)
         {
-            return new BangladeshiWaterSource(p);
+            CompositeShapes h = new BangladeshiHouse(p);
+            return h;
+        }
+
+        public IShapes DrawWaterSource(Graphics g, Point p)
+        {
+            CompositeShapes w = new BangladeshiWaterSource(p);
+            return w;
 
         }
     }

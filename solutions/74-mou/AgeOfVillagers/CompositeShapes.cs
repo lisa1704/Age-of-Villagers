@@ -7,17 +7,23 @@ namespace AgeOfVillagers
 {
     class CompositeShapes : IShapes
     {
-        private List<IShapes> listOfShapes = new List<IShapes>();
+        protected List<IShapes> listOfShapes;
 
-        public void add_shapes(IShapes shapes)
+        public CompositeShapes()
+        {
+            listOfShapes = new List<IShapes>();
+
+        }
+
+        protected void add_shapes(IShapes shapes)
         {
             listOfShapes.Add(shapes);
         }
-        public void DrawShapes(Graphics gr, Pen pen)
+        public void DrawShapes(Graphics gr)
         {
             foreach(var sh in listOfShapes)
             {
-                sh.DrawShapes(gr, pen);
+                sh.DrawShapes(gr);
             }
         }
     }
