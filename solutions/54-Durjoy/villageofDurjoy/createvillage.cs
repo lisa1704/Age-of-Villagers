@@ -20,7 +20,9 @@ namespace villageofDurjoy
         public createvillage()
         {
             InitializeComponent();
-           
+            g = flowLayoutPanel1.CreateGraphics();
+            p = new Pen(Color.Black);
+
         }
 
 
