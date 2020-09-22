@@ -47,4 +47,9 @@ public abstract class NationAbstract
     {
         return this.waterSource;
     }
+
+    public Color getBackColor()
+    {
+        return this.panel.BackColor;
+    }
 }

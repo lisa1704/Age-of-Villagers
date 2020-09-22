@@ -60,5 +60,18 @@ namespace AgeOfVillagers_Test
 
         }
 
+        [Fact]
+        public void TestNationTerrainColor()
+        {
+            Panel panel = new Panel();
+
+            Graphics newg = panel.CreateGraphics();
+            NationAbstract egyptianKingsT = new EgyptianKings(newg, panel);
+            Color color = egyptianKingsT.getBackColor();
+            Color expected = Color.Yellow;
+            Assert.IsType<Color>(egyptianKingsT.getBackColor());
+
+        }
+
     }
 }
