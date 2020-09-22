@@ -37,5 +37,15 @@ namespace AgeofVillagersTest
             Assert.IsType(expected, actual);
 
         }
+
+        [Fact]
+        public void IUnitNationFactory()
+        {
+            FactoryPattern nationFactory = new FactoryPattern();
+            var actual = nationFactory.GetNation("InuitHunters");
+            var expected = typeof(InuitHunters);
+            Assert.IsType(expected, actual);
+
+        }
     }
 }
