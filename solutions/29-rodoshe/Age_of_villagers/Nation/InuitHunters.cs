@@ -30,4 +30,7 @@ namespace Age_of_Villagers.Nation
 
     }
 
+    internal interface INation
+    {
+    }
 }
