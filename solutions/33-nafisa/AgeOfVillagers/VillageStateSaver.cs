@@ -20,7 +20,8 @@ namespace AgeOfVillagers
 
 
             SaveFileDialog sfDialog = new SaveFileDialog();
-           
+            sfDialog.InitialDirectory = @"G:\3.1\DP\solutions\33-nafisa\AgeOfVillagers\savedfile";
+            sfDialog.RestoreDirectory = true;
             sfDialog.FileName = "*.aov";
             sfDialog.DefaultExt = "aov";
             sfDialog.Filter = "AoV file(*.aov)| *.aov";
