@@ -15,7 +15,7 @@ namespace AgeOfVillagers.Nation
 
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return "Egyptian Kings";
         }
 
         public Color getTerrainColor()

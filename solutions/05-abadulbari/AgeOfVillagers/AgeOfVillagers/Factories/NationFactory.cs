@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Factories
 {
-    class NationFactory
+    public class NationFactory
     {
         string nationName;
         public NationFactory(string nationName)
