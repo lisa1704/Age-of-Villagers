@@ -24,5 +24,14 @@ namespace AgeofVillagersTest
             Color test = Color.LightGoldenrodYellow;
             Assert.Equal(actual, test);
         }
+
+        [Fact]
+        public void EgyptTerrainColor()
+        {
+            EgyptianKings egypt = new EgyptianKings();
+            Color actual = egypt.TerrainColor();
+            Color test = Color.Yellow;
+            Assert.Equal(actual, test);
+        }
     }
 }
