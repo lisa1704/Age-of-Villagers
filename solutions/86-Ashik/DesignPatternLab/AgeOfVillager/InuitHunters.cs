@@ -24,13 +24,12 @@ namespace AgeOfVillager
 
         public ITree drawTree(MouseEventArgs e)
         {
-            throw new Exception();
+            return new NullTree();
         }
 
         public IWaterSource drawWaterSource(MouseEventArgs e)
         {
-            throw new Exception();
-            //MessageBox.Show("Relies on natural water sources so it is not possible to place water sources");
+            return new NullWaterSource();
         }
         public Color setColor()
         {
