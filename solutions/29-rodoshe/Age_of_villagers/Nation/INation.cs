@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace Age_of_villagers.Nation
 {
-    interface INation
+    public interface INation
     {
-        public interface INation
-        {
             string getNationName();
             Color BgColor();
             void DrawHouse();
@@ -22,7 +20,6 @@ namespace Age_of_villagers.Nation
             VillageComponents GetHouse(Point p);
             VillageComponents getTree(Point p);
             VillageComponents getWaterSource(Point p);
-        }
 
     }
 }
