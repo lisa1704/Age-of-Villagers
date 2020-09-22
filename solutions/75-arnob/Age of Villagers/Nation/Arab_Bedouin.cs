@@ -21,9 +21,9 @@ namespace Age_of_Villagers.Nation
         {
             return name;
         }
-        public void GetHouse(Graphics graphics, Point _point)
+        public void GetHouse(Graphics graphics, Point point)
         {
-            Arab_House arab_house = new Arab_House(new Point(_point.X, _point.Y), new Point(_point.X - 4, _point.Y + 13), new Point(_point.X + 4, _point.Y + 13), new Point(_point.X + 8, _point.Y - 3), new Point(_point.X + 12, _point.Y + 11));
+            Arab_House arab_house = new Arab_House(point);
             arab_house.Paint(graphics);
 
         }
@@ -33,9 +33,9 @@ namespace Age_of_Villagers.Nation
             return Color.LightYellow;
         }
 
-        public void GetTree(Graphics graphics, Point _point)
+        public void GetTree(Graphics graphics, Point point)
         {
-            Arab_Tree arab_tree = new Arab_Tree(new Point(_point.X, _point.Y), new Point(_point.X + 8, _point.Y - 4), new Point(_point.X - 8, _point.Y - 4), new Point(_point.X + 6, _point.Y - 10), new Point(_point.X - 6, _point.Y - 10), new Point(_point.X, _point.Y - 13), new Point(_point.X - 1, _point.Y + 8), new Point(_point.X + 1, _point.Y));
+            Arab_Tree arab_tree = new Arab_Tree(point);
             arab_tree.Paint(graphics);
         }
 

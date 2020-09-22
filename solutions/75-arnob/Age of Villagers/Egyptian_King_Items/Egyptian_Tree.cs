@@ -14,7 +14,7 @@ namespace Age_of_Villagers
             Point startPoint = new Point(_point.X, _point.Y);
             Point pt1 = new Point(_point.X - 3, _point.Y - 8);
             Point pt2 = new Point(_point.X + 3, _point.Y - 8);
-                Point pt3 = new Point(_point.X - 5, _point.Y - 16);
+            Point pt3 = new Point(_point.X - 5, _point.Y - 16);
             Point pt4 = new Point(_point.X + 4, _point.Y - 17);
             Point pt5 = new Point(_point.X - 8, _point.Y - 14);
             Point pt6 = new Point(_point.X - 1, _point.Y - 17);

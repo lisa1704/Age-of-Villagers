@@ -12,7 +12,7 @@ namespace Age_of_Villagers.Nation
     {
         public void GetHouse(Graphics graphics, Point _point)
         {
-            Inuit_House inuit_house = new Inuit_House(new Point(_point.X, _point.Y), new Point(_point.X + 16, _point.Y));
+            Inuit_House inuit_house = new Inuit_House(_point);
             inuit_house.Paint(graphics);
         }
 

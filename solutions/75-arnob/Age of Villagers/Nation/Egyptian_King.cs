@@ -41,7 +41,7 @@ namespace Age_of_Villagers.Nation
 
         public void GetWaterSource(Graphics graphics, Point _point)
         {
-            Egyptian_WaterSource egyptian_ws = new Egyptian_WaterSource(new Point(_point.X, _point.Y), new Point(_point.X + 12, _point.Y + 12));
+            Egyptian_WaterSource egyptian_ws = new Egyptian_WaterSource(_point);
             egyptian_ws.Paint(graphics);
         }
     }

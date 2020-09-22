@@ -9,9 +9,11 @@ namespace Age_of_Villagers
 {
     class Egyptian_WaterSource : CompositeShaping
     {
-        public Egyptian_WaterSource(Point pt1, Point pt2)
+        public Egyptian_WaterSource(Point point)
         {
+            Point pt1 = new Point(point.X, point.Y);
+            Point pt2 = new Point(point.X + 12, point.Y + 12) ;
             AddComponent(new EllipseShape(pt1, pt2));
         }
     }
-}
+} 

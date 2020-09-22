@@ -11,8 +11,18 @@ namespace Age_of_Villagers.Arab_bedouin
     {
         
         
-            public Arab_Tree(Point startPoint, Point point1, Point point2, Point point3, Point point4, Point point5, Point topLeftRectangle, Point bottomRightRectangle)
+            public Arab_Tree(Point _point)
             {
+            Point startPoint = new Point(_point.X, _point.Y);
+            Point point1 = new Point(_point.X + 16, _point.Y - 8);
+            Point point2 = new Point(_point.X - 16, _point.Y - 8);
+            Point point3 = new Point(_point.X + 12, _point.Y - 20);
+            Point point4 = new Point(_point.X - 12, _point.Y - 20);
+            Point point5 = new Point(_point.X, _point.Y - 26);
+            Point topLeftRectangle = new Point(_point.X - 2, _point.Y + 16);
+            Point bottomRightRectangle = new Point(_point.X + 2, _point.Y);
+
+
                 AddComponent(new Line(startPoint, point1));
                 AddComponent(new Line(startPoint, point2));
                 AddComponent(new Line(startPoint, point3));
@@ -22,7 +32,7 @@ namespace Age_of_Villagers.Arab_bedouin
                 // Rectangle
                 AddComponent(new Rectangle(topLeftRectangle, bottomRightRectangle));
 
-            }
-        
+        } 
+
     }
 }
