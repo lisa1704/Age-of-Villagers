@@ -60,7 +60,11 @@ namespace AgeOfVillagers
         public void SetVillageState(VillageState village)
         {
             Drawingpanel.BackColor = village.terraincolor;
-
+            label2.Text = village.villagename;
+            label3.Text = village.nationname;
+            house_locations.Clear();
+            tree_locations.Clear();
+            watersource_locations.Clear();
             foreach (Point point in village.Houses)
             {
                 house_locations.Add(point);
@@ -94,8 +98,15 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
+            Refresh();
+            VillageStateLoader load = new VillageStateLoader();
 
+            load.execute();
+            village = load.LoadVillage();
+            SetVillageState(village);
+            Repaint(village);
             
+
         }
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
@@ -128,23 +139,31 @@ namespace AgeOfVillagers
             //Drawingpanel.Invalidate();
         }
 
-        private void Drawingpanel_Paint(object sender, PaintEventArgs e)
+        private void Repaint(VillageState village)
         {
             // repaint //
-            nation_name = Form1.NationName;
-            Nations nation = new Nations(nation_name, Drawingpanel);
-
-            foreach (Point point in house_locations)
+            //nation_name = village.nationname;
+            Nations nation = new Nations(village.nationname, Drawingpanel);
+            if (house_locations != null)
             {
-                nation.getNation().DrawHouse(point, Drawingpanel);
+                foreach (Point point in house_locations)
+                {
+                    nation.getNation().DrawHouse(point, Drawingpanel);
+                }
             }
-            foreach (Point point in tree_locations)
+            if (tree_locations != null)
             {
-                nation.getNation().DrawTree(point, Drawingpanel);
+                foreach (Point point in tree_locations)
+                {
+                    nation.getNation().DrawTree(point, Drawingpanel);
+                }
             }
-            foreach (Point point in watersource_locations)
+            if (tree_locations != null)
             {
-                nation.getNation().DrawWaterSource(point, Drawingpanel);
+                foreach (Point point in watersource_locations)
+                {
+                    nation.getNation().DrawWaterSource(point, Drawingpanel);
+                }
             }
         }
     }

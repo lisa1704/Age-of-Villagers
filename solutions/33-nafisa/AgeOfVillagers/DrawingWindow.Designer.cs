@@ -50,7 +50,7 @@ namespace AgeOfVillagers
             this.Drawingpanel.Name = "Drawingpanel";
             this.Drawingpanel.Size = new System.Drawing.Size(540, 446);
             this.Drawingpanel.TabIndex = 0;
-            this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
+            //this.Drawingpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawingpanel_Paint);
             this.Drawingpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawingpanel_MouseClick);
             // 
             // ToolsPanel
