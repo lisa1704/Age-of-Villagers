@@ -15,23 +15,23 @@ namespace Age_of_Villagers
             this.NationName = NationName;
         }
 
-        public void getNation(Point point)
+        public INation GetNation(Point point)
         {
             if (NationName =="Bangladeshi Farmers")
             {
-                
+                return new BangladeshiFarmers(point);
             }
             else if(NationName=="Arab Bedouin")
             {
-
+                return new ArabBedouin(point);
             }
             else if (NationName == "Egyptian Kings")
             {
-
+                return new EgyptianKing(point);
             }
             else
             {
-
+                return new InuitHunters(point);
             }
         }
 
