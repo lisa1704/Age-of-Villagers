@@ -88,7 +88,7 @@ namespace AgeOfVillagers
         public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Pen pen = new Pen(Color.Blue, 1);
-            gr.DrawLine(pen, new Point(e.X,e.Y), new Point(e.X + 10, e.Y));
+            //gr.DrawLine(pen, new Point(e.X,e.Y), new Point(e.X + 10, e.Y));
               
             if (item == "Tree")
             {
@@ -98,12 +98,12 @@ namespace AgeOfVillagers
             }
             else if (item == "House")
             {
-                nationfactory.GetNation(checked_nation).DrawHouse(gr, new Point(e.X, e.Y));
+                nationfactory.GetNation(checked_nation).DrawHouse(gr, new Point(e.X, e.Y)).DrawShapes(gr, pen);
 
             }
             else if (item == "Water Source")
             {
-                nationfactory.GetNation(checked_nation).DrawTree(gr, new Point(e.X, e.Y)).DrawShapes(gr, pen);
+                nationfactory.GetNation(checked_nation).DrawTree(gr, new Point(e.X, e.Y));
 
             }
 
