@@ -9,7 +9,7 @@ namespace Ageofvillagers.Items
 {
     interface IItems
     {
-        void Draw(Graphics g, Pen p);
+        void Draw(Graphics g, Pen p,int x,int y);
 
     }
 }
