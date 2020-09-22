@@ -19,8 +19,8 @@ namespace Age_of_Villagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
-        public INation nation;
         Factory_Nation nationfactory = new Factory_Nation();
+        INation nation;
         public Village()
         {
             InitializeComponent();
@@ -63,6 +63,7 @@ namespace Age_of_Villagers
 
         private void saveVillagebutton_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show(villageName.Text + "Village is saved");
         }
 
@@ -77,7 +78,8 @@ namespace Age_of_Villagers
 
         private void openVillagebutton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Village is opened");
+
+            MessageBox.Show("Opened "+villageName.Text+" village.");
         }
 
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
@@ -106,19 +108,23 @@ namespace Age_of_Villagers
         {
             Pen pen = new Pen(Color.Black);
             Graphics g = drawingPanel.CreateGraphics();
+            Point p = new Point(e.X, e.Y);
+            int x = e.X;
+            int y = e.Y;
+            village_type = NationName.Text;
             if (ItemNames == "Tree")
             {
-                tree_point.Add(e.Location);
+                nationfactory.GetNation(village_type).DrawTree(g,p);
             }
 
             if (ItemNames == "House")
             {
-                house_point.Add(e.Location);
+                nationfactory.GetNation(village_type).DrawHouse(g, p);
             }
          
             if (ItemNames == "WaterSource")
             {
-                waterSource_point.Add(e.Location);
+                nationfactory.GetNation(village_type).DrawWaterSource(g,p);
             }
 
             drawingPanel.Invalidate();
