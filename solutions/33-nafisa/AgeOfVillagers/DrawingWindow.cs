@@ -123,6 +123,7 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+           
             Refresh();
 
         }
