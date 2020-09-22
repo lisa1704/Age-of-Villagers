@@ -12,9 +12,14 @@ namespace AgeOfVillagers
         int widtth = 24;
         public abstract void createTree();
 
-        public void grid_size()
+        public int grid_height()
         {
-            throw new NotImplementedException();
+            return height;
+        }
+
+        public int grid_width()
+        {
+            return widtth;
         }
     }
 }
