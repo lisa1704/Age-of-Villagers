@@ -56,6 +56,8 @@ namespace Age_of_Villagers
             InitializeComponent();
         }
 
+
+
         private void _Click(object sender, EventArgs e)
         {
             Graphics g = Menu_bar.CreateGraphics();
@@ -152,10 +154,27 @@ namespace Age_of_Villagers
             item = "Water_source";
         }
 
+    
 
-       // private void Village_Name_Click(object sender, EventArgs e)
-       // {
-         //   throw new NotImplementedException();
+        private void Menu_bar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void _Click(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label_ageOfVillagers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // private void Village_Name_Click(object sender, EventArgs e)
+        // {
+        //   throw new NotImplementedException();
         //} 
 
 

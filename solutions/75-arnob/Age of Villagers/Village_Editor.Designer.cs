@@ -145,6 +145,7 @@ namespace Age_of_Villagers
             this.Menu_bar.Size = new System.Drawing.Size(222, 400);
             this.Menu_bar.TabIndex = 9;
             this.Menu_bar.Click += new System.EventHandler(this._Click);
+            this.Menu_bar.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_bar_Paint);
             // 
             // label_ageOfVillagers
             // 
@@ -155,7 +156,7 @@ namespace Age_of_Villagers
             this.label_ageOfVillagers.TabIndex = 8;
             this.label_ageOfVillagers.Text = "Age of Villagers";
             this.label_ageOfVillagers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-           // this.label_ageOfVillagers.Click += new System.EventHandler(this.AgeOfVillagers_Click);
+            this.label_ageOfVillagers.Click += new System.EventHandler(this.label_ageOfVillagers_Click);
             // 
             // comboBox_NationList
             // 
@@ -180,7 +181,6 @@ namespace Age_of_Villagers
             this.Village_Name_textBox.TabIndex = 6;
             this.Village_Name_textBox.Text = "Village Name";
             this.Village_Name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.Village_Name_textBox.Click += new System.EventHandler(this.Village_Name_Click);
             // 
             // Village_Editor_Window
             // 
