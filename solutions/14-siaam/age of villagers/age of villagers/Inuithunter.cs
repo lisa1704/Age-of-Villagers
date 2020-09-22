@@ -10,5 +10,10 @@ namespace age_of_villagers
         {
             return colorofbackground;
         }
+
+        public void drawHouse()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

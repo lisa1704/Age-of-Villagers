@@ -16,6 +16,8 @@ namespace age_of_villagers
         string nameofnation;
         NationFactory nationtype = new NationFactory();
         Graphics g;
+        //List<Point> Locations = new List<Point>();
+
         public aov_editor()
         {
             InitializeComponent();
@@ -46,7 +48,7 @@ namespace age_of_villagers
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-           
+            //Locations.Add(e.Location);
         }
 
         private void treebutton_Click(object sender, EventArgs e)
@@ -83,6 +85,7 @@ namespace age_of_villagers
         {
             panel1.BackColor = Color.Transparent;
             nation.ResetText();
+            vill_name.ResetText();
         }
     }
 }
