@@ -7,17 +7,32 @@ namespace AgeOfVillagers
 {
     class ArabTree : CompositeShapes
     {
-        private Point p1, p2, p3, p4, p5;
+        private Point ptr, pbl, pbr, p1, p2, p3, p4, p5;
+        int pm, m, n;
         public ArabTree(Point p)
         {
-            this.p1 = p;
-            p2 = new Point(p1.X + 10, p1.Y + 15);
-            p3 = new Point(p2.X, p2.Y + 18);
-            p4 = new Point(p2.X + 5, p2.Y + 18);
-            p5 = new Point(p2.X + 5, p2.Y);
+            ptr = new Point(p.X + 5, p.Y);
+            pbr = new Point(p.X + 5, p.Y + 15);
+            pbl = new Point(p.X, p.Y + 15);
 
-            add_shapes(new Circle(p, 15));
-            add_shapes(new Rectangle(p2, p3, p4, p5));
+            m = (p.X + ptr.X) / 2;
+            n = (p.Y + ptr.Y) / 2;
+
+            p1 = new Point(m, n - 18);
+            p2 = new Point(m + 8, n - 18);
+            p3 = new Point(ptr.X + 15, ptr.Y - 12);
+            p4 = new Point(m - 8, n - 15);
+            p5 = new Point(p.X - 12, p.Y - 12);
+
+
+            
+            Point pm = new Point(m, n);
+            add_shapes(new Rectangle(p, pbl, pbr, ptr));
+            add_shapes(new Line(pm, p1));
+            add_shapes(new Line(pm, p2));
+            add_shapes(new Line(pm, p3));
+            add_shapes(new Line(pm, p4));
+            add_shapes(new Line(p, p5));
 
         }
     }
