@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Arabbedouin.cs" />
     <Compile Include="Bangladeshifarmers.cs" />
+    <Compile Include="circlecreate.cs" />
     <Compile Include="Egyptianking.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
