@@ -8,20 +8,20 @@ namespace Age_of_villagers.Components
 {
     public abstract class VillageComponent : IShape
     {
-        private readonly List<IShape> SComponents;
+        private readonly List<IShape> S_Components;
 
         public VillageComponent()
         {
-            SComponents = new List<IShape>();
+            S_Components = new List<IShape>();
         }
 
         public void AddComp(IShape shape)
         {
-            SComponents.Add(shape);
+            S_Components.Add(shape);
         }
         public void draw(Graphics g, Pen p)
         {
-            foreach (var component in SComponents)
+            foreach (var component in S_Components)
                 component.draw(g, p);
         }
 
