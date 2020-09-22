@@ -104,10 +104,10 @@ namespace ageOfVillagers
         {
             Graphics g = panel2.CreateGraphics();
             Shape nation = NationFactory.GetNation(currentNationName);
-            string color = BackgroundColor.GetBackgroundColor(currentNationName, panel2);
+            BackgroundColor.GetBackgroundColor(currentNationName, panel2);
             IShape shape = nation.GetItem(currentselect);
             shape.draw(Cursor.Position.X, Cursor.Position.Y, g);
-            return color;
+            return shape.draw(x,y,g);
         }
 
         

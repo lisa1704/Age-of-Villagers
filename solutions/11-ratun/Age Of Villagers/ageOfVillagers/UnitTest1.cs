@@ -10,7 +10,7 @@ namespace ageOfVillagers
         public void Test()
         {
             MenuForm menuform = new MenuForm();
-            Assert.AreEqual("white",menuform.testShape("Inuit Hunters","tree",0,0));
+            Assert.AreEqual("Drawing Inuit House", menuform.testShape("Inuit Hunters","house",0,0));
         }
     }
 }

@@ -6,35 +6,35 @@ namespace ageOfVillagers
 {
     internal class BackgroundColor
     {
-        string color;
-        public string GetBackgroundColor(string currentNationName, Panel panel)
+        //string color;
+        public void GetBackgroundColor(string currentNationName, Panel panel)
         {
             if (currentNationName == "Bangladeshi Farmer")
             {
                 panel.BackColor = Color.Green;
-                color = "Green";
+                //color = "Green";
             }
             else if (currentNationName == "Arab Bedouin")
             {
                 panel.BackColor = Color.LightYellow;
-                color = "light yellow";
+                //color = "light yellow";
             }
             else if (currentNationName == "Egyptian Kings")
             {
                 panel.BackColor = Color.Yellow;
-                color = "yellow";
+                //color = "yellow";
             }
             else if (currentNationName == "Inuit Hunters")
             {
                 panel.BackColor = Color.White;
-                color = "white";
+                //color = "white";
             }
             else
             {
-                //throw new NotImplementedException();
-                color = "null";
+                throw new NotImplementedException();
+                //color = "null";
             }
-            return color;
+            //return color;
         }
     }
 }
