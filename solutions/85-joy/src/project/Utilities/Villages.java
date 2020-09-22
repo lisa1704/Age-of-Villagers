@@ -1,9 +1,7 @@
 package project.Utilities;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
+
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
@@ -35,6 +33,7 @@ public class Villages implements Serializable {
             FileWriter writer = new FileWriter(jsonFile);
             writer.write(json);
             writer.close();
+            System.out.println(Filename+" Successfully saved!");
     } catch (Exception e) {
         e.printStackTrace();
     }
@@ -58,6 +57,7 @@ public class Villages implements Serializable {
             try {
                 BufferedReader br = new BufferedReader(new FileReader(selectedFile));
                 villages = new Gson().fromJson(br,Villages.class);
+                System.out.println("File loaded Successfully!");
 
             } catch (Exception e) {
                 e.printStackTrace();
