@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BangladeshiFarmers.cs" />
     <Compile Include="BangladeshiHouse.cs" />
+    <Compile Include="BangladeshiItemFactory.cs" />
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource.cs" />
     <Compile Include="Form1.cs">
