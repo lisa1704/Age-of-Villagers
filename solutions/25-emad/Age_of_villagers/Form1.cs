@@ -88,7 +88,13 @@ namespace Age_of_villagers
 
             Graphics g = panel.CreateGraphics();
 
-            Point p = new Point(e.Location);
+            Point p = new Point();
+
+            p = e.Location;
+
+            village.CheckVillage(village_name).DrawWaterSource(g,p);
+
+
 
 
         }
