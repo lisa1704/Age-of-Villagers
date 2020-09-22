@@ -8,6 +8,11 @@ namespace Village_Formation
 {
     interface INation
     {
+        void DrawTree();
+
+        void DrawHouse();
+
+        void DrawWaterResource();
 
     }
 }

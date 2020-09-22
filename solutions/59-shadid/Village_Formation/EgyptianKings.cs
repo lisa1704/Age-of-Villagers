@@ -8,5 +8,19 @@ namespace Village_Formation
 {
     class EgyptianKings : INation
     {
+        public void DrawHouse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawTree()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterResource()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
