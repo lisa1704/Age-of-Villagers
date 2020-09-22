@@ -103,7 +103,7 @@ namespace AgeOfVillagers
             }
             else if (item == "Water Source")
             {
-                nationfactory.GetNation(checked_nation).DrawTree(gr, new Point(e.X, e.Y));
+                nationfactory.GetNation(checked_nation).DrawWaterSource(gr, new Point(e.X, e.Y)).DrawShapes(gr, pen);
 
             }
 
