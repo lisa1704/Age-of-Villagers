@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Arabs : INation
+    public class Arabs : INation
     {
         private string vName;
         Pen pen = new Pen(Color.Black);

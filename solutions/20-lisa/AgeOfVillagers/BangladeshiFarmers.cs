@@ -6,9 +6,9 @@ using System.Text;
 namespace AgeOfVillagers
 
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
-        Pen pen = new Pen(Color.Green);
+        Pen pen = new Pen(Color.Black);
         private string vName;
 
         public void DrawHouse(Graphics graphics, Point point)
