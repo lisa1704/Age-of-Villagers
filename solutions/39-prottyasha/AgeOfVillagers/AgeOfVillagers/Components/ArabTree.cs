@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class ArabTree : IComponent
+    public class ArabTree : IComponent
     {
         public void draw(Point p, Graphics g, Pen pen)
         {
