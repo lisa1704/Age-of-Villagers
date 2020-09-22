@@ -9,9 +9,9 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
     {
         public BDFarmersTree(Point point)
         {
-            Point TopPoint = new Point(point.X+60, point.Y+70);
-            Point BottomRight = new Point(point.X+28, point.Y+100);
-            Point TopLeft = new Point(point.X+33, point.Y+45);
+            Point TopPoint = new Point(point.X + 15, point.Y + 20);
+            Point TopLeft = new Point(point.X + 6, point.Y + 12);
+            Point BottomRight = new Point(point.X + 9, point.Y + 30);
 
             AddComponent(new Rectangle(TopLeft, BottomRight));
             AddComponent(new Ellipse(point, TopPoint));
