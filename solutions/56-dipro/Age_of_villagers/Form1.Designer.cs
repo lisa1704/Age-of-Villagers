@@ -35,9 +35,9 @@
             this.House = new System.Windows.Forms.Button();
             this.Watersource = new System.Windows.Forms.Button();
             this.Savevillage = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.Newvillage = new System.Windows.Forms.Button();
             this.Openvillage = new System.Windows.Forms.Button();
+            this.Age_of_villagers = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Drawingpanel
@@ -89,20 +89,6 @@
             this.Savevillage.UseVisualStyleBackColor = true;
             this.Savevillage.Click += new System.EventHandler(this.Savevillage_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Bangladeshi Farmers",
-            "Egyptian Kings",
-            "Arab Bedoun",
-            "Inuit Hunters"});
-            this.listBox1.Location = new System.Drawing.Point(648, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // Newvillage
             // 
             this.Newvillage.Location = new System.Drawing.Point(606, 364);
@@ -123,14 +109,25 @@
             this.Openvillage.UseVisualStyleBackColor = true;
             this.Openvillage.Click += new System.EventHandler(this.Openvillage_Click);
             // 
+            // Age_of_villagers
+            // 
+            this.Age_of_villagers.AutoSize = true;
+            this.Age_of_villagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Age_of_villagers.Location = new System.Drawing.Point(646, 37);
+            this.Age_of_villagers.Name = "Age_of_villagers";
+            this.Age_of_villagers.Size = new System.Drawing.Size(137, 20);
+            this.Age_of_villagers.TabIndex = 8;
+            this.Age_of_villagers.Text = "Age of villagers ";
+            this.Age_of_villagers.Click += new System.EventHandler(this.Age_of_villagers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.Age_of_villagers);
             this.Controls.Add(this.Openvillage);
             this.Controls.Add(this.Newvillage);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.Savevillage);
             this.Controls.Add(this.Watersource);
             this.Controls.Add(this.House);
@@ -140,6 +137,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,9 +150,9 @@
         private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button Watersource;
         private System.Windows.Forms.Button Savevillage;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button Newvillage;
         private System.Windows.Forms.Button Openvillage;
+        private System.Windows.Forms.Label Age_of_villagers;
     }
 }
 

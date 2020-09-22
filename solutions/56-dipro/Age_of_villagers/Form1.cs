@@ -47,11 +47,6 @@ namespace Age_of_villagers
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Newvillage_Click(object sender, EventArgs e)
         {
 
@@ -63,6 +58,11 @@ namespace Age_of_villagers
         }
 
         private void Drawinpanel_mouse(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Age_of_villagers_Click(object sender, EventArgs e)
         {
 
         }
