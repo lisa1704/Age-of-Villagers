@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.Tree = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.treebutton = new System.Windows.Forms.RadioButton();
             this.OpenVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
-            this.Water = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
             this.Nation = new System.Windows.Forms.TextBox();
             this.VillageName = new System.Windows.Forms.TextBox();
             this.SaveVillage = new System.Windows.Forms.Button();
@@ -42,7 +40,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.houseButton = new System.Windows.Forms.RadioButton();
+            this.waterButton = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             this.SuspendLayout();
@@ -55,33 +54,33 @@
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
-            // Tree
-            // 
-            this.Tree.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Tree.Location = new System.Drawing.Point(35, 187);
-            this.Tree.Name = "Tree";
-            this.Tree.Size = new System.Drawing.Size(75, 23);
-            this.Tree.TabIndex = 1;
-            this.Tree.Text = "Tree";
-            this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.waterButton);
+            this.panel1.Controls.Add(this.houseButton);
+            this.panel1.Controls.Add(this.treebutton);
             this.panel1.Controls.Add(this.OpenVillage);
             this.panel1.Controls.Add(this.NewVillage);
-            this.panel1.Controls.Add(this.Water);
-            this.panel1.Controls.Add(this.House);
             this.panel1.Controls.Add(this.Nation);
             this.panel1.Controls.Add(this.VillageName);
             this.panel1.Controls.Add(this.SaveVillage);
             this.panel1.Controls.Add(this.ageOfVillagers);
-            this.panel1.Controls.Add(this.Tree);
             this.panel1.Location = new System.Drawing.Point(606, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 400);
             this.panel1.TabIndex = 2;
+            // 
+            // treebutton
+            // 
+            this.treebutton.AutoSize = true;
+            this.treebutton.Location = new System.Drawing.Point(51, 186);
+            this.treebutton.Name = "treebutton";
+            this.treebutton.Size = new System.Drawing.Size(59, 21);
+            this.treebutton.TabIndex = 8;
+            this.treebutton.TabStop = true;
+            this.treebutton.Text = "Tree";
+            this.treebutton.UseVisualStyleBackColor = true;
+            this.treebutton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // OpenVillage
             // 
@@ -102,26 +101,6 @@
             this.NewVillage.Text = "New Village";
             this.NewVillage.UseVisualStyleBackColor = true;
             this.NewVillage.Click += new System.EventHandler(this.NewVillage_Click);
-            // 
-            // Water
-            // 
-            this.Water.Location = new System.Drawing.Point(74, 216);
-            this.Water.Name = "Water";
-            this.Water.Size = new System.Drawing.Size(109, 23);
-            this.Water.TabIndex = 5;
-            this.Water.Text = "Water Source";
-            this.Water.UseVisualStyleBackColor = true;
-            this.Water.Click += new System.EventHandler(this.Water_Click);
-            // 
-            // House
-            // 
-            this.House.Location = new System.Drawing.Point(144, 186);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(75, 23);
-            this.House.TabIndex = 4;
-            this.House.Text = "House";
-            this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.House_Click);
             // 
             // Nation
             // 
@@ -168,17 +147,29 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // radioButton1
+            // houseButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(61, 256);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 21);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tree";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.houseButton.AutoSize = true;
+            this.houseButton.Location = new System.Drawing.Point(123, 186);
+            this.houseButton.Name = "houseButton";
+            this.houseButton.Size = new System.Drawing.Size(70, 21);
+            this.houseButton.TabIndex = 9;
+            this.houseButton.TabStop = true;
+            this.houseButton.Text = "House";
+            this.houseButton.UseVisualStyleBackColor = true;
+            this.houseButton.CheckedChanged += new System.EventHandler(this.houseButton_CheckedChanged);
+            // 
+            // waterButton
+            // 
+            this.waterButton.AutoSize = true;
+            this.waterButton.Location = new System.Drawing.Point(74, 228);
+            this.waterButton.Name = "waterButton";
+            this.waterButton.Size = new System.Drawing.Size(67, 21);
+            this.waterButton.TabIndex = 10;
+            this.waterButton.TabStop = true;
+            this.waterButton.Text = "Water";
+            this.waterButton.UseVisualStyleBackColor = true;
+            this.waterButton.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // MenuForm
             // 
@@ -201,7 +192,6 @@
         #endregion
 
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button Tree;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label ageOfVillagers;
         private System.Windows.Forms.Button SaveVillage;
@@ -210,10 +200,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox Nation;
         private System.Windows.Forms.TextBox VillageName;
-        private System.Windows.Forms.Button Water;
-        private System.Windows.Forms.Button House;
         private System.Windows.Forms.Button OpenVillage;
         private System.Windows.Forms.Button NewVillage;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton treebutton;
+        private System.Windows.Forms.RadioButton waterButton;
+        private System.Windows.Forms.RadioButton houseButton;
     }
 }

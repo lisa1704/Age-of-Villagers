@@ -38,22 +38,22 @@ namespace ageOfVillagers
             currentNationName = Nation.Text;
         }
 
-        public void button1_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             currentselect = "tree";
             text += "Adding a tree. ";
         }
 
-        public void House_Click(object sender, EventArgs e)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            currentselect = "water";
+            text += "Adding water. ";
+        }
+
+        private void houseButton_CheckedChanged(object sender, EventArgs e)
         {
             currentselect = "house";
             text += "Adding a house. ";
-        }
-
-        public void Water_Click(object sender, EventArgs e)
-        {
-            currentselect = "water";
-            text += "Adding new Water Source. ";
         }
 
         public void NewVillage_Click(object sender, EventArgs e)
@@ -111,10 +111,6 @@ namespace ageOfVillagers
             //return shape.draw(x, y);
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            currentselect = "tree";
-            text += "Adding a tree. ";
-        }
+        
     }
 }
