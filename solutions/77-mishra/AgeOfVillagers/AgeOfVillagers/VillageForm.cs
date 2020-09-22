@@ -118,6 +118,9 @@ namespace AgeOfVillagers
         
         private void new_button_Click(object sender, EventArgs e)
         {
+            HouseLoc.Clear();
+            WaterLoc.Clear();
+            TreeLoc.Clear();
             drawingBoard.Invalidate();
         }
         
@@ -126,6 +129,8 @@ namespace AgeOfVillagers
         {
             OpenVillage openVillage = new OpenVillage();
             openVillage.execute();
+            villageState = openVillage.GetVillage();
+            drawingBoard.Refresh();
         }
         private void tree_changed_CheckedChanged(object sender, EventArgs e)
         {
