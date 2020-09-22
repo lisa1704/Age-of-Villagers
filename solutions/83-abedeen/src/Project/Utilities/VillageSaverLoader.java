@@ -5,11 +5,12 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class VillageSaverLoader {
+
+    SceneSate sceneSate = null;
+
     public void saveVillage(SceneSate sceneSate){
         String FileName = sceneSate.Village_name + ".aov";
 
@@ -29,7 +30,14 @@ public class VillageSaverLoader {
         }
     }
 
-    public void loadVillage(){
+    public SceneSate loadVillage(){
+        try{
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("SavedFiles/try.aov"));
+            sceneSate = new Gson().fromJson(bufferedReader,SceneSate.class);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return sceneSate;
 
     }
 }
