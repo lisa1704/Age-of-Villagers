@@ -14,7 +14,7 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-        
+        INation nation;
         public Ageofvillagers()
         {
 

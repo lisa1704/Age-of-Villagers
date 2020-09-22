@@ -15,10 +15,11 @@ namespace Ageofvillagers
         String nation_type;
         private Graphics g;
         private Pen p;
-        INationFactory(Graphics g,Pen p)
+        public INationFactory(Graphics g,Pen p,string nation_type)
         {
             this.g = g;
             this.p = p;
+            this.nation_type = nation_type;
         }
         public INation get_Nation()
         {

@@ -11,13 +11,16 @@ using Ageofvillagers.Nations;
 namespace Ageofvillagers
 {
     public partial class Ageofvillagers :Form
-    {
+    {  
+        public int mousepositionx;
+        public int mousepositiony;
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
-            Graphics g = panel2.CreateGraphics();
-            Pen p = new Pen(Color.Black, 1);
-            INation Nation = new EgyptianKing(g,p);
-            Nation.drawHouse(e.Location.X, e.Location.Y);
+            
+            mousepositionx = e.Location.X;
+            mousepositiony = e.Location.Y;
+            //INation Nation = new EgyptianKing(g,p);
+            //Nation.drawHouse(e.Location.X, e.Location.Y);
           //  B.drawHouse(e.Location.X, e.Location.Y);
 
         }
