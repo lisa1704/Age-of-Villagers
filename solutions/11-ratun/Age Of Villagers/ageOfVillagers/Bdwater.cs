@@ -7,7 +7,7 @@ namespace ageOfVillagers
         //private readonly int xLength = 24;
         //private readonly int yLength = 16;
         readonly Pen p = new Pen(Color.Green);
-        public string draw(int x, int y, Graphics g)
+        public void draw(int x, int y, Graphics g)
         {
             Line l1 = new Line(g,p,x - 12, y, x - 6, y + 6);
             l1.Draw();
@@ -27,7 +27,7 @@ namespace ageOfVillagers
             l8.Draw();
             Line l9 = new Line(g,p,x - 6, y + 8, x - 12, y);
             l9.Draw();
-            return "Drawing BD water";
+            //return "Drawing BD water";
         }
     }
 }

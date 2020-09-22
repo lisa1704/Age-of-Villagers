@@ -5,7 +5,7 @@ namespace ageOfVillagers
     internal class ArabTree : IShape
     {
         readonly Pen p = new Pen(Color.LightYellow);
-        public string draw(int x, int y, Graphics g)
+        public void draw(int x, int y, Graphics g)
         {
             Rectangle r = new Rectangle(g,p,x - 1, y, x - 1, y - 12, x + 1, y - 12, x + 1, y);
             r.Draw();
@@ -19,7 +19,7 @@ namespace ageOfVillagers
             l4.Draw();
             Line l5 = new Line(g,p,x, y, x + 8, y + 4);
             l5.Draw();
-            return "Drawing Arab Tree";
+            //return "Drawing Arab Tree";
         }
     }
 }

@@ -5,7 +5,7 @@ namespace ageOfVillagers
     internal class InuitHouse : IShape
     {
         readonly Pen p = new Pen(Color.Pink);
-        public string draw(int x, int y, Graphics g)
+        public void draw(int x, int y, Graphics g)
         {
             HalfCircle h1 = new HalfCircle(g,p,x, y, 8);
             h1.Draw();
@@ -13,7 +13,7 @@ namespace ageOfVillagers
             h2.Draw();
             Line l1 = new Line(g, p, x - 8, y - 8, x + 8, y - 8);
             l1.Draw();
-            return "Drawing Inuit House";
+            //return "Drawing Inuit House";
         }
     }
 }

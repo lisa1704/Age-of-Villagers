@@ -4,6 +4,6 @@ namespace ageOfVillagers
 {
     internal interface IShape
     {
-        string draw(int x, int y, Graphics g);
+        void draw(int x, int y, Graphics g);
     }
 }
