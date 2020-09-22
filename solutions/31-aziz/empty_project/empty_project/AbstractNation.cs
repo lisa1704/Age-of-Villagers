@@ -19,7 +19,10 @@ namespace empty_project
             this.panel = panel;
         }
 
-        public abstract Color colorBackground();
+        public void colorBackground()
+        {
+            panel.BackColor = color;
+        }
 
         public void drawHouse(Axis axis)
         {

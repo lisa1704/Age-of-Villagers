@@ -13,11 +13,8 @@ namespace empty_project
             base.house = new ArabBedouinHouse();
             base.tree = new ArabBedouinTree();
             base.waterSource = new ArabBedouinWaterSource();
-        }
-        public override Color colorBackground()
-        {
             base.color = System.Drawing.Color.LightYellow;
-            return panel.BackColor = color;
+            colorBackground();
         }
     }
 }

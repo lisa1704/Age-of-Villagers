@@ -22,9 +22,6 @@ namespace AgeofVillegersTest
 
             AbstractNation egyptianVillageWaterSource = new EgyptianKings(new Panel());
             Assert.AreEqual(egyptianVillageWaterSource.getWaterSourceType().GetType(), new EgyptianKingsWaterSource().GetType());
-
-            AbstractNation egyptianVillageBackgroundColor = new EgyptianKings(new Panel());
-            Assert.AreEqual(egyptianVillageBackgroundColor.colorBackground(), Color.Yellow);
         }
     }
 }

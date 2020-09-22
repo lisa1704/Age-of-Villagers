@@ -13,11 +13,8 @@ namespace empty_project
             base.house = new BangladeshiFarmersHouse();
             base.tree = new BangladeshiFarmersTree();
             base.waterSource = new BangladeshiFarmersWaterSource();
-        }
-        public override Color colorBackground()
-        {
             base.color = System.Drawing.Color.Green;
-            return panel.BackColor = color;
+            colorBackground();
         }
     }
 }

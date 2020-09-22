@@ -13,11 +13,8 @@ namespace empty_project
             base.house = new InuitHuntersHouse();
             base.tree = new InuitHuntersTree();
             base.waterSource = new InuitHuntersWaterSource();
-        }
-        public override Color colorBackground()
-        {
             base.color = System.Drawing.Color.White;
-            return panel.BackColor = color;
+            colorBackground();
         }
     }
 }
