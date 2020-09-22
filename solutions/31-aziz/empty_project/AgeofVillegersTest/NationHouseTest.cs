@@ -21,6 +21,9 @@ namespace AgeofVillegersTest
 
             AbstractNation egyptianKingsHouse = new EgyptianKings(new Panel());
             Assert.AreEqual(egyptianKingsHouse.getHouseType().GetType(), new EgyptianKingsHouse().GetType());
+
+            AbstractNation inuitHuntersHouse = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitHuntersHouse.getHouseType().GetType(), new InuitHuntersHouse().GetType());
         }
     }
 }
