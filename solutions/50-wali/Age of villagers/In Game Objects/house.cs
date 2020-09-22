@@ -2,5 +2,8 @@
 
 public class house
 {
-	
+	public void houseType()
+    {
+
+    }
 }
