@@ -12,14 +12,14 @@ namespace AOV
         public BdWaterSource(Point clicked)
         {
             Point p1 = new Point(clicked.X, clicked.Y);
-            Point p2 = new Point(clicked.X + 20, clicked.Y - 10);
-            Point p3 = new Point(clicked.X + 25, clicked.Y);
-            Point p4 = new Point(clicked.X + 50, clicked.Y - 20);
-            Point p5 = new Point(clicked.X + 80, clicked.Y);
-            Point p6 = new Point(clicked.X + 70, clicked.Y + 40);
-            Point p7 = new Point(clicked.X + 30, clicked.Y + 20);
-            Point p8 = new Point(clicked.X, clicked.Y + 50);
-            Point p9 = new Point(clicked.X - 20, clicked.Y + 30);
+            Point p2 = new Point(clicked.X + 5, clicked.Y - 2);
+            Point p3 = new Point(clicked.X + 6, clicked.Y);
+            Point p4 = new Point(clicked.X + 12, clicked.Y - 5);
+            Point p5 = new Point(clicked.X + 19, clicked.Y);
+            Point p6 = new Point(clicked.X + 17, clicked.Y + 9);
+            Point p7 = new Point(clicked.X + 7, clicked.Y + 5);
+            Point p8 = new Point(clicked.X, clicked.Y + 11);
+            Point p9 = new Point(clicked.X - 5, clicked.Y + 7);
 
             addShape(new DrawLine(p1, p2));
             addShape(new DrawLine(p2, p3));
