@@ -95,7 +95,7 @@ namespace AgeOfVillagers
             }
             else if (radioButtonTree.Checked)
             {
-                bdFarmers.paint_tree(e, g, p);
+                arabBedouin.paint_tree(e, g, p);
             }
             else if (radioButtonWaterSource.Checked)
             {
