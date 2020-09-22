@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    public class EgyptianKings : INation
+    class EgyptianKings : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -23,10 +23,10 @@ namespace AgeOfVillager
             egyptianKingsHouse.draw(e);
         }
 
-        public void drawTree(MouseEventArgs e)
+        public ITree drawTree(MouseEventArgs e)
         {
-            EgyptianKingsTree egyptianKingsTree = new EgyptianKingsTree(g);
-            egyptianKingsTree.draw(e);
+            return new EgyptianKingsTree(g);
+            //egyptianKingsTree.draw(e);
         }
 
         public void drawWaterSource(MouseEventArgs e)

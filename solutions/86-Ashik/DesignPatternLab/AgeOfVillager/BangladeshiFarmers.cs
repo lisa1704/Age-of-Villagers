@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    public class BangladeshiFarmers : INation
+    class BangladeshiFarmers : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -23,10 +23,11 @@ namespace AgeOfVillager
             bDFarmersHouse.draw(e);
         }
 
-        public void drawTree(MouseEventArgs e)
+        public ITree drawTree(MouseEventArgs e)
         {
-            BDFarmersTree bDFarmersTree = new BDFarmersTree(g);
-            bDFarmersTree.draw(e);
+            return new BDFarmersTree(g);
+            //BDFarmersTree bDFarmersTree = new BDFarmersTree(g);
+            //bDFarmersTree.draw(e);
         }
 
         public void drawWaterSource(MouseEventArgs e)

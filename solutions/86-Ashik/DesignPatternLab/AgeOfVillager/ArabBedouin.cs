@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    public class ArabBedouin : INation
+    class ArabBedouin : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -23,10 +23,10 @@ namespace AgeOfVillager
             arabBedouinsHouse.draw(e);
         }
 
-        public void drawTree(MouseEventArgs e)
+        public ITree drawTree(MouseEventArgs e)
         {
-            ArabBedouinsTree arabBedouinsTree = new ArabBedouinsTree(g);
-            arabBedouinsTree.draw(e);
+            return new ArabBedouinsTree(g);
+            //arabBedouinsTree.draw(e);
         }
 
         public void drawWaterSource(MouseEventArgs e)

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    public class InuitHunters : INation
+    class InuitHunters : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;
@@ -23,9 +23,10 @@ namespace AgeOfVillager
             inuitHuntersHouse.draw(e);
         }
 
-        public void drawTree(MouseEventArgs e)
+        public ITree drawTree(MouseEventArgs e)
         {
-            MessageBox.Show("Trees can not be planted");
+            throw new Exception();
+            //MessageBox.Show("Trees can not be planted");
         }
 
         public void drawWaterSource(MouseEventArgs e)

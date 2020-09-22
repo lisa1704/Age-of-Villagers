@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class BDFarmersTree : ITree
+    public class BDFarmersTree : ITree
     {
         int x, y, width, height, startAngle, sweepAngle;
         private readonly Graphics g;

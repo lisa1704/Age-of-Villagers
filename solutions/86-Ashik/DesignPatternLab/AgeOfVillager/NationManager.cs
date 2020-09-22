@@ -17,11 +17,17 @@ namespace AgeOfVillager
             this.nationFactory = nationFactory;
         }
 
-        public void DrawTree(MouseEventArgs e)
+        public void Draw(MouseEventArgs e)
+        {
+            INation nation = nationFactory.GetNation(myNation);
+            nation.drawTree(e).draw(e);
+        }
+
+       /* public void DrawTree(MouseEventArgs e)
         {
             INation nation = nationFactory.GetNation(myNation);
             nation.drawTree(e);
-        }
+        }*/
         public void DrawHouse(MouseEventArgs e)
         {
             INation nation = nationFactory.GetNation(myNation);
