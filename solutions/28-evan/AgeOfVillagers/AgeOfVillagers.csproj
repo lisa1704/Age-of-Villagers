@@ -55,6 +55,7 @@
     <Compile Include="ConcreteItems.cs" />
     <Compile Include="ConcreteNation.cs" />
     <Compile Include="EgyptianKings.cs" />
+    <Compile Include="IAttributes.cs" />
     <Compile Include="IHouse.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunters.cs" />

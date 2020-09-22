@@ -13,11 +13,10 @@ namespace AgeOfVillagers
     public partial class VillageMain : Form
     {
         Color getColor;
-        string villageName;
         string nation;
-        string selectedItem;
+        string nameOfVillage;
 
-        ConcreteNation nationType = new ConcreteNation();
+        ConcreteNation TypeOfNation = new ConcreteNation();
 
         public VillageMain()
         {
@@ -27,8 +26,13 @@ namespace AgeOfVillagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             nation = comboBox1.Text;
-            getColor = nationType.checkNation(nation).DrawTerrain();
+            getColor = TypeOfNation.checkNation(nation).DrawTerrain();
             panel1.BackColor = getColor;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

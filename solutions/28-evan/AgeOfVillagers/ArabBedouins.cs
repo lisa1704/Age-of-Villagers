@@ -9,23 +9,22 @@ namespace AgeOfVillagers
 {
     class ArabBedouins : INation
     {
-        Color bkgColor = Color.Yellow;
+        Color bkgColor = Color.Green;
         public Color DrawTerrain()
         {
             return bkgColor;
         }
-
-        public void DrawTree()
+        public void DrawHouse(Graphics g, Point p)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawWaterSource()
+        public void DrawTree(Graphics g, Point p)
         {
             throw new NotImplementedException();
         }
 
-        public void DrawHouse()
+        public void DrawWaterSource(Graphics g, Point p)
         {
             throw new NotImplementedException();
         }

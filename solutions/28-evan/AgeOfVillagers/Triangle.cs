@@ -32,5 +32,10 @@ namespace AgeOfVillagers
             g.DrawLine(p, x, z);
             g.DrawLine(p, y, y);
         }
+
+        internal void DrawShape()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

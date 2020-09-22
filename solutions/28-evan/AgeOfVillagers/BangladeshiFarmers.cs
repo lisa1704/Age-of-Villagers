@@ -9,25 +9,28 @@ namespace AgeOfVillagers
 {
     class BangladeshiFarmers : INation
     {
-        Color bkgColor = Color.Red;
+        Color bkgColor = Color.Green;
+        Pen pn = new Pen(Color.Red);
         public Color DrawTerrain()
         {
             return bkgColor;
         }
-
-        public void DrawTree()
+        public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BDHouse house = new BDHouse();
+            house.Draw(g, p);
         }
 
-        public void DrawWaterSource()
+        public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BDHouse house = new BDHouse();
+            house.Draw(g, p);
         }
 
-        public void DrawHouse()
+        public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BDHouse house = new BDHouse();
+            house.Draw(g, p); ;
         }
     }
 }
