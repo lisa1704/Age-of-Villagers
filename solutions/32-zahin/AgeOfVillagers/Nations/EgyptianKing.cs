@@ -10,22 +10,25 @@ namespace AgeOfVillagers
 
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             EgyptHouse house = new EgyptHouse();
             house.Draw(g,point);
+            return "Egypt House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             EgyptTree tree = new EgyptTree();
             tree.Draw(g, point);
+            return "Egypt Tree";
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             EgyptWater water = new EgyptWater();
             water.Draw(g, point);
+            return "Egypt River";
         }
         public Color DrawTerrain()
         {

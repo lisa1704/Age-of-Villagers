@@ -10,22 +10,25 @@ namespace AgeOfVillagers
         {
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             BangladeshiHouse house = new BangladeshiHouse();
             house.Draw(g, point);
+            return "Bangla House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             BangladeshiTree tree = new BangladeshiTree();
             tree.Draw(g, point);
+            return "Bangla Tree";
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             BangladeshiWater water = new BangladeshiWater();
             water.Draw(g, point);
+            return "Bangla River";
 
         }
         public Color DrawTerrain()

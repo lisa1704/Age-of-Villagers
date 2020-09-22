@@ -21,26 +21,5 @@ namespace AgeOfVillagers
             this.tree = tree;
             this.water = water;
         }
-        public void setState() 
-        {
-            state.villagename = villagename;
-            foreach (Point point in house)
-            {
-                state.house.Add(point);
-            }
-            foreach (Point point in tree)
-            {
-                state.tree.Add(point);
-            }
-            foreach (Point point in water)
-            {
-                state.water.Add(point);
-            }
-        }
-        public VillageState getState() 
-        {
-            return new VillageState(villagename, house, tree, water);
-            //return state;
-        }
     }
 }

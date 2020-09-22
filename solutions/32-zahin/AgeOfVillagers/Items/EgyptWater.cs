@@ -8,7 +8,8 @@ namespace AgeOfVillagers.Items
         Pen pen = new Pen(Color.Black);
         public void Draw(Graphics g, Point point)
         {
-            Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
+            Point center = new Point(point.X + 12, point.Y + 12);
+            Circle circle = new Circle(g, pen, center, 24, 24, 0, 360);
             circle.DrawShape();
         }
     }

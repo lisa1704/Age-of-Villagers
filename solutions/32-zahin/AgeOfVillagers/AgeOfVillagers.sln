@@ -10,6 +10,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgeOfVillagers.Tests", "..\
 		{E2B32EDB-885F-4EE2-AC51-93FAE4C03F8B} = {E2B32EDB-885F-4EE2-AC51-93FAE4C03F8B}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1990AFF5-032B-497E-B96C-3CF7F739254E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

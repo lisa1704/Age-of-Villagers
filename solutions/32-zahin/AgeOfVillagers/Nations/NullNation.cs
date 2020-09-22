@@ -5,19 +5,22 @@ namespace AgeOfVillagers
 {
     class NullNation : INation
     {
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
             MessageBox.Show("Can not Draw House for the chosen Nation!!");
+            return "Can not Draw House for the chosen Nation!!";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             MessageBox.Show("Can not Draw Tree for the Chosen Nation!!");
+            return "Can not Draw Tree for the Chosen Nation!!";
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             MessageBox.Show("Can not Draw Water for the Chosen Nation!!");
+            return "Can not Draw Water for the Chosen Nation!!";
         }
         public Color DrawTerrain()
         {

@@ -85,7 +85,6 @@
     <Compile Include="Nations\InuitHunters.cs" />
     <Compile Include="Nations\EgyptianKing.cs" />
     <Compile Include="Shapes\Circle.cs" />
-    <Compile Include="Shapes\Line.cs" />
     <Compile Include="Shapes\Triangle.cs" />
     <Compile Include="Shapes\Rectangles.cs" />
     <Compile Include="Shapes\IShape.cs" />
@@ -110,6 +109,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include=".editorconfig" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

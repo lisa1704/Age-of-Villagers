@@ -8,8 +8,6 @@ namespace AgeOfVillagers
 {
     public class Village
     {
-        public INation village;
-        public Village() {}
         public INation GetVillage(string villageType)
         {
             if (villageType == "Bangladeshi Farmers")

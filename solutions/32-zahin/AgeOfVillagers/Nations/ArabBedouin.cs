@@ -11,21 +11,24 @@ namespace AgeOfVillagers
 
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public string DrawHouse(Graphics g, Point point)
         {
 
             ArabHouse house = new ArabHouse();
             house.Draw(g, point);
+            return "Arab House";
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public string DrawTree(Graphics g, Point point)
         {
             ArabTree tree = new ArabTree();
             tree.Draw(g, point);
+            return "Arab Tree";
         }
-        public void DrawWaterSource(Graphics g, Point point)
+        public string DrawWaterSource(Graphics g, Point point)
         {
             MessageBox.Show("Bedouin villages do not build their own water source");
+            return "Bedouin villages do not build their own water source";
         }
         public Color DrawTerrain()
         {

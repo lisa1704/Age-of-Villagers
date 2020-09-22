@@ -10,9 +10,10 @@ namespace AgeOfVillagers.Items
         {
             Point rectanglePoint1 = new Point(point.X - 2, point.Y);
             Point rectanglePoint2 = new Point(point.X + 2, point.Y);
-            Point rectanglePoint3 = new Point(point.X - 2, point.Y + 50);
-            Point rectanglePoint4 = new Point(point.X + 2, point.Y + 50);
-            Circle circle = new Circle(g, pen, point, 50, 50, 0, 360);
+            Point rectanglePoint3 = new Point(point.X - 2, point.Y + 24);
+            Point rectanglePoint4 = new Point(point.X + 2, point.Y + 24);
+            Point center = new Point(point.X + 12, point.Y + 12);
+            Circle circle = new Circle(g, pen, center, 24, 24, 0, 360);
             circle.DrawShape();
             Rectangles rectangle = new Rectangles(g, pen, rectanglePoint1, rectanglePoint2, rectanglePoint3, rectanglePoint4);
             rectangle.DrawShape();
