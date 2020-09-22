@@ -12,7 +12,6 @@ namespace AgeofVillagers
 {
     public partial class Form1 : Form
     {
-        bool drawing = true;
         int x, y, h, w;
         Pen p = new Pen(Color.Red, 3);
         public Form1()
@@ -47,10 +46,9 @@ namespace AgeofVillagers
         private void panelDrawingBoard_MouseDown(object sender, MouseEventArgs e)
         {
             //start = e.Location;
-            Graphics g = this.CreateGraphics();
+            Graphics g = panel1.CreateGraphics();
             if (e.Button == MouseButtons.Left)
             {
-                drawing = true;
                 x = e.X;
                 y = e.Y;
 
