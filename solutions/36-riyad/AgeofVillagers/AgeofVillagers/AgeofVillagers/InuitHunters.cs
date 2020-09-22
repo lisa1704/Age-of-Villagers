@@ -11,6 +11,8 @@ namespace AgeofVillagers
         Pen pen = new Pen(Color.Black);
         public string DrawHouse(Graphics g, Point p)
         {
+            IunitHuntersHouse iHouse = new IunitHuntersHouse(p);
+            iHouse.Paint(g, pen);
             return "Igloo";
         }
 
