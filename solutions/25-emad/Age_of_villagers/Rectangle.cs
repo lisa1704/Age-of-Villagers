@@ -10,25 +10,25 @@ namespace Age_of_villagers
     class Rectangles : IShape
     {
 
-        Point p1,p2,p3,p4;
+        Point a,b,c,d;
         Pen pen;
         Graphics g;
-        public Rectangles(Graphics g, Pen pen, Point p1, Point p2, Point p3, Point p4)
+        public Rectangles(Graphics g, Pen pen, Point a, Point b, Point c, Point d)
         {
 
-            this.p1 = p1;
-            this.p2 = p2;
-            this.p3 = p3;
-            this.p4 = p4;
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
             
         }
 
         public void Draw()
         {
-            g.DrawLine(pen, p1, p2);
-            g.DrawLine(pen, p1, p3);
-            g.DrawLine(pen, p3, p4);
-            g.DrawLine(pen, p2, p4); 
+            g.DrawLine(pen, a, b);
+            g.DrawLine(pen, a, c);
+            g.DrawLine(pen, c, d);
+            g.DrawLine(pen, b, d); 
         }
 
        
