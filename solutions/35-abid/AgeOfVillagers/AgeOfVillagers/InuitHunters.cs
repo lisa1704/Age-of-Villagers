@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         protected Panel drawingPanel;
         protected IHouse house = new InuitHouse();
         protected ITree tree = new NullTree();
-        protected IWatersrc waterSrc = new InuitWatersrc();
+        protected IWatersrc waterSrc = new NullWatersrc();
 
         public InuitHunters(Panel panel)
         {
@@ -25,12 +25,12 @@ namespace AgeOfVillagers
 
         public void drawtree(Point p)
         {
-            //no implementation
+            tree.drawTree(p, drawingPanel);
         }
 
         public void drawwatersrc(Point p)
         {
-            //no implementation
+            waterSrc.drawWatersrc(p, drawingPanel);
         }
     }
 }

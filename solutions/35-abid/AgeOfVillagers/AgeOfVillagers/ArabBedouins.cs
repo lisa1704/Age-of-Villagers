@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         protected Panel drawingPanel;
         protected IHouse house = new ArabHouse();
         protected ITree tree = new ArabTree();
-        protected IWatersrc waterSrc = new ArabWatersrc();
+        protected IWatersrc waterSrc = new NullWatersrc();
 
         public ArabBedouins(Panel panel)
         {
