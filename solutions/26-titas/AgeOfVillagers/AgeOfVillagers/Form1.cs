@@ -14,6 +14,7 @@ namespace AgeOfVillagers
     {
         BdFarmers bdFarmers = new BdFarmers();
         ArabBedouin arabBedouin = new ArabBedouin();
+        EgyptianKings egyptianKings = new EgyptianKings();
         public Form1()
         {
             InitializeComponent();
@@ -91,11 +92,11 @@ namespace AgeOfVillagers
             Pen p = new Pen(new SolidBrush(Color.Red), 2);
             if (radioButtonHouse.Checked)
             {
-                arabBedouin.paint_house(e, g, p);
+                egyptianKings.paint_house(e, g, p);
             }
             else if (radioButtonTree.Checked)
             {
-                arabBedouin.paint_tree(e, g, p);
+                egyptianKings.paint_tree(e, g, p);
             }
             else if (radioButtonWaterSource.Checked)
             {
