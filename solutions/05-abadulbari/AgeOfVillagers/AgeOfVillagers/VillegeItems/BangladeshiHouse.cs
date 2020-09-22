@@ -7,7 +7,7 @@ using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class BangladeshiHouse : VillageItem
+    public class BangladeshiHouse : VillageItem
     {
         private readonly Point top, midLeft, midRight, bottomLeft, bottomRight;
 

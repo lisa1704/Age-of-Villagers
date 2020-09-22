@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.Factories;
 using AgeOfVillagers.Nation;
+using AgeOfVillagers.VillegeItems;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -24,6 +25,13 @@ namespace AgeOfVillagers.Test
         {
             var expected = Color.Green;
             Assert.Equal(expected, bd.getTerrainColor());
+        }
+
+        [Fact]
+        public void HouseTest()
+        {
+            var expected = typeof(BangladeshiHouse);
+            Assert.IsType(expected, bd.getHouse(new Point()));
         }
     }
 }
