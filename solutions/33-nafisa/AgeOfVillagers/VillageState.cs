@@ -8,8 +8,8 @@ namespace AgeOfVillagers
 {
     public struct VillageState  
     {
-        public String villagename;
-        public String nationname;
+        public string villagename;
+        public string nationname;
         public Color terraincolor;
         public List<Point> Houses;
         public List<Point> Trees;
