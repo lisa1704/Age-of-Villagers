@@ -21,5 +21,23 @@ namespace Age_of_Villagers
             this.nationController = nationController;
         }
 
+        public void ResetState(VillageCondition villageCondition, string check)
+        {
+
+            foreach (Point point in villageCondition.HousePoint)
+            {
+                nationController.GetNation(point).HouseDraw().draw(graphics, pen);
+            }
+            foreach (Point point in villageCondition.TreePoint)
+            {
+                nationController.GetNation(point).TreeDraw().draw(graphics, pen);
+            }
+            foreach (Point point in villageCondition.WaterResourcePoint)
+            {
+                nationController.GetNation(point).WaterSourceDraw().draw(graphics, pen);
+            }
+
+        }
+
     }
 }
