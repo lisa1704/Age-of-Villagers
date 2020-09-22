@@ -12,11 +12,18 @@ namespace AgeOfVillagers.Test
         [Fact]
         public void ArabCheck()
         {
+            bool check = false;
+
             NationFactory nf = new NationFactory();
             AbstractNation actual = nf.getNation("Arab Bedouins");
-            AbstractNation expected = new Arab();
 
-            actual.Equals(expected);
+            Assert.NotNull(actual);  //Checks for null
+
+            if (actual is Arab)
+            {
+                check = true;
+            }
+            Assert.True(check);
         }
 
         [Fact]
