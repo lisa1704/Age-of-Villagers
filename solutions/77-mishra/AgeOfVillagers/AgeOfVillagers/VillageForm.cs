@@ -19,8 +19,20 @@ namespace AgeOfVillagers
         Graphics graphics;
         Pen pen;
         private Nations nationsform;
-
+        //private string villageName;
+        
         public string nationtype;
+        public VillageState villageState;
+
+        private List<Point> HouseLoc { get; set; } = new List<Point>();
+        private List<Point> TreeLoc { get; set; } = new List<Point>();
+        private List<Point> WaterLoc { get; set; } = new List<Point>();
+
+        public void getState()
+        {
+            this.villageState = new VillageState(Village.Text, HouseLoc, TreeLoc, WaterLoc);
+        }
+
         
 
 
@@ -83,6 +95,7 @@ namespace AgeOfVillagers
         private void villageName_Click(object sender, EventArgs e)
         {
 
+
         }
         
         private void new_button_Click(object sender, EventArgs e)
@@ -91,13 +104,14 @@ namespace AgeOfVillagers
         }
         private void save_Click(object sender, EventArgs e)
         {
-
-
+            SaveVillage saveVillage = new SaveVillage(villageState);
+            saveVillage.execute();
         }
 
         private void open_button_Click(object sender, EventArgs e)
         {
-
+            OpenVillage openVillage = new OpenVillage();
+            openVillage.execute();
         }
         private void tree_changed_CheckedChanged(object sender, EventArgs e)
         {

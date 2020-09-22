@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.drawingBoard = new System.Windows.Forms.Panel();
-            this.villageName = new System.Windows.Forms.Label();
+            this.Village = new System.Windows.Forms.Label();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.Nation = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,15 +52,15 @@
             this.drawingBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingBoard_Paint);
             this.drawingBoard.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingBoard_MouseClick);
             // 
-            // villageName
+            // Village
             // 
-            this.villageName.AutoSize = true;
-            this.villageName.Location = new System.Drawing.Point(63, 60);
-            this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(99, 20);
-            this.villageName.TabIndex = 8;
-            this.villageName.Text = "Village Name";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
+            this.Village.AutoSize = true;
+            this.Village.Location = new System.Drawing.Point(78, 60);
+            this.Village.Name = "Village";
+            this.Village.Size = new System.Drawing.Size(59, 20);
+            this.Village.TabIndex = 8;
+            this.Village.Text = "Village ";
+            this.Village.Click += new System.EventHandler(this.villageName_Click);
             // 
             // sidepanel
             // 
@@ -72,7 +72,7 @@
             this.sidepanel.Controls.Add(this.radioButton3);
             this.sidepanel.Controls.Add(this.radioButton2);
             this.sidepanel.Controls.Add(this.radioButton1);
-            this.sidepanel.Controls.Add(this.villageName);
+            this.sidepanel.Controls.Add(this.Village);
             this.sidepanel.Location = new System.Drawing.Point(621, 12);
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(224, 400);
@@ -197,7 +197,7 @@
         #endregion
 
         private System.Windows.Forms.Panel drawingBoard;
-        private System.Windows.Forms.Label villageName;
+        private System.Windows.Forms.Label Village;
         private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
