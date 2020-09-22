@@ -80,21 +80,21 @@ namespace AgeOfVillagers
             {
                 
                 nations.GetNation(point).DrawTree(point).draw(pen, graphics);
-                
+                TreeLoc.Add(point);
             }
 
-            if(radioButton3.Checked == true)
+            else if(radioButton3.Checked == true)
             {
 
                 nations.GetNation(point).DrawHouse(point).draw(pen, graphics);
-                
+                HouseLoc.Add(point);
 
             }
 
-            if(radioButton2.Checked == true)
+            else if(radioButton2.Checked == true)
             {
                 nations.GetNation(point).DrawWaterSource(point).draw(pen, graphics);
-               
+                WaterLoc.Add(point);
             }
 
           
