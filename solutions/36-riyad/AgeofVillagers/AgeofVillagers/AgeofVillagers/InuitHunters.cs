@@ -18,6 +18,7 @@ namespace AgeofVillagers
 
         public void DrawTree(Graphics g, Point p)
         {
+            NulTree nulTree = new NulTree();
             throw new NotImplementedException();
         }
 
