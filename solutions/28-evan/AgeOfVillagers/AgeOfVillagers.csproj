@@ -62,6 +62,7 @@
     <Compile Include="ITree.cs" />
     <Compile Include="IWaterSource.cs" />
     <Compile Include="Line.cs" />
+    <Compile Include="NullHandlerNation.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="VillageMain.cs">
