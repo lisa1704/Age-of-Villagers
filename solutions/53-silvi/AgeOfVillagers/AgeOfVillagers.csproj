@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="INation.cs" />
     <Compile Include="IVillageItem.cs" />
+    <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
