@@ -10,7 +10,8 @@ namespace ageOfVillagers
         public string draw(int x, int y, Graphics g)
         {
             Circle c = new Circle(g,p,x, y, 8);
-            return c.Draw(g,p);
+            c.Draw();
+            return "Drawing Egypt Water";
         }
     }
 }
