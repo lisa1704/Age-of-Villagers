@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         public BangladeshiTree(Point p)
         {
             this.p1 = p;
-            p2 = new Point(p1.X + 9, p1.Y + 25);
+            p2 = new Point(p1.X + 9, p1.Y + 18);
             p3 = new Point(p2.X, p2.Y + 20);
             p4 = new Point(p2.X + 5, p2.Y + 20);
             p5 = new Point(p2.X + 5, p2.Y);

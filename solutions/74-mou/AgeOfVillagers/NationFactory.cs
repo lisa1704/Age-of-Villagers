@@ -26,7 +26,7 @@ namespace AgeOfVillagers
             }
             else
             {
-                return null;
+                return new NullNationHandler();
             }
         }
 

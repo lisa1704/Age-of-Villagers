@@ -5,21 +5,27 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Inuit //: INation
+    class Inuit : INation
     {
-       /* IShapes DrawHouse(Point p)
+        public IShapes DrawHouse(Graphics gr, Point p)
         {
-            
+            return new InuitHouse(p);
         }
-        IShapes DrawTree(Point p)
+        public IShapes DrawTree(Graphics gr, Point p)
         {
-            
+            return new ArabTree(p);
 
         }
 
-        IShapes DrawWaterSource(Point p)
+        public IShapes DrawWaterSource(Graphics gr, Point p)
         {
+            return new NullItemSelction();
 
-        }*/
+        }
+
+        public Color TerrainColor()
+        {
+            return Color.White;
+        }
     }
 }
