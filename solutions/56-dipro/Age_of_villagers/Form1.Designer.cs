@@ -38,6 +38,7 @@
             this.Newvillage = new System.Windows.Forms.Button();
             this.Openvillage = new System.Windows.Forms.Button();
             this.Age_of_villagers = new System.Windows.Forms.Label();
+            this.Village_Name = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Drawingpanel
@@ -113,18 +114,29 @@
             // 
             this.Age_of_villagers.AutoSize = true;
             this.Age_of_villagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age_of_villagers.Location = new System.Drawing.Point(646, 37);
+            this.Age_of_villagers.Location = new System.Drawing.Point(641, 39);
             this.Age_of_villagers.Name = "Age_of_villagers";
             this.Age_of_villagers.Size = new System.Drawing.Size(137, 20);
             this.Age_of_villagers.TabIndex = 8;
             this.Age_of_villagers.Text = "Age of villagers ";
             this.Age_of_villagers.Click += new System.EventHandler(this.Age_of_villagers_Click);
             // 
+            // Village_Name
+            // 
+            this.Village_Name.AutoSize = true;
+            this.Village_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Village_Name.Location = new System.Drawing.Point(622, 85);
+            this.Village_Name.Name = "Village_Name";
+            this.Village_Name.Size = new System.Drawing.Size(85, 13);
+            this.Village_Name.TabIndex = 9;
+            this.Village_Name.Text = "Village Name:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.Village_Name);
             this.Controls.Add(this.Age_of_villagers);
             this.Controls.Add(this.Openvillage);
             this.Controls.Add(this.Newvillage);
@@ -153,6 +165,7 @@
         private System.Windows.Forms.Button Newvillage;
         private System.Windows.Forms.Button Openvillage;
         private System.Windows.Forms.Label Age_of_villagers;
+        private System.Windows.Forms.Label Village_Name;
     }
 }
 
