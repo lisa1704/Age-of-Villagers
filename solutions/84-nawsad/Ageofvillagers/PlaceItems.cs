@@ -15,10 +15,10 @@ namespace Ageofvillagers
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
             Graphics g = panel2.CreateGraphics();
-            Pen p = new Pen(Color.Black, 4);
+            Pen p = new Pen(Color.Black, 1);
             INation B = new ArabBeduin(g,p);
-            B.drawHouse(e.Location.X, e.Location.Y);
-          //  B.drawWaterSource(e.Location.X, e.Location.Y);
+            B.drawTree(e.Location.X, e.Location.Y);
+           B.drawWaterSource(e.Location.X, e.Location.Y);
 
             //   IShape rec = new Rectangle(g,p,e.Location.X,e.Location.Y);
             //   rec.drawshape();
