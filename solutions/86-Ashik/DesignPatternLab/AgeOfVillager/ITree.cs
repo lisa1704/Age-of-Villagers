@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    interface ITree
+    public interface ITree
     {
         void draw(MouseEventArgs e);
     }

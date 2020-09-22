@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class BDFarmersHouse : IHouse
+    public class BDFarmersHouse : IHouse
     {
         int x, y;
         Pen myPen = new Pen(Color.Black);

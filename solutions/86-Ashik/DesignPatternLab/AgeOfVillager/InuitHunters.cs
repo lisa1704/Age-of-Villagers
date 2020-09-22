@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;

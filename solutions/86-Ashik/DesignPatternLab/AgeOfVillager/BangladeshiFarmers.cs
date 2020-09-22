@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
         private readonly Graphics g;
         private readonly Form1 form;

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class BDFarmersWaterSource : IWaterSource
+    public class BDFarmersWaterSource : IWaterSource
     {
         int x, y;
         private readonly Graphics g;
