@@ -137,7 +137,7 @@
             this.ageOfVillagers.Size = new System.Drawing.Size(162, 24);
             this.ageOfVillagers.TabIndex = 0;
             this.ageOfVillagers.Text = "Age Of Villagers";
-            this.ageOfVillagers.Click += new System.EventHandler(this.label1_Click);
+            //this.ageOfVillagers.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 

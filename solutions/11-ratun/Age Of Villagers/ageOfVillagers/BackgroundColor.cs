@@ -1,28 +1,31 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+
 namespace ageOfVillagers
 {
-    internal class NationFactory
+    internal class BackgroundColor
     {
-        public static Shape GetNation(string currentNationName)
+        public void GetBackgroundColor(string currentNationName, Panel panel)
         {
             if (currentNationName == "Bangladeshi Farmer")
             {
-                return new BangladeshFactory();
+                panel.BackColor = Color.Green;
             }
             else if (currentNationName == "Arab Bedouin")
             {
-                return new ArabFactory();
+                panel.BackColor = Color.LightYellow;
             }
             else if (currentNationName == "Egyptian Kings")
             {
-                return new EgyptFactory();
+                panel.BackColor = Color.Yellow;
             }
             else if (currentNationName == "Inuit Hunters")
             {
-                return new InuitFactory();
+                panel.BackColor = Color.White;
             }
-            return null;
+            else
+                throw new NotImplementedException();
         }
     }
 }

@@ -103,7 +103,8 @@ namespace ageOfVillagers
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = panel2.CreateGraphics();
-            Shape nation = NationFactory.GetNation(currentNationName, panel2);
+            Shape nation = NationFactory.GetNation(currentNationName);
+            BackgroundColor.GetBackgroundColor(currentNationName, panel2);
             IShape shape = nation.GetItem(currentselect);
             shape.draw(Cursor.Position.X, Cursor.Position.Y, g);
             //return shape.draw(x, y);
