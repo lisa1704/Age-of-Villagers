@@ -74,6 +74,10 @@ namespace AgeOfVillagers_Test
             Color color1 = bangladeshiFarmersT.getBackColor();
             Color expected1 = Color.Green;
             Assert.IsType<Color>(bangladeshiFarmersT.getBackColor());
+            NationAbstract ArabT = new ArabBedouin(newg, panel);
+            Color color2 = ArabT.getBackColor();
+            Color expected2 = Color.LightGoldenrodYellow;
+            Assert.IsType<Color>(ArabT.getBackColor());
 
         }
 
