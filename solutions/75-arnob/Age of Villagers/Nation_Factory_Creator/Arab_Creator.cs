@@ -11,21 +11,9 @@ namespace Age_of_Villagers.Nation_Factory_Creator
     {
         private String nationName = "Arab Bedouin";
 
-        public string GetNationName
-        {
-            get
-            {
-                return nationName;
-            }
+       
 
-            set
-            {
-                if (value == "Arab Bedouin")
-                    nationName = value;
-            }
-        }
-
-        public override INation CreateNation()
+        public override INation CollectNation()
         {
             return new Arab_Bedouin(nationName);
         }

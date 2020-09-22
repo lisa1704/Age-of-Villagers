@@ -8,11 +8,7 @@ namespace Age_of_Villagers
 {
    public abstract class AbstractNationFactoryCreator
     {
-        string GetNationName
-        {
-            get;
-            set;
-        }
-        public abstract INation CreateNation();
+
+        public abstract INation CollectNation();
     }
 }

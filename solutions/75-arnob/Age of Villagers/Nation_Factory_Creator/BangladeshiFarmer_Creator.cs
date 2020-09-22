@@ -11,21 +11,9 @@ namespace Age_of_Villagers.Nation_Factory_Creator
     {
         private String nationName = "Bangladeshi Farmers";
 
-        public string GetNationName
-        {
-            get
-            {
-                return nationName;
-            }
+        
 
-            set
-            {
-                if (value == "Bangladeshi Farmers")
-                    nationName = value;
-            }
-        }
-
-        public override INation CreateNation()
+        public override INation CollectNation()
         {
             return new Bangladeshi_Farmer(nationName);
         }

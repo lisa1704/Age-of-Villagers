@@ -60,9 +60,9 @@ namespace Age_of_Villagers
         {
             Graphics g = Menu_bar.CreateGraphics();
             //Font font = new Font("Calibri", 10, FontStyle.Regular);
-            //Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            Brush brush = new SolidBrush(System.Drawing.Color.Black);
             AbstractNationFactoryCreator abstractNationCreator = n.GetNation(nType);
-            Nation = abstractNationCreator.CreateNation();
+            Nation = abstractNationCreator.CollectNation();
 
             foreach (Point pt in house_point)
             {
@@ -153,16 +153,16 @@ namespace Age_of_Villagers
         }
 
 
-        private void Village_Name_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       // private void Village_Name_Click(object sender, EventArgs e)
+       // {
+         //   throw new NotImplementedException();
+        //} 
 
 
-        private void AgeOfVillagers_Click(object sender, EventArgs e)
-        {
+        //private void AgeOfVillagers_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
 
     }

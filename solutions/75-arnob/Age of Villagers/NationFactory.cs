@@ -34,7 +34,7 @@ namespace Age_of_Villagers.Nation_Factory_Creator
                     return new Inuit_Creator();
                 }
 
-                return null;
+                return new NullNation_Creator();
             }
         
     }

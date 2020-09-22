@@ -11,21 +11,9 @@ namespace Age_of_Villagers
     {
         private String nationName = "Inuit Hunters";
 
-        public string GetNationName
-        {
-            get
-            {
-                return nationName;
-            }
+      
 
-            set
-            {
-                if (value == "Inuit Hunters")
-                    nationName = value;
-            }
-        }
-
-        public override INation CreateNation()
+        public override INation CollectNation()
         {
             return new Inuit_Hunter(nationName);
         } 
