@@ -1,9 +1,13 @@
 package com.company;
 
 public class Main {
+    private String VillageName;
 
-    public static void main(String[] args) {
-        System.out.println("Age Of Villagers");
-	// write your code here
+    public Main(String villageName) {
+        VillageName = villageName;
     }
+    public String getVillageName() {
+        return VillageName;
+    }
+
 }
