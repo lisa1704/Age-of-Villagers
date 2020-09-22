@@ -1,12 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Age_of_Villagers.Shape;
+using Age_of_Villagers.VillageComponents;
+using System;
+using System.Drawing;
+using Rectangle = Age_of_Villagers.Shape.Rectangle;
 
-namespace Age_of_villagers.VillageComponents
+namespace AgeOfVillagers.VillegeItems
 {
-    class BangladeshiHouse
+
+    class BangladeshiHouse : VillageComponents
     {
+        private readonly Point top, midLeft, midRight, bottomLeft, bottomRight;
+
+        public BangladeshiHouse(Point point)
+        {
+            top = point;
+            midLeft = new Point(top.X - 10, top.Y + 20);
+            midRight = new Point(top.X + 10, top.Y + 20);
+            //bottomLeft = new Point(top.X-10, top.Y+40);
+            bottomRight = new Point(top.X + 10, top.Y + 40);
+            addComponent(new Triangle(top, midLeft, midRight));
+            addComponent(new Rectangle(midLeft, bottomRight));
+        }
+
+        private void addComponent(Triangle triangle)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void addComponent(Rectangle rectangle)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
