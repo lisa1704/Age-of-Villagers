@@ -92,5 +92,10 @@ namespace Village_Formation
             }
            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
 }
