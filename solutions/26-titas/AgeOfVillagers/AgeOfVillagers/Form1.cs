@@ -127,7 +127,7 @@ namespace AgeOfVillagers
             }
             else if (nationName == "Arab Bedouin")
             {
-                
+                panel1.BackColor = Color.LightYellow;
                 if (radioButtonHouse.Checked)
                 {
                     arabBedouin.paint_house(e, g, p);
@@ -139,6 +139,22 @@ namespace AgeOfVillagers
                 else if (radioButtonWaterSource.Checked)
                 {
                     //arabBedouin.paint_waterSource(e, g, p);
+                }
+            }
+            else if (nationName == "Inuit Hunters")
+            {
+                
+                if (radioButtonHouse.Checked)
+                {
+                    inuitHunters.paint_house(e, g, p);
+                }
+                else if (radioButtonTree.Checked)
+                {
+                    //inuitHunters.paint_tree(e, g, p);
+                }
+                else if (radioButtonWaterSource.Checked)
+                {
+                    //inuitHunters.paint_waterSource(e, g, p);
                 }
             }
         }
