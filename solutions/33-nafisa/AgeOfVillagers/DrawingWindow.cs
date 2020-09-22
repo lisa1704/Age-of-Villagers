@@ -45,16 +45,19 @@ namespace AgeOfVillagers
 
         }
         public void GetVillageState()
-        {
+        {   
+
             village.villagename = label2.Text;
             village.nationname = Form1.NationName;
+            village.terraincolor = Drawingpanel.BackColor;
             village.Houses = house_locations;
             village.Trees =  tree_locations;
             village.Watersources = watersource_locations;
         }
         public void SetVillageState(VillageState village)
         {
-            
+            Drawingpanel.BackColor = village.terraincolor;
+
             foreach (Point point in village.Houses)
             {
                 house_locations.Add(point);
@@ -88,7 +91,7 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            
+
             
         }
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)

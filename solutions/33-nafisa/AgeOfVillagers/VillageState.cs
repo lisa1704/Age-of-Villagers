@@ -10,9 +10,11 @@ namespace AgeOfVillagers
     {
         public String villagename;
         public String nationname;
+        public Color terraincolor;
         public List<Point> Houses;
         public List<Point> Trees;
         public List<Point> Watersources;
+
 
     }
 }
