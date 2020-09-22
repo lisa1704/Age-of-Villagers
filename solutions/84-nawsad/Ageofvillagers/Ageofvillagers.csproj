@@ -58,6 +58,17 @@
     <Compile Include="AgeofVillagers.Designer.cs">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </Compile>
+    <Compile Include="INationFactory.cs" />
+    <Compile Include="Items\Arab_House.cs" />
+    <Compile Include="Items\Arab_Tree.cs" />
+    <Compile Include="Items\Bangladeshi_House.cs" />
+    <Compile Include="Items\Bangladeshi_Tree.cs" />
+    <Compile Include="Items\Bangladeshi_Water_Source.cs" />
+    <Compile Include="Items\Egyptian_House.cs" />
+    <Compile Include="Items\Egyptian_Tree.cs" />
+    <Compile Include="Items\Egyptian_Water_Source.cs" />
+    <Compile Include="Items\IItems.cs" />
+    <Compile Include="Items\Inuit_House.cs" />
     <Compile Include="Nations\ArabBeduin.cs" />
     <Compile Include="Nations\BangladeshiFarmer.cs" />
     <Compile Include="Nations\EgyptianKing.cs" />
