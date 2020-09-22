@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,22 +53,32 @@ namespace AgeOfVillagers
             if(objectName == "TREE")
             {
                 treeLocations.Add(e.Location);
-                currentNation.DrawTree(e.X, e.Y, g);
                 //Debug.WriteLine(treeLocations.Count);
             }
             else if(objectName == "HOUSE")
             {
                 houseLocations.Add(e.Location);
-                currentNation.DrawHouse(e.X, e.Y, g);
-                
             }
             else
             {
                 waterLocation.Add(e.Location);
-                currentNation.DrawWater(e.X, e.Y, g);
             }
-            Console.WriteLine(houseLocations);
 
+            //Console.WriteLine(houseLocations);
+            foreach(Point point in treeLocations)
+            {
+                currentNation.DrawTree(point.X, point.Y, g);
+            }
+
+            foreach(Point point in houseLocations)
+            {
+                currentNation.DrawHouse(point.X, point.Y, g);
+            }
+
+            foreach (Point point in waterLocation)
+            {
+                currentNation.DrawWater(point.X, point.Y, g);
+            }
         }
 
         private void TreeButton_MouseClick(object sender, MouseEventArgs e)
@@ -97,9 +108,12 @@ namespace AgeOfVillagers
         private void newButton_Click(object sender, EventArgs e)
         {
             drawingAreaPanel.Refresh();
-            //drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
             nationTypeCombo.SelectedItem = null;
+            houseLocations.Clear();
+            treeLocations.Clear();
+            waterLocation.Clear();
             
         }
 
@@ -111,6 +125,17 @@ namespace AgeOfVillagers
             village.W_locations = waterLocation;
             village.nation = nation;
 
+        }
+
+        public void Get_from_state(VillageState village)
+        {
+
+            villageNameBox.Text = village.Name;
+            nation = village.nation;
+            houseLocations = village.H_locations;
+            treeLocations = village.T_locations;
+            waterLocation = village.W_locations;
+            
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -130,10 +155,29 @@ namespace AgeOfVillagers
 
                 jw.Close();
                 sw.Close();
+                sw.Dispose();
 
             }
         }
 
-        
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            
+            OpenFileDialog ofd = new OpenFileDialog();
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                newButton_Click(sender, e);
+                StreamReader sr = new StreamReader(ofd.FileName);
+
+                village = (VillageState)serializer.Deserialize(sr, typeof(VillageState));
+
+                sr.Close();
+                sr.Dispose();
+            }
+            g = drawingAreaPanel.CreateGraphics();
+
+            Get_from_state(village);
+            drawingAreaPanel.Refresh();
+        }
     }
 }

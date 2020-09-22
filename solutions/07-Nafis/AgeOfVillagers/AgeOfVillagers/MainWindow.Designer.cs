@@ -109,6 +109,7 @@ namespace AgeOfVillagers
             this.openButton.TabIndex = 3;
             this.openButton.Text = "Open Village";
             this.openButton.UseVisualStyleBackColor = true;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // newButton
             // 
@@ -186,7 +187,7 @@ namespace AgeOfVillagers
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.drawingAreaPanel);
             this.Name = "MainWindow";
-            this.Text = "Form1";
+            this.Text = "Age Of Villagers";
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
             this.ResumeLayout(false);
