@@ -30,6 +30,7 @@
         {
             this.DrawPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.villageNameLabel = new System.Windows.Forms.Label();
             this.VillageNameBox = new System.Windows.Forms.TextBox();
             this.nation = new System.Windows.Forms.ComboBox();
             this.tree_btn = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel2.Controls.Add(this.villageNameLabel);
             this.panel2.Controls.Add(this.VillageNameBox);
             this.panel2.Controls.Add(this.nation);
             this.panel2.Controls.Add(this.tree_btn);
@@ -72,9 +74,19 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // villageNameLabel
+            // 
+            this.villageNameLabel.AutoSize = true;
+            this.villageNameLabel.Location = new System.Drawing.Point(88, 50);
+            this.villageNameLabel.Name = "villageNameLabel";
+            this.villageNameLabel.Size = new System.Drawing.Size(55, 20);
+            this.villageNameLabel.TabIndex = 5;
+            this.villageNameLabel.Text = "Village";
+            this.villageNameLabel.Click += new System.EventHandler(this.villageNameLabel_Click);
+            // 
             // VillageNameBox
             // 
-            this.VillageNameBox.Location = new System.Drawing.Point(50, 77);
+            this.VillageNameBox.Location = new System.Drawing.Point(50, 88);
             this.VillageNameBox.Name = "VillageNameBox";
             this.VillageNameBox.Size = new System.Drawing.Size(125, 27);
             this.VillageNameBox.TabIndex = 4;
@@ -88,7 +100,7 @@
             "ArabBedouin",
             "EgyptianKings",
             "InuitHunters"});
-            this.nation.Location = new System.Drawing.Point(28, 117);
+            this.nation.Location = new System.Drawing.Point(28, 133);
             this.nation.Name = "nation";
             this.nation.Size = new System.Drawing.Size(163, 28);
             this.nation.TabIndex = 3;
@@ -109,7 +121,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(28, 35);
+            this.label2.Location = new System.Drawing.Point(28, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 28);
             this.label2.TabIndex = 1;
@@ -199,5 +211,6 @@
         private System.Windows.Forms.Button open_btn;
         private System.Windows.Forms.ComboBox nation;
         private System.Windows.Forms.TextBox VillageNameBox;
+        private System.Windows.Forms.Label villageNameLabel;
     }
 }

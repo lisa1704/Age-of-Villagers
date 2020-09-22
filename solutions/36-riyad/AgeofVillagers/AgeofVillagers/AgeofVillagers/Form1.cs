@@ -14,7 +14,7 @@ namespace AgeofVillagers
         int x;
         int y;
         string Text = "";
-        string VName = "";
+        string VillageName = "";
         Graphics g;
         string VType = "";
         Pen p;
@@ -121,8 +121,7 @@ namespace AgeofVillagers
 
         private void VillageNameBox_TextChanged(object sender, EventArgs e)
         {
-            VName = VillageNameBox.Text;
-            //label2.Text = VName;
+            
         }
 
 
@@ -154,7 +153,14 @@ namespace AgeofVillagers
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            VillageName = VillageNameBox.Text;
+            villageNameLabel.Text = VillageName;
+        }
 
+        private void villageNameLabel_Click(object sender, EventArgs e)
+        {
+            //VillageName = VillageNameBox.Text;
+           // villageNameLabel.Text = VillageName;
         }
     }
 }

@@ -9,22 +9,22 @@ namespace AgeofVillagers
     {
         public string DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            return "No Nation Selected!";
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void DrawWaterSource(Graphics g, Point mid)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public Color TerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Empty;
         }
     }
 }
