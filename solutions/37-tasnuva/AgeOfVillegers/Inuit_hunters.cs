@@ -11,4 +11,7 @@ namespace AgeOfVillegers
 
 {
     class Inuit_hunters : INations
+    {
+
+    }
 }
