@@ -12,11 +12,11 @@ namespace AgeOfVillagers
     public partial class DrawingWindow : Form
     {
         public static string VillageName;
-        //Nations nation;
-        VillageState village;
-        private List<Point> house_locations = new List<Point>();
-        private List<Point> tree_locations = new List<Point>();
-        private List<Point> watersource_locations = new List<Point>();
+        // private VillageState state;
+        // private Village newVillage;
+        private List<Point> house_locations { get; set; } = new List<Point>();
+        private List<Point> tree_locations { get; set; } = new List<Point>();
+        private List<Point> watersource_locations { get; set; } = new List<Point>();
         public DrawingWindow()
         {
             InitializeComponent(); 
@@ -48,12 +48,13 @@ namespace AgeOfVillagers
         private void SaveVillage_Click(object sender, EventArgs e)
         {
             
-            village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
-            house_locations = village.getHouseState();
-            tree_locations = village.getTreeState();
-            watersource_locations = village.getWsourceState();
-            VillageStateSaver savevillage = new VillageStateSaver(village);
-            savevillage.execute();
+            VillageState state = new VillageState();
+            
+           
+           // VillageStateSaver savevillage = new VillageStateSaver();
+           // savevillage.execute();
+            
+            
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -65,33 +66,34 @@ namespace AgeOfVillagers
         private void OpenVillage_Click(object sender, EventArgs e)
         {
             
+            
         }
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             Point P = new Point(e.X, e.Y);
-           
             Nations nation = new Nations(Form1.NationName, Drawingpanel);
-            VillageState village = new VillageState(VillageName, Form1.NationName, house_locations, tree_locations, watersource_locations);
+            VillageState state = new VillageState();
+
             //Drawingpanel.Invalidate();
 
             if (radioButton2.Checked == true)
             {
                 nation.getNation().DrawHouse(P, Drawingpanel);
-                village.setHouseState(P);
+                //state.setHouseState(P);
 
             }
             if (radioButton1.Checked == true)
             {
 
                 nation.getNation().DrawTree(P, Drawingpanel);
-                village.setTreeState(P);
+                //state.setTreeState(P);
 
             }
             if (radioButton3.Checked == true)
             {
 
                 nation.getNation().DrawWaterSource(P, Drawingpanel);
-                village.setWsourceState(P);
+                //state.setWsourceState(P);
             }
         }
 
