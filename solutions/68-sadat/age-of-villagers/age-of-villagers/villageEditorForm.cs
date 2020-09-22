@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using age_of_villagers.age_of_villagrs.Nations;
 namespace age_of_villagers
 {
     public partial class villageEditor : Form
@@ -49,6 +50,7 @@ namespace age_of_villagers
     
         private void button2_Click(object sender, EventArgs e)
         {
+            nation.createHouse(comboBox1.Text);
             text = comboBox1.Text + "house";
             brush = new SolidBrush(System.Drawing.Color.Black);
         }
@@ -119,6 +121,21 @@ namespace age_of_villagers
             yCoordinate = e.Y;
             g = VillageCanvas.CreateGraphics();
             g.DrawString(text, font, brush, new Point(xCoordinate, yCoordinate));
+            if(treeButton.Checked == true)
+            {
+
+                
+            }
+            else if(houseButton.Checked == true)
+            {
+                nation.createHouse(comboBox1.Text);
+                text = comboBox1.Text + "house";
+                brush = new SolidBrush(System.Drawing.Color.Black);
+            }
+            else if(waterSourceButton.Checked == true)
+            {
+
+            }
         }
 
         private void treeButtonClick(object sender, EventArgs e)
@@ -137,8 +154,8 @@ namespace age_of_villagers
         {
             if (comboBox1.SelectedItem == "Arab Bedouin")
             {
-                nation = new age_of_villagrs.Nations.ArabBedouin();
-                nation.createHouse(comboBox1.Text);
+                nation = new ArabBedouin(VillageCanvas);
+                
             }
             else if (comboBox1.SelectedItem == "Bangladeshi Farmers")
             {
@@ -152,6 +169,11 @@ namespace age_of_villagers
             {
                 comboBox1.Text = "Inuit";
             }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

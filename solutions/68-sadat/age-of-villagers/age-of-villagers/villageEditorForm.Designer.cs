@@ -30,17 +30,17 @@
         {
             this.VillageCanvas = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.saveVillageButton = new System.Windows.Forms.Button();
             this.openVillageButton = new System.Windows.Forms.Button();
             this.newVillageButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.villageNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.treeButton = new System.Windows.Forms.RadioButton();
+            this.houseButton = new System.Windows.Forms.RadioButton();
+            this.waterSourceButton = new System.Windows.Forms.RadioButton();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,6 +70,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(246, 389);
             this.panel2.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(74, 89);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -116,9 +125,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.waterSourceButton);
+            this.groupBox1.Controls.Add(this.houseButton);
+            this.groupBox1.Controls.Add(this.treeButton);
             this.groupBox1.Location = new System.Drawing.Point(18, 154);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(220, 92);
@@ -126,36 +135,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(56, 58);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 29);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Water Source";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.WaterSourceClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(112, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 29);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "House";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tree";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.treeButtonClick);
             // 
             // villageNameTextBox
             // 
@@ -183,14 +162,39 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // comboBox1
+            // treeButton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(74, 89);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.treeButton.AutoSize = true;
+            this.treeButton.Location = new System.Drawing.Point(20, 27);
+            this.treeButton.Name = "treeButton";
+            this.treeButton.Size = new System.Drawing.Size(58, 24);
+            this.treeButton.TabIndex = 0;
+            this.treeButton.TabStop = true;
+            this.treeButton.Text = "Tree";
+            this.treeButton.UseVisualStyleBackColor = true;
+            // 
+            // houseButton
+            // 
+            this.houseButton.AutoSize = true;
+            this.houseButton.Location = new System.Drawing.Point(104, 27);
+            this.houseButton.Name = "houseButton";
+            this.houseButton.Size = new System.Drawing.Size(72, 24);
+            this.houseButton.TabIndex = 1;
+            this.houseButton.TabStop = true;
+            this.houseButton.Text = "House";
+            this.houseButton.UseVisualStyleBackColor = true;
+            // 
+            // waterSourceButton
+            // 
+            this.waterSourceButton.AutoSize = true;
+            this.waterSourceButton.Location = new System.Drawing.Point(56, 58);
+            this.waterSourceButton.Name = "waterSourceButton";
+            this.waterSourceButton.Size = new System.Drawing.Size(118, 24);
+            this.waterSourceButton.TabIndex = 2;
+            this.waterSourceButton.TabStop = true;
+            this.waterSourceButton.Text = "Water Source";
+            this.waterSourceButton.UseVisualStyleBackColor = true;
+            this.waterSourceButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // villageEditor
             // 
@@ -207,6 +211,7 @@
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -221,10 +226,10 @@
         private System.Windows.Forms.Button openVillageButton;
         private System.Windows.Forms.Button newVillageButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton waterSourceButton;
+        private System.Windows.Forms.RadioButton houseButton;
+        private System.Windows.Forms.RadioButton treeButton;
     }
 }
 
