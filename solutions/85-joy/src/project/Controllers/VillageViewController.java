@@ -46,7 +46,7 @@ public class VillageViewController implements Initializable {
             @Override
             public void handle(MouseEvent event) {
                 if(Flag == 1){
-                    Object = nation.DrawTree(event.getSceneX(),event.getSceneY());
+                    Object = nationFactory.drawTree(event.getSceneX(),event.getSceneY());
                     DrawShape(Object);
                 }
                 else if(Flag == 2){
