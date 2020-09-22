@@ -18,7 +18,7 @@ public class NationFactory {
     public IWaterSource waterSource;
     public String terrainColor;
 
-    public INation nation;
+
     public String SelectedNation;
 
     public NationFactory(String SelectedNation){
@@ -33,23 +33,6 @@ public class NationFactory {
 
     }
 
-    public INation createNation(){
-        this.nation = null;
-        if(SelectedNation == "Bangladeshi Farmers"){
-            nation = new BangladeshiFarmers();
-        }
-        else if(SelectedNation == "Arab Bedouin"){
-            nation = new ArabBedouin();
-        }
-        else if(SelectedNation == "Egyptian Kings"){
-            nation = new EgyptianKings();
-        }
-        else if(SelectedNation == "Inuit Hunters"){
-            nation = new InuitHunters();
-        }
-
-        return nation;
-    }
 
     public String getTerrainColor(String SelectedNation){
         if(SelectedNation == "Bangladeshi Farmers"){

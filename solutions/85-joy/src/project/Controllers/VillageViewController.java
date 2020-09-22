@@ -32,7 +32,7 @@ public class VillageViewController implements Initializable {
     @FXML private TextField Village_Name;
     @FXML private Pane DrawPane;
 
-    public INation nation;
+
     public NationFactory nationFactory;
     public int Flag = 0;
     public ArrayList<Shape> Object ;
