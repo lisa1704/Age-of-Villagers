@@ -37,14 +37,14 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonOpen = new System.Windows.Forms.Button();
-            this.nation = new System.Windows.Forms.Label();
+            this.comboBoxNationName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // gameName
             // 
             this.gameName.AutoSize = true;
             this.gameName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gameName.Location = new System.Drawing.Point(609, 22);
+            this.gameName.Location = new System.Drawing.Point(609, 9);
             this.gameName.Name = "gameName";
             this.gameName.Size = new System.Drawing.Size(184, 31);
             this.gameName.TabIndex = 0;
@@ -54,7 +54,7 @@
             // villageName
             // 
             this.villageName.AutoSize = true;
-            this.villageName.Location = new System.Drawing.Point(668, 70);
+            this.villageName.Location = new System.Drawing.Point(671, 51);
             this.villageName.Name = "villageName";
             this.villageName.Size = new System.Drawing.Size(78, 20);
             this.villageName.TabIndex = 1;
@@ -139,21 +139,27 @@
             this.buttonOpen.UseVisualStyleBackColor = true;
             this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
-            // nation
+            // comboBoxNationName
             // 
-            this.nation.AutoSize = true;
-            this.nation.Location = new System.Drawing.Point(626, 112);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(149, 20);
-            this.nation.TabIndex = 2;
-            this.nation.Text = "Balngladeshi Farmers";
-            this.nation.Click += new System.EventHandler(this.nation_Click);
+            this.comboBoxNationName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNationName.FormattingEnabled = true;
+            this.comboBoxNationName.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.comboBoxNationName.Location = new System.Drawing.Point(626, 117);
+            this.comboBoxNationName.Name = "comboBoxNationName";
+            this.comboBoxNationName.Size = new System.Drawing.Size(167, 28);
+            this.comboBoxNationName.TabIndex = 10;
+            this.comboBoxNationName.SelectedIndexChanged += new System.EventHandler(this.comboBoxNationName_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxNationName);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.buttonSave);
@@ -161,7 +167,6 @@
             this.Controls.Add(this.radioButtonHouse);
             this.Controls.Add(this.radioButtonTree);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.nation);
             this.Controls.Add(this.villageName);
             this.Controls.Add(this.gameName);
             this.Name = "Form1";
@@ -183,7 +188,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonOpen;
-        private System.Windows.Forms.Label nation;
+        private System.Windows.Forms.ComboBox comboBoxNationName;
     }
 }
 
