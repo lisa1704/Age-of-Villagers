@@ -6,8 +6,14 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class Bangladeshi_Farmers_WaterSource implements IWaterSource{
-    private  double WaterSourceHeight = 16.0;
-    private  double WaterSourceWidth = 24.0;
+    private double WaterSourceHeight;
+    private double WaterSourceWidth;
+    public Bangladeshi_Farmers_WaterSource(){
+        super();
+        this.WaterSourceHeight = 16.0;
+        this.WaterSourceWidth = 24.0;
+    }
+
     @Override
     public ArrayList<Shape> drawAsset(double x, double y) {
         ArrayList<Shape> WaterSource = new ArrayList<Shape>();

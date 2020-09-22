@@ -6,6 +6,7 @@ import project.Utilities.Factories.IAssetFactory;
 import project.Utilities.Factories.TreeFactory;
 import project.Utilities.NationItems.IHouse;
 import project.Utilities.NationItems.ITree;
+import project.Utilities.NationItems.IWaterSource;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public class NationFactory {
     public IHouse house;
     public ITree tree;
+    public IWaterSource waterSource;
 
     public INation nation;
     public String SelectedNation;
@@ -23,6 +25,8 @@ public class NationFactory {
 
         IAssetFactory treeFactory = new TreeFactory();
         tree = (ITree) treeFactory.createAsset(SelectedNation);
+
+        IAssetFactory =
 
     }
 
@@ -48,5 +52,6 @@ public class NationFactory {
         return this.house.drawAsset(x,y);
     }
     public ArrayList<Shape> drawTree(double x, double y) {return this.tree.drawAsset(x,y); }
+    public ArrayList<Shape> drawWaterSource(double x, double y) { return this.waterSource.drawAsset(x,y);}
 
 }
