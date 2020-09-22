@@ -15,15 +15,15 @@ namespace AgeOfVillagers
             {
                 return new Bangladeshi();
             }
+            else if (typeofnation == "Egyptian Kings")
+            {
+                return new Egyptian();
+
+            }
             else if (typeofnation == "Arab Bedouin")
             {
                 return new Arab();
             }
-            /*else if (typeofnation.Equals("Egyptian Kings"))
-            {
-                return new Egyptian();
-
-            }*/
             else
             {
                 return null;

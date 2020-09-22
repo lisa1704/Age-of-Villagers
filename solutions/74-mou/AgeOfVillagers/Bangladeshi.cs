@@ -18,13 +18,13 @@ namespace AgeOfVillagers
         }
         public IShapes DrawHouse(Graphics g, Point p)
         {
-            CompositeShapes h = new BangladeshiHouse(p);
+            BangladeshiHouse h = new BangladeshiHouse(p);
             return h;
         }
 
         public IShapes DrawWaterSource(Graphics g, Point p)
         {
-            CompositeShapes w = new BangladeshiWaterSource(p);
+            BangladeshiWaterSource w = new BangladeshiWaterSource(p);
             return w;
 
         }

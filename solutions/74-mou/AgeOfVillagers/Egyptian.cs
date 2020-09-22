@@ -5,21 +5,28 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Egyptian
+    class Egyptian : INation
     {
-       /* IShapes DrawHouse(Point p)
+        public IShapes DrawTree(Graphics gr, Point p)
         {
-            
-        }
-        IShapes DrawTree(Point p)
-        {
-            
+            EgyptianTree t = new EgyptianTree(p);
+
+            return t;
 
         }
-
-        IShapes DrawWaterSource(Point p)
+      
+        public IShapes DrawHouse(Graphics g, Point p)
         {
+            EgyptianHouse h = new EgyptianHouse(p);
+            return h;
+        }
 
-        }*/
+        public IShapes DrawWaterSource(Graphics g, Point p)
+        {
+            EgyptianWaterSource w = new EgyptianWaterSource(p);
+            return w;
+
+        }
+    
     }
 }
