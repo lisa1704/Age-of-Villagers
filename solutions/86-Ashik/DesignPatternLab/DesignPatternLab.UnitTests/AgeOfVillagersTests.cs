@@ -1,6 +1,7 @@
 using AgeOfVillager;
 using NUnit.Framework;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace DesignPatternLab.UnitTests
 {
@@ -8,6 +9,7 @@ namespace DesignPatternLab.UnitTests
     {
         private readonly Form1 form;
         Graphics g;
+        MouseEventArgs e;
 
         public AgeOfVillagersTests()
         {
@@ -54,5 +56,29 @@ namespace DesignPatternLab.UnitTests
             Color color = inuitHuntersColor.setColor();
             Assert.AreEqual(Color.FromArgb(246, 246, 236), color);
         }
+
+        //testing object type
+        [Test]
+        public void BDFarmersTreeTest()
+        {
+            var bdFarmers = new BangladeshiFarmers(g, form);
+            ITree tree = bdFarmers.drawTree(e);
+            Assert.IsInstanceOf(typeof(BDFarmersTree), tree);
+        }
+        [Test]
+        public void ArabBedouinsTreeTest()
+        {
+            var ab = new ArabBedouin(g, form);
+            ITree tree = ab.drawTree(e);
+            Assert.IsInstanceOf(typeof(ArabBedouinsTree), tree);
+        }
+        [Test]
+        public void EgyptianKingsTreeTest()
+        {
+            var ab = new EgyptianKings(g, form);
+            ITree tree = ab.drawTree(e);
+            Assert.IsInstanceOf(typeof(EgyptianKingsTree), tree);
+        }
+        
     }
 }

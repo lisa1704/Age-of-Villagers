@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class EgyptianKingsTree : ITree
+    public class EgyptianKingsTree : ITree
     {
         int x, y;
         private readonly Graphics g;
