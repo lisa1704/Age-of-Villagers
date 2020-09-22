@@ -84,6 +84,5 @@ namespace AgeOfVillagers_Test
             Assert.IsType<Color>(InuitT.getBackColor());
 
         }
-
     }
 }

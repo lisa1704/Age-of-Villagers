@@ -31,11 +31,15 @@ namespace AgeOfVillagers
 
         private void new_village_Click(object sender, EventArgs e)
         {
+            myvillage.houses.Clear();
+            myvillage.trees.Clear();
+            myvillage.water_resources.Clear();
             drawing_panel.Refresh();
         }
 
         private void open_village_Click(object sender, EventArgs e)
         {
+            Refresh();
             if (select_nation.SelectedIndex == -1 )
             {
                 nullnation.showMessage();
