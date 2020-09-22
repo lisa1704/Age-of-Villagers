@@ -81,5 +81,10 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Nation_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

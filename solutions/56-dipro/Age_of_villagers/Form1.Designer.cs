@@ -41,6 +41,7 @@
             this.Village_Name = new System.Windows.Forms.Label();
             this.villagename_textbox = new System.Windows.Forms.TextBox();
             this.Nation_name = new System.Windows.Forms.Label();
+            this.Nation_list = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Drawingpanel
@@ -153,11 +154,27 @@
             this.Nation_name.Text = "Nation Name:";
             this.Nation_name.Click += new System.EventHandler(this.Nation_name_Click);
             // 
+            // Nation_list
+            // 
+            this.Nation_list.FormattingEnabled = true;
+            this.Nation_list.Items.AddRange(new object[] {
+            "Bangladeshi Farmers ",
+            "Arab Bedouin",
+            "Egyptian Kings ",
+            "Inuit Hunters "});
+            this.Nation_list.Location = new System.Drawing.Point(706, 121);
+            this.Nation_list.Name = "Nation_list";
+            this.Nation_list.Size = new System.Drawing.Size(84, 21);
+            this.Nation_list.TabIndex = 12;
+            this.Nation_list.Text = "Nation list";
+            this.Nation_list.SelectedIndexChanged += new System.EventHandler(this.Nation_list_SelectedIndexChanged);
+            // 
             // villagename_box
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 400);
+            this.Controls.Add(this.Nation_list);
             this.Controls.Add(this.Nation_name);
             this.Controls.Add(this.villagename_textbox);
             this.Controls.Add(this.Village_Name);
@@ -191,6 +208,7 @@
         private System.Windows.Forms.Label Village_Name;
         private System.Windows.Forms.TextBox villagename_textbox;
         private System.Windows.Forms.Label Nation_name;
+        private System.Windows.Forms.ComboBox Nation_list;
     }
 }
 
