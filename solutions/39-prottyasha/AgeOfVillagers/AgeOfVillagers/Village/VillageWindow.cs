@@ -85,7 +85,30 @@ namespace AgeOfVillagers
             //OpenVillageForm ovf = new OpenVillageForm();
             //ovf.Show();
             OpenVillage ov = new OpenVillage();
-            ov.open();
+            vill = ov.getVill();
+            this.setSavedVill(vill);
+        }
+
+        public void setSavedVill(Village vill)
+        {
+            nation_selector.SelectedText = vill.nation;
+            nation_selector_SelectedIndexChanged(this, null);
+            //Label_villName.Text =;
+            foreach (Point p in vill.trees_drawn)
+            {
+                selected_component = "tree";
+                drawInPanel(p);
+            }
+            foreach (Point p in vill.houses_drawn)
+            {
+                selected_component = "house";
+                drawInPanel(p);
+            }
+            foreach (Point p in vill.rivers_drawn)
+            {
+                selected_component = "water_source";
+                drawInPanel(p);
+            }
         }
 
         private void btn_newVillage_Click(object sender, EventArgs e)
@@ -129,9 +152,11 @@ namespace AgeOfVillagers
             Point p = new Point();
             p.X = e.X;
             p.Y = e.Y;
-            
-
-            if (selected_nation=="" || selected_component == "")
+            drawInPanel(p);          
+        }
+        public void drawInPanel(Point p)
+        {
+            if (selected_nation == "" || selected_component == "")
             {
                 MessageBox.Show("Select nation and component to draw");
             }
@@ -140,7 +165,7 @@ namespace AgeOfVillagers
                 IComponent component;
                 component = nation.getComponent(selected_component);
                 component.draw(p, g, pen);
-                this.SaveState(selected_component, selected_nation, p);               
+                this.SaveState(selected_component, selected_nation, p);
             }
         }
     }
