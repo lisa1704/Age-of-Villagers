@@ -7,10 +7,12 @@ namespace AgeOfVillagers
 {
     class Bangladeshi : INation
     {
-        public IShapes DrawTree(Graphics g, Point p)
+        //private readonly Pen pen;
+
+        public IShapes DrawTree(Graphics gr, Point p)
         {
             BangladeshiTree t = new BangladeshiTree(p);
-            t.DrawShapes(g);
+        
             return t;
 
         }

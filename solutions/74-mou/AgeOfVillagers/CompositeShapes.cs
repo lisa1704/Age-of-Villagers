@@ -19,11 +19,11 @@ namespace AgeOfVillagers
         {
             listOfShapes.Add(shapes);
         }
-        public void DrawShapes(Graphics gr)
+        public void DrawShapes(Graphics gr, Pen pen)
         {
             foreach(var sh in listOfShapes)
             {
-                sh.DrawShapes(gr);
+                sh.DrawShapes(gr,pen);
             }
         }
     }

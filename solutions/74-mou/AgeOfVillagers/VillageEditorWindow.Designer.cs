@@ -33,10 +33,10 @@ namespace AgeOfVillagers
             this.waterradio = new System.Windows.Forms.RadioButton();
             this.AgeOfVillagerstitlelabel = new System.Windows.Forms.Label();
             this.toolpanel = new System.Windows.Forms.Panel();
+            this.NationTypelistBox = new System.Windows.Forms.ListBox();
             this.Itemslabel = new System.Windows.Forms.Label();
             this.Nationlabel = new System.Windows.Forms.Label();
             this.VillageNamelabel = new System.Windows.Forms.Label();
-            this.nation = new System.Windows.Forms.ListBox();
             this.villagename = new System.Windows.Forms.TextBox();
             this.drawingpanel = new System.Windows.Forms.Panel();
             this.toolpanel.SuspendLayout();
@@ -126,10 +126,10 @@ namespace AgeOfVillagers
             // 
             this.toolpanel.BackColor = System.Drawing.Color.Lavender;
             this.toolpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolpanel.Controls.Add(this.NationTypelistBox);
             this.toolpanel.Controls.Add(this.Itemslabel);
             this.toolpanel.Controls.Add(this.Nationlabel);
             this.toolpanel.Controls.Add(this.VillageNamelabel);
-            this.toolpanel.Controls.Add(this.nation);
             this.toolpanel.Controls.Add(this.villagename);
             this.toolpanel.Controls.Add(this.AgeOfVillagerstitlelabel);
             this.toolpanel.Controls.Add(this.savevillage);
@@ -144,6 +144,21 @@ namespace AgeOfVillagers
             this.toolpanel.TabIndex = 9;
             this.toolpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.toolpanel_Paint);
             // 
+            // NationTypelistBox
+            // 
+            this.NationTypelistBox.FormattingEnabled = true;
+            this.NationTypelistBox.ItemHeight = 20;
+            this.NationTypelistBox.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouin",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.NationTypelistBox.Location = new System.Drawing.Point(67, 155);
+            this.NationTypelistBox.Name = "NationTypelistBox";
+            this.NationTypelistBox.Size = new System.Drawing.Size(165, 24);
+            this.NationTypelistBox.TabIndex = 16;
+            this.NationTypelistBox.SelectedIndexChanged += new System.EventHandler(this.NationTypelistBox_SelectedIndexChanged);
+            // 
             // Itemslabel
             // 
             this.Itemslabel.AutoSize = true;
@@ -157,7 +172,7 @@ namespace AgeOfVillagers
             // Nationlabel
             // 
             this.Nationlabel.AutoSize = true;
-            this.Nationlabel.Location = new System.Drawing.Point(66, 131);
+            this.Nationlabel.Location = new System.Drawing.Point(67, 132);
             this.Nationlabel.Name = "Nationlabel";
             this.Nationlabel.Size = new System.Drawing.Size(57, 20);
             this.Nationlabel.TabIndex = 12;
@@ -167,36 +182,20 @@ namespace AgeOfVillagers
             // VillageNamelabel
             // 
             this.VillageNamelabel.AutoSize = true;
-            this.VillageNamelabel.Location = new System.Drawing.Point(66, 64);
+            this.VillageNamelabel.Location = new System.Drawing.Point(67, 64);
             this.VillageNamelabel.Name = "VillageNamelabel";
             this.VillageNamelabel.Size = new System.Drawing.Size(102, 20);
             this.VillageNamelabel.TabIndex = 11;
             this.VillageNamelabel.Text = "Village Name:";
             this.VillageNamelabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // nation
-            // 
-            this.nation.FormattingEnabled = true;
-            this.nation.ItemHeight = 20;
-            this.nation.Items.AddRange(new object[] {
-            "Bangladeshi Farmers",
-            "Arab Bedouin",
-            "Egyptian Kings",
-            "Inuit Hunters"});
-            this.nation.Location = new System.Drawing.Point(66, 154);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(166, 24);
-            this.nation.TabIndex = 10;
-            this.nation.SelectedIndexChanged += new System.EventHandler(this.nation_SelectedIndexChanged);
-            // 
             // villagename
             // 
             this.villagename.BackColor = System.Drawing.SystemColors.HighlightText;
             this.villagename.Location = new System.Drawing.Point(66, 87);
             this.villagename.Name = "villagename";
-            this.villagename.Size = new System.Drawing.Size(166, 27);
+            this.villagename.Size = new System.Drawing.Size(158, 27);
             this.villagename.TabIndex = 14;
-            this.villagename.Text = "g";
             this.villagename.TextChanged += new System.EventHandler(this.villagenameTextChanged);
             // 
             // drawingpanel
@@ -231,6 +230,7 @@ namespace AgeOfVillagers
         private System.Windows.Forms.Button savevillage;
         private System.Windows.Forms.Button newvillage;
         private System.Windows.Forms.Button openvillage;
+        private System.Windows.Forms.ListBox NationTypelistBox;
         private System.Windows.Forms.RadioButton treeradio;
         private System.Windows.Forms.RadioButton houseradio;
         private System.Windows.Forms.RadioButton waterradio;
@@ -238,7 +238,6 @@ namespace AgeOfVillagers
         private System.Windows.Forms.Panel toolpanel;
         private System.Windows.Forms.Panel drawingpanel;
         private System.Windows.Forms.TextBox villagename;
-        private System.Windows.Forms.ListBox nation;
         private System.Windows.Forms.Label VillageNamelabel;
         private System.Windows.Forms.Label Itemslabel;
         private System.Windows.Forms.Label Nationlabel;

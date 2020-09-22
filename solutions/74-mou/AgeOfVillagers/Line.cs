@@ -14,9 +14,8 @@ namespace AgeOfVillagers
             this.p2 = p2;
         }
 
-        public void DrawShapes(Graphics gr)
+        public void DrawShapes(Graphics gr,Pen pen)
         {
-            var pen = new Pen(Color.Black,1);
             gr.DrawLine(pen,p1, p2);
         }
     }

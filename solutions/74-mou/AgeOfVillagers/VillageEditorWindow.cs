@@ -18,7 +18,8 @@ namespace AgeOfVillagers
         public string item = "", checked_nation = "";
         private string vname ="";
         NationFactory nationfactory = new NationFactory();
-
+        Graphics gr;
+        //Pen pen;
         private List<Point> PointsOfHouse { get; set; } = new List<Point>();
         private List<Point> PointsOfTree { get; set; } = new List<Point>();
         private List<Point> PointsOfWatersource { get; set; } = new List<Point>();
@@ -28,6 +29,8 @@ namespace AgeOfVillagers
         public VillageEditorWindow()
         {
             InitializeComponent();
+           gr = drawingpanel.CreateGraphics();
+            
         }
         private void VillageWindow_Load(object sender, EventArgs e) 
         {
@@ -78,57 +81,40 @@ namespace AgeOfVillagers
 
         private void PaintDrawPanel(object sender, PaintEventArgs e)
         {
-            Graphics gr = drawingpanel.CreateGraphics();
-            Pen pen = new Pen(Color.Blue);
-            foreach (Point j in PointsOfTree)
-            {
-                nationfactory.GetNation(checked_nation).DrawTree(gr,j);
-
-            }
-            foreach (Point j in PointsOfHouse)
-            {
-                nationfactory.GetNation(checked_nation).DrawHouse(gr,j);
-
-            }
-            foreach (Point j in PointsOfWatersource)
-            {
-                nationfactory.GetNation(checked_nation).DrawWaterSource(gr,j);
-
-            }
+           
 
         }
 
         public void drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
-
+            Pen pen = new Pen(Color.Blue, 1);
+            gr.DrawLine(pen, new Point(e.X,e.Y), new Point(e.X + 10, e.Y));
+              
             if (item == "Tree")
             {
-                PointsOfTree.Add(e.Location);
+                nationfactory.GetNation(checked_nation).DrawTree(gr, new Point(e.X, e.Y)).DrawShapes(gr,pen);
 
 
             }
             else if (item == "House")
             {
-                PointsOfHouse.Add(e.Location);
+                nationfactory.GetNation(checked_nation).DrawHouse(gr, new Point(e.X, e.Y));
 
             }
             else if (item == "Water Source")
             {
-                PointsOfWatersource.Add(e.Location);
+                nationfactory.GetNation(checked_nation).DrawTree(gr, new Point(e.X, e.Y)).DrawShapes(gr, pen);
 
             }
 
         }
-
-        public void nation_SelectedIndexChanged(object sender, EventArgs e)
+        private void NationTypelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checked_nation = nation.Text;
-
+            checked_nation = NationTypelistBox.Text;
         }
         private void villagenameTextChanged(object sender, EventArgs e)
         {
             vname = villagename.Text;
-            VillageNamelabel.Text = vname;
 
         }
 
@@ -141,6 +127,7 @@ namespace AgeOfVillagers
             //drawingpanel.Invalidate();
 
         }
+
 
 
         public void openvillage_Click(object sender, EventArgs e)
