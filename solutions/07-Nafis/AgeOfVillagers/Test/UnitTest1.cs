@@ -7,7 +7,9 @@ namespace AgeOfVillagersTests
 {
     public class UnitTest1
     {
+        MainWindow mw = new MainWindow();
         NationBuilder builder = new NationBuilder();
+        VillageState villageState = new VillageState();
 
         [Fact]
         public void Test1()
@@ -54,6 +56,15 @@ namespace AgeOfVillagersTests
             Color actual = builder.BuildNations(null).SetColor();
             Assert.Equal(expected, actual);
         }
+
+        /*[Fact]
+        public void LocationTest()
+        {
+            mw.SaveState();
+            Assert.Equal(0, mw.houseLocations.Count);
+            
+
+        }*/
 
     }
 }

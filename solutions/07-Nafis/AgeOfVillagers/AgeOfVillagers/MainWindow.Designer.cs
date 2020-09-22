@@ -41,7 +41,6 @@ namespace AgeOfVillagers
             this.TreeButton = new System.Windows.Forms.Button();
             this.villageNameBox = new System.Windows.Forms.TextBox();
             this.gameHeaderLabel = new System.Windows.Forms.Label();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,7 +206,6 @@ namespace AgeOfVillagers
         private System.Windows.Forms.Button houseButton;
         private System.Windows.Forms.Button TreeButton;
         private System.Windows.Forms.ComboBox nationTypeCombo;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

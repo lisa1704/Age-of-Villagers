@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +24,11 @@ namespace AgeOfVillagers
         Color background;
         VillageState village = new VillageState();
         NationBuilder builder = new NationBuilder();
+        JsonSerializer serializer = new JsonSerializer();
 
-        List<Point> houseLocations = new List<Point>();
-        List<Point> treeLocations = new List<Point>();
-        List<Point> waterLocation = new List<Point>();
+        public List<Point> houseLocations = new List<Point>();
+        public List<Point> treeLocations = new List<Point>();
+        public List<Point> waterLocation = new List<Point>();
 
         INations currentNation = new NoNation();
         Graphics g;
@@ -42,12 +45,15 @@ namespace AgeOfVillagers
             x = e.X;
             y = e.Y;
 
+            
+
             g = drawingAreaPanel.CreateGraphics();
 
             if(text == "TREE")
             {
                 treeLocations.Add(e.Location);
                 currentNation.DrawTree(e.X, e.Y, g);
+                //Debug.WriteLine(treeLocations.Count);
             }
             else if(text == "HOUSE")
             {
@@ -60,8 +66,8 @@ namespace AgeOfVillagers
                 waterLocation.Add(e.Location);
                 currentNation.DrawWater(e.X, e.Y, g);
             }
+            Console.WriteLine(houseLocations);
 
-           
         }
 
         private void TreeButton_MouseClick(object sender, MouseEventArgs e)
@@ -86,31 +92,6 @@ namespace AgeOfVillagers
             background = currentNation.SetColor();
             drawingAreaPanel.BackColor = background;
 
-            /*if(nation == "Bangladeshi Farmers")
-            {
-                drawingAreaPanel.BackColor = Color.Green;
-            }
-
-            else if(nation == "Arab Bedouins")
-            {
-                drawingAreaPanel.BackColor = Color.LightYellow;
-            }
-
-            else if(nation == "Egyptian Kings")
-            {
-                drawingAreaPanel.BackColor = Color.Yellow;
-            }
-
-            else if(nation == "Inuit Hunters")
-            {
-                drawingAreaPanel.BackColor = Color.White;
-            }
-
-            else
-            {
-                drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            }*/
-
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -119,6 +100,7 @@ namespace AgeOfVillagers
             //drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
             nationTypeCombo.SelectedItem = null;
+            
         }
 
         public void SaveState()
@@ -132,7 +114,23 @@ namespace AgeOfVillagers
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "AOV files|*.aov";
+            sfd.FileName = "New Save";
 
+            SaveState();
+
+            if(sfd.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(sfd.FileName);
+                JsonWriter jw = new JsonTextWriter(sw);
+
+                serializer.Serialize(jw, village);
+
+                jw.Close();
+                sw.Close();
+
+            }
         }
 
         
