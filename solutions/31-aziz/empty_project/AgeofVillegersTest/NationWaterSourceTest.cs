@@ -18,6 +18,9 @@ namespace AgeofVillegersTest
 
             AbstractNation arabBedouinWaterSource = new ArabBedouin(new Panel());
             Assert.AreEqual(arabBedouinWaterSource.getWaterSourceType().GetType(), new ArabBedouinWaterSource().GetType());
+
+            AbstractNation egyptianKingsWaterSource = new EgyptianKings(new Panel());
+            Assert.AreEqual(egyptianKingsWaterSource.getWaterSourceType().GetType(), new EgyptianKingsWaterSource().GetType());
         }
     }
 }
