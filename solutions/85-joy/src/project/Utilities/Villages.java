@@ -88,7 +88,6 @@ public class Villages implements Serializable {
 //        }
 
         Villages villages = null;
-        VillageState villageState = null;
         try {
             BufferedReader br = new BufferedReader(new FileReader("SavedVillages/"+"check2.aov"));
             villages = new Gson().fromJson(br,Villages.class);

@@ -88,6 +88,27 @@ public class VillageViewController implements Initializable {
         village = village.LoadVillage();
         Village_Name.setText(village.VillageName);
 
+//        this.nationFactory = new NationFactory((String) NationDropDown.getValue());
+        for(VillageState x : village.assetList){
+            System.out.println((String) x.AssetType);
+            System.out.println(x.AssetType.getClass().getTypeName());
+            if(x.AssetType.equals("Tree")){
+                System.out.println("YES");
+                Object = nationFactory.drawTree(x.x,x.y);
+                DrawShape(Object);
+            }
+            else if(x.AssetType.equals("House")){
+                Object = nationFactory.drawHouse(x.x,x.y);
+                DrawShape(Object);
+            }
+            else if(x.AssetType.equals("WaterSource")){
+                Object = nationFactory.drawWaterSource(x.x,x.y);
+                DrawShape(Object);
+            }
+            else{
+                System.out.println("AMAR MUNDU!");
+            }
+        }
         DrawAssetList(village.assetList);
 
     }
