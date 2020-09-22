@@ -12,7 +12,7 @@ namespace Ageofvillagers.Nations
     {
         private Graphics g;
         private Pen p;
-        public ArabBeduin(Graphics g,Pen p)
+        public ArabBeduin(Graphics g, Pen p)
         {
             this.g = g;
             this.p = p;

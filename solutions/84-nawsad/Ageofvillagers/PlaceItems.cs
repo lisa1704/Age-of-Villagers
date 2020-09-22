@@ -20,9 +20,6 @@ namespace Ageofvillagers
             Nation.drawHouse(e.Location.X, e.Location.Y);
           //  B.drawHouse(e.Location.X, e.Location.Y);
 
-     
-
-
         }
     }
 }

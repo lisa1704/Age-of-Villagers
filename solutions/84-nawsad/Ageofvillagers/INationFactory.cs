@@ -1,6 +1,7 @@
 ﻿using Ageofvillagers.Nations;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,31 @@ namespace Ageofvillagers
     {
         INation nation;
         String nation_type;
-        public void get_Nation()
+        private Graphics g;
+        private Pen p;
+        INationFactory(Graphics g,Pen p)
         {
+            this.g = g;
+            this.p = p;
+        }
+        public INation get_Nation()
+        {
+            if(nation_type=="Arab Beduin")
+            {
+                return new ArabBeduin(g, p);
+            }
+            else if(nation_type=="Bangladeshi Farmer")
+            {
+                return new BangladeshiFarmer(g, p);
+            }
+            else if(nation_type=="Egyptian King")
+            {
+                return new EgyptianKing(g, p);
+            }
+            else
+            {
+                return new InuitHunters(g, p);
+            }
             
 
         }
