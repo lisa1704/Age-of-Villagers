@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace empty_project
 {
-    class BangladeshiFarmersHouse : IHouse
+    public class BangladeshiFarmersHouse : IHouse
     {
         public void drawHouse(Axis axis, Panel panel)
         {

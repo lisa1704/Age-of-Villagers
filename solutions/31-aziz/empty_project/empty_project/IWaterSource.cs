@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    interface IWaterSource
+    public interface IWaterSource
     {
         void drawWaterSource(Axis axis, Panel panel);
     }

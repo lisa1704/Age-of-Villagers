@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    abstract class AbstractNation : INation
+    public abstract class AbstractNation : INation
     {
         protected IHouse house;
         protected ITree tree;

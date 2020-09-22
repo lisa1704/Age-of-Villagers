@@ -8,7 +8,7 @@ using System.IO;
 
 namespace empty_project
 {
-    class VillageSaveOpen
+    public class VillageSaveOpen
     {
         protected Village villageState;
         protected string villageSerialized;

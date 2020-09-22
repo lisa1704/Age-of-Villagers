@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    interface INation
+    public interface INation
     {
         void drawHouse(Axis axis);
         void drawTree(Axis axis);

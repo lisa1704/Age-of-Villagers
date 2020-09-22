@@ -4,7 +4,7 @@ using System.Text;
 
 namespace empty_project
 {
-    class Axis
+    public class Axis
     {
         public Axis(int x, int y)
         {

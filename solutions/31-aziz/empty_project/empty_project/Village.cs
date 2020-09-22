@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class Village
+    public class Village
     {
         public string village = "";
         public List<Axis> houses = new List<Axis>();

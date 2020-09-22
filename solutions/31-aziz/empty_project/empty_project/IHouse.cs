@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    interface IHouse
+    public interface IHouse
     {
         void drawHouse(Axis axis, Panel panel);
     }

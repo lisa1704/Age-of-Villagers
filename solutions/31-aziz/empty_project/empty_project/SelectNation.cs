@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class SelectNation
+    public class SelectNation
     {
         protected Panel panel;
         public SelectNation(Panel panel)

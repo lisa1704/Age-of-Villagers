@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class EgyptianKingsHouse : IHouse
+    public class EgyptianKingsHouse : IHouse
     {
         public void drawHouse(Axis axis, Panel panel)
         {

@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class InuitHunters : AbstractNation
+    public class InuitHunters : AbstractNation
     {
         public InuitHunters(Panel panel) : base(panel)
         {

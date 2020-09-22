@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class EgyptianKingsTree : ITree
+    public class EgyptianKingsTree : ITree
     {
         public void drawTree(Axis axis, Panel panel)
         {

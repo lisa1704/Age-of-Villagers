@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class ArabBedouin : AbstractNation
+    public class ArabBedouin : AbstractNation
     {
         public ArabBedouin(Panel panel) : base(panel)
         {

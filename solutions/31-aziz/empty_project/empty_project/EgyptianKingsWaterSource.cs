@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace empty_project
 {
-    class EgyptianKingsWaterSource : IWaterSource
+    public class EgyptianKingsWaterSource : IWaterSource
     {
         public void drawWaterSource(Axis axis, Panel panel)
         {
