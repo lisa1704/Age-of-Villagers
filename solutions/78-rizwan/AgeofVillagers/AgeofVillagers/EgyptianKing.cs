@@ -47,5 +47,9 @@ namespace AgeofVillagers
             int y = e.Y;
             g.DrawArc(p, x - 20, y - 20, 40, 40, 0, 360);
         }
+        public void terrain(Panel p)
+        {
+            p.BackColor = Color.Yellow;
+        }
     }
 }

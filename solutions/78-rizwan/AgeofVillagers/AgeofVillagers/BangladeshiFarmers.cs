@@ -52,5 +52,9 @@ namespace AgeofVillagers
             g.DrawLine(p, x - 36, y, x - 24, y + 20);
             g.DrawLine(p, x - 23, y + 20, x, y);
         }
+        public void terrain(Panel p)
+        {
+            p.BackColor = Color.Green;
+        }
     }
 }

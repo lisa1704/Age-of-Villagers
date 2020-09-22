@@ -62,6 +62,7 @@ namespace AgeofVillagers
                     ArabBeduoin a = new ArabBeduoin(g);
                     EgyptianKing eg = new EgyptianKing(g);
                     eg.createTree(e);
+                    bf.terrain(panel1);
                     //a.createTree(e);
                     //bf.createTree(e);
                     //Rectangle shape = new Rectangle(x, y, h, w);

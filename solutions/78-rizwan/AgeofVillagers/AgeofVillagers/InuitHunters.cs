@@ -36,5 +36,10 @@ namespace AgeofVillagers
         {
             throw new NotImplementedException();
         }
+
+        public void terrain(Panel p)
+        {
+            p.BackColor = Color.White;
+        }
     }
 }
