@@ -21,9 +21,9 @@ namespace Ageofvillagers.Nations
             throw new NotImplementedException();
         }
 
-        public void drawWaterSource()
+        public void drawWaterSource(int x, int y)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
