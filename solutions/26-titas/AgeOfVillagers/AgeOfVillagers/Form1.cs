@@ -12,6 +12,7 @@ namespace AgeOfVillagers
 {
     public partial class Form1 : Form
     {
+        BdFarmers bdFarmers = new BdFarmers();
         public Form1()
         {
             InitializeComponent();
@@ -69,10 +70,29 @@ namespace AgeOfVillagers
 
         private void mouseClick_MouseClick(object sender, MouseEventArgs e)
         {
+            
+        }
+
+        private void mouseClick(object sender, MouseEventArgs e)
+        {
+            
+            
+            
+        }
+
+        private void mouse_click(object sender, MouseEventArgs e)
+        {
             int x, y;
             x = e.X;
             y = e.Y;
-            MessageBox.Show(x + "," + y);
+            Graphics g = panel1.CreateGraphics();
+
+            Pen p = new Pen(new SolidBrush(Color.Red), 2);
+            if (radioButtonHouse.Checked)
+            {
+                bdFarmers.paint_house(e, g, p);
+            }
+
         }
     }
 }

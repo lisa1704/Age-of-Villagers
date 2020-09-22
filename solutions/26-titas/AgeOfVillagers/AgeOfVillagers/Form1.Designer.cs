@@ -30,7 +30,6 @@
         {
             this.gameName = new System.Windows.Forms.Label();
             this.villageName = new System.Windows.Forms.Label();
-            this.nation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButtonTree = new System.Windows.Forms.RadioButton();
             this.radioButtonHouse = new System.Windows.Forms.RadioButton();
@@ -38,6 +37,7 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonOpen = new System.Windows.Forms.Button();
+            this.nation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameName
@@ -61,16 +61,6 @@
             this.villageName.Text = "Kathakhali";
             this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
-            // nation
-            // 
-            this.nation.AutoSize = true;
-            this.nation.Location = new System.Drawing.Point(626, 112);
-            this.nation.Name = "nation";
-            this.nation.Size = new System.Drawing.Size(149, 20);
-            this.nation.TabIndex = 2;
-            this.nation.Text = "Balngladeshi Farmers";
-            this.nation.Click += new System.EventHandler(this.nation_Click);
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(3, 3);
@@ -78,6 +68,7 @@
             this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouse_click);
             // 
             // radioButtonTree
             // 
@@ -148,6 +139,16 @@
             this.buttonOpen.UseVisualStyleBackColor = true;
             this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
+            // nation
+            // 
+            this.nation.AutoSize = true;
+            this.nation.Location = new System.Drawing.Point(626, 112);
+            this.nation.Name = "nation";
+            this.nation.Size = new System.Drawing.Size(149, 20);
+            this.nation.TabIndex = 2;
+            this.nation.Text = "Balngladeshi Farmers";
+            this.nation.Click += new System.EventHandler(this.nation_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -165,6 +166,7 @@
             this.Controls.Add(this.gameName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,7 +176,6 @@
 
         private System.Windows.Forms.Label gameName;
         private System.Windows.Forms.Label villageName;
-        private System.Windows.Forms.Label nation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButtonTree;
         private System.Windows.Forms.RadioButton radioButtonHouse;
@@ -182,6 +183,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonOpen;
+        private System.Windows.Forms.Label nation;
     }
 }
 
