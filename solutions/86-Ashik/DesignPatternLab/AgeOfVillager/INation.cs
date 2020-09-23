@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    interface INation
+    public interface INation
     {
         //A nation has a terrain, house, tree, water resource and so on
         ITree drawTree(MouseEventArgs e);

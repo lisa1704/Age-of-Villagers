@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class NationManager
+    public class NationManager
     {
         private readonly string myNation;
         private readonly NationFactory nationFactory;

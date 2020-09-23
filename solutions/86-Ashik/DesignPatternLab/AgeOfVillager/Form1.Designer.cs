@@ -101,6 +101,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Open Village";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -122,6 +123,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tree";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // comboBox1
             // 
