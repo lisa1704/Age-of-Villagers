@@ -9,16 +9,17 @@ namespace Age_of_villagers.Components
 {
     class Bangladeshi_house : VillageComponent
     {
-        private readonly Point t, mL, mR, bL, bR;
+        private readonly Point top, mid_Left, mid_Right, bottom_Left, bottom_Right;
 
         public Bangladeshi_house(Point point)
         {
-            t = point;
-            mL = new Point(t.X - 10, t.Y + 20);
-            mR = new Point(t.X + 10, t.Y + 20);
-            bR = new Point(t.X + 10, t.Y + 40);
-            AddComp(new Triangle(t, mL, mR));
-            AddComp(new Shape.Rectangle(mL, bR));
+            top = point;
+            mid_Left = new Point(top.X - 10, top.Y + 20);
+            mid_Right = new Point(top.X + 10, top.Y + 20);
+            bottom_Left=new Point(top.X - 10, top.Y + 40);
+            bottom_Right = new Point(top.X + 10, top.Y + 40);
+            AddComp(new Triangle(top, mid_Left, mid_Right));
+            AddComp(new Shape.Rectangle(mid_Left, bottom_Right));
         }
     }
 }
