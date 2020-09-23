@@ -73,7 +73,19 @@ namespace AgeOfVillegers
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-
+            if (item == "house")
+            {
+                H_points.Add(e.Location);
+            }
+            if (item == "tree")
+            {
+                T_points.Add(e.Location);
+            }
+            if (item == "water")
+            {
+                W_points.Add(e.Location);
+            }
+            panel1.Invalidate();
         }
 
 
