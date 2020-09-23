@@ -7,6 +7,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
+import shape.Circle;
+import shape.Rectangle;
 
 public class BDTree implements ITree {
 
@@ -27,10 +29,9 @@ public class BDTree implements ITree {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
 
-                    graphicsContext.strokeArc(x, y, 50, 50, 200, 360, ArcType.OPEN);
-                    graphicsContext.lineTo(x, y);
-                    graphicsContext.lineTo(x + 10, y + 20);
-                    graphicsContext.strokeText("bd tree", mouseEvent.getX(), mouseEvent.getY());
+                    new Circle(graphicsContext,x,y,20).draw();
+                    new Rectangle(graphicsContext,x+5, y+10,15, 4).draw();
+
                     radioButton.setSelected(false);
                     active = false;
                 }
