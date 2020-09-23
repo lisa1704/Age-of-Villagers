@@ -40,5 +40,12 @@ namespace AgeOfVillagers.Test
             var expected = typeof(EgyptianTree);
             Assert.IsType(expected, ek.getTree(new Point()));
         }
+
+        [Fact]
+        public void WatersourceTest()
+        {
+            var expected = typeof(EgyptianWaterSource);
+            Assert.IsType(expected, ek.getWaterSource(new Point()));
+        }
     }
 }
