@@ -29,7 +29,6 @@ namespace AgeOfVillagers
             NullVillageItem nWater = new NullVillageItem(MPt);
             nWater.Paint(g, p);
             return nWater;
-            //throw new NotImplementedException();
         }
 
         public Color GetTerrainColor()

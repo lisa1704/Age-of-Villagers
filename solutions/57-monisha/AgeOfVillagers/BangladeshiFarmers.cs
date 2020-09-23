@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using static AgeOfVillagers.DrawArc;
 
 namespace AgeOfVillagers
 {
@@ -18,7 +17,6 @@ namespace AgeOfVillagers
          
             house.Paint(g,p);
             testBdHouse = "BDHouse Constructed";
-            //return "KureGhor";
             return house;
         }
 
@@ -52,7 +50,6 @@ namespace AgeOfVillagers
 
         public Color GetTerrainColor()
         {
-            //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             return System.Drawing.Color.LightGreen;
         }
 

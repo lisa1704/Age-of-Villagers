@@ -90,17 +90,17 @@ namespace AgeOfVillagers
         private void OpenVillage_Click(object sender, EventArgs e)
         {           
                 OpenVillage openVillage = new OpenVillage();
-                
                 openVillage.ExecuteAction();
                 village = openVillage.GetVillage();
-                SetVillageState(village);
-                DrawPanel.Refresh();
-          
+                if (village.name != null )
+                {
+                    SetVillageState(village);
+                    DrawPanel.Refresh();
+                }                       
         }
 
         private void NewVbutton_Click(object sender, EventArgs e)
         {
-            //VName.Clear();
             VillageNameBox.Clear();
             HousePoints.Clear();
             TreePoints.Clear();
@@ -123,7 +123,6 @@ namespace AgeOfVillagers
             VType = NationList.Text;
             DrawPanel.BackColor = nationFactory.GetNation(VType).GetTerrainColor();
            
-            //string NName =nationFactory.GetNation(VType).DrawHouse();
         }
 
         private void DrawPanel_Paint(object sender, PaintEventArgs e)

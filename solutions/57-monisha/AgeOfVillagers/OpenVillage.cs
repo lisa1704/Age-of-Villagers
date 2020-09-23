@@ -17,26 +17,17 @@ namespace AgeOfVillagers
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                Stream AOVStream = ofd.OpenFile();
-                using (StreamReader streamReader = new StreamReader(AOVStream))
+                Stream AOVStream;//= ofd.OpenFile();
+                if ((AOVStream = ofd.OpenFile()) != null)
                 {
-                    string json = streamReader.ReadToEnd();
-                    villageproperties = JsonConvert.DeserializeObject<VillageProperties>(json);
+                    using (StreamReader streamReader = new StreamReader(AOVStream))
+                    {
+                        string json = streamReader.ReadToEnd();
+                        villageproperties = JsonConvert.DeserializeObject<VillageProperties>(json);
+                    }
                 }
             }
-            /*  if (openFileDialog.ShowDialog() == DialogResult.OK)
-              {
-                  //Get the path of specified file
-                  filePath = openFileDialog.FileName;
-
-                  //Read the contents of the file into a stream
-                  var fileStream = openFileDialog.OpenFile();
-
-                  using (StreamReader reader = new StreamReader(fileStream))
-                  {
-                      fileContent = reader.ReadToEnd();
-                  }
-              }*/          
+                                
         }
         public VillageProperties GetVillage()
         {

@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using static AgeOfVillagers.DrawArc;
 using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
@@ -58,19 +57,11 @@ namespace AgeOfVillagers
     public class InuitHouse : CompositeShape
     {
         public InuitHouse(Point MPt)
-        {           
-            /*Point Lpt1 = new Point(MPt.X - 45, MPt.Y + 10);
-            Point Lpt2 = new Point(MPt.X + 52, MPt.Y + 10);
-            Point Opt1 = new Point(MPt.X - 8, MPt.Y -5);*/
+        {                      
             Point Lpt1 = new Point(MPt.X - 6, MPt.Y + 10);
             Point Lpt2 = new Point(MPt.X + 10, MPt.Y + 10);
             Point Opt1 = new Point(MPt.X -1, MPt.Y + 7 );
 
-           /* AddComp(new Line(Lpt1, Lpt2));
-           *//* AddComp(new ShapeArc(Opt1.X, Opt1.Y, topPt2.X - Opt1.X, topPt2.Y - Opt1.Y, 0, -180.0F));
-            AddComp(new ShapeArc(MPt.X, MPt.Y, topPt4.X - MPt.X, topPt4.Y - MPt.Y, 0, -180.0F));*//*
-            AddComp(new ShapeArc(Opt1.X, Opt1.Y, 27, 29, 0, -180.0F));
-            AddComp(new ShapeArc(Lpt1.X, Lpt1.Y-45, 98, 90, 0, -180.0F));*/
             AddComp(new Line(Lpt1, Lpt2));
             AddComp(new ShapeArc(Opt1.X, Opt1.Y, 6, 4, 0, -180.0F));
             AddComp(new ShapeArc(Lpt1.X, Lpt1.Y - 8, 16, 14, 0, -180.0F));

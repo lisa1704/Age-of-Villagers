@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using static AgeOfVillagers.DrawArc;
 
 namespace AgeOfVillagers
 {
@@ -16,7 +15,6 @@ namespace AgeOfVillagers
             InuitHouse IglooHouse = new InuitHouse(pt);
             IglooHouse.Paint(g, p);
 
-            //return "Igloo";
             return IglooHouse;
         }
         public object testHouse(Point pt)

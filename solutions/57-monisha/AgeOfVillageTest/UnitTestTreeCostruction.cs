@@ -10,7 +10,6 @@ namespace AgeOfVillageTest
     {
         public Graphics g;
         Point pt = new Point(100, 80);
-        // NationFactory nationfactory = new NationFactory();
 
         /*  [TestMethod]
           public void TestBDTreeConstruction()

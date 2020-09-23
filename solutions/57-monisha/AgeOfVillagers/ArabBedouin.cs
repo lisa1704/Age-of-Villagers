@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using static AgeOfVillagers.DrawArc;
 
 namespace AgeOfVillagers
 {
@@ -15,7 +14,6 @@ namespace AgeOfVillagers
         {
             ArabBedouinHouse ArabHouse = new ArabBedouinHouse(pt);
             ArabHouse.Paint(g, p);
-            //return "Stonehouse";
             return ArabHouse;
         }
         public object testHouse(Point pt)

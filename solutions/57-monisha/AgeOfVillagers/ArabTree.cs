@@ -8,8 +8,7 @@ using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-   /* partial class DrawArc
-    {*/
+ 
         public class BangladeshiTree : CompositeShape
         {
             public BangladeshiTree(Point MPt)
@@ -81,6 +80,5 @@ namespace AgeOfVillagers
                 return (length * weight);
             }
         }
-    //}
 }
 

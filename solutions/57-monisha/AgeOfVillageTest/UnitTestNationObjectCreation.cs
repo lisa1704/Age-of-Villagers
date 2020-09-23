@@ -27,7 +27,6 @@ namespace AgeOfVillageTest
             INations testObject = new ArabBedouin();
 
             Ntype.Equals(testObject);
-            //Assert.AreEqual(ArabColor, testobjest);
         }
 
         [TestMethod]
@@ -35,7 +34,6 @@ namespace AgeOfVillageTest
         {
             NationFactory EgyptianObject = new NationFactory();
             INations Ntype = EgyptianObject.GetNation("EgyptianKings");
-            //EgyptianKings Egypt = new EgyptianKings();
             INations testObject = new EgyptianKings();
 
             Ntype.Equals(testObject);

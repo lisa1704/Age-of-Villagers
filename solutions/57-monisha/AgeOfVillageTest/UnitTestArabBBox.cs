@@ -13,7 +13,6 @@ namespace AgeOfVillageTest
         [TestMethod]
         public void TestTreeBBox()
         {
-            //INations actual = nationfactory.GetNation("ArabBedouin");
             ArabTree TreeType = new ArabTree(pt);
             int TestTreeBBox = TreeType.GetBBox();
             Assert.AreEqual(TestTreeBBox, (16 * 12));

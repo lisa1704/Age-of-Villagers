@@ -24,11 +24,8 @@ namespace AgeOfVillageTest
         {
             BangladeshiHouse BDHouseTest = new BangladeshiHouse(pt);
             NationFactory BDObject = new NationFactory();
-            //INations Ntype = BDObject.GetNation("BangladeshiFarmers");
             BangladeshiFarmers bangladeshi = new BangladeshiFarmers();
-            //object house = bangladeshi.DrawHouse(g,pt);
             object house = bangladeshi.testHouse(pt);
-            //string testString = "BDHouse Constructed";
             BDHouseTest.Equals(house);
         }
         [TestMethod]
@@ -67,7 +64,6 @@ namespace AgeOfVillageTest
             object testObject = nationType.DrawHouse(g, pt);
             NullVillageItem NullHouseTest = new NullVillageItem(pt);
 
-            //Assert.AreEqual(s, BDHouseTest);
             NullHouseTest.Equals(testObject);
         }
     }
