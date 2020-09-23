@@ -23,7 +23,7 @@ namespace Age_of_Villagers
         }
         public IShape TreeDraw()
         {
-            throw new NotImplementedException();
+            return new EgyptTree(point);
         }
         public Point GetTreePoint()
         {
