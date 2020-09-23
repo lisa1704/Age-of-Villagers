@@ -15,7 +15,7 @@ namespace AgeOfVillagers
 
     public class ArabTree : Tree
     {
-        public override IShape getItemShape(Point point) => new ArabTreeShape(point);
+        public override IShape getItemShape(Point point) => new ArabTreeShape(point, getWidth(), getHeight());
     }
 
     public class BangladeshiTree : Tree

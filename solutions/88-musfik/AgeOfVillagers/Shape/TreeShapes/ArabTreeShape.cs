@@ -4,17 +4,17 @@ namespace AgeOfVillagers
 {
     public class ArabTreeShape : CompositeShape
     {
-        public ArabTreeShape(Point point)
+        public ArabTreeShape(Point point,int w, int h)
         {
-            Point TopLeft = new Point(point.X - 1, point.Y);
-            Point BottomRight = new Point(point.X + 1, point.Y + 12);
+            Point TopLeft = new Point(point.X - (w / 16), point.Y);
+            Point BottomRight = new Point(point.X + (w / 16), point.Y + ((h * 1)/ 2));
 
             AddComponent(new Rectangle(TopLeft, BottomRight));
-            AddComponent(new Line(point, new Point(point.X + 9, point.Y - 4)));
-            AddComponent(new Line(point, new Point(point.X - 9, point.Y - 4)));
-            AddComponent(new Line(point, new Point(point.X + 5, point.Y - 10)));
-            AddComponent(new Line(point, new Point(point.X - 5, point.Y - 10)));
-            AddComponent(new Line(point, new Point(point.X , point.Y - 12)));
+            AddComponent(new Line(point, new Point(point.X + ((w * 9) / 16), point.Y - ((h * 1) / 6))));
+            AddComponent(new Line(point, new Point(point.X - ((w * 9) / 16), point.Y - ((h * 1) / 6))));
+            AddComponent(new Line(point, new Point(point.X + ((w * 5) / 16), point.Y - ((h * 5) / 12))));
+            AddComponent(new Line(point, new Point(point.X - ((w * 5) / 16), point.Y - ((h * 5) / 12))));
+            AddComponent(new Line(point, new Point(point.X , point.Y - ((h * 1) / 2))));
         }
     }
 }
