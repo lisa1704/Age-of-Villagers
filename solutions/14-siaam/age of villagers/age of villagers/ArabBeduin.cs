@@ -19,7 +19,8 @@ namespace age_of_villagers
 
         public void drawTree(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            Arabtree arabtree = new Arabtree();
+            arabtree.drawComponent(g, point);
         }
     }
 }
