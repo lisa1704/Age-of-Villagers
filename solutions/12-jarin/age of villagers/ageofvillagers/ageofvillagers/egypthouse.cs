@@ -10,7 +10,13 @@ namespace ageofvillagers
     {
         public string draw(int x, int y)
         {
-            return "egypt house ";
+            Trianglecreate triangle1 = new Trianglecreate(x, y, x - 8, y + 2, x - 2, y + 16);
+            Trianglecreate triangle2 = new Trianglecreate(x, y, x + 8, y + 5, x - 2, y + 16);
+
+            triangle1.Draws();
+            triangle2.Draws();
+
+            return "null";
         }
     }
 }
