@@ -60,7 +60,9 @@
     <Compile Include="IWaterSource.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="NullHandlerNation.cs" />
+    <Compile Include="OpenFunction.cs" />
     <Compile Include="Rectangle.cs" />
+    <Compile Include="SaveFunction.cs" />
     <Compile Include="StateOfVillage.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="VillageMain.cs">
