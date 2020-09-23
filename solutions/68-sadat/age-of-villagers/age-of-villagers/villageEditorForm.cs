@@ -68,6 +68,7 @@ namespace age_of_villagers
                 string fileName = openFileDialog.FileName;
                 thisVillage = thisVillageSaver.openSavedState(fileName);
             }
+            thisVillage.reBuildVillage(nation);
             
         }
 
@@ -102,22 +103,6 @@ namespace age_of_villagers
 
         }
 
-        /*private void nationNameTextBox_enter(object sender, EventArgs e)
-        {
-            if (nationNameTextBox.Text == "Enter Nation Name")
-            {
-                nationNameTextBox.Text = "";
-            }
-
-        }
-
-        private void nationNameTextBox_leave(object sender, EventArgs e)
-        {
-            if (nationNameTextBox.Text == "")
-            {
-                nationNameTextBox.Text = "Enter Nation Name";
-            }
-        }*/
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

@@ -32,7 +32,21 @@ namespace age_of_villagers.age_of_villagers.Village
         {
             WaterSources.Add(waterSourceLocation);
         }
-        
+        public void reBuildVillage(Ination nation)
+        {
+            foreach (Coordinate house in Houses)
+            {
+                nation.createHouse(house);
+            }
+            foreach (Coordinate tree in Trees)
+            {
+                nation.createTree(tree);
+            }
+            foreach (Coordinate waterSource in WaterSources)
+            {
+                nation.createWaterSource(waterSource);
+            }
+        }
     }
 
 }
