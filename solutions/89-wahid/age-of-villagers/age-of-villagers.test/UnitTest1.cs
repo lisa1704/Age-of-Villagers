@@ -14,4 +14,16 @@ namespace age_of_villagers.test
         }
         
     }
+
+   [TestClass]
+   public class UnitTestbackgroundcolor
+    {
+        [TestMethod]
+        public void bdcolourtest()
+        {
+            Color s = Color.Green;
+            bangladeshifarmers c = new bangladeshifarmers();
+            Assert.AreEqual(s, c.getTerrainColor());
+        }
+    }
 }
