@@ -10,7 +10,7 @@ namespace AgeOfVillagers
 
         public virtual int getHeight() => height;
         public virtual int getWidth() => width;       
-        public virtual IShape getItemShape(Point point) => new NullShape(point);
+        public virtual IShape getItemShape(Point point) => new NoShape();
     }
 
     public class BangladeshiWaterResource : WaterResource
@@ -30,11 +30,4 @@ namespace AgeOfVillagers
         public override int getWidth() => width;
         public override IShape getItemShape(Point point) => new EgyptianWaterSourceShape(point);
     }
-
-    public class NoWaterResource : WaterResource
-    {
-        public override IShape getItemShape(Point point) => new NoShape();
-
-    }
-
 }

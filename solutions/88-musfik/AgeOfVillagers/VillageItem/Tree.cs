@@ -10,7 +10,7 @@ namespace AgeOfVillagers
 
         public int getHeight() => height;
         public int getWidth() => width;
-        public virtual IShape getItemShape(Point point) => new NullShape(point);
+        public virtual IShape getItemShape(Point point) => new NoShape();
     }
 
     public class ArabTree : Tree
@@ -26,11 +26,6 @@ namespace AgeOfVillagers
     public class EgyptianTree : Tree
     {
         public override IShape getItemShape(Point point) => new EgyptianTreeShape(point);
-    }
-    
-    public class NoTree : Tree
-    {
-        public override IShape getItemShape(Point point) => new NoShape();
     }
 
 }

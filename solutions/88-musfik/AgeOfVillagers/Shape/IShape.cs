@@ -46,17 +46,4 @@ namespace AgeOfVillagers
                 .DrawArc(gp.GetPen(), _topLeft.X, _topLeft.Y, width, height, _startAngle, _endAngle);
         }
     }
-
-    public class NullShape : IShape
-    {
-        public NullShape(Point point)
-        {
-        }
-
-        public void Draw(GraphicsWithPen gp)
-        {
-            //No drawing event       
-        }
-    }
-
 }

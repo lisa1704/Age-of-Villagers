@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using AgeOfVillagers.Shape.CompositeShapes;
+using System.Drawing;
 
 namespace AgeOfVillagers
 {
@@ -9,7 +10,7 @@ namespace AgeOfVillagers
         
         public int getHeight() => height;
         public int getWidth() => width;
-        public virtual IShape getItemShape(Point point) => new NullShape(point);
+        public virtual IShape getItemShape(Point point) => new NoShape();
     }
 
 
