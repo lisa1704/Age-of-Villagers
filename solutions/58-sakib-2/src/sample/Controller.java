@@ -162,8 +162,10 @@ public class Controller {
                 }
             }
     }
-    public void loadVillage(){
-
+    public String loadVillage(){
+        ReadFile readFile=new ReadFile(new File("C://Users//DELL//Desktop//village2.txt"));
+        readFile.read();
+        return readFile.getVillageName();
     }
     public void saveVillage(){
         dictionary.put("Tree",treeList);
