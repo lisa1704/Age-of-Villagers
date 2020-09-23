@@ -47,8 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArabBeduin.cs" />
+    <Compile Include="Arabhouse.cs" />
+    <Compile Include="Arabtree.cs" />
     <Compile Include="Bangladeshifarmer.cs" />
+    <Compile Include="BDhouse.cs" />
+    <Compile Include="BDtree.cs" />
+    <Compile Include="Egypthouse.cs" />
     <Compile Include="Egyptianking.cs" />
+    <Compile Include="Egypttree.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
