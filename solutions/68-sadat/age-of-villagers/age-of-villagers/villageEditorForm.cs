@@ -69,12 +69,15 @@ namespace age_of_villagers
                 thisVillage = thisVillageSaver.openSavedState(fileName);
             }
             thisVillage.reBuildVillage(nation);
+            nation.colorTerrain();
+            villageNameTextBox.Text = thisVillage.getName();
             
         }
 
         private void newVillageButton_Click(object sender, EventArgs e)
         {
             VillageCanvas.Invalidate();
+            villageNameTextBox.Text = "Enter Village Name";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -130,14 +133,6 @@ namespace age_of_villagers
             };
         }
 
-        private void treeButtonClick(object sender, EventArgs e)
-        {
-        }
-
-        private void WaterSourceClick(object sender, EventArgs e)
-        {
-
-        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem == "Arab Bedouin")
