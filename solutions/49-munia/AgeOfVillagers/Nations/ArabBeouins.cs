@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.NationItems;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,26 +9,27 @@ using System.Threading.Tasks;
 namespace AgeOfVillagers.Nations
 {
     class ArabBeouins : INation
-
     {
+        Pen pen = new Pen(Color.Black);
+        ArabItems ab = new ArabItems();
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ab.House(g, p);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ab.Tree(g, p);
         }
 
         public void DrawWater(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            ab.Water(g, p);
         }
 
         public Color TerrainColor()
         {
-            throw new NotImplementedException();
+            return Color.Yellow;
         }
     }
 }
