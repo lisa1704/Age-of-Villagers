@@ -66,12 +66,12 @@ namespace AgeOfVillagers
 
         }
 
-        private void VillageName_TextChanged(object sender, EventArgs e)
+        public void VillageName_TextChanged(object sender, EventArgs e)
         {
             vName = VillageName.Text;
         }
 
-        private void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
+        public void mouseClick1_drawingPanel(object sender, MouseEventArgs e)
         {
 
            if(s == "Tree")
@@ -138,17 +138,17 @@ namespace AgeOfVillagers
             
         }
 
-        private void Tree_MouseClick(object sender, MouseEventArgs e)
+        public void Tree_MouseClick(object sender, MouseEventArgs e)
         {
             s = "Tree";
         }
 
-        private void House_MouseClick(object sender, MouseEventArgs e)
+        public void House_MouseClick(object sender, MouseEventArgs e)
         {
             s = "House";
         }
 
-        private void WaterSource_MouseClick(object sender, MouseEventArgs e)
+        public void WaterSource_MouseClick(object sender, MouseEventArgs e)
         {
             s = "Water Source";
         }

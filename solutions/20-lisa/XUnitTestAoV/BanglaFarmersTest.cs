@@ -12,13 +12,17 @@ namespace UnitTestAoV
     [TestFixture]
     public class BanglaFarmersTest
     {
+        VillageEditor v,editor;
         INation nation = new BangladeshiFarmers();
-        Graphics graphics;
         Point tpoint = new Point(30, 30);
+        Point hpoint = new Point(40, 40);
+        Point wspoint = new Point(50, 50);
 
         [SetUp]
         public void Setup()
         {
+            
+
         }
         [TestCase]
         public void BDTerrainColorTest()
