@@ -8,10 +8,14 @@ using NUnit.Framework.Constraints;
 
 namespace UnitTestAoV
 {
+    
     [TestFixture]
-
     public class BanglaFarmersTest
     {
+        INation nation = new BangladeshiFarmers();
+        Graphics graphics;
+        Point tpoint = new Point(30, 30);
+
         [SetUp]
         public void Setup()
         {
@@ -25,5 +29,6 @@ namespace UnitTestAoV
             Assert.AreEqual(expected, actual);
 
         }
+        
     }
 }
