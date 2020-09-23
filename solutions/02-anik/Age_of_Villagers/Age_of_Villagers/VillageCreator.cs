@@ -74,9 +74,16 @@ namespace Age_of_Villagers
         {
 
         }
-        private void drawhouse(int x,int y)
+       
+        private void drawHouse(int X, int Y)
         {
-
+            g.DrawLine(p, X, Y, X - 10, Y + 20);
+            g.DrawLine(p, X - 10, Y + 20, X + 10, Y + 20);
+            g.DrawLine(p, X, Y, X + 10, Y + 20);
+            g.DrawLine(p, X - 10, Y + 20, X + 10, Y + 20);
+            g.DrawLine(p, X - 10, Y + 20, X - 10, Y + 40);
+            g.DrawLine(p, X - 10, Y + 40, X + 10, Y + 40);
+            g.DrawLine(p, X + 10, Y + 40, X + 10, Y + 20);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
