@@ -8,8 +8,6 @@ namespace ageofvillagers
 {
     abstract class nationcreate
     {
-       public abstract Shapecreate item(string items);
-
-       
+        public abstract Shapecreate item(string items);
     }
 }

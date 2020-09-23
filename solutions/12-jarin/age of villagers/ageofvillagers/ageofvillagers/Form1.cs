@@ -12,6 +12,7 @@ namespace ageofvillagers
 {
     public partial class Form1 : Form
     {
+        private string text = "";
         public Form1()
         {
             InitializeComponent();
@@ -39,27 +40,27 @@ namespace ageofvillagers
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            text = text + "Creating New tree...";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            text = text + "create house";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            text = text + "water_source";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            text = text + "save village ";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            text = text + "create new village";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -89,8 +90,9 @@ namespace ageofvillagers
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
+            Shapecreate nationcreate = village.Get_Nation("current_NationName");
+            Shapecreate shape = nationcreate.items("current_selection");
+            shape.draw(Cursor.Position.X, Cursor.Position.Y);
         }
     }
 }

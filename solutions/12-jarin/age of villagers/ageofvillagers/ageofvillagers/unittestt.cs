@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-    public class Arabbedouin: nationcreate
+    class unittestt
     {
-
+        Form1 form = new Form1();
+        Assert.AreEqual("", form.getStatus());
     }
 }

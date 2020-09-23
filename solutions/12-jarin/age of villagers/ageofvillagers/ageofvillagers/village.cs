@@ -14,14 +14,13 @@ namespace ageofvillagers
             if (villageType == "Bangladeshi Farmers")
                 return new Bangladesh();
             else if (villageType == "Arab Bedouin")
-                return new Arabbedouin();
+                return new Arab();
             else if (villageType == "Egyptian Kings")
                 return new Egyptianking();
             else if (villageType == "Inuit Hunters")
-                return new Inunit();
+                return new Inuit();
             else
                 return new NullValuesHandler() ;
         }
     }
-}
 }

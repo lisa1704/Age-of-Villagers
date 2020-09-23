@@ -10,7 +10,7 @@ namespace ageofvillagers
     {
         public string draw(int x, int y)
         {
-            return "inuit house";
+            return "null";
         }
     }
 }

@@ -55,9 +55,9 @@
   <ItemGroup>
     <Compile Include="abngladeshiwater.cs" />
     <Compile Include="Arab.cs" />
-    <Compile Include="Arabbedouin.cs" />
     <Compile Include="arabhouse.cs" />
     <Compile Include="arabtree.cs" />
+    <Compile Include="Arc.cs" />
     <Compile Include="Bangladesh.cs" />
     <Compile Include="Bangladeshifarmers.cs" />
     <Compile Include="bangladeshihouse.cs" />
@@ -87,6 +87,7 @@
     <Compile Include="Trianglecreate.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="unittestt.cs" />
     <Compile Include="village.cs" />
     <Compile Include="water_resource_create.cs" />
   </ItemGroup>
