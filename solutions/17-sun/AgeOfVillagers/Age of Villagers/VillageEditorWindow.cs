@@ -21,6 +21,8 @@ namespace Age_of_Villagers
         Boolean TreeSwitch;
         Boolean WaterSourceSwitch;
 
+        INation Nation;
+
         //
         BangladeshiFarmers farmer = new BangladeshiFarmers();
         
@@ -30,7 +32,6 @@ namespace Age_of_Villagers
         {
             InitializeComponent();
             
-
         }
 
 
@@ -132,7 +133,13 @@ namespace Age_of_Villagers
 
         }
 
+
         private void SaveVillageButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

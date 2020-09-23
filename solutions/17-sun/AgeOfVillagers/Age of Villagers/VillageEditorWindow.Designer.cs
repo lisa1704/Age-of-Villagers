@@ -44,6 +44,8 @@ namespace Age_of_Villagers
             this.NewVillageButton = new System.Windows.Forms.Button();
             this.OpenVillageButton = new System.Windows.Forms.Button();
             this.SaveVillageButton = new System.Windows.Forms.Button();
+            this.NationListBox = new System.Windows.Forms.ComboBox();
+            this.VillageNameBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // VillageEditorPanel
@@ -53,7 +55,7 @@ namespace Age_of_Villagers
             this.VillageEditorPanel.Size = new System.Drawing.Size(600, 400);
             this.VillageEditorPanel.TabIndex = 1;
             this.VillageEditorPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageEditorPanel_Click);
-            //
+            // 
             // GameTitle
             // 
             this.GameTitle.AutoSize = true;
@@ -68,22 +70,22 @@ namespace Age_of_Villagers
             // 
             this.VillageTitle.AutoSize = true;
             this.VillageTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.VillageTitle.Location = new System.Drawing.Point(691, 88);
+            this.VillageTitle.Location = new System.Drawing.Point(645, 90);
             this.VillageTitle.Name = "VillageTitle";
-            this.VillageTitle.Size = new System.Drawing.Size(104, 23);
+            this.VillageTitle.Size = new System.Drawing.Size(70, 23);
             this.VillageTitle.TabIndex = 3;
-            this.VillageTitle.Text = "Add Village";
+            this.VillageTitle.Text = "Village:";
             this.VillageTitle.Click += new System.EventHandler(this.VillageTitle_Click);
             // 
             // NationTitle
             // 
             this.NationTitle.AutoSize = true;
             this.NationTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NationTitle.Location = new System.Drawing.Point(691, 128);
+            this.NationTitle.Location = new System.Drawing.Point(645, 128);
             this.NationTitle.Name = "NationTitle";
-            this.NationTitle.Size = new System.Drawing.Size(103, 23);
+            this.NationTitle.Size = new System.Drawing.Size(69, 23);
             this.NationTitle.TabIndex = 4;
-            this.NationTitle.Text = "Add Nation";
+            this.NationTitle.Text = "Nation:";
             this.NationTitle.Click += new System.EventHandler(this.NationTitle_Click);
             // 
             // TreeButton
@@ -146,11 +148,39 @@ namespace Age_of_Villagers
             this.SaveVillageButton.UseVisualStyleBackColor = true;
             this.SaveVillageButton.Click += new System.EventHandler(this.SaveVillageButton_Click);
             // 
+            // NationListBox
+            // 
+            this.NationListBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NationListBox.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NationListBox.FormattingEnabled = true;
+            this.NationListBox.Items.AddRange(new object[] {
+            "Arab Bedouins",
+            "Bangladeshi Farmers",
+            "Egyptian Kings",
+            "Inuit Hunters"});
+            this.NationListBox.Location = new System.Drawing.Point(708, 127);
+            this.NationListBox.Name = "NationListBox";
+            this.NationListBox.Size = new System.Drawing.Size(162, 27);
+            this.NationListBox.TabIndex = 11;
+            // 
+            // VillageNameBox
+            // 
+            this.VillageNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.VillageNameBox.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VillageNameBox.FormattingEnabled = true;
+            this.VillageNameBox.Location = new System.Drawing.Point(708, 86);
+            this.VillageNameBox.Name = "VillageNameBox";
+            this.VillageNameBox.Size = new System.Drawing.Size(162, 35);
+            this.VillageNameBox.TabIndex = 12;
+            this.VillageNameBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 412);
+            this.ClientSize = new System.Drawing.Size(926, 412);
+            this.Controls.Add(this.VillageNameBox);
+            this.Controls.Add(this.NationListBox);
             this.Controls.Add(this.SaveVillageButton);
             this.Controls.Add(this.OpenVillageButton);
             this.Controls.Add(this.NewVillageButton);
@@ -184,6 +214,8 @@ namespace Age_of_Villagers
         private Button NewVillageButton;
         private Button OpenVillageButton;
         private Button SaveVillageButton;
+        private ComboBox NationListBox;
+        private ComboBox VillageNameBox;
     }
 }
 
