@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Age_of_villagers.Components;
+using Age_of_villagers.Nation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +19,20 @@ namespace Age_of_villagers
         string name = "";
         public Graphics g;
         public Pen p;
+        string ItemText = "";
+        string NameofVillage = "";
+        string typeofNation = "";
+        public List<Point> HousePoints { get; set; } = new List<Point>();
+        public List<Point> TreePoints { get; set; } = new List<Point>();
+        public List<Point> WaterSourcePoints { get; set; } = new List<Point>();
+        public object VillageName { get; private set; }
+        public object VillageNametextBox { get; private set; }
+        public object DrawPanel { get; private set; }
+        public object NationList { get; private set; }
 
+      
+
+        VillageComponent VillageItem;
         public villagename_box()
         {
             InitializeComponent();
@@ -49,11 +64,25 @@ namespace Age_of_villagers
 
         private void Savevillage_Click(object sender, EventArgs e)
         {
+            GetVillageSave();
 
+            VillageSave vs = new VillageSave(VillageItem);
+            vs.execute();
+            MessageBox.Show(text + " Village Saved");
+        }
+
+        private void GetVillageSave()
+        {
+           
         }
 
         private void Newvillage_Click(object sender, EventArgs e)
         {
+       
+            HousePoints.Clear();
+            TreePoints.Clear();
+            WaterSourcePoints.Clear();
+        
 
         }
 
@@ -76,7 +105,7 @@ namespace Age_of_villagers
             }
             else if (Water_source.Checked)
             {
-
+                g.DrawLine(p, X, y, X + 25, y + 25);
             }
         }
 
@@ -107,17 +136,17 @@ namespace Age_of_villagers
 
         private void Tree_CheckedChanged(object sender, EventArgs e)
         {
-
+            ItemText = "Tree";
         }
 
         private void House_CheckedChanged(object sender, EventArgs e)
         {
-
+            ItemText = "House";
         }
 
         private void Water_source_CheckedChanged(object sender, EventArgs e)
         {
-
+            ItemText = "Water Source";
         }
     }
 }

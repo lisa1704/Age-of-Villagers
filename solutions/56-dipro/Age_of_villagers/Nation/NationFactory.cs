@@ -8,11 +8,13 @@ namespace Age_of_villagers.Nation
     class NationFactory
     {
         string nationName;
+
+
         public NationFactory(string NationType)
         {
             this.nationName = NationType;
         }
-        public INation GetNation()
+        public INation GetNation(string typeofNation)
         {
             return null;
         }
