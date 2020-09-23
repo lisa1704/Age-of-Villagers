@@ -129,6 +129,11 @@ namespace Age_of_Villagers
             else if (TreeRB.Checked)
             {
                 nationController.GetNation(point).TreeDraw().draw(graphics, pen);
+                Point TreePoint = nationController.GetNation(point).GetTreePoint();
+                if (!TreePoint.IsEmpty)
+                {
+                    TreePoints.Add(TreePoint);
+                }
             }
             else if (WaterSourceRB.Checked)
             {

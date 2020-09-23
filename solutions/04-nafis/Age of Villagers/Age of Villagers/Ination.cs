@@ -10,6 +10,7 @@ namespace Age_of_Villagers
         IShape HouseDraw();
         Point GetHousePoint();
         IShape TreeDraw();
+        Point GetTreePoint();
         IShape WaterSourceDraw();
     }
 }

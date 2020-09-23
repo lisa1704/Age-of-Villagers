@@ -25,6 +25,10 @@ namespace Age_of_Villagers
         {
             throw new NotImplementedException();
         }
+        public Point GetTreePoint()
+        {
+            return point;
+        }
 
         public IShape WaterSourceDraw()
         {
