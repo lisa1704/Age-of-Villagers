@@ -21,20 +21,21 @@ namespace Ageofvillagers.Nations
         {
             return Name;
         }
-        public void drawHouse(int x, int y)
+        public String drawHouse(int x, int y)
         {
             Inuit_House House = new Inuit_House();
             House.Draw(g, p, x, y);
+            return "Inuit Hunter House Drawn";
         }
 
-        public void drawTree(int x, int y)
+        public String drawTree(int x, int y)
         {
-            
+            return "No Tree for inuit hunters";
         }
 
-        public void drawWaterSource(int x, int y)
+        public String drawWaterSource(int x, int y)
         {
-            
+            return "No water source for inuit Hunters";
         }
     }
 }

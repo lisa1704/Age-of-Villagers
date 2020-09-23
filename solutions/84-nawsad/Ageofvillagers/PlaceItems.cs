@@ -37,11 +37,6 @@ namespace Ageofvillagers
                 Itemslist.Add(new State(mousepositionx, mousepositiony, "Water Source", nation.get_nation()));
             }
           
-        
-            
-            //INation Nation = new EgyptianKing(g,p);
-            //Nation.drawHouse(e.Location.X, e.Location.Y);
-            //  B.drawHouse(e.Location.X, e.Location.Y);
 
         }
     }

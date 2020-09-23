@@ -22,23 +22,26 @@ namespace Ageofvillagers.Nations
             return Name;
         }
 
-        public void drawHouse(int x, int y)
+        public String drawHouse(int x, int y)
         {
             Egyptian_House House = new Egyptian_House();
             House.Draw(g, p, x, y);
+            return "Egyptian House Drawn";
         }
 
-        public void drawTree(int x, int y)
+        public String drawTree(int x, int y)
         {
             Egyptian_Tree Tree = new Egyptian_Tree();
             Tree.Draw(g, p, x, y);
+            return "Egyptian Tree Drawn";
 
         }
 
-        public void drawWaterSource(int x, int y)
+        public String drawWaterSource(int x, int y)
         {
             Egyptian_Water_Source water_Source = new Egyptian_Water_Source();
             water_Source.Draw(g,p,x,y);
+            return "Egyptian Water Source Drawn";
         }
 
 

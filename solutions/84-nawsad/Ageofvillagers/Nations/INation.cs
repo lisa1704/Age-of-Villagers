@@ -7,9 +7,9 @@ namespace Ageofvillagers
 {
     interface INation
     {
-        void drawHouse(int x,int y);
-        void drawTree(int x,int y);
-        void drawWaterSource(int x,int y);
+        String drawHouse(int x,int y);
+        String drawTree(int x,int y);
+        String drawWaterSource(int x,int y);
         String get_nation();
     }
 }

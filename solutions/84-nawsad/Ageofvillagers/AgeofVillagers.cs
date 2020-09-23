@@ -29,14 +29,15 @@ namespace Ageofvillagers
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            SaveVillage SaveVillage = new SaveVillage();
+           
+            SaveVillage SaveVillage = new SaveVillage(saveFileDialog1.InitialDirectory + saveFileDialog1.FileName);
             SaveVillage.execute(Itemslist);
               
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-            OpenVillage openVillage = new OpenVillage();
+        {   
+            OpenVillage openVillage = new OpenVillage(openFileDialog1.InitialDirectory +openFileDialog1.FileName);
             openVillage.execute(Itemslist);
         }
     }

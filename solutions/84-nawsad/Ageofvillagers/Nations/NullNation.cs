@@ -21,19 +21,19 @@ namespace Ageofvillagers.Nations
         {
             return Name;
         }
-        public void drawHouse(int x, int y)
+        public String drawHouse(int x, int y)
         {
-            
+            return "No House";
         }
 
-        public void drawTree(int x, int y)
+        public String drawTree(int x, int y)
         {
-            
+            return "No Tree";
         }
 
-        public void drawWaterSource(int x, int y)
+        public String drawWaterSource(int x, int y)
         {
-            
+            return "No Water Source";
         }
       
     }

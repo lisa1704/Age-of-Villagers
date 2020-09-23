@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ageofvillagers.Nations
 {
     class ArabBeduin : INation
@@ -25,24 +26,26 @@ namespace Ageofvillagers.Nations
             this.p = p;
         }
 
-        public void drawHouse(int x, int y)
+        public String drawHouse(int x, int y)
         {
             Arab_House House = new Arab_House();
             House.Draw(g, p, x, y);
+            return "Arab House Draw";
         }
 
        
 
-        public void drawTree(int x, int y)
+        public String drawTree(int x, int y)
         {
             Arab_Tree Tree = new Arab_Tree();
             Tree.Draw(g, p, x, y);
+            return "Arab Tree Drawn";
 
         }
 
-        public void drawWaterSource(int x, int y)
+        public String drawWaterSource(int x, int y)
         {
-            
+            return "No water Source for Arab Beduin";
         }
 
         

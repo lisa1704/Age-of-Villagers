@@ -20,21 +20,25 @@ namespace Ageofvillagers
         {
             return Name;
         }
-        public void drawHouse(int x, int y)
+        public String drawHouse(int x, int y)
         {
             Bangladeshi_House House = new Bangladeshi_House();
             House.Draw(g,p,x,y);
+            return "Bangladeshi House Drawn";
         }
-        public void drawTree(int x, int y)
+        public String drawTree(int x, int y)
         {
             Bangladeshi_Tree Tree = new Bangladeshi_Tree();
             Tree.Draw(g, p, x, y);
+            return "Bangladeshi Tree Drawn";
+
         }
 
-        public void drawWaterSource(int x,int y)
+        public String drawWaterSource(int x,int y)
         {
             Bangladeshi_Water_Source water_Source = new Bangladeshi_Water_Source();
             water_Source.Draw(g,p,x,y);
+            return "Bangladeshi Water Source Drawn";
         }
     }
 }
