@@ -16,7 +16,7 @@ namespace AgeOfVillagers.test
 		public void InuitHunterHousetest()
 		{
 			Point test = nations.getNation(point).DrawHouse(p);
-			Assert.Equal(new Point(), test);
+			Assert.Equal(point, test);
 
 		}
 
