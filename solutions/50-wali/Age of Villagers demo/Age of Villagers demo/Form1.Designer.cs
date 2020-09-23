@@ -31,11 +31,12 @@
             this.tree = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tree
             // 
-            this.tree.Location = new System.Drawing.Point(563, 128);
+            this.tree.Location = new System.Drawing.Point(563, 156);
             this.tree.Name = "tree";
             this.tree.Size = new System.Drawing.Size(94, 29);
             this.tree.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(683, 128);
+            this.button1.Location = new System.Drawing.Point(683, 156);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 1;
@@ -54,17 +55,27 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(607, 38);
+            this.textBox1.Location = new System.Drawing.Point(609, 24);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 27);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Age of Villagers";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(625, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(76, 32);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "Katakhali";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tree);
@@ -80,6 +91,7 @@
         private System.Windows.Forms.Button tree;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
