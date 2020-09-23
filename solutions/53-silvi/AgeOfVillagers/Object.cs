@@ -13,5 +13,10 @@ namespace AgeOfVillagers
         {
             
         }
+
+        internal void Draw(Graphics g)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
