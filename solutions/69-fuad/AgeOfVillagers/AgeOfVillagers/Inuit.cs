@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class Inuit : INation
+    public class Inuit : INation
     {
         public Color getBackgroundColor()
         {
