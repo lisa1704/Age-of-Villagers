@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\ArabBedoun_House.cs" />
+    <Compile Include="Components\ArabBeduin_tree.cs" />
     <Compile Include="Components\Bangladeshi_house.cs" />
     <Compile Include="Components\Bangladeshi_tree.cs" />
     <Compile Include="Components\Bangladeshi_watersource.cs" />
