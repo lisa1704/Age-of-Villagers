@@ -14,9 +14,9 @@ namespace Age_of_Villagers
         Pen pen;
         int x, y = -1;
         bool move = false;
-        private List<Point> HousePoints;
-        private List<Point> TreePoints;
-        private List<Point> WaterSourcePoints;
+        private List<Point> HousePoints { get; set; } = new List<Point>();
+        private List<Point> TreePoints { get; set; } = new List<Point>();
+        private List<Point> WaterResourcePoints { get; set; } = new List<Point>();
         
         VillageCondition villageCondition;
 
@@ -74,9 +74,9 @@ namespace Age_of_Villagers
             Form ConfirmName = new ConfirmName(this,VillageDrawing);
             ConfirmName.Show();
             VillageDrawing.Invalidate();
-            /*HousePoints.Clear();
+            HousePoints.Clear();
             TreePoints.Clear();
-            WaterSourcePoints.Clear();*/
+            WaterResourcePoints.Clear();
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace Age_of_Villagers
 
         public void GetCondition()
         {
-            villageCondition = new VillageCondition(VillageNameText.Text, HousePoints, TreePoints, WaterSourcePoints);
+            villageCondition = new VillageCondition(VillageNameText.Text, HousePoints, TreePoints, WaterResourcePoints);
         }
-        }
+    }
 }
