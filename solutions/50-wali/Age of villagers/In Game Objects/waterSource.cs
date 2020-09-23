@@ -2,9 +2,9 @@
 
 public class waterSource
 {
-    public String size()
+    public String size(object location)
     {
-        return "16px by 24px";
+        return "";
     }
 
 }
