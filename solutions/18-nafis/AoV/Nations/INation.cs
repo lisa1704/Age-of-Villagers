@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AoV.Nations
 {
-    interface INation
+    public interface INation
     {
         string getName();
         Color TerrainColor();
