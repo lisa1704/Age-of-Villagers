@@ -10,11 +10,8 @@ namespace AgeOfVillagers
     public class BangladeshiFarmers : INation
     {
         protected Panel Drawingpanel;
+        public Color terraincolor;
         
-        public BangladeshiFarmers(Panel Drawingpanel)
-        {
-            this.Drawingpanel = Drawingpanel;
-        }
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             BangladeshiHouse house = new BangladeshiHouse(point);
@@ -35,7 +32,12 @@ namespace AgeOfVillagers
 
         public void PaintTerrain(Panel Drawingpanel)
         {
-            Drawingpanel.BackColor = System.Drawing.Color.LightGreen;
+            terraincolor = Color.LightGreen;
+            Drawingpanel.BackColor = terraincolor;
+        }
+        public Color GetTerrainColor()
+        {
+            return terraincolor;
         }
     }
 }

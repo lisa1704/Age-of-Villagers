@@ -11,7 +11,7 @@ namespace AgeOfVillagers
         //private Panel Drawingpanel;
         public BangladeshiTree(Point point)
         {
-            addshape(new Line(point.X + 8, point.Y + 16, point.X + 8, point.Y + 48));
+            addshape(new Line(point.X + 8, point.Y + 16, point.X + 8, point.Y + 32));
             addshape(new Ellipse(point.X, point.Y, 16, 24));
         }
 

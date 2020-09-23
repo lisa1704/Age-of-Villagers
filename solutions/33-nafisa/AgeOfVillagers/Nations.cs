@@ -20,7 +20,7 @@ namespace AgeOfVillagers
             if (Nationtype == "Bangladeshi Farmers")
             {
                 
-                nation = new BangladeshiFarmers(Drawingpanel);
+                nation = new BangladeshiFarmers();
             }
             else if (Nationtype == "Arab Beduins")
             {

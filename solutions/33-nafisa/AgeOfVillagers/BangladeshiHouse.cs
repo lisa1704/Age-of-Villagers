@@ -13,9 +13,9 @@ namespace AgeOfVillagers
         public BangladeshiHouse(Point point)
         {
 
-            addshape(new Rectangle(point.X, point.Y, point.X + 24, point.Y, point.X, point.Y + 16, point.X + 24, point.Y + 16));
+            addshape(new Rectangle(point.X, point.Y, point.X + 16, point.Y, point.X, point.Y + 16, point.X + 16, point.Y + 16));
             
-            addshape(new Triangle(point.X + 12, point.Y - 8, point.X, point.Y, point.X + 24, point.Y));
+            addshape(new Triangle(point.X + 8, point.Y - 8, point.X, point.Y, point.X + 16, point.Y));
             
         }
 

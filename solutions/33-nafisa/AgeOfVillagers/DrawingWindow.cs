@@ -115,7 +115,8 @@ namespace AgeOfVillagers
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
-           
+            villagebox.Clear();
+            
             Refresh();
 
         }
@@ -134,7 +135,7 @@ namespace AgeOfVillagers
         }
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
             if (openbuttonclicked == true)
             {
                 nation_name = village.nationname;
@@ -143,8 +144,6 @@ namespace AgeOfVillagers
             {
                 nation_name = changeNation.Text;
             }
-
-
             Point P = new Point(e.X, e.Y);
             Nations nation = new Nations(nation_name, Drawingpanel);
 
@@ -176,7 +175,7 @@ namespace AgeOfVillagers
         private void Repaint(VillageState village)
         {
             // repaint //
-            //nation_name = village.nationname;
+            nation_name = changeNation.Text;
             Drawingpanel.Refresh();
             
             Nations nation = new Nations(village.nationname, Drawingpanel);
