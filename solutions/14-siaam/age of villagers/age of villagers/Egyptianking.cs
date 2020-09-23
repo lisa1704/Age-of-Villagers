@@ -12,7 +12,8 @@ namespace age_of_villagers
 
         public void drawHouse(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            Egypthouse egypthouse = new Egypthouse();
+            egypthouse.drawComponent(g,point);
         }
 
         public void drawTree(Graphics g, Point point)

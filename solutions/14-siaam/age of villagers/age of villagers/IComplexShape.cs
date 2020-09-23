@@ -68,4 +68,22 @@ namespace age_of_villagers
         }
     }
 
+    class Egypthouse : IComplexShape
+    {
+        Pen pen = new Pen(Color.Brown);
+        public void drawComponent(Graphics g, Point p)
+        {
+            Point p1 = new Point(p.X + 4, p.Y + 16);
+            Point p2 = new Point(p.X - 8, p.Y + 13);
+            Point p3 = new Point(p.X + 8, p.Y + 9);
+
+            Triangle triangle = new Triangle(p, p1, p2);
+            triangle.draw(g, pen);
+            g.DrawLine(pen, p, p3);
+            g.DrawLine(pen, p3, p1);
+
+        }
+    }
+
+
 }
