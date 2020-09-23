@@ -20,12 +20,6 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
             return bdFarmersHouse;
         }
 
-        public string BangladeshiFarmerTest()
-        {
-            string NationName = "Bangladesh";
-            return NationName;
-        }
-
         public Object DrawWaterSource(Graphics g, Point point)
         {
             BDFarmersWatersource bdFarmersWaterSource = new BDFarmersWatersource(point);
