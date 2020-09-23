@@ -22,9 +22,8 @@ namespace Age_of_Villagers
             this.villageWindow = villageWindow;
             this.graphics = graphics;
             this.pen = pen;
-            this.villageCondition = villageCondition;
             this.panel = panel;
-            
+            this.villageCondition = villageCondition;
         }
 
         public SelectVillage(VillageWindow villageWindow, Panel panel)

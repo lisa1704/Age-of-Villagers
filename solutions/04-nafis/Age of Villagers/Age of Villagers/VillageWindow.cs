@@ -88,8 +88,10 @@ namespace Age_of_Villagers
 
             HousePoints = villageCondition.HousePoint;
             TreePoints = villageCondition.TreePoint;
-            WaterResourcePoints = villageCondition.WaterResourcePoint;       
+            WaterResourcePoints = villageCondition.WaterResourcePoint;
 
+            Form selectVillage = new SelectVillage(this, graphics, pen, VillageDrawing, villageCondition);
+            selectVillage.Show();
         }
 
         private void NationNameCombo_SelectedIndexChanged(object sender, EventArgs e)
