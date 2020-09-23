@@ -39,9 +39,9 @@ namespace age_of_villagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             village_type = comboBox1.Text;
+            Graphics gp = panel1.CreateGraphics();
+            villfact = new village_factory(gp, p);
             panel1.BackColor = villfact.get_nation(village_type).draw_terrain();
-            nation = villfact.get_nation(village_type);
-            Debug.WriteLine(village_type);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -103,14 +103,29 @@ namespace age_of_villagers
         {
             try
             {
-                //villfact.get_nation(village_type).draw_terrain();
-            
+                foreach (var house in vi.housepoint)
+                {
+                    Graphics gp = panel1.CreateGraphics();
+                    village_factory new_village = new village_factory(gp, house);
 
-                vi.housepoint.ForEach(house => nation.draw_house());
-                vi.treepoint.ForEach(tree => nation.draw_tree());
-                vi.waterpoint.ForEach(watersource => nation.draw_watersource());
+                    new_village.get_nation(village_type).draw_house();
+                }
+                foreach (var tree in vi.treepoint)
+                {
+                    Graphics gp = panel1.CreateGraphics();
+                    village_factory new_village = new village_factory(gp, tree);
+
+                    new_village.get_nation(village_type).draw_tree();
+                }
+                foreach (var water in vi.waterpoint)
+                {
+                    Graphics gp = panel1.CreateGraphics();
+                    village_factory new_village = new village_factory(gp, water);
+
+                    new_village.get_nation(village_type).draw_watersource();
+                }
+
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show("No nation was selected");
