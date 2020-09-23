@@ -81,7 +81,14 @@ namespace Age_of_Villagers
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
         {
-            
+            VillageConditionOpen villageConditionOpen = new VillageConditionOpen();
+            villageConditionOpen.PerformOperation();
+
+            villageCondition = villageConditionOpen.GetVillageCondition();
+
+            HousePoints = villageCondition.HousePoint;
+            TreePoints = villageCondition.TreePoint;
+            WaterResourcePoints = villageCondition.WaterResourcePoint;       
 
         }
 
