@@ -1,4 +1,5 @@
-﻿using AgeOfVillagers.Shapes;
+﻿using AgeOfVillagers.NationItems;
+using AgeOfVillagers.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,14 +14,11 @@ namespace AgeOfVillagers
     {
    
         Pen pen = new Pen(Color.Black);
+        BDItems bd = new BDItems();
     
         public void DrawHouse(Graphics g, Point p)
         {
-            
-            Triangle t = new Triangle(g, p);
-            Rectangle r = new Rectangle(g, p);
-            t.Draw();
-            r.Draw();
+            bd.House(g,p);
         }
 
         public void DrawTree(Graphics g, Point p)

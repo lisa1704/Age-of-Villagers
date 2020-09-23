@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NationItems\BDItems.cs" />
     <Compile Include="NationItems\INationItems.cs" />
     <Compile Include="Nations\INation.cs" />
     <Compile Include="Program.cs" />
