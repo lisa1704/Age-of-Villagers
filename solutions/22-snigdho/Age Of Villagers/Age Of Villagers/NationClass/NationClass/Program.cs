@@ -9,7 +9,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Factory_Nation
+    public class Factory_Nation
     {
         public INation GetNation(string NationName)
         {
