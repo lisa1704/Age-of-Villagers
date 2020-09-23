@@ -18,5 +18,11 @@ namespace Age_Of_Villagers_Test
             var result = nationController.getNation(new Point()).GetTerrainColor();
             Assert.Equal(Color.Yellow, result);
         }
+        [Fact]
+        public void BDNationTest()
+        {
+            Assert.IsType<EgyptianKings> (nationController.getNation(new Point()));
+
+        }
     }
 }
