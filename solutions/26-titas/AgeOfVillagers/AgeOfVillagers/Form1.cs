@@ -95,7 +95,6 @@ namespace AgeOfVillagers
 
             if (nationName == "Bangladeshi Farmers")
             {
-                panel1.BackColor = Color.Green;
                 if (radioButtonHouse.Checked)
                 {
                     bdFarmers.paint_house(e, g, p);
@@ -111,7 +110,6 @@ namespace AgeOfVillagers
             }
             else if (nationName == "Egyptian Kings")
             {
-                panel1.BackColor = Color.Yellow;
                 if (radioButtonHouse.Checked)
                 {
                     egyptianKings.paint_house(e, g, p);
@@ -127,7 +125,7 @@ namespace AgeOfVillagers
             }
             else if (nationName == "Arab Bedouin")
             {
-                panel1.BackColor = Color.LightYellow;
+                
                 if (radioButtonHouse.Checked)
                 {
                     arabBedouin.paint_house(e, g, p);
@@ -143,7 +141,6 @@ namespace AgeOfVillagers
             }
             else if (nationName == "Inuit Hunters")
             {
-                
                 if (radioButtonHouse.Checked)
                 {
                     inuitHunters.paint_house(e, g, p);
@@ -161,7 +158,15 @@ namespace AgeOfVillagers
 
         private void comboBoxNationName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (comboBoxNationName.Text == "Bangladeshi Farmers")
+                panel1.BackColor = Color.Green;
+            else if (comboBoxNationName.Text == "Arab Bedouin")
+                panel1.BackColor = Color.LightYellow;
+            else if (comboBoxNationName.Text=="Egyptian Kings")
+                panel1.BackColor = Color.Yellow;
+            else if (comboBoxNationName.Text=="Inuit Hunters")
+                panel1.BackColor = Color.White;
+
         }
     }
 }
