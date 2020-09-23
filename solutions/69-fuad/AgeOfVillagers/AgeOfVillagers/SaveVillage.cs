@@ -14,19 +14,21 @@ namespace AgeOfVillagers.Save
         {
             this.vill = vill;
         }
+
         public void SaveFile()
         {
-            SaveFileDialog savefiledialog = new SaveFileDialog();
-            savefiledialog.FileName = "*.aov";
-            savefiledialog.Filter = "AoV file(*.aov)| *.aov";
-            savefiledialog.DefaultExt = "aov";
-            savefiledialog.Title = "Save an aov File";
-            savefiledialog.InitialDirectory = @"H:\aov_saved\";
-            savefiledialog.RestoreDirectory = true;
-            savefiledialog.ShowDialog();
-            if (savefiledialog.ShowDialog() == DialogResult.OK)
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.FileName = "*.aov";
+            sfd.Filter = "AoV file(*.aov)| *.aov";
+            sfd.DefaultExt = "aov";
+            sfd.Title = "Save an aov File";
+            sfd.InitialDirectory = @"H:\aov_saved\";
+            sfd.RestoreDirectory = true;
+            sfd.ShowDialog();
+
+            if (sfd.ShowDialog() == DialogResult.OK)
             {
-                Stream fileStream = savefiledialog.OpenFile();
+                Stream fileStream = sfd.OpenFile();
                 using (StreamWriter sw = new StreamWriter(fileStream))
                 {
                     JsonSerializer serializer = new JsonSerializer();
@@ -36,5 +38,9 @@ namespace AgeOfVillagers.Save
                 fileStream.Close();
             }
         }
+
+
+
+
     }
 }

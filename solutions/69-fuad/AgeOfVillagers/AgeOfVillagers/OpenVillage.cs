@@ -7,15 +7,15 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.Open
 {
-    public class OpenVillage
+    class OpenVillage
     {
         Village vill;
         public Village getVill()
         {
-            OpenFileDialog openfileddialog = new OpenFileDialog();
-            if (openfileddialog.ShowDialog() == DialogResult.OK)
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                Stream fileStream = openfileddialog.OpenFile();
+                Stream fileStream = ofd.OpenFile();
 
                 using (StreamReader sr = new StreamReader(fileStream))
                 {
@@ -23,7 +23,7 @@ namespace AgeOfVillagers.Open
                     vill = JsonConvert.DeserializeObject<Village>(json);
                 }
             }
-            Console.WriteLine(vill);
+            vill.village_name = Path.GetFileNameWithoutExtension(ofd.FileName);
             return vill;
         }
     }
