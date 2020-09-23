@@ -17,12 +17,12 @@ namespace AgeOfVillagers.Test
         public void BangladeshiFarmerTest()
         {
             BangladeshiFarmers bdTerrainColor = new BangladeshiFarmers();
-            Color actual = bdTerrainColor.GetTerrainColor();
-            Color expected = Color.Green;
+            Color expected = bdTerrainColor.PaintTerrain();
+            Color actual = Color.LightGreen;
             Xunit.Assert.Equal(actual, expected);
         }
 
-        //[TestMethod]
+        
         
     }
 }
