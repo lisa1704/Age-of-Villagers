@@ -8,10 +8,10 @@ import javafx.scene.shape.Shape;
 import java.util.ArrayList;
 
 public class Nation {
-    private IHouse house;
-    private ITree tree;
-    private IWaterBody water_body;
-    private INationColor terrainColor;
+    public IHouse house;
+    public ITree tree;
+    public IWaterBody water_body;
+    public INationColor terrainColor;
 
     public Nation(String nation_type){
         IAssetFactory houseFactory = new HouseFactory();
