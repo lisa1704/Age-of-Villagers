@@ -3,6 +3,7 @@ using Xunit;
 using Age_of_Villagers.BangladeshiFarmers;
 using System.Drawing;
 using Age_of_Villagers.EgyptianKings;
+using Age_of_Villagers.ArabBedouin;
 
 namespace AOV_Test
 {
@@ -32,6 +33,14 @@ namespace AOV_Test
             Assert.Equal(b1, b2);
         }
 
+        [Fact]
+        public void ArabBackground()
+        {
+            ArabBedouin back = new ArabBedouin();
+            Color b1 = back.BackgroundColor();
+            Color b2 = Color.GreenYellow;
+            Assert.Equal(b1, b2);
+        }
 
     }
 }
