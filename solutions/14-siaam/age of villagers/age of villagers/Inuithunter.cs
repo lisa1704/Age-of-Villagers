@@ -25,7 +25,8 @@ namespace age_of_villagers
 
         public void drawWater(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            INation nation = new Null_Nation();
+            nation.drawTree(g, point);
         }
     }
     

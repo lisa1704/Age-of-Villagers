@@ -60,7 +60,7 @@ namespace age_of_villagers
             }
             else
             {
-                nationtype.GetNation(nameofnation).drawTree(g, new Point(200, 200));
+                nationtype.GetNation(nameofnation).drawTree(g, new Point(100, 100));
             }
 
         }

@@ -17,17 +17,17 @@ namespace age_of_villagers
 
         public void drawHouse(Graphics g, Point point)
         {
-            MessageBox.Show("Nation not selected or function not available");
+            
         }
 
         public void drawTree(Graphics g, Point point)
         {
-            MessageBox.Show("Nation not selected or function not available");
+            
         }
 
         public void drawWater(Graphics g, Point point)
         {
-            MessageBox.Show("Nation not selected or function not available");
+           
         }
     }
 }
