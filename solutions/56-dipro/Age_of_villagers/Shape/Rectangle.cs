@@ -10,11 +10,8 @@ namespace Age_of_villagers.Shape
 {
     class Rectangle : IShape
     {
-        private readonly Point top_left;
-        private readonly Point top_right;
-        private readonly Point bottom_left;
-        private readonly Point bottom_right;
-
+        private readonly Point top_left,top_right,bottom_left,bottom_right;
+        
         public Rectangle(Point top_left, Point bottom_right)
         {
             this.top_left = top_left;
