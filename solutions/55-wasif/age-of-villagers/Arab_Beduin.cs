@@ -60,9 +60,9 @@ namespace age_of_villagers
         {
             MessageBox.Show("No water resource found");
         }
-        public void draw_terrain()
+        public Color draw_terrain()
         {
-
+            return Color.LightGoldenrodYellow;
         }
     }
 }
