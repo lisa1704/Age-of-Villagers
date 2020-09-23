@@ -88,6 +88,7 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="village.cs" />
+    <Compile Include="water_resource_create.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
