@@ -1,6 +1,7 @@
 package main;
 
 import canvas.MyCanvas;
+import com.google.gson.Gson;
 import house.IHouse;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -28,7 +29,15 @@ import tree.ITree;
 import water.IWater;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class Controller {
     Canvas canvas;
@@ -149,11 +158,32 @@ public class Controller {
 
     @FXML
     void saveVillageBTN(ActionEvent event) {
-        System.out.println("village saved");
-        FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(".aov file", "*.aov");
-        fileChooser.getExtensionFilters().add(extensionFilter);
-        File file  = fileChooser.showSaveDialog(null);
+
+
+
+        try {
+
+            FileOutputStream fileOut = new FileOutputStream("nycanvas");
+            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            objectOut.writeObject(canvas);
+            objectOut.close();
+            System.out.println("The Object  was succesfully written to a file");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+//        Gson gson = new Gson();
+//        Object src;
+//        String json = gson.toJson(canvas);
+//
+//
+//        System.out.println(json);
+
+//        System.out.println("village saved");
+//        FileChooser fileChooser = new FileChooser();
+//        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter(".aov file", "*.aov");
+//        fileChooser.getExtensionFilters().add(extensionFilter);
+//        File file  = fileChooser.showSaveDialog(null);
 
     }
 

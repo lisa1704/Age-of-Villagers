@@ -2,7 +2,9 @@ package canvas;
 
 import javafx.scene.canvas.Canvas;
 
-public class MyCanvas {
+import java.io.Serializable;
+
+public class MyCanvas implements Serializable {
     private static MyCanvas myCanvas = null;
     private Canvas canvas;
 
