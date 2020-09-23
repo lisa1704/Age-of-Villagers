@@ -24,20 +24,20 @@ namespace Age_of_Villagers
         }
         public IShape TreeDraw()
         {
-            throw new NotImplementedException();
+            return new NullShape();
         }
         public Point GetTreePoint()
         {
-            return point;
+            return Point.Empty;
         }
 
         public IShape WaterSourceDraw()
         {
-            throw new NotImplementedException();
+            return new NullShape();
         }
         public Point GetWaterSourcePoint()
         {
-            return point;
+            return Point.Empty;
         }
         public Color GetTerrainColor()
         {
