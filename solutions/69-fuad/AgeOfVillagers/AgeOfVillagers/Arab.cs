@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    class Arab : INation
+    public class Arab : INation
     {
         public Color getBackgroundColor()
         {
