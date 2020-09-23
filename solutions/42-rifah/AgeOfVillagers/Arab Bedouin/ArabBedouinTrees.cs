@@ -10,13 +10,13 @@ namespace AgeOfVillagers.Arab_Bedouin
 
         public ArabBedouinTrees(Point point)
         {
-            Point point1 = new Point(point.X + 30, point.Y - 10);
-            Point point2 = new Point(point.X - 30, point.Y - 10);
-            Point point3 = new Point(point.X + 25, point.Y - 25);
-            Point point4 = new Point(point.X - 25, point.Y - 25);
-            Point point5 = new Point(point.X, point.Y - 30);
-            Point TopLeft = new Point(point.X - 3, point.Y);
-            Point RightBottom = new Point(point.X + 3, point.Y + 50);
+            Point point1 = new Point(point.X + 8, point.Y - 4);
+            Point point2 = new Point(point.X - 8, point.Y - 4);
+            Point point3 = new Point(point.X + 6, point.Y - 8);
+            Point point4 = new Point(point.X - 6, point.Y - 8);
+            Point point5 = new Point(point.X, point.Y - 10);
+            Point TopLeft = new Point(point.X - 1, point.Y);
+            Point RightBottom = new Point(point.X + 1, point.Y + 14);
 
             AddComponent(new Rectangle(TopLeft, RightBottom));
             AddComponent(new Line(point, point1));
