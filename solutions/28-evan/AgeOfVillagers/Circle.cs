@@ -9,11 +9,11 @@ namespace AgeOfVillagers
 {
     class Circle : IShape
     {
-        Point x,y;
-        int r, h, w;
+        private Point x;
+        private int y, r, h, w;
         Graphics g;
         Pen p;
-        public Circle(Graphics g, Pen p, Point x,Point y,int r,int h,int w)
+        public Circle(Graphics g, Pen p, Point x,int y,int r,int h,int w)
         {
             this.g = g;
             this.p = p;
@@ -31,7 +31,12 @@ namespace AgeOfVillagers
 
         public void DrawShape(Graphics g, Pen p)
         {
-            
+            g.DrawArc(p,x.X-25,x.Y-25, y, w, h, r);
+        }
+
+        internal void DrawShape()
+        {
+            throw new NotImplementedException();
         }
     }
 }

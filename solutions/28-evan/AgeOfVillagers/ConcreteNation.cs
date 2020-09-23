@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class ConcreteNation
+    public class ConcreteNation
     {
         public INation checkNation(String nation)
         {
@@ -16,8 +16,10 @@ namespace AgeOfVillagers
                 return new ArabBedouins();
             else if(nation == "Egyptian Kings")
                 return new EgyptianKings();
-            else
+            else if(nation == "Inuit Hunters")
                 return new InuitHunters();
+            else
+                return new NullHandlerNation();
         }
 
     }

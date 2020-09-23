@@ -7,23 +7,32 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BDHouse : IAttributes
+    class BDHouse : INation
     {
         Pen p = new Pen(Color.Green);
         public void Draw(Graphics g, Point point)
         {
-            Point t1 = new Point(point.X + 25, point.Y - 25);
-            Point t2 = new Point(point.X + 50, point.Y);
-            Point r1 = new Point(point.X, point.Y + 25);
-            Point r2 = new Point(t1.X, t2.Y + 25);
 
-            Triangle t = new Triangle(g, p, point, t1, t2);
+        }
 
-            t.DrawShape();
+        public void DrawHouse(Graphics g, Point pt)
+        {
+            
+        }
 
-            Rectangle r = new Rectangle(g, p, point, t2, r1, r2);
+        public Color DrawTerrain()
+        {
+            throw new NotImplementedException();
+        }
 
-            r.DrawShape();
+        public void DrawTree(Graphics g, Point p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DrawWaterSource(Graphics g, Point p)
+        {
+            throw new NotImplementedException();
         }
     }
 }
