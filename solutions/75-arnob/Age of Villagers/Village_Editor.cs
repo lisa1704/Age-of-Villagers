@@ -133,20 +133,20 @@ namespace Age_of_Villagers
 
     
 
-      //  private void Menu_bar_Paint(object sender, PaintEventArgs e)
-       // {
+       private void Menu_bar_Paint(object sender, PaintEventArgs e)
+        {
 
-       // }
+        }
 
-       // private void _Click(object sender, PaintEventArgs e)
-       // {
+        private void _Click(object sender, PaintEventArgs e)
+        {
 
-       // }
+        }
 
-      //  private void label_ageOfVillagers_Click(object sender, EventArgs e)
-      //  {
+       private void label_ageOfVillagers_Click(object sender, EventArgs e)
+       {
 
-      //  }
+        }
 
         private void drawing_space_Paint(object sender, PaintEventArgs e)
         {
