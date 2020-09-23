@@ -46,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="House.cs" />
+    <Compile Include="BDF_House.cs" />
     <Compile Include="editorVillagers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="editorVillagers.Designer.cs">
       <DependentUpon>editorVillagers.cs</DependentUpon>
     </Compile>
-    <Compile Include="IVillage_items.cs" />
+    <Compile Include="Village_items.cs" />
     <Compile Include="Nations\Arab_bedouin.cs" />
     <Compile Include="Nations\Bangladeshi_farmers.cs" />
     <Compile Include="Nations\Egyptian_kings.cs" />

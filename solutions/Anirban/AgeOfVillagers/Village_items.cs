@@ -8,12 +8,17 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    public abstract class VillageItem : IShapes
+    public abstract class Village_Item : IShapes
     {
         private readonly List<IShapes> v_item;
-        public VillageItem()
+        public Village_Item()
         {
             v_item = new List<IShapes>();
+        }
+
+        protected void Add_item(IShapes shape)
+        {
+            v_item.Add(shape);
         }
 
         public void Draw_shapes(Point pt, Graphics g, Pen p)
