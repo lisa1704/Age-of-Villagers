@@ -6,8 +6,8 @@ namespace AOV
     {
         public BdTreeShape(Point clicked, Point top, Point topLeftCorner, Point bottomRightCorner)
         {
-            addShape(new Ellipse(clicked, top));
-            addShape(new Rectangle(topLeftCorner, bottomRightCorner));
+            AddShape(new Ellipse(clicked, top));
+            AddShape(new Rectangle(topLeftCorner, bottomRightCorner));
         }
     }
 }

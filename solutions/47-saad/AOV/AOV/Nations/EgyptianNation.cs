@@ -7,19 +7,19 @@ namespace AOV
         public void DrawHouse(Graphics g, Point p)
         {
             EgyptHouse pyramid=new EgyptHouse(p);
-            pyramid.draw(g);
+            pyramid.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
             EgyptTree egyptTree = new EgyptTree(p);
-            egyptTree.draw(g);
+            egyptTree.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
             EgyptWater egyptWater=new EgyptWater(p);
-            egyptWater.draw(g);
+            egyptWater.Draw(g);
         }
 
         public Color GetColor()

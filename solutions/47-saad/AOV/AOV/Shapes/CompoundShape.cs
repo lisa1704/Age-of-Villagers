@@ -12,15 +12,15 @@ namespace AOV
             shapes = new List<IDraw>();
         }
 
-        public void addShape(IDraw shape)
+        public void AddShape(IDraw shape)
         {
             shapes.Add(shape);
         }
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
             foreach(var shape in shapes)
             {
-                shape.draw(g);
+                shape.Draw(g);
             }
         }
     }

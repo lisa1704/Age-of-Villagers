@@ -12,7 +12,7 @@ namespace AOV
             this.x = x;
             this.y = y;
         }
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
             Pen blackPen = new Pen(Color.Black, 1);
             g.DrawLine(blackPen, x, y);

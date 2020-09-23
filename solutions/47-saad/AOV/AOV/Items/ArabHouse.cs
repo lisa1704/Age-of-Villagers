@@ -17,10 +17,9 @@ namespace AOV
             Point bottomRightCorner = new Point(clicked.X + 12, clicked.Y + 10);
 
             nationItemShape = new ArabHouseShape(_clicked, x1, x2, x3, x4, topLeftCorner, bottomRightCorner);
-
            
             //Check
-            //addShape(new Rectangle(topLeftCorner, bottomRightCorner)); //Uncomment to check the height and width
+            //AddShape(new Rectangle(topLeftCorner, bottomRightCorner)); //Uncomment to check the height and width
         }
         public override Point GetPoint()
         {

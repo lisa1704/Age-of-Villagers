@@ -5,9 +5,9 @@ namespace AOV
     public abstract class NationItem : IDraw
     {
         protected CompoundShape nationItemShape = new NullShape();
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
-            nationItemShape.draw(g);
+            nationItemShape.Draw(g);
         }
         public abstract Point GetPoint();
     }

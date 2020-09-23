@@ -4,25 +4,18 @@
     {
         public INation SelectNation(string typeOfNation)
         {
-            if(typeOfNation == "Arab Bedouin")
+            switch (typeOfNation)
             {
-                return new ArabNation();
-            }
-            else if (typeOfNation == "Egyptian Kings")
-            {
-                return new EgyptianNation();
-            }
-            else if (typeOfNation == "Bangladeshi Farmers")
-            {
-                return new BangladeshiNation();
-            }
-            else if (typeOfNation == "Inuit Hunters")
-            {
-                return new InuitNation();
-            }
-            else
-            {
-                return new NullNation();
+                case "Arab Bedouin":
+                    return new ArabNation();
+                case "Egyptian Kings":
+                    return new EgyptianNation();
+                case "Bangladeshi Farmers":
+                    return new BangladeshiNation();
+                case "Inuit Hunters":
+                    return new InuitNation();
+                default:
+                    return new NullNation();
             }
         }
     }

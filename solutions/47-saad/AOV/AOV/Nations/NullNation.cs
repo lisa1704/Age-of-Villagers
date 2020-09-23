@@ -7,19 +7,19 @@ namespace AOV
         public void DrawHouse(Graphics g, Point p)
         {
             NullShape nothing = new NullShape();
-            nothing.draw(g); 
+            nothing.Draw(g); 
         }
 
         public void DrawTree(Graphics g, Point p)
         {
             NullShape nothing = new NullShape();
-            nothing.draw(g); 
+            nothing.Draw(g); 
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
             NullShape nothing = new NullShape();
-            nothing.draw(g); 
+            nothing.Draw(g); 
         }
 
         public Color GetColor()

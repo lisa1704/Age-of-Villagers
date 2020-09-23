@@ -6,9 +6,9 @@ namespace AOV
     {
         public Triangle(Point x1, Point x2, Point x3)
         {
-            addShape(new DrawLine(x1, x2));
-            addShape(new DrawLine(x2, x3));
-            addShape(new DrawLine(x3, x1));
+            AddShape(new DrawLine(x1, x2));
+            AddShape(new DrawLine(x2, x3));
+            AddShape(new DrawLine(x3, x1));
         }
     }
 }

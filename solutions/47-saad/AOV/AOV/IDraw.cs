@@ -4,6 +4,6 @@ namespace AOV
 {
     public interface IDraw
     {
-        void draw(Graphics g);
+        void Draw(Graphics g);
     }
 }

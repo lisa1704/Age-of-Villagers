@@ -11,7 +11,7 @@ namespace AOV
         {
             height = x2.X - x1.X;
             width = x2.Y - x1.Y;
-            addShape(new DrawArc(x1.X, x1.Y, height, width, 0, 360));
+            AddShape(new DrawArc(x1.X, x1.Y, height, width, 0, 360));
         }
     }
 }

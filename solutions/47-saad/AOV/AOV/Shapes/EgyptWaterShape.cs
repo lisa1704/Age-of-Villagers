@@ -6,7 +6,7 @@ namespace AOV
     {
         public EgyptWaterShape(Point clicked, Point p)
         {
-            addShape(new Ellipse(clicked, p));
+            AddShape(new Ellipse(clicked, p));
         }
     }
 }
