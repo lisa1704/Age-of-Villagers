@@ -12,20 +12,15 @@ using System.Windows.Forms;
 namespace AgeOfVillagers
 {
    
-    public partial class Form1 : Form
+    public partial class VillageForm : Form
     {
-
+        public List<Point> P { get; set; } = new List<Point>();
         Point point;
         String nationName = " ";
         INation nation = new NullNation();
         INation nation2 = new NullNation();
         CheckNation checker = new CheckNation();
-
-        public List<Point> house { get; set; } = new List<Point>();
-        public List<Point> Tree { get; set; } = new List<Point>();
-        public List<Point> water { get; set; } = new List<Point>();
-
-        public Form1()
+        public VillageForm()
         {
             InitializeComponent();
         }
@@ -37,6 +32,7 @@ namespace AgeOfVillagers
         private void canvas_MouseClick(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
+            P.Add(point);
             canvas.Invalidate();
 
         }
@@ -48,28 +44,23 @@ namespace AgeOfVillagers
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = canvas.CreateGraphics();
-            // BangladeshiFarmers nation = new BangladeshiFarmers();
-            //  EgyptianKings nation = new EgyptianKings();
-            //ArabBeouins nation = new ArabBeouins();
-            //InuitHunters nation = new InuitHunters();
-            
+            Graphics g = canvas.CreateGraphics();        
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
             {
                 nation.DrawTree(g, point);
-                Tree.Add(point);
+
             }
             else if (House.Checked == true)
             {
                 nation.DrawHouse(g, point);
-                house.Add(point);
+
             }
             else if (Water.Checked == true)
             {
                 nation.DrawWater(g, point);
-                water.Add(point);
+
             }
 
         }
