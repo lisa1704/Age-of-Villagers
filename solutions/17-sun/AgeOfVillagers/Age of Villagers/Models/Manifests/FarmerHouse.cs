@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers.Models.Manifests
 {
-     class House : IShape
+     class FarmerHouse : IShape
     {
         List<Line> LineList = new List<Line>();
-        public House(Point start)
+        public FarmerHouse(Point start)
         {
             Point end = start;
             end.X = start.X + 16;

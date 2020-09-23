@@ -61,7 +61,7 @@ namespace Age_of_Villagers
             if (HouseSwitch)
             {
 
-                House hut = new House(local);
+                FarmerHouse hut = new FarmerHouse(local);
                 hut.Draw(gfx, p);
                
 
