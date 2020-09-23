@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Null_Item : CompositeShaping
+   public class Null_Item : CompositeShaping
     {
         Point point = new Point();
 
