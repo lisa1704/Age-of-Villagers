@@ -21,11 +21,11 @@ namespace AgeOfVillagers
             ShapeComponents.Add(shape);
         }
 
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
             foreach (var component in ShapeComponents)
             {
-                component.draw(g);
+                component.Draw(g);
             }
         }
     }

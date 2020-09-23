@@ -7,20 +7,28 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Arc : IShape
+    public class Line : IShape
+
     {
         private readonly Point point1;
         private readonly Point point2;
-        public int x, y, width, heigth, initialngle, sweepAngle;
-        public Arc(Point point1, Point point2)
+        public Line(Point point1, Point point2)
         {
             this.point1 = point1;
             this.point2 = point2;
+
         }
         public void Draw(Graphics g)
+
         {
             var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen, x, y, width, heigth, initialngle, sweepAngle);
+            g.DrawLine(pen, point1, point2);
+
+        }
+
+        public void draw(Graphics g)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace AgeOfVillagers
             this.TopLeft = topLeft;
             this.BottomRight = BottomRight;
         }
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
             g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);
