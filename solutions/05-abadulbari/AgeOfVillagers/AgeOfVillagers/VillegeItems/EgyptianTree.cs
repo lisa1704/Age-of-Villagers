@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class EgyptianTree : VillageItem
+    public class EgyptianTree : VillageItem
     {
         private readonly Point bottom, mid1, mid2, top11, top12, top13, top21, top22, top23;
 
