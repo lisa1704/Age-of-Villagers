@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Text;
 namespace AgeOfVillagers.Bangladeshi_Farmers
 {
-    public class BDWatersource : Composite
+    public class BDFarmersWatersource : Composite
     {
-        public BDWatersource(Point Point1)
+        public BDFarmersWatersource(Point Point1)
         {
             Point point2 = new Point(Point1.X - 6, Point1.Y + 2);
             Point point3 = new Point(Point1.X - 10, Point1.Y + 14);
