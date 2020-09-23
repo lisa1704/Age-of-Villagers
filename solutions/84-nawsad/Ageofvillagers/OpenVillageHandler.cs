@@ -14,6 +14,11 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
+       
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             OpenVillage openVillage = new OpenVillage(openFileDialog1.InitialDirectory + openFileDialog1.FileName);
