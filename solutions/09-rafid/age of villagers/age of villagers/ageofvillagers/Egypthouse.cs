@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Egypthouse : House
+public class Egypthouse : IShape
 {
 
     private string draw = "";
