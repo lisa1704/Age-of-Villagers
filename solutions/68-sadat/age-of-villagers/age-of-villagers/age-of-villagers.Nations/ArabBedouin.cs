@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using age_of_villagers.age_of_village.Items.House;
+using age_of_villagers.age_of_villagers.utilities;
 
 namespace age_of_villagers.age_of_villagrs.Nations
 {
@@ -22,35 +23,36 @@ namespace age_of_villagers.age_of_villagrs.Nations
             villageCanvas.BackColor = System.Drawing.Color.LightYellow;
         }
 
-        public void createHouse(int x, int y)
+        public void createHouse(Coordinate coordinate)
         {
             Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            graphics.DrawLine(pen, new PointF(x, y), new PointF(x - 5, y - 10));
-            graphics.DrawLine(pen, new PointF(x - 5, y - 10), new PointF(x - 10, y));
-            graphics.DrawLine(pen, new PointF(x, y), new PointF(x - 10, y));
-            graphics.DrawLine(pen, new PointF(x - 5, y - 10), new PointF(x - 10, y - 10));
-            graphics.DrawLine(pen, new PointF(x - 10, y), new PointF(x - 15, y));
-            graphics.DrawLine(pen, new PointF(x - 10, y - 10), new PointF(x - 15, y));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 5, coordinate.Y - 10));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 5, coordinate.Y - 10), new PointF(coordinate.X - 10, coordinate.Y));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 10, coordinate.Y));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 5, coordinate.Y - 10), new PointF(coordinate.X - 10, coordinate.Y - 10));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 10, coordinate.Y), new PointF(coordinate.X - 15, coordinate.Y));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 10, coordinate.Y - 10), new PointF(coordinate.X - 15, coordinate.Y));
         }
 
-        public void createTree(int x, int y)
+        public void createTree(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Blue);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("ArabTree", font, brush, new PointF(x, y));
+            Pen pen = new Pen(Color.Black);
+            Graphics elem = villageCanvas.CreateGraphics();
+            elem.DrawRectangle(pen,coordinate.X, coordinate.Y, 2, 12);
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X + 1, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X + 4, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X + 6, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X + 8, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X - 3, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X - 5, coordinate.Y - 12));
+            elem.DrawLine(pen, new PointF(coordinate.X + 1, coordinate.Y), new PointF(coordinate.X - 7, coordinate.Y - 12));
 
         }
 
-        public void createWaterSource(int x, int y)
+        public void createWaterSource(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Blue);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("ArabWaterSource", font, brush, new PointF(x, y));
+           
 
         }
     }

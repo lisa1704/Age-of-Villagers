@@ -1,4 +1,5 @@
-﻿using System;
+﻿using age_of_villagers.age_of_villagers.utilities;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -18,31 +19,40 @@ namespace age_of_villagers.age_of_villagers.Nations
             villageCanvas.BackColor = System.Drawing.Color.Yellow;
         }
 
-        public void createHouse(int x, int y)
+        public void createHouse(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("EgyptianKingHouse", font, brush, new PointF(x, y));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X + 8, coordinate.Y + 12));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 8, coordinate.Y + 9));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 8, coordinate.Y + 12), new PointF(coordinate.X - 2, coordinate.Y + 16));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 8, coordinate.Y + 9), new PointF(coordinate.X - 2, coordinate.Y + 16));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 2, coordinate.Y + 16));
         }
 
-        public void createTree(int x, int y)
+        public void createTree(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("EgyptianKingTree", font, brush, new PointF(x, y));
+
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X + 4, coordinate.Y - 20));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 4, coordinate.Y - 20));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 4, coordinate.Y - 24));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 8, coordinate.Y - 20));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 8, coordinate.Y - 24));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 4, coordinate.Y - 24));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 8, coordinate.Y - 20));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 8, coordinate.Y - 24));
+
         }
 
-        public void createWaterSource(int x, int y)
+        public void createWaterSource(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("EgyptianKingWaterSource", font, brush, new PointF(x, y));
+            graphics.DrawEllipse(pen, coordinate.X, coordinate.Y, 12, 12);
+
         }
     }
 }

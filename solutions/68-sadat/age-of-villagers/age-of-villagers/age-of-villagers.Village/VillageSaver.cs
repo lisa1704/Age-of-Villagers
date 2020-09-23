@@ -16,9 +16,9 @@ namespace age_of_villagers.age_of_villagers.Village
             string json = System.IO.File.ReadAllText(@"E:\" + village.getName() + ".aov");
             Console.WriteLine(saveVillage);
         }
-        public Village openSavedState(string aovFile)
+        public Village openSavedState(string Filename)
         {
-            string json = System.IO.File.ReadAllText(aovFile);
+            string json = System.IO.File.ReadAllText(Filename);
             return JsonConvert.DeserializeObject<Village>(json);
         }
     }

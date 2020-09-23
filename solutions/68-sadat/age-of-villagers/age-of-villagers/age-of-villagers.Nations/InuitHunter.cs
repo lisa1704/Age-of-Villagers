@@ -1,4 +1,5 @@
-﻿using System;
+﻿using age_of_villagers.age_of_villagers.utilities;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -18,31 +19,25 @@ namespace age_of_villagers.age_of_villagers.Nations
             villageCanvas.BackColor = System.Drawing.Color.White;
         }
 
-        public void createHouse(int x, int y)
+        public void createHouse(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("InuitHunterHouse", font, brush, new PointF(x, y));
+            float startAngle = 0.0F;
+            float sweepAngle = -180.0F;
+            graphics.DrawArc(pen, coordinate.X, coordinate.Y, 16, 16, startAngle, sweepAngle);
+            graphics.DrawArc(pen, coordinate.X + 4, coordinate.Y + 4, 8, 8, startAngle, sweepAngle);
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y + 8), new PointF(coordinate.X + 16, coordinate.Y + 8));
         }
 
-        public void createTree(int x, int y)
+        public void createTree(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("InuitHunterTree", font, brush, new PointF(x, y));
+            
         }
 
-        public void createWaterSource(int x, int y)
+        public void createWaterSource(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("InuitHunterWaterSource", font, brush, new PointF(x, y));
+           
         }
     }
 }

@@ -68,6 +68,7 @@ namespace age_of_villagers
                 string fileName = openFileDialog.FileName;
                 thisVillage = thisVillageSaver.openSavedState(fileName);
             }
+            
         }
 
         private void newVillageButton_Click(object sender, EventArgs e)
@@ -128,18 +129,18 @@ namespace age_of_villagers
            
             if(treeButton.Checked == true)
             {
-                nation.createTree(e.X, e.Y);
+                nation.createTree(new Coordinate(e.X, e.Y));
                 thisVillage.addTree(new Coordinate(e.X, e.Y));
                 
             }
             else if(houseButton.Checked == true)
             {
-                nation.createHouse(e.X, e.Y);
+                nation.createHouse(new Coordinate(e.X, e.Y));
                 thisVillage.addHouse(new Coordinate(e.X, e.Y));
             }
             else if(waterSourceButton.Checked == true)
             {
-                nation.createWaterSource(e.X, e.Y);
+                nation.createWaterSource(new Coordinate(e.X, e.Y));
                 thisVillage.addWaterSource(new Coordinate(e.X, e.Y));
             };
         }
@@ -172,8 +173,8 @@ namespace age_of_villagers
             }
             else if (comboBox1.SelectedItem == "Inuit Hunters")
             {
-                nation = new InuitHunter(VillageCanvas);
-                nation.colorTerrain();
+               nation = new InuitHunter(VillageCanvas);
+               nation.colorTerrain();
             }
         }
 

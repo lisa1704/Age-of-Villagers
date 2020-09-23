@@ -1,4 +1,5 @@
-﻿using System;
+﻿using age_of_villagers.age_of_villagers.utilities;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -18,31 +19,34 @@ namespace age_of_villagers.age_of_villagers.Nations
             villageCanvas.BackColor = System.Drawing.Color.Green;
         }
 
-        public void createHouse(int x, int y)
+        public void createHouse(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("BangladeshiFarmerHouse", font, brush, new PointF(x, y));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 8, coordinate.Y - 8), new PointF(coordinate.X, coordinate.Y));
+            graphics.DrawLine(pen, new PointF(coordinate.X + 8, coordinate.Y - 8), new PointF(coordinate.X + 16, coordinate.Y));
+            graphics.DrawRectangle(pen, coordinate.X, coordinate.Y, 16, 8);
         }
 
-        public void createTree(int x, int y)
+        public void createTree(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("BangladeshiFarmerTree", font, brush, new PointF(x, y));
+            graphics.DrawEllipse(pen, coordinate.X, coordinate.Y, 16, 16);
+            graphics.DrawEllipse(pen, coordinate.X + 7, coordinate.Y + 16, 2, 8);
         }
 
-        public void createWaterSource(int x, int y)
+        public void createWaterSource(Coordinate coordinate)
         {
-            SolidBrush brush = new SolidBrush(Color.Black);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("BangladeshiFarmerWaterSource", font, brush, new PointF(x, y));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 3, coordinate.Y - 3));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 3, coordinate.Y - 3), new PointF(coordinate.X - 6, coordinate.Y + 5));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 6, coordinate.Y + 5), new PointF(coordinate.X - 12, coordinate.Y - 1));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 12, coordinate.Y - 1), new PointF(coordinate.X - 24, coordinate.Y + 6));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 24, coordinate.Y + 6), new PointF(coordinate.X - 13, coordinate.Y + 24));
+            graphics.DrawLine(pen, new PointF(coordinate.X - 13, coordinate.Y + 24), new PointF(coordinate.X, coordinate.Y + 10));
+            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y + 10), new PointF(coordinate.X, coordinate.Y));
         }
     }
 }
