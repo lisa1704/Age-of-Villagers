@@ -37,18 +37,20 @@
             this.Save_btn = new System.Windows.Forms.Button();
             this.New_btn = new System.Windows.Forms.Button();
             this.Open_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(39, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(441, 374);
+            this.panel1.Size = new System.Drawing.Size(600, 400);
             this.panel1.TabIndex = 0;
             // 
             // VillageBox
             // 
-            this.VillageBox.Location = new System.Drawing.Point(513, 62);
+            this.VillageBox.Location = new System.Drawing.Point(141, 56);
             this.VillageBox.Name = "VillageBox";
             this.VillageBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.VillageBox.Size = new System.Drawing.Size(231, 22);
@@ -59,7 +61,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(503, 101);
+            this.comboBox1.Location = new System.Drawing.Point(141, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(266, 24);
             this.comboBox1.TabIndex = 2;
@@ -68,7 +70,7 @@
             // House_btn
             // 
             this.House_btn.AutoSize = true;
-            this.House_btn.Location = new System.Drawing.Point(544, 166);
+            this.House_btn.Location = new System.Drawing.Point(141, 165);
             this.House_btn.Name = "House_btn";
             this.House_btn.Size = new System.Drawing.Size(70, 21);
             this.House_btn.TabIndex = 3;
@@ -79,7 +81,7 @@
             // Tree_btn
             // 
             this.Tree_btn.AutoSize = true;
-            this.Tree_btn.Location = new System.Drawing.Point(544, 210);
+            this.Tree_btn.Location = new System.Drawing.Point(141, 209);
             this.Tree_btn.Name = "Tree_btn";
             this.Tree_btn.Size = new System.Drawing.Size(59, 21);
             this.Tree_btn.TabIndex = 4;
@@ -91,7 +93,7 @@
             // Water_btn
             // 
             this.Water_btn.AutoSize = true;
-            this.Water_btn.Location = new System.Drawing.Point(545, 268);
+            this.Water_btn.Location = new System.Drawing.Point(141, 251);
             this.Water_btn.Name = "Water_btn";
             this.Water_btn.Size = new System.Drawing.Size(116, 21);
             this.Water_btn.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // Save_btn
             // 
-            this.Save_btn.Location = new System.Drawing.Point(529, 348);
+            this.Save_btn.Location = new System.Drawing.Point(136, 300);
             this.Save_btn.Name = "Save_btn";
             this.Save_btn.Size = new System.Drawing.Size(75, 23);
             this.Save_btn.TabIndex = 6;
@@ -112,7 +114,7 @@
             // 
             // New_btn
             // 
-            this.New_btn.Location = new System.Drawing.Point(653, 349);
+            this.New_btn.Location = new System.Drawing.Point(332, 300);
             this.New_btn.Name = "New_btn";
             this.New_btn.Size = new System.Drawing.Size(75, 23);
             this.New_btn.TabIndex = 7;
@@ -122,7 +124,7 @@
             // 
             // Open_btn
             // 
-            this.Open_btn.Location = new System.Drawing.Point(603, 393);
+            this.Open_btn.Location = new System.Drawing.Point(240, 349);
             this.Open_btn.Name = "Open_btn";
             this.Open_btn.Size = new System.Drawing.Size(75, 23);
             this.Open_btn.TabIndex = 8;
@@ -130,24 +132,33 @@
             this.Open_btn.UseVisualStyleBackColor = true;
             this.Open_btn.Click += new System.EventHandler(this.Open_btn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Open_btn);
+            this.panel2.Controls.Add(this.Water_btn);
+            this.panel2.Controls.Add(this.New_btn);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.Save_btn);
+            this.panel2.Controls.Add(this.VillageBox);
+            this.panel2.Controls.Add(this.House_btn);
+            this.panel2.Controls.Add(this.Tree_btn);
+            this.panel2.Location = new System.Drawing.Point(694, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(533, 400);
+            this.panel2.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Open_btn);
-            this.Controls.Add(this.New_btn);
-            this.Controls.Add(this.Save_btn);
-            this.Controls.Add(this.Water_btn);
-            this.Controls.Add(this.Tree_btn);
-            this.Controls.Add(this.House_btn);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.VillageBox);
+            this.ClientSize = new System.Drawing.Size(1263, 598);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -162,6 +173,7 @@
         private System.Windows.Forms.Button Save_btn;
         private System.Windows.Forms.Button New_btn;
         private System.Windows.Forms.Button Open_btn;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
