@@ -62,6 +62,9 @@
     <Compile Include="VillageComponents\BangladeshiHouse.cs" />
     <Compile Include="VillageComponents\BangladeshiTree.cs" />
     <Compile Include="VillageComponents\BangladeshiWaterSource.cs" />
+    <Compile Include="VillageComponents\EgyptianKingHouse.cs" />
+    <Compile Include="VillageComponents\EgyptianKingTree.cs" />
+    <Compile Include="VillageComponents\EgyptianKingWaterSource.cs" />
     <Compile Include="VillageComponents\VillageComponents.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
