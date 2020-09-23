@@ -11,7 +11,11 @@
         }
         public string Draw_Shape()
         {
-            return "Drawing a Circle...";
+            Arc arc_circle = new Arc(x-radius, y-radius, 2*radius, 2*radius, 0, 360);
+
+            arc_circle.Draw_Shape();
+
+            return "Drawing a circle...";
         }
     }
 }
