@@ -1,4 +1,5 @@
 ﻿using AoV.Shapes;
+using AoV.Nations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,15 @@ namespace AoV
 {
     public partial class MainWindow : Form
     {
+        string villageName;
+        Color backGroundColor;
+        string nationName;
+        NationFactory nationType = new NationFactory();
+        string itemName;
+        List<Point> houseLocations = new List<Point>();
+        List<Point> treeLocations = new List<Point>();
+        List<Point> sourceLocations = new List<Point>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -68,5 +78,111 @@ namespace AoV
         }
         */
         #endregion
+
+        private void btnHouse_CheckedChanged(object sender, EventArgs e)
+        {
+            itemName = "House";
+        }
+
+        private void btnTree_CheckedChanged(object sender, EventArgs e)
+        {
+            itemName = "Tree";
+        }
+
+        private void btnWater_CheckedChanged(object sender, EventArgs e)
+        {
+            itemName = "WaterSource";
+        }
+
+        private void NationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            nationName = NationList.Text;
+            backGroundColor = nationType.GetNation(nationName).TerrainColor();
+            DrawingPanel.BackColor = backGroundColor;
+        }
+
+        private void NewState_Click(object sender, EventArgs e)
+        {
+            houseLocations.Clear();
+            treeLocations.Clear();
+            sourceLocations.Clear();
+            DrawingPanel.Refresh();
+            NationList.ResetText();
+            nationName = NationList.Text;
+            DrawingPanel.BackColor = nationType.GetNation(nationName).TerrainColor();
+        }
+
+        private void DrawingPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = DrawingPanel.CreateGraphics();
+            if (nationType.GetNation(nationName).getName() == "NullNation")
+            {
+                nationType.GetNation(nationName).DrawHouse(g, new Point(200, 200));
+            }
+            else
+            {
+                foreach (Point points in houseLocations)
+                {
+                    nationType.GetNation(nationName).DrawHouse(g, points);
+                }
+
+                foreach (Point points in treeLocations)
+                {
+                    nationType.GetNation(nationName).DrawTree(g, points);
+                }
+
+                foreach (Point points in sourceLocations)
+                {
+                    nationType.GetNation(nationName).DrawWaterSource(g, points);
+                }
+            }
+        }
+
+        private void DrawingPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (itemName == "House")
+            {
+                houseLocations.Add(e.Location);
+            }
+            if (itemName == "tree")
+            {
+                treeLocations.Add(e.Location);
+            }
+            if (itemName == "waterSource")
+            {
+                sourceLocations.Add(e.Location);
+            }
+            DrawingPanel.Invalidate();
+        }
+
+        private void VillageNameText_Enter(object sender, EventArgs e)
+        {
+            if (VillageNameText.Text == "Enter Village Name")
+            {
+                VillageNameText.Text = "";
+
+                VillageNameText.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void VillageNameText_Leave(object sender, EventArgs e)
+        {
+            
+            if (VillageNameText.Text == "")
+            {
+                VillageNameText.Text = "Enter Village Name";
+
+                VillageNameText.ForeColor = Color.Silver;
+            }
+        }
+
+        private void SaveState_Click(object sender, EventArgs e)
+        {
+            villageName = VillageNameText.Text;
+            VillageNameText.Text = "Enter Village Name";
+            VillageNameText.ForeColor = Color.Silver;
+        }
+
     }
 }

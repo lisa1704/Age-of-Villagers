@@ -55,9 +55,8 @@
             this.DrawingPanel.Name = "DrawingPanel";
             this.DrawingPanel.Size = new System.Drawing.Size(800, 492);
             this.DrawingPanel.TabIndex = 0;
-            ///this.DrawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseDown);
-            ///this.DrawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseMove);
-            ///this.DrawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseUp);
+            this.DrawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawingPanel_Paint);
+            this.DrawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DrawingPanel_MouseClick);
             // 
             // SidePanel
             // 
@@ -93,6 +92,7 @@
             this.btnWater.TabStop = true;
             this.btnWater.Text = "Water Source";
             this.btnWater.UseVisualStyleBackColor = true;
+            this.btnWater.CheckedChanged += new System.EventHandler(this.btnWater_CheckedChanged);
             // 
             // btnTree
             // 
@@ -105,6 +105,7 @@
             this.btnTree.TabStop = true;
             this.btnTree.Text = "Tree";
             this.btnTree.UseVisualStyleBackColor = true;
+            this.btnTree.CheckedChanged += new System.EventHandler(this.btnTree_CheckedChanged);
             // 
             // btnHouse
             // 
@@ -117,6 +118,7 @@
             this.btnHouse.TabStop = true;
             this.btnHouse.Text = "House";
             this.btnHouse.UseVisualStyleBackColor = true;
+            this.btnHouse.CheckedChanged += new System.EventHandler(this.btnHouse_CheckedChanged);
             // 
             // SaveState
             // 
@@ -128,6 +130,7 @@
             this.SaveState.TabIndex = 6;
             this.SaveState.Text = "Save Village";
             this.SaveState.UseVisualStyleBackColor = true;
+            this.SaveState.Click += new System.EventHandler(this.SaveState_Click);
             // 
             // LoadState
             // 
@@ -150,6 +153,7 @@
             this.NewState.TabIndex = 1;
             this.NewState.Text = "New Village";
             this.NewState.UseVisualStyleBackColor = true;
+            this.NewState.Click += new System.EventHandler(this.NewState_Click);
             // 
             // NationList
             // 
@@ -160,7 +164,7 @@
             this.NationList.Items.AddRange(new object[] {
             "- None -",
             "Arab Bedouin",
-            "Bangladeshi Farmaers",
+            "Bangladeshi Farmers",
             "Egyptian Kings",
             "Inuit Hunters"});
             this.NationList.Location = new System.Drawing.Point(112, 128);
@@ -168,6 +172,7 @@
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(165, 20);
             this.NationList.TabIndex = 4;
+            this.NationList.SelectedIndexChanged += new System.EventHandler(this.NationList_SelectedIndexChanged);
             // 
             // VillageNameText
             // 
@@ -178,6 +183,9 @@
             this.VillageNameText.Name = "VillageNameText";
             this.VillageNameText.Size = new System.Drawing.Size(165, 22);
             this.VillageNameText.TabIndex = 3;
+            this.VillageNameText.Text = "villageName";
+            this.VillageNameText.Enter += new System.EventHandler(this.VillageNameText_Enter);
+            this.VillageNameText.Leave += new System.EventHandler(this.VillageNameText_Leave);
             // 
             // aovLabel
             // 
