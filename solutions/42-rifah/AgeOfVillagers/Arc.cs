@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
+﻿using System.Drawing;
 
 namespace AgeOfVillagers
 {
@@ -23,8 +20,8 @@ namespace AgeOfVillagers
 
         public void Draw(Pen p, Graphics g)
         {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen, x, y, width, height, StartAngle, SweepAngle);
+            //var my_pen = new Pen(Color.Black, 1);
+            g.DrawArc(p, x, y, width, height, StartAngle, SweepAngle);
         }
     }
 
