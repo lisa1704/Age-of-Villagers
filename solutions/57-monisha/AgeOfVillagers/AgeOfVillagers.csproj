@@ -54,8 +54,14 @@
     <Compile Include="ArabTree.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
+    <Compile Include="BangladeshiHouse.cs" />
+    <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource.cs" />
+    <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianKings.cs" />
+    <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
+    <Compile Include="InuitHouse.cs" />
     <Compile Include="IStatesVillage.cs" />
     <Compile Include="INations.cs" />
     <Compile Include="InuitHunters.cs" />

@@ -17,5 +17,6 @@ namespace AgeOfVillageTest
             int TestTreeBBox = TreeType.GetBBox();
             Assert.AreEqual(TestTreeBBox, (16 * 12));
         }
+      
     }
 }

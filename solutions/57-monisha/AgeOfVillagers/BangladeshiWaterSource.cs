@@ -4,11 +4,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-   public class BangladeshiWaterSource : CompositeShape
+    public class BangladeshiWaterSource : CompositeShape
     {
         public BangladeshiWaterSource(Point MPt)
         {
@@ -30,17 +29,6 @@ namespace AgeOfVillagers
             AddComp(new Line(pt6, pt7));
             AddComp(new Line(pt7, pt8));
             AddComp(new Line(MPt, pt8));
-        }
-    }
-
-   public class EgyptianWaterSource : CompositeShape
-    {
-        public EgyptianWaterSource(Point MPt)
-        {
-            Point topPt = new Point(MPt.X + 12, MPt.Y + 12);
-
-            AddComp(new ShapeEllipse(MPt, topPt));
-
         }
     }
     public class NullVillageItem : CompositeShape

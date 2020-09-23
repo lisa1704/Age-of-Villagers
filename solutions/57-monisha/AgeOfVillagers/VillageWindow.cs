@@ -92,6 +92,7 @@ namespace AgeOfVillagers
                 OpenVillage openVillage = new OpenVillage();
                 openVillage.ExecuteAction();
                 village = openVillage.GetVillage();
+           
                 if (village.name != null )
                 {
                     SetVillageState(village);

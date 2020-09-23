@@ -8,25 +8,6 @@ using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-    public class BangladeshiHouse : CompositeShape
-    {
-        public string testBdHouse;
-        public BangladeshiHouse(Point MPt)
-        {            
-            Point tpt1 = new Point(MPt.X + 16, MPt.Y );
-            Point tpt2 = new Point(MPt.X + 8, MPt.Y -8);
-            Point rpt1 = new Point(tpt1.X , tpt1.Y);
-            Point rpt2 = new Point(MPt.X , MPt.Y + 8);
-
-            AddComp(new Triangle(tpt1, tpt2, MPt));
-            AddComp(new ShapeRectangle(rpt1, rpt2));
-            testBdHouse = "BDHouse Constructed";
-        }
-        public string CheckHouse()
-        {
-            return testBdHouse;
-        }
-    }
     public class ArabBedouinHouse : CompositeShape
     {
         public ArabBedouinHouse(Point MPt)
@@ -39,32 +20,6 @@ namespace AgeOfVillagers
             AddComp(new Triangle(tpt2, tpt1, MPt));
             AddComp(new ShapeRectangle(MPt, rpt1, tpt2, rpt2));        
 
-        }
-    }
-    public class EgyptianHouse : CompositeShape
-    {
-        public EgyptianHouse(Point MPt)
-        {
-            Point tpt1 = new Point(MPt.X - 10, MPt.Y + 14);
-            Point tpt2 = new Point(MPt.X + 6, MPt.Y + 16);
-            Point tpt3 = new Point(tpt2.X + 6, tpt2.Y - 10);            
-
-            AddComp(new Triangle(tpt2, tpt1, MPt));
-            AddComp(new Triangle(tpt3, tpt2, MPt));    
-
-        }
-    }
-    public class InuitHouse : CompositeShape
-    {
-        public InuitHouse(Point MPt)
-        {                      
-            Point Lpt1 = new Point(MPt.X - 6, MPt.Y + 10);
-            Point Lpt2 = new Point(MPt.X + 10, MPt.Y + 10);
-            Point Opt1 = new Point(MPt.X -1, MPt.Y + 7 );
-
-            AddComp(new Line(Lpt1, Lpt2));
-            AddComp(new ShapeArc(Opt1.X, Opt1.Y, 6, 4, 0, -180.0F));
-            AddComp(new ShapeArc(Lpt1.X, Lpt1.Y - 8, 16, 14, 0, -180.0F));
         }
     }
 }
