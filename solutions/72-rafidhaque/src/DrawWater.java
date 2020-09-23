@@ -18,4 +18,11 @@ public abstract class DrawWater implements IDrawComponent{
         this.height = height;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }

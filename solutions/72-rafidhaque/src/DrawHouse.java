@@ -11,4 +11,11 @@ public abstract class DrawHouse implements IDrawComponent{
         this.y = y;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }

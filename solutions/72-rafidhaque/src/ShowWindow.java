@@ -22,9 +22,9 @@ public class ShowWindow implements IWindow{
     DrawTree tree;
     DrawWater water;
     GridOfControls gridOfControls;
-    ArrayList<StateOfComponent> stateOfComponents;
+    ArrayList<IDrawComponent> stateOfComponents;
 
-    public ShowWindow(INation nation, String villageName, Group drawSpace, ArrayList<StateOfComponent> arrayList) {
+    public ShowWindow(INation nation, String villageName, Group drawSpace, ArrayList<IDrawComponent> arrayList) {
         this.nation = nation;
         this.villageName = villageName;
         this.drawSpace = drawSpace;
@@ -60,8 +60,10 @@ public class ShowWindow implements IWindow{
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                StateOfComponent stateOfComponent = mouseClickManager.onMousePressed(drawSpace, event, gridOfControls.getNowDrawing());
-                stateOfComponents.add(stateOfComponent);
+                if (mouseRestriction(event.getX(), event.getY())) {
+                    mouseClickManager.onMousePressed(drawSpace, event, gridOfControls.getNowDrawing());
+                    stateOfComponents.add(gridOfControls.getNowDrawing());
+                }
             }
         });
 
@@ -89,11 +91,11 @@ public class ShowWindow implements IWindow{
 
             // java deserialize
 
-            ArrayList<StateOfComponent> stateOfComponents10 = null;
+            ArrayList<IDrawComponent> stateOfComponents10 = null;
             try {
                 FileInputStream fileIn = new FileInputStream("./"+this.villageName+".aov");
                 ObjectInputStream in = new ObjectInputStream(fileIn);
-                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
+                stateOfComponents10 = (ArrayList<IDrawComponent>) in.readObject();
                 in.close();
                 fileIn.close();
             } catch (Exception e1) {
@@ -111,12 +113,12 @@ public class ShowWindow implements IWindow{
             File selectedFile = fileChooser.showOpenDialog(Starter.mainWindow);
             String filePath = selectedFile.getAbsolutePath();
 
-            ArrayList<StateOfComponent> stateOfComponents10 = null;
+            ArrayList<IDrawComponent> stateOfComponents10 = null;
 
             try {
                 FileInputStream fileIn = new FileInputStream(filePath);
                 ObjectInputStream in = new ObjectInputStream(fileIn);
-                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
+                stateOfComponents10 = (ArrayList<IDrawComponent>) in.readObject();
                 in.close();
                 fileIn.close();
             } catch (Exception e1) {
@@ -125,15 +127,15 @@ public class ShowWindow implements IWindow{
 
             Rectangle rectangle = new Rectangle(0,0, 600,400);
 
-            System.out.println(stateOfComponents10.get(0).drawComponent);
+            System.out.println(stateOfComponents10.get(0));
 
-            if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Arab")) {
+            if (stateOfComponents10.get(0).toString().startsWith("Arab")) {
                 rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Bangladesh")) {
+            } else if (stateOfComponents10.get(0).toString().startsWith("Bangladesh")) {
                 rectangle.setFill(Color.GREENYELLOW);
-            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Egypt")) {
+            } else if (stateOfComponents10.get(0).toString().startsWith("Egypt")) {
                 rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).drawComponent.toString().startsWith("Inuit")) {
+            } else if (stateOfComponents10.get(0).toString().startsWith("Inuit")) {
                 rectangle.setFill(Color.WHITE);
             } else {
                 rectangle.setFill(Color.GRAY);
@@ -144,7 +146,7 @@ public class ShowWindow implements IWindow{
             int sizee = stateOfComponents10.size();
 
             for (int k = 0; k < sizee; k++) {
-                ArrayList<Shape> drawing = stateOfComponents10.get(k).drawComponent.draw();
+                ArrayList<Shape> drawing = stateOfComponents10.get(k).draw();
                 drawSpace.getChildren().addAll(drawing);
             }
         });
@@ -152,6 +154,13 @@ public class ShowWindow implements IWindow{
         return scene;
     }
 
+
+    boolean mouseRestriction(double x, double y) {
+        if (x + 24 <= 600 && y + 24 <= 400) {
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public Stage getStage(Scene scene) {
