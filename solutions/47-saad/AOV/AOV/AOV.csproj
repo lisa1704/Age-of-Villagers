@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArabHouse.cs" />
-    <Compile Include="ArabNation.cs" />
-    <Compile Include="ArabTree.cs" />
-    <Compile Include="BangladeshiNation.cs" />
-    <Compile Include="BdHouse.cs" />
-    <Compile Include="BdHouseShape.cs" />
-    <Compile Include="BdTree.cs" />
-    <Compile Include="BdTreeShape.cs" />
-    <Compile Include="BdWaterSource.cs" />
-    <Compile Include="BdWaterSourceShape.cs" />
-    <Compile Include="CompoundShape.cs" />
+    <Compile Include="Items\ArabHouse.cs" />
+    <Compile Include="Nations\ArabNation.cs" />
+    <Compile Include="Items\ArabTree.cs" />
+    <Compile Include="Nations\BangladeshiNation.cs" />
+    <Compile Include="Items\BdHouse.cs" />
+    <Compile Include="Shapes\BdHouseShape.cs" />
+    <Compile Include="Items\BdTree.cs" />
+    <Compile Include="Shapes\BdTreeShape.cs" />
+    <Compile Include="Items\BdWaterSource.cs" />
+    <Compile Include="Shapes\BdWaterSourceShape.cs" />
+    <Compile Include="Shapes\CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
     <Compile Include="DrawLine.cs" />
-    <Compile Include="EgyptHouse.cs" />
-    <Compile Include="EgyptianNation.cs" />
-    <Compile Include="EgyptTree.cs" />
-    <Compile Include="EgyptWater.cs" />
+    <Compile Include="Items\EgyptHouse.cs" />
+    <Compile Include="Nations\EgyptianNation.cs" />
+    <Compile Include="Items\EgyptTree.cs" />
+    <Compile Include="Items\EgyptWater.cs" />
     <Compile Include="Ellipse.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,11 +72,11 @@
     </Compile>
     <Compile Include="IDraw.cs" />
     <Compile Include="INation.cs" />
-    <Compile Include="InuitHouse.cs" />
-    <Compile Include="InuitNation.cs" />
+    <Compile Include="Items\InuitHouse.cs" />
+    <Compile Include="Nations\InuitNation.cs" />
     <Compile Include="NationFactory.cs" />
-    <Compile Include="NullNation.cs" />
-    <Compile Include="NullShape.cs" />
+    <Compile Include="Nations\NullNation.cs" />
+    <Compile Include="Shapes\NullShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
