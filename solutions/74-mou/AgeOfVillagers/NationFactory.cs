@@ -24,6 +24,10 @@ namespace AgeOfVillagers
             {
                 return new Arab();
             }
+            else if (typeofnation == "Inuit Hunters")
+            {
+                return new Inuit();
+            }
             else
             {
                 return new NullNationHandler();

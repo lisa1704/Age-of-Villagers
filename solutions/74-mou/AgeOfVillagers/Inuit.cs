@@ -13,7 +13,7 @@ namespace AgeOfVillagers
         }
         public IShapes DrawTree(Graphics gr, Point p)
         {
-            return new ArabTree(p);
+            return new NullItemSelction();
 
         }
 
