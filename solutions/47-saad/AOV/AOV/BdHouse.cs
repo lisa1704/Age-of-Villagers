@@ -2,7 +2,7 @@
 
 namespace AOV
 {
-    public class BdHouse : VillageItem
+    public class BdHouse : NationItem
     {
         private readonly Point _clicked;
 

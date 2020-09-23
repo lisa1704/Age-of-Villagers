@@ -53,6 +53,7 @@
     <Compile Include="BdHouse.cs" />
     <Compile Include="BdHouseShape.cs" />
     <Compile Include="BdTree.cs" />
+    <Compile Include="BdTreeShape.cs" />
     <Compile Include="BdWaterSource.cs" />
     <Compile Include="CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Triangle.cs" />
-    <Compile Include="VillageItem.cs" />
+    <Compile Include="NationItem.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -2,7 +2,7 @@
 
 namespace AOV
 {
-    public abstract class VillageItem : IDraw
+    public abstract class NationItem : IDraw
     {
         protected CompoundShape villageItemShape = new NullShape();
         public void draw(Graphics g)

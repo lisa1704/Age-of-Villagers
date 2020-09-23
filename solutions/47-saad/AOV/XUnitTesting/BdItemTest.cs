@@ -13,5 +13,12 @@ namespace XUnitTesting
             BdHouse bdHouse = new BdHouse(point);
             Assert.Equal(point, bdHouse.GetPoint());
         }
+
+        [Fact]
+        public void BdTreeTest()
+        {
+            BdTree bdTree = new BdTree(point);
+            Assert.Equal(point, bdTree.GetPoint());
+        }
     }
 }
