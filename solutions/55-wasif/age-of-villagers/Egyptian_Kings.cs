@@ -56,5 +56,9 @@ namespace age_of_villagers
             gp.DrawArc(pen, p0.X, p0.Y, 12, 12, 0, 360);
 
         }
+        public void draw_terrain()
+        {
+
+        }
     }
 }

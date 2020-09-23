@@ -60,6 +60,10 @@ namespace age_of_villagers
         {
             MessageBox.Show("No water resource found");
         }
+        public void draw_terrain()
+        {
+
+        }
     }
 }
 

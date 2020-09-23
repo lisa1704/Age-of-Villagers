@@ -72,5 +72,9 @@ namespace age_of_villagers
             gp.DrawLine(pen,p8, p9);
             gp.DrawLine(pen,p9, p1);
         }
+        public void draw_terrain()
+        {
+
+        }
     }
 }
