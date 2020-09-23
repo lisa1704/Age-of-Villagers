@@ -29,13 +29,10 @@ namespace AgeOfVillagers
         }
         private void DrawingWindow_Load(object sender, EventArgs e)
         {
-            
-            nation_name = Form1.NationName;
+           
             villagebox.Text = Form1.VillageName;
-            nationlabel.Text = nation_name;
             visible_radiobutton(nation_name);
-            Nations nation = new Nations(nation_name, Drawingpanel);
-            nation.getNation().PaintTerrain(Drawingpanel);
+            
            
 
         }
@@ -72,16 +69,7 @@ namespace AgeOfVillagers
         {   
 
             village.villagename = villagebox.Text;
-            if(nationchanged == true)
-            {
-                village.nationname = changeNation.Text;
-                
-            }
-            else
-            {
-                village.nationname = Form1.NationName;
-            }
-           
+            village.nationname = changeNation.Text;
             village.terraincolor = Drawingpanel.BackColor;
             village.Houses = house_locations;
             village.Trees =  tree_locations;
@@ -151,14 +139,12 @@ namespace AgeOfVillagers
             {
                 nation_name = village.nationname;
             }
-            else if (nationchanged == true)
+            if (nationchanged == true)
             {
                 nation_name = changeNation.Text;
             }
-            else
-            {
-                nation_name = Form1.NationName;
-            }
+
+
             Point P = new Point(e.X, e.Y);
             Nations nation = new Nations(nation_name, Drawingpanel);
 

@@ -11,7 +11,7 @@ namespace AgeOfVillagers
     public partial class Form1 : Form
     {
         public static String VillageName;
-        public static String NationName;
+   
         DrawingWindow window = new DrawingWindow();
         public Form1()
         {
@@ -24,10 +24,8 @@ namespace AgeOfVillagers
             window.Show();
         }
 
-        private void SelectNation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            NationName = SelectNation.Text;
-           
-        }
+        
+
+        
     }
 }

@@ -105,13 +105,13 @@ namespace AgeOfVillagers
             // nationlabel
             // 
             this.nationlabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.nationlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nationlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nationlabel.Location = new System.Drawing.Point(15, 90);
             this.nationlabel.Name = "nationlabel";
             this.nationlabel.Size = new System.Drawing.Size(174, 30);
             this.nationlabel.TabIndex = 9;
-            this.nationlabel.Text = "Nation name";
-            this.nationlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.nationlabel.Text = "Select Nation";
+            this.nationlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -189,7 +189,7 @@ namespace AgeOfVillagers
             this.label1.Size = new System.Drawing.Size(180, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Age Of Villagers";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DrawingWindow
             // 
