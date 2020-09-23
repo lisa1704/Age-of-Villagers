@@ -32,8 +32,8 @@ public class BDWater implements IWater {
                     new Line(x+10,y+10,x+20,y-10).draw(graphicsContext);
                     new Line(x+20,y-10,x+30,y+20).draw(graphicsContext);
                     new Line(x+30,y+20,x+10,y+50).draw(graphicsContext);
-                    new Line(x+10,y+50,x+10,y+10).draw(graphicsContext);
-                    new Line(x+10,y+10,x,y).draw(graphicsContext);
+                    new Line(x+10,y+50,x+10,y+20).draw(graphicsContext);
+                    new Line(x+10,y+20,x,y).draw(graphicsContext);
 
                     radioButton.setSelected(false);
                     active = false;
