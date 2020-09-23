@@ -30,7 +30,7 @@
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.button5 = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.newvillage = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -58,14 +58,15 @@
             this.splitter2.TabIndex = 13;
             this.splitter2.TabStop = false;
             // 
-            // button5
+            // save
             // 
-            this.button5.Location = new System.Drawing.Point(1342, 560);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(163, 43);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Save Village";
-            this.button5.UseVisualStyleBackColor = true;
+            this.save.Location = new System.Drawing.Point(1342, 560);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(163, 43);
+            this.save.TabIndex = 6;
+            this.save.Text = "Save Village";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.savevillage);
             // 
             // button6
             // 
@@ -172,7 +173,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.newvillage);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.save);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
             this.Name = "Form1";
@@ -187,7 +188,7 @@
         #endregion
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button newvillage;
         private System.Windows.Forms.TextBox textBox2;
