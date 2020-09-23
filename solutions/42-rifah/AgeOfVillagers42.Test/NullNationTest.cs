@@ -10,6 +10,8 @@ namespace AgeOfVillagers42.Test
     [TestClass]
     public class NullNationTest
     {
+        Point point = new Point(42, 42);
+
         [TestMethod]
         public void BackgroundColorTest()
         {
@@ -18,6 +20,15 @@ namespace AgeOfVillagers42.Test
             Color expected = Color.White;
 
             Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void NullItemTest()
+        {
+            NullNation nullItemTest = new NullNation();
+            Object actual = nullItemTest.DrawTree(point);
+            Object expected = new NullItems();
+            actual.Equals(expected);
         }
     }
 }
