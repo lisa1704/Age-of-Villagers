@@ -56,6 +56,9 @@
     <Compile Include="ObjectTestofNation.cs" />
     <Compile Include="NullNationItemTest.cs" />
     <Compile Include="BangladeshiFarmersItemTest.cs" />
+    <Compile Include="EgyptianKingsItemTest.cs" />
+    <Compile Include="ArabItemTest.cs" />
+    <Compile Include="InuitItemTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -35,5 +35,10 @@ namespace AgeOfVillagers90
             InuitNullws.paint();
             return InuitNullws;
         }
+
+        public object testDrawHouse(Point point)
+        {
+            return new InuitHouse(point);
+        }
     }
 }

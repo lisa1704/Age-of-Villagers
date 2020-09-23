@@ -34,5 +34,20 @@ namespace AgeOfVillagers90
             ekws.Draw(g);
             return ekws;
         }
+
+        public object testDrawHouse(Point point)
+        {
+            return new EgyptianHouse(point);
+        }
+
+        public object testDrawTree(Point point)
+        {
+            return new EgyptianTree(point);
+        }
+
+        public object testDrawWS(Point point)
+        {
+            return new EgytianWaterSource(point);
+        }
     }
 }

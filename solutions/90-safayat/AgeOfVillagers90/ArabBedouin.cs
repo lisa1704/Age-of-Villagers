@@ -35,6 +35,15 @@ namespace AgeOfVillagers90
             return abNullws;
         }
 
+        public object testDrawHouse(Point point)
+        {
+            return new ArabBedouinHOuse(point);
+        }
+
+        public object testDrawTree(Point point)
+        {
+            return new ArabBedouinTree(point);
+        }
 
     }
 }

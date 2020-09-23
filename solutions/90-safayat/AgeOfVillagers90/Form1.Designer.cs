@@ -130,7 +130,7 @@
             "Arab Bedouin",
             "Egytian Kings",
             "Inuit HUnters"});
-            this.NationList.Location = new System.Drawing.Point(680, 180);
+            this.NationList.Location = new System.Drawing.Point(680, 195);
             this.NationList.Name = "NationList";
             this.NationList.Size = new System.Drawing.Size(116, 21);
             this.NationList.TabIndex = 0;
@@ -141,7 +141,7 @@
             // 
             this.AgeofVillagers.AutoSize = true;
             this.AgeofVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeofVillagers.Location = new System.Drawing.Point(676, 54);
+            this.AgeofVillagers.Location = new System.Drawing.Point(676, 12);
             this.AgeofVillagers.Name = "AgeofVillagers";
             this.AgeofVillagers.Size = new System.Drawing.Size(120, 20);
             this.AgeofVillagers.TabIndex = 14;
