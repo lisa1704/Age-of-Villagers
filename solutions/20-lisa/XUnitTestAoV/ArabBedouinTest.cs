@@ -17,7 +17,7 @@ namespace UnitTestAoV
             Arabs terraincolortest = new Arabs();
             Color actual = terraincolortest.SetTerrain();
             Color expected = Color.LightYellow;
-            Assert.Equals(expected, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }
