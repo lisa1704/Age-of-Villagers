@@ -1,11 +1,20 @@
 ﻿using System;
 
-public class Egypthouse
+public class Egypthouse : House
 {
-    public void CreateHouse(int x, int y)
+
+    private string draw = "";
+
+    public string draw(int x, int y)
     {
-        //Triangle(x - 12, y, x, y + 8, x + 12, y);
-        //t.Draw();
-        
+        Triangle Eh1_triangle = new Triangle(x, y, x - 8, y + 2, x - 2, y + 16);
+        draw = draw + Eh1_triangle.Draw_Shape();
+
+        Triangle Eh2_triangle = new Triangle(x, y, x + 8, y + 5, x - 2, y + 16);
+        draw = draw + Eh2_triangle.Draw_Shape();
+
+        return draw;
     }
+
 }
+

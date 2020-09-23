@@ -1,11 +1,16 @@
 ﻿using System;
 
-public class Inuithouse
+public class Inuithouse : IShape
 {
-    public void CreateHouse(int x, int y)
-    {
-        //new Circle(x, y + 2, 8);
-        //c.Draw();
+    
+        private string draw = "";
 
-    }
+        public string Draw(int x, int y)
+        {
+            
+        }
+    
 }
+
+
+
