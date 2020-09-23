@@ -2,5 +2,8 @@
 
 public class nation
 {
+    public void location()
+    {
 
+    }
 }
