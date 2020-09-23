@@ -35,6 +35,7 @@ namespace AgeOfVillagers
         {
             terraincolor = Color.LightGreen;
             Drawingpanel.BackColor = terraincolor;
+            
         }
         public Color GetTerrainColor()
         {

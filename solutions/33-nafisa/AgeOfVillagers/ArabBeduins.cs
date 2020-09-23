@@ -6,9 +6,10 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabBeduins : INation
+    public class ArabBeduins : INation
     {
         private Panel Drawingpanel;
+        public Color terraincolor;
 
         public ArabBeduins(Panel Drawingpanel)
         {
@@ -36,7 +37,12 @@ namespace AgeOfVillagers
 
         public void PaintTerrain(Panel Drawingpanel)
         {
-            Drawingpanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            terraincolor = Color.LightGoldenrodYellow;
+            Drawingpanel.BackColor = terraincolor;
+        }
+        public Color GetTerrainColor()
+        {
+            return terraincolor;
         }
     }
 }
