@@ -7,19 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace AgeOfVillegers
 {
     
     public partial class EditorForm : Form
     {
+        string type ;
         string VillageName;
         string name;
         string nation;
         string text;
+        private string name;
+        INation ination ;
+        village village ;
+        Factory_Nation factory_nation  = new Factory_Nation();
+        
+        public void get_state()
+        {
+            this.village = new village(villagename.Text, H_points, T_points, W_points);
+        }
         public EditorForm()
         {
             InitializeComponent();
+        }
+        private List<Point> W_points { get; set; } = new List<Point>();
+        private List<Point> T_points { get; set; } = new List<Point>();
+        private List<Point> H_points { get; set; } = new List<Point>();
+        public void set_state(village village)
+        {
+            villagename.Text = village.name;
+            foreach(Point pt in village.house_point)
+            {
+                H_points.Add(pt);
+            }
+            foreach(Point pt in village.tree_point)
+            {
+                T_points.Add(pt);
+            }
+            foreach(Point pt in village.waterresource_point)
+            {
+                W_points.Add(pt);
+            }
         }
 
         
@@ -76,8 +105,9 @@ namespace AgeOfVillegers
             {
                 rdButton = Water_btn.Text;
             }
-            else
+            else{
                 rdButton = "";
+            }
 
 
         }
@@ -100,9 +130,7 @@ namespace AgeOfVillegers
 
         private void new_btn_Click(object sender, EventArgs e)
         {
-            new_btn nv = new new_btn;
-            nv.Show();
-            this.Hide();
+            
         }
 
         private void Open_btn_Click(object sender, EventArgs e)
