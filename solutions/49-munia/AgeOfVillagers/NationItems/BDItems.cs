@@ -13,10 +13,11 @@ namespace AgeOfVillagers.NationItems
     {
         public void House(Graphics g, Point p)
         {
-            Triangle t = new Triangle(g, p);
+           /* Triangle t = new Triangle(g, p1,p2,);
             Rectangle r = new Rectangle(g, p);
             t.Draw();
             r.Draw();
+           */
         }
 
         public void Tree(Graphics g, Point p)

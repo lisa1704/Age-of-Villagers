@@ -10,23 +10,24 @@ namespace AgeOfVillagers.Shapes
     class Rectangle
     {
         Graphics graphics;
-        Point point1, point2, point3, point 4;
+        Point point1, point2, point3, point4;
         Pen pen = new Pen(Color.Black);
 
         public Rectangle(Graphics g, Point p1, Point p2, Point p3, Point p4)
         {
             graphics = g;
-            point = p;
-
+            point1 = p1;
+            point2 = p2;
+            point3 = p3;
+            point4 = p4;
         }
-
         public void Draw()
         {
-          /*  graphics.DrawLine(pen, point, otherPoint1); //a //b
-            graphics.DrawLine(pen, otherPoint2, otherPoint3); //c //d
-            graphics.DrawLine(pen,point,otherPoint2); //a //c
-            graphics.DrawLine(pen,otherPoint1,otherPoint3); //b //d
-          */
+            graphics.DrawLine(pen, point1, point2); //a //b
+            graphics.DrawLine(pen, point3, point4); //c //d
+            graphics.DrawLine(pen,point1, point3); //a //c
+            graphics.DrawLine(pen,point2 ,point4); //b //d
+
         }
     }
 }

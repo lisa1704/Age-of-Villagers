@@ -23,15 +23,13 @@ namespace AgeOfVillagers
 
         public void DrawTree(Graphics g, Point p)
         {
-            Rectangle r = new Rectangle(g, p);
-            r.Draw();
+            bd.Tree(g, p);
         }
 
         public void drawWater(Graphics g, Point p)
         {
-            g.DrawLine(pen, 10, 100, 300, 100);
+            bd.Water(g, p);
         }
-
         public Color terrainColor()
         {
             return Color.LightGreen;

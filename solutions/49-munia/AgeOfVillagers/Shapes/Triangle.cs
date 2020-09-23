@@ -11,28 +11,20 @@ namespace AgeOfVillagers.Shapes
     {
         Graphics graphics;
         Pen pen = new Pen(Color.Black);
-        Point point, otherPoint1, otherPoint2,otherPoint3;
-        public Triangle(Graphics g, Point p)
+        Point point1, point2, point3;
+        public Triangle(Graphics g, Point p1, Point p2, Point p3)
         {
             graphics = g;
-            point = p;
-
-            otherPoint1.X = point.X;
-            otherPoint1.Y = point.Y - 20;
-
-            otherPoint2.X = point.X - 30;
-            otherPoint2.Y = point.Y - 20;
-
-            otherPoint3.X = point.X - 15;
-            otherPoint3.Y = point.Y - 35;
+            point1 = p1;
+            point2 = p2;
+            point3 = p3;
         }
 
         public void Draw()
         {
-            graphics.DrawLine(pen, otherPoint1,otherPoint2);
-            graphics.DrawLine(pen, otherPoint2, otherPoint3);
-            graphics.DrawLine(pen, otherPoint1, otherPoint3);
-
+            graphics.DrawLine(pen, point1, point2); //a //b
+            graphics.DrawLine(pen, point2, point3); //b //c
+            graphics.DrawLine(pen, point1, point3); //a //c
         }
     }
 }
