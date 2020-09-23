@@ -21,7 +21,7 @@ public class SceneTest {
 
         AssetInfo AI = new AssetInfo("tree", 10, 50);
         Expected_sceneSate.assetList.add(AI);
-        
+
         Test_sceneSate.add_asset_to_list("tree", 10, 50);
 
         Assertions.assertEquals(Test_sceneSate.assetList,Test_sceneSate.assetList);
