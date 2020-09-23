@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Age_of_villagers
 {
-    class ArabBedouin : INations
+   public class ArabBedouin : INations
     {
 
         Color bg_color = Color.LightYellow;
+
+        string nationName = "Arab Bedouin";
         public void DrawHouse(Graphics graphics, Point point)
         {
             Pen pen = new Pen(Color.Black);
@@ -72,9 +74,15 @@ namespace Age_of_villagers
 
         }
 
-        public void getName()
+        /*public void getName()
         {
             throw new NotImplementedException();
+        }*/
+
+
+        public string getName()
+        {
+            return nationName;
         }
     }
 }

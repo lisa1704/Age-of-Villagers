@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_villagers
 {
-    class BangladeshiFarmers : INations
+   public class BangladeshiFarmers : INations
     {
 
         Color bg_color = Color.Green;

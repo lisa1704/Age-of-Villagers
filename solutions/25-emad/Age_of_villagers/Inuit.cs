@@ -34,19 +34,26 @@ namespace Age_of_villagers
             return bg_color;
         }
 
-       
 
-        public void DrawTree(Graphics graphics, Point point)
-        {
-            throw new NotImplementedException();
-        }
 
-       
+
+        NullValuesHandler nullwater = new NullValuesHandler();
 
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+
+            nullwater.DrawWaterSource(graphics, point);
+
         }
+
+
+        NullValuesHandler nulltree = new NullValuesHandler();
+
+        public void DrawTree(Graphics graphics, Point point)
+        {
+            nulltree.DrawTree(graphics,point);
+        }
+
 
         public void getName()
         {
