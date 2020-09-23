@@ -10,7 +10,7 @@ public class Bdtree : IShape
         drawing += c.Draw();
         Rectangle r = new Rectangle(x - 1, y, x + 1, y, x + 1, y - 12, x - 1,y - 12);
         drawing += r.Draw();
-        return drawing;
+        return draw;
 
     }
 	
