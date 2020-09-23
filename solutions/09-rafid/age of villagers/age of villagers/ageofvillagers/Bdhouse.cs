@@ -2,7 +2,7 @@
 
 public class Bdhouse : IShape
 {
-	public void CreateHouse(int x, int y)
+	public void draw(int x, int y)
     {
         new Triangle(x - 12, y, x, y + 8, x + 12, y);
         t.Draw();
