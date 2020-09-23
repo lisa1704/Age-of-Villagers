@@ -16,9 +16,9 @@ namespace empty_project
             float startAngle = 0.0F;
             float sweepAngle = -180.0F;
 
-            graphics.DrawArc(pen, axis.X, axis.Y, 40, 40, startAngle, sweepAngle);
-            graphics.DrawArc(pen, axis.X + 10, axis.Y + 10, 20, 20, startAngle, sweepAngle);
-            graphics.DrawLine(pen, new PointF(axis.X, axis.Y + 20), new PointF(axis.X + 40, axis.Y + 20));
+            graphics.DrawArc(pen, axis.X, axis.Y, 16, 16, startAngle, sweepAngle);
+            graphics.DrawArc(pen, axis.X + 4, axis.Y + 4, 8, 8, startAngle, sweepAngle);
+            graphics.DrawLine(pen, new PointF(axis.X, axis.Y + 8), new PointF(axis.X + 16, axis.Y + 8));
         }
     }
 }
