@@ -15,9 +15,16 @@ public class Triangle implements IShape {
     @Override
     public void draw() {
 
-        graphicsContext.strokeLine(x,y,x+15,y+15);
-        graphicsContext.strokeLine(x,y,x-15,y-15);
-        graphicsContext.strokeLine(x+30,y+30,x-15,y-15);
+        new Line(graphicsContext, x,y,x+10,y+10).draw();
+        new Line(graphicsContext, x,y,x-10,y+10).draw();
+        new Line(graphicsContext, x+10,y+10,x-10,y+10).draw();
+
+
+
+//        graphicsContext.strokeLine(x,y,x+15,y+15);
+//        graphicsContext.strokeLine(x,y,x-15,y+15);
+//        graphicsContext.strokeLine(x+15,y+15,x-10,y+10);
+
         System.out.println(x+" " +y);
     }
 }
