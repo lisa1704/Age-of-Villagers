@@ -19,7 +19,7 @@ namespace Age_of_Villagers
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
-        Factory_Nation nationfactory = new Factory_Nation();
+        NationFactory nationfactory = new NationFactory();
         INation nation;
         public Village()
         {

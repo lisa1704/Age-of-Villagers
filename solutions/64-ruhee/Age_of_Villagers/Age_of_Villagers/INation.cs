@@ -14,31 +14,5 @@ namespace Age_of_Villagers.Age_of_Villagers
         Color BackgroundColor();
     }
 
-    internal class Factory_Nation
-    {
-        public INation GetNation(string NationName)
-        {
-            if (NationName == "Bangladeshi Farmers")
-            {
-                return new BangladeshiFarmers.BangladeshiFarmers();
-            }
-            else if (NationName == "Arab Bedouin")
-            {
-                return new ArabBedouin.ArabBedouin();
-            }
-            else if (NationName == "Egyptian Kings")
-            {
-                return new EgyptianKings.EgyptianKings();
-            }
-            else if (NationName == "Inuit Hunters")
-            {
-                return null;
-            }
-            else
-            {
-                return new NullNation();
-            }
-        }
-    }
 
 }
