@@ -14,7 +14,7 @@ namespace AgeofVillagers90Test
         {
             BangladeshiFarmerHouse bdHouseTest = new BangladeshiFarmerHouse(point);
             BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers();
-            object bdHouseTestObj = bangladeshiFarmers.testDrawHouse(point);
+            object bdHouseTestObj = bangladeshiFarmers.TestDrawHouse(point);
             bdHouseTestObj.Equals(bdHouseTest);
         }
         [TestMethod]
@@ -22,7 +22,7 @@ namespace AgeofVillagers90Test
         {
             BangladeshFarmersTree bdTreeTest = new BangladeshFarmersTree(point);
             BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers();
-            object bdTreeTestObj = bangladeshiFarmers.testDrawTree(point);
+            object bdTreeTestObj = bangladeshiFarmers.TestDrawTree(point);
             bdTreeTestObj.Equals(bdTreeTest);
         }
         [TestMethod]
@@ -30,7 +30,7 @@ namespace AgeofVillagers90Test
         {
             BangladeshiFarmersWaterSource bdWSTest = new BangladeshiFarmersWaterSource(point);
             BangladeshiFarmers bangladeshiFarmers = new BangladeshiFarmers();
-            object bdWaterSourceTestObj = bangladeshiFarmers.testDrawWaterSource(point);
+            object bdWaterSourceTestObj = bangladeshiFarmers.TestDrawWaterSource(point);
             bdWaterSourceTestObj.Equals(bdWSTest);
         }
 

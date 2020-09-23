@@ -37,7 +37,7 @@ namespace AgeOfVillagers90
             GetVillageSave();
 
             VillageSave vs = new VillageSave(VillageItem);
-            vs.execute();
+            vs.Execute();
             MessageBox.Show(VillageName.Text +" Village Saved");
         }
 
@@ -67,7 +67,7 @@ namespace AgeOfVillagers90
         private void OpenVillage_Click(object sender, EventArgs e)
         {
             VillageOpen villageOpen = new VillageOpen();
-            villageOpen.execute();
+            villageOpen.Execute();
             VillageItem = villageOpen.GetSavedVillage();
             if(VillageItem.NameofVillage != null)
             {

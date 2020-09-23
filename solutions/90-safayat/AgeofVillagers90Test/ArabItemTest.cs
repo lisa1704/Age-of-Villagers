@@ -14,7 +14,7 @@ namespace AgeofVillagers90Test
         {
             ArabBedouinHOuse abHouseTest = new ArabBedouinHOuse(point);
             ArabBedouin arabBedouin = new ArabBedouin();
-            object abHouseTestObj = arabBedouin.testDrawHouse(point);
+            object abHouseTestObj = arabBedouin.TestDrawHouse(point);
             abHouseTestObj.Equals(abHouseTest);
         }
 
@@ -23,7 +23,7 @@ namespace AgeofVillagers90Test
         {
             ArabBedouinTree abTreeTest = new ArabBedouinTree(point);
             ArabBedouin arabBedouin = new ArabBedouin();
-            object abTreeTestObj = arabBedouin.testDrawTree(point);
+            object abTreeTestObj = arabBedouin.TestDrawTree(point);
             abTreeTestObj.Equals(abTreeTest);
         }
 

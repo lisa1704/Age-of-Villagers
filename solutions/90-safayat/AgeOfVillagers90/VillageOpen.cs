@@ -7,7 +7,7 @@ namespace AgeOfVillagers90
     public class VillageOpen : IVillageSaveOpen
     {
         VillageItem villageItemSave;
-        public void execute()
+        public void Execute()
         {
             OpenFileDialog openFile = new OpenFileDialog();
             if(openFile.ShowDialog()==DialogResult.OK)
