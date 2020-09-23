@@ -6,7 +6,7 @@ using System.Text;
 
 namespace age_of_villagers.villageitem
 {
-    class bangladeshiwatersource : villageitem
+    public class bangladeshiwatersource : villageitem
     {
         private readonly Point point1, point2, point3, point4, point5, point6, point7, point8, point9;
 

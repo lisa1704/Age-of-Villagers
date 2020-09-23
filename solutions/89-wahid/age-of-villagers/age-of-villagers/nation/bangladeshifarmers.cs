@@ -32,7 +32,7 @@ namespace age_of_villagers.nation
 
         public villageitem.villageitem getWaterSource(Point p)
         {
-            throw new NotImplementedException();
+            return new bangladeshiwatersource(p);
         }
     }
 }
