@@ -129,13 +129,13 @@ public class ShowWindow implements IWindow{
 
             System.out.println(stateOfComponents10.get(0));
 
-            if (stateOfComponents10.get(0).toString().startsWith("Arab")) {
+            if (stateOfComponents10.get(0).className.startsWith("Arab")) {
                 rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).toString().startsWith("Bangladesh")) {
+            } else if (stateOfComponents10.get(0).className.startsWith("Bangladesh")) {
                 rectangle.setFill(Color.GREENYELLOW);
-            } else if (stateOfComponents10.get(0).toString().startsWith("Egypt")) {
+            } else if (stateOfComponents10.get(0).className.startsWith("Egypt")) {
                 rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).toString().startsWith("Inuit")) {
+            } else if (stateOfComponents10.get(0).className.startsWith("Inuit")) {
                 rectangle.setFill(Color.WHITE);
             } else {
                 rectangle.setFill(Color.GRAY);
