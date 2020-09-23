@@ -11,17 +11,21 @@ namespace AgeOfVillagersTest
         EgyptianKings egyptianKings = new EgyptianKings();
         ArabBedouin arabBedouin = new ArabBedouin();
         
-
-
         [Fact]
-
         public void BdfarmersObjectTest()
         {
             NationNameFactory name = new NationNameFactory("Bangladeshi Farmers");
             INation nation = name.NationNameFactoryMethod();
 
             Assert.IsType<BdFarmers>(nation);
+        }
+        [Fact]
+        public void ArabBedouinObjectTest()
+        {
+            NationNameFactory name = new NationNameFactory("Arab Bedouin");
+            INation nation = name.NationNameFactoryMethod();
 
+            Assert.IsType<ArabBedouin>(nation);
         }
     }
 }
