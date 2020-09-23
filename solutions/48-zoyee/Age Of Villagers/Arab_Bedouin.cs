@@ -14,22 +14,24 @@ namespace Age_Of_Villagers
             return Color.Yellow;
         }
 
-        public IShape Draw_House(Point point)
+        public void Draw_House(Graphics g, Point point)
         {
-            CompositeShape ab_h = new ArabBedouin_House(point);
-            return ab_h;
+            ArabBedouin_House ab_h = new ArabBedouin_House(point);
+            ab_h.Draw(g);
         }
 
-        public IShape Draw_Tree(Point point)
+        public void Draw_Tree(Graphics g, Point point)
         {
-            CompositeShape ab_tr = new ArabBedouin_Tree(point);
-            return ab_tr;
+            ArabBedouin_Tree ab_tr = new ArabBedouin_Tree(point);
+            ab_tr.Draw(g);
         }
 
-        public IShape Draw_WaterSource(Point point)
+        public void Draw_WaterSource(Graphics g, Point point)
         {
-            CompositeShape ab_wsNULL = new NullVillage_Item();
-             return ab_wsNULL;
+            NullVillage_Item ab_wsNULL = new NullVillage_Item();
+            ab_wsNULL.paint();
         }
+
+
     }
 }
