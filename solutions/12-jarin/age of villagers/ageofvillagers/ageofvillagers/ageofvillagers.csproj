@@ -61,7 +61,6 @@
     <Compile Include="Bangladesh.cs" />
     <Compile Include="Bangladeshifarmers.cs" />
     <Compile Include="bangladeshihouse.cs" />
-    <Compile Include="Bangladeshiwater.cs" />
     <Compile Include="Banladeshitree.cs" />
     <Compile Include="circlecreate.cs" />
     <Compile Include="Egypt.cs" />

@@ -10,7 +10,15 @@ namespace ageofvillagers
     {
         public string draw(int x, int y)
         {
-            return "egypt water ";
+            {
+                Trianglecreate eh_triangle1 = new Trianglecreate(x, y, x - 8, y + 2, x - 2, y + 16);
+                Trianglecreate eh_triangle2 = new Trianglecreate(x, y, x + 8, y + 5, x - 2, y + 16);
+
+                trinangle.Draws();
+                draw = draw + eh_triangle2.Draw();
+
+                return draw;
+            }
         }
     }
 }

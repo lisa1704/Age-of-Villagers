@@ -10,7 +10,12 @@ namespace ageofvillagers
     {
         public string draw(int x, int y)
         {
-            return "bangladeshi tree";
+            circlecreate circle = new circlecreate (x, y + 1, 8);
+            Rectanglecreate rectangle = new Rectanglecreate(x + 1, y, x + 1, y - 12, x - 1, y - 12, x - 1, y);
+
+         circlecreate. Draws();
+        Rectanglecreate. Draws();
+            return "null";
         }
     }
 }

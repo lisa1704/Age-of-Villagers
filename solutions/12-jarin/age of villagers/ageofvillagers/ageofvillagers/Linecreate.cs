@@ -17,7 +17,7 @@ namespace ageofvillagers
                 this.x2 = x2;
                 this.y2 = y2;
             }
-            public string Draw_Shape()
+            public string Draws()
             {
                 return "now draw a line ";
             }

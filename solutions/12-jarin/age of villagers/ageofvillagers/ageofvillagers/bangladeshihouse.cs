@@ -10,7 +10,14 @@ namespace ageofvillagers
     {
         public string draw(int x, int y)
         {
-            return "bangladeshi house";
+            {
+                Trianglecreate triangle = new Trianglecreate(x + 8, y, x, y + 8, x - 8, y);
+                Rectanglecreate rectangle = new Rectanglecreate(x + 8, y, x + 8, y - 8, x - 8, y - 8, x - 8, y);
+
+                triangle.Draws();
+                rectangle.Draws();
+               return "null";
+            }
         }
     }
 }
