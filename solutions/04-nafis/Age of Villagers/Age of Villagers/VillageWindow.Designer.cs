@@ -52,7 +52,6 @@
             this.VillageDrawing.Name = "VillageDrawing";
             this.VillageDrawing.Size = new System.Drawing.Size(600, 400);
             this.VillageDrawing.TabIndex = 0;
-            this.VillageDrawing.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageDrawing_Paint);
             this.VillageDrawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseDown);
             this.VillageDrawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseUp);
             // 
@@ -102,7 +101,7 @@
             this.GameLabel.TabIndex = 1;
             this.GameLabel.Text = "Age of Villagers";
             this.GameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.GameLabel.Click += new System.EventHandler(this.GameLabel_Click);
+            
             // 
             // VillageNameText
             // 
@@ -115,7 +114,7 @@
             this.VillageNameText.TabIndex = 2;
             this.VillageNameText.Text = "Village Name";
             this.VillageNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VillageNameText.TextChanged += new System.EventHandler(this.VillageNameText_TextChanged);
+           
             // 
             // HouseRB
             // 
@@ -201,7 +200,6 @@
             this.Controls.Add(this.VillageDrawing);
             this.Name = "VillageWindow";
             this.Text = "Age of Villagers";
-            this.Load += new System.EventHandler(this.VillageWindow_Load);
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();
             this.ResumeLayout(false);
