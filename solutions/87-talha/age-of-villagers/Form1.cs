@@ -56,32 +56,5 @@ namespace Age_of_villagers
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Age_of_villagers_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Main_panel_MouseClick(object sender, MouseEventArgs e)
-        {
-            Graphics g = Main_panel.CreateGraphics();
-            Pen blackpen = new Pen(Color.Black);
-            g.DrawLine(blackpen, e.X, e.Y, e.X + 10, e.Y - 10);
-        }
     }
 }
