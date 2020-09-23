@@ -37,7 +37,8 @@ namespace AoV.Nations
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullShape nothing = new NullShape();
+            nothing.Draw(g);
         }
     }
 }
