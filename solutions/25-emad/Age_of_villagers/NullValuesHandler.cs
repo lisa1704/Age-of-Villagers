@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Age_of_villagers
 {
-    class NullValuesHandler : INations
+    public class NullValuesHandler : INations
     {
         public void DrawHouse(Graphics g, Point point)
         {

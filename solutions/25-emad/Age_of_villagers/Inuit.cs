@@ -13,7 +13,20 @@ namespace Age_of_villagers
 
         public void DrawHouse(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+            Pen pen = new Pen(Color.Black);
+            
+                Point p1 = new Point(point.X - 16, point.Y);
+                Point p2 = new Point(point.X + 16, point.Y);
+                Point p3 = new Point(point.X - 8, point.Y - 16);
+                Point center = new Point(point.X - 8, point.Y - 8);
+
+                Circle innerCircle = new Circle(graphics, pen, center, 8, 8, 180, 180);
+                innerCircle.Draw();
+                Circle outerCircle = new Circle(graphics, pen, p3, 16, 16, 180, 180);
+                outerCircle.Draw();
+
+                graphics.DrawLine(pen, p1, p2);
+            
         }
 
         public Color DrawBackground()

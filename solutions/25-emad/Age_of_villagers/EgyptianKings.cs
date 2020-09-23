@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Age_of_villagers
 {
-    class EgyptianKings : INations
+    public class EgyptianKings : INations
     {
 
         Color bg_color = Color.Yellow;

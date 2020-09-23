@@ -59,9 +59,17 @@ namespace Age_of_villagers
             
         }
 
+
+
+        NullValuesHandler nullwater = new NullValuesHandler();
+
+
+
         public void DrawWaterSource(Graphics graphics, Point point)
         {
-            throw new NotImplementedException();
+
+            nullwater.DrawWaterSource(graphics,point);
+
         }
 
         public void getName()
