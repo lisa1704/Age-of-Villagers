@@ -20,12 +20,14 @@ namespace Age_of_Villagers.Models
 
         public void Draw_Tree(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            BedouinTree tree = new BedouinTree(location);
+            tree.Draw(gfx, p);
         }
 
         public void Draw_WaterSource(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            BedouinWaterSource water = new BedouinWaterSource(location);
+            water.Draw(gfx, p);
         }
 
         public string Get_inhabitedVillage()
