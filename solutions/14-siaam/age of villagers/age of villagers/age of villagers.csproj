@@ -59,9 +59,12 @@
     <Compile Include="INation.cs" />
     <Compile Include="Inuithunter.cs" />
     <Compile Include="IShape.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Triangle.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
