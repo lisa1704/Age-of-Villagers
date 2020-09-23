@@ -19,7 +19,7 @@ namespace AgeOfVillagers
         private string vname ="";
         NationFactory nationfactory = new NationFactory();
         Graphics gr;
-        private ItemsOfVillage vitem;
+        private ItemsOfVillage SVitem;
 
         //Pen pen;
         private List<Point> PointsOfHouse { get; set; } = new List<Point>();
@@ -69,17 +69,17 @@ namespace AgeOfVillagers
         private void savevillage_Click(object sender, EventArgs e)
         {
             GetSavedVillage();
-            ConSavingVillage savingvillage = new ConSavingVillage(vitem);
+            ConSavingVillage savingvillage = new ConSavingVillage(SVitem);
             savingvillage.ExecuteCommand();
             MessageBox.Show(vname + " village saved!");
 
         }
         public void GetSavedVillage()
         {
-            vitem.SVillageName = villagename.Text;
-            vitem.SPointsOfTree = this.PointsOfTree;
-            vitem.SPointsOfHouse = this.PointsOfHouse;
-            vitem.SPointsOfWatersource = this.PointsOfWatersource;
+            SVitem.SVillageName = villagename.Text;
+            SVitem.SPointsOfTree = this.PointsOfTree;
+            SVitem.SPointsOfHouse = this.PointsOfHouse;
+            SVitem.SPointsOfWatersource = this.PointsOfWatersource;
         }
 
         public void SetSavedVillage(ItemsOfVillage vitem)
@@ -114,6 +114,19 @@ namespace AgeOfVillagers
             item = "Water Source";
         }
 
+        public void openvillage_Click(object sender, EventArgs e)
+        {
+            ConOpeningVillage openingvillage = new ConOpeningVillage();
+            openingvillage.ExecuteCommand();
+            SVitem = openingvillage.GetSavedItemsOfVillage();
+
+            if (SVitem.SVillageName != null)
+            {
+                SetSavedVillage(SVitem);
+                drawingpanel.Refresh();
+            }
+
+        }
 
         private void PaintDrawPanel(object sender, PaintEventArgs e)
         {
@@ -179,12 +192,6 @@ namespace AgeOfVillagers
 
         }
 
-
-
-        public void openvillage_Click(object sender, EventArgs e)
-        {
-            //drawingpanel.Invalidate();
-        }
 
 
 
