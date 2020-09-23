@@ -12,15 +12,15 @@ namespace AgeOfVillagers
         {
             if (button == "House")
             {
-                return new EgyptianHouse();
+                return new EgyptianKingsHouse();
             }
             else if (button == "Tree")
             {
-                return new EgyptianTree();
+                return new EgyptianKingsTree();
             }
             else if (button == "WaterSource")
             {
-                return new EgyptianWaterSource();
+                return new EgyptianKingsWaterSource();
             }
 
             return null;

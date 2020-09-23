@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    class EgyptianWaterSource : IVillageItem
+    class EgyptianKingsWaterSource : IVillageItem
     {
         public void Draw(Point e, Graphics g, Pen p)
         {
