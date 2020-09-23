@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_Of_Villagers
 {
-    class BangladeshiFarmer_WaterSource : CompositeShape
+    public class BangladeshiFarmer_WaterSource : CompositeShape
     {
         public BangladeshiFarmer_WaterSource(Point mainPoint)
         {

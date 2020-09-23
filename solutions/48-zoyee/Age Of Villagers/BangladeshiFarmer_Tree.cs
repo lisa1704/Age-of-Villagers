@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_Of_Villagers
 {
-    class BangladeshFarmer_Tree : CompositeShape
+    public class BangladeshFarmer_Tree : CompositeShape
     {
         public BangladeshFarmer_Tree(Point MainPoint)
         {

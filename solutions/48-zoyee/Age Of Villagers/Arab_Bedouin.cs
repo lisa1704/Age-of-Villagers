@@ -7,31 +7,29 @@ namespace Age_Of_Villagers
 {
     class Arab_Bedouin : INation
     {
-        Pen p = new Pen(Color.Red);
+        //Pen p = new Pen(Color.Red);
 
         public Color BackGroundColor()
         {
             return Color.Yellow;
         }
 
-        public void Draw_House(Graphics g, Point point)
+        public IShape Draw_House(Point point)
         {
-            ArabBedouin_House ab_h = new ArabBedouin_House(point);
-            ab_h.Draw(g);
+            CompositeShape ab_h = new ArabBedouin_House(point);
+            return ab_h;
         }
 
-        public void Draw_Tree(Graphics g, Point point)
+        public IShape Draw_Tree(Point point)
         {
-            ArabBedouin_Tree ab_tr = new ArabBedouin_Tree(point);
-            ab_tr.Draw(g);
+            CompositeShape ab_tr = new ArabBedouin_Tree(point);
+            return ab_tr;
         }
 
-        public void Draw_WaterSource(Graphics g, Point point)
+        public IShape Draw_WaterSource(Point point)
         {
-            NullVillage_Item ab_wsNULL = new NullVillage_Item();
-            ab_wsNULL.paint();
+            CompositeShape ab_wsNULL = new NullVillage_Item();
+             return ab_wsNULL;
         }
-
-
     }
 }
