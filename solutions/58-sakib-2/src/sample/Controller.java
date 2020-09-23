@@ -1,6 +1,6 @@
 package sample;
 
-import com.google.gson.JsonObject;
+import Factory.NationFactory;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.stage.FileChooser;
 
 import java.awt.*;
@@ -24,13 +26,12 @@ import java.util.Hashtable;
 
 
 public class Controller {
-    public JsonObject jsonFile;
     public RadioButton rbtnTree,rbtnHouse,rbtnWaterSource;
     public Button btnNewVillage,btnSaveVillage,btnOpenVillage;
     public TextField nameOfVillage;
     public ChoiceBox<String> nationOfVillage;
     public Label lblName,lblNation;
-    public String[] st={"A","B","C"};
+    public String[] st={"Bangladeshi Farmers","Arab Bedouin","Egyptian Kings","Inuit Hunters"};
     public boolean isCreating=true;
     public AnchorPane drawSpace;
     public Canvas canvas;
@@ -39,6 +40,7 @@ public class Controller {
     public ArrayList<Point> treeList;
     public ArrayList<Point> houseList;
     public ArrayList<Point> wsList;
+    public NationFactory nationFactory;
 
     public void selectTree(){
         rbtnHouse.setSelected(false);
@@ -133,6 +135,11 @@ public class Controller {
             if (nameOfVillage.getText().equals("") || nationOfVillage.getSelectionModel().isEmpty()){
                 System.out.println("Give all information!");
             }else{
+                nationFactory=new NationFactory();
+                BackgroundFill backgroundFill = nationFactory.getNation(nationOfVillage.getSelectionModel().getSelectedItem()).getTerrain().getTerrain();
+                Background background=new Background(backgroundFill);
+                drawSpace.setBackground(background);
+
                 dictionary=new Hashtable();
                 treeList=new ArrayList<Point>();
                 houseList=new ArrayList<Point>();
