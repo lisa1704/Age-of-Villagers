@@ -16,12 +16,14 @@ namespace AgeOfVillagers
         string s;
         string vName="";
         string selectNation;
+        Color villageTerrainColor;
 
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> watersource_point = new List<Point>();
         INation n;
         NationFactory nationFactory = new NationFactory();
+        VillageItems villageItems;
 
         public VillageEditor()
         {
@@ -111,7 +113,10 @@ namespace AgeOfVillagers
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Text = "Your village has been saved");
+            SaveVillageState();
+            VillageOpenSave saveTheVillage = new VillageOpenSave(villageItems);
+            saveTheVillage.SaveVillage();
+            MessageBox.Show(vName + "Your village has been saved");
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -128,14 +133,17 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-
+            VillageOpenSave openVillage = new VillageOpenSave(villageItems);
+            openVillage.OpenVillage();
+            villageItems = openVillage.GetMyVillageItems();
+            
         }
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             selectNation = NationBox.Text;
             drawingPanel.BackColor = nationFactory.GetNation(selectNation).SetTerrain();
-            
+            villageTerrainColor = drawingPanel.BackColor;
         }
 
         public void Tree_MouseClick(object sender, MouseEventArgs e)
@@ -152,7 +160,35 @@ namespace AgeOfVillagers
         {
             s = "Water Source";
         }
+        public void SaveVillageState()
+        {
+            villageItems.nationname = NationBox.Text;
+            villageItems.villagename = VillageName.Text;
+            villageItems.terraincolor = this.villageTerrainColor;
+            villageItems.tp = this.tree_point;
+            villageItems.hp = this.house_point;
+            villageItems.wsp = this.watersource_point;
+        }
+        public void SetmySavedVillage(VillageItems vItem)
+        {
+            NationBox.Text = vItem.nationname;
+            VillageName.Text = vItem.villagename;
+            villageTerrainColor = vItem.terraincolor;
+            foreach(Point point in vItem.tp)
+            {
+                tree_point.Add(point);
+            }
+            foreach(Point point in vItem.hp)
+            {
+                house_point.Add(point);
+            }
+            foreach(Point point in vItem.wsp)
+            {
+                watersource_point.Add(point);
+            }
 
+
+        }
   
     }
 }
