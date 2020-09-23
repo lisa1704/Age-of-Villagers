@@ -141,5 +141,23 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void EgyptRiverCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Egyptian Kings");
+            IComponent component = nation.getComponent("water_source");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is EgyptRiver)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
     }
 }
