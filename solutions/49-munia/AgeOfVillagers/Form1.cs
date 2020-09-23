@@ -57,11 +57,20 @@ namespace AgeOfVillagers
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
-                nation.DrawTree(g,point);
+            {
+                nation.DrawTree(g, point);
+                Tree.Add(point);
+            }
             else if (House.Checked == true)
-                nation.DrawHouse(g,point);
+            {
+                nation.DrawHouse(g, point);
+                house.Add(point);
+            }
             else if (Water.Checked == true)
-                nation.DrawWater(g,point);           
+            {
+                nation.DrawWater(g, point);
+                water.Add(point);
+            }
 
         }
         private void newVillage_MouseClick(object sender, MouseEventArgs e)
@@ -80,6 +89,10 @@ namespace AgeOfVillagers
         private void newVillage_Click(object sender, EventArgs e)
         {
             nation = nation2;
+            tree.Checked = false ;
+            House.Checked = false;
+            Water.Checked = false;
+
         }
     }
 }
