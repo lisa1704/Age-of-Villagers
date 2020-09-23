@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Arc : IShape
+    class Arc : Object
     {
         public float x, y, width, height, angle_1, angle_2;
         

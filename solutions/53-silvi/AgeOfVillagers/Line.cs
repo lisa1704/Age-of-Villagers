@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Line : IShape
+    class Line : Object
     {
         private readonly Point point_1;
         private readonly Point point_2;

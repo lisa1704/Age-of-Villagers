@@ -6,22 +6,27 @@ namespace AgeOfVillagers
     {
         public Color BackgroundColor()
         {
-            throw new System.NotImplementedException();
+            return Color.White;
         }
 
-        public IShape DrawHouse(Point point)
+        public Object DrawHouse(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            NullItems NullHouse = new NullItems();
+            NullHouse.drawing();
         }
 
-        public IShape DrawTree(Point point)
+        public Object DrawTree(Point point)
         {
-            throw new System.NotImplementedException();
+            NullItems NullTree = new NullItems();
+            NullTree.drawing();
         }
 
-        public IShape DrawWaterSource(Point point)
+        public Object DrawWaterSource(Point point)
         {
-            throw new System.NotImplementedException();
+            NullItems NullWaterSource = new NullItems();
+            NullWaterSource.drawing();
         }
+
+        
     }
 }

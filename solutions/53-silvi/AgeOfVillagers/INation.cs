@@ -9,9 +9,9 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
-        IShape DrawTree(Point point);
-        IShape DrawHouse(Point point);
-        IShape DrawWaterSource(Point point);
+        Object DrawTree(Graphics g , Point point);
+        Object DrawHouse(Point point);
+        Object DrawWaterSource(Point point);
         Color BackgroundColor();
     }
 }

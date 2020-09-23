@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    public class IShape
+    public class Object
     {
         internal void Draw(Pen p , Graphics g)
         {

@@ -71,11 +71,12 @@
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
-    <Compile Include="IShape.cs" />
+    <Compile Include="Object.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="NationFactory.cs" />
+    <Compile Include="NullItems.cs" />
     <Compile Include="NullNation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

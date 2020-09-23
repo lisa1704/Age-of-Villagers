@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    public abstract class Composite : IShape
+    public abstract class Composite : Object
     {
-        protected List<IShape> My_components = new List<IShape>();
+        protected List<Object> My_components = new List<Object>();
 
-        protected void AddComponent(IShape myshape)
+        protected void AddComponent(Object myshape)
         {
             My_components.Add(myshape);
         }
