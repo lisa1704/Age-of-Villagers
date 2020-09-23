@@ -128,7 +128,7 @@ namespace Age_of_Villagers
 
         private void WaterSource_Clicked(object sender, EventArgs e)
         {
-            item = "Water_source";
+            item = "water";
         }
 
     
