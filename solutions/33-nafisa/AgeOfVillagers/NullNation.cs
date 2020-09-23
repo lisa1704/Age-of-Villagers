@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class NullNation : INation
+    public class NullNation : INation
     {   
         public Color terraincolor;
         public object DrawHouse(Point point, Panel Drawingpanel)
@@ -21,6 +21,10 @@ namespace AgeOfVillagers
             NullItem nullT = new NullItem();
             nullT.Draw(point, Drawingpanel);
             return nullT;
+        }
+        public object TestNullTree()
+        {
+            return new NullItem();
         }
 
         public object DrawWaterSource(Point point, Panel Drawingpanel)

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class NullItem : IShape
+    public class NullItem : IShape
     {
         public void Draw(Point point, Panel Drawingpanel)
         {
