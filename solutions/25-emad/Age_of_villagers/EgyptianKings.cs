@@ -13,7 +13,7 @@ namespace Age_of_villagers
 
         Color bg_color = Color.Yellow;
 
-
+        string nationName = "Egyptian Kings";
 
         public void DrawHouse(Graphics graphics, Point point)
         {
@@ -72,7 +72,7 @@ namespace Age_of_villagers
 
         public String getName()
         {
-            throw new NotImplementedException();
+            return nationName;
         }
     }
 }
