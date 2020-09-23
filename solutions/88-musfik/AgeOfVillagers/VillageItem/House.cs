@@ -26,7 +26,7 @@ namespace AgeOfVillagers
 
     public class EgyptianHouse : House
     {
-        public override IShape getItemShape(Point point) => new EgyptianHouseShape(point);
+        public override IShape getItemShape(Point point) => new EgyptianHouseShape(point, getWidth(), getHeight());
     }
 
     public class InuitHuntersHouse : House
