@@ -7,7 +7,7 @@ namespace age_of_villagers.age_of_villagers.Village
 {
     class Village
     {
-        protected string Name;
+        public string Name;
         public List<Coordinate> Houses = new List<Coordinate>();
         public List<Coordinate> Trees = new List<Coordinate>();
         public List<Coordinate> WaterSources = new List<Coordinate>();

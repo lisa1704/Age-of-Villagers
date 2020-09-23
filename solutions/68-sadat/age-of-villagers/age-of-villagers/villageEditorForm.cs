@@ -18,6 +18,7 @@ namespace age_of_villagers
         Ination nation;
         Village thisVillage = new Village();
         VillageSaver thisVillageSaver = new VillageSaver();
+        OpenFileDialog openFileDialog = new OpenFileDialog();
 
 
         public villageEditor()
@@ -61,7 +62,12 @@ namespace age_of_villagers
 
         private void openVillageButton_Click(object sender, EventArgs e)
         {
-
+            openFileDialog.Filter = "aov|*.aov";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog.FileName;
+                thisVillage = thisVillageSaver.openSavedState(fileName);
+            }
         }
 
         private void newVillageButton_Click(object sender, EventArgs e)
