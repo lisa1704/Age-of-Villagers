@@ -21,13 +21,7 @@ public class InuitWater implements IWater {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if (active) {
-                    double x = mouseEvent.getX();
-                    double y = mouseEvent.getY();
-
-                    graphicsContext.strokeArc(x, y, 10, 20, 200, 360, ArcType.OPEN);
-                    graphicsContext.lineTo(x, y);
-                    graphicsContext.lineTo(x + 10, y + 20);
-                    graphicsContext.strokeText("inuit water", mouseEvent.getX(), mouseEvent.getY());
+                    
                     radioButton.setSelected(false);
                     active = false;
                 }

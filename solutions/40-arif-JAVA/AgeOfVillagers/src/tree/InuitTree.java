@@ -22,7 +22,7 @@ public class InuitTree implements ITree {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    
+
                     active = false;
                 }
             }
