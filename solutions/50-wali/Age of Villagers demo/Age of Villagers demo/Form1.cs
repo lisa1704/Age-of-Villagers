@@ -9,5 +9,9 @@ namespace Age_of_Villagers_demo
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
