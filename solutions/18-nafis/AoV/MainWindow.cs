@@ -7,8 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
+
 using System.Windows.Forms;
+using Rectangle = AoV.Shapes.Rectangle;
 
 namespace AoV
 {
@@ -45,7 +46,8 @@ namespace AoV
             {
 
                 //myShape = new Line(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(e.X, e.Y));
-                myShape = new Triangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X), new Point(e.X, pointX ?? e.X));
+                //myShape = new Triangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X), new Point(e.X, pointX ?? e.X));
+                myShape = new Rectangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X));
                 myShape.Draw(g);
                 pointX = e.X;
                 pointY = e.Y;
