@@ -51,6 +51,16 @@ namespace age_of_villagers.age_of_villagers.Tests
 
             Assert.IsType(expected, actual);
         }
+        [Fact]
+        public void BangladeshiFarmerTreeTest()
+        {
+            Nation nation = new BangladeshiFarmer(new System.Windows.Forms.Panel());
+
+            var expected = typeof(BangladeshiFarmerTree);
+            var actual = nation.tree;
+
+            Assert.IsType(expected, actual);
+        }
 
     }
 }
