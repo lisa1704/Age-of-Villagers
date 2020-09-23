@@ -14,6 +14,7 @@ namespace AgeOfVillagers
         {
             throw new NotImplementedException();
             g.DrawLine(p, pt.X, pt.Y, 100, 100);
+           BD_House bdhouse = new BD_House(new Point(pt.X, pt.Y), new Point(pt.X - 50, pt.Y * 10), new Point(pt.X + 100, pt.Y * 10));
         }
 
         public void draw_house()
