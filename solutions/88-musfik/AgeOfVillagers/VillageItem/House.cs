@@ -31,7 +31,7 @@ namespace AgeOfVillagers
 
     public class InuitHuntersHouse : House
     {
-        public override IShape getItemShape(Point point) => new InuitHuntersHouseShape(point);
+        public override IShape getItemShape(Point point) => new InuitHuntersHouseShape(point, getWidth(), getHeight());
     }
 
 }
