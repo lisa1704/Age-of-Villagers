@@ -82,6 +82,24 @@ namespace AgeOfVillagers
             villagebox.Text = village.villagename;
             nation_name = village.nationname;
             nationlabel.Text = nation_name;
+
+            if ( nation_name == "Bangladeshi Farmers") { 
+            changeNation.SelectedIndex = 0;
+            }
+            else if (nation_name == "Arab Beduins")
+            {
+            changeNation.SelectedIndex = 1;
+            }
+            else if (nation_name == "Egyptian Kings")
+            {
+                changeNation.SelectedIndex = 2;
+            }
+            else if (nation_name == "Inuit Hunters")
+            {
+                changeNation.SelectedIndex = 3;
+            }
+
+
             visible_radiobutton(nation_name);
             
             house_locations.Clear();
