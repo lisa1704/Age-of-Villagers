@@ -37,6 +37,9 @@ public class AssetTests {
 
     @Test
     void Bangladeshi_Farmers_House_Test(){
+        IAssetFactory houseFactory = new HouseFactory();
+        IHouse house = (IHouse) houseFactory.createAsset("Bangladeshi Farmers");
 
+        Assertions.assertEquals(new Bangladeshi_Farmers_House().getClass(),house.getClass());
     }
 }
