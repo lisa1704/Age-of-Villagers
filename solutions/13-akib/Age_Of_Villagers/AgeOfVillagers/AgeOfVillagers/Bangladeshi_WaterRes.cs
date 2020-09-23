@@ -2,9 +2,6 @@
 {
     internal class Bangladeshi_WaterRes : I_Shape
     {
-		private int x_size = 24;
-		private int y_size = 16;
-
 		private string draw = "";
 
 		public string Draw(int x, int y)
