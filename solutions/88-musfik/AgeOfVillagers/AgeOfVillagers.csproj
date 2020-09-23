@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VillageItem\NoItem.cs" />
     <Compile Include="VillageMap.cs" />
     <Compile Include="WindowForm\GraphicsWithPen.cs" />
     <Compile Include="Shape\CompositeShapes\NoShape.cs" />

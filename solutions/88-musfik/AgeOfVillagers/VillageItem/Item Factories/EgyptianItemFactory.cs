@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AgeOfVillagers.VillageItem
 {
@@ -26,7 +21,7 @@ namespace AgeOfVillagers.VillageItem
             else if (type == "Water")
                 return new EgyptianWaterResource();
 
-            return new NoTree();
+            return new NoItem();
         }
     }
 }
