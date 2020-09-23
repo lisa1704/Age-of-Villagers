@@ -9,13 +9,12 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
     {
         public BDFarmersHouse(Point point)
         {
-            Point Top = new Point(point.X, point.Y);
-            Point TopLeft = new Point(point.X - 10, point.Y + 10);
-            Point BottomRight = new Point(point.X + 10, point.Y + 20);
+            Point TopLeft = new Point(point.X - 8, point.Y + 8);
+            Point BottomRight = new Point(point.X + 8, point.Y + 16);
             Point TopRight = new Point(BottomRight.X, TopLeft.Y);
 
             AddComponent(new Rectangle(TopLeft, BottomRight));
-            AddComponent(new Triangle(Top, TopLeft, TopRight));
+            AddComponent(new Triangle(point, TopLeft, TopRight));
         }
     }
 }
