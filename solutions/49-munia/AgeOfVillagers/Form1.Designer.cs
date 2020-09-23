@@ -57,6 +57,7 @@
             this.newVillage.TabIndex = 4;
             this.newVillage.Text = "New Village";
             this.newVillage.UseVisualStyleBackColor = true;
+            this.newVillage.Click += new System.EventHandler(this.newVillage_Click);
             this.newVillage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.newVillage_MouseClick);
             // 
             // button6
