@@ -13,5 +13,6 @@ namespace Age_of_Villagers
         Point GetTreePoint();
         IShape WaterSourceDraw();
         Point GetWaterSourcePoint();
+        Color GetTerrainColor();
     }
 }

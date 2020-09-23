@@ -38,5 +38,9 @@ namespace Age_of_Villagers
         {
             return point;
         }
+        public Color GetTerrainColor()
+        {
+            return Color.Yellow;
+        }
     }
 }
