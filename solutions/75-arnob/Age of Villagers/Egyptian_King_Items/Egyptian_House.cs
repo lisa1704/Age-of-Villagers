@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Egyptian_House : CompositeShaping
+   public class Egyptian_House : CompositeShaping
     {
         public Egyptian_House(Point point)
         {

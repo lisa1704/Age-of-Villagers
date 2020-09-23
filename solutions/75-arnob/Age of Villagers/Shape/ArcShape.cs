@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class ArcShape : IShape
+   public class ArcShape : IShape
     {
         private readonly float x;
         private readonly float y;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class EllipseShape : CompositeShaping
+    public class EllipseShape : CompositeShaping
     {
         private readonly Point topLeft;
         private readonly Point bottomRight;

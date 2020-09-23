@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Age of Villagers", "Age of Villagers.csproj", "{F8867819-B1A6-4057-A332-2F8AACEFE7EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeOfVillagers.Test", "..\AgeOfVillagers.Test\AgeOfVillagers.Test.csproj", "{F28BB062-11FE-4652-B21F-F06FA21F3991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgeOfVillagers.Test", "..\AgeOfVillagers.Test\AgeOfVillagers.Test.csproj", "{F28BB062-11FE-4652-B21F-F06FA21F3991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Age of Villagers Tests", "..\Age of Villagers Tests\Age of Villagers Tests.csproj", "{6CEF5842-4D0B-42E2-9651-2CBF8DC3DD17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F28BB062-11FE-4652-B21F-F06FA21F3991}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F28BB062-11FE-4652-B21F-F06FA21F3991}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F28BB062-11FE-4652-B21F-F06FA21F3991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEF5842-4D0B-42E2-9651-2CBF8DC3DD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEF5842-4D0B-42E2-9651-2CBF8DC3DD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEF5842-4D0B-42E2-9651-2CBF8DC3DD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEF5842-4D0B-42E2-9651-2CBF8DC3DD17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

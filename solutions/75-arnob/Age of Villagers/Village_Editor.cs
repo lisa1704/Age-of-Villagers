@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Age_of_Villagers.Nation_Factory_Creator;
 
-namespace Age_of_Villagers
+namespace Age_of_Villagers              
 {
     public partial class Village_Editor_Window : Form
     {
@@ -49,7 +49,7 @@ namespace Age_of_Villagers
 
         
         NationFactory n = new NationFactory();
-        INation Nation;
+        //INation Nation;
 
         public Village_Editor_Window()
         {
@@ -57,29 +57,7 @@ namespace Age_of_Villagers
         }
 
       
-        private void Panel1(object sender, EventArgs e)
-        {
-            Graphics g = drawing_space.CreateGraphics();
-            //Font font = new Font("Calibri", 10, FontStyle.Regular);
-            Brush brush = new SolidBrush(System.Drawing.Color.Black);
-            INation NationCreator = n.GetNation(nType);
-           // Nation = NationCreator.CollectNation();
-
-            foreach (Point pt in house_point)
-            {
-                Nation.GetHouse(g, pt);
-            }
-
-            foreach (Point pt in tree_point)
-            {
-                Nation.GetTree(g, pt);
-            }
-
-            foreach (Point pt in water_point)
-            {
-                Nation.GetWaterSource(g, pt);
-            }
-        }
+       
 
         private void drawing_click(object sender, MouseEventArgs e)
         {
@@ -95,14 +73,14 @@ namespace Age_of_Villagers
             {
                 water_point.Add(e.Location);
             }
-            Menu_bar.Invalidate();
+            drawing_space.Invalidate();
         }
 
         private void Nation_Type(object sender, EventArgs e)
         {
             nType = comboBox_NationList.Text;
-            Menu_bar.BackColor = Nation.getTerrainColour();
-            Menu_bar.Refresh();
+            drawing_space.BackColor = n.GetNation(nType).getTerrainColour();
+            drawing_space.Refresh();
         }
 
 
@@ -111,7 +89,7 @@ namespace Age_of_Villagers
             house_point.Clear();
             tree_point.Clear();
             water_point.Clear();
-            Menu_bar.Refresh();
+            drawing_space.Refresh();
 
         }
 
@@ -134,7 +112,7 @@ namespace Age_of_Villagers
                 open.action();
                 savepoints = open.openVillage();
                 setPoints(savepoints);
-                Menu_bar.Refresh();
+                drawing_space.Refresh();
             }
         }
 
@@ -168,6 +146,30 @@ namespace Age_of_Villagers
         private void label_ageOfVillagers_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void drawing_space_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = drawing_space.CreateGraphics();
+            //Font font = new Font("Calibri", 10, FontStyle.Regular);
+            Brush brush = new SolidBrush(System.Drawing.Color.Black);
+            INation NationCreator = n.GetNation(nType);
+            // Nation = NationCreator.CollectNation();
+
+            foreach (Point pt in house_point)
+            {
+                NationCreator.GetHouse(g, pt);
+            }
+
+            foreach (Point pt in tree_point)
+            {
+                NationCreator.GetTree(g, pt);
+            }
+
+            foreach (Point pt in water_point)
+            {
+                NationCreator.GetWaterSource(g, pt);
+            }
         }
 
 

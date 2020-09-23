@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Triangle : CompositeShaping
+   public class Triangle : CompositeShaping
     {
         public Triangle(Point top, Point baseLeft, Point baseRight)
         {
@@ -16,9 +16,6 @@ namespace Age_of_Villagers
             AddComponent(new Line(baseRight, top));
         }
 
-        private void AddComponent(Line line)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

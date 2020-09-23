@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class BDfarmer_Tree : CompositeShaping
+   public class BDfarmer_Tree : CompositeShaping
     {
 
 
@@ -25,11 +25,7 @@ namespace Age_of_Villagers
             AddComponent(new EllipseShape(mainPoint, topPoint));
         }
 
-        private void AddComponent(EllipseShape ellipseShape)
-        {
-            throw new NotImplementedException();
-        }
-
+     
     
     }
 }

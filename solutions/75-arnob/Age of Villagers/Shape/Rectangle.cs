@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Rectangle : CompositeShaping
+    public class Rectangle : CompositeShaping
     {
         public Rectangle(Point topLeft, Point bottomRight)
         {
@@ -20,9 +20,6 @@ namespace Age_of_Villagers
             AddComponent(new Line(bottomLeft, topLeft));
         }
 
-        private void AddComponent(Line line)
-        {
-            
-        }
+       
     }
 }

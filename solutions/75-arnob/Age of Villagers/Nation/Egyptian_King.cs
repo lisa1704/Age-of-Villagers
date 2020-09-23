@@ -1,6 +1,7 @@
 ﻿
 using Age_of_Villagers;
 using System;
+using Age_of_Villagers;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace Age_of_Villagers.Nation
 
         public Color getTerrainColour()
         {
-            throw new NotImplementedException();
+            return Color.Yellow; 
         }
 
         public void GetTree(Graphics graphics, Point _point)

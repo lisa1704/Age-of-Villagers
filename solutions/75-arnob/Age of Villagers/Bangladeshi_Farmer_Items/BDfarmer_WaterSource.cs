@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers.Bangladeshi_Farmer_Item
 {
-    class BDfarmer_WaterSource : CompositeShaping
+    public class BDfarmer_WaterSource : CompositeShaping
     {
         public BDfarmer_WaterSource (Point point)
         {

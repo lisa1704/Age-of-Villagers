@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class Egyptian_WaterSource : CompositeShaping
+  public class Egyptian_WaterSource : CompositeShaping
     {
         public Egyptian_WaterSource(Point point)
         {

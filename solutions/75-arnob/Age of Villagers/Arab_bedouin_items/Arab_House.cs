@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers.Arab_bedouin
 {
-    class Arab_House : CompositeShaping
+   public class Arab_House : CompositeShaping
     {
         public Arab_House(Point _point)
         {

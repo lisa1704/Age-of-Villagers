@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_Villagers
 {
-    class BDfarmer_House : CompositeShaping
+    public class BDfarmer_House : CompositeShaping
     {
         public BDfarmer_House(Point point)
         {
