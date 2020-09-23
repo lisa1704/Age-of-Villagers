@@ -11,8 +11,8 @@ namespace AgeOfVillagers.Arab_Bedouin
             return Color.GreenYellow;
         }
 
-        public Object House(Graphics g, Point point)
-        public IShape House(Point point)
+        public Object DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Point point)
         {
             Arab_Bedouin_House arabBedouinHouse = new Arab_Bedouin_House(point);
             arabBedouinHouse.Draw(g);
@@ -20,8 +20,8 @@ namespace AgeOfVillagers.Arab_Bedouin
             return arabBedouinHouse;
         }
 
-        public Object Tree(Graphics g, Point point)
-        public IShape Tree(Point point)
+        public Object DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Point point)
         {
             Arab_Bedouin_Trees arabBedouinTree = new Arab_Bedouin_Trees(point);
             arabBedouinTree.Draw(g);
@@ -29,8 +29,8 @@ namespace AgeOfVillagers.Arab_Bedouin
             return arabBedouinTree;
         }
 
-        public Object WaterSource(Graphics g, Point point)
-        public IShape WaterSource(Point point)
+        public Object DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Point point)
         {
             NullItems arabBedouinWaterSource = new NullItems();
             arabBedouinWaterSource.drawing();
