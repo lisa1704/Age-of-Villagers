@@ -1,6 +1,6 @@
 ﻿namespace age_of_villagers
 {
-    class NationFactory
+    public class NationFactory
     {
         public INation GetNation(string nation_name)
         {
