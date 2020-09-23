@@ -18,7 +18,6 @@ namespace AgeOfVillagers
 
             addshapes(new Triangle(point1, point2, point3));
             addshapes(new Rectangleshape(point2, point3, point4, point5));
-            //addshapes(new Rectangle(point))    
         }
         
     }

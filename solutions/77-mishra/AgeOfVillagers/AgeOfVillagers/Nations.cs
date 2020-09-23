@@ -14,8 +14,6 @@ namespace AgeOfVillagers
         public Nations( string nationtype)
         {
             this.nationtype = nationtype;
-
-
         }
         public INation GetNation(Point point)
         {

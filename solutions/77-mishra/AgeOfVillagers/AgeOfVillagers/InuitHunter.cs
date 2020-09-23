@@ -32,10 +32,5 @@ namespace AgeOfVillagers
         {
             return Color.White;
         }
-
-        /*public Color PaintTerrain(Point p, Panel drawingBoard)
-        {
-            return drawingBoard.BackColor = System.Drawing.Color.White;
-        }*/
     }
 }

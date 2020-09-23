@@ -12,8 +12,8 @@ namespace AgeOfVillagers
         private Point point;
         private int h;
         private int w;
-        int startAngle = 0;
-        int sweepAngle = 360;
+        readonly int startAngle = 0;
+        readonly int sweepAngle = 360;
 
 
         public Circle(Point point, int h, int w)

@@ -10,7 +10,6 @@ namespace AgeOfVillagers
         {
 
         }
-        //private Panel drawingBoard;
         public IShape DrawHouse(Point p)
         {
             return new ArabHouse(p);
@@ -30,13 +29,6 @@ namespace AgeOfVillagers
         {
             return Color.LightGoldenrodYellow;
         }
-
-       
-        /*public Color PaintTerrain(Point p, Panel drawingBoard)
-        {
-            throw new NotImplementedException();
-        }
-        */
 
     }
 }

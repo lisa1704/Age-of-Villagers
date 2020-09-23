@@ -20,8 +20,5 @@ namespace AgeOfVillagers
             addshapes(new Triangle(p1, bottomright, corner));
 
         }
-        
-
-        
     }
 }

@@ -13,8 +13,7 @@ namespace AgeOfVillagers
         {
             this.point = point;
         }
-        //private Panel drawingBoard;
-        
+
         public IShape DrawHouse(Point point)
         {
             return new BdFarmerHouse(point);
@@ -34,13 +33,5 @@ namespace AgeOfVillagers
         {
             return Color.Green;
         }
-
-        /*public Color PaintTerrain(Point p, Panel drawingBoard)
-        {
-            return drawingBoard.BackColor = System.Drawing.Color.Green;
-            
-        }*/
-
-
     }
 }

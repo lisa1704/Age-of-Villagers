@@ -22,8 +22,6 @@ namespace AgeOfVillagers
             this.sweepAngle = sweepAngle;
         }
 
-
-
         public void draw(Pen pen, Graphics graphics)
         {
             Rectangle rectangle = new Rectangle(point.X, point.Y, w, h);
