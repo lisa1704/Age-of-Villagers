@@ -12,8 +12,8 @@ namespace Age_of_Villagers
         public EgyptWaterResource(Point point)
         {
             this.point = point;
-            ShapePush(new Arc(point, 10, 10, 0, 180));
-            ShapePush(new Arc(point, 10, 10, 0, -180));
+            ShapePush(new Arc(point, 12, 12, 0, 180));
+            ShapePush(new Arc(point, 12, 12, 0, -180));
         }
 
     }
