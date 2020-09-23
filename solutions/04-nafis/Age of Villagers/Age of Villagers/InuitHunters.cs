@@ -35,5 +35,9 @@ namespace Age_of_Villagers
         {
             throw new NotImplementedException();
         }
+        public Point GetWaterSourcePoint()
+        {
+            return point;
+        }
     }
 }

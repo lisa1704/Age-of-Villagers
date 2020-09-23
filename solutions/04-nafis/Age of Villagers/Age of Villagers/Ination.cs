@@ -12,5 +12,6 @@ namespace Age_of_Villagers
         IShape TreeDraw();
         Point GetTreePoint();
         IShape WaterSourceDraw();
+        Point GetWaterSourcePoint();
     }
 }
