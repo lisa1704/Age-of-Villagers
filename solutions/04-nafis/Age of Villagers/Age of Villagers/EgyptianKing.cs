@@ -17,7 +17,10 @@ namespace Age_of_Villagers
         {
             throw new NotImplementedException();
         }
-
+        public Point GetHousePoint()
+        {
+            return point;
+        }
         public IShape TreeDraw()
         {
             throw new NotImplementedException();

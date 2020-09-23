@@ -120,6 +120,11 @@ namespace Age_of_Villagers
             if (HouseRB.Checked)
             {
                 nationController.GetNation(point).HouseDraw().draw(graphics, pen);
+                Point HousePoint = nationController.GetNation(point).GetHousePoint();
+                if (!HousePoint.IsEmpty)
+                {
+                    HousePoints.Add(HousePoint);
+                }
             }
             else if (TreeRB.Checked)
             {
