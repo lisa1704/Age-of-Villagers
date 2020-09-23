@@ -66,6 +66,7 @@ namespace Age_of_Villagers
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(750, 500);
             this.drawingPanel.TabIndex = 1;
+            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
             this.drawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseClick);
             // 
             // villageName
@@ -177,6 +178,7 @@ namespace Age_of_Villagers
             this.VillageNametextBox.Name = "VillageNametextBox";
             this.VillageNametextBox.Size = new System.Drawing.Size(199, 34);
             this.VillageNametextBox.TabIndex = 15;
+            this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
             // 
             // label1
             // 

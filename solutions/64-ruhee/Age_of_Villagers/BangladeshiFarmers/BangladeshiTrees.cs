@@ -10,13 +10,12 @@ namespace Age_of_Villagers.BangladeshiFarmers
     {
         public BangladeshiTrees(Point pt)
         {
-            Point Top = new Point(pt.X, pt.Y);
-            Point TopRight = new Point(pt.X + 60, pt.Y + 70);
-            Point BottomRight = new Point(pt.X + 28, pt.Y + 100);
-            Point TopLeft = new Point(pt.X + 33, pt.Y + 45);
+            Point TopLeft = new Point(pt.X - 50, pt.Y + 30);
+            Point BottomRight = new Point(pt.X + 50, pt.Y + 80);
+            Point TopRight = new Point(BottomRight.X, TopLeft.Y);
 
             AddComponent(new Age_of_Villagers.Rectangle(TopLeft, BottomRight));
-            AddComponent(new Arc(Top.X, TopRight.Y, 100, 100, 0, -360));
+            AddComponent(new Ellipse(pt, TopRight));
         }
     }
 }
