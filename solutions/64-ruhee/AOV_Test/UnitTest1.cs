@@ -99,5 +99,14 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void EgyptianHouse()
+        {
+            IShape egypthouse = new EgyptianKings().testhouse(p);
+            IShape house = new EgyptianKings().DrawHouse(g, p);
+            egypthouse.Equals(house);
+
+        }
+
     }
 }

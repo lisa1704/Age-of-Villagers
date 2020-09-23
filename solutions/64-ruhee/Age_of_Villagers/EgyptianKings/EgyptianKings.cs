@@ -32,5 +32,10 @@ namespace Age_of_Villagers.EgyptianKings
             EgyptianWaterS egyptianWater= new EgyptianWaterS(point);
             return (egyptianWater);
         }
+
+        public IShape testhouse(Point p)
+        {
+            return new EgyptianHouse(p);
+        }
     }
 }
