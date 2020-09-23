@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class InuitHouse : VillageItem
+    public class InuitHouse : VillageItem
     {
         private readonly Point topLeft, bottomRight;
         public InuitHouse(Point centre)
