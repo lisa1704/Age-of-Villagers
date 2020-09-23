@@ -1,4 +1,5 @@
 ﻿using System;
+using AoV.Shapes;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,24 +10,33 @@ namespace AoV.Nations
 {
     class EgyptianKing : INation
     {
-        public void ColorTerrain()
+        private Color bgColor = Color.Yellow;
+
+        public string getName()
         {
-            throw new NotImplementedException();
+            return "Egyptian Kings";
         }
 
+        public Color TerrainColor()
+        {
+            return bgColor;
+        }
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianHouse egyHouse = new EgyptianHouse(p);
+            egyHouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianTree egyTree = new EgyptianTree(p);
+            egyTree.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            EgyptianWell waterSource = new EgyptianWell(p);
+            waterSource.Draw(g);
         }
     }
 }
