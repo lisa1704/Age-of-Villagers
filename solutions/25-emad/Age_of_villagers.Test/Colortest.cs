@@ -36,7 +36,7 @@ namespace Age_of_villagers.Test
         public void EgyptianKingsColorTest()
         {
             EgyptianKings Egypt = new EgyptianKings();
-            Color expected = Color.LightYellow;
+            Color expected = Color.Yellow;
             Color actual = Egypt.DrawBackground();
             Assert.Equal(expected, actual);
 
