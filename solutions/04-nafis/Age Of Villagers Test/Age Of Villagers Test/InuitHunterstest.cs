@@ -23,6 +23,31 @@ namespace Age_Of_Villagers_Test
             Assert.IsType<InuitHunters> (nationController.getNation(new Point()));
 
         }
+        [Fact]
+        public void InuitHousepointTest()
+        {
+            Point result = nationController.getNation(point).GetHousePoint();
+            Assert.Equal(point, result);
+
+        }
+        [Fact]
+        public void InuitTreepointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetTreePoint();
+            Assert.Equal(new Point(), result);
+
+        }
+        [Fact]
+        public void InuitWaterPointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetWaterPoint();
+            Assert.Equal(new Point(), result);
+
+        }
     }
 }
 }
