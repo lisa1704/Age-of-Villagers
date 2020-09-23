@@ -8,7 +8,7 @@ using System.Text;
 namespace UnitTestAoV
 {
     [TestFixture]
-    public class ArabBedouinTest
+    class EgyptianKingsTest
     {
         [SetUp]
         public void Setup()
@@ -18,9 +18,8 @@ namespace UnitTestAoV
         [TestCase]
         public void TerrainTest()
         {
-            Arabs terraincolortest = new Arabs();
-            Color actual = terraincolortest.SetTerrain();
-            Color expected = Color.LightYellow;
+            EgyptianKings terraintest = new EgyptianKings();
+            Assert.AreEqual(Color.Yellow, terraintest.SetTerrain());
         }
     }
 }
