@@ -2,6 +2,7 @@
 using System.Diagnostics.Contracts;
 using Xunit;
 using System.Drawing;
+using AgeOfVillagers;
 
 namespace AgeOfVillagers.test
 {
