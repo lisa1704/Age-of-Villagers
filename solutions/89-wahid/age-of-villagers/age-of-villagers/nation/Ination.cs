@@ -6,7 +6,7 @@ using System.Text;
 
 namespace age_of_villagers.nation
 {
-    interface Ination
+   public interface Ination
     {
         string getNationName();
         Color getTerrainColor();

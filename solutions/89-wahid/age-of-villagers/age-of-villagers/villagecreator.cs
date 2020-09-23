@@ -15,20 +15,21 @@ namespace age_of_villagers
 {
     public partial class villagecreator : Form
     {
-        int x, y;
+        int x , y;
         string text = "";
         string name = "";
         public Graphics g;
         public Pen p;
-        private village village;
+        public Village village;
         List<Point> HousePoints = new List<Point>();
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
         public villagecreator()
         {
+            InitializeComponent();
             g = panel1.CreateGraphics();
             p = new Pen(Color.Black);
-            InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -99,8 +100,7 @@ namespace age_of_villagers
         private void panel1MouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            Graphics g = panel1.CreateGraphics();
-            g.DrawString(text, new Font("Arial", 12), new SolidBrush(ForeColor), e.X, e.Y);
+
             if (tree.Checked)
             {
 
@@ -118,7 +118,6 @@ namespace age_of_villagers
                 village.nation.getHouse(point).draw(g, p);
                 village.watersource.Add(point);
             }
-
         }
     }
 }

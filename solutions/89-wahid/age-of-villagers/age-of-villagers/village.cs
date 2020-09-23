@@ -6,12 +6,12 @@ using System.Text;
 
 namespace age_of_villagers
 {
-    class village
+    public class Village
     {
         public Ination nation;
         public string villageName;
         public List<Point> tree, house, watersource;
-        public village(Ination nation, string villageName)
+        public Village(Ination nation, string villageName)
         {
             this.nation = nation;
             this.villageName = villageName;
