@@ -4,11 +4,14 @@ using Age_of_Villagers.BangladeshiFarmers;
 using System.Drawing;
 using Age_of_Villagers.EgyptianKings;
 using Age_of_Villagers.ArabBedouin;
+using Age_of_Villagers.Age_of_Villagers;
 
 namespace AOV_Test
 {
     public class UnitTest1
     {
+        Graphics g;
+        Point p = new Point(40, 40);
         [Fact]
         public void Test1()
         {
@@ -40,6 +43,15 @@ namespace AOV_Test
             Color b1 = back.BackgroundColor();
             Color b2 = Color.GreenYellow;
             Assert.Equal(b1, b2);
+        }
+
+        [Fact]
+        public void BangladeshiHouse()
+        {
+            IShape bdhouse = new BangladeshiFarmers().testhouse(p);
+            IShape house = new BangladeshiFarmers().DrawHouse(g,p);
+            bdhouse.Equals(house);
+
         }
 
     }

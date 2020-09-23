@@ -13,6 +13,7 @@ namespace Age_of_Villagers.BangladeshiFarmers
         public IShape DrawTree(Graphics g, Point point)
         {
             BangladeshiTrees bdTree = new BangladeshiTrees(point);
+            bdTree.Draw(g, pen);
             return (bdTree);
         }
         public IShape DrawHouse(Graphics g, Point point)
@@ -33,6 +34,11 @@ namespace Age_of_Villagers.BangladeshiFarmers
         public Color BackgroundColor()
         {
             return Color.Green;
+        }
+
+        public IShape testhouse(Point p)
+        {
+            return new BangladeshiHouse(p);
         }
     }
 }

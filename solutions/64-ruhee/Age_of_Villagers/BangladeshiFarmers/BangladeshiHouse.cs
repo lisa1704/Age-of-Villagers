@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Age_of_Villagers.BangladeshiFarmers
 {
-    class BangladeshiHouse:CShape
+    public class BangladeshiHouse:CShape
     {
         public BangladeshiHouse(Point pt)
         {
