@@ -6,4 +6,9 @@ public class village
     {
         return nation;
     }
+
+    public void editVillage()
+    {
+
+    }
 }
