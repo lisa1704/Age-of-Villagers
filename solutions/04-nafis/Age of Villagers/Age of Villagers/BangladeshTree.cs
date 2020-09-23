@@ -15,8 +15,9 @@ namespace Age_of_Villagers
             Point BootomLeft = new Point(TopPoint.X, TopPoint.Y + 12);
             Point BottomRight = new Point(TopPoint.X + 3, TopPoint.Y + 12);
 
-            ShapePush(new Arc(point, 16, 16, 0, 180));
-            ShapePush(new Arc(point, 16, 16, 0, 1 - 180));
+            ShapePush(new Arc(point, 16, 10, 0, 180));
+            ShapePush(new Arc(point, 16, 10, 0, 1 - 180));
+            ShapePush(new Rectangle(point, TopRight,BottomRight,BootomLeft));
 
         }
 
