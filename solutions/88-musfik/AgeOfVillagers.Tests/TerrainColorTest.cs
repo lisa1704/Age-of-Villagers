@@ -17,7 +17,15 @@ namespace AgeOfVillagers.Tests
             Assert.Equal(expected, actual);
         }
 
-        
+        [Fact]
+        public void BD_TerrainColorTest()
+        {
+            INation nation = new BangladeshiFarmers();
+            var expected = Color.GreenYellow;
+            var actual = nation.getTerrainColor();
+            Assert.Equal(expected, actual);
+        }
+
 
     }
 }
