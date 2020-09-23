@@ -8,8 +8,8 @@ namespace ageofvillagers
 {
    abstract  class housecreate
     {
-        int x_axis = 16;
-        int y_axis = 16;
+        int x_coordinate = 16;
+        int y_coordinate = 16;
         public abstract void housecreatorfunction(int x, int y);
     }
 }
