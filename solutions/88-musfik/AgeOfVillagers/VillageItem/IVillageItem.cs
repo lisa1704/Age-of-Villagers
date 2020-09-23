@@ -4,7 +4,8 @@ namespace AgeOfVillagers
 {
     interface IVillageItem
     {
-        Point getItemLocation();
+        int getHeight();
+        int getWidth();
         IShape getItemShape(Point point);
     }
 }

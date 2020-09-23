@@ -3,70 +3,34 @@ using System.Drawing;
 
 namespace AgeOfVillagers
 {
-    public class Tree : IVillageItem
+    public abstract class Tree : IVillageItem
     {
-        private readonly Point point;
-        public Tree(Point point)
-        {
-            this.point = point;
-            getItemShape(point);
-        }
-        public Point getItemLocation()
-        {
-            return point;
-        }
-        public virtual IShape getItemShape(Point point)
-        {
-            return new NullShape(point);
-        }
+        private int height = 24;
+        private int width = 16;
+
+        public int getHeight() => height;
+        public int getWidth() => width;
+        public virtual IShape getItemShape(Point point) => new NullShape(point);
     }
 
     public class ArabTree : Tree
     {
-        public ArabTree(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new ArabTreeShape(point);
-        }
+        public override IShape getItemShape(Point point) => new ArabTreeShape(point);
     }
 
     public class BangladeshiTree : Tree
     {
-        public BangladeshiTree(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new BangladeshiTreeShape(point);
-        }
+        public override IShape getItemShape(Point point) => new BangladeshiTreeShape(point);
     }
 
     public class EgyptianTree : Tree
     {
-        public EgyptianTree(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new EgyptianTreeShape(point);
-        }
+        public override IShape getItemShape(Point point) => new EgyptianTreeShape(point);
     }
     
     public class NoTree : Tree
     {
-        public NoTree(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new NoShape();
-        }
+        public override IShape getItemShape(Point point) => new NoShape();
     }
 
 }

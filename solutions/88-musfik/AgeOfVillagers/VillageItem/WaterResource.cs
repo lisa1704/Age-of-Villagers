@@ -1,60 +1,40 @@
 ﻿using AgeOfVillagers.Shape.CompositeShapes;
 using System.Drawing;
+using System.Windows.Markup;
 
 namespace AgeOfVillagers
 {
-    public class WaterResource : IVillageItem
+    public abstract class WaterResource : IVillageItem
     {
-        private readonly Point point;
-        public WaterResource(Point point)
-        {
-            this.point = point;
-            getItemShape(point);
-        }
-        public Point getItemLocation()
-        {
-            return point;
-        }
-        public virtual IShape getItemShape(Point point)
-        {
-            return new NullShape(point);
-        }
+        private int height, width;
+
+        public virtual int getHeight() => height;
+        public virtual int getWidth() => width;       
+        public virtual IShape getItemShape(Point point) => new NullShape(point);
     }
 
     public class BangladeshiWaterResource : WaterResource
     {
-        public BangladeshiWaterResource(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new BangladeshiWaterSourceShape(point);
-        }
+        private int height = 24, width = 16;
+        
+        public override int getHeight() => height;
+        public override int getWidth() => width;
+        public override IShape getItemShape(Point point) => new BangladeshiWaterSourceShape(point);
     }
 
     public class EgyptianWaterResource : WaterResource
     {
-        public EgyptianWaterResource(Point point) : base(point)
-        {
-        }
-
-        public override IShape getItemShape(Point point)
-        {
-            return new EgyptianWaterSourceShape(point);
-        }
+        private int height = 12, width = 12;
+        
+        public override int getHeight() => height;
+        public override int getWidth() => width;
+        public override IShape getItemShape(Point point) => new EgyptianWaterSourceShape(point);
     }
 
     public class NoWaterResource : WaterResource
     {
-        public NoWaterResource(Point point) : base(point)
-        {
-        }
+        public override IShape getItemShape(Point point) => new NoShape();
 
-        public override IShape getItemShape(Point point)
-        {
-            return new NoShape();
-        }
     }
 
 }
