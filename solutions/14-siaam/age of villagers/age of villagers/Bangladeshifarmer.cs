@@ -14,8 +14,9 @@ namespace age_of_villagers
 
         public void drawHouse(Graphics g , Point point)
         {
-            
-           
+            BDhouse house = new BDhouse();
+            house.drawComponent(g, point);
+
         }
     }
 }
