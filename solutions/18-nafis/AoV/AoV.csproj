@@ -64,6 +64,7 @@
     <Compile Include="Shapes\Ellipse.cs" />
     <Compile Include="Shapes\IShape.cs" />
     <Compile Include="Shapes\Line.cs" />
+    <Compile Include="Shapes\NullShape.cs" />
     <Compile Include="Shapes\Rectangle.cs" />
     <Compile Include="Shapes\Triangle.cs" />
     <EmbeddedResource Include="MainWindow.resx">
