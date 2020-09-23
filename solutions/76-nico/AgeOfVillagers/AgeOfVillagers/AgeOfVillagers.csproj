@@ -58,6 +58,7 @@
     <Compile Include="CompositeShape.cs" />
     <Compile Include="EgyptianHouse.cs" />
     <Compile Include="EgyptianTree.cs" />
+    <Compile Include="EgyptianWaterSource.cs" />
     <Compile Include="Egyptian_Kings.cs" />
     <Compile Include="Factory_Nation.cs" />
     <Compile Include="INation.cs" />
