@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    internal class ArabBedouinTree : Composite
+    class ArabBedouinTree : Composite
     {
         public ArabBedouinTree(Point point)
         {
