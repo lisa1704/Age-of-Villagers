@@ -3,7 +3,7 @@ import javafx.scene.input.MouseEvent;
 
 public class MouseClickManager {
 
-    public void onMousePressed(Group g, MouseEvent mouseEvent, IDrawComponent drawComponent) {
+    public StateOfComponent onMousePressed(Group g, MouseEvent mouseEvent, IDrawComponent drawComponent) {
         double x = mouseEvent.getX();
         double y = mouseEvent.getY();
 
@@ -14,7 +14,7 @@ public class MouseClickManager {
             g.getChildren().addAll(drawComponent.draw());
         }
 
-
+        return new StateOfComponent(x, y, drawComponent);
     }
     boolean mouseRestriction(double x, double y) {
         if (x + 24 <= 600 && y + 24 <= 400) {

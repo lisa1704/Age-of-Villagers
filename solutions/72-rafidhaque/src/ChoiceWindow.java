@@ -84,7 +84,7 @@ public class ChoiceWindow implements IWindow {
             nation1 = new InuitHunters(g);
         }
 
-        ShowWindow showWindow = new ShowWindow(nation1, village, g, new ArrayList<IDrawComponent>());
+        ShowWindow showWindow = new ShowWindow(nation1, village, g, new ArrayList<StateOfComponent>());
 
         System.out.println(nation);
         return showWindow.getDisplay();

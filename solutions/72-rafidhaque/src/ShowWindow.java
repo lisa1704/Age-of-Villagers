@@ -22,9 +22,9 @@ public class ShowWindow implements IWindow{
     DrawTree tree;
     DrawWater water;
     GridOfControls gridOfControls;
-    ArrayList<IDrawComponent> stateOfComponents;
+    ArrayList<StateOfComponent> stateOfComponents;
 
-    public ShowWindow(INation nation, String villageName, Group drawSpace, ArrayList<IDrawComponent> arrayList) {
+    public ShowWindow(INation nation, String villageName, Group drawSpace, ArrayList<StateOfComponent> arrayList) {
         this.nation = nation;
         this.villageName = villageName;
         this.drawSpace = drawSpace;
@@ -61,8 +61,8 @@ public class ShowWindow implements IWindow{
             @Override
             public void handle(MouseEvent event) {
                 if (mouseRestriction(event.getX(), event.getY())) {
-                    mouseClickManager.onMousePressed(drawSpace, event, gridOfControls.getNowDrawing());
-                    stateOfComponents.add(gridOfControls.getNowDrawing());
+                    StateOfComponent stateOfComponent = mouseClickManager.onMousePressed(drawSpace, event, gridOfControls.getNowDrawing());
+                    stateOfComponents.add(stateOfComponent);
                 }
             }
         });
@@ -91,11 +91,11 @@ public class ShowWindow implements IWindow{
 
             // java deserialize
 
-            ArrayList<IDrawComponent> stateOfComponents10 = null;
+            ArrayList<StateOfComponent> stateOfComponents10 = null;
             try {
                 FileInputStream fileIn = new FileInputStream("./"+this.villageName+".aov");
                 ObjectInputStream in = new ObjectInputStream(fileIn);
-                stateOfComponents10 = (ArrayList<IDrawComponent>) in.readObject();
+                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
                 in.close();
                 fileIn.close();
             } catch (Exception e1) {
@@ -113,12 +113,12 @@ public class ShowWindow implements IWindow{
             File selectedFile = fileChooser.showOpenDialog(Starter.mainWindow);
             String filePath = selectedFile.getAbsolutePath();
 
-            ArrayList<IDrawComponent> stateOfComponents10 = null;
+            ArrayList<StateOfComponent> stateOfComponents10 = null;
 
             try {
                 FileInputStream fileIn = new FileInputStream(filePath);
                 ObjectInputStream in = new ObjectInputStream(fileIn);
-                stateOfComponents10 = (ArrayList<IDrawComponent>) in.readObject();
+                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
                 in.close();
                 fileIn.close();
             } catch (Exception e1) {
@@ -146,7 +146,7 @@ public class ShowWindow implements IWindow{
             int sizee = stateOfComponents10.size();
 
             for (int k = 0; k < sizee; k++) {
-                ArrayList<Shape> drawing = stateOfComponents10.get(k).draw();
+                ArrayList<Shape> drawing = stateOfComponents10.get(k).drawComponent.draw(stateOfComponents10.get(k).getX(), stateOfComponents10.get(k).getY());
                 drawSpace.getChildren().addAll(drawing);
             }
         });
@@ -168,3 +168,4 @@ public class ShowWindow implements IWindow{
         return Starter.mainWindow;
     }
 }
+
