@@ -9,7 +9,7 @@ namespace Age_of_Villagers.Models
     { 
         void Draw_House(Point location, Graphics gfx, Pen p);
         void Draw_Tree(Point location, Graphics gfx, Pen p);
-        void Draw_WaterSource();
+        void Draw_WaterSource(Point location, Graphics gfx, Pen p);
         void Draw_Terrain();
 
         string Get_inhabitedVillage();

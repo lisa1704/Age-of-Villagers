@@ -83,9 +83,7 @@ namespace Age_of_Villagers
             }
             if (WaterSourceSwitch)
             {
-                SolidBrush sb = new SolidBrush(Color.Blue);
-                gfx.DrawEllipse(p, xAxis - 50, yAxis - 50, 100, 100);
-                gfx.FillEllipse(sb, xAxis - 50, yAxis - 50, 100, 100);
+                farmer.Draw_WaterSource(local, gfx, p);
 
             }
         }

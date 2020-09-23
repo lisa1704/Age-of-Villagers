@@ -28,9 +28,10 @@ namespace Age_of_Villagers.Models
             tree.Draw(gfx, p);
         }
 
-        public void Draw_WaterSource()
+        public void Draw_WaterSource(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            FarmerWaterSource pond = new FarmerWaterSource(location);
+            pond.Draw(gfx, p);
         }
 
         public string Get_inhabitedVillage()

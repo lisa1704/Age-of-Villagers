@@ -25,7 +25,7 @@ namespace Age_of_Villagers.Models
             throw new NotImplementedException();
         }
 
-        public void Draw_WaterSource()
+        public void Draw_WaterSource(Point location, Graphics gfx, Pen p)
         {
             throw new NotImplementedException();
         }
