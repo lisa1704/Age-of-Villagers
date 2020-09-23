@@ -10,7 +10,7 @@ namespace AoV.Nations
 {
     class ArabBedouin : INation
     {
-        private Color bgColor = Color.Yellow;
+        private Color bgColor = Color.Gold;
 
         public string getName()
         {

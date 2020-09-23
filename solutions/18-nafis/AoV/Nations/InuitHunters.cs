@@ -1,4 +1,5 @@
 ﻿using System;
+using AoV.Shapes;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,24 +10,34 @@ namespace AoV.Nations
 {
     class InuitHunters : INation
     {
-        public void ColorTerrain()
+        private Color bgColor = Color.White;
+
+        public string getName()
         {
-            throw new NotImplementedException();
+            return "Inuit Hunters";
+        }
+
+        public Color TerrainColor()
+        {
+            return bgColor;
         }
 
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            InuitHouse igloo = new InuitHouse(p);
+            igloo.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullShape inTree = new NullShape();
+            inTree.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            NullShape inWater = new NullShape();
+            inWater.Draw(g);
         }
     }
 }
