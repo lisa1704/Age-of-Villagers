@@ -67,7 +67,7 @@ public class ShowWindow implements IWindow{
 
         gridOfControls.newButton.setOnAction(event -> {
             ChoiceWindow choiceWindow = new ChoiceWindow();
-            Main.mainWindow.setScene(choiceWindow.getDisplay());
+            Starter.mainWindow.setScene(choiceWindow.getDisplay());
         });
 
         gridOfControls.saveButton.setOnAction(event -> {
@@ -108,7 +108,7 @@ public class ShowWindow implements IWindow{
         gridOfControls.openButton.setOnAction(event -> {
 
             FileChooser fileChooser = new FileChooser();
-            File selectedFile = fileChooser.showOpenDialog(Main.mainWindow);
+            File selectedFile = fileChooser.showOpenDialog(Starter.mainWindow);
             String filePath = selectedFile.getAbsolutePath();
 
             ArrayList<StateOfComponent> stateOfComponents10 = null;
@@ -155,7 +155,7 @@ public class ShowWindow implements IWindow{
 
     @Override
     public Stage getStage(Scene scene) {
-        Main.mainWindow.setScene(scene);
-        return Main.mainWindow;
+        Starter.mainWindow.setScene(scene);
+        return Starter.mainWindow;
     }
 }

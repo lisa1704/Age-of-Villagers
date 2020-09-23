@@ -1,17 +1,8 @@
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Starter extends Application {
     static Stage mainWindow;
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-    void changeScene(Scene scene) {
-        this.mainWindow.setScene(scene);
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {

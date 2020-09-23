@@ -36,7 +36,8 @@ public class ChoiceWindow implements IWindow {
         choiceBox.setValue("Bangladeshi Farmers");
         GridPane.setConstraints(choiceBox, 2, 4);
 
-        TextField villageName = new TextField("Type Village Name");
+        TextField villageName = new TextField();
+        villageName.setPromptText("New Village Name");
 
         Button newVillage = new Button("New Village");
 
@@ -48,8 +49,10 @@ public class ChoiceWindow implements IWindow {
 
         newVillage.setOnAction(event -> {
             village = villageName.getText();
-            scene = getChoice(choiceBox, village);
-            Main.mainWindow.setScene(scene);
+            if (village.length() > 0) {
+                scene = getChoice(choiceBox, village);
+                Starter.mainWindow.setScene(scene);
+            }
         });
 
 
@@ -61,8 +64,8 @@ public class ChoiceWindow implements IWindow {
 
     @Override
     public Stage getStage(Scene scene) {
-        Main.mainWindow.setScene(scene);
-        return Main.mainWindow;
+        Starter.mainWindow.setScene(scene);
+        return Starter.mainWindow;
     }
 
     private Scene getChoice(ChoiceBox<String> choiceBox, String village) {
