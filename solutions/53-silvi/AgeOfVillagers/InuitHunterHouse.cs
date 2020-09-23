@@ -2,17 +2,16 @@
 
 namespace AgeOfVillagers
 {
-    internal class InuitHunterHouse : IVillageItem
+    internal class InuitHunterHouse : Composite
     {
-        public void Draw(Point e, Graphics g, Pen p)
+        public InuitHunterHouse(Point point)
         {
-            int x = e.X;
-            int y = e.Y;
+            Point LeftBottom = new Point(point.X - 8, point.Y + 8);
+            Point RightBottom = new Point(point.X + 8, point.Y + 8);
 
-
-            g.DrawLine(p, x, y, x + 20, y);
-            g.DrawArc(p, x, y - 15, 20, 30, 180, 180);
-            g.DrawArc(p, x + 6, y - 6, 8, 15, 180, 180);
+            AddComponent(new Line(LeftBottom, RightBottom));
+            AddComponent(new Arc(point.X - 4, point.Y + 5, 7, 7, 180.0F, 180.0F));
+            AddComponent(new Arc(point.X - 8, point.Y, 16, 16, 180.0F, 180.0F));
         }
     }
 }
