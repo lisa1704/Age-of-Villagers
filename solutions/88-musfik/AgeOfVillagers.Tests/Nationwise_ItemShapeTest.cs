@@ -100,5 +100,35 @@ namespace AgeOfVillagers.Tests
             actual.Equals(expected);
             actual2.Equals(expected);
         }
+
+        //InuitHunters
+        [Fact]
+        public void InuitHunters_getHouseShape_Test()
+        {
+            INation nation = new InuitHunters();
+            var expected = nation.getItemShape(point1, "House");
+            var actual = new InuitHuntersHouse().getItemShape(point1);
+            var actual2 = new InuitHuntersHouseShape(point1, 16, 16);
+            actual.Equals(expected);
+            actual2.Equals(expected);
+        }
+
+        [Fact]
+        public void InuitHunters_getTreeShape_Test()
+        {
+            INation nation = new InuitHunters();
+            var expected = nation.getItemShape(point2, "Tree");
+            var actual = new NoItem().getItemShape(point2);
+            actual.Equals(expected);
+        }
+
+        [Fact]
+        public void InuitHunters_getWaterSourceShape_Test()
+        {
+            INation nation = new InuitHunters();
+            var expected = nation.getItemShape(point2, "Water");
+            var actual = new NoItem().getItemShape(point2);
+            actual.Equals(expected);
+        }
     }
 }
