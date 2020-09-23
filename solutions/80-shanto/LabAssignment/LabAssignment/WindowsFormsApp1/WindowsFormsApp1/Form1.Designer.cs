@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.New_VIllage = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -56,17 +56,17 @@ namespace WindowsFormsApp1
             this.button10.TabIndex = 7;
             this.button10.Text = "Save Village";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.SaveVillage_Click);
             // 
-            // button11
+            // New_VIllage
             // 
-            this.button11.Location = new System.Drawing.Point(51, 321);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "New Village";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.New_VIllage.Location = new System.Drawing.Point(51, 321);
+            this.New_VIllage.Name = "New_VIllage";
+            this.New_VIllage.Size = new System.Drawing.Size(75, 23);
+            this.New_VIllage.TabIndex = 8;
+            this.New_VIllage.Text = "New Village";
+            this.New_VIllage.UseVisualStyleBackColor = true;
+            this.New_VIllage.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // button12
             // 
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             this.button12.TabIndex = 9;
             this.button12.Text = "Open Village";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // label1
             // 
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.New_VIllage);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.label1);
@@ -193,7 +193,7 @@ namespace WindowsFormsApp1
         //private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintDialog printDialog2;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button New_VIllage;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
