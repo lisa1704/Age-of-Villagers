@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using age_of_villagers.age_of_village.Items.House;
 using age_of_villagers.age_of_village.Items.Tree;
+using age_of_villagers.age_of_village.Items.WaterSource;
 using age_of_villagers.age_of_villagers.utilities;
 
 namespace age_of_villagers.age_of_villagrs.Nations
@@ -17,7 +18,7 @@ namespace age_of_villagers.age_of_villagrs.Nations
         {
             base.house = new ArabBedouinHouse();
             base.tree = new ArabBedouinTree();
-            base.waterSource = null;
+            base.waterSource = new NullWaterSource();
             base.color = System.Drawing.Color.LightYellow;
         }
         

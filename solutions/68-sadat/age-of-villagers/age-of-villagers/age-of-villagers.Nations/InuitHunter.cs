@@ -1,4 +1,6 @@
 ﻿using age_of_villagers.age_of_village.Items.House;
+using age_of_villagers.age_of_village.Items.Tree;
+using age_of_villagers.age_of_village.Items.WaterSource;
 using age_of_villagers.age_of_villagers.utilities;
 using System;
 using System.Collections.Generic;
@@ -13,9 +15,9 @@ namespace age_of_villagers.age_of_villagers.Nations
         public InuitHunter(Panel villageCanvas) : base(villageCanvas)
         {
             base.house = new InuitHunterHouse();
-            base.tree = null;
-            base.waterSource = null;
-            base.color = System.Drawing.Color.Yellow;
+            base.tree = new NullTree();
+            base.waterSource = new NullWaterSource();
+            base.color = System.Drawing.Color.White;
         }
     }
 }
