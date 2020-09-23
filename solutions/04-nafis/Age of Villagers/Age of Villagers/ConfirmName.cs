@@ -10,17 +10,13 @@ namespace Age_of_Villagers
 {
     public partial class ConfirmName : Form
     {
-        private readonly Panel panel;
-        private readonly VillageWindow villageWindow;
-        private readonly Graphics graphics;
-        private readonly Pen pen;
-        private readonly VillageCondition villageCondition;
-
+        private Panel VillageDrawing;
+        private readonly VillageWindow primary;
         public ConfirmName(VillageWindow villageWindow,Panel panel)
         {
             InitializeComponent();
-            this.villageWindow = villageWindow;
-            this.panel = panel;
+            primary = villageWindow;
+            VillageDrawing = panel;
         }
 
         private void SaveName_Load(object sender, EventArgs e)
@@ -36,14 +32,10 @@ namespace Age_of_Villagers
         private void ConfirmVillage_Click(object sender, EventArgs e)
         {
             NationController nationController = new NationController(NationNameCombo.Text);
-            VillageConditionEdit villageConditionEdit = new VillageConditionEdit(graphics, pen, panel, nationController);
-
-            villageWindow.NationNameCombo.Text = NationNameCombo.Text;
-            villageWindow.VillageNameText.Text = villageCondition.name;
-
-            panel.Refresh();
-            villageConditionEdit.ResetState(villageCondition, NationNameCombo.Text);
+            primary.VillageNameText.Text = VillageNameText.Text;
+            primary.NationNameCombo.Text = NationNameCombo.Text;
             this.Hide();
+
         }
 
         private void VillageNameLabel_Click_(object sender, EventArgs e)
