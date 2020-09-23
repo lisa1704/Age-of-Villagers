@@ -8,8 +8,10 @@ using System.Text;
 
 namespace age_of_villagers.test
 {
+    [TestClass]
     class colourtest
     {
+        [TestMethod]
         public void bdcolourtest()
         {
             Color s = Color.Green;
