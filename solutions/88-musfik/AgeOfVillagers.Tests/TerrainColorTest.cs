@@ -26,6 +26,14 @@ namespace AgeOfVillagers.Tests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void Egyptian_TerrainColorTest()
+        {
+            INation nation = new EgyptianKings();
+            var expected = Color.Yellow;
+            var actual = nation.getTerrainColor();
+            Assert.Equal(expected, actual);
+        }
 
     }
 }
