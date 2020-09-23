@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
     public partial class VillageWindow : Form
     {
+        private NationController nationController;
+        private string VillageName;
+        private string NationName;
         Graphics graphics;
         Pen pen;
         int x, y = -1;
@@ -17,7 +22,7 @@ namespace Age_of_Villagers
         private List<Point> HousePoints { get; set; } = new List<Point>();
         private List<Point> TreePoints { get; set; } = new List<Point>();
         private List<Point> WaterResourcePoints { get; set; } = new List<Point>();
-        
+
         VillageCondition villageCondition;
 
 
@@ -98,32 +103,43 @@ namespace Age_of_Villagers
         {
 
         }
-        private void VillageDrawing_MouseDown(object sender, EventArgs e)
-        {
-            move = true;
-            /*x = e.X;
-            y = e.Y;*/
-        }
-
-        private void VillageDrawing_MouseMove(object sender, EventArgs e)
-        {
-            if (move && x != -1 && y != -1)
-            {
-                move = true;
-                /*x = e.X;
-                y = e.Y;*/ 
-            }
-        }
-        private void VillageDrawing_MouseUp(object sender, EventArgs e)
-            {
-                move = false;
-                x = -1;
-                y = -1;
-            }
-
+        
         public void GetCondition()
         {
             villageCondition = new VillageCondition(VillageNameText.Text, HousePoints, TreePoints, WaterResourcePoints);
+        }
+
+        private void VillageDrawing_MouseDown(object sender, EventArgs e)
+        {
+            
+            
+            Point point = new Point(x, y);
+
+            NationController nationController = new NationController(NationNameCombo.Text);
+
+            if (HouseRB.Checked)
+            {
+                nationController.GetNation(point).HouseDraw().draw(graphics, pen);
+            }
+            else if (TreeRB.Checked)
+            {
+                nationController.GetNation(point).TreeDraw().draw(graphics, pen);
+            }
+            else if (WaterSourceRB.Checked)
+            {
+                nationController.GetNation(point).WaterSourceDraw().draw(graphics, pen);
+            }
+            else
+            {
+                MessageBox.Show("Please Select an item!");
+            }
+
+        }
+        private void VillageDrawing_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+            x = -1;
+            y = -1;
         }
     }
 }

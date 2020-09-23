@@ -54,7 +54,7 @@
             this.VillageDrawing.TabIndex = 0;
             this.VillageDrawing.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageDrawing_Paint);
             this.VillageDrawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseDown);
-            this.VillageDrawing.MouseMove += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseMove);
+            this.VillageDrawing.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseDown);
             this.VillageDrawing.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VillageDrawing_MouseUp);
             // 
             // NewVillage
