@@ -38,6 +38,7 @@
             this.Nations = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.VillageName = new System.Windows.Forms.Label();
+            this.Village_Name = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // DrawPanel
@@ -117,7 +118,7 @@
             "Egyptian Kings",
             "Arab Bedouin ",
             "Inuit Hunters"});
-            this.Nations.Location = new System.Drawing.Point(657, 108);
+            this.Nations.Location = new System.Drawing.Point(671, 146);
             this.Nations.Name = "Nations";
             this.Nations.Size = new System.Drawing.Size(121, 24);
             this.Nations.TabIndex = 7;
@@ -137,16 +138,25 @@
             // VillageName
             // 
             this.VillageName.AutoSize = true;
-            this.VillageName.Location = new System.Drawing.Point(668, 77);
+            this.VillageName.Location = new System.Drawing.Point(676, 81);
             this.VillageName.Name = "VillageName";
             this.VillageName.Size = new System.Drawing.Size(91, 17);
             this.VillageName.TabIndex = 9;
             this.VillageName.Text = "Village Name";
             this.VillageName.Click += new System.EventHandler(this.VillageName_Click);
             // 
+            // Village_Name
+            // 
+            this.Village_Name.Location = new System.Drawing.Point(674, 101);
+            this.Village_Name.Name = "Village_Name";
+            this.Village_Name.Size = new System.Drawing.Size(100, 22);
+            this.Village_Name.TabIndex = 10;
+            this.Village_Name.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(826, 469);
+            this.Controls.Add(this.Village_Name);
             this.Controls.Add(this.VillageName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Nations);
@@ -181,6 +191,7 @@
         private System.Windows.Forms.ComboBox Nations;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label VillageName;
+        private System.Windows.Forms.TextBox Village_Name;
     }
 }
 

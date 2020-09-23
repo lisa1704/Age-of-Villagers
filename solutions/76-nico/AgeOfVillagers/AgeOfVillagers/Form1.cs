@@ -20,6 +20,7 @@ namespace AgeOfVillagers
         List<Point> TreePoints = new List<Point>();
         List<Point> WaterPoints = new List<Point>();
 
+        Factory_Nation nationfactory = new Factory_Nation();
 
 
         public Form1()
@@ -39,7 +40,8 @@ namespace AgeOfVillagers
 
             foreach (Point pt in HousePoints)
             {
-                g.DrawLine(p, pt.X, pt.Y, 100, 100);
+              //  g.DrawLine(p, pt.X, pt.Y, 100, 100);
+                nationfactory.CreateNation(Vtype).draw_house(g, pt);
             }
             foreach (Point pt in TreePoints)
             {
@@ -112,6 +114,11 @@ namespace AgeOfVillagers
                 WaterPoints.Add(e.Location);
             }
             DrawPanel.Invalidate();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
