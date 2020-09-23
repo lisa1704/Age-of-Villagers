@@ -27,7 +27,7 @@ namespace AgeOfVillagers42.Test
         public void TreeTest()
         {
             BangladeshiFarmers bdFarmersTree = new BangladeshiFarmers();
-            Object actual = bdFarmersTree.testTreePoint(point);
+            Object actual = bdFarmersTree.DrawTree(point);
             Object expected = new BDFarmersTree(point);
             actual.Equals(expected);
         }
@@ -36,7 +36,7 @@ namespace AgeOfVillagers42.Test
         public void HouseTest()
         {
             BangladeshiFarmers bdFarmersHouse = new BangladeshiFarmers();
-            Object actual = bdFarmersHouse.testHousePoint(point);
+            Object actual = bdFarmersHouse.DrawHouse(point);
             Object expected = new BDFarmersHouse(point);
             actual.Equals(expected);
         }
@@ -45,7 +45,7 @@ namespace AgeOfVillagers42.Test
         public void WatersourceTest()
         {
             BangladeshiFarmers bdFarmersWS = new BangladeshiFarmers();
-            Object actual = bdFarmersWS.testWatersourcePoint(point);
+            Object actual = bdFarmersWS.DrawWaterSource(point);
             Object expected = new BDFarmersWatersource(point);
             actual.Equals(expected);
         }

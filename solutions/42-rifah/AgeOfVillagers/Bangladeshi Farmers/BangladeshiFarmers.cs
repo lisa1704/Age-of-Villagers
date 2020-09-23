@@ -31,20 +31,5 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
         {
             return Color.Green;
         }
-
-        public Object testTreePoint(Point point)
-        {
-            return new BDFarmersTree(point);
-        }
-
-        public Object testHousePoint(Point point)
-        {
-            return new BDFarmersHouse(point);
-        }
-
-        public Object testWatersourcePoint(Point point)
-        {
-            return new BDFarmersWatersource(point);
-        }
     }
 }
