@@ -23,7 +23,7 @@ namespace Age_of_Villagers
         }
         public IShape TreeDraw()
         {
-            throw new NotImplementedException();
+            return new BangladeshTree(point);
         }
         public Point GetTreePoint()
         {
