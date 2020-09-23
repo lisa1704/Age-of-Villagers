@@ -12,7 +12,7 @@ namespace Age_of_villagers
 
         Color bg_color = Color.Green;
 
-
+        string nationName = "Bangladeshi Farmers";
         public void DrawHouse(Graphics graphics, Point point)
         {
             Pen pen = new Pen(Color.Black);
@@ -82,7 +82,7 @@ namespace Age_of_villagers
 
         public string getName()
         {
-            throw new NotImplementedException();
+            return nationName;
         }
     }
 }

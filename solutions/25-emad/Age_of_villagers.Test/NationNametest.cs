@@ -7,26 +7,31 @@ namespace Age_of_villagers.Test
 {
     public class NationNametest
     {
-        ArabBedouin arabName = new ArabBedouin();
-        string actual = "Arab Bedouin";
+        ArabBedouin arabNation = new ArabBedouin();
+        string NationName = "Arab Bedouin";
+        
 
         [Fact]
 
         public void ArabNameTest()
         {
-            Assert.Equal(actual, arabName.getName());
+            Nation nation = new Nation();
+            INations actual = nation.CheckVillage(NationName);
+            Assert.Equal(arabNation.GetType(),actual.GetType());
         }
 
 
 
-        BangladeshiFarmers banglaName = new BangladeshiFarmers();
-        string actual2 = "Bangla Farmers";
+        BangladeshiFarmers banglaNation = new BangladeshiFarmers();
+        string NationName2 = "Bangladeshi Farmers";
 
         [Fact]
 
         public void BanglaNameTest()
         {
-            Assert.Equal(actual2, banglaName.getName());
+            Nation nation = new Nation();
+            INations actual1 = nation.CheckVillage(NationName2);
+            Assert.Equal(banglaNation.GetType(), actual1.GetType());
         }
 
 
@@ -34,15 +39,6 @@ namespace Age_of_villagers.Test
 
 
 
-        EgyptianKings EgyptName = new EgyptianKings();
-        string actual3 = "Egyptian Kings";
-
-        [Fact]
-
-        public void EgyptNameTest()
-        {
-            Assert.Equal(actual3, EgyptName.getName());
-        }
 
 
 
