@@ -40,6 +40,13 @@ namespace Ageofvillagers
             OpenVillage openVillage = new OpenVillage(openFileDialog1.InitialDirectory +openFileDialog1.FileName);
             openVillage.execute(Itemslist);
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            panel2.Refresh();
+        }
+
+        
     }
     
 }
