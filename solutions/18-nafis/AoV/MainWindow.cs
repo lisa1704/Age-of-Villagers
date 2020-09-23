@@ -47,7 +47,9 @@ namespace AoV
 
                 //myShape = new Line(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(e.X, e.Y));
                 //myShape = new Triangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X), new Point(e.X, pointX ?? e.X));
-                myShape = new Rectangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X));
+                //myShape = new Rectangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X));
+                //myShape = new Arc(20, 20, 100, 100, 0, 90);
+                myShape = new Ellipse(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(e.X, e.Y));
                 myShape.Draw(g);
                 pointX = e.X;
                 pointY = e.Y;

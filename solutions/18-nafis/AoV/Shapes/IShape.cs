@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AoV.Shapes
 {
-    interface IShape
+    public interface IShape
     {
         void Draw(Graphics g);
     }
