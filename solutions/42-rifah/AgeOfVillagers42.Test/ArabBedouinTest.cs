@@ -26,8 +26,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void TreeTest()
         {
-            ArabBedouin abTree = new ArabBedouin();
-            Object actual = abTree.DrawHouse(point);
+            ArabBedouin arabBedouinTree = new ArabBedouin();
+            Object actual = arabBedouinTree.DrawHouse(point);
             Object expected = new ArabBedouinTrees(point);
             actual.Equals(expected);
         }
@@ -35,8 +35,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void HouseTest()
         {
-            ArabBedouin abHouse = new ArabBedouin();
-            Object actual = abHouse.DrawHouse(point);
+            ArabBedouin arabBedouinHouse = new ArabBedouin();
+            Object actual = arabBedouinHouse.DrawHouse(point);
             Object expected = new ArabBedouinHouse(point);
             actual.Equals(expected);
         }
@@ -44,8 +44,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void WaterSourceTest()
         {
-            ArabBedouin abWS = new ArabBedouin();
-            Object actual = abWS.DrawWaterSource(point);
+            ArabBedouin arabBedouinWaterSource = new ArabBedouin();
+            Object actual = arabBedouinWaterSource.DrawWaterSource(point);
             Object expected = new NullItems();
             actual.Equals(expected);
         }

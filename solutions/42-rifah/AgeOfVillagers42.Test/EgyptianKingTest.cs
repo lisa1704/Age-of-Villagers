@@ -25,8 +25,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void TreeTest()
         {
-            EgyptianKings ekTree = new EgyptianKings();
-            Object actual = ekTree.DrawTree(point);
+            EgyptianKings egyptianKingsTree = new EgyptianKings();
+            Object actual = egyptianKingsTree.DrawTree(point);
             Object expected = new EgyptianKingsTrees(point);
             actual.Equals(expected);
         }
@@ -34,8 +34,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void HouseTest()
         {
-            EgyptianKings ekHouse = new EgyptianKings();
-            Object actual = ekHouse.DrawHouse(point);
+            EgyptianKings egyptianKingsHouse = new EgyptianKings();
+            Object actual = egyptianKingsHouse.DrawHouse(point);
             Object expected = new EgyptianKingsTrees(point);
             actual.Equals(expected);
         }
@@ -43,8 +43,8 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void WatersourceTest()
         {
-            EgyptianKings ekWS = new EgyptianKings();
-            Object actual = ekWS.DrawWaterSource(point);
+            EgyptianKings egyptianKingsWaterSource = new EgyptianKings();
+            Object actual = egyptianKingsWaterSource.DrawWaterSource(point);
             Object expected = new EgyptianKingsTrees(point);
             actual.Equals(expected);
         }
