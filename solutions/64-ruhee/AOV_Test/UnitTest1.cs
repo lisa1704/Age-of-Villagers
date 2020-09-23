@@ -54,5 +54,14 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void BangladeshiTree()
+        {
+            IShape bdtree = new BangladeshiFarmers().testtree(p);
+            IShape tree = new BangladeshiFarmers().DrawHouse(g, p);
+            bdtree.Equals(tree);
+
+        }
+
     }
 }

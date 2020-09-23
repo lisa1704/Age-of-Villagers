@@ -40,5 +40,10 @@ namespace Age_of_Villagers.BangladeshiFarmers
         {
             return new BangladeshiHouse(p);
         }
+
+        public IShape testtree(Point p)
+        {
+            return new BangladeshiTrees(p);
+        }
     }
 }
