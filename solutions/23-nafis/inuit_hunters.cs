@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
 class InuitHunters : INation
 {
     public void paint_house(MouseEventArgs e, Graphics g, Pen p)
@@ -13,5 +15,14 @@ class InuitHunters : INation
         g.DrawArc(p, x - 8, y - 8, 16, 16, 0, -180);
         g.DrawArc(p, x - 3, y - 3, 6, 6, 0, -180);
         g.DrawLine(p, pt2, pt3);
+    }
+    public void paint_tree(MouseEventArgs e, Graphics g, Pen p)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void paint_waterSource(MouseEventArgs e, Graphics g, Pen p)
+    {
+        throw new NotImplementedException();
     }
 }
