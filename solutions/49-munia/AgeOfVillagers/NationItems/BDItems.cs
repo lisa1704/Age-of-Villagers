@@ -59,8 +59,6 @@ namespace AgeOfVillagers.NationItems
             p5.X = p.X - 9;
             p5.Y = p.Y -16;
 
-
-
             // draw circle or radius 8
             Circle c = new Circle(g, p1, 16);
             c.Draw();

@@ -38,7 +38,8 @@ namespace AgeOfVillagers
         {
             Graphics g = canvas.CreateGraphics();
             // BangladeshiFarmers nation = new BangladeshiFarmers();
-            EgyptianKings nation = new EgyptianKings();
+            //  EgyptianKings nation = new EgyptianKings();
+            ArabBeouins nation = new ArabBeouins();
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
