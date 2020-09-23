@@ -68,6 +68,7 @@
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
     <Compile Include="NationFactory.cs" />
