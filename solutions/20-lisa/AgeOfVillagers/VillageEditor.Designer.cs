@@ -44,7 +44,7 @@
             // 
             // drawingPanel
             // 
-            this.drawingPanel.BackColor = System.Drawing.SystemColors.Info;
+            this.drawingPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.drawingPanel.Controls.Add(this.toolsPanel);
             this.drawingPanel.Location = new System.Drawing.Point(1, 1);
             this.drawingPanel.Name = "drawingPanel";
