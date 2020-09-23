@@ -1,18 +1,30 @@
 package sample;
 
+import com.google.gson.JsonObject;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import java.io.FileWriter;
+import javafx.stage.FileChooser;
+
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
 
 
 public class Controller {
+    public JsonObject jsonFile;
     public RadioButton rbtnTree,rbtnHouse,rbtnWaterSource;
     public Button btnNewVillage,btnSaveVillage,btnOpenVillage;
     public TextField nameOfVillage;
@@ -23,7 +35,10 @@ public class Controller {
     public AnchorPane drawSpace;
     public Canvas canvas;
     public GraphicsContext gc;
-    public FileWriter fileWriter=null;
+    public Dictionary dictionary;
+    public ArrayList<Point> treeList;
+    public ArrayList<Point> houseList;
+    public ArrayList<Point> wsList;
 
     public void selectTree(){
         rbtnHouse.setSelected(false);
@@ -65,18 +80,23 @@ public class Controller {
                     String object=selectObject();
                     if (event.getButton().equals(MouseButton.PRIMARY)){
                         if (event.getClickCount()==2){
-                            double x,y;
-                            x=event.getX();
-                            y=event.getY();
+                            int x,y;
+                            x=(int)event.getX();
+                            y=(int)event.getY();
                             gc=canvas.getGraphicsContext2D();
-                            try {
-                                fileWriter.write(object+" "+x+" "+y+"\n");
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            if (object=="Tree"){
+                                gc.fillText("T",x,y);
+                                treeList.add(new Point(x,y));
                             }
-                            if (object=="Tree")gc.fillText("T",x,y);
-                            else if (object=="House")gc.fillText("H",x,y);
-                            else if (object=="WS")gc.fillText("W",x,y);
+
+                            else if (object=="House"){
+                                gc.fillText("H",x,y);
+                                houseList.add(new Point(x,y));
+                            }
+                            else if (object=="WS"){
+                                gc.fillText("W",x,y);
+                                wsList.add(new Point(x,y));
+                            }
                         }
                     }
 
@@ -112,12 +132,13 @@ public class Controller {
         }else{
             if (nameOfVillage.getText().equals("") || nationOfVillage.getSelectionModel().isEmpty()){
                 System.out.println("Give all information!");
-            }else{try{
-                fileWriter=new FileWriter("D:\\5th Semester\\DP\\age-of-villagers-swe-17\\solutions\\58-sakib-2\\"+nameOfVillage.getText()+".txt",true);
-                fileWriter.write(nameOfVillage.getText()+" "+nationOfVillage.getSelectionModel().getSelectedItem()+"\n");
-            }catch (Exception e){
-
-            }
+            }else{
+                dictionary=new Hashtable();
+                treeList=new ArrayList<Point>();
+                houseList=new ArrayList<Point>();
+                wsList=new ArrayList<Point>();
+                dictionary.put("Name",nameOfVillage.getText());
+                dictionary.put("Nation",nationOfVillage.getSelectionModel().getSelectedItem());
                 rbtnTree.setVisible(true);
                 rbtnHouse.setVisible(true);
                 rbtnWaterSource.setVisible(true);
@@ -128,17 +149,33 @@ public class Controller {
                 nameOfVillage.setVisible(false);
                 nationOfVillage.setVisible(false);
                 isCreating=true;
+                }
             }
-
-        }
+    }
+    public void loadVillage(){
 
     }
-    public void loadVillage(){}
     public void saveVillage(){
-        try {
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        dictionary.put("Tree",treeList);
+        dictionary.put("House",houseList);
+        dictionary.put("WS",wsList);
+        FileChooser fileChooser = new FileChooser();
+
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Text format (*.txt)", "*.txt");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File file = fileChooser.showSaveDialog(null);
+
+        if (file != null) {
+            try {
+                PrintWriter writer;
+                writer = new PrintWriter(file);
+                writer.println(dictionary);
+                writer.close();
+            } catch (IOException ex) {
+
+            }
+
         }
         initialState();
     }
