@@ -55,6 +55,7 @@
     <Compile Include="BdTree.cs" />
     <Compile Include="BdTreeShape.cs" />
     <Compile Include="BdWaterSource.cs" />
+    <Compile Include="BdWaterSourceShape.cs" />
     <Compile Include="CompoundShape.cs" />
     <Compile Include="DrawArc.cs" />
     <Compile Include="DrawLine.cs" />

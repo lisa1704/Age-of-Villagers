@@ -20,5 +20,12 @@ namespace XUnitTesting
             BdTree bdTree = new BdTree(point);
             Assert.Equal(point, bdTree.GetPoint());
         }
+
+        [Fact]
+        public void BdWaterSourceTest()
+        {
+            BdWaterSource bdWaterSource = new BdWaterSource(point);
+            Assert.Equal(point, bdWaterSource.GetPoint());
+        }
     }
 }

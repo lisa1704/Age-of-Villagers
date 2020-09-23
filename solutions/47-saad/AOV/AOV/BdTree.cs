@@ -8,11 +8,11 @@ namespace AOV
         public BdTree(Point clicked)
         {
             _clicked = clicked;
-            Point top = new Point(clicked.X + 16, clicked.Y + 18);
-            Point topLeftCorner = new Point(clicked.X+7, clicked.Y+14);
-            Point bottomRightCorner = new Point(clicked.X + 9, clicked.Y + 24);
+            Point top = new Point(_clicked.X + 16, _clicked.Y + 18);
+            Point topLeftCorner = new Point(_clicked.X+7, _clicked.Y+14);
+            Point bottomRightCorner = new Point(_clicked.X + 9, _clicked.Y + 24);
 
-            villageItemShape = new BdTreeShape(clicked, top, topLeftCorner, bottomRightCorner);            
+            villageItemShape = new BdTreeShape(_clicked, top, topLeftCorner, bottomRightCorner);            
         }
         public override Point GetPoint()
         {
