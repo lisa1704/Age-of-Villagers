@@ -7,12 +7,14 @@ namespace AgeOfVillagers
 {
     interface ICommand
     {
-        void VCommand();
+
     }
 
     public struct VillageItems
     {
-        public string v;
+        public string nationname;
+        public string villagename;
+        public Color terraincolor;
         public List<Point> tp;
         public List<Point> hp;
         public List<Point> wsp;
