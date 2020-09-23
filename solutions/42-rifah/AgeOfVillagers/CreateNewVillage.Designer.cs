@@ -52,7 +52,6 @@ namespace AgeOfVillagers
             this.AgeOfVillagers.Size = new System.Drawing.Size(241, 32);
             this.AgeOfVillagers.TabIndex = 0;
             this.AgeOfVillagers.Text = "AGE OF VILLAGERS";
-            this.AgeOfVillagers.Click += new System.EventHandler(this.AgeOfVillagers_Click);
             // 
             // drawingPanel
             // 
@@ -165,7 +164,6 @@ namespace AgeOfVillagers
             this.villageName.Size = new System.Drawing.Size(112, 23);
             this.villageName.TabIndex = 2;
             this.villageName.Text = "Village Name";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // CreateNewVillage
             // 

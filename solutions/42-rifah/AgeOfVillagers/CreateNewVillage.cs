@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         string SelectedItemName = "";
         string village_name = "";
         string nationName = "";
+        Color villageBackgroundColor;
         List<Point> tree_point = new List<Point>();
         List<Point> house_point = new List<Point>();
         List<Point> waterSource_point = new List<Point>();
@@ -31,27 +32,13 @@ namespace AgeOfVillagers
         {
             myItems.NationName = NationName.Text;
             myItems.VillageName = VillageNametextBox.Text;
+            myItems.VillageColor = this.villageBackgroundColor;
             myItems.Tree = this.tree_point;
             myItems.House = this.house_point;
             myItems.WaterSource = this.waterSource_point;
         }
 
         private void CreateNewVillage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgeOfVillagers_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void villageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nation_Click(object sender, EventArgs e)
         {
 
         }
@@ -105,6 +92,7 @@ namespace AgeOfVillagers
         {
             NationName.Text = myitem.NationName;
             VillageNametextBox.Text = myitem.VillageName;
+            villageBackgroundColor = myitem.VillageColor;
 
             foreach (Point point in myitem.House)
             {
@@ -168,6 +156,7 @@ namespace AgeOfVillagers
         {
             nationName = NationName.Text;
             drawingPanel.BackColor = nationfactory.GetNation(nationName).BackgroundColor();
+            villageBackgroundColor = drawingPanel.BackColor;
         }
 
         private void VillageNametextBox_TextChanged(object sender, EventArgs e)

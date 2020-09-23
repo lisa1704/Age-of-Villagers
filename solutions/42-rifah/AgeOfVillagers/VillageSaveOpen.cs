@@ -67,6 +67,7 @@ namespace AgeOfVillagers
     {
         public string NationName;
         public string VillageName;
+        public Color VillageColor;
         public List<Point> House;
         public List<Point> Tree;
         public List<Point> WaterSource;
