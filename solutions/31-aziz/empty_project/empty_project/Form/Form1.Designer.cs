@@ -174,6 +174,7 @@
             this.EnterText.Size = new System.Drawing.Size(121, 23);
             this.EnterText.TabIndex = 14;
             this.EnterText.Click += new System.EventHandler(this.EnterText_Click);
+            this.EnterText.TextChanged += new System.EventHandler(this.EnterText_TextChanged);
             // 
             // Form1
             // 

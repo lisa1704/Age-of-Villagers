@@ -45,6 +45,7 @@ namespace empty_project
 
         private void NewVillage_Click(object sender, EventArgs e)
         {
+            EnterText.Clear();
             Refresh();
             village.RefreshVillage();
         }
@@ -106,6 +107,11 @@ namespace empty_project
         }
 
         private void EnterText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnterText_TextChanged(object sender, EventArgs e)
         {
 
         }
