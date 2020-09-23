@@ -11,7 +11,7 @@ namespace AgeOfVillagers.NationItems
 {
     class BDItems : INationItems
     {
-        Point p1, p2, p3, p4, p5, p6, p7, p8, p9;
+        Point p1, p2, p3, p4, p5,p6;
         Pen pen = new Pen(Color.Black);
         public void House(Graphics g, Point p)
         {
@@ -59,6 +59,8 @@ namespace AgeOfVillagers.NationItems
             p5.X = p.X - 9;
             p5.Y = p.Y -16;
 
+
+
             // draw circle or radius 8
             Circle c = new Circle(g, p1, 16);
             c.Draw();
@@ -68,7 +70,30 @@ namespace AgeOfVillagers.NationItems
 
         public void Water(Graphics g, Point p)
         {
-            
+            p1.X = p.X ;
+            p1.Y = p.Y ;
+
+            p2.X = p.X - 20;
+            p2.Y = p.Y - 16;
+
+            p3.X = p.X - 24;
+            p3.Y = p.Y -12;
+
+            p4.X = p.X - 17;
+            p4.Y = p.Y - 6;
+
+            p5.X = p.X - 9;
+            p5.Y = p.Y -2;
+            p6.X = p.X - 4;
+            p6.Y = p.Y - 17;
+
+            g.DrawLine(pen,p1,p6);
+            g.DrawLine(pen, p6, p2);
+            g.DrawLine(pen,p2,p3);
+            g.DrawLine(pen,p4,p3);
+            g.DrawLine(pen,p5,p4);
+            g.DrawLine(pen,p1,p5);
+
         }
     }
 }
