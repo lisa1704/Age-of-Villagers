@@ -25,7 +25,7 @@ namespace AgeOfVillagers
 
     public class EgyptianTree : Tree
     {
-        public override IShape getItemShape(Point point) => new EgyptianTreeShape(point);
+        public override IShape getItemShape(Point point) => new EgyptianTreeShape(point, getWidth(), getHeight());
     }
 
 }
