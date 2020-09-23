@@ -25,6 +25,32 @@ namespace Age_Of_Villagers_Test
             Assert.IsType<BangladeshiFarmers>(nationController.getNation(new Point()));
 
         }
+        [Fact]
+        public void BDHousepointTest()
+        {
+            Point result = nationController.getNation(point).GetHousePoint();
+            Assert.Equal(point, result);
+
+        }
+        [Fact]
+        public void BDTreepointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetTreePoint();
+            Assert.Equal(new Point(), result);
+
+        }
+        [Fact]
+        public void BDWaterPointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetWaterPoint();
+            Assert.Equal(new Point(), result);
+
+        }
     }
+}
 
 }
