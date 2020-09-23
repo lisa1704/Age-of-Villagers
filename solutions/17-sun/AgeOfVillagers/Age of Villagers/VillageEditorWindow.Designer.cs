@@ -75,7 +75,6 @@ namespace Age_of_Villagers
             this.VillageTitle.Size = new System.Drawing.Size(70, 23);
             this.VillageTitle.TabIndex = 3;
             this.VillageTitle.Text = "Village:";
-            ;
             // 
             // NationTitle
             // 
@@ -86,7 +85,6 @@ namespace Age_of_Villagers
             this.NationTitle.Size = new System.Drawing.Size(69, 23);
             this.NationTitle.TabIndex = 4;
             this.NationTitle.Text = "Nation:";
-            
             // 
             // TreeButton
             // 
@@ -171,9 +169,10 @@ namespace Age_of_Villagers
             this.VillageNameBox.FormattingEnabled = true;
             this.VillageNameBox.Location = new System.Drawing.Point(708, 86);
             this.VillageNameBox.Name = "VillageNameBox";
+            this.VillageNameBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.VillageNameBox.Size = new System.Drawing.Size(162, 35);
             this.VillageNameBox.TabIndex = 12;
-            this.VillageNameBox.Text += new System.EventHandler(this.VillageNameBox_Text);
+            this.VillageNameBox.Text = "Enter Name";
             // 
             // VillageEditorWindow
             // 
