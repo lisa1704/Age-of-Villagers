@@ -17,28 +17,7 @@ namespace XUnitTestProject_AgeOfVilager
             Assert.Equal(4, result);
 
         }
-        [Fact]
-        public void ColorcheckTest_01()
-        {
-            string checkstring = "Arab Bedouin";
-            NationManager man = new NationManager(checkstring) ;
-
-            var result =  man.getNation(new Point()).GetTerritoryColor();
-            Assert.Equal(Color.GreenYellow,result);
-
-        }
-    
-      
-        [Fact]
-        public void ColorcheckTest_03()
-        {
-            string checkstring = "Inuit Hunters";
-            NationManager man = new NationManager(checkstring);
-
-            var result = man.getNation(new Point()).GetTerritoryColor();
-            Assert.Equal(Color.White, result);
-
-        }
+       
 
     }
 }
