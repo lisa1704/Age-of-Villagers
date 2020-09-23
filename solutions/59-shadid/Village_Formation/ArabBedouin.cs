@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace Village_Formation
 {
     class ArabBedouin : INation
     {
+        Pen mypen = new Pen(Color.Black, 2);
+        Graphics g;
         public void DrawHouse(MouseEventArgs e)
         {
            

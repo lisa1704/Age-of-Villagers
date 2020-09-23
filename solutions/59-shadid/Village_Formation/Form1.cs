@@ -71,6 +71,7 @@ namespace Village_Formation
             Graphics g = this.CreateGraphics();
             BangladeshiFarmers bd = new BangladeshiFarmers(g);
             EgyptianKings ek = new EgyptianKings(g);
+            InuitHunters ih = new InuitHunters(g);
            
             if (radioButton1.Checked)
             {
@@ -83,6 +84,7 @@ namespace Village_Formation
             {
                 bd.DrawHouse(e);
                 ek.DrawHouse(e);
+                ih.DrawHouse(e);
                 
 
             }
