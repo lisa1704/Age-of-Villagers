@@ -127,6 +127,34 @@ namespace AgeOfVillagersTest
         }
 
         //Egyptian Kings Test
+        [Fact]
+        public void EgyptianTest()
+        {
+            INation expected = nationfactory.GetNation("Egyptian Kings");
+            Assert.IsType<Egyptian>(expected);
+
+        }
+
+        [Fact]
+        public void EgyptianHouseTest()
+        {
+            IShapes expected = nationfactory.GetNation("Egyptian Kings").DrawHouse(gr, pTest);
+            Assert.IsType<EgyptianHouse>(expected);
+        }
+
+        [Fact]
+        public void EgyptianTreeTest()
+        {
+            IShapes expected = nationfactory.GetNation("Egyptian Kings").DrawTree(gr, pTest);
+            Assert.IsType<EgyptianTree>(expected);
+        }
+
+        [Fact]
+        public void EgyptianWaterSourceTest()
+        {
+            IShapes expected = nationfactory.GetNation("Egyptian Kings").DrawWaterSource(gr, pTest);
+            Assert.IsType<EgyptianWaterSource>(expected);
+        }
 
 
 
