@@ -10,6 +10,9 @@ namespace AOV
             AddShape(new DrawLine(x3, clicked));
             AddShape(new DrawLine(x2, x4));
             AddShape(new DrawLine(x3, x4));
+
+            //Check
+            //AddShape(new Rectangle(topLeftCorner, bottomRightCorner)); //Uncomment to check the height and width
         }
     }
 }

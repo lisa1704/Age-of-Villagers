@@ -7,8 +7,7 @@ namespace AOV
         private readonly Point _clicked;
         public ArabTree(Point clicked)
         {
-            _clicked = clicked;            
-           
+            _clicked = clicked;           
             Point topCenter = new Point(_clicked.X + 1, _clicked.Y);
             Point topRightCorner = new Point(_clicked.X + 2, _clicked.Y);
             Point bottomRightCorner = new Point(_clicked.X + 2, _clicked.Y + 12);

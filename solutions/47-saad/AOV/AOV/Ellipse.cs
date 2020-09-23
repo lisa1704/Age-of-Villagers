@@ -6,7 +6,6 @@ namespace AOV
     {
         readonly float height;
         readonly float width;
-
         public Ellipse(Point x1,Point x2)
         {
             height = x2.X - x1.X;

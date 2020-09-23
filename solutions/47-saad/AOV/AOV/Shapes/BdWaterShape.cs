@@ -4,17 +4,17 @@ namespace AOV
 {
     public class BdWaterSourceShape : CompoundShape
     {
-        public BdWaterSourceShape(Point clicked, Point p2, Point p3, Point p4, Point p5, Point p6, Point p7, Point p8, Point p9)
+        public BdWaterSourceShape(Point clicked, Point x2, Point x3, Point x4, Point x5, Point x6, Point x7, Point x8, Point x9)
         {
-            AddShape(new DrawLine(clicked, p2));
-            AddShape(new DrawLine(p2, p3));
-            AddShape(new DrawLine(p3, p4));
-            AddShape(new DrawLine(p4, p5));
-            AddShape(new DrawLine(p5, p6));
-            AddShape(new DrawLine(p6, p7));
-            AddShape(new DrawLine(p7, p8));
-            AddShape(new DrawLine(p8, p9));
-            AddShape(new DrawLine(p9, clicked));
+            AddShape(new DrawLine(clicked, x2));
+            AddShape(new DrawLine(x2, x3));
+            AddShape(new DrawLine(x3, x4));
+            AddShape(new DrawLine(x4, x5));
+            AddShape(new DrawLine(x5, x6));
+            AddShape(new DrawLine(x6, x7));
+            AddShape(new DrawLine(x7, x8));
+            AddShape(new DrawLine(x8, x9));
+            AddShape(new DrawLine(x9, clicked));
         }       
     }
 }

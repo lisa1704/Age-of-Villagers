@@ -11,7 +11,6 @@ namespace XUnitTesting
         [Fact]
         public void InuitHouseTest()
         {
-
             InuitHouse igloo = new InuitHouse(point);
             Assert.Equal(point, igloo.GetPoint());
         }       

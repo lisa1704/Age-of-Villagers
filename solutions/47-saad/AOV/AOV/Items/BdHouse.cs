@@ -5,7 +5,6 @@ namespace AOV
     public class BdHouse : NationItem
     {
         private readonly Point _clicked;
-
         public BdHouse(Point clicked)
         {
             _clicked = clicked;

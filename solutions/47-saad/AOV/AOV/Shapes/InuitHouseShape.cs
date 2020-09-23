@@ -11,7 +11,7 @@ namespace AOV
             AddShape(new DrawArc(clicked.X + 6, x2.Y + 10, 4, 10, 0, -180));
 
             //Check
-            //AddShape(new Rectangle(x1, x3)); //Uncomment to check the height and width
+            //AddShape(new Rectangle(clicked, x3)); //Uncomment to check the height and width
         }
     }
 }

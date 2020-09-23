@@ -8,16 +8,16 @@ namespace AOV
         public BdWaterSource(Point clicked)
         {
             _clicked = clicked;
-            Point p2 = new Point(_clicked.X + 5, _clicked.Y - 2);
-            Point p3 = new Point(_clicked.X + 6, _clicked.Y);
-            Point p4 = new Point(_clicked.X + 12, _clicked.Y - 5);
-            Point p5 = new Point(_clicked.X + 19, _clicked.Y);
-            Point p6 = new Point(_clicked.X + 17, _clicked.Y + 9);
-            Point p7 = new Point(_clicked.X + 7, _clicked.Y + 5);
-            Point p8 = new Point(_clicked.X, _clicked.Y + 11);
-            Point p9 = new Point(_clicked.X - 5, _clicked.Y + 7);
+            Point x2 = new Point(_clicked.X + 5, _clicked.Y - 2);
+            Point x3 = new Point(_clicked.X + 6, _clicked.Y);
+            Point x4 = new Point(_clicked.X + 12, _clicked.Y - 5);
+            Point x5 = new Point(_clicked.X + 19, _clicked.Y);
+            Point x6 = new Point(_clicked.X + 17, _clicked.Y + 9);
+            Point x7 = new Point(_clicked.X + 7, _clicked.Y + 5);
+            Point x8 = new Point(_clicked.X, _clicked.Y + 11);
+            Point x9 = new Point(_clicked.X - 5, _clicked.Y + 7);
 
-            nationItemShape = new BdWaterSourceShape(_clicked, p2, p3, p4, p5, p6, p7, p8, p9);
+            nationItemShape = new BdWaterSourceShape(_clicked, x2, x3, x4, x5, x6, x7, x8, x9);
         }
         public override Point GetPoint()
         {

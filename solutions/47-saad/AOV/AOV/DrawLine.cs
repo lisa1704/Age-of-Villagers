@@ -6,7 +6,6 @@ namespace AOV
     {
         private Point x;
         private Point y;
-
         public DrawLine(Point x, Point y)
         {
             this.x = x;
