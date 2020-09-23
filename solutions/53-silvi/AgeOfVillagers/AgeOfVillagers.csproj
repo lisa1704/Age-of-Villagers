@@ -55,6 +55,7 @@
     <Compile Include="BangladeshiItemFactory.cs" />
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Composite.cs" />
     <Compile Include="EgyptianKingsHouse.cs" />
     <Compile Include="EgyptianItemFactory.cs" />
