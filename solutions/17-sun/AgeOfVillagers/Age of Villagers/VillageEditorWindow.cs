@@ -60,7 +60,7 @@ namespace Age_of_Villagers
 
             if (HouseSwitch)
             {
-
+                VillageEditorPanel.BackColor = Color.Green;
                 FarmerHouse hut = new FarmerHouse(local);
                 hut.Draw(gfx, p);
                

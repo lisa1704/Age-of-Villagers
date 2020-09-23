@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Age_of_Villagers.Models
@@ -8,7 +9,8 @@ namespace Age_of_Villagers.Models
     {
         private string nationName = "Arab Bedouins";
         private string inhabitedVillage;
-        public void Draw_House()
+     
+        public void Draw_House(Point location, Graphics gfx, Pen p)
         {
             throw new NotImplementedException();
         }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Age_of_Villagers.Models
 {
     interface INation
     { 
-        void Draw_House();
+        void Draw_House(Point location, Graphics gfx, Pen p);
         void Draw_Tree();
         void Draw_WaterSource();
         void Draw_Terrain();
@@ -16,6 +17,7 @@ namespace Age_of_Villagers.Models
         void Set_inhabitedVillage(string village);
 
         string Get_NationName();
+
        
 
     }

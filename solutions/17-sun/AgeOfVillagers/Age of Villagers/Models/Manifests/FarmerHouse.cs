@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers.Models.Manifests
 {
-     class FarmerHouse : IShape
+     public class FarmerHouse : IShape
     {
         List<Line> LineList = new List<Line>();
         public FarmerHouse(Point start)
