@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\Arc.cs" />
     <Compile Include="Shapes\BangladeshiHouse.cs" />
+    <Compile Include="Shapes\BangladeshiTree.cs" />
     <Compile Include="Shapes\ComposeShape.cs" />
     <Compile Include="Shapes\Ellipse.cs" />
     <Compile Include="Shapes\IShape.cs" />
