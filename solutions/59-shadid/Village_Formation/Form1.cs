@@ -74,7 +74,7 @@ namespace Village_Formation
            
             if (radioButton1.Checked)
             {
-
+        
                 bd.DrawWaterResource(e);
                 ek.DrawWaterResource(e);
 
