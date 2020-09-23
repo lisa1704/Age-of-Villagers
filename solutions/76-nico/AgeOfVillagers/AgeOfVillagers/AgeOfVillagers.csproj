@@ -49,6 +49,7 @@
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshFarmers.cs" />
+    <Compile Include="CompositeShape.cs" />
     <Compile Include="Egyptian_Kings.cs" />
     <Compile Include="Factory_Nation.cs" />
     <Compile Include="INation.cs" />
