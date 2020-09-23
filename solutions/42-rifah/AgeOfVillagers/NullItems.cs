@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         public void drawing()
         {
-            MessageBox.Show("NULL ITEMS");
+            // Empty
         }
     }
 }
