@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using Age_Of_Villagers;
+using Age_of_Villagers;
 using Xunit;
 
 namespace Age_Of_Villagers_Test

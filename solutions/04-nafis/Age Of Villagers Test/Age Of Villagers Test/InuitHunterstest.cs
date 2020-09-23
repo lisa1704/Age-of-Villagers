@@ -6,7 +6,7 @@ using Age_of_Villagers;
 using Xunit;
 namespace Age_Of_Villagers_Test
 {
-    public class EgyptianKingTest
+    class InuitHunterstest
     {
         private static string check = "Egyptian Kings";
         NationController nationController = new NationController(check);
@@ -16,7 +16,7 @@ namespace Age_Of_Villagers_Test
         public void BDBackgroundTest()
         {
             var result = nationController.getNation(new Point()).GetTerrainColor();
-            Assert.Equal(Color.Yellow, result);
+            Assert.Equal(Color.White, result);
         }
     }
 }
