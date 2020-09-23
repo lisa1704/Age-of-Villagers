@@ -120,6 +120,9 @@
     <Compile Include="Unittest\UnitTestBangladeshi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Unittest\UnitTestEgyptianKing.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="AgeofVillagers.resx">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </EmbeddedResource>
