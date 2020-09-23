@@ -21,10 +21,10 @@ namespace age_of_villagers
         }
         public void draw_house()
         {
-            Point p1 = new Point(point.X + 25, point.Y + 50);
-            Point p2 = new Point(point.X - 25, point.Y + 50);
-            Point p3 = new Point(point.X + 25, point.Y - 25);
-            Point p4 = new Point(point.X + 50, point.Y + 25);
+            Point p1 = new Point(point.X + 16, point.Y + 20);
+            Point p2 = new Point(point.X - 16, point.Y + 20);
+            Point p3 = new Point(point.X + 13, point.Y - 10);
+            Point p4 = new Point(point.X + 28, point.Y + 10);
             gp.DrawLine(pen, point, p1);
             gp.DrawLine(pen, p1, p2);
             gp.DrawLine(pen, p2, point);
@@ -36,15 +36,15 @@ namespace age_of_villagers
         public void draw_tree()
         {
             Point p0 = new Point(point.X, point.Y);
-            Point p1 = new Point(p0.X - 2, p0.Y);
-            Point p2 = new Point(p0.X + 2, p0.Y);
-            Point p3 = new Point(p0.X - 2, p0.Y + 50);
-            Point p4 = new Point(p0.X + 2, p0.Y + 50);
-            Point p5 = new Point(p0.X, p0.Y - 35);
-            Point p6 = new Point(p0.X - 25, p0.Y - 25);
-            Point p7 = new Point(p0.X + 25, p0.Y - 25);
-            Point p8 = new Point(p0.X - 35, p0.Y - 10);
-            Point p9 = new Point(p0.X + 35, p0.Y - 10);
+            Point p1 = new Point(p0.X - 1, p0.Y);
+            Point p2 = new Point(p0.X + 1, p0.Y);
+            Point p3 = new Point(p0.X - 1, p0.Y + 15);
+            Point p4 = new Point(p0.X + 1, p0.Y + 15);
+            Point p5 = new Point(p0.X, p0.Y - 10);
+            Point p6 = new Point(p0.X - 5, p0.Y - 8);
+            Point p7 = new Point(p0.X + 5, p0.Y - 8);
+            Point p8 = new Point(p0.X - 12, p0.Y - 3);
+            Point p9 = new Point(p0.X + 12, p0.Y - 3);
             gp.DrawLine(pen, p1, p2);
             gp.DrawLine(pen, p1, p3);
             gp.DrawLine(pen, p3, p4);

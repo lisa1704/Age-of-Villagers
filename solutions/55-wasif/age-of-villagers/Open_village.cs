@@ -4,24 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace age_of_villagers
 {
     class Open_village
     {
-        OpenFileDialog openFileDialog1 = new OpenFileDialog
+        public Village Opvill()
         {
-            CheckFileExists = true,
-            CheckPathExists = true,
+            Village village;
 
-            DefaultExt = "txt",
-            Filter = "aov files (*.aov)|*.txt",
-            FilterIndex = 2,
-            RestoreDirectory = true,
 
-            ReadOnlyChecked = true,
-            ShowReadOnly = true
-        };
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = @"E:\Villages\",
+                Title = "Open Village",
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "aov",
+                Filter = "aov files (*.aov)|*.aov",
+                FilterIndex = 2,
+                RestoreDirectory = true,
 
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var file = openFileDialog.FileName;
+
+                village = JsonConvert.DeserializeObject<Village>(File.ReadAllText(file));
+
+                return village;
+            }
+
+            return null;
+        }
     }
 }

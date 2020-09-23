@@ -17,7 +17,7 @@ namespace age_of_villagers
             villagename = village;
 
             string villageSerialized = JsonConvert.SerializeObject(village);
-            System.IO.File.WriteAllText("E:/" + village.getName() + ".aov", villageSerialized);
+            System.IO.File.WriteAllText("E:/Villages/" + village.getName() + ".aov", villageSerialized);
             Debug.WriteLine(villageSerialized);
         }
     }

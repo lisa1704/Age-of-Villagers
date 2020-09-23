@@ -91,7 +91,8 @@ namespace age_of_villagers
         }
         private void OpenVillageButtonClick(object sender, EventArgs e)
         {
-
+            Open_village ov = new Open_village();
+            newvillage = ov.Opvill();
         }
     }
 }

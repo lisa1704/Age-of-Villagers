@@ -21,10 +21,10 @@ namespace age_of_villagers
         }
         public void draw_house()
         {
-            Point p1 = new Point(p.X + 25, p.Y - 25);
-            Point p2 = new Point(p.X + 50, p.Y);
-            Point p3 = new Point(p.X, p.Y + 25);
-            Point p4 = new Point(p2.X, p2.Y + 25);
+            Point p1 = new Point(p.X + 16, p.Y - 16);
+            Point p2 = new Point(p.X + 32, p.Y);
+            Point p3 = new Point(p.X, p.Y + 16);
+            Point p4 = new Point(p2.X, p2.Y + 16);
 
             gp.DrawLine(pen, p, p1);
             gp.DrawLine(pen, p1, p2);
@@ -39,9 +39,9 @@ namespace age_of_villagers
         {
             Point p1 = new Point(p.X - 2, p.Y);
             Point p2 = new Point(p.X + 2, p.Y);
-            Point p3 = new Point(p.X - 2, p.Y + 50);
-            Point p4 = new Point(p.X + 2, p.Y + 50);
-            gp.DrawArc(pen, p.X-25, p.Y-30, 50, 50, 0, 360);
+            Point p3 = new Point(p.X - 2, p.Y + 24);
+            Point p4 = new Point(p.X + 2, p.Y + 24);
+            gp.DrawArc(pen, p.X-12, p.Y-12, 24, 24, 0, 360);
         
 
             gp.DrawLine(pen, p1, p2);
@@ -53,14 +53,14 @@ namespace age_of_villagers
         public void draw_watersource()
         {
             Point p1 = new Point(p.X, p.Y);
-            Point p2 = new Point(p.X + 5, p.Y - 2);
-            Point p3 = new Point(p.X + 6, p.Y);
-            Point p4 = new Point(p.X + 12, p.Y - 5);
-            Point p5 = new Point(p.X + 19, p.Y);
-            Point p6 = new Point(p.X + 17, p.Y + 9);
-            Point p7 = new Point(p.X + 7, p.Y + 5);
-            Point p8 = new Point(p.X, p.Y + 11);
-            Point p9 = new Point(p.X - 5, p.Y + 7);
+            Point p2 = new Point(p.X + 10, p.Y - 4);
+            Point p3 = new Point(p.X + 12, p.Y);
+            Point p4 = new Point(p.X + 24, p.Y - 10);
+            Point p5 = new Point(p.X + 38, p.Y);
+            Point p6 = new Point(p.X + 34, p.Y + 18);
+            Point p7 = new Point(p.X + 14, p.Y + 10);
+            Point p8 = new Point(p.X, p.Y + 22);
+            Point p9 = new Point(p.X - 10, p.Y + 14);
 
             gp.DrawLine(pen, p1, p2);
             gp.DrawLine(pen,p2, p3);
@@ -71,7 +71,9 @@ namespace age_of_villagers
             gp.DrawLine(pen,p7, p8);
             gp.DrawLine(pen,p8, p9);
             gp.DrawLine(pen,p9, p1);
+            
         }
+        
         public Color draw_terrain()
         {
             return Color.PaleGreen;
