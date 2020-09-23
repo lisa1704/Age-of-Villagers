@@ -10,6 +10,23 @@ namespace Age_of_Villagers
 {
     public partial class SelectVillage : Form
     {
+
+        private readonly VillageWindow villageWindow;
+        private readonly Graphics graphics;
+        private readonly Pen pen;
+        private readonly Panel panel;
+        private readonly VillageCondition villageCondition;
+
+        public SelectVillage(VillageWindow villageWindow, Graphics graphics, Pen pen, Panel panel, VillageCondition villageCondition)
+        {
+            this.villageWindow = villageWindow;
+            this.graphics = graphics;
+            this.pen = pen;
+            this.villageCondition = villageCondition;
+            this.panel = panel;
+            
+        }
+
         public SelectVillage(VillageWindow villageWindow, Panel panel)
         {
             
