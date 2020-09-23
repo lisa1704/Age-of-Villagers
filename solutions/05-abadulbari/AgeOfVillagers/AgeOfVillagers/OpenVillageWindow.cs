@@ -25,12 +25,6 @@ namespace AgeOfVillagers
             this.villageWin = vw;
         }
 
-
-        private void OpenVillageWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void browseButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -40,19 +34,9 @@ namespace AgeOfVillagers
             filePath = openFileDialog.FileName;
         }
 
-        private void nationLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void openButton_Click(object sender, EventArgs e)
@@ -78,11 +62,6 @@ namespace AgeOfVillagers
             { 
                 DialogResult dialog = MessageBox.Show("Choose Village file !");
             }
-        }
-
-        private void villageLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

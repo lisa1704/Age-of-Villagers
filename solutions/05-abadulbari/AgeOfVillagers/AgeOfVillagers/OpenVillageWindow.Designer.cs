@@ -75,7 +75,6 @@
             this.villageLabel.Size = new System.Drawing.Size(117, 27);
             this.villageLabel.TabIndex = 1;
             this.villageLabel.Text = "Select Village";
-            this.villageLabel.Click += new System.EventHandler(this.villageLabel_Click);
             // 
             // nationLabel
             // 
@@ -86,7 +85,6 @@
             this.nationLabel.Size = new System.Drawing.Size(118, 27);
             this.nationLabel.TabIndex = 1;
             this.nationLabel.Text = "Select Nation";
-            this.nationLabel.Click += new System.EventHandler(this.nationLabel_Click);
             // 
             // nationComBox
             // 
@@ -102,7 +100,6 @@
             this.nationComBox.Size = new System.Drawing.Size(236, 33);
             this.nationComBox.TabIndex = 3;
             this.nationComBox.SelectedIndex = 0;
-            this.nationComBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // OpenVillageWindow
             // 
@@ -116,7 +113,6 @@
             this.Name = "OpenVillageWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Open Village";
-            this.Load += new System.EventHandler(this.OpenVillageWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +123,6 @@
 
         private System.Windows.Forms.Button browsButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label villageLabel;
         private System.Windows.Forms.Label nationLabel;
         private System.Windows.Forms.ComboBox nationComBox;

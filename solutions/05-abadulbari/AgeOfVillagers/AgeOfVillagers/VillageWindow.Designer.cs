@@ -49,7 +49,6 @@
             this.drawingPanel.Name = "drawingPanel";
             this.drawingPanel.Size = new System.Drawing.Size(600, 400);
             this.drawingPanel.TabIndex = 0;
-            this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
             this.drawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseClick);
             // 
             // toolPanel
@@ -114,7 +113,6 @@
             this.waterRadioBtn.TabStop = true;
             this.waterRadioBtn.Text = "Water Source";
             this.waterRadioBtn.UseVisualStyleBackColor = true;
-            this.waterRadioBtn.CheckedChanged += new System.EventHandler(this.waterRadioBtn_CheckedChanged);
             // 
             // houseRadioBtn
             // 
@@ -126,7 +124,6 @@
             this.houseRadioBtn.TabStop = true;
             this.houseRadioBtn.Text = "House";
             this.houseRadioBtn.UseVisualStyleBackColor = true;
-            this.houseRadioBtn.CheckedChanged += new System.EventHandler(this.houseRadioBtn_CheckedChanged);
             // 
             // treeRadioBtn
             // 
@@ -138,7 +135,6 @@
             this.treeRadioBtn.TabStop = true;
             this.treeRadioBtn.Text = "Tree";
             this.treeRadioBtn.UseVisualStyleBackColor = true;
-            this.treeRadioBtn.CheckedChanged += new System.EventHandler(this.treeRadioBtn_CheckedChanged);
             // 
             // nationLabel
             // 
@@ -149,7 +145,6 @@
             this.nationLabel.TabIndex = 2;
             this.nationLabel.Text = "Nation Name";
             this.nationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nationLabel.Click += new System.EventHandler(this.nationLabel_Click);
             // 
             // villageLabel
             // 
@@ -161,7 +156,6 @@
             this.villageLabel.TabIndex = 1;
             this.villageLabel.Text = "Village Name";
             this.villageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.villageLabel.Click += new System.EventHandler(this.villageLabel_Click);
             // 
             // gameLabel
             // 
@@ -175,7 +169,6 @@
             this.gameLabel.TabIndex = 0;
             this.gameLabel.Text = "Age Of Villagers";
             this.gameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gameLabel.Click += new System.EventHandler(this.gameLabel_Click);
             // 
             // VillageWindow
             // 

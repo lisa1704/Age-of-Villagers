@@ -82,7 +82,6 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(206, 31);
             this.nameBox.TabIndex = 2;
-            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // nationBox
             // 
@@ -99,7 +98,6 @@
             this.nationBox.Size = new System.Drawing.Size(206, 33);
             this.nationBox.TabIndex = 3;
             this.nationBox.SelectedIndex = 0;
-            this.nationBox.SelectedIndexChanged += new System.EventHandler(this.nationBox_SelectedIndexChanged);
             // 
             // CreateNewVillageWindow
             // 
@@ -113,7 +111,6 @@
             this.Name = "CreateNewVillageWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create new Village";
-            this.Load += new System.EventHandler(this.CreateVillageWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

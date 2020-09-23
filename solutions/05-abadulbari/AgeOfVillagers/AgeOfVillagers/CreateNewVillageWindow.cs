@@ -14,7 +14,7 @@ namespace AgeOfVillagers
 {
     public partial class CreateNewVillageWindow : Form
     {
-        private VillageWindow vw;
+        private readonly VillageWindow vw;
 
         public CreateNewVillageWindow(VillageWindow vw)
         {
@@ -23,21 +23,11 @@ namespace AgeOfVillagers
         }
 
 
-        private void CreateVillageWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void createButton_Click(object sender, EventArgs e)
         {
             if (nameBox.Text == "")
             {
-                DialogResult dialog = MessageBox.Show("Giva a name to the Village!");
+                MessageBox.Show("Giva a name to the Village!");
             }
             else
             {
@@ -57,9 +47,5 @@ namespace AgeOfVillagers
             this.Dispose();
         }
 
-        private void nationBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
