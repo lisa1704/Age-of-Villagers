@@ -37,5 +37,10 @@ namespace Age_of_Villagers.ArabBedouin
         {
             return new ArabHouse(p);
         }
+
+        public IShape testtree(Point p)
+        {
+            return new ArabTrees(p);
+        }
     }
 }

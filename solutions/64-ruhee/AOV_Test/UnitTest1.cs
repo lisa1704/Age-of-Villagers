@@ -81,5 +81,14 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void ArabTree()
+        {
+            IShape arabtree = new ArabBedouin().testtree(p);
+            IShape tree = new ArabBedouin().DrawTree(g, p);
+            arabtree.Equals(tree);
+
+        }
+
     }
 }
