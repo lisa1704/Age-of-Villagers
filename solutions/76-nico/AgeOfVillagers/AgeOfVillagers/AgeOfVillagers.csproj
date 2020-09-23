@@ -49,6 +49,7 @@
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="Arc.cs" />
     <Compile Include="BangladeshFarmers.cs" />
+    <Compile Include="BDTree.cs" />
     <Compile Include="BD_House.cs" />
     <Compile Include="CompositeShape.cs" />
     <Compile Include="Egyptian_Kings.cs" />
