@@ -173,7 +173,7 @@ namespace Age_of_Villagers
             this.VillageNameBox.Name = "VillageNameBox";
             this.VillageNameBox.Size = new System.Drawing.Size(162, 35);
             this.VillageNameBox.TabIndex = 12;
-            this.VillageNameBox.SelectedIndexChanged += new System.EventHandler(this.VillageNameBox_SelectedIndexChanged);
+            this.VillageNameBox.Text += new System.EventHandler(this.VillageNameBox_Text);
             // 
             // VillageEditorWindow
             // 
@@ -201,10 +201,9 @@ namespace Age_of_Villagers
 
         }
 
-        private void VillageNameBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
+
+ 
 
 
 

@@ -22,6 +22,8 @@ namespace Age_of_Villagers
         Boolean WaterSourceSwitch;
 
         INation Nation;
+        Village EditorVillage;
+
 
         //
          
@@ -53,6 +55,11 @@ namespace Age_of_Villagers
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void VillageNameBox_Text(object sender, EventArgs e)
+        {
+            EditorVillage = new Village(VillageNameBox.Text);
         }
 
         private void VillageEditorPanel_Click(object sender, MouseEventArgs e)
@@ -116,8 +123,8 @@ namespace Age_of_Villagers
         {
             
             VillageEditorPanel.Invalidate();
-            // nation based backgroud
             
+
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
@@ -133,23 +140,23 @@ namespace Age_of_Villagers
 
         private void NationListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (NationListBox.SelectedItem == "Bangladeshi Farmers")
+            if ((string)NationListBox.SelectedItem == "Bangladeshi Farmers")
             {
                 Nation = new BangladeshiFarmers();
                 VillageEditorPanel.BackColor = Color.Green; //BD
 
             }
-            else if(NationListBox.SelectedItem == "Arab Bedouins")
+            else if((string)NationListBox.SelectedItem == "Arab Bedouins")
             {
                Nation = new ArabBedouins();
                 VillageEditorPanel.BackColor = Color.LightGoldenrodYellow; //Arabia
             }
-            else if(NationListBox.SelectedItem == "Egyptian Kings")
+            else if ((string)NationListBox.SelectedItem == "Egyptian Kings")
             {
                 Nation = new EgyptianKings();
                 VillageEditorPanel.BackColor = Color.Yellow; //Egypt
             }
-            else if(NationListBox.SelectedItem == "Inuit Hunters")
+            else if((string)NationListBox.SelectedItem == "Inuit Hunters")
             {
                 Nation = new InuitHunters();
                 VillageEditorPanel.BackColor = Color.White; //Iceland
