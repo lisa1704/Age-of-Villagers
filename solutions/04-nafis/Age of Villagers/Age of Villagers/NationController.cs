@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    class NationController
+    public class NationController
     {
         private string NationName;
         private readonly Point point;
@@ -29,9 +29,13 @@ namespace Age_of_Villagers
             {
                 return new EgyptianKing(point);
             }
-            else
+            else if (NationName == "Inuit Hunter")
             {
                 return new InuitHunters(point);
+            }
+            else
+            {
+                return new NullNation(point);
             }
         }
 
