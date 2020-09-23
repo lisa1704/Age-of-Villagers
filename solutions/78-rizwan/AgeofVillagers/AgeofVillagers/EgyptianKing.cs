@@ -8,9 +8,7 @@ namespace AgeofVillagers
 {
     class EgyptianKing : Ination
     {
-        Pen p = new Pen(Color.Red, 3);
         Graphics g;
-        int x, y;
         public EgyptianKing(Graphics g)
         {
             this.g = g;
@@ -18,34 +16,20 @@ namespace AgeofVillagers
 
         public void createHouse(MouseEventArgs e)
         {
-            x = e.X;
-            y = e.Y;
-            g.DrawLine(p, x, y, x + 24, y - 28);
-            g.DrawLine(p, x + 24, y - 28, x - 12, y - 64);
-            g.DrawLine(p, x - 12, y - 64, x - 40, y - 16);
-            g.DrawLine(p, x - 40, y - 16, x, y);
-            g.DrawLine(p, x - 12, y - 64, x, y);
+            EgyptHouse egypthouse = new EgyptHouse(g);
+            egypthouse.createHouse(e);
         }
 
         public void createTree(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(p, x, y, x + 12, y - 48);
-            g.DrawLine(p, x, y, x - 8, y - 48);
-            g.DrawLine(p, x + 12, y - 48, x + 32, y - 96);
-            g.DrawLine(p, x + 12, y - 48, x + 20, y - 96);
-            g.DrawLine(p, x + 12, y - 48, x + 8, y - 96);
-            g.DrawLine(p, x - 8, y - 48, x - 32, y - 96);
-            g.DrawLine(p, x - 8, y - 48, x - 16, y - 96);
-            g.DrawLine(p, x - 8, y - 48, x - 4, y - 96);
+            EgyptTree egypttree = new EgyptTree(g);
+            egypttree.createTree(e);
         }
 
         public void createWaterSource(MouseEventArgs e)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawArc(p, x - 20, y - 20, 40, 40, 0, 360);
+            EgyptWater egyptwater = new EgyptWater(g);
+            egyptwater.createWaterSource(e);
         }
         public void terrain(Panel p)
         {
