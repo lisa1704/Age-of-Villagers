@@ -3,6 +3,14 @@ public class StateOfComponent implements java.io.Serializable {
     IDrawComponent drawComponent;
     String className;
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
     public StateOfComponent(double x, double y, IDrawComponent drawComponent) {
         this.x = x;
         this.y = y;
