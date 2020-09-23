@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 
 namespace AgeofVillagers
 {
@@ -14,16 +15,16 @@ namespace AgeofVillagers
             this.nation = nation;
             this.g = g;
         }
-        public Object createNation()
+        public Object createNation(MouseEventArgs e)
         {
             if (nation == "Bangladeshi Farmers")
-                return new BangladeshiFarmers(g);
+                return new BangladeshiFarmers(g,e);
             else if (nation == "Arab Bedouin")
-                return new ArabBeduoin(g);
+                return new ArabBeduoin(g,e);
             else if (nation == "Egyptian King")
-                return new EgyptianKing(g);
+                return new EgyptianKing(g,e);
             else if (nation == "Inuit Hunters")
-                return new InuitHunters(g);
+                return new InuitHunters(g,e);
             return null;
         }
     }
