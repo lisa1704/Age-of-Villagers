@@ -2,5 +2,8 @@
 
 public class village
 {
-
+    public object chooseNation(object nation)
+    {
+        return nation;
+    }
 }
