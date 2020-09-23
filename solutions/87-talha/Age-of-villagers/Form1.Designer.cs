@@ -37,9 +37,6 @@
             this.Age_of_villagers = new System.Windows.Forms.Label();
             this.VIllage_name = new System.Windows.Forms.TextBox();
             this.Nation_name = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Main_panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Save_village
@@ -117,11 +114,10 @@
             this.Age_of_villagers.Size = new System.Drawing.Size(158, 24);
             this.Age_of_villagers.TabIndex = 6;
             this.Age_of_villagers.Text = "Age of Villagers";
-            this.Age_of_villagers.Click += new System.EventHandler(this.Age_of_villagers_Click);
             // 
             // VIllage_name
             // 
-            this.VIllage_name.Location = new System.Drawing.Point(682, 82);
+            this.VIllage_name.Location = new System.Drawing.Point(654, 82);
             this.VIllage_name.Name = "VIllage_name";
             this.VIllage_name.Size = new System.Drawing.Size(100, 20);
             this.VIllage_name.TabIndex = 7;
@@ -130,54 +126,17 @@
             // Nation_name
             // 
             this.Nation_name.FormattingEnabled = true;
-            this.Nation_name.Items.AddRange(new object[] {
-            "Bangladeshi Farmers",
-            "Arab Beduins",
-            "Inuits Hunters",
-            "Egyptian Kings"});
-            this.Nation_name.Location = new System.Drawing.Point(661, 108);
+            this.Nation_name.Location = new System.Drawing.Point(643, 108);
             this.Nation_name.Name = "Nation_name";
             this.Nation_name.Size = new System.Drawing.Size(121, 21);
             this.Nation_name.TabIndex = 8;
             this.Nation_name.SelectedIndexChanged += new System.EventHandler(this.Nation_name_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(607, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Village Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(617, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nation";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Main_panel
-            // 
-            this.Main_panel.Location = new System.Drawing.Point(0, 0);
-            this.Main_panel.Name = "Main_panel";
-            this.Main_panel.Size = new System.Drawing.Size(600, 400);
-            this.Main_panel.TabIndex = 11;
-            this.Main_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_panel_Paint);
-            this.Main_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Main_panel_MouseClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Main_panel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Nation_name);
             this.Controls.Add(this.VIllage_name);
             this.Controls.Add(this.Age_of_villagers);
@@ -205,9 +164,6 @@
         private System.Windows.Forms.Label Age_of_villagers;
         private System.Windows.Forms.TextBox VIllage_name;
         private System.Windows.Forms.ComboBox Nation_name;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel Main_panel;
     }
 }
 
