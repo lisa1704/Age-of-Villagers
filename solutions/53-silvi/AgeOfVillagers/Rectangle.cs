@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    public class Rectangle : IShape
+    public class Rectangle : Composite
     {
-        private readonly Point TopLeft;
-        private readonly Point BottomRight;
-        public Rectangle(Point topLeft, Point bottomRight)
+        public Rectangle(Point TopLeft, Point BottomRight)
         {
-            this.TopLeft = topLeft;
-            this.BottomRight = bottomRight;
-        }
-        public void Draw(Graphics g)
-        {
-            var pen = new Pen(Color.Black, 1);
-            g.DrawLine(pen, TopLeft.X, TopLeft.Y, BottomRight.X, TopLeft.Y);
-            g.DrawLine(pen, TopLeft.X, TopLeft.Y, TopLeft.X, BottomRight.Y);
-            g.DrawLine(pen, TopLeft.X, BottomRight.Y, BottomRight.X, BottomRight.Y);
-            g.DrawLine(pen, BottomRight.X, TopLeft.Y, BottomRight.X, BottomRight.Y);
+            Point TopRight = new Point(BottomRight.X, TopLeft.Y);
+            Point BottomLeft = new Point(TopLeft.X, BottomRight.Y);
+
+            AddComponent(new Line(TopLeft, BottomLeft));
+            AddComponent(new Line(TopLeft, TopRight));
+            AddComponent(new Line(BottomLeft, BottomRight));
+            AddComponent(new Line(BottomRight, TopRight));
         }
     }
 }
