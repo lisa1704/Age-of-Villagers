@@ -15,11 +15,11 @@ namespace AgeOfVillagers
 
     public class BangladeshiWaterResource : WaterResource
     {
-        private int height = 24, width = 16;
+        private int height = 16, width = 24;
         
         public override int getHeight() => height;
         public override int getWidth() => width;
-        public override IShape getItemShape(Point point) => new BangladeshiWaterSourceShape(point);
+        public override IShape getItemShape(Point point) => new BangladeshiWaterSourceShape(point, getWidth(), getHeight());
     }
 
     public class EgyptianWaterResource : WaterResource
