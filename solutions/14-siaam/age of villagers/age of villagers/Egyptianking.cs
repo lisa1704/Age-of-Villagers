@@ -2,7 +2,7 @@
 
 namespace age_of_villagers
 {
-    class Egyptianking : INation
+    public class Egyptianking : INation
     {
         private Color colorofbackground = Color.Yellow;
         public Color BgColor()
