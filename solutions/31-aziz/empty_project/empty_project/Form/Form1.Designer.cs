@@ -38,6 +38,8 @@
             this.radioButtonTree = new System.Windows.Forms.RadioButton();
             this.radioButtonHouse = new System.Windows.Forms.RadioButton();
             this.radioButtonWaterSource = new System.Windows.Forms.RadioButton();
+            this.TypeVillageName = new System.Windows.Forms.TextBox();
+            this.EnterText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -87,7 +89,7 @@
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.NationBox.Location = new System.Drawing.Point(640, 123);
+            this.NationBox.Location = new System.Drawing.Point(640, 94);
             this.NationBox.Name = "NationBox";
             this.NationBox.Size = new System.Drawing.Size(121, 23);
             this.NationBox.TabIndex = 0;
@@ -109,7 +111,7 @@
             // 
             this.SelectYourNation.BackColor = System.Drawing.SystemColors.Menu;
             this.SelectYourNation.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SelectYourNation.Location = new System.Drawing.Point(650, 85);
+            this.SelectYourNation.Location = new System.Drawing.Point(650, 72);
             this.SelectYourNation.Name = "SelectYourNation";
             this.SelectYourNation.Size = new System.Drawing.Size(100, 16);
             this.SelectYourNation.TabIndex = 9;
@@ -119,7 +121,7 @@
             // 
             this.radioButtonTree.AutoSize = true;
             this.radioButtonTree.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButtonTree.Location = new System.Drawing.Point(668, 188);
+            this.radioButtonTree.Location = new System.Drawing.Point(671, 224);
             this.radioButtonTree.Name = "radioButtonTree";
             this.radioButtonTree.Size = new System.Drawing.Size(46, 19);
             this.radioButtonTree.TabIndex = 10;
@@ -132,7 +134,7 @@
             // 
             this.radioButtonHouse.AutoSize = true;
             this.radioButtonHouse.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButtonHouse.Location = new System.Drawing.Point(616, 228);
+            this.radioButtonHouse.Location = new System.Drawing.Point(616, 264);
             this.radioButtonHouse.Name = "radioButtonHouse";
             this.radioButtonHouse.Size = new System.Drawing.Size(59, 19);
             this.radioButtonHouse.TabIndex = 11;
@@ -145,7 +147,7 @@
             // 
             this.radioButtonWaterSource.AutoSize = true;
             this.radioButtonWaterSource.BackColor = System.Drawing.SystemColors.Control;
-            this.radioButtonWaterSource.Location = new System.Drawing.Point(693, 228);
+            this.radioButtonWaterSource.Location = new System.Drawing.Point(693, 264);
             this.radioButtonWaterSource.Name = "radioButtonWaterSource";
             this.radioButtonWaterSource.Size = new System.Drawing.Size(95, 19);
             this.radioButtonWaterSource.TabIndex = 12;
@@ -154,11 +156,32 @@
             this.radioButtonWaterSource.UseVisualStyleBackColor = false;
             this.radioButtonWaterSource.Click += new System.EventHandler(this.radioButtonWaterSource_Click);
             // 
+            // TypeVillageName
+            // 
+            this.TypeVillageName.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TypeVillageName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TypeVillageName.Location = new System.Drawing.Point(640, 147);
+            this.TypeVillageName.Name = "TypeVillageName";
+            this.TypeVillageName.Size = new System.Drawing.Size(121, 16);
+            this.TypeVillageName.TabIndex = 13;
+            this.TypeVillageName.Text = "Type Village Name";
+            this.TypeVillageName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // EnterText
+            // 
+            this.EnterText.Location = new System.Drawing.Point(640, 169);
+            this.EnterText.Name = "EnterText";
+            this.EnterText.Size = new System.Drawing.Size(121, 23);
+            this.EnterText.TabIndex = 14;
+            this.EnterText.Click += new System.EventHandler(this.EnterText_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EnterText);
+            this.Controls.Add(this.TypeVillageName);
             this.Controls.Add(this.radioButtonWaterSource);
             this.Controls.Add(this.radioButtonHouse);
             this.Controls.Add(this.radioButtonTree);
@@ -189,6 +212,8 @@
         private System.Windows.Forms.RadioButton radioButtonTree;
         private System.Windows.Forms.RadioButton radioButtonHouse;
         private System.Windows.Forms.RadioButton radioButtonWaterSource;
+        private System.Windows.Forms.TextBox TypeVillageName;
+        private System.Windows.Forms.TextBox EnterText;
     }
 }
 

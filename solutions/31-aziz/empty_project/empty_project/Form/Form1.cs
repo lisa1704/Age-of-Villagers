@@ -104,5 +104,10 @@ namespace empty_project
         {
             element_text = "Water Source";
         }
+
+        private void EnterText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
