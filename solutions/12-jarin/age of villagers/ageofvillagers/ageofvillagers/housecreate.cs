@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ageofvillagers
 {
-   abstract  class housecreate
+    abstract class housecreate
     {
-        int x_coordinate = 16;
-        int y_coordinate = 16;
-        public abstract void housecreatorfunction(int x, int y);
+        int x_co_ordinate = 16;
+        int y_co_ordinate = 16;
+        public abstract void housecreatefunction(int x, int y);
     }
 }
