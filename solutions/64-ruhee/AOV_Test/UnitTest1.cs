@@ -90,5 +90,14 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void ArabWater()
+        {
+            IShape arabwater = new ArabBedouin().testwater(p);
+            IShape water = new ArabBedouin().DrawWaterSource(g, p);
+            arabwater.Equals(water);
+
+        }
+
     }
 }
