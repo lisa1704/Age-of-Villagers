@@ -1,9 +1,7 @@
 package Tests;
 
-import Project.Controllers.VillageView_controller;
 import Project.Utilities.Nation;
 import Project.Utilities.NationItems.*;
-import Project.Utilities.SceneSate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
