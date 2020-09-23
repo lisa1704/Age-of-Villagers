@@ -91,7 +91,8 @@ namespace AgeOfVillagers
             y = e.Y;
             Graphics g = panel1.CreateGraphics();
             nationName = comboBoxNationName.Text;
-            Pen p = new Pen(new SolidBrush(Color.Red), 2);
+            Pen p = new Pen(new SolidBrush(Color.Black), 2);
+            
 
             if (nationName == "Bangladeshi Farmers")
             {

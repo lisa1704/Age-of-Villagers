@@ -184,7 +184,7 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonOpen;
-        private System.Windows.Forms.ComboBox comboBoxNationName;
+        public System.Windows.Forms.ComboBox comboBoxNationName;
         private System.Windows.Forms.TextBox textBoxVillageName;
     }
 }
