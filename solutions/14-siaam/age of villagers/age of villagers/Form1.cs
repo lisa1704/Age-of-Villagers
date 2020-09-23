@@ -46,7 +46,10 @@ namespace age_of_villagers
             {
                 nationtype.GetNation(nameofnation).drawHouse(g, points);
             }
-           
+            foreach (Point points in trees)
+            {
+                nationtype.GetNation(nameofnation).drawTree(g, points);
+            }
 
         }
 
@@ -56,7 +59,11 @@ namespace age_of_villagers
             {
                 houses.Add(e.Location);
             }
-            
+            if (itemType == "tree")
+            {
+                trees.Add(e.Location);
+            }
+
             panel1.Invalidate();
         }
 
