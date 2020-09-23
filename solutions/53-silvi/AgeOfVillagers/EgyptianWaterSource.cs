@@ -7,6 +7,7 @@ namespace AgeOfVillagers
         public void Draw(Point e, Graphics g, Pen p)
         {
             
+
         }
     }
 }
