@@ -50,6 +50,7 @@ namespace age_of_villagers
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             Locations.Add(e.Location);
+            panel1.Invalidate();
         }
 
         private void treebutton_Click(object sender, EventArgs e)
