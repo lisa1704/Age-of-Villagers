@@ -11,6 +11,8 @@ namespace Age_of_villagers
     {
         Color bg_color = Color.White;
 
+
+        string nationName = "Inuit Hunters";
         public void DrawHouse(Graphics graphics, Point point)
         {
             Pen pen = new Pen(Color.Black);
@@ -57,7 +59,7 @@ namespace Age_of_villagers
 
         public String getName()
         {
-            throw new NotImplementedException();
+            return nationName;
         }
     }
 }
