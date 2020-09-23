@@ -23,12 +23,12 @@ namespace AgeOfVillagers
 
         public void paint_tree(MouseEventArgs e, Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void paint_waterSource(MouseEventArgs e, Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -86,11 +86,11 @@ namespace AgeOfVillagers
         private void mouse_click(object sender, MouseEventArgs e)
         {
             int x, y;
-            String nationName;
+            //String nationName;
             x = e.X;
             y = e.Y;
             Graphics g = panel1.CreateGraphics();
-            nationName = comboBoxNationName.Text;
+            //nationName = comboBoxNationName.Text;
             Pen p = new Pen(new SolidBrush(Color.Black), 2);
             NationNameFactory nationName1 = new NationNameFactory(this);
             

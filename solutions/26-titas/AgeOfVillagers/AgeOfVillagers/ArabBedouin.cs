@@ -53,7 +53,7 @@ namespace AgeOfVillagers
 
         public void paint_waterSource(MouseEventArgs e, Graphics g, Pen p)
         {
-            throw new NotImplementedException();
+           //throw new NotImplementedException();
         }
     }
 }
