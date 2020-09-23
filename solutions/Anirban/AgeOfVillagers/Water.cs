@@ -9,19 +9,10 @@ namespace AgeOfVillagers
 {
     class Water : IVillage_Item
     {
-        string water_type;
-
-        int height = 12;
-        int width = 12;
 
         public void Draw_item(Graphics g, Point p)
         {
             throw new NotImplementedException();
-        }
-
-        public void Draw_water()
-        {
-
         }
 
         
