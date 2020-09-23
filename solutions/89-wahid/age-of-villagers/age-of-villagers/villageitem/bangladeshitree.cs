@@ -6,7 +6,7 @@ using System.Text;
 
 namespace age_of_villagers.villageitem
 {
-    class bangladeshitree : villageitem
+    public class bangladeshitree : villageitem
     {
         private readonly Point topLeft, bottomRight, centre;
 

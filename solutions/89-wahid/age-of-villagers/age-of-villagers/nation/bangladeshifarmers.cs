@@ -27,7 +27,7 @@ namespace age_of_villagers.nation
 
         public villageitem.villageitem getTree(Point p)
         {
-            throw new NotImplementedException();
+            return new bangladeshitree(p);
         }
 
         public villageitem.villageitem getWaterSource(Point p)
