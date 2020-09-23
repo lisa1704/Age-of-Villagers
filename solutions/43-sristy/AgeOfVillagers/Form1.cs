@@ -22,6 +22,7 @@ namespace Age_of_villagers
         private List<Point> W_points { get; set; } = new List<Point>();
         private List<Point> T_points { get; set; } = new List<Point>();
         private List<Point> H_points { get; set; } = new List<Point>();
+        private string Name1 { get => name; set => name = value; }
 
         public void get_state()
         {
@@ -30,18 +31,25 @@ namespace Age_of_villagers
 
         public void set_state(village village)
         {
-            villagename.Text = village.name;
-            foreach(Point pt in village.house_point)
+            if (village == null)
             {
-                H_points.Add(pt);
+                MessageBox.Show("Villge is not selected");
             }
-            foreach(Point pt in village.tree_point)
+            else
             {
-                T_points.Add(pt);
-            }
-            foreach(Point pt in village.waterresource_point)
-            {
-                W_points.Add(pt);
+                villagename.Text = village.name;
+                foreach (Point pt in village.house_point)
+                {
+                    H_points.Add(pt);
+                }
+                foreach (Point pt in village.tree_point)
+                {
+                    T_points.Add(pt);
+                }
+                foreach (Point pt in village.waterresource_point)
+                {
+                    W_points.Add(pt);
+                }
             }
         }
 
@@ -106,7 +114,7 @@ namespace Age_of_villagers
 
         private void villagename_KeyDown(object sender, KeyEventArgs e)
         {
-            name=villagename.Text;
+            Name1=villagename.Text;
         }
 
         private void vallagetype_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,7 +127,7 @@ namespace Age_of_villagers
         private void save_Click(object sender, EventArgs e)
         {
             get_state();
-            Savevillage command = new Savevillage(village);            
+            Savevillage command = new Savevillage(village);
             command.execute();
         }
 

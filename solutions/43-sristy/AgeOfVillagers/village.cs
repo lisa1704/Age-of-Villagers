@@ -15,6 +15,6 @@ namespace Age_of_villagers
             this.house_point = house_point;
             this.tree_point = tree_point;
             this.waterresource_point = waterresource_point;
-        }
+        }        
     }
 }

@@ -5,7 +5,7 @@ namespace Age_of_villagers
 {
     public class Bangladeshi : INation
     {
-        Size housesize=new Housesize();
+        Size housesize = new Housesize();
         Size treesize = new Treesize();
         Size watersourcesize = new BDWatersourcesize();
 
