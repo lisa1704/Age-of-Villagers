@@ -13,6 +13,15 @@ namespace AOV_Test
             Assert.Equal(2, 2);
         }
 
+        [Fact]
+        public void BangladeshiBackground()
+        {
+            BangladeshiFarmers back = new BangladeshiFarmers();
+            Color b1 = back.BackgroundColor();
+            Color b2 = Color.Green;
+            Assert.Equal(b1, b2);
+        }
+
 
     }
 }
