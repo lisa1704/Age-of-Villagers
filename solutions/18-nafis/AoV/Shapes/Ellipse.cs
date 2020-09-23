@@ -14,8 +14,7 @@ namespace AoV.Shapes
         {
             this.p1 = p1;
             this.p2 = p2;
-            Pen pen = new Pen(Color.Black, 2);
-            AddShape(new Arc(p1.X, p1.Y, p2.X - p1.X, p2.Y - p1.Y, 0, 360));
+            AddShape(new Arc(p1.X, p1.Y, p2.X-p1.X, p2.Y-p1.Y, 0, 360));
         }
        
     }

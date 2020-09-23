@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
 using Rectangle = AoV.Shapes.Rectangle;
 
@@ -15,6 +14,16 @@ namespace AoV
 {
     public partial class MainWindow : Form
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+        #region ShapeDrawTest
+        /// <summary>
+        /// Test to see basic shapes were drawn
+        /// </summary>
+        /// 
+        /*
         Graphics g;
         IShape myShape;
         public MainWindow()
@@ -57,5 +66,7 @@ namespace AoV
             }
 
         }
+        */
+        #endregion
     }
 }
