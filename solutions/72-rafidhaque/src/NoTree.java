@@ -9,4 +9,9 @@ public class NoTree extends DrawTree{
         ArrayList<Shape> arrayList = new ArrayList<>();
         return arrayList;
     }
+    @Override
+    public ArrayList<Shape> draw(double x, double y) {
+        ArrayList<Shape> arrayList = new ArrayList<>();
+        return arrayList;
+    }
 }
