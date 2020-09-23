@@ -7,7 +7,7 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
-        public void setBackgroudColor(Graphics g);
+        public Color getBackgroundColor();
         public IComponent getComponent(string component_type);
     }
 }
