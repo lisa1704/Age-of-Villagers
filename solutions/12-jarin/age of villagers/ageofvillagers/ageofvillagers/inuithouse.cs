@@ -13,9 +13,8 @@ namespace ageofvillagers
         {
             halfcircle h1 = new halfcircle(x, y, 10);
             halfcircle h2 = new halfcircle(x, y, 3);
+            return null;
         }
-        public Color DrawTerrain()
-        {
-            return Color.White;
-        }
+
+    }
 }
