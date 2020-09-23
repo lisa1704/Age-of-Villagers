@@ -39,7 +39,11 @@ namespace age_of_villagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = panel1.CreateGraphics();
+            foreach (Point points in Locations)
+            {
+                nationtype.GetNation(nameofnation).drawHouse(g, points);
+            }
 
         }
 
