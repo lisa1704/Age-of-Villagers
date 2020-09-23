@@ -12,26 +12,25 @@ namespace Age_of_Villagers.ArabBedouin
         Pen pen = new Pen(Color.Black);
         public Color BackgroundColor()
         {
-
             return Color.GreenYellow;
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Graphics g, Point point)
         {
-            ArabHouse arabBedouinHouse = new ArabHouse(point);
-            arabBedouinHouse.Draw(g,pen);
+            ArabHouse arabHouse = new ArabHouse(point);
+            return (arabHouse);
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Graphics g, Point point)
         {
-            ArabTrees arabBedouinTree = new ArabTrees(point);
-            arabBedouinTree.Draw(g,pen);
+            ArabTrees arabTree = new ArabTrees(point);
+            return (arabTree);
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Graphics g, Point point)
         {
-            NullElements arabBedouinWaterSource = new NullElements();
-            arabBedouinWaterSource.drawing();
+            NullElements arabWaterS = new NullElements();
+            return (arabWaterS);
         }
 
 

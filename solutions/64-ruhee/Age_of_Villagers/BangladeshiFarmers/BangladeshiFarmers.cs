@@ -10,27 +10,24 @@ namespace Age_of_Villagers.BangladeshiFarmers
     {
         Graphics g;
         Pen pen = new Pen(Color.Black);
-        public void DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Graphics g, Point point)
         {
-            BangladeshiTrees bdFarmersTree = new BangladeshiTrees(point);
-            bdFarmersTree.Draw(g,pen);
+            BangladeshiTrees bdTree = new BangladeshiTrees(point);
+            return (bdTree);
         }
-        public void DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Graphics g, Point point)
         {
-            BangladeshiHouse bdFarmersHouse = new BangladeshiHouse(point);
-            bdFarmersHouse.Draw(g,pen);
-        }
-
-        public string BangladeshiFarmerTest()
-        {
-            string NationName = "Bangladesh";
-            return NationName;
+            BangladeshiHouse bdHouse = new BangladeshiHouse(point);
+            bdHouse.Draw(g,pen);
+            return (bdHouse);
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+
+        public IShape DrawWaterSource(Graphics g, Point point)
         {
             BangladeshiWaterS bdWater = new BangladeshiWaterS(point);
             bdWater.Draw(g,pen);
+            return (bdWater);
         }
 
         public Color BackgroundColor()

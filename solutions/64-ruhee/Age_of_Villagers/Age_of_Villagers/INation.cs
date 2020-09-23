@@ -8,9 +8,9 @@ namespace Age_of_Villagers.Age_of_Villagers
 {
     public interface INation
     {
-        public void DrawTree(Graphics g, Point point);
-        public void DrawHouse(Graphics g, Point point);
-        public void DrawWaterSource(Graphics g, Point point);
+        IShape DrawTree(Graphics g, Point point);
+        IShape DrawHouse(Graphics g, Point point);
+        IShape DrawWaterSource(Graphics g, Point point);
         Color BackgroundColor();
     }
 

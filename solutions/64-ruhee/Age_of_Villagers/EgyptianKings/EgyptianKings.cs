@@ -15,22 +15,22 @@ namespace Age_of_Villagers.EgyptianKings
             return Color.Yellow;
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Graphics g, Point point)
         {
             EgyptianHouse egyptianhouse = new EgyptianHouse(point);
-            egyptianhouse.Draw(g,pen);
+            return (egyptianhouse);
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Graphics g, Point point)
         {
             EgyptianTrees egyptiantree = new EgyptianTrees(point);
-            egyptiantree.Draw(g,pen);
+            return (egyptiantree);
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Graphics g, Point point)
         {
             EgyptianWaterS egyptianWater= new EgyptianWaterS(point);
-            egyptianWater.Draw(g,pen);
+            return (egyptianWater);
         }
     }
 }

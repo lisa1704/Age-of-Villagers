@@ -16,22 +16,22 @@ namespace Age_of_Villagers.EgyptianKings
             return Color.Yellow;
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Graphics g, Point point)
         {
             InuitHouse Inuithouse = new InuitHouse(point);
-            Inuithouse.Draw(g, pen);
+            return (Inuithouse);
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Graphics g, Point point)
         {
             NullElements InuitTree = new NullElements();
-            InuitTree.drawing();
+            return (InuitTree);
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Graphics g, Point point)
         {
             NullElements InuitWater = new NullElements();
-            InuitWater.drawing();
+            return (InuitWater);
         }
     }
 }
