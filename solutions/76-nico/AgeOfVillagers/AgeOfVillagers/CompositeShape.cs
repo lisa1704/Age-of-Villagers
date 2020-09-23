@@ -7,11 +7,26 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class CompositeShape : IShape
+   public abstract class CompositeShape : IShape
     {
+        private List<IShape> ShapeComponents;
+
+        protected CompositeShape()
+        {
+            ShapeComponents = new List<IShape>();
+        }
+
+        protected void AddComponent(IShape shape)
+        {
+            ShapeComponents.Add(shape);
+        }
+
         public void draw(Graphics g)
         {
-            throw new NotImplementedException();
+            foreach (var component in ShapeComponents)
+            {
+                component.draw(g);
+            }
         }
     }
 }
