@@ -33,12 +33,11 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.NationName = new System.Windows.Forms.TextBox();
             this.tree = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
             this.Water = new System.Windows.Forms.RadioButton();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.canvas = new System.Windows.Forms.Panel();
+            this.NationChoose = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -88,15 +87,6 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = "Enter Village Name";
             // 
-            // NationName
-            // 
-            this.NationName.Location = new System.Drawing.Point(715, 162);
-            this.NationName.Name = "NationName";
-            this.NationName.Size = new System.Drawing.Size(221, 22);
-            this.NationName.TabIndex = 10;
-            this.NationName.Text = "Enter nation ";
-            this.NationName.TextChanged += new System.EventHandler(this.NationName_TextChanged);
-            // 
             // tree
             // 
             this.tree.AutoSize = true;
@@ -144,17 +134,28 @@
             this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.canvas_Paint);
             this.canvas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.canvas_MouseClick);
             // 
+            // NationChoose
+            // 
+            this.NationChoose.FormattingEnabled = true;
+            this.NationChoose.Location = new System.Drawing.Point(715, 141);
+            this.NationChoose.Name = "NationChoose";
+            this.NationChoose.Size = new System.Drawing.Size(221, 24);
+            this.NationChoose.TabIndex = 15;
+            this.NationChoose.Text = "Choose Nation";
+            this.NationChoose.DropDown += new System.EventHandler(this.NationChoose_DropDown);
+            this.NationChoose.SelectedIndexChanged += new System.EventHandler(this.NationChoose_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(988, 488);
+            this.Controls.Add(this.NationChoose);
             this.Controls.Add(this.canvas);
             this.Controls.Add(this.Water);
             this.Controls.Add(this.House);
             this.Controls.Add(this.tree);
-            this.Controls.Add(this.NationName);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
@@ -174,12 +175,11 @@
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox NationName;
         private System.Windows.Forms.RadioButton tree;
         private System.Windows.Forms.RadioButton House;
         private System.Windows.Forms.RadioButton Water;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel canvas;
+        private System.Windows.Forms.ComboBox NationChoose;
     }
 }
 

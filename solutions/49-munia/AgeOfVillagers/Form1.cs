@@ -14,11 +14,10 @@ namespace AgeOfVillagers
    
     public partial class Form1 : Form
     {
-      //  int x;
-      //  int y;
+
         Point point;
-        String nationName;
-        
+        String nationName = " ";
+        INation nation;
         public Form1()
         {
             InitializeComponent();
@@ -32,16 +31,24 @@ namespace AgeOfVillagers
         {
             point = new Point(e.X, e.Y);
             canvas.Invalidate();
+
+        }
+ private void NationChoose_SelectedIndexChanged(object sender, EventArgs e)
+           {
+        NationChoose.Items.Add("Bangladeshi Farmers");
+        NationChoose.Items.Add("Arab Bedouin");
+        NationChoose.Items.Add("Egyptian Kings");
+        NationChoose.Items.Add("Inuit Hunters");
+
         }
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = canvas.CreateGraphics();
-            // BangladeshiFarmers nation = new BangladeshiFarmers();
+             BangladeshiFarmers nation = new BangladeshiFarmers();
             //  EgyptianKings nation = new EgyptianKings();
             //ArabBeouins nation = new ArabBeouins();
             //InuitHunters nation = new InuitHunters();
-            INation nation = new INation();
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
@@ -57,6 +64,12 @@ namespace AgeOfVillagers
             canvas.Invalidate();
         }
 
-
+        private void NationChoose_DropDown(object sender, EventArgs e)
+        {
+            NationChoose.Items.Add("Bangladeshi Farmers");
+            NationChoose.Items.Add("Arab Bedouin");
+            NationChoose.Items.Add("Egyptian Kings");
+            NationChoose.Items.Add("Inuit Hunters");
+        }
     }
 }
