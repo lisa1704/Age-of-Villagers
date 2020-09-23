@@ -23,6 +23,7 @@ import nation.BDFarmers;
 import nation.NationManager;
 import statemanager.CareTaker;
 import statemanager.Originator;
+import statemanager.State;
 import terrain.BDFarmerTerrain;
 import terrain.ITerrain;
 import tree.ITree;
@@ -160,18 +161,20 @@ public class Controller {
     void saveVillageBTN(ActionEvent event) {
 
 
+        State state = State.getInstance();
+        System.out.println(state);
 
-        try {
-
-            FileOutputStream fileOut = new FileOutputStream("nycanvas");
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(canvas);
-            objectOut.close();
-            System.out.println("The Object  was succesfully written to a file");
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+//        try {
+//
+//            FileOutputStream fileOut = new FileOutputStream("nycanvas");
+//            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+//            objectOut.writeObject(canvas);
+//            objectOut.close();
+//            System.out.println("The Object  was succesfully written to a file");
+//
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
 //        Gson gson = new Gson();
 //        Object src;
 //        String json = gson.toJson(canvas);

@@ -1,6 +1,10 @@
 package shape;
 
 import javafx.scene.canvas.GraphicsContext;
+import statemanager.LineState;
+import statemanager.State;
+
+import java.util.Stack;
 
 public class Line implements IShape {
     GraphicsContext graphicsContext;
@@ -16,5 +20,10 @@ public class Line implements IShape {
     @Override
     public void draw() {
         this.graphicsContext.strokeLine(x1,y1, x2,y2);
+
+        LineState lineState = new LineState(x1,y1,x2,y2);
+
+        State state = State.getInstance();
+        state.addLine(lineState);
     }
 }

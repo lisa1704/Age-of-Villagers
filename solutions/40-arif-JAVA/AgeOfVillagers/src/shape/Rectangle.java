@@ -19,6 +19,5 @@ public class Rectangle implements IShape {
         new Line(graphicsContext, x1+10,y1,x1+10,y1+10).draw();
         new Line(graphicsContext, x1+10,y1+10,x1,y1+10).draw();
         new Line(graphicsContext, x1,y1+10,x1,y1).draw();
-        
     }
 }
