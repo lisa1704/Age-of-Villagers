@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\IShapes.cs" />
     <Compile Include="Shapes\Line_shape.cs" />
+    <Compile Include="Shapes\Rectangle_shape.cs" />
+    <Compile Include="Shapes\Triangle_shape.cs" />
     <Compile Include="Tree.cs" />
     <Compile Include="Water.cs" />
     <EmbeddedResource Include="editorVillagers.resx">
