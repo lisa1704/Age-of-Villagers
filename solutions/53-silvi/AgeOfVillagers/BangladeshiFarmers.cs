@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiFarmers : INation
+    internal class BangladeshiFarmers : INation
     {
         public void DrawHouse()
         {
