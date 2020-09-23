@@ -32,7 +32,7 @@ namespace Age_of_Villagers
 
         public IShape WaterSourceDraw()
         {
-            throw new NotImplementedException();
+            return new EgyptWaterResource(point);
         }
         public Point GetWaterSourcePoint()
         {
