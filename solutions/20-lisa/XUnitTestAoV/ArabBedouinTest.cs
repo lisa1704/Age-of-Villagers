@@ -1,26 +1,23 @@
 ﻿using AgeOfVillagers;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Xunit;
+using Assert = Xunit.Assert;
 
 namespace UnitTestAoV
 {
-    [TestFixture]
-    public class ArabBedouinTest
-    {
-        [SetUp]
-        public void Setup()
-        {
 
-        }
-        [TestCase]
+    public class ArabBedouinTest
+    { 
+        [Fact]
         public void TerrainTest()
         {
             Arabs terraincolortest = new Arabs();
             Color actual = terraincolortest.SetTerrain();
             Color expected = Color.LightYellow;
+            Assert.Equals(expected, actual);
         }
     }
 }

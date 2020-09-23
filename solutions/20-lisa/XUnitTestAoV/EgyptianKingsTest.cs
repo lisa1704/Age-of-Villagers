@@ -1,25 +1,20 @@
 ﻿using AgeOfVillagers;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Xunit;
+using Assert = Xunit.Assert;
 
 namespace UnitTestAoV
 {
-    [TestFixture]
-    class EgyptianKingsTest
+    public class EgyptianKingsTest
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-        [TestCase]
+        [Fact]
         public void TerrainTest()
         {
             EgyptianKings terraintest = new EgyptianKings();
-            Assert.AreEqual(Color.Yellow, terraintest.SetTerrain());
+            Assert.Equal(Color.Yellow, terraintest.SetTerrain());
         }
     }
 }

@@ -1,25 +1,22 @@
 ﻿using AgeOfVillagers;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Xunit;
+using Assert = Xunit.Assert;
 
 namespace UnitTestAoV
 {
-    [TestFixture]
+
     public class InuitHuntersTest
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-        [TestCase]
+     
+        [Fact]
         public void InuitTerrainTest()
         {
             InuitHunters inTerrainTest = new InuitHunters();
-            Assert.AreEqual(Color.White, inTerrainTest.SetTerrain());
+            Assert.Equal(Color.White, inTerrainTest.SetTerrain());
         }
     }
 }
