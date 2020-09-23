@@ -12,7 +12,6 @@ namespace UnitTestAoV
     [TestFixture]
     public class BanglaFarmersTest
     {
-        VillageEditor v,editor;
         INation nation = new BangladeshiFarmers();
         Point tpoint = new Point(30, 30);
         Point hpoint = new Point(40, 40);
@@ -21,7 +20,6 @@ namespace UnitTestAoV
         [SetUp]
         public void Setup()
         {
-            
 
         }
         [TestCase]

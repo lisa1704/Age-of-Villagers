@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using AgeOfVillagers;
+using System.Drawing;
 
 namespace XUnitTestAoV
 {
