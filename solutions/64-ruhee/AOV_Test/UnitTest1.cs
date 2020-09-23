@@ -2,6 +2,7 @@ using System;
 using Xunit;
 using Age_of_Villagers.BangladeshiFarmers;
 using System.Drawing;
+using Age_of_Villagers.EgyptianKings;
 
 namespace AOV_Test
 {
@@ -19,6 +20,15 @@ namespace AOV_Test
             BangladeshiFarmers back = new BangladeshiFarmers();
             Color b1 = back.BackgroundColor();
             Color b2 = Color.Green;
+            Assert.Equal(b1, b2);
+        }
+
+        [Fact]
+        public void EgyptianBackground()
+        {
+            EgyptianKings back = new EgyptianKings();
+            Color b1 = back.BackgroundColor();
+            Color b2 = Color.Yellow;
             Assert.Equal(b1, b2);
         }
 
