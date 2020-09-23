@@ -70,7 +70,7 @@ namespace ageOfVillagers
             {
                 if (VillageName.Text == VillageNameList[i])
                 {
-                    if (Nation.Text === NationNameList[i]) {
+                    if (Nation.Text == NationNameList[i]) {
                         Village v = new Village();
                         v.Open(VillageName.Text);
                         currentNationName = NationNameList[i];
@@ -102,6 +102,7 @@ namespace ageOfVillagers
         {
             //Village.Load();
             text += "Loading the village. ";
+            MessageBox.Show("Loading the village");
 
         }
 
