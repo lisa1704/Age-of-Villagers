@@ -7,8 +7,8 @@ namespace AgeOfVillagers
 {
     public class ArabTree : CompositeShapes
     {
-        private Point ptr, pbl, pbr, p1, p2, p3, p4, p5;
-        int pm, m, n;
+        private Point ptr, pbl, pbr, pm, p1, p2, p3, p4, p5;
+        private int m, n;
         public ArabTree(Point p)
         {
             ptr = new Point(p.X + 5, p.Y);
@@ -26,7 +26,7 @@ namespace AgeOfVillagers
 
 
             
-            Point pm = new Point(m, n);
+            pm = new Point(m, n);
             add_shapes(new Rectangle(p, pbl, pbr, ptr));
             add_shapes(new Line(pm, p1));
             add_shapes(new Line(pm, p2));

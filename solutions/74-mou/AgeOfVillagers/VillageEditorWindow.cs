@@ -19,6 +19,8 @@ namespace AgeOfVillagers
         private string vname ="";
         NationFactory nationfactory = new NationFactory();
         Graphics gr;
+        private ItemsOfVillage vitem;
+
         //Pen pen;
         private List<Point> PointsOfHouse { get; set; } = new List<Point>();
         private List<Point> PointsOfTree { get; set; } = new List<Point>();
@@ -63,6 +65,40 @@ namespace AgeOfVillagers
         {
 
         }
+
+        private void savevillage_Click(object sender, EventArgs e)
+        {
+            GetSavedVillage();
+            ConSavingVillage savingvillage = new ConSavingVillage(vitem);
+            savingvillage.ExecuteCommand();
+            MessageBox.Show(vname + " village saved!");
+
+        }
+        public void GetSavedVillage()
+        {
+            vitem.SVillageName = villagename.Text;
+            vitem.SPointsOfTree = this.PointsOfTree;
+            vitem.SPointsOfHouse = this.PointsOfHouse;
+            vitem.SPointsOfWatersource = this.PointsOfWatersource;
+        }
+
+        public void SetSavedVillage(ItemsOfVillage vitem)
+        {
+            villagename.Text = vitem.SVillageName;
+            foreach (Point p in vitem.SPointsOfHouse)
+            {
+                PointsOfHouse.Add(p);
+            }
+            foreach (Point p in vitem.SPointsOfTree)
+            {
+                PointsOfTree.Add(p);
+            }
+            foreach (Point p in vitem.SPointsOfHouse)
+            {
+                PointsOfWatersource.Add(p);
+            }
+
+        }
         private void TreeRadio_CheckedChanged(object sender, EventArgs e)
         {
             item = "Tree";
@@ -81,7 +117,19 @@ namespace AgeOfVillagers
 
         private void PaintDrawPanel(object sender, PaintEventArgs e)
         {
-           
+            foreach (Point p in PointsOfTree)
+            {
+                nationfactory.GetNation(checked_nation).DrawTree(gr, p);
+            }
+            foreach (Point p in PointsOfHouse)
+            {
+                nationfactory.GetNation(checked_nation).DrawHouse(gr, p);
+            }
+            foreach (Point p in PointsOfWatersource)
+            {
+                nationfactory.GetNation(checked_nation).DrawWaterSource(gr, p);
+            }
+
 
         }
 
@@ -120,10 +168,7 @@ namespace AgeOfVillagers
 
         }
 
-        private void savevillage_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         public void newvillage_Click(object sender, EventArgs e)
         {
             villagename.Clear();
@@ -131,7 +176,6 @@ namespace AgeOfVillagers
             PointsOfHouse.Clear();
             PointsOfWatersource.Clear();
             drawingpanel.Refresh();
-
 
         }
 
