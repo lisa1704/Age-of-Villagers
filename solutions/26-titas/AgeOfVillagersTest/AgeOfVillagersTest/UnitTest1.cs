@@ -27,5 +27,14 @@ namespace AgeOfVillagersTest
 
             Assert.IsType<ArabBedouin>(nation);
         }
+
+        [Fact]
+        public void EgyptianKingsObjectTest()
+        {
+            NationNameFactory name = new NationNameFactory("Egyptian Kings");
+            INation nation = name.NationNameFactoryMethod();
+
+            Assert.IsType<EgyptianKings>(nation);
+        }
     }
 }
