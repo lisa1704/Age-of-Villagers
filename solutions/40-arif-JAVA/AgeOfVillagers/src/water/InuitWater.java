@@ -21,7 +21,7 @@ public class InuitWater implements IWater {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if (active) {
-                    
+
                     radioButton.setSelected(false);
                     active = false;
                 }

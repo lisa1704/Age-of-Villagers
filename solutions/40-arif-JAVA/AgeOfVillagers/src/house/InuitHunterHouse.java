@@ -7,6 +7,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
+import shape.Circle;
+import shape.Line;
 
 public class InuitHunterHouse implements IHouse {
 
@@ -22,8 +24,16 @@ public class InuitHunterHouse implements IHouse {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 50, 10, 200, 360, ArcType.OPEN);
-                    graphicsContext.strokeText("Inuit house", mouseEvent.getX(), mouseEvent.getY());
+
+
+                    double x= mouseEvent.getX();
+                    double y= mouseEvent.getY();
+
+                    new Line(x-20,y,x+20,y).draw(graphicsContext);
+                    new Circle(x-20,y-20,40).draw(graphicsContext);
+                    new Circle(x-20,y-20,10).draw(graphicsContext);
+
+
                     radioButton.setSelected(false);
                     active = false;
                 }
