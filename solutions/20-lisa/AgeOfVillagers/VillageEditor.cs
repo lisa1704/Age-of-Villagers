@@ -116,7 +116,7 @@ namespace AgeOfVillagers
             SaveVillageState();
             VillageOpenSave saveTheVillage = new VillageOpenSave(villageItems);
             saveTheVillage.SaveVillage();
-            MessageBox.Show(vName + "Your village has been saved");
+            MessageBox.Show(vName + ". Your village has been saved");
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -136,7 +136,8 @@ namespace AgeOfVillagers
             VillageOpenSave openVillage = new VillageOpenSave(villageItems);
             openVillage.OpenVillage();
             villageItems = openVillage.GetMyVillageItems();
-            
+            SetmySavedVillage(villageItems);
+            drawingPanel.Refresh();
         }
         private void NationBox_SelectedIndexChanged(object sender, EventArgs e)
         {
