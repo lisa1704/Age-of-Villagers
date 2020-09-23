@@ -18,6 +18,7 @@ namespace AgeOfVillagers.Tests
             INation nation = new ArabBedouin();
             var expected = nation.getItemShape(point1, "House");
             var actual = new ArabHouse().getItemShape(point1);
+            var actual2 = new ArabHouseShape(point1, 16, 16);
             actual.Equals(expected);
         }
 
@@ -68,5 +69,36 @@ namespace AgeOfVillagers.Tests
             actual.Equals(expected);
         }
 
+        //Egyptian 
+        [Fact]
+        public void EgyptianKings_getHouseShape_Test()
+        {
+            INation nation = new EgyptianKings();
+            var expected = nation.getItemShape(point1, "House");
+            var actual = new EgyptianHouse().getItemShape(point1);
+            var actual2 = new EgyptianHouseShape(point1, 16, 16);
+            actual.Equals(expected);
+            actual2.Equals(expected);
+        }
+
+        [Fact]
+        public void EgyptianKings_getTreeShape_Test()
+        {
+            INation nation = new EgyptianKings();
+            var expected = nation.getItemShape(point2, "Tree");
+            var actual = new EgyptianTree().getItemShape(point2);
+            actual.Equals(expected);
+        }
+
+        [Fact]
+        public void EgyptianKings_getWaterSourceShape_Test()
+        {
+            INation nation = new EgyptianKings();
+            var expected = nation.getItemShape(point2, "Water");
+            var actual = new EgyptianWaterResource().getItemShape(point2);
+            var actual2 = new EgyptianWaterSourceShape(point2, 12, 12);
+            actual.Equals(expected);
+            actual2.Equals(expected);
+        }
     }
 }
