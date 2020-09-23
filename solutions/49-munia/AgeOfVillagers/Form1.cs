@@ -40,7 +40,8 @@ namespace AgeOfVillagers
             // BangladeshiFarmers nation = new BangladeshiFarmers();
             //  EgyptianKings nation = new EgyptianKings();
             //ArabBeouins nation = new ArabBeouins();
-            InuitHunters nation = new InuitHunters();
+            //InuitHunters nation = new InuitHunters();
+            INation nation = new INation();
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)

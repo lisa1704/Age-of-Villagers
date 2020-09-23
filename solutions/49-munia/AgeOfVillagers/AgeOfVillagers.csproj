@@ -57,7 +57,7 @@
     <Compile Include="NationItems\EgyptianItems.cs" />
     <Compile Include="NationItems\INationItems.cs" />
     <Compile Include="NationItems\InuitItems.cs" />
-    <Compile Include="Nations\ArabBeouins.cs" />
+    <Compile Include="Nations\ArabBedouins.cs" />
     <Compile Include="Nations\CheckNation.cs" />
     <Compile Include="Nations\EgyptianKings.cs" />
     <Compile Include="Nations\INation.cs" />

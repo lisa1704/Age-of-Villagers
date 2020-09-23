@@ -16,8 +16,15 @@ namespace AgeOfVillagers.Nations
            name = nationName;
             if (name == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
+            else if (name == "Arab Bedouin")
+                return new ArabBedouins();
+            else if (name == "Egyptian Kings")
+                return new EgyptianKings();
+            else if (name == "Inuit Hunters")
+                return new InuitHunters();
             else
                 return new NullNation();
+  
 
         }
     }

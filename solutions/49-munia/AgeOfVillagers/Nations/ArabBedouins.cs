@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers.Nations
 {
-    class ArabBeouins : INation
+    class ArabBedouins : INation
     {
         Pen pen = new Pen(Color.Black);
         ArabItems ab = new ArabItems();
