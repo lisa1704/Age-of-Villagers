@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class VillageSerializer
+    public class VillageSerializer
     {
         Village _village;
 
