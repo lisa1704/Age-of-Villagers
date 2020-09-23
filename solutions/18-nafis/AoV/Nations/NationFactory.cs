@@ -26,7 +26,10 @@ namespace AoV.Nations
             {
                 return new InuitHunters();
             }
-        
+            else
+            {
+                return new NullNation();
+            }
         }
     }
 }
