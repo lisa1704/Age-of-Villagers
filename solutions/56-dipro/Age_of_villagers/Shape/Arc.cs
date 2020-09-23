@@ -10,7 +10,7 @@ namespace Age_of_villagers.Shape
 {
     class Arc : IShape
     {
-        private readonly Point point;
+        private readonly Point point ;
         private float x, y, width, height, start_Angle, sweep_Angle;
         public Arc(Point topLeft, Point bottomRight)
         {
