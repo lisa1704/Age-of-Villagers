@@ -8,6 +8,9 @@ namespace age_of_villagers_XUnitTests
 {
     public class BangladeshiTest
     {
+        Graphics g;
+        INation nation = new Bangladeshifarmer();
+        Point housepoint = new Point(300, 300);
         [Fact]
         public void BGColorTest()
         {
@@ -28,8 +31,9 @@ namespace age_of_villagers_XUnitTests
             actual.Equals(expected);
         }
 
-        
-       
+    
+
+
 
 
     }

@@ -17,7 +17,15 @@ namespace age_of_villagers_XUnitTests
 
         }
 
+        [Fact]
+        public void getVillageTest()
+        {
+            INation expected = new Inuithunter();
+            NationFactory nationFactory = new NationFactory();
+            INation actual = nationFactory.GetNation("Inuit Hunter");
+            actual.Equals(expected);
+        }
 
-       
+
     }
 }
