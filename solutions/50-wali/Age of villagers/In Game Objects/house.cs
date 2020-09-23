@@ -6,4 +6,10 @@ public class house
     {
 
     }
+
+    public String size()
+    {
+        return "16px by 16px";
+    }
+
 }
