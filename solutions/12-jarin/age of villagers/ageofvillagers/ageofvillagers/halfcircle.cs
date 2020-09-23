@@ -11,6 +11,15 @@ namespace ageofvillagers
     {
         private int x, y, radi;
         Pen pen;
+        private int v;
+
+        public halfcircle(int x, int y, int v)
+        {
+            this.x = x;
+            this.y = y;
+            this.v = v;
+        }
+
         public halfcircle(Pen pen ,int x, int y, int radi)
         {
             this.x = x;
