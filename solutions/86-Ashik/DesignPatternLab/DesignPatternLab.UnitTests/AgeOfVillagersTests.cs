@@ -57,7 +57,7 @@ namespace DesignPatternLab.UnitTests
             Assert.AreEqual(Color.FromArgb(246, 246, 236), color);
         }
 
-        //testing object type
+        //testing object types of trees
         [Test]
         public void BDFarmersTreeTest()
         {
@@ -79,6 +79,35 @@ namespace DesignPatternLab.UnitTests
             ITree tree = ab.drawTree(e);
             Assert.IsInstanceOf(typeof(EgyptianKingsTree), tree);
         }
-        
+
+        //testing object types of houses
+        [Test]
+        public void BDFarmersHouseTest()
+        {
+            var bdFarmers = new BangladeshiFarmers(g, form);
+            IHouse tree = bdFarmers.drawHouse(e);
+            Assert.IsInstanceOf(typeof(BDFarmersHouse), tree);
+        }
+        [Test]
+        public void ArabBedouinsHouseTest()
+        {
+            var ab = new ArabBedouin(g, form);
+            IHouse tree = ab.drawHouse(e);
+            Assert.IsInstanceOf(typeof(ArabBedouinsHouse), tree);
+        }
+        [Test]
+        public void EgyptianKingsHouseTest()
+        {
+            var ab = new EgyptianKings(g, form);
+            IHouse tree = ab.drawHouse(e);
+            Assert.IsInstanceOf(typeof(EgyptianKingsHouse), tree);
+        }
+        [Test]
+        public void InuitHuntersHouseTest()
+        {
+            var ab = new InuitHunters(g, form);
+            IHouse tree = ab.drawHouse(e);
+            Assert.IsInstanceOf(typeof(InuitHuntersHouse), tree);
+        }
     }
 }
