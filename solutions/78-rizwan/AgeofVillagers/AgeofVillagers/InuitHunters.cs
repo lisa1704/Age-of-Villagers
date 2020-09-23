@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace AgeofVillagers
 {
 
-    class InuitHunters : Ination
+    public class InuitHunters : Ination
     {
         Graphics g;
         public InuitHunters(Graphics g)
@@ -31,9 +31,10 @@ namespace AgeofVillagers
             throw new NotImplementedException();
         }
 
-        public void terrain(Panel p)
+        public Color terrain(Panel p)
         {
             p.BackColor = Color.White;
+            return Color.White;
         }
     }
 }

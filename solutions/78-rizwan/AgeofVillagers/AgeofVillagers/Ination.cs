@@ -11,6 +11,6 @@ namespace AgeofVillagers
         void createHouse(MouseEventArgs e);
         void createTree(MouseEventArgs e);
         void createWaterSource(MouseEventArgs e);
-        void terrain(Panel p);
+        Color terrain(Panel p);
     }
 }

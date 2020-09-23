@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeofVillagers
 {
-    class BangladeshiFarmers : Ination
+    public class BangladeshiFarmers : Ination
     {
         Graphics g;
         public BangladeshiFarmers(Graphics g)
@@ -31,9 +31,10 @@ namespace AgeofVillagers
             BangladeshiWaterSource bws = new BangladeshiWaterSource(g);
             bws.createWaterSource(e);
         }
-        public void terrain(Panel p)
+        public Color terrain(Panel p)
         {
             p.BackColor = Color.Green;
+            return Color.Green;
         }
     }
 }

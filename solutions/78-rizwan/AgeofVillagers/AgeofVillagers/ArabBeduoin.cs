@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace AgeofVillagers
 {
-    class ArabBeduoin : Ination
+    public class ArabBeduoin : Ination
     {
         Graphics g;
         public ArabBeduoin(Graphics g)
@@ -29,9 +29,10 @@ namespace AgeofVillagers
         {
             throw new NotImplementedException();
         }
-        public void terrain(Panel p)
+        public Color terrain(Panel p)
         {
             p.BackColor = Color.LightYellow;
+            return Color.LightYellow;
         }
     }
 }
