@@ -13,21 +13,21 @@ namespace AgeOfVillagers
 
         public void DrawHouse(int x, int y, Graphics g)
         {
-            g.DrawLine(pen, new Point(x, y), new Point(x + 15, y - 10));
-            g.DrawLine(pen, new Point(x, y), new Point(x + 30, y));
-            g.DrawLine(pen, new Point(x + 15, y - 10), new Point(x + 30, y));
-            g.DrawLine(pen, new Point(x, y), new Point(x, y + 15));
-            g.DrawLine(pen, new Point(x + 30, y), new Point(x + 30, y + 15));
-            g.DrawLine(pen, new Point(x, y + 15), new Point(x + 30, y + 15));
+            g.DrawLine(pen, new Point(x, y), new Point(x + 8, y - 6));
+            g.DrawLine(pen, new Point(x, y), new Point(x + 16, y));
+            g.DrawLine(pen, new Point(x + 8, y - 6), new Point(x + 16, y));
+            g.DrawLine(pen, new Point(x, y), new Point(x, y + 10));
+            g.DrawLine(pen, new Point(x + 16, y), new Point(x + 16, y + 10));
+            g.DrawLine(pen, new Point(x, y + 10), new Point(x + 16, y + 10));
         }
 
         public void DrawTree(int x, int y, Graphics g)
         {
-            g.DrawArc(pen, x - 15, y - 20, 30, 40, 0, 360);
+            g.DrawArc(pen, x - 8, y - 9, 16, 18, 0, 360);
             g.DrawLine(pen, new Point(x - 1, y), new Point(x + 1, y));
-            g.DrawLine(pen, new Point(x - 1, y), new Point(x - 1, y + 30));
-            g.DrawLine(pen, new Point(x + 1, y), new Point(x + 1, y + 30));
-            g.DrawLine(pen, new Point(x - 1, y + 30), new Point(x + 1, y + 30));
+            g.DrawLine(pen, new Point(x - 1, y), new Point(x - 1, y + 15));
+            g.DrawLine(pen, new Point(x + 1, y), new Point(x + 1, y + 15));
+            g.DrawLine(pen, new Point(x - 1, y + 15), new Point(x + 1, y + 15));
         }
 
         public void DrawWater(int x, int y, Graphics g)

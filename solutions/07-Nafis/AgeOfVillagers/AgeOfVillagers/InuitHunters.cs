@@ -12,9 +12,9 @@ namespace AgeOfVillagers
         
         public void DrawHouse(int x, int y, Graphics g)
         {
-            g.DrawArc(pen, x, y - 30, 60, 60, 180, 180);
-            g.DrawLine(pen, new Point(x, y), new Point(x + 60, y));
-            g.DrawArc(pen, x + 20, y - 10, 20, 20, 180, 180);
+            g.DrawArc(pen, x, y - 8, 16, 16, 180, 180);
+            g.DrawLine(pen, new Point(x, y), new Point(x + 16, y));
+            g.DrawArc(pen, x + 4, y - 4, 8, 8, 180, 180);
         }
 
         public void DrawTree(int x, int y, Graphics g)

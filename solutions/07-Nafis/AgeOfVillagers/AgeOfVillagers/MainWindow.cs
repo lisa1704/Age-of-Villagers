@@ -40,15 +40,13 @@ namespace AgeOfVillagers
             InitializeComponent();
         }
 
+
+
         private void drawingAreaPanel_MouseClick(object sender, MouseEventArgs e)
         {
             Pen pen = new Pen(Color.Black);
             x = e.X;
             y = e.Y;
-
-            
-
-            g = drawingAreaPanel.CreateGraphics();
 
             if(objectName == "TREE")
             {
@@ -63,14 +61,22 @@ namespace AgeOfVillagers
             {
                 waterLocation.Add(e.Location);
             }
+            drawingAreaPanel.Invalidate();
 
             //Console.WriteLine(houseLocations);
-            foreach(Point point in treeLocations)
+            
+        }
+
+        private void drawingAreaPanel_Paint(object sender, PaintEventArgs e)
+        {
+            g = drawingAreaPanel.CreateGraphics();
+
+            foreach (Point point in treeLocations)
             {
                 currentNation.DrawTree(point.X, point.Y, g);
             }
 
-            foreach(Point point in houseLocations)
+            foreach (Point point in houseLocations)
             {
                 currentNation.DrawHouse(point.X, point.Y, g);
             }
@@ -111,6 +117,7 @@ namespace AgeOfVillagers
             drawingAreaPanel.BackColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             villageNameBox.Clear();
             nationTypeCombo.SelectedItem = null;
+            objectName = null;
             houseLocations.Clear();
             treeLocations.Clear();
             waterLocation.Clear();
@@ -175,9 +182,11 @@ namespace AgeOfVillagers
                 sr.Dispose();
             }
             g = drawingAreaPanel.CreateGraphics();
+            //Debug.WriteLine("nation is: " + nation);
 
             Get_from_state(village);
             drawingAreaPanel.Refresh();
         }
+
     }
 }

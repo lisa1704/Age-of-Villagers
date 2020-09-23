@@ -51,6 +51,7 @@ namespace AgeOfVillagers
             this.drawingAreaPanel.Name = "drawingAreaPanel";
             this.drawingAreaPanel.Size = new System.Drawing.Size(600, 400);
             this.drawingAreaPanel.TabIndex = 12;
+            this.drawingAreaPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingAreaPanel_Paint);
             this.drawingAreaPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingAreaPanel_MouseClick);
             // 
             // menuPanel

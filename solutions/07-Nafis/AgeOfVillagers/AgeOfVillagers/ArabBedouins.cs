@@ -15,11 +15,11 @@ namespace AgeOfVillagers
         public void DrawHouse(int x, int y, Graphics g)
         {
             g.DrawLine(pen, new Point(x, y), new Point(x - 20, y + 25));
-            g.DrawLine(pen, new Point(x - 20, y + 25), new Point(x + 20, y + 25));
+            g.DrawLine(pen, new Point(x - 20, y + 25), new Point(x + 20, y + 25)); //triangle part
             g.DrawLine(pen, new Point(x, y), new Point(x + 20, y + 25));
 
             g.DrawLine(pen, new Point(x, y), new Point(x + 12, y - 12));
-            g.DrawLine(pen, new Point(x + 12, y - 12), new Point(x + 32, y + 13));
+            g.DrawLine(pen, new Point(x + 12, y - 12), new Point(x + 32, y + 13)); //rectangle part
             g.DrawLine(pen, new Point(x + 20, y + 25), new Point(x + 32, y + 13));
         }
 
