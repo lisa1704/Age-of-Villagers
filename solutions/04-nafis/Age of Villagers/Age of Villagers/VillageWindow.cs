@@ -32,24 +32,6 @@ namespace Age_of_Villagers
             pen = new Pen(Color.Black, 2);
         }
 
-        private void VillageWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VillageDrawing_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void GameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void VillageNameText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
  
         private void SaveVillageButton_Click(object sender, EventArgs e)
         {
