@@ -14,11 +14,13 @@ namespace AgeOfVillagers
    
         Pen pen = new Pen(Color.Black);
     
-        public void DrawHouse(Graphics g)
+        public void DrawHouse(Graphics g, Point p)
         {
             
-            Triangle t = new Triangle(g);
+            Triangle t = new Triangle(g, p);
+            Rectangle r = new Rectangle(g, p);
             t.Draw();
+            r.Draw();
         }
 
         public void DrawTree(Graphics g, Point p)
@@ -27,7 +29,7 @@ namespace AgeOfVillagers
             r.Draw();
         }
 
-        public void drawWater(Graphics g)
+        public void drawWater(Graphics g, Point p)
         {
             g.DrawLine(pen, 10, 100, 300, 100);
         }

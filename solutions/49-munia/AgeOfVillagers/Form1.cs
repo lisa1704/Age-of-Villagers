@@ -37,9 +37,9 @@ namespace AgeOfVillagers
             if (tree.Checked == true)
                 v.DrawTree(g,point);
             else if (House.Checked == true)
-                v.DrawHouse(g);
+                v.DrawHouse(g,point);
             else if (Water.Checked == true)
-                v.drawWater(g);           
+                v.drawWater(g,point);           
 
         }
 

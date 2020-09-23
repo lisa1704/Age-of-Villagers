@@ -18,13 +18,13 @@ namespace AgeOfVillagers.Shapes
             graphics = g;
             point = p;
 
-            otherPoint1.X = point.X + 30;
+            otherPoint1.X = point.X - 30;
             otherPoint1.Y = point.Y ;
 
             otherPoint2.X = point.X;
-            otherPoint2.Y = point.Y-20;
+            otherPoint2.Y = point.Y - 20;
 
-            otherPoint3.X = point.X + 30;
+            otherPoint3.X = point.X - 30;
             otherPoint3.Y = point.Y - 20;
 
         }
