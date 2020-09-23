@@ -90,7 +90,7 @@ public class Controller {
                             Point point=new Point(x,y);
                             gc=canvas.getGraphicsContext2D();
                             if (object=="Tree"){
-                                gc.fillText("T",x,y);
+                                nation.getTree().draw(canvas,point);
                                 treeList.add(point);
                             }
 
