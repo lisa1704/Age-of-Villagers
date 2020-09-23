@@ -24,19 +24,9 @@ namespace AgeOfVillagers
             this.w = w;
         }
 
-        public void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
         public void DrawShape(Graphics g, Pen p)
         {
             g.DrawArc(p,x.X-25,x.Y-25, y, w, h, r);
-        }
-
-        internal void DrawShape()
-        {
-            throw new NotImplementedException();
         }
     }
 }

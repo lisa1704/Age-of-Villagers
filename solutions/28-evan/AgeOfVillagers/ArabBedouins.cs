@@ -24,10 +24,10 @@ namespace AgeOfVillagers
             Point r1 = new Point(pt.X + 13, pt.Y - 10);
             Point r2 = new Point(pt.X + 24, pt.Y + 10);
             Triangle triangle = new Triangle(g, pen, t2, t1, pt);
-            triangle.Draw();
+            triangle.DrawShape();
 
             Rectangle rectangle = new Rectangle(g, pen, pt, r1, t1, r2);
-            rectangle.Draw();
+            rectangle.DrawShape();
         }
 
         public void DrawTree(Graphics g, Point pt)
@@ -46,7 +46,7 @@ namespace AgeOfVillagers
 
 
             Rectangle rectangle = new Rectangle(g, pen, r1, r2, r3, r4);
-            rectangle.Draw();
+            rectangle.DrawShape();
 
 
             g.DrawLine(pen, pt, p1);

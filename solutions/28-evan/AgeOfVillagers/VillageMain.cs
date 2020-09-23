@@ -69,12 +69,12 @@ namespace AgeOfVillagers
             p = e.Location;
 
 
-            if (house.Checked == true)
+            if (house_radio.Checked == true)
             {
                 TypeOfNation.checkNation(nation).DrawHouse(g, p);
             }
 
-            else if (water_source.Checked == true)
+            else if (water_radio.Checked == true)
             {
                 TypeOfNation.checkNation(nation).DrawWaterSource(g, p);
             }

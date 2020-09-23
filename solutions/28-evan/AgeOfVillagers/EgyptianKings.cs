@@ -25,9 +25,9 @@ namespace AgeOfVillagers
             Point t2 = new Point(p.X + 8, p.Y - 15);
             Point t3 = new Point(p.X + 15, p.Y - 5);
             Triangle triangle1 = new Triangle(g, pen, p, t1, t2);
-            triangle1.Draw();
+            triangle1.DrawShape();
             Triangle triangle2 = new Triangle(g, pen, t1, t2, t3);
-            triangle2.Draw(); ;
+            triangle2.DrawShape(); ;
         }
 
         public void DrawTree(Graphics g, Point p)

@@ -13,10 +13,6 @@ namespace AgeOfVillagers
         Pen p;
         Graphics g;
 
-        public void Draw()
-        {
-            throw new NotImplementedException();
-        }
         public Triangle(Graphics g, Pen p, Point x, Point y,Point z)
         {
             this.x = x;
@@ -35,7 +31,9 @@ namespace AgeOfVillagers
 
         internal void DrawShape()
         {
-            throw new NotImplementedException();
+            g.DrawLine(p, x, y);
+            g.DrawLine(p, x, z);
+            g.DrawLine(p, y, y); ;
         }
     }
 }

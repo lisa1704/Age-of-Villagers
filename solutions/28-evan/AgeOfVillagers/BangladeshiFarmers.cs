@@ -41,7 +41,7 @@ namespace AgeOfVillagers
             Point r4 = new Point(pt.X + 2, pt.Y + 24);
             Point center = new Point(pt.X + 12, pt.Y + 12);
             Circle circle = new Circle(g, pn, center, 24, 24, 0, 360);
-            circle.DrawShape();
+            //circle.DrawShape();
             Rectangle rectangle = new Rectangle(g, pn, r1, r2, r3, r4);
             rectangle.DrawShape();
         }

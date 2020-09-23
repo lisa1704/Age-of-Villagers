@@ -13,11 +13,6 @@ namespace AgeOfVillagers
         Pen p;
         Graphics g;
 
-        public void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
         public Line(Graphics g,Pen p,Point x,Point y)
         {
             this.x = x;
