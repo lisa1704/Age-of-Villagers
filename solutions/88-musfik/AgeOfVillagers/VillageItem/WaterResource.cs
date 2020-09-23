@@ -28,6 +28,6 @@ namespace AgeOfVillagers
         
         public override int getHeight() => height;
         public override int getWidth() => width;
-        public override IShape getItemShape(Point point) => new EgyptianWaterSourceShape(point);
+        public override IShape getItemShape(Point point) => new EgyptianWaterSourceShape(point, getWidth(), getHeight());
     }
 }
