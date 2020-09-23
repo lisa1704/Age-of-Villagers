@@ -35,5 +35,15 @@ namespace AgeOfVillagers.Tests
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void InuitHunters_TerrainColorTest()
+        {
+            INation nation = new InuitHunters();
+            var expected = Color.White;
+            var actual = nation.getTerrainColor();
+            Assert.Equal(expected, actual);
+        }
+
+
     }
 }
