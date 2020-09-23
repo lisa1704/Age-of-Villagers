@@ -76,7 +76,7 @@ namespace AgeOfVillagers
             villageSaveState();
             VillageSaveOpen save_Village = new VillageSaveOpen(myItems);
             save_Village.saveMyVillage();
-            MessageBox.Show(villageName.Text + " Village is saved");
+            MessageBox.Show(village_name + " Village is saved");
         }
 
         private void newVillagebutton_Click(object sender, EventArgs e)
@@ -173,7 +173,6 @@ namespace AgeOfVillagers
         private void VillageNametextBox_TextChanged(object sender, EventArgs e)
         {
             village_name = VillageNametextBox.Text;
-            villageName.Text = village_name;
         }
     }
 }

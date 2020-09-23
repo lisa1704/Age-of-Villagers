@@ -32,7 +32,6 @@ namespace AgeOfVillagers
         {
             this.AgeOfVillagers = new System.Windows.Forms.Label();
             this.drawingPanel = new System.Windows.Forms.Panel();
-            this.villageName = new System.Windows.Forms.Label();
             this.saveVillagebutton = new System.Windows.Forms.Button();
             this.newVillagebutton = new System.Windows.Forms.Button();
             this.openVillagebutton = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@ namespace AgeOfVillagers
             this.waterSourceButton = new System.Windows.Forms.RadioButton();
             this.NationName = new System.Windows.Forms.ComboBox();
             this.VillageNametextBox = new System.Windows.Forms.TextBox();
+            this.villageName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AgeOfVillagers
@@ -64,17 +64,6 @@ namespace AgeOfVillagers
             this.drawingPanel.TabIndex = 1;
             this.drawingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawingPanel_Paint);
             this.drawingPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.drawingPanel_MouseClick);
-            // 
-            // villageName
-            // 
-            this.villageName.AutoSize = true;
-            this.villageName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.villageName.Location = new System.Drawing.Point(721, 61);
-            this.villageName.Name = "villageName";
-            this.villageName.Size = new System.Drawing.Size(128, 28);
-            this.villageName.TabIndex = 2;
-            this.villageName.Text = "Village Name";
-            this.villageName.Click += new System.EventHandler(this.villageName_Click);
             // 
             // saveVillagebutton
             // 
@@ -167,6 +156,17 @@ namespace AgeOfVillagers
             this.VillageNametextBox.TabIndex = 15;
             this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
             // 
+            // villageName
+            // 
+            this.villageName.AutoSize = true;
+            this.villageName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.villageName.Location = new System.Drawing.Point(730, 60);
+            this.villageName.Name = "villageName";
+            this.villageName.Size = new System.Drawing.Size(112, 23);
+            this.villageName.TabIndex = 2;
+            this.villageName.Text = "Village Name";
+            this.villageName.Click += new System.EventHandler(this.villageName_Click);
+            // 
             // CreateNewVillage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -202,7 +202,6 @@ namespace AgeOfVillagers
 
         private System.Windows.Forms.Label AgeOfVillagers;
         private System.Windows.Forms.Panel drawingPanel;
-        private System.Windows.Forms.Label villageName;
         private System.Windows.Forms.Button saveVillagebutton;
         private System.Windows.Forms.Button newVillagebutton;
         private System.Windows.Forms.Button openVillagebutton;
@@ -211,6 +210,7 @@ namespace AgeOfVillagers
         private System.Windows.Forms.RadioButton waterSourceButton;
         private System.Windows.Forms.ComboBox NationName;
         private System.Windows.Forms.TextBox VillageNametextBox;
+        private System.Windows.Forms.Label villageName;
     }
 }
 
