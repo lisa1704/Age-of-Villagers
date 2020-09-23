@@ -16,4 +16,13 @@ public class EgyptianKingsWater extends DrawWater {
 
         return lines;
     }
+    @Override
+    public ArrayList<Shape> draw(double x, double y) {
+        Circle water = new Circle(x + 6, y + 6, 6);
+
+        ArrayList<Shape> lines = new ArrayList<>();
+        lines.add(water.draw());
+
+        return lines;
+    }
 }
