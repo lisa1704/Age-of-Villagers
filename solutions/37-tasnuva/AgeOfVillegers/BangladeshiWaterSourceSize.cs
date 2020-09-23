@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace AgeOfVillagers
 {
-	class BangladeshiWaterSource : IVillageItem
+	class BangladeshiWaterSourceSize  : Size
 	{
-		public void Draw(Point e, Graphics g, Pen p)
+        public override int GetHeight()
         {
-
+            return 16;
         }
-	}
+
+        public override int GetWeidth()
+        {
+            return 24;
+        }
+    }
 }
