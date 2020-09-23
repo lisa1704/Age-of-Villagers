@@ -58,4 +58,55 @@ public class AssetTests {
 
         Assertions.assertEquals(new Bangladeshi_Farmers_WaterSource().getClass(),waterSource.getClass());
     }
+
+    @Test
+    void Egyptian_Kings_House_Test(){
+        IAssetFactory houseFactory= new HouseFactory();
+        IHouse house = (IHouse) houseFactory.createAsset("Egyptian Kings");
+
+        Assertions.assertEquals(new Egyptian_Kings_House().getClass(),house.getClass());
+    }
+
+    @Test
+    void Egyptian_Kings_Tree_Test(){
+        IAssetFactory treeFactory= new TreeFactory();
+        ITree tree = (ITree) treeFactory.createAsset("Egyptian Kings");
+
+        Assertions.assertEquals(new Egyptian_kings_Tree().getClass(),tree.getClass());
+    }
+
+    @Test
+    void Egyptian_Kings_WaterSource_Test(){
+        IAssetFactory waterSourceFactory= new WaterSourceFactory();
+        IWaterSource waterSource = (IWaterSource) waterSourceFactory.createAsset("Egyptian Kings");
+
+        Assertions.assertEquals(new Egyptian_Kings_WaterSource().getClass(),waterSource.getClass());
+    }
+
+    @Test
+    void Inuit_Hunters_House_Test(){
+        IAssetFactory houseFactory= new HouseFactory();
+        IHouse house = (IHouse) houseFactory.createAsset("Inuit Hunters");
+
+        Assertions.assertEquals(new Iuit_Hunters_House().getClass(),house.getClass());
+    }
+
+    @Test
+    void Inuit_Hunters_Tree_Test(){
+        IAssetFactory treeFactory= new TreeFactory();
+        ITree tree = (ITree) treeFactory.createAsset("Inuit Hunters");
+
+        Assertions.assertEquals(new Null_Tree().getClass(),tree.getClass());
+    }
+
+    @Test
+    void Inuit_Hunters_WaterSource_Test(){
+        IAssetFactory waterSourceFactory= new WaterSourceFactory();
+        IWaterSource waterSource = (IWaterSource) waterSourceFactory.createAsset("Inuit Hunters");
+
+        Assertions.assertEquals(new Null_WaterSource(),waterSource.getClass());
+    }
+
+
+
 }
