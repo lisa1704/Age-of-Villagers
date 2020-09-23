@@ -33,7 +33,15 @@ namespace Age_of_Villagers
 
         private void SelectNationButton_Click(object sender, EventArgs e)
         {
-            
+            NationController nationController = new NationController(NationNameCombo.Text);
+            VillageConditionEdit villageConditionEdit = new VillageConditionEdit(graphics, pen, panel, nationController);
+
+            villageWindow.NationNameCombo.Text = NationNameCombo.Text;
+            villageWindow.VillageNameText.Text = villageCondition.name;
+
+            panel.Refresh();
+            villageConditionEdit.ResetState(villageCondition, NationNameCombo.Text);
+            this.Hide();
         }
 
         private void NationNameCombo_SelectedIndexChanged(object sender, EventArgs e)
