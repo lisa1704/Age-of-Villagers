@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace AOV.Shapes
+namespace AOV
 {
     public class ArabTreeShape : CompoundShape
     {

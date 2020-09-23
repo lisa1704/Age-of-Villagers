@@ -78,6 +78,9 @@
     <Compile Include="Nations\InuitNation.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Nations\NullNation.cs" />
+    <Compile Include="Shapes\EgyptHouseShape.cs" />
+    <Compile Include="Shapes\EgyptTreeShape.cs" />
+    <Compile Include="Shapes\EgyptWaterShape.cs" />
     <Compile Include="Shapes\NullShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

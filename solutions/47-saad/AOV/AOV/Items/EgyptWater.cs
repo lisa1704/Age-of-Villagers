@@ -2,12 +2,20 @@
 
 namespace AOV
 {
-    class EgyptWater : CompoundShape
+    public class EgyptWater : NationItem
+
     {
+        private readonly Point _clicked;
         public EgyptWater(Point clicked)
         {
-            Point p = new Point(clicked.X + 12, clicked.Y + 12);
-            addShape(new Ellipse(clicked, p));
+            _clicked = clicked;
+            Point p = new Point(_clicked.X + 12, _clicked.Y + 12);
+
+            villageItemShape = new EgyptWaterShape(_clicked, p);
+        }
+        public override Point GetPoint()
+        {
+            return _clicked;
         }
     }
 }

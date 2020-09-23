@@ -1,5 +1,4 @@
-﻿using AOV.Shapes;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace AOV
 {
