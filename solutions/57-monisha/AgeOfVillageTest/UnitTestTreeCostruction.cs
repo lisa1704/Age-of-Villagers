@@ -10,18 +10,58 @@ namespace AgeOfVillageTest
     {
         public Graphics g;
         Point pt = new Point(100, 80);
-       // NationFactory nationfactory = new NationFactory();
+        // NationFactory nationfactory = new NationFactory();
 
-      /*  [TestMethod]
-        public void TestBDTreeConstruction()
+        /*  [TestMethod]
+          public void TestBDTreeConstruction()
+          {
+              INations actual = nationfactory.GetNation("ArabBedouin");
+              INations nationType = new ArabBedouin();
+              object testObject = actual.DrawTree(g, pt);
+              object BDTreeTest = new ArabTree(pt);
+
+              BDTreeTest.Equals(testObject);
+          }*/
+        [TestMethod]
+        public void TestBangladeshiTreeConstruction()
         {
-            INations actual = nationfactory.GetNation("ArabBedouin");
-            INations nationType = new ArabBedouin();
-            object testObject = actual.DrawTree(g, pt);
-            object BDTreeTest = new ArabTree(pt);
+            BangladeshiTree BDTreeTest = new BangladeshiTree(pt);
 
-            BDTreeTest.Equals(testObject);
-        }*/
+            BangladeshiFarmers BD = new BangladeshiFarmers();
+            object tree = BD.testTree(pt);
+            BDTreeTest.Equals(tree);
+        }
+
+        [TestMethod]
+        public void TestArabTreeConstruction()
+        {
+            ArabTree ArabTreeTest = new ArabTree(pt);
+
+            ArabBedouin arab = new ArabBedouin();
+            object tree = arab.testTree(pt);
+            ArabTreeTest.Equals(tree);
+        }
+
+        [TestMethod]
+        public void TestEgyptTreeConstruction()
+        {
+            EgyptianTree EgyptTreeTest = new EgyptianTree(pt);
+
+            EgyptianKings egyptian = new EgyptianKings();
+            object tree = egyptian.testTree(pt);
+            EgyptTreeTest.Equals(tree);
+        }
+
+        [TestMethod]
+        public void TestInuitTreeConstruction()
+        {
+            INations nationType = new InuitHunters();
+            object testObject = nationType.DrawTree(g, pt);
+            NullVillageItem InuitTreeTest = new NullVillageItem(pt);
+
+            InuitTreeTest.Equals(testObject);
+        }
+
         [TestMethod]
         public void TestNullTreeConstruction()
         {

@@ -30,6 +30,11 @@ namespace AgeOfVillagers
             return EgyptTree;
         }
 
+        public object testTree(Point pt)
+        {
+            return new EgyptianTree(pt);
+        }
+
         public object DrawWaterSource(Graphics g, Point MPt)
         {
             EgyptianWaterSource EgyptWater = new EgyptianWaterSource(MPt);
@@ -41,6 +46,6 @@ namespace AgeOfVillagers
         {
             return Color.Yellow;
         }
-      
+     
     }
 }

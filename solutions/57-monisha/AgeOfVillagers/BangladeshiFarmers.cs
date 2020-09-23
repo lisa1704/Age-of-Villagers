@@ -31,6 +31,12 @@ namespace AgeOfVillagers
             BDtree.Paint(g, p);
             return BDtree;
         }
+
+        public object testTree(Point pt)
+        {
+            return new BangladeshiTree(pt);
+        }
+
         public object DrawWaterSource(Graphics g, Point MPt)
         {
             BangladeshiWaterSource BDWaterSource = new BangladeshiWaterSource(MPt);

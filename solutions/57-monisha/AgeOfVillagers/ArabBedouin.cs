@@ -30,12 +30,16 @@ namespace AgeOfVillagers
             return Arabtree;
         }
 
+        public object testTree(Point pt)
+        {
+            return new ArabTree(pt);
+        }
         public object DrawWaterSource(Graphics g, Point MPt)
         {
             NullVillageItem nullWater = new NullVillageItem(MPt);
             nullWater.Paint(g,p);
             return nullWater;
-        }
+        }     
 
         public Color GetTerrainColor()
         {
