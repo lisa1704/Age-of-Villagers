@@ -37,7 +37,7 @@ namespace Age_of_villagers.Test
 
 
         EgyptianKings EgyptNation = new EgyptianKings();
-        string NationName3 = "Bangladeshi Farmers";
+        string NationName3 = "Egyptian Kings";
 
         [Fact]
 
