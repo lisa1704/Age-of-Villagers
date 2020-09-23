@@ -76,5 +76,12 @@ namespace Age_of_villagers
         {
 
         }
+
+        private void Main_panel_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics g = Main_panel.CreateGraphics();
+            Pen blackpen = new Pen(Color.Black);
+            g.DrawLine(blackpen, e.X, e.Y, e.X + 10, e.Y - 10);
+        }
     }
 }
