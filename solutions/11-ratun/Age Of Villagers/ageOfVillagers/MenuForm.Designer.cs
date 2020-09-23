@@ -39,7 +39,7 @@
             this.ageOfVillagers = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.houseButton = new System.Windows.Forms.RadioButton();
             this.waterButton = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
@@ -141,10 +141,10 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 400);
-            this.panel2.TabIndex = 3;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel2";
+            this.panel.Size = new System.Drawing.Size(600, 400);
+            this.panel.TabIndex = 3;
             //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // houseButton
@@ -176,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 400);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitter1);
             this.Name = "MenuForm";
@@ -197,7 +197,7 @@
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Diagnostics.PerformanceCounter performanceCounter1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.TextBox Nation;
         private System.Windows.Forms.TextBox VillageName;
         private System.Windows.Forms.Button OpenVillage;

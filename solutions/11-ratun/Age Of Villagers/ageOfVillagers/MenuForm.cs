@@ -15,6 +15,7 @@ namespace ageOfVillagers
         private string text="";
         private string currentselect;
         private string currentNationName,currentVillageName;
+        private Panel currentpanel;
         readonly List<string> VillageNameList = new List<string>();
         readonly List<string> NationNameList = new List<string>();
         readonly List<Panel> panelList = new List<Panel>();
@@ -55,8 +56,8 @@ namespace ageOfVillagers
 
         public void NewVillage_Click(object sender, EventArgs e)
         {
-            panel2.Refresh();
-            Graphics g = panel2.CreateGraphics();
+            panel.Refresh();
+            Graphics g = panel.CreateGraphics();
             //Village v = new Village();
             //v.CreateVillage(Nation.Text, VillageName.Text);
             //VillageNameList.Add(VillageName.Text);
@@ -65,26 +66,34 @@ namespace ageOfVillagers
 
         public void OpenVillage_Click(object sender, EventArgs e)
         {
-            foreach (string i in VillageNameList)
+            for(int i=0;i < VillageNameList.Count;i++)
             {
-                if (VillageName.Text == i)
+                if (VillageName.Text == VillageNameList[i])
                 {
-                    Village v = new Village();
-                    v.Open(VillageName.Text);
+                    if (Nation.Text === NationNameList[i]) {
+                        Village v = new Village();
+                        v.Open(VillageName.Text);
+                        currentNationName = NationNameList[i];
+                        currentVillageName = VillageNameList[i];
+                        currentpanel = panelList[i];
+                    }
+                    else
+                        MessageBox.Show("check your nation name");
                 }
-
+                else
+                    MessageBox.Show("Check your village name");
             }
             text += "Opening the village. ";
         }
 
         public void Button2_Click(object sender, EventArgs e)
         {
-            Graphics g = panel2.CreateGraphics();
+            Graphics g = panel.CreateGraphics();
             g.Save();
             Village v = new Village();
             v.Save();
             VillageNameList.Add(currentVillageName);
-            panelList.Add(panel2);
+            panelList.Add(panel);
             NationNameList.Add(currentNationName);
             text += "Saving the village. ";
         }
@@ -108,10 +117,10 @@ namespace ageOfVillagers
         //public string testShape(string currentNationName, string currentselect, int x, int y) { 
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = panel2.CreateGraphics();
+            Graphics g = panel.CreateGraphics();
             Shape nation = NationFactory.GetNation(currentNationName);
             BackgroundColor b = new BackgroundColor();
-            b.GetBackgroundColor(currentNationName, panel2);
+            b.GetBackgroundColor(currentNationName, panel);
             IShape shape = nation.GetItem(currentselect);
             shape.draw(Cursor.Position.X, Cursor.Position.Y, g);
 
