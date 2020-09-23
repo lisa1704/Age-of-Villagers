@@ -22,8 +22,13 @@ public class State implements Serializable {
     public void addCircle(CircleState circleState){
         circles.add(circleState);
     }
-//    @Override
-//    public String toString(){
-//
-//    }
+
+    public ArrayList<LineState> getLines(){
+        return this.lines;
+    }
+    public ArrayList<CircleState> getCircles(){
+        return this.circles;
+    }
+
+
 }

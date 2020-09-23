@@ -6,13 +6,13 @@ public class NationFactory {
 
     public INation getNation(String nationType) {
 
-        if (nationType == "Bangladeshi Farmer")
+        if (nationType.equals( "Bangladeshi Farmer"))
             return new BDFarmers();
-        else if (nationType == "Arab Bedouin")
+        else if (nationType.equals("Arab Bedouin"))
             return new ArabBedouins();
-        else if (nationType == "Egyptian King")
+        else if (nationType.equals( "Egyptian King"))
             return new EgyptianKings();
-        else if (nationType == "Inuit Hunter")
+        else if (nationType.equals( "Inuit Hunter"))
             return new InuitHunters();
         else {
             NoNationSingleton noNationSingleton = NoNationSingleton.getInstance();
