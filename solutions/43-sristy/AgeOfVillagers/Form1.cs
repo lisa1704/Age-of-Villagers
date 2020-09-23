@@ -31,11 +31,7 @@ namespace Age_of_villagers
 
         public void set_state(village village)
         {
-            if (village == null)
-            {
-                MessageBox.Show("Villge is not selected");
-            }
-            else
+            if (village != null)
             {
                 villagename.Text = village.name;
                 foreach (Point pt in village.house_point)
