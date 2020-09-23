@@ -7,6 +7,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
+import shape.Line;
+import shape.Rectangle;
 
 public class EgyptTree implements ITree {
     boolean active= true;
@@ -23,8 +25,35 @@ public class EgyptTree implements ITree {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 50, 50, 200, 360, ArcType.OPEN);
-                    graphicsContext.strokeText("egypt tree", mouseEvent.getX(), mouseEvent.getY());
+
+
+
+                    double x= mouseEvent.getX();
+                    double y= mouseEvent.getY();
+
+                    new Line(x,y,x-20,y-10).draw(graphicsContext);
+                    new Line(x,y,x-10,y-20).draw(graphicsContext);
+                    new Line(x,y,x,y-30).draw(graphicsContext);
+                    new Line(x,y,x+10,y-20).draw(graphicsContext);
+                    new Line(x,y,x+20,y-10).draw(graphicsContext);
+
+
+                    new Line(x,y,x+20,y+50).draw(graphicsContext);
+
+
+                    new Line(x+30,y,x+20,y+50).draw(graphicsContext);
+
+
+
+                    new Line(x+30,y,x-20+30,y-10).draw(graphicsContext);
+                    new Line(x+30,y,x-10+30,y-20).draw(graphicsContext);
+                    new Line(x+30,y,x+30,y-30).draw(graphicsContext);
+                    new Line(x+30,y,x+10+30,y-20).draw(graphicsContext);
+                    new Line(x+30,y,x+20+30,y-10).draw(graphicsContext);
+
+
+
+
                     radioButton.setSelected(false);
                     active = false;
                 }

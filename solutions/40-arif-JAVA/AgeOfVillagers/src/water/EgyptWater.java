@@ -6,6 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
+import shape.Circle;
 
 public class EgyptWater implements IWater {
     boolean active = true;
@@ -24,10 +25,8 @@ public class EgyptWater implements IWater {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
 
-                    graphicsContext.strokeArc(x, y, 50, 50, 200, 360, ArcType.OPEN);
-                    graphicsContext.lineTo(x, y);
-                    graphicsContext.lineTo(x + 10, y + 20);
-                    graphicsContext.strokeText("egypt water", mouseEvent.getX(), mouseEvent.getY());
+                    new Circle(x,y,20).draw(graphicsContext);
+
                     radioButton.setSelected(false);
                     active = false;
                 }

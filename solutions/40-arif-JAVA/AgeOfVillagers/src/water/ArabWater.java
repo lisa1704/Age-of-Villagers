@@ -24,9 +24,6 @@ public class ArabWater implements IWater {
                 if(active) {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
-                    graphicsContext.lineTo(x, y);
-                    graphicsContext.lineTo(x + 10, y + 20);
-                    graphicsContext.strokeText("arab water", mouseEvent.getX(), mouseEvent.getY());
                     radioButton.setSelected(false);
                     active = false;
                 }
