@@ -16,9 +16,8 @@ namespace AoV.Shapes
             this.p2 = p2;
             this.p3 = p3;
         }
-        public void Draw(Graphics g)
+        public void Draw(Graphics g, Pen p)
         {
-            Pen pen = new Pen(Color.Black, 2);
             g.DrawLine(pen, p1, p2);
             g.DrawLine(pen, p2, p3);
             g.DrawLine(pen, p3, p1);

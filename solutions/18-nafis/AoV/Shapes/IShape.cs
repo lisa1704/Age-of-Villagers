@@ -9,6 +9,6 @@ namespace AoV.Shapes
 {
     public interface IShape
     {
-        void Draw(Graphics g);
+        void Draw(Graphics g, Pen p);
     }
 }

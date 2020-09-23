@@ -20,7 +20,7 @@ namespace AoV.Shapes
             this.start = start;
             this.sweep = sweep;
         }
-        public void Draw(Graphics g)
+        public void Draw(Graphics g, Pen p)
         {
             Pen pen = new Pen(Color.Black, 2);
             g.DrawArc(pen, x, y, height, width, start, sweep);
