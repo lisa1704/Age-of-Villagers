@@ -3,12 +3,17 @@
 public class Inuithouse : IShape
 {
     
-        private string draw = "";
+        
+     public void Draw(int x, int y)
+     {
+        HalfCircle Ehcircle = new HalfCircle(x, y, 6);
 
-        public string Draw(int x, int y)
-        {
-            
-        }
+        Ehcircle.Draw();
+
+        HalfCircle Ehcircle2 = new HalfCircle2(x, y, 4);
+
+        Ehcircle2.Draw();
+    }
     
 }
 

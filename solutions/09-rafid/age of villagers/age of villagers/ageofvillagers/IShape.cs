@@ -4,7 +4,7 @@ namespace ageofvillagers
 {
     internal interface IShape
     {
-        string draw(int x, int y);
+        void draw(int x, int y);
     }
 
 
