@@ -44,7 +44,7 @@
             // 
             // drawingBoard
             // 
-            this.drawingBoard.BackColor = System.Drawing.Color.LemonChiffon;
+            this.drawingBoard.BackColor = System.Drawing.Color.Azure;
             this.drawingBoard.Location = new System.Drawing.Point(12, 12);
             this.drawingBoard.Name = "drawingBoard";
             this.drawingBoard.Size = new System.Drawing.Size(600, 400);

@@ -163,7 +163,7 @@ namespace AgeOfVillagers
             {
                 drawingBoard.BackColor = Color.Yellow;
             }
-            else if (nationtype == "Iniut Hunter")
+            else if (nationtype == "Inuit Hunter")
             {
                 drawingBoard.BackColor = Color.White;
             }
