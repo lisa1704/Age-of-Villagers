@@ -8,11 +8,18 @@ public class MouseClickManager {
         double y = mouseEvent.getY();
 
         System.out.println(x+" "+y);
-        if (x + 24 <= 600 && y + 24 <= 400) {
+        if (mouseRestriction(x, y)) {
             drawComponent.setX(x);
             drawComponent.setY(y);
             g.getChildren().addAll(drawComponent.draw());
         }
 
+
+    }
+    boolean mouseRestriction(double x, double y) {
+        if (x + 24 <= 600 && y + 24 <= 400) {
+            return true;
+        }
+        return false;
     }
 }
