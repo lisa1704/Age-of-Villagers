@@ -87,7 +87,7 @@ namespace age_of_villagers
             this.button6.TabIndex = 8;
             this.button6.Text = "Open Village";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.OpenVillageButtonClick);
             // 
             // button5
             // 
@@ -97,7 +97,7 @@ namespace age_of_villagers
             this.button5.TabIndex = 7;
             this.button5.Text = "New Village";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.NewVillageButtonClick);
             // 
             // button4
             // 
@@ -107,7 +107,7 @@ namespace age_of_villagers
             this.button4.TabIndex = 6;
             this.button4.Text = "Save Village";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.SaveButtonClick);
+            this.button4.Click += new System.EventHandler(this.SaveVillageButtonClick);
             // 
             // button3
             // 

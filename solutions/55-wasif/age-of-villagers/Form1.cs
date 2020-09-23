@@ -24,9 +24,7 @@ namespace age_of_villagers
         private void Form1_Load(object sender, EventArgs e)
         {
         }
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
+        
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             village_name = textBox2.Text;
@@ -76,15 +74,19 @@ namespace age_of_villagers
             }
         }
 
-        private void SaveButtonClick(object sender, EventArgs e)
+        private void SaveVillageButtonClick(object sender, EventArgs e)
         {
             Save_village sv = new Save_village();
 
             sv.save(newvillage);
         }
-        private void button5_Click(object sender, EventArgs e)
+        private void NewVillageButtonClick(object sender, EventArgs e)
         {
             panel1.Refresh();
+        }
+        private void OpenVillageButtonClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
