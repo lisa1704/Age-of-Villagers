@@ -99,7 +99,6 @@ public class ShowWindow implements IWindow{
             }
 
             System.out.println("Rafidd");
-            System.out.println(stateOfComponents10.get(1));
 
             Starter.mainWindow.close();
 
