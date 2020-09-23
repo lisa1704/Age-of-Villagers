@@ -10,10 +10,10 @@ namespace Age_of_Villagers
         private readonly Point point1;
         private readonly Point point2;
 
-        public Line(Point x1, Point x2)
+        public Line(Point point1, Point point2)
         {
-            this.point1 = x1;
-            this.point2 = x2;
+            this.point1 = point1;
+            this.point2 = point2;
         }
 
         public void draw(Graphics graphics, Pen pen)
