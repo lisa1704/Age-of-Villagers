@@ -5,9 +5,9 @@ public class ArFactory : Shape
     IShape GetItem(string itemType)
     {
         if (Item_Type == "Tree")
-            return new Arab_Tree();
+            return new Arabtree();
         else if (Item_Type == "House")
-            return new Arab_House();
+            return new Arabhouse();
         else
             return new NotSupportedException();
     }
