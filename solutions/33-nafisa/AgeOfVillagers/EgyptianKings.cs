@@ -6,14 +6,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class EgyptianKings : INation
+    public class EgyptianKings : INation
     {
         private Panel Drawingpanel;
         private Color terraincolor;
-        public EgyptianKings(Panel Drawingpanel)
-        {
-            this.Drawingpanel = Drawingpanel;
-        }
+      
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             EgyptianHouse ehouse = new EgyptianHouse(point);

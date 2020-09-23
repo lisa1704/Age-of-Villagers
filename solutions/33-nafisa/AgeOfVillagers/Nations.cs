@@ -30,7 +30,7 @@ namespace AgeOfVillagers
             else if (Nationtype == "Egyptian Kings")
             {
                
-                nation = new EgyptianKings(Drawingpanel);
+                nation = new EgyptianKings();
             }
             else if (Nationtype == "Inuit Hunters")
             {

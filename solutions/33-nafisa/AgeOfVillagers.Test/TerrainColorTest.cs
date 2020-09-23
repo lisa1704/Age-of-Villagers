@@ -31,6 +31,15 @@ namespace AgeOfVillagers.Test
             Xunit.Assert.Equal(actual, expected);
         }
 
+        [Fact]
+        public void EgyptianKingTest()
+        {
+            EgyptianKings egTerrainColor = new EgyptianKings();
+            Color expected = egTerrainColor.PaintTerrain();
+            Color actual = Color.Yellow;
+            Xunit.Assert.Equal(actual, expected);
+        }
+
 
 
     }
