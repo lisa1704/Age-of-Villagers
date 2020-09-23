@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Arab : INation
+    public class Arab : INation
     {
 
         public IShapes DrawHouse(Graphics gr,Point p)

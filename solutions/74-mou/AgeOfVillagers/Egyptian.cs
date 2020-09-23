@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Egyptian : INation
+    public class Egyptian : INation
     {
         public IShapes DrawTree(Graphics gr, Point p)
         {

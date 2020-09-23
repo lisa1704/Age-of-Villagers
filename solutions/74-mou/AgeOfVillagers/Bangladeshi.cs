@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Bangladeshi : INation
+    public class Bangladeshi : INation
     {
         //private readonly Pen pen;
 
