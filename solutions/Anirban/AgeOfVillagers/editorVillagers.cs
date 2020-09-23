@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgeOfVillagers.Nations;
+using AgeOfVillagers.Shapes;
 
 namespace AgeOfVillagers
 {
@@ -57,6 +58,19 @@ namespace AgeOfVillagers
             Pen blackpen = new Pen(Color.Black);
 
             g.DrawLine(blackpen, e.X,e.Y,e.X+10,e.Y-10);
+
+            if (selected_item == "House")
+            {
+                
+            }
+            else if (selected_item == "Tree")
+            {
+                
+            }
+            else if (selected_item == "water")
+            {
+                
+            }
         }
 
 

@@ -5,26 +5,28 @@ using System.Text;
 using AgeOfVillagers.Shapes;
 using System.Drawing;
 using System.Threading.Tasks;
+using AgeOfVillagers.Shapes;
 
 
 namespace AgeOfVillagers
 {
-    class BDF_House : Village_Item
+    class BDF_House : IVillage_Item
     {
-        private readonly Point apex, top1, top2, bottom1, bottom2;
-        public void createHouse()
-        { 
-        }
+        Pen pen = new Pen(Color.Black);
 
-        public BDF_House(Point point)
+
+        public void Draw_item(Graphics g, Point p)
         {
-            apex = point;
-            top1 = new Point(apex.X - 10, apex.Y + 20);
-            top2 = new Point(apex.X + 10, apex.Y + 20);
-            //bottomLeft = new Point(top.X-10, top.Y+40);
-            bottom2 = new Point(apex.X + 10, apex.Y + 40);
-            Add_item(new Triangle_shape(apex, top1, top2));
-            Add_item(new Rectangle_shape(top1, top2,bottom1, bottom2));
+            Point tb1 = new Point(p.X + 16, p.Y - 16);
+            Point tb2 = new Point(p.X + 24, p.Y);
+
+            Point rb1 = new Point(tb2.X, tb2.Y + 16);
+            Point rb2 = new Point(p.X, p.Y + 16);
+
+            Triangle_shape triangle = new Triangle_shape(p, tb1, tb2);
+            triangle.Draw_shapes(p, g, pen);
+            Rectangle_shape rectangle = new Rectangle_shape(p, tb2, rb1, rb2);
+            rectangle.Draw_shapes(p, g, pen);
         }
     }
 }
