@@ -7,6 +7,7 @@ namespace XUnitTesting
     public class BdItemTest
     {
         Point point = new Point(26, 34);
+
         [Fact]
         public void BdHouseTest()
         {

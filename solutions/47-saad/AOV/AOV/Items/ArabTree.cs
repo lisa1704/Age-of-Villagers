@@ -1,27 +1,29 @@
-﻿using System.Drawing;
+﻿using AOV.Shapes;
+using System.Drawing;
 
 namespace AOV
 {
-    class ArabTree : CompoundShape
+    public class ArabTree : NationItem
     {
+        private readonly Point _clicked;
         public ArabTree(Point clicked)
         {
-            Point topLeftCorner = new Point(clicked.X, clicked.Y);
-            Point topCenter = new Point(clicked.X+1, clicked.Y);
-            Point topRightCorner = new Point(clicked.X + 2, clicked.Y);
-            Point bottomRightCorner = new Point(clicked.X + 2, clicked.Y + 12);
-            Point x1 = new Point(topLeftCorner.X - 7, clicked.Y - 6);
-            Point x2 = new Point(topLeftCorner.X - 3, clicked.Y - 10);
-            Point x3 = new Point(topCenter.X , clicked.Y - 12);
-            Point x4 = new Point(topRightCorner.X + 3, clicked.Y - 10);
-            Point x5 = new Point(topRightCorner.X + 7, clicked.Y - 6);
+            _clicked = clicked;            
+           
+            Point topCenter = new Point(_clicked.X + 1, _clicked.Y);
+            Point topRightCorner = new Point(_clicked.X + 2, _clicked.Y);
+            Point bottomRightCorner = new Point(_clicked.X + 2, _clicked.Y + 12);
+            Point x1 = new Point(_clicked.X - 7, _clicked.Y - 6);
+            Point x2 = new Point(_clicked.X - 3, _clicked.Y - 10);
+            Point x3 = new Point(topCenter.X, _clicked.Y - 12);
+            Point x4 = new Point(topRightCorner.X + 3, _clicked.Y - 10);
+            Point x5 = new Point(topRightCorner.X + 7, _clicked.Y - 6);
 
-            addShape(new Rectangle(topLeftCorner, bottomRightCorner));
-            addShape(new DrawLine(topCenter, x3));            
-            addShape(new DrawLine(topLeftCorner, x1));
-            addShape(new DrawLine(topLeftCorner, x2));
-            addShape(new DrawLine(topRightCorner, x4));
-            addShape(new DrawLine(topRightCorner, x5));
+            villageItemShape = new ArabTreeShape(_clicked, x1, x2, x3, x4, x5, topCenter, topRightCorner, bottomRightCorner);                       
+        }
+        public override Point GetPoint()
+        {
+            return _clicked;
         }
     }
 }

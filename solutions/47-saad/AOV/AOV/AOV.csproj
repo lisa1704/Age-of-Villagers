@@ -51,6 +51,8 @@
     <Compile Include="Items\ArabTree.cs" />
     <Compile Include="Nations\BangladeshiNation.cs" />
     <Compile Include="Items\BdHouse.cs" />
+    <Compile Include="Shapes\ArabHouseShape.cs" />
+    <Compile Include="Shapes\ArabTreeShape.cs" />
     <Compile Include="Shapes\BdHouseShape.cs" />
     <Compile Include="Items\BdTree.cs" />
     <Compile Include="Shapes\BdTreeShape.cs" />
