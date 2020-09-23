@@ -9,7 +9,7 @@ namespace Age_Of_Villagers_Test
 {
     public class ArabBedouinTest
     {
-        private static string check = "Egyptian Kings";
+        private static string check = "Arab Bedouin";
         NationController nationController = new NationController(check);
         Point point = new Point(70, 70);
 
@@ -18,6 +18,12 @@ namespace Age_Of_Villagers_Test
         {
             var result = nationController.getNation(new Point()).GetTerrainColor();
             Assert.Equal(Color.LightGoldenrodYellow, result);
+        }
+        [Fact]
+        public void BDNationTest()
+        {
+            Assert.IsType<ArabBedouin> (nationController.getNation(new Point()));
+
         }
     }
 }
