@@ -46,7 +46,7 @@ namespace AgeOfVillagers
             // 
             this.savevillage.BackColor = System.Drawing.Color.CornflowerBlue;
             this.savevillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.savevillage.Location = new System.Drawing.Point(66, 287);
+            this.savevillage.Location = new System.Drawing.Point(73, 278);
             this.savevillage.Name = "savevillage";
             this.savevillage.Size = new System.Drawing.Size(166, 31);
             this.savevillage.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace AgeOfVillagers
             // 
             this.newvillage.BackColor = System.Drawing.Color.CornflowerBlue;
             this.newvillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.newvillage.Location = new System.Drawing.Point(66, 324);
+            this.newvillage.Location = new System.Drawing.Point(74, 315);
             this.newvillage.Name = "newvillage";
             this.newvillage.Size = new System.Drawing.Size(166, 31);
             this.newvillage.TabIndex = 1;
@@ -70,9 +70,9 @@ namespace AgeOfVillagers
             // 
             this.openvillage.BackColor = System.Drawing.Color.CornflowerBlue;
             this.openvillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.openvillage.Location = new System.Drawing.Point(66, 361);
+            this.openvillage.Location = new System.Drawing.Point(74, 352);
             this.openvillage.Name = "openvillage";
-            this.openvillage.Size = new System.Drawing.Size(166, 28);
+            this.openvillage.Size = new System.Drawing.Size(166, 32);
             this.openvillage.TabIndex = 2;
             this.openvillage.Text = "Open Village";
             this.openvillage.UseVisualStyleBackColor = false;
@@ -81,7 +81,7 @@ namespace AgeOfVillagers
             // treeradio
             // 
             this.treeradio.AutoSize = true;
-            this.treeradio.Location = new System.Drawing.Point(66, 227);
+            this.treeradio.Location = new System.Drawing.Point(74, 218);
             this.treeradio.Name = "treeradio";
             this.treeradio.Size = new System.Drawing.Size(58, 24);
             this.treeradio.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace AgeOfVillagers
             // houseradio
             // 
             this.houseradio.AutoSize = true;
-            this.houseradio.Location = new System.Drawing.Point(152, 227);
+            this.houseradio.Location = new System.Drawing.Point(160, 218);
             this.houseradio.Name = "houseradio";
             this.houseradio.Size = new System.Drawing.Size(72, 24);
             this.houseradio.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace AgeOfVillagers
             // waterradio
             // 
             this.waterradio.AutoSize = true;
-            this.waterradio.Location = new System.Drawing.Point(66, 257);
+            this.waterradio.Location = new System.Drawing.Point(73, 248);
             this.waterradio.Name = "waterradio";
             this.waterradio.Size = new System.Drawing.Size(118, 24);
             this.waterradio.TabIndex = 5;
@@ -117,11 +117,11 @@ namespace AgeOfVillagers
             // AgeOfVillagerstitlelabel
             // 
             this.AgeOfVillagerstitlelabel.AutoSize = true;
-            this.AgeOfVillagerstitlelabel.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AgeOfVillagerstitlelabel.Font = new System.Drawing.Font("Candara", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AgeOfVillagerstitlelabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AgeOfVillagerstitlelabel.Location = new System.Drawing.Point(29, 9);
+            this.AgeOfVillagerstitlelabel.Location = new System.Drawing.Point(40, 13);
             this.AgeOfVillagerstitlelabel.Name = "AgeOfVillagerstitlelabel";
-            this.AgeOfVillagerstitlelabel.Size = new System.Drawing.Size(222, 32);
+            this.AgeOfVillagerstitlelabel.Size = new System.Drawing.Size(246, 41);
             this.AgeOfVillagerstitlelabel.TabIndex = 6;
             this.AgeOfVillagerstitlelabel.Text = "Age of Villagers";
             this.AgeOfVillagerstitlelabel.Click += new System.EventHandler(this.titlelabel_Click);
@@ -142,9 +142,9 @@ namespace AgeOfVillagers
             this.toolpanel.Controls.Add(this.waterradio);
             this.toolpanel.Controls.Add(this.houseradio);
             this.toolpanel.Controls.Add(this.treeradio);
-            this.toolpanel.Location = new System.Drawing.Point(636, 23);
+            this.toolpanel.Location = new System.Drawing.Point(618, 35);
             this.toolpanel.Name = "toolpanel";
-            this.toolpanel.Size = new System.Drawing.Size(308, 400);
+            this.toolpanel.Size = new System.Drawing.Size(326, 400);
             this.toolpanel.TabIndex = 9;
             this.toolpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.toolpanel_Paint);
             // 
@@ -157,9 +157,9 @@ namespace AgeOfVillagers
             "Arab Bedouin",
             "Egyptian Kings",
             "Inuit Hunters"});
-            this.NationTypelistBox.Location = new System.Drawing.Point(67, 155);
+            this.NationTypelistBox.Location = new System.Drawing.Point(74, 155);
             this.NationTypelistBox.Name = "NationTypelistBox";
-            this.NationTypelistBox.Size = new System.Drawing.Size(165, 24);
+            this.NationTypelistBox.Size = new System.Drawing.Size(166, 24);
             this.NationTypelistBox.TabIndex = 16;
             this.NationTypelistBox.SelectedIndexChanged += new System.EventHandler(this.NationTypelistBox_SelectedIndexChanged);
             // 
@@ -167,7 +167,7 @@ namespace AgeOfVillagers
             // 
             this.Itemslabel.AutoSize = true;
             this.Itemslabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Itemslabel.Location = new System.Drawing.Point(66, 204);
+            this.Itemslabel.Location = new System.Drawing.Point(73, 195);
             this.Itemslabel.Name = "Itemslabel";
             this.Itemslabel.Size = new System.Drawing.Size(53, 20);
             this.Itemslabel.TabIndex = 13;
@@ -178,7 +178,7 @@ namespace AgeOfVillagers
             // 
             this.Nationlabel.AutoSize = true;
             this.Nationlabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.Nationlabel.Location = new System.Drawing.Point(67, 132);
+            this.Nationlabel.Location = new System.Drawing.Point(73, 132);
             this.Nationlabel.Name = "Nationlabel";
             this.Nationlabel.Size = new System.Drawing.Size(63, 20);
             this.Nationlabel.TabIndex = 12;
@@ -189,7 +189,7 @@ namespace AgeOfVillagers
             // 
             this.VillageNamelabel.AutoSize = true;
             this.VillageNamelabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.VillageNamelabel.Location = new System.Drawing.Point(67, 64);
+            this.VillageNamelabel.Location = new System.Drawing.Point(73, 64);
             this.VillageNamelabel.Name = "VillageNamelabel";
             this.VillageNamelabel.Size = new System.Drawing.Size(111, 20);
             this.VillageNamelabel.TabIndex = 11;
@@ -199,9 +199,9 @@ namespace AgeOfVillagers
             // villagename
             // 
             this.villagename.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.villagename.Location = new System.Drawing.Point(66, 87);
+            this.villagename.Location = new System.Drawing.Point(74, 87);
             this.villagename.Name = "villagename";
-            this.villagename.Size = new System.Drawing.Size(158, 27);
+            this.villagename.Size = new System.Drawing.Size(166, 27);
             this.villagename.TabIndex = 14;
             this.villagename.TextChanged += new System.EventHandler(this.villagenameTextChanged);
             // 
@@ -209,7 +209,7 @@ namespace AgeOfVillagers
             // 
             this.drawingpanel.BackColor = System.Drawing.Color.White;
             this.drawingpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.drawingpanel.Location = new System.Drawing.Point(12, 23);
+            this.drawingpanel.Location = new System.Drawing.Point(12, 35);
             this.drawingpanel.Name = "drawingpanel";
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
             this.drawingpanel.TabIndex = 10;
