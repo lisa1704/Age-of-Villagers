@@ -8,7 +8,7 @@ namespace age_of_villagers.villageitem
 {
     public class bangladeshihouse : villageitem
     {
-        private readonly Point top, midLeft, midRight, bottomLeft, bottomRight;
+        private readonly Point top, midLeft, midRight, bottomRight;
 
         public bangladeshihouse(Point point)
         {
