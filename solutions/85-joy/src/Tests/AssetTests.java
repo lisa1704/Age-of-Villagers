@@ -42,4 +42,20 @@ public class AssetTests {
 
         Assertions.assertEquals(new Bangladeshi_Farmers_House().getClass(),house.getClass());
     }
+
+    @Test
+    void Bangladeshi_Farmers_Tree_Test(){
+        IAssetFactory treeFactory = new TreeFactory();
+        ITree tree = (ITree) treeFactory.createAsset("Bangladeshi Farmers");
+
+        Assertions.assertEquals(new Bangladeshi_Farmers_Tree().getClass(),tree.getClass());
+    }
+
+    @Test
+    void Bangladeshi_Farmers_WaterSource_Test(){
+        IAssetFactory waterSourceFactory = new WaterSourceFactory();
+        IWaterSource waterSource = (IWaterSource) waterSourceFactory.createAsset("Bangladeshi Farmers");
+
+        Assertions.assertEquals(new Bangladeshi_Farmers_WaterSource().getClass(),waterSource.getClass());
+    }
 }
