@@ -12,14 +12,11 @@ namespace Age_of_Villagers
 {
     public partial class VillageWindow : Form
     {
-        private NationController nationController;
-        private string VillageName;
-        private string NationName;
         Graphics graphics;
         Pen pen;
         int x = -1;
         int y = -1;
-        bool move = false;
+        
         private List<Point> HousePoints { get; set; } = new List<Point>();
         private List<Point> TreePoints { get; set; } = new List<Point>();
         private List<Point> WaterResourcePoints { get; set; } = new List<Point>();
@@ -53,21 +50,7 @@ namespace Age_of_Villagers
 
         }
 
-        private void HouseRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TreeRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WaterSourceRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void SaveVillageButton_Click(object sender, EventArgs e)
         {
             GetCondition();
@@ -98,11 +81,6 @@ namespace Age_of_Villagers
 
             Form selectVillage = new SelectVillage(this, graphics, pen, VillageDrawing, villageCondition);
             selectVillage.Show();
-        }
-
-        private void NationNameCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         
         public void GetCondition()
@@ -154,7 +132,6 @@ namespace Age_of_Villagers
         }
         private void VillageDrawing_MouseUp(object sender, MouseEventArgs e)
         {
-            move = false;
             x = -1;
             y = -1;
         }

@@ -128,7 +128,7 @@
             this.HouseRB.TabStop = true;
             this.HouseRB.Text = "House";
             this.HouseRB.UseVisualStyleBackColor = true;
-            this.HouseRB.CheckedChanged += new System.EventHandler(this.HouseRB_CheckedChanged);
+            
             // 
             // TreeRB
             // 
@@ -141,7 +141,7 @@
             this.TreeRB.TabStop = true;
             this.TreeRB.Text = "Tree";
             this.TreeRB.UseVisualStyleBackColor = true;
-            this.TreeRB.CheckedChanged += new System.EventHandler(this.TreeRB_CheckedChanged);
+          
             // 
             // WaterSourceRB
             // 
@@ -154,7 +154,7 @@
             this.WaterSourceRB.TabStop = true;
             this.WaterSourceRB.Text = "Water Source";
             this.WaterSourceRB.UseVisualStyleBackColor = true;
-            this.WaterSourceRB.CheckedChanged += new System.EventHandler(this.WaterSourceRB_CheckedChanged);
+            
             // 
             // NationNameCombo
             // 
@@ -170,7 +170,6 @@
             this.NationNameCombo.Size = new System.Drawing.Size(194, 25);
             this.NationNameCombo.TabIndex = 5;
             this.NationNameCombo.Text = "Select Nation";
-            this.NationNameCombo.SelectedIndexChanged += new System.EventHandler(this.NationNameCombo_SelectedIndexChanged);
             // 
             // MenuBar
             // 
