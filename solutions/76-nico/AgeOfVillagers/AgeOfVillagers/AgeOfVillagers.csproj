@@ -49,6 +49,7 @@
     <Compile Include="Arab_Bedouin.cs" />
     <Compile Include="BangladeshFarmers.cs" />
     <Compile Include="Egyptian_Kings.cs" />
+    <Compile Include="Factory_Nation.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

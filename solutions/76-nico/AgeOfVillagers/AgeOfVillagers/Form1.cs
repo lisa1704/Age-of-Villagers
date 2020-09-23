@@ -51,7 +51,7 @@ namespace AgeOfVillagers
             }
 
         }
-        private void drawClick(object sender, MouseEventArgs e)
+        private void DrawPanelClick(object sender, MouseEventArgs e)
         {
             if (ItemText == "House")
             {
