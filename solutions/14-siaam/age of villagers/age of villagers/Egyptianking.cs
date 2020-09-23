@@ -24,7 +24,8 @@ namespace age_of_villagers
 
         public void drawWater(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            EgyptWatersrc well = new EgyptWatersrc();
+            well.drawComponent(g, point);
         }
     }
 }
