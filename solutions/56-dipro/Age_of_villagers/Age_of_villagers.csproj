@@ -49,6 +49,7 @@
     <Compile Include="Components\Bangladeshi_house.cs" />
     <Compile Include="Components\Bangladeshi_tree.cs" />
     <Compile Include="Components\Bangladeshi_watersource.cs" />
+    <Compile Include="Components\InuitHunter_house.cs" />
     <Compile Include="Components\VillageComponent.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
