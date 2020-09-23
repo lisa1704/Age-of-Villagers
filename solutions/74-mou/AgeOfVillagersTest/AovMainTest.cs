@@ -22,7 +22,7 @@ namespace AgeOfVillagersTest
         }
 
 
-        // Terrain Color Test
+        // Terrain Color of all Nation Test
 
         [Fact]
         public void BangladeshiTerrainColor()
@@ -154,6 +154,36 @@ namespace AgeOfVillagersTest
         {
             IShapes expected = nationfactory.GetNation("Egyptian Kings").DrawWaterSource(gr, pTest);
             Assert.IsType<EgyptianWaterSource>(expected);
+        }
+
+        // Inuit Hunters Test
+        [Fact]
+        public void InuitTest()
+        {
+            INation expected = nationfactory.GetNation("Inuit Hunters");
+            Assert.IsType<Inuit>(expected);
+
+        }
+
+        [Fact]
+        public void InuitHouseTest()
+        {
+            IShapes expected = nationfactory.GetNation("Inuit Hunters").DrawHouse(gr, pTest);
+            Assert.IsType<InuitHouse>(expected);
+        }
+
+        [Fact]
+        public void InuitTreeTest()
+        {
+            IShapes expected = nationfactory.GetNation("Inuit Hunters").DrawTree(gr, pTest);
+            Assert.IsType<NullItemSelction>(expected);
+        }
+
+        [Fact]
+        public void InuitWaterSourceTest()
+        {
+            IShapes expected = nationfactory.GetNation("Inuit Hunters").DrawWaterSource(gr, pTest);
+            Assert.IsType<NullItemSelction>(expected);
         }
 
 
