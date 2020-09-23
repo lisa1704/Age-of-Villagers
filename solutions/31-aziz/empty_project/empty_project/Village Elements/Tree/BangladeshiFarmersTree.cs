@@ -13,8 +13,15 @@ namespace empty_project
             Pen pen = new Pen(Color.Black);
             Graphics graphics = panel.CreateGraphics();
 
-            graphics.DrawEllipse(pen, axis.X, axis.Y, 12, 16);
-            graphics.DrawRectangle(pen, axis.X + 5, axis.Y + 11, 2, 12);
+            float startAngle = 0.0F;
+            float sweepAngle = 360.0F;
+
+            graphics.DrawArc(pen, axis.X, axis.Y, 12, 16, startAngle, sweepAngle);
+
+            graphics.DrawLine(pen, new PointF(axis.X + 5, axis.Y + 11), new PointF(axis.X + 7, axis.Y + 11));
+            graphics.DrawLine(pen, new PointF(axis.X + 7, axis.Y + 11), new PointF(axis.X + 7, axis.Y + 23));
+            graphics.DrawLine(pen, new PointF(axis.X + 7, axis.Y + 23), new PointF(axis.X + 5, axis.Y + 23));
+            graphics.DrawLine(pen, new PointF(axis.X + 5, axis.Y + 23), new PointF(axis.X + 5, axis.Y + 11));
         }
     }
 }
