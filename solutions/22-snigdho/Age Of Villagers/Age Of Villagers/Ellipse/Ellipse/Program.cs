@@ -13,3 +13,22 @@ namespace AgeOfVillagers
         }
     }
 }
+public class Arc : IShape
+{
+    public int x, y;
+    private float Start_Angle, Sweep_Angle, width, height;
+    public Arc(int x, int y, float startAngle, float sweepAngle, float width, float height )
+    {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.Start_Angle = startAngle;
+        this.Sweep_Angle = sweepAngle;
+    }
+    public void Draw(Graphics g)
+    {
+        var pen = new Pen(Color.Black, 1);
+        g.DrawArc(pen, x, y, width, height, Start_Angle, Sweep_Angle);
+    }
+}
