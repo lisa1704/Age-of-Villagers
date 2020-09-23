@@ -13,7 +13,7 @@ namespace Age_Of_Villagers_Test
 
             var correct = value1 + value2;
 
-            Assert.AreEqual(4, correct);
+            Assert.Equal(4, correct);
         }
     }
 }

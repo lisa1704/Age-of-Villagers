@@ -5,6 +5,8 @@
     <RootNamespace>Age_Of_Villagers_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>Age Of Villagers Test</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
