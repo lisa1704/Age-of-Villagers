@@ -21,7 +21,7 @@ namespace AgeOfVillagers
 
     public class BangladeshiHouse : House
     {
-        public override IShape getItemShape(Point point) => new BangladeshiHouseShape(point);
+        public override IShape getItemShape(Point point) => new BangladeshiHouseShape(point, getWidth(), getHeight());
     }
 
     public class EgyptianHouse : House
