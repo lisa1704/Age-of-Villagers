@@ -6,7 +6,7 @@ using Age_of_villagers.Components;
 
 namespace Age_of_villagers.Nations
 {
-    interface INation
+    public interface INation
     {
         string getNationName();
         Color getTerrainColor();

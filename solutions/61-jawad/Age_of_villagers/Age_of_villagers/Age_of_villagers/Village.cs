@@ -6,7 +6,7 @@ using Age_of_villagers.Nations;
 
 namespace Age_of_villagers
 {
-    class Village
+    public class Village
     {
         public INation nation;
         public string villageName;

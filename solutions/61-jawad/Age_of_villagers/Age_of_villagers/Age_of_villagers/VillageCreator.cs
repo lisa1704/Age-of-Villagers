@@ -115,20 +115,31 @@ namespace Age_of_villagers
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
             Point point = new Point(e.X, e.Y);
-            if (Tree.Checked)
+
+            try
             {
-                village.nation.getTree(point).draw(g, p);
-                village.trees.Add(point);
+                if (House.Checked)
+                {
+                    village.nation.getTree(point).draw(g, p);
+                    village.trees.Add(point);
+
+                }
+                
+                else if (House.Checked)
+                {
+                    village.nation.getHouse(point).draw(g, p);
+                    village.houses.Add(point);
+                }
+                else if(WaterSource.Checked)
+                {
+                    village.nation.getWaterSource(point).draw(g, p);
+                    village.waterSources.Add(point);
+                }
             }
-            else if (House.Checked)
+            catch (Exception)
             {
-                village.nation.getHouse(point).draw(g, p);
-                village.houses.Add(point);
-            }
-            else
-            {
-                village.nation.getWaterSource(point).draw(g, p);
-                village.waterSources.Add(point);
+                
+
             }
 
 
