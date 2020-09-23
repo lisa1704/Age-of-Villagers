@@ -17,7 +17,7 @@ namespace Age_of_Villagers
             Point BottomBehind = new Point(TopRight.X + 4, TopRight.Y - 16);
 
 
-            ShapePush(new Traingle(point,TopLeft,TopRight));
+            ShapePush(new Triangle(point,TopLeft,TopRight));
             ShapePush(new Line(point,BottomBehind));
             ShapePush(new Line(TopRight,BottomBehind));
 
