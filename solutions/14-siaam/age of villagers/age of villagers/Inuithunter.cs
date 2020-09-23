@@ -13,12 +13,14 @@ namespace age_of_villagers
 
         public void drawHouse(Graphics g,Point point)
         {
-            
+            INation nation = new Null_Nation();
+            nation.drawHouse(g, point);
         }
 
         public void drawTree(Graphics g, Point point)
         {
-            
+            INation nation = new Null_Nation();
+            nation.drawTree(g, point);
         }
     }
     }
