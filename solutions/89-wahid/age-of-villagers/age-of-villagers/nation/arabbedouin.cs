@@ -1,4 +1,5 @@
-﻿using System;
+﻿using age_of_villagers.villageitem;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -9,12 +10,12 @@ namespace age_of_villagers.nation
     {
         public villageitem.villageitem getHouse(Point p)
         {
-            throw new NotImplementedException();
+            return new bangladeshihouse();
         }
 
         public string getNationName()
         {
-            throw new NotImplementedException();
+            return "Bangladeshi Farmers";
         }
 
         public Color getTerrainColor()

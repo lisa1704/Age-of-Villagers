@@ -9,10 +9,10 @@ namespace age_of_villagers.nation
     class bangladeshifarmers : Ination
     {
         private Color colorofbackground = Color.Green;
-       
+
         public villageitem.villageitem getHouse(Point p)
         {
-            throw new NotImplementedException();
+            return new bangladeshihouse(p);
         }
 
         public string getNationName()
