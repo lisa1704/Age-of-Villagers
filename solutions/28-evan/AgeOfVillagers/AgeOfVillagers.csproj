@@ -48,9 +48,6 @@
   <ItemGroup>
     <Compile Include="ArabBedouins.cs" />
     <Compile Include="BangladeshiFarmers.cs" />
-    <Compile Include="BDHouse.cs" />
-    <Compile Include="BDTree.cs" />
-    <Compile Include="BDWaterSource.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="ConcreteItems.cs" />
     <Compile Include="ConcreteNation.cs" />
