@@ -20,7 +20,7 @@ namespace Ageofvillagers
             Stream stream = File.OpenWrite(filelocation);
             XmlSerializer xm = new XmlSerializer(typeof(List<State>));
             xm.Serialize(stream, Itemslist);
-           // "C:\\Users\\Rakib\\Desktop\\Design Pattern Lab assignment\\solutions\\84-nawsad\\Ageofvillagers\\SavedVillages\\village.txt"
+           
         }
         
     }

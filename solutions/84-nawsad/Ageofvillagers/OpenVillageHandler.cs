@@ -14,21 +14,10 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-        INation nation = new NullNation();
-        public Ageofvillagers()
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
-            InitializeComponent();
-
+            OpenVillage openVillage = new OpenVillage(openFileDialog1.InitialDirectory + openFileDialog1.FileName);
+            openVillage.execute(Itemslist);
         }
-      
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            panel2.Refresh();
-        }
-
-        
     }
-    
 }

@@ -14,21 +14,17 @@ namespace Ageofvillagers
 {
     public partial class Ageofvillagers : Form
     {
-        INation nation = new NullNation();
-        public Ageofvillagers()
+        private void button6_Click(object sender, EventArgs e)
         {
-
-            InitializeComponent();
-
-        }
-      
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            panel2.Refresh();
+            saveFileDialog1.ShowDialog();
         }
 
-        
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+            SaveVillage SaveVillage = new SaveVillage(saveFileDialog1.InitialDirectory + saveFileDialog1.FileName);
+            SaveVillage.execute(Itemslist);
+
+        }
     }
-    
 }
