@@ -15,10 +15,13 @@ namespace AgeOfVillagersTest
 
         [Fact]
 
-        public void Test1()
+        public void BdfarmersObjectTest()
         {
-            
-            
+            NationNameFactory name = new NationNameFactory("Bangladeshi Farmers");
+            INation nation = name.NationNameFactoryMethod();
+
+            Assert.IsType<BdFarmers>(nation);
+
         }
     }
 }
