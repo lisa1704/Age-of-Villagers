@@ -64,6 +64,7 @@
     <Compile Include="Shapes\BangladeshiPond.cs" />
     <Compile Include="Shapes\BangladeshiTree.cs" />
     <Compile Include="Shapes\ComposeShape.cs" />
+    <Compile Include="Shapes\EgyptianHouse.cs" />
     <Compile Include="Shapes\Ellipse.cs" />
     <Compile Include="Shapes\IShape.cs" />
     <Compile Include="Shapes\Line.cs" />
