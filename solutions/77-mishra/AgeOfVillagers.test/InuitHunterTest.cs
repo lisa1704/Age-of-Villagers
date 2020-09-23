@@ -9,9 +9,14 @@ namespace AgeOfVillagers.test
 {
 	public class InuitHunterTest
 	{
-		public ()
-		{
+		private static string stringtype = "Inuit Hunter";
+		Nations nations = new Nations(stringtype);
 
+		Point point = new Point(90, 80);
+		public void InuitHunterHousetest()
+		{
+			Point test = nations.getNation(point).DrawHouse(p);
+			Assert.Equal(new Point(), test);
 
 		}
 
