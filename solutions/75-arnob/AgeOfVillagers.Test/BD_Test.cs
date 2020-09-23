@@ -29,8 +29,7 @@ namespace AgeOfVillagers.Test
 
         public void BangladeshiHouseTest()
         {
-            Point point1 = new Point(100, 92);
-            Point point2 = new Point(92, 100);
+           
             Point point3 = new Point(108, 108);
 
             try
