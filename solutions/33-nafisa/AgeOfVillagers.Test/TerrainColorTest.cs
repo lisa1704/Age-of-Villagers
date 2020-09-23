@@ -17,7 +17,10 @@ namespace AgeOfVillagers.Test
         [TestMethod]
         public void BangladeshiFarmerTest()
         {
-            
+            BangladeshiFarmers bdTerrainColor = new BangladeshiFarmers();
+            Color actual = bdTerrainColor.GetTerrainColor();
+            Color expected = Color.LightGreen;
+            Xunit.Assert.Equal(actual, expected);
         }
     }
 }
