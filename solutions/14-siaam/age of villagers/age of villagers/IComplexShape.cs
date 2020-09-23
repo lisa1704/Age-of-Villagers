@@ -73,9 +73,9 @@ namespace age_of_villagers
         Pen pen = new Pen(Color.Brown);
         public void drawComponent(Graphics g, Point p)
         {
-            Point p1 = new Point(p.X + 4, p.Y + 16);
-            Point p2 = new Point(p.X - 8, p.Y + 13);
-            Point p3 = new Point(p.X + 8, p.Y + 9);
+            Point p1 = new Point(p.X + 8, p.Y + 32);
+            Point p2 = new Point(p.X - 16, p.Y + 26);
+            Point p3 = new Point(p.X + 18, p.Y + 18);
 
             Triangle triangle = new Triangle(p, p1, p2);
             triangle.draw(g, pen);
