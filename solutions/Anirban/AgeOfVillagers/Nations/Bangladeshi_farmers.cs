@@ -21,7 +21,8 @@ namespace AgeOfVillagers.Nations
 
         public void Draw_Tree(Graphics g, Point e)
         {
-            throw new NotImplementedException();
+            BDF_Tree _Tree = new BDF_Tree();
+            _Tree.Draw_item(g, e);
         }
 
         public void Draw_Water(Graphics g, Point e)

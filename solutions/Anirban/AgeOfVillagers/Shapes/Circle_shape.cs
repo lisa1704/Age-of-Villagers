@@ -23,7 +23,7 @@ namespace AgeOfVillagers.Shapes
 
         public void Draw_shapes(Point pt, Graphics g, Pen p)
         {
-            g.DrawArc(p, centre.X, centre.X, width, height, 0, 360);
+            g.DrawArc(p, centre.X-12, centre.Y-20, width, height, 0, 360);
         }
     }
 }

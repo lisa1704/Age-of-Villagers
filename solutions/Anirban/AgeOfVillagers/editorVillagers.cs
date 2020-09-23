@@ -56,7 +56,11 @@ namespace AgeOfVillagers
             {
                 nation_type.Check_nation(nation).Draw_House(g,points);
             }
-            
+            foreach (Point points in trees)
+            {
+                nation_type.Check_nation(nation).Draw_Tree(g, points);
+            }
+
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
@@ -70,6 +74,11 @@ namespace AgeOfVillagers
             if (house_rb.Checked)
             {
                 houses.Add(e.Location);
+                panel1.Refresh();
+            }
+            else if(tree_rb.Checked)
+            {
+                trees.Add(e.Location);
                 panel1.Refresh();
             }
             
@@ -115,7 +124,7 @@ namespace AgeOfVillagers
 
         private void New_Click(object sender, EventArgs e)
         {
-            panel1.Refresh();
+            
         }
 
         private void open_Click(object sender, EventArgs e)
