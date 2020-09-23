@@ -60,6 +60,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\ArabHouse.cs" />
+    <Compile Include="Shapes\ArabTree.cs" />
     <Compile Include="Shapes\Arc.cs" />
     <Compile Include="Shapes\BangladeshiHouse.cs" />
     <Compile Include="Shapes\BangladeshiPond.cs" />
