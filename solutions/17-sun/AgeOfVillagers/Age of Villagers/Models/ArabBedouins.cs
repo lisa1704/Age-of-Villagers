@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.Models.Manifests;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -12,13 +13,10 @@ namespace Age_of_Villagers.Models
      
         public void Draw_House(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            BedouinHouse house = new BedouinHouse(location);
+            house.Draw(gfx, p);
         }
 
-        public void Draw_Terrain()
-        {
-            throw new NotImplementedException();
-        }
 
         public void Draw_Tree(Point location, Graphics gfx, Pen p)
         {
