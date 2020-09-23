@@ -17,6 +17,7 @@ namespace empty_project
         String element_text;
         VillageSaveOpen saveOpenVillage;
         Village village;
+        String NameofVillage;
 
         public Form1()
         {
@@ -113,7 +114,7 @@ namespace empty_project
 
         private void EnterText_TextChanged(object sender, EventArgs e)
         {
-
+            NameofVillage = EnterText.Text;
         }
     }
 }
