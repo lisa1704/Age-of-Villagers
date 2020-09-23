@@ -41,6 +41,26 @@ namespace AgeOfVillageTest
             ArabHouseTest.Equals(house);
         }
         [TestMethod]
+        public void TestEgyptHouseConstruction()
+        {
+            EgyptianHouse EgyptianHouseTest = new EgyptianHouse(pt);
+
+            EgyptianKings egyptian = new EgyptianKings();
+            object house = egyptian.testHouse(pt);
+            EgyptianHouseTest.Equals(house);
+        }
+
+        [TestMethod]
+        public void TestInuitHouseConstruction()
+        {
+            InuitHouse InuitHouseTest = new InuitHouse(pt);
+
+            InuitHunters inuit = new InuitHunters();
+            object house = inuit.testHouse(pt);
+            InuitHouseTest.Equals(house);
+        }
+
+        [TestMethod]
         public void TestNullHouseConstruction()
         {
             INations nationType = new NullNation();

@@ -18,6 +18,10 @@ namespace AgeOfVillagers
             //return "Piramid";
             return EgyptHouse;
         }
+        public object testHouse(Point pt)
+        {
+            return new EgyptianHouse(pt);
+        }
 
         public object DrawTree(Graphics g, Point pt)
         {
@@ -37,5 +41,6 @@ namespace AgeOfVillagers
         {
             return Color.Yellow;
         }
+      
     }
 }

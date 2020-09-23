@@ -19,6 +19,10 @@ namespace AgeOfVillagers
             //return "Igloo";
             return IglooHouse;
         }
+        public object testHouse(Point pt)
+        {
+            return new InuitHouse(pt);
+        }
 
         public object DrawTree(Graphics g, Point pt)
         {
