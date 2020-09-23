@@ -1,5 +1,5 @@
 package terrain;
 
-public interface ITerrain{
+public interface ITerrain {
     void draw();
 }

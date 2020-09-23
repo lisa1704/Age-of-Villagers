@@ -4,10 +4,10 @@ import javafx.scene.canvas.GraphicsContext;
 import statemanager.State;
 
 public class Line implements IShape {
-    double x1,x2, y1,y2;
+    double x1, x2, y1, y2;
 
     public Line(double x1, double y1, double x2, double y2) {
-        this.x1 =x1;
+        this.x1 = x1;
         this.x2 = x2;
         this.y1 = y1;
         this.y2 = y2;
@@ -15,9 +15,9 @@ public class Line implements IShape {
 
     @Override
     public void draw(GraphicsContext graphicsContext) {
-        graphicsContext.strokeLine(x1,y1, x2,y2);
+        graphicsContext.strokeLine(x1, y1, x2, y2);
 
-        Line lineState = new Line(x1,y1,x2,y2);
+        Line lineState = new Line(x1, y1, x2, y2);
 
         State state = State.getInstance();
         state.addLine(lineState);

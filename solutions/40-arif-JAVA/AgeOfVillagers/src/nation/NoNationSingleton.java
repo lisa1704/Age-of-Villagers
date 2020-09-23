@@ -5,14 +5,15 @@ public class NoNationSingleton {
     private NoNations noNations;
 
     public static NoNationSingleton getInstance() {
-        if(ourInstance==null) ourInstance = new NoNationSingleton();
+        if (ourInstance == null) ourInstance = new NoNationSingleton();
         return ourInstance;
     }
 
     private NoNationSingleton() {
         noNations = new NoNations();
     }
-    public INation getNation(){
+
+    public INation getNation() {
         return noNations;
     }
 }

@@ -11,8 +11,9 @@ import javafx.scene.shape.ArcType;
 public class InuitTree implements ITree {
     boolean active = true;
 
-    public InuitTree(){
+    public InuitTree() {
     }
+
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
 
@@ -21,7 +22,7 @@ public class InuitTree implements ITree {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(active) {
+                if (active) {
 
                     active = false;
                 }

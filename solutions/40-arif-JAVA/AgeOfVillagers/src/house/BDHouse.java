@@ -15,8 +15,10 @@ import shape.Triangle;
 public class BDHouse implements IHouse {
 
     boolean active = true;
-    public BDHouse(){
+
+    public BDHouse() {
     }
+
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
 
@@ -24,17 +26,16 @@ public class BDHouse implements IHouse {
         EventHandler handler = new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(active) {
-                    new Triangle( mouseEvent.getX(), mouseEvent.getY()).draw(graphicsContext);
-                    new Rectangle(mouseEvent.getX()-5, mouseEvent.getY()+10, 10,10).draw(graphicsContext);
+                if (active) {
+                    new Triangle(mouseEvent.getX(), mouseEvent.getY()).draw(graphicsContext);
+                    new Rectangle(mouseEvent.getX() - 5, mouseEvent.getY() + 10, 10, 10).draw(graphicsContext);
                     radioButton.setSelected(false);
-                    active= false;
+                    active = false;
                 }
             }
         };
 
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, handler);
-        canvas.removeEventHandler(MouseEvent.MOUSE_CLICKED, handler);
     }
 
 

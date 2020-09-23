@@ -27,9 +27,8 @@ public class ArabTree implements ITree {
                 if(active) {
 
 
-
-                    double x= mouseEvent.getX();
-                    double y= mouseEvent.getY();
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
 
 
                     new Line(x,y,x-20,y-10).draw(graphicsContext);

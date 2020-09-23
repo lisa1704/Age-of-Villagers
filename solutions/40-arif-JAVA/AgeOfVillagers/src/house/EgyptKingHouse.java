@@ -10,8 +10,9 @@ import shape.Line;
 
 public class EgyptKingHouse implements IHouse {
 
-    boolean active= true;
-    public EgyptKingHouse(){
+    boolean active = true;
+
+    public EgyptKingHouse() {
     }
 
     @Override
@@ -22,22 +23,20 @@ public class EgyptKingHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(active) {
+                if (active) {
 
-                    double x= mouseEvent.getX();
-                    double y= mouseEvent.getY();
-
-
-                    new Line(x,y,x+20,y-20).draw(graphicsContext);
-
-                    new Line(x+20,y-20,x+30,y).draw(graphicsContext);
-
-                    new Line(x+30,y,x,y).draw(graphicsContext);
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
 
 
+                    new Line(x, y, x + 20, y - 20).draw(graphicsContext);
 
-                    new Line(x+30,y,x+40,y-10).draw(graphicsContext);
-                    new Line(x+20,y-20,x+40,y-10).draw(graphicsContext);
+                    new Line(x + 20, y - 20, x + 30, y).draw(graphicsContext);
+
+                    new Line(x + 30, y, x, y).draw(graphicsContext);
+
+                    new Line(x + 30, y, x + 40, y - 10).draw(graphicsContext);
+                    new Line(x + 20, y - 20, x + 40, y - 10).draw(graphicsContext);
 
                     radioButton.setSelected(false);
                     active = false;

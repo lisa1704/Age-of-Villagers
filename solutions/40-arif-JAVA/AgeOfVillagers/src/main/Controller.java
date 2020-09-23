@@ -42,9 +42,8 @@ public class Controller {
     CareTaker careTaker = new CareTaker();
 
 
-
     private String nation[] =
-            {"Select Village Type","Bangladeshi Farmer", "Arab Bedouin", "Egyptian King", "Inuit Hunter","jhj"};
+            {"Select Village Type", "Bangladeshi Farmer", "Arab Bedouin", "Egyptian King", "Inuit Hunter", "jhj"};
 
     @FXML
     private Button newVillageBTN;
@@ -68,7 +67,6 @@ public class Controller {
     private AnchorPane terrain;
 
     String seletedV;
-
 
 
     @FXML
@@ -113,20 +111,21 @@ public class Controller {
     }
 
     @FXML
-    void houseRBCon(ActionEvent actionEvent){
+    void houseRBCon(ActionEvent actionEvent) {
         houseRB.setSelected(true);
         treeRB.setSelected(false);
         waterRB.setSelected(false);
 
         house = nationManager.getHouse();
-        house.draw(canvas,houseRB);
+        house.draw(canvas, houseRB);
 
         originator.setState("home");
         careTaker.add(originator.saveStateToMemento());
         System.out.println("hooooooo");
     }
+
     @FXML
-    void treeRBCon(ActionEvent actionEvent){
+    void treeRBCon(ActionEvent actionEvent) {
         houseRB.setSelected(false);
         treeRB.setSelected(true);
         waterRB.setSelected(false);
@@ -138,8 +137,9 @@ public class Controller {
         careTaker.add(originator.saveStateToMemento());
         System.out.println("treeeeeeeee");
     }
+
     @FXML
-    void waterRBCon(ActionEvent actionEvent){
+    void waterRBCon(ActionEvent actionEvent) {
         houseRB.setSelected(false);
         treeRB.setSelected(false);
         waterRB.setSelected(true);
@@ -159,7 +159,7 @@ public class Controller {
         State state = State.getInstance();
         System.out.println(state);
 
-        GameFile gameFile= new GameFile(villageName.getText(), seletedV, state);
+        GameFile gameFile = new GameFile(villageName.getText(), seletedV, state);
 
         Gson gson = new Gson();
         String json = gson.toJson(gameFile);
@@ -187,7 +187,7 @@ public class Controller {
         villageTypeList.setVisible(true);
 
         System.out.println("canvas Clicked");
-        String data="";
+        String data = "";
 
         try {
             File myObj = new File("output.aov");
@@ -201,8 +201,8 @@ public class Controller {
             e.printStackTrace();
         }
 
-        Gson gson =new Gson();
-        GameFile gf = gson.fromJson(data,GameFile.class);
+        Gson gson = new Gson();
+        GameFile gf = gson.fromJson(data, GameFile.class);
 
         villageName.setText(gf.getVillagename().toString());
         villageTypeList.setValue(gf.getVillagetype());
@@ -230,24 +230,21 @@ public class Controller {
 
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        for (Line lineState: gf.getState().getLines()) {
-            graphicsContext.strokeLine(lineState.getX1(),lineState.getY1(),lineState.getX2(),lineState.getY2());
+        for (Line lineState : gf.getState().getLines()) {
+            graphicsContext.strokeLine(lineState.getX1(), lineState.getY1(), lineState.getX2(), lineState.getY2());
 
         }
 
-        for (Circle circleState: gf.getState().getCircles()) {
-            graphicsContext.strokeArc(circleState.getX(),circleState.getY(),circleState.getR(),circleState.getR(),0,360, ArcType.OPEN);
+        for (Circle circleState : gf.getState().getCircles()) {
+            graphicsContext.strokeArc(circleState.getX(), circleState.getY(), circleState.getR(), circleState.getR(), 0, 360, ArcType.OPEN);
 
         }
-
-
-
 
 
     }
 
     @FXML
-    void canvas(ActionEvent event){
+    void canvas(ActionEvent event) {
         System.out.println("ok");
     }
 

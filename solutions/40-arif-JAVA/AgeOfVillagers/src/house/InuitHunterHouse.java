@@ -13,8 +13,10 @@ import shape.Line;
 public class InuitHunterHouse implements IHouse {
 
     boolean active = true;
-    public InuitHunterHouse(){
+
+    public InuitHunterHouse() {
     }
+
     @Override
     public void draw(Canvas canvas, RadioButton radioButton) {
 
@@ -23,15 +25,15 @@ public class InuitHunterHouse implements IHouse {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if(active) {
+                if (active) {
 
 
-                    double x= mouseEvent.getX();
-                    double y= mouseEvent.getY();
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
 
-                    new Line(x-20,y,x+20,y).draw(graphicsContext);
-                    new Circle(x-20,y-20,40).draw(graphicsContext);
-                    new Circle(x-20,y-20,10).draw(graphicsContext);
+                    new Line(x - 20, y, x + 20, y).draw(graphicsContext);
+                    new Circle(x - 20, y - 20, 40).draw(graphicsContext);
+                    new Circle(x - 20, y - 20, 10).draw(graphicsContext);
 
 
                     radioButton.setSelected(false);

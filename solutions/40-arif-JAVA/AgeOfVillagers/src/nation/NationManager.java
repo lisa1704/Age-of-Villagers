@@ -18,13 +18,15 @@ public class NationManager {
         return nation.getTerrain();
     }
 
-    public IHouse getHouse(){
+    public IHouse getHouse() {
         return nation.getHouse();
     }
-    public ITree getTree(){
+
+    public ITree getTree() {
         return nation.getTree();
     }
-    public IWater getWater(){
+
+    public IWater getWater() {
         return nation.getWater();
     }
 }
