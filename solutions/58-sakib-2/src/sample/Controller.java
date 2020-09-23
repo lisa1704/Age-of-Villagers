@@ -98,7 +98,7 @@ public class Controller {
                                 nation.getHouse().draw(canvas,point);
                             }
                             else if (object=="WS"){
-                                gc.fillText("W",x,y);
+                                nation.getWaterSource().draw(canvas,point);
                                 wsList.add(new Point(x,y));
                             }
                         }
