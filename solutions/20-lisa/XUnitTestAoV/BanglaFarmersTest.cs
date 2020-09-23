@@ -11,7 +11,7 @@ namespace UnitTestAoV
     public class BanglaFarmersTest
     {
 
-        INation na = new BangladeshiFarmers();
+        
         Point tpoint = new Point(30, 30);
         Point hpoint = new Point(40, 40);
         Point wspoint = new Point(50, 50);
@@ -25,16 +25,14 @@ namespace UnitTestAoV
 
         }
         Graphics g;
-        Point point = new Point(30, 30);
+        Pen pen;
+        Point point = new Point(50, 30);
+        NationFactory naF = new NationFactory();
         [Fact]
-        public void BDTreeTest()
+        public void BDNationNameTest()
         {
-            //BangladeshiFarmers bdtreetest = new BangladeshiFarmers();
-            //Object expected = new BanglaTree(point);
-            //Object actual = bdtreetest.DrawTree(g,point);
-            //Assert.AreEqual(expected, actual);
-            //Assert.IsInstanceOf<BanglaTree>(na.GetNation(new Point(30, 30)).DrawTree();
-           
+            INation expected = naF.GetNation("Bangladeshi Farmers");
+            Assert.IsType<BangladeshiFarmers>(expected);
         }
         
     }

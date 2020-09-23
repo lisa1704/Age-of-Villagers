@@ -11,12 +11,19 @@ namespace UnitTestAoV
 
     public class InuitHuntersTest
     {
+        NationFactory naF = new NationFactory();
      
         [Fact]
         public void InuitTerrainTest()
         {
             InuitHunters inTerrainTest = new InuitHunters();
             Assert.Equal(Color.White, inTerrainTest.SetTerrain());
+        }
+        [Fact]
+        public void InuitNationNameTest()
+        {
+            INation expected = naF.GetNation("Inuit Hunters");
+            Assert.IsType<InuitHunters>(expected);
         }
     }
 }

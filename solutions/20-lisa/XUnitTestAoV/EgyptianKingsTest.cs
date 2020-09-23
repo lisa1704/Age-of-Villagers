@@ -10,11 +10,18 @@ namespace UnitTestAoV
 {
     public class EgyptianKingsTest
     {
+        NationFactory naF = new NationFactory();
         [Fact]
         public void TerrainTest()
         {
             EgyptianKings terraintest = new EgyptianKings();
             Assert.Equal(Color.Yellow, terraintest.SetTerrain());
+        }
+        [Fact]
+        public void EgyptianNationNameTest()
+        {
+            INation expected = naF.GetNation("Egyptian Kings");
+            Assert.IsType<EgyptianKings>(expected);
         }
     }
 }

@@ -10,7 +10,8 @@ namespace UnitTestAoV
 {
 
     public class ArabBedouinTest
-    { 
+    {
+        NationFactory naF = new NationFactory();
         [Fact]
         public void TerrainTest()
         {
@@ -18,6 +19,12 @@ namespace UnitTestAoV
             Color actual = terraincolortest.SetTerrain();
             Color expected = Color.LightYellow;
             Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void ArabNationNameTest()
+        {
+            INation expected = naF.GetNation("Arab Bedouin");
+            Assert.IsType<Arabs>(expected);
         }
     }
 }
