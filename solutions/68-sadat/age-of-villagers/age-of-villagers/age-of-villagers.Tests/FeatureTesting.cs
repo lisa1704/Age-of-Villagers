@@ -41,6 +41,16 @@ namespace age_of_villagers.age_of_villagers.Tests
 
             Assert.IsType(expected, actual);
         }
+        [Fact]
+        public void ArabBedoinWaterBackgroundColorTest()
+        {
+            Nation nation = new ArabBedouin(new System.Windows.Forms.Panel());
+
+            var expected = typeof(System.Drawing.Color);
+            var actual = nation.color;
+
+            Assert.IsType(expected, actual);
+        }
 
     }
 }
