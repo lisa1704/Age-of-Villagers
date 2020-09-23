@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class Bangladesh : INation
+    public class Bangladesh : INation
     {
         public Color getBackgroundColor()
         {
