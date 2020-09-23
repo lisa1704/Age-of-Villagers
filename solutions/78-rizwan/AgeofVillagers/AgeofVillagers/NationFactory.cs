@@ -18,13 +18,13 @@ namespace AgeofVillagers
         public Object createNation(MouseEventArgs e)
         {
             if (nation == "Bangladeshi Farmers")
-                return new BangladeshiFarmers(g,e);
+                return new BangladeshiFarmers(g);
             else if (nation == "Arab Bedouin")
-                return new ArabBeduoin(g,e);
+                return new ArabBeduoin(g);
             else if (nation == "Egyptian King")
-                return new EgyptianKing(g,e);
+                return new EgyptianKing(g);
             else if (nation == "Inuit Hunters")
-                return new InuitHunters(g,e);
+                return new InuitHunters(g);
             return null;
         }
     }
