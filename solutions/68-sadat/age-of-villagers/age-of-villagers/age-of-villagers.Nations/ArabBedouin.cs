@@ -24,11 +24,14 @@ namespace age_of_villagers.age_of_villagrs.Nations
 
         public void createHouse(int x, int y)
         {
-            SolidBrush brush = new SolidBrush(Color.Blue);
+            Pen pen = new Pen(Color.Black);
             Graphics graphics = villageCanvas.CreateGraphics();
-            FontFamily ff = new FontFamily("Arial");
-            System.Drawing.Font font = new System.Drawing.Font(ff, 10);
-            graphics.DrawString("ArabHouse", font, brush, new PointF(x, y));
+            graphics.DrawLine(pen, new PointF(x, y), new PointF(x - 5, y - 10));
+            graphics.DrawLine(pen, new PointF(x - 5, y - 10), new PointF(x - 10, y));
+            graphics.DrawLine(pen, new PointF(x, y), new PointF(x - 10, y));
+            graphics.DrawLine(pen, new PointF(x - 5, y - 10), new PointF(x - 10, y - 10));
+            graphics.DrawLine(pen, new PointF(x - 10, y), new PointF(x - 15, y));
+            graphics.DrawLine(pen, new PointF(x - 10, y - 10), new PointF(x - 15, y));
         }
 
         public void createTree(int x, int y)

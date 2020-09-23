@@ -8,12 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using age_of_villagers.age_of_villagers.Nations;
+using age_of_villagers.age_of_villagers.utilities;
+using age_of_villagers.age_of_villagers.Village;
 using age_of_villagers.age_of_villagrs.Nations;
 namespace age_of_villagers
 {
     public partial class villageEditor : Form
     {
         Ination nation;
+        Village thisVillage = new Village();
+        VillageSaver thisVillageSaver = new VillageSaver();
+
+
         public villageEditor()
         {
             
@@ -50,7 +56,7 @@ namespace age_of_villagers
 
         private void saveVillageButton_Click(object sender, EventArgs e)
         {
-
+            thisVillageSaver.saveVillageState(thisVillage);
         }
 
         private void openVillageButton_Click(object sender, EventArgs e)
@@ -81,6 +87,10 @@ namespace age_of_villagers
             if (villageNameTextBox.Text == "")
             {
                 villageNameTextBox.Text = "Enter Village Name";
+            }
+            else
+            {
+                thisVillage.setName(villageNameTextBox.Text);
             }
 
         }
@@ -113,15 +123,18 @@ namespace age_of_villagers
             if(treeButton.Checked == true)
             {
                 nation.createTree(e.X, e.Y);
+                thisVillage.addTree(new Coordinate(e.X, e.Y));
                 
             }
             else if(houseButton.Checked == true)
             {
                 nation.createHouse(e.X, e.Y);
+                thisVillage.addHouse(new Coordinate(e.X, e.Y));
             }
             else if(waterSourceButton.Checked == true)
             {
                 nation.createWaterSource(e.X, e.Y);
+                thisVillage.addWaterSource(new Coordinate(e.X, e.Y));
             };
         }
 
