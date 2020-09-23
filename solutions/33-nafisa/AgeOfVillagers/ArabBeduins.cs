@@ -11,11 +11,6 @@ namespace AgeOfVillagers
         private Panel Drawingpanel;
         public Color terraincolor;
 
-        public ArabBeduins(Panel Drawingpanel)
-        {
-            this.Drawingpanel = Drawingpanel;
-        }
-
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             ArabHouse abhouse = new ArabHouse(point);

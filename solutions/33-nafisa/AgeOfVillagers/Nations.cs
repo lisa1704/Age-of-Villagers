@@ -25,7 +25,7 @@ namespace AgeOfVillagers
             else if (Nationtype == "Arab Beduins")
             {
                
-                nation = new ArabBeduins(Drawingpanel);
+                nation = new ArabBeduins();
             }
             else if (Nationtype == "Egyptian Kings")
             {

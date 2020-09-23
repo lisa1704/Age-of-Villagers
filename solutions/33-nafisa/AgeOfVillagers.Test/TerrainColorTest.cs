@@ -22,7 +22,16 @@ namespace AgeOfVillagers.Test
             Xunit.Assert.Equal(actual, expected);
         }
 
-        
-        
+        [Fact]
+        public void ArabBeduinTest()
+        {
+            ArabBeduins abTerrainColor = new ArabBeduins();
+            Color expected = abTerrainColor.PaintTerrain();
+            Color actual = Color.LightGoldenrodYellow;
+            Xunit.Assert.Equal(actual, expected);
+        }
+
+
+
     }
 }
