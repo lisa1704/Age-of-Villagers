@@ -6,7 +6,7 @@ namespace AgeOfVillagers.Test
 {
     public class NationTest
     {
-        Nationfactory nationfactory = new Nationfactory();
+        Factory_Nation nationfactory = new Factory_Nation();
         [Fact]
         public void BangladeshinationTest()
         {
