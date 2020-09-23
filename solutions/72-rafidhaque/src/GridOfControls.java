@@ -17,8 +17,7 @@ public class GridOfControls {
     DrawWater water;
 
     Button saveButton = new Button("Save");
-    Button newButton = new Button("New");
-    Button openButton = new Button(" Open");
+    Button newButton = new Button("New / Open");
 
     String nationName;
     String villageName;
@@ -73,10 +72,9 @@ public class GridOfControls {
         GridPane.setConstraints(saveButton, 0, 14);
         saveButton.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         GridPane.setConstraints(newButton, 0, 15);
-        GridPane.setConstraints(openButton, 0, 15);
-        GridPane.setMargin(openButton, new Insets(0, 0, 0, 50));
+        newButton.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
-        gridPane.getChildren().addAll(gameName, villageName, nationName, treeButton, houseButton, waterSourceButton, saveButton, newButton, openButton);
+        gridPane.getChildren().addAll(gameName, villageName, nationName, treeButton, houseButton, waterSourceButton, saveButton, newButton);
         gridPane.setMaxSize(200, 400);
         gridPane.setMinSize(200, 400);
 

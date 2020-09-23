@@ -4,10 +4,6 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -105,50 +101,8 @@ public class ShowWindow implements IWindow{
             System.out.println("Rafidd");
             System.out.println(stateOfComponents10.get(1));
 
-        });
+            Starter.mainWindow.close();
 
-        gridOfControls.openButton.setOnAction(event -> {
-
-            FileChooser fileChooser = new FileChooser();
-            File selectedFile = fileChooser.showOpenDialog(Starter.mainWindow);
-            String filePath = selectedFile.getAbsolutePath();
-
-            ArrayList<StateOfComponent> stateOfComponents10 = null;
-
-            try {
-                FileInputStream fileIn = new FileInputStream(filePath);
-                ObjectInputStream in = new ObjectInputStream(fileIn);
-                stateOfComponents10 = (ArrayList<StateOfComponent>) in.readObject();
-                in.close();
-                fileIn.close();
-            } catch (Exception e1) {
-                e1.printStackTrace();
-            }
-
-            Rectangle rectangle = new Rectangle(0,0, 600,400);
-
-            System.out.println(stateOfComponents10.get(0));
-
-            if (stateOfComponents10.get(0).className.startsWith("Arab")) {
-                rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).className.startsWith("Bangladesh")) {
-                rectangle.setFill(Color.GREENYELLOW);
-            } else if (stateOfComponents10.get(0).className.startsWith("Egypt")) {
-                rectangle.setFill(Color.LIGHTYELLOW);
-            } else if (stateOfComponents10.get(0).className.startsWith("Inuit")) {
-                rectangle.setFill(Color.WHITE);
-            } else {
-                rectangle.setFill(Color.GRAY);
-            }
-            drawSpace.getChildren().addAll(rectangle);
-
-
-            int sizee = stateOfComponents10.size();
-
-            for (int k = 0; k < sizee; k++) {
-                ArrayList<Shape> drawing = stateOfComponents10.get(k).drawComponent.draw(stateOfComponents10.get(k).getX(), stateOfComponents10.get(k).getY());
-                drawSpace.getChildren().addAll(drawing);
-            }
         });
 
         return scene;
