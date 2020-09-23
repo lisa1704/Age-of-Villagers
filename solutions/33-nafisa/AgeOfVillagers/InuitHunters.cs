@@ -6,14 +6,11 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         private Panel Drawingpanel;
         public Color terraincolor;
-        public InuitHunters(Panel Drawingpanel)
-        {
-            this.Drawingpanel = Drawingpanel;
-        }
+       
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             InuitHouse ihouse = new InuitHouse(point);

@@ -39,6 +39,14 @@ namespace AgeOfVillagers.Test
             Color actual = Color.Yellow;
             Xunit.Assert.Equal(actual, expected);
         }
+        [Fact]
+        public void InuitHunter()
+        {
+            InuitHunters ihTerrainColor = new InuitHunters();
+            Color expected = ihTerrainColor.PaintTerrain();
+            Color actual = Color.White;
+            Xunit.Assert.Equal(actual, expected);
+        }
 
 
 

@@ -35,7 +35,7 @@ namespace AgeOfVillagers
             else if (Nationtype == "Inuit Hunters")
             {
                 
-                nation = new InuitHunters(Drawingpanel);
+                nation = new InuitHunters();
             }
             else 
             {
