@@ -28,40 +28,41 @@ namespace AgeOfVillagersTest
         public void BangladeshiTerrainColor()
         {
             INation bd = new Bangladeshi();
-            Color expected = Color.Green;
             Color actual = bd.TerrainColor();
+            Color expected = Color.Green;
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void ArabTerrainColor()
+        public void ArabTerrainColorTest()
         {
             INation ab = new Arab();
-            Color expected = Color.PaleGoldenrod;
             Color actual = ab.TerrainColor();
+            Color expected = Color.PaleGoldenrod;
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void EgytianTerrainColor()
+        public void EgytianTerrainColorTest()
         {
             INation ab = new Egyptian();
-            Color expected = Color.Yellow;
             Color actual = ab.TerrainColor();
+            Color expected = Color.Yellow;
             Assert.Equal(expected, actual);
         }
 
         [Fact]
-        public void InuitTerrainColor()
+        public void InuitTerrainColorTest()
         {
             INation ab = new Inuit();
-            Color expected = Color.White;
             Color actual = ab.TerrainColor();
+            Color expected = Color.White;
             Assert.Equal(expected, actual);
         }
 
+        // Type of nation test
 
-
+        
 
     }
 }
