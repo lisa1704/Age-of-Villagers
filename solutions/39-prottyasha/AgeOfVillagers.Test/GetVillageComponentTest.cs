@@ -159,5 +159,43 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void InuitTreeCheck()
+        {
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Inuit Hunters");
+            IComponent component = nation.getComponent("tree");
+
+            Assert.Null(component);  //Checks for null                        
+        }
+
+        [Fact]
+        public void InuitHouseCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Inuit Hunters");
+            IComponent component = nation.getComponent("house");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is InuitHouse)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
+
+        [Fact]
+        public void InuitRiverCheck()
+        {
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Inuit Hunters");
+            IComponent component = nation.getComponent("water_source");
+
+            Assert.Null(component);  //Checks for null
+        }
     }
 }
