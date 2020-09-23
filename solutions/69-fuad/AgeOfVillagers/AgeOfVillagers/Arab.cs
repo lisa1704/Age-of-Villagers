@@ -23,7 +23,7 @@ namespace AgeOfVillagers
             }
             else
             {
-                return null;
+                return new NullComponent();
             }
         }
     }
