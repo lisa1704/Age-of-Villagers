@@ -52,8 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NationItems\ArabItems.cs" />
     <Compile Include="NationItems\BDItems.cs" />
+    <Compile Include="NationItems\EgyptianItems.cs" />
     <Compile Include="NationItems\INationItems.cs" />
+    <Compile Include="NationItems\InuitItems.cs" />
     <Compile Include="Nations\ArabBeouins.cs" />
     <Compile Include="Nations\CheckNation.cs" />
     <Compile Include="Nations\EgyptianKings.cs" />

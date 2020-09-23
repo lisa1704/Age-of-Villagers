@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers.NationItems
 {
-    interface INationItem
+    interface INationItems
     {
         void House(Graphics g, Point p);
         void Tree(Graphics g, Point p);
