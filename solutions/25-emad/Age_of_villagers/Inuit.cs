@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Age_of_villagers
 {
-    class Inuit : INations
+    public class Inuit : INations
     {
         Color bg_color = Color.White;
 
