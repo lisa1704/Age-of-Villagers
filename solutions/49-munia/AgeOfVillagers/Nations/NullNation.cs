@@ -1,39 +1,32 @@
-﻿using AgeOfVillagers.NationItems;
-using AgeOfVillagers.Nations;
-using AgeOfVillagers.Shapes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
-namespace AgeOfVillagers 
+namespace AgeOfVillagers.Nations
 {
-    class BangladeshiFarmers : Nation 
+    class NullNation : Nation
     {
-   
         Pen pen = new Pen(Color.Black);
-        BDItems bd = new BDItems();
-    
         public void DrawHouse(Graphics g, Point p)
         {
-            bd.House(g,p);
+           g.DrawLine(pen, 20, 100, 50, 300);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            bd.Tree(g, p);
+            g.DrawLine(pen, 20, 100, 250, 300);
         }
 
         public void DrawWater(Graphics g, Point p)
         {
-            bd.Water(g, p);
+            g.DrawLine(pen, 20, 100, 450, 300);
         }
         public Color TerrainColor()
         {
-            return Color.LightGreen;
+            return Color.GhostWhite;
         }
     }
 }

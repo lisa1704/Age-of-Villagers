@@ -33,7 +33,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NationName = new System.Windows.Forms.TextBox();
             this.tree = new System.Windows.Forms.RadioButton();
             this.House = new System.Windows.Forms.RadioButton();
             this.Water = new System.Windows.Forms.RadioButton();
@@ -88,13 +88,14 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = "Enter Village Name";
             // 
-            // textBox2
+            // NationName
             // 
-            this.textBox2.Location = new System.Drawing.Point(715, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 22);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Enter nation ";
+            this.NationName.Location = new System.Drawing.Point(715, 162);
+            this.NationName.Name = "NationName";
+            this.NationName.Size = new System.Drawing.Size(221, 22);
+            this.NationName.TabIndex = 10;
+            this.NationName.Text = "Enter nation ";
+            this.NationName.TextChanged += new System.EventHandler(this.NationName_TextChanged);
             // 
             // tree
             // 
@@ -153,7 +154,7 @@
             this.Controls.Add(this.Water);
             this.Controls.Add(this.House);
             this.Controls.Add(this.tree);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.NationName);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
@@ -173,7 +174,7 @@
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NationName;
         private System.Windows.Forms.RadioButton tree;
         private System.Windows.Forms.RadioButton House;
         private System.Windows.Forms.RadioButton Water;

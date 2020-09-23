@@ -19,12 +19,12 @@ namespace AgeOfVillagers.Nations
             throw new NotImplementedException();
         }
 
-        public void drawWater(Graphics g, Point p)
+        public void DrawWater(Graphics g, Point p)
         {
             throw new NotImplementedException();
         }
 
-        public Color terrainColor()
+        public Color TerrainColor()
         {
             throw new NotImplementedException();
         }

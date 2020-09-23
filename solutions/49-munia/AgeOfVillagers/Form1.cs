@@ -17,10 +17,15 @@ namespace AgeOfVillagers
       //  int x;
       //  int y;
         Point point;
-      //  Nation nation;
+        String nationName;
+        
         public Form1()
         {
             InitializeComponent();
+        }
+        private void NationName_TextChanged(object sender, EventArgs e)
+        {
+            nationName = Text;
         }
 
         private void canvas_MouseClick(object sender, MouseEventArgs e)
@@ -32,20 +37,22 @@ namespace AgeOfVillagers
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = canvas.CreateGraphics();
-            BangladeshiFarmers v = new BangladeshiFarmers();
-            canvas.BackColor = v.terrainColor();
+            BangladeshiFarmers nation = new BangladeshiFarmers();
+            canvas.BackColor = nation.TerrainColor();
+
             if (tree.Checked == true)
-                v.DrawTree(g,point);
+                nation.DrawTree(g,point);
             else if (House.Checked == true)
-                v.DrawHouse(g,point);
+                nation.DrawHouse(g,point);
             else if (Water.Checked == true)
-                v.drawWater(g,point);           
+                nation.DrawWater(g,point);           
 
         }
         private void newVillage_MouseClick(object sender, MouseEventArgs e)
         {
             canvas.Invalidate();
         }
+
 
     }
 }

@@ -17,7 +17,7 @@ namespace AgeOfVillagers.Nations
             if (name == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
             else
-                return new Nation();
+                return new NullNation();
 
         }
     }
