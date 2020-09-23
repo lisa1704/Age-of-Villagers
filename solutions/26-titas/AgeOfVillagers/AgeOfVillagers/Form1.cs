@@ -92,24 +92,24 @@ namespace AgeOfVillagers
             Graphics g = panel1.CreateGraphics();
             nationName = comboBoxNationName.Text;
             Pen p = new Pen(new SolidBrush(Color.Black), 2);
+            NationNameFactory nationName1 = new NationNameFactory(this);
             
+            INation nation = nationName1.NationNameFactoryMethod();
 
-            if (nationName == "Bangladeshi Farmers")
-            {
-                if (radioButtonHouse.Checked)
+            if (radioButtonHouse.Checked)
                 {
-                    bdFarmers.paint_house(e, g, p);
+                    nation.paint_house(e, g, p);
                 }
                 else if (radioButtonTree.Checked)
                 {
-                    bdFarmers.paint_tree(e, g, p);
+                    nation.paint_tree(e, g, p);
                 }
                 else if (radioButtonWaterSource.Checked)
                 {
-                    bdFarmers.paint_waterSource(e, g, p);
+                    nation.paint_waterSource(e, g, p);
                 }
-            }
-            else if (nationName == "Egyptian Kings")
+            
+            /*else if (nationName == "Egyptian Kings")
             {
                 if (radioButtonHouse.Checked)
                 {
@@ -154,7 +154,7 @@ namespace AgeOfVillagers
                 {
                     //inuitHunters.paint_waterSource(e, g, p);
                 }
-            }
+            }*/
         }
 
         private void comboBoxNationName_SelectedIndexChanged(object sender, EventArgs e)
