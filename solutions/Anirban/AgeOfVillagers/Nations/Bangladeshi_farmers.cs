@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers.Nations
 {
-    class Bangladeshi_farmers : INations
+    public class Bangladeshi_farmers : INations
     {
 
         Color bg_color = Color.Green;
