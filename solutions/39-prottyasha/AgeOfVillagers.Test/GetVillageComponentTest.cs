@@ -123,5 +123,23 @@ namespace AgeOfVillagers.Test
             }
             Assert.True(check);
         }
+
+        [Fact]
+        public void EgyptHouseCheck()
+        {
+            bool check = false;
+
+            NationFactory nf = new NationFactory();
+            AbstractNation nation = nf.getNation("Egyptian Kings");
+            IComponent component = nation.getComponent("house");
+
+            Assert.NotNull(component);  //Checks for null
+
+            if (component is EgyptHouse)
+            {
+                check = true;
+            }
+            Assert.True(check);
+        }
     }
 }
