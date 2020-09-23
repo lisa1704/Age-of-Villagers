@@ -38,6 +38,35 @@ namespace AgeOfVillagers.Tests
             var actual = new NoItem().getItemShape(point2);
             actual.Equals(expected);
         }
-  
+
+        //BangladeshiFarmers 
+
+        [Fact]
+        public void BangladeshiFarmers_getHouseShape_Test()
+        {
+            INation nation = new BangladeshiFarmers();
+            var expected = nation.getItemShape(point1, "House");
+            var actual = new BangladeshiHouse().getItemShape(point1);
+            actual.Equals(expected);
+        }
+
+        [Fact]
+        public void BangladeshiFarmers_getTreeShape_Test()
+        {
+            INation nation = new BangladeshiFarmers();
+            var expected = nation.getItemShape(point2, "Tree");
+            var actual = new BangladeshiTree().getItemShape(point2);
+            actual.Equals(expected);
+        }
+
+        [Fact]
+        public void BangladeshiFarmers_getWaterSourceShape_Test()
+        {
+            INation nation = new BangladeshiFarmers();
+            var expected = nation.getItemShape(point2, "Water");
+            var actual = new BangladeshiWaterResource().getItemShape(point2);
+            actual.Equals(expected);
+        }
+
     }
 }
