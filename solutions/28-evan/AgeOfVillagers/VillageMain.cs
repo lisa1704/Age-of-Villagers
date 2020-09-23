@@ -82,5 +82,10 @@ namespace AgeOfVillagers
             else
                 TypeOfNation.checkNation(nation).DrawTree(g, p);
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

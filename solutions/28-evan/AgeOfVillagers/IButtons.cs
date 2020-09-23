@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class OpenFunction : IButtons
+    interface IButtons
     {
+
     }
 }
