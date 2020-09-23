@@ -12,4 +12,9 @@ public class house
         return "16px by 16px";
     }
 
+    public void createShape()
+    {
+
+    }
+
 }
