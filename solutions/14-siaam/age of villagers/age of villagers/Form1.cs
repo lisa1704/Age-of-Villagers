@@ -16,7 +16,9 @@ namespace age_of_villagers
         string nameofnation;
         NationFactory nationtype = new NationFactory();
         Graphics g;
-        List<Point> Locations = new List<Point>();
+        string itemType;
+        List<Point> houses = new List<Point>();
+        List<Point> trees = new List<Point>();
 
         public aov_editor()
         {
@@ -40,22 +42,27 @@ namespace age_of_villagers
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = panel1.CreateGraphics();
-            foreach (Point points in Locations)
+            foreach (Point points in houses)
             {
-                nationtype.GetNation(nameofnation).drawTree(g, points);
+                nationtype.GetNation(nameofnation).drawHouse(g, points);
             }
+           
 
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Locations.Add(e.Location);
+            if (itemType == "house")
+            {
+                houses.Add(e.Location);
+            }
+            
             panel1.Invalidate();
         }
 
         private void treebutton_Click(object sender, EventArgs e)
         {
-
+            itemType = "tree";
         }
 
         private void vill_name_TextChanged(object sender, EventArgs e)
@@ -65,7 +72,7 @@ namespace age_of_villagers
 
         private void housebutton_Click(object sender, EventArgs e)
         {
-
+            itemType = "house";
         }
 
         private void waterbutton_Click(object sender, EventArgs e)
@@ -85,7 +92,7 @@ namespace age_of_villagers
 
         private void new_vill_Click(object sender, EventArgs e)
         {
-            Locations.Clear();
+            houses.Clear();
             panel1.Refresh();
             panel1.BackColor = Color.Transparent;
             nation.ResetText();
