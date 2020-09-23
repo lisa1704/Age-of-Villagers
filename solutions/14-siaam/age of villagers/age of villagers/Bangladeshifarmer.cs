@@ -24,5 +24,11 @@ namespace age_of_villagers
             BDtree tree = new BDtree();
             tree.drawComponent(g, point);
         }
+
+        public void drawWater(Graphics g, Point point)
+        {
+            BDwatersrc pond = new BDwatersrc();
+            pond.drawComponent(g, point);
+        }
     }
 }

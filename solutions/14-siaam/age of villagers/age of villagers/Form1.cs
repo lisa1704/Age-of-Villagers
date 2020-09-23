@@ -19,6 +19,7 @@ namespace age_of_villagers
         string itemType;
         List<Point> houses = new List<Point>();
         List<Point> trees = new List<Point>();
+        List<Point> waters = new List<Point>();
 
         public aov_editor()
         {
@@ -52,7 +53,10 @@ namespace age_of_villagers
                 {
                     nationtype.GetNation(nameofnation).drawTree(g, points);
                 }
-                
+                foreach (Point points in waters)
+                {
+                    nationtype.GetNation(nameofnation).drawWater(g, points);
+                }
             }
             else
             {
@@ -71,7 +75,10 @@ namespace age_of_villagers
             {
                 trees.Add(e.Location);
             }
-
+            if (itemType == "Water Source")
+            {
+                waters.Add(e.Location);
+            }
             panel1.Invalidate();
         }
 
@@ -92,7 +99,7 @@ namespace age_of_villagers
 
         private void waterbutton_Click(object sender, EventArgs e)
         {
-
+            itemType = "Water Source";
         }
 
         private void open_vill_Click(object sender, EventArgs e)

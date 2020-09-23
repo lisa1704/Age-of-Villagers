@@ -22,6 +22,11 @@ namespace age_of_villagers
             INation nation = new Null_Nation();
             nation.drawTree(g, point);
         }
+
+        public void drawWater(Graphics g, Point point)
+        {
+            throw new System.NotImplementedException();
+        }
     }
-    }
+    
 }

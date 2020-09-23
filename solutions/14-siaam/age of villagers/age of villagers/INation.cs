@@ -9,7 +9,7 @@ namespace age_of_villagers
         void drawHouse(Graphics g, Point point);
         void drawTree(Graphics g, Point point);
 
-        
+        void drawWater(Graphics g, Point point);
         Color BgColor();
     }
 }

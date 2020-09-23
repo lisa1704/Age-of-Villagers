@@ -21,5 +21,10 @@ namespace age_of_villagers
             Egypttree egyptree = new Egypttree();
             egyptree.drawComponent(g, point);
         }
+
+        public void drawWater(Graphics g, Point point)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

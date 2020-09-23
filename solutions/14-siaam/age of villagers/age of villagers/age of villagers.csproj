@@ -52,6 +52,7 @@
     <Compile Include="Bangladeshifarmer.cs" />
     <Compile Include="BDhouse.cs" />
     <Compile Include="BDtree.cs" />
+    <Compile Include="BDwatersrc.cs" />
     <Compile Include="Egypthouse.cs" />
     <Compile Include="Egyptianking.cs" />
     <Compile Include="Egypttree.cs" />
