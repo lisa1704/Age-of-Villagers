@@ -12,5 +12,8 @@ namespace empty_project
         void drawTree(Axis axis);
         void drawWaterSource(Axis axis);
         void colorBackground();
+        IHouse getHouseType();
+        ITree getTreeType();
+        IWaterSource getWaterSourceType();
     }
 }
