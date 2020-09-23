@@ -1,20 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgeOfVillagers
+namespace AgeOfVillagers.InuitItemFactory
 {
-    class InuitItemFactory : ItemFactory
+    public class InuitItemFactory : INation
     {
-        public override IVillageItem getItem(string button)
+        public Color BackgroundColor()
         {
-            if (button == "House")
-            {
-                return new InuitHunterHouse();
-            }
-            return null;
+            return Color.White;
         }
+
+        public IShape DrawHouse(Point point)
+        {
+            Composite InuitHunterHouse = new InuitHunterHouse(point);
+            //inuitHunterHouse.Draw(g);
+            return (IShape)InuitHunterHouse;
+        }
+
+        public IShape DrawTree(Point point)
+        {
+            Composite InuitHunterTree = new NullItems();
+            //inuitHunterTree.drawing();
+            return (IShape)InuitHunterTree;
+        }
+
+
+        public IShape DrawWaterSource(Point point)
+        {
+            Composite InuitHunterWaterSource = new NullItems();
+            //inuitHunterWaterSource.drawing();
+            return (IShape)InuitHunterWaterSource;
+        }
+
+        
     }
 }

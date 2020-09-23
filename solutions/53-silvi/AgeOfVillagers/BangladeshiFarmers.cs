@@ -1,26 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgeOfVillagers
+namespace AgeOfVillagers.BangladeshiFarmers
 {
-    internal class BangladeshiFarmers : INation
+    public class BangladeshiFarmers : INation
     {
-        public void DrawHouse()
+        public Color BackgroundColor()
         {
-            throw new NotImplementedException();
+            return Color.Green;
         }
 
-        public void DrawTree()
+        
+
+        public Object DrawHouse(Point point)
         {
-            throw new NotImplementedException();
+            Composite bdFarmersHouse = new BangladeshiHouse(point);
+            //bdFarmersHouse.Draw(g);
+            return bdFarmersHouse;
         }
 
-        public void DrawWaterSource()
+        
+        public Object DrawTree(Graphics g, Point point)
         {
-            throw new NotImplementedException();
+            Composite bdFarmersTree = new BangladeshiTree(point);
+            //bdFarmersTree.Draw(g);
+            return bdFarmersTree;
+        }
+
+        
+
+        public Object DrawWaterSource(Point point)
+        {
+            Composite bdFarmersWaterSource = new BangladeshiWatersource(point);
+            //bdFarmersWaterSource.Draw(g);
+            return bdFarmersWaterSource;
         }
     }
 }

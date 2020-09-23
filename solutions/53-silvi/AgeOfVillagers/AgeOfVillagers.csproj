@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArabBedouineTree.cs" />
     <Compile Include="ArabBedouinHouse.cs" />
     <Compile Include="ArabBedouinTree.cs" />
     <Compile Include="ArabItemFactory.cs" />
@@ -71,6 +70,7 @@
     <Compile Include="INation.cs" />
     <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="Object.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
