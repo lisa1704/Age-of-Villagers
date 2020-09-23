@@ -15,7 +15,7 @@ namespace AgeofVillagers
             this.nation = nation;
             this.g = g;
         }
-        public Object createNation(MouseEventArgs e)
+        public Object createNation()
         {
             if (nation == "Bangladeshi Farmers")
                 return new BangladeshiFarmers(g);

@@ -51,7 +51,7 @@ namespace AgeofVillagers
             w = x+5;
             NationFactory nf = new NationFactory(nation,g);
 
-            nat = nf.createNation(e);
+            nat = nf.createNation();
             nat.terrain(panel1);
             if (radioButton1.Checked == true)
             {
