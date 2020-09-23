@@ -29,7 +29,7 @@ namespace Age_of_Villagers
             {
                 return new EgyptianKing(point);
             }
-            else if (NationName == "Inuit Hunter")
+            else if (NationName == "Inuit Hunters")
             {
                 return new InuitHunters(point);
             }
