@@ -12,12 +12,16 @@ namespace AgeOfVillagers
     {
         protected Panel Drawingpanel;
         public Color terraincolor;
-        
+        Point point;
         public object DrawHouse(Point point, Panel Drawingpanel)
         {
             BangladeshiHouse house = new BangladeshiHouse(point);
             house.Draw(point, Drawingpanel);
             return house;
+        }
+        public object TestHouse(Point point)
+        {
+            return new BangladeshiHouse(point);
         }
 
         public object DrawTree(Point point, Panel Drawingpanel)

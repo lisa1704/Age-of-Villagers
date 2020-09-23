@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiHouse : CompositeShape
+    public class BangladeshiHouse : CompositeShape
     {
         //private Panel Drawingpanel;
         //private Point point;
