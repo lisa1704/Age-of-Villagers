@@ -54,7 +54,9 @@
     </Compile>
     <Compile Include="NationItems\BDItems.cs" />
     <Compile Include="NationItems\INationItems.cs" />
+    <Compile Include="Nations\CheckNation.cs" />
     <Compile Include="Nations\INation.cs" />
+    <Compile Include="Nations\Nation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Nations\BangladeshiFarmers.cs" />

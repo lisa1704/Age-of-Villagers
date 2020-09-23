@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Nations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace AgeOfVillagers
       //  int x;
       //  int y;
         Point point;
+      //  Nation nation;
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +26,6 @@ namespace AgeOfVillagers
         private void canvas_MouseClick(object sender, MouseEventArgs e)
         {
             point = new Point(e.X, e.Y);
-          //  x = p.X;
-          // y = p.Y;
             canvas.Invalidate();
         }
 
@@ -42,7 +42,6 @@ namespace AgeOfVillagers
                 v.drawWater(g,point);           
 
         }
-
         private void newVillage_MouseClick(object sender, MouseEventArgs e)
         {
             canvas.Invalidate();

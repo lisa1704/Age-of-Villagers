@@ -1,4 +1,5 @@
 ﻿using AgeOfVillagers.NationItems;
+using AgeOfVillagers.Nations;
 using AgeOfVillagers.Shapes;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers 
 {
-    class BangladeshiFarmers : INation
+    class BangladeshiFarmers : Nation 
     {
    
         Pen pen = new Pen(Color.Black);
