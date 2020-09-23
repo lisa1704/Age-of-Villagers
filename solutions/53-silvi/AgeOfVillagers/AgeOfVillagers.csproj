@@ -66,6 +66,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="INation.cs" />
+    <Compile Include="InuitHunterHouse.cs" />
     <Compile Include="InuitItemFactory.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
