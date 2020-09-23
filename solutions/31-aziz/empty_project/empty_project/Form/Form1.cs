@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace empty_project
 {
-    public partial class DrawingPanel : Form
+    public partial class Form1 : Form
     {
         INation nation;
         SelectNation chooseNation;
@@ -18,7 +18,7 @@ namespace empty_project
         VillageSaveOpen saveOpenVillage;
         Village village;
 
-        public DrawingPanel()
+        public Form1()
         {
             InitializeComponent();
             village = new Village();

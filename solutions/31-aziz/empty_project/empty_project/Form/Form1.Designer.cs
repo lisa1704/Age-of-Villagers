@@ -1,6 +1,6 @@
 ﻿namespace empty_project
 {
-    partial class DrawingPanel
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.

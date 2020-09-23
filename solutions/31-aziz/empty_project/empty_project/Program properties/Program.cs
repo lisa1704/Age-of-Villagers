@@ -17,7 +17,7 @@ namespace empty_project
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DrawingPanel());
+            Application.Run(new Form1());
         }
     }
 }
