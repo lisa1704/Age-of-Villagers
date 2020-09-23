@@ -37,7 +37,8 @@ namespace AgeOfVillagers
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = canvas.CreateGraphics();
-            BangladeshiFarmers nation = new BangladeshiFarmers();
+            // BangladeshiFarmers nation = new BangladeshiFarmers();
+            EgyptianKings nation = new EgyptianKings();
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
