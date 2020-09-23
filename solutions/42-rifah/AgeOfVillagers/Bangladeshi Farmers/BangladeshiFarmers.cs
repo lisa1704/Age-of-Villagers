@@ -7,23 +7,23 @@ namespace AgeOfVillagers.Bangladeshi_Farmers
 {
     public class BangladeshiFarmers : INation
     {
-        public Object DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Point point)
         {
-            BDFarmersTree bdFarmersTree = new BDFarmersTree(point);
-            bdFarmersTree.Draw(g);
+            Composite bdFarmersTree = new BDFarmersTree(point);
+            //bdFarmersTree.Draw(g);
             return bdFarmersTree;
         }
-        public Object DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Point point)
         {
-            BDFarmersHouse bdFarmersHouse = new BDFarmersHouse(point);
-            bdFarmersHouse.Draw(g);
+            Composite bdFarmersHouse = new BDFarmersHouse(point);
+            //bdFarmersHouse.Draw(g);
             return bdFarmersHouse;
         }
 
-        public Object DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Point point)
         {
-            BDFarmersWatersource bdFarmersWaterSource = new BDFarmersWatersource(point);
-            bdFarmersWaterSource.Draw(g);
+            Composite bdFarmersWaterSource = new BDFarmersWatersource(point);
+            //bdFarmersWaterSource.Draw(g);
             return bdFarmersWaterSource;
         }
 

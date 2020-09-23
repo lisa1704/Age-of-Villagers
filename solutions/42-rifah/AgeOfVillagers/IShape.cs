@@ -7,6 +7,6 @@ namespace AgeOfVillagers
 {
     public interface IShape
     {
-        void Draw(Graphics g);
+        void Draw(Pen p, Graphics g);
     }
 }

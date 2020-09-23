@@ -13,24 +13,24 @@ namespace AgeOfVillagers.Inuit_Hunters
             return Color.White;
         }
 
-        public Object DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Point point)
         {
-            InuitHuntersHouse inuitHunterHouse = new InuitHuntersHouse(point);
-            inuitHunterHouse.Draw(g);
+            Composite inuitHunterHouse = new InuitHuntersHouse(point);
+            //inuitHunterHouse.Draw(g);
             return inuitHunterHouse;
         }
 
-        public Object DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Point point)
         {
-            NullItems inuitHunterTree = new NullItems();
-            inuitHunterTree.drawing();
+            Composite inuitHunterTree = new NullItems();
+            //inuitHunterTree.drawing();
             return inuitHunterTree;
         }
 
-        public Object DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Point point)
         {
-            NullItems inuitHunterWaterSource = new NullItems();
-            inuitHunterWaterSource.drawing();
+            Composite inuitHunterWaterSource = new NullItems();
+            //inuitHunterWaterSource.drawing();
             return inuitHunterWaterSource;
         }
     }

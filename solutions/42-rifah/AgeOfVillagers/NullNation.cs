@@ -12,24 +12,24 @@ namespace AgeOfVillagers
             return Color.White;
         }
 
-        public Object DrawHouse(Graphics g, Point point)
+        public IShape DrawHouse(Point point)
         {
-            NullItems NullHouse = new NullItems();
-            NullHouse.drawing();
+            Composite NullHouse = new NullItems();
+            //NullHouse.drawing();
             return NullHouse;
         }
 
-        public Object DrawTree(Graphics g, Point point)
+        public IShape DrawTree(Point point)
         {
-            NullItems NullTree = new NullItems();
-            NullTree.drawing();
+            Composite NullTree = new NullItems();
+            //NullTree.drawing();
             return NullTree;
         }
 
-        public Object DrawWaterSource(Graphics g, Point point)
+        public IShape DrawWaterSource(Point point)
         {
-            NullItems NullWaterSource = new NullItems();
-            NullWaterSource.drawing();
+            Composite NullWaterSource = new NullItems();
+            //NullWaterSource.drawing();
             return NullWaterSource;
         }
     }

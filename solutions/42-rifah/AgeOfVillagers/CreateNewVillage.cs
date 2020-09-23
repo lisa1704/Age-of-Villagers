@@ -125,20 +125,21 @@ namespace AgeOfVillagers
         private void drawingPanel_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = drawingPanel.CreateGraphics();
+            Pen p = new Pen(Color.Black);
 
             foreach (Point point in tree_point)
             {
-                nationfactory.GetNation(nationName).DrawTree(g, point);
+                nationfactory.GetNation(nationName).DrawTree(point).Draw(p, g);
             }
 
             foreach (Point point in house_point)
             {
-                nationfactory.GetNation(nationName).DrawHouse(g, point);
+                nationfactory.GetNation(nationName).DrawHouse(point).Draw(p, g);
             }
 
             foreach (Point point in waterSource_point)
             {
-                nationfactory.GetNation(nationName).DrawWaterSource(g, point);
+                nationfactory.GetNation(nationName).DrawWaterSource(point).Draw(p, g);
             }
 
         }

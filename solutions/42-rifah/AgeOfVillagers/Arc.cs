@@ -21,7 +21,7 @@ namespace AgeOfVillagers
             this.SweepAngle = sweepAngle;
         }
 
-        public void Draw(Graphics g)
+        public void Draw(Pen p, Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
             g.DrawArc(pen, x, y, width, height, StartAngle, SweepAngle);
