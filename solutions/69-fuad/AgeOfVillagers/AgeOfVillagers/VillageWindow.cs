@@ -120,7 +120,7 @@ namespace AgeOfVillagers
             }
             else
             {
-                nation = null();
+                nation = null;
             }
             if(nation != null) g.Clear(nation.getBackgroundColor());
 
