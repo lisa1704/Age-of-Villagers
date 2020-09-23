@@ -34,11 +34,11 @@ namespace Age_of_Villagers
 
         public IShape WaterSourceDraw()
         {
-            throw new NotImplementedException();
+            return new NullShape();
         }
         public Point GetWaterSourcePoint()
         {
-            return point;
+            return Point.Empty;
         }
         public Color GetTerrainColor()
         {
