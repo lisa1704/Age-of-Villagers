@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     {
         public void DrawShapes()
         {
-            MessageBox.Show("Not Valid Item.");
+            MessageBox.Show("Not Valid!");
         }
     }
 }

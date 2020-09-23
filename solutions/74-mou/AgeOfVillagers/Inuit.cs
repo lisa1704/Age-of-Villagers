@@ -13,13 +13,17 @@ namespace AgeOfVillagers
         }
         public IShapes DrawTree(Graphics gr, Point p)
         {
-            return new NullItemSelction();
+            NullItemSelction nt = new NullItemSelction();
+            nt.DrawShapes();
+            return nt;
 
         }
 
         public IShapes DrawWaterSource(Graphics gr, Point p)
         {
-            return new NullItemSelction();
+            NullItemSelction niw = new NullItemSelction();
+            niw.DrawShapes();
+            return niw;
 
         }
 

@@ -20,7 +20,9 @@ namespace AgeOfVillagers
 
         public IShapes DrawWaterSource(Graphics gr,Point p)
         {
-            return new NullItemSelction();
+            NullItemSelction nw = new NullItemSelction();
+            nw.DrawShapes();
+            return nw;
 
         }
 
