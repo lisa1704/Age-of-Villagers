@@ -51,15 +51,15 @@ namespace Age_of_villagers.Test
 
 
         Inuit inuitNation = new Inuit();
-        string NationName4 = "Egyptian Kings";
+        string NationName4 = "Inuit Hunters";
 
         [Fact]
 
-        public void EgyptNameTest()
+        public void InuitNameTest()
         {
             Nation nation = new Nation();
-            INations actual1 = nation.CheckVillage(NationName3);
-            Assert.Equal(EgyptNation.GetType(), actual1.GetType());
+            INations actual1 = nation.CheckVillage(NationName4);
+            Assert.Equal(inuitNation.GetType(), actual1.GetType());
         }
 
 
