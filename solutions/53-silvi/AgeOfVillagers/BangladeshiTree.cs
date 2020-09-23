@@ -7,19 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Age_Of_Villagers
+namespace AgeOfVillagers.BangladeshiFarmers
 {
-    class BangladeshiTree : IVillageItem
+    class BangladeshiTree : Composite
     {
-    public void Draw(Point e, Graphics g, Pen p)
+        public BangladeshiTree(Point point)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(p, x - 3, y, x + 3, y);
-            g.DrawLine(p, x + 3, y, x + 3, y + 50);
-            g.DrawLine(p, x + 3, y + 50, x - 3, y + 50);
-            g.DrawLine(p, x - 3, y, x - 3, y + 50);
-            g.DrawArc(p, x - 40, y - 50, 80, 80, 0, 360);
+            Point TopPoint = new Point(point.X + 16, point.Y + 16);
+            Point TopLeft = new Point(point.X + 6, point.Y + 8);
+            Point BottomRight = new Point(point.X + 10, point.Y + 24);
+
+
+            AddComponent(new Rectangle(TopLeft, BottomRight));
+            AddComponent(new Ellipse(point, TopPoint));
         }
     }
     

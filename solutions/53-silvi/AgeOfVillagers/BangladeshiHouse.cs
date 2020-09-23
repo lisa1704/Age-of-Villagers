@@ -6,21 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace Age_Of_Villagers
+namespace AgeOfVillagers.BangladeshiFarmers
 {
-    class BangladeshiHouse : IVillageItem
+    class BangladeshiHouse : Composite
     {
-        public void Draw(Point e, Graphics g, Pen p)
+        public BangladeshiHouse(Point point)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(p, x, y, x + 50, y);
-            g.DrawLine(p, x + 50, y, x + 50, y + 25);
-            g.DrawLine(p, x + 50, y + 25, x, y + 25);
-            g.DrawLine(p, x, y + 25, x, y);
-            g.DrawLine(p, x, y, x + 25, y - 25);
-            g.DrawLine(p, x + 50, y, x + 25, y - 25);
+            Point TopLeft = new Point(point.X - 8, point.Y + 8);
+            Point BottomRight = new Point(point.X + 8, point.Y + 16);
+            Point TopRight = new Point(BottomRight.X, TopLeft.Y);
+
+            AddComponent(new System.Drawing.Rectangle(TopLeft, BottomRight));
+            AddComponent(new Triangle(point, TopLeft, TopRight));
         }
+
+        
     }
 }
