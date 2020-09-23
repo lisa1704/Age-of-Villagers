@@ -22,9 +22,7 @@ public class InuitTree implements ITree {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 50, 50, 200, 360, ArcType.OPEN);
-                    graphicsContext.strokeText("inuit tree", mouseEvent.getX(), mouseEvent.getY());
-                    radioButton.setSelected(false);
+                    
                     active = false;
                 }
             }
