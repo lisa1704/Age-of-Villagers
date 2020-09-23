@@ -11,15 +11,15 @@ namespace AgeOfVillagers
         public BangladeshiWaterSource(Point p)
         {
             this.p1 = p;
-            p2 = new Point(p1.X + 6, p1.Y - 6);
-            p3 = new Point(p2.X + 7, p2.Y + 6);
-            p4 = new Point(p3.X + 6, p1.Y - 8);
-            p5 = new Point(p4.X + 6, p1.Y + 7);
-            p6 = new Point(p5.X + 6, p1.Y - 6);
-            p7 = new Point(p6.X, p6.Y + 12);
-            p8 = new Point(p7.X - 6, p7.Y + 6);
-            p9 = new Point(p8.X - 6, p7.Y + 6);
-            p10 = new Point(p9.X - 7, p7.Y + 6);
+            p2 = new Point(p1.X + 10, p1.Y - 10);
+            p3 = new Point(p2.X + 12, p2.Y + 10);
+            p4 = new Point(p3.X + 10, p1.Y - 18);
+            p5 = new Point(p4.X + 8, p1.Y + 12);
+            p6 = new Point(p5.X + 20, p1.Y - 10);
+            p7 = new Point(p6.X, p6.Y + 25);
+            p8 = new Point(p7.X - 18, p7.Y + 20);
+            p9 = new Point(p8.X - 25, p7.Y + 10);
+            p10 = new Point(p9.X - 8, p7.Y + 10);
 
             add_shapes(new Line(p1, p2));
             add_shapes(new Line(p2, p3));
