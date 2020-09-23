@@ -15,7 +15,7 @@ namespace Age_of_Villagers
         }
         public IShape HouseDraw()
         {
-            throw new NotImplementedException();
+            return new ArabHouse(point);
         }
 
         public Point GetHousePoint()
