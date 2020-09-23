@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace AOV
 {
@@ -14,7 +9,12 @@ namespace AOV
         public BdHouse(Point clicked)
         {
             _clicked = clicked;
-            villageItemShape = new BdHouseShape(new Point(_clicked.X,_clicked.Y),new Point(_clicked.X - 8, _clicked.Y + 8), new Point(_clicked.X + 8, _clicked.Y + 8), new Point(_clicked.X - 8, _clicked.Y), new Point(_clicked.X + 8, _clicked.Y + 16));
+            Point x1 = new Point(_clicked.X - 8, _clicked.Y + 8);
+            Point x2 = new Point(_clicked.X + 8, _clicked.Y + 8);
+            Point topLeftCorner = new Point(_clicked.X - 8, _clicked.Y);
+            Point bottomRightCorner = new Point(_clicked.X + 8, _clicked.Y + 16);
+
+            villageItemShape = new BdHouseShape(clicked, x1, x2, topLeftCorner, bottomRightCorner);
         }
         public override Point GetPoint()
         {

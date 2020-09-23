@@ -1,8 +1,5 @@
 ﻿using AOV;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 using Xunit;
 
 namespace XUnitTesting
