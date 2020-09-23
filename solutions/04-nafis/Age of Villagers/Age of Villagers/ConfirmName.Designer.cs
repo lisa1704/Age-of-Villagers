@@ -45,7 +45,7 @@
             this.VillageNameText.Size = new System.Drawing.Size(200, 23);
             this.VillageNameText.TabIndex = 0;
             this.VillageNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.VillageNameText.TextChanged += new System.EventHandler(this.VillageNameText_TextChanged);
+            
             // 
             // NationNameCombo
             // 
@@ -63,7 +63,6 @@
             this.NationNameCombo.Size = new System.Drawing.Size(200, 26);
             this.NationNameCombo.TabIndex = 1;
             this.NationNameCombo.Text = "Select Nation Name";
-            this.NationNameCombo.SelectedIndexChanged += new System.EventHandler(this.NationCombo_SelectedIndexChanged);
             // 
             // ConfirmVillage
             // 
@@ -88,7 +87,7 @@
             this.VillageNameLabel.Size = new System.Drawing.Size(80, 15);
             this.VillageNameLabel.TabIndex = 3;
             this.VillageNameLabel.Text = "Village Name";
-            this.VillageNameLabel.Click += new System.EventHandler(this.VillageNameLabel_Click_);
+          
             // 
             // ConfirmName
             // 
@@ -102,7 +101,6 @@
             this.Controls.Add(this.VillageNameText);
             this.Name = "ConfirmName";
             this.Text = "Confirm Name";
-            this.Load += new System.EventHandler(this.SaveName_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

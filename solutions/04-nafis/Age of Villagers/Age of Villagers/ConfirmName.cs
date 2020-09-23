@@ -12,21 +12,11 @@ namespace Age_of_Villagers
     {
         private Panel VillageDrawing;
         private readonly VillageWindow primary;
-        public ConfirmName(VillageWindow villageWindow,Panel panel)
+        public ConfirmName(VillageWindow villageWindow, Panel panel)
         {
             InitializeComponent();
             primary = villageWindow;
             VillageDrawing = panel;
-        }
-
-        private void SaveName_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NationCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ConfirmVillage_Click(object sender, EventArgs e)
@@ -36,16 +26,6 @@ namespace Age_of_Villagers
             primary.NationNameCombo.Text = NationNameCombo.Text;
             VillageDrawing.BackColor = nationController.GetNation(new Point()).GetTerrainColor();
             this.Hide();
-
-        }
-
-        private void VillageNameLabel_Click_(object sender, EventArgs e)
-        {
-
-        }
-
-        private void VillageNameText_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
