@@ -2,7 +2,7 @@
 
 namespace age_of_villagers
 {
-    class Bangladeshifarmer : INation
+    public class Bangladeshifarmer : INation
     {
         
         Pen p = new Pen(Color.Red);
