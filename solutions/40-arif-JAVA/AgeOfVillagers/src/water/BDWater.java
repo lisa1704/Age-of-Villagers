@@ -24,10 +24,9 @@ public class BDWater implements IWater {
                 if(active){
                     double x= mouseEvent.getX();
                     double y= mouseEvent.getY();
-                    graphicsContext.strokeArc(x, y,40,50,200,360, ArcType.OPEN);
-                    graphicsContext.lineTo(x,y);
-                    graphicsContext.lineTo(x+10,y+20);
-                    graphicsContext.strokeText("bd water", mouseEvent.getX(),mouseEvent.getY());
+
+
+
                     radioButton.setSelected(false);
                     active = false;
                 }

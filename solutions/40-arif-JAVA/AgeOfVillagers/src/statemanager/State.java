@@ -1,11 +1,14 @@
 package statemanager;
 
+import shape.Circle;
+import shape.Line;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class State implements Serializable {
-    ArrayList<LineState> lines = new ArrayList<>();
-    ArrayList<CircleState> circles = new ArrayList<>();
+    ArrayList<Line> lines = new ArrayList<>();
+    ArrayList<Circle> circles = new ArrayList<>();
 
     private static State ourInstance = new State();
 
@@ -16,17 +19,17 @@ public class State implements Serializable {
     private State() {
     }
 
-    public void addLine(LineState lineState){
+    public void addLine(Line lineState){
         lines.add(lineState);
     }
-    public void addCircle(CircleState circleState){
+    public void addCircle(Circle circleState){
         circles.add(circleState);
     }
 
-    public ArrayList<LineState> getLines(){
+    public ArrayList<Line> getLines(){
         return this.lines;
     }
-    public ArrayList<CircleState> getCircles(){
+    public ArrayList<Circle> getCircles(){
         return this.circles;
     }
 

@@ -1,5 +1,7 @@
 package shape;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public interface IShape {
-    void draw();
+    void draw(GraphicsContext graphicsContext);
 }

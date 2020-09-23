@@ -15,8 +15,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.ArcType;
 import nation.NationManager;
 import shape.Circle;
+import shape.Line;
 import statemanager.*;
 import terrain.ITerrain;
 import tree.ITree;
@@ -199,14 +201,8 @@ public class Controller {
             e.printStackTrace();
         }
 
-
-
-        System.out.println(data);
-
         Gson gson =new Gson();
         GameFile gf = gson.fromJson(data,GameFile.class);
-
-        System.out.println(gf.getVillagetype());
 
         villageName.setText(gf.getVillagename().toString());
         villageTypeList.setValue(gf.getVillagetype());
@@ -220,7 +216,7 @@ public class Controller {
         houseRB.setSelected(false);
         treeRB.setSelected(false);
         waterRB.setSelected(false);
-        saveVillageBTN.setVisible(true);
+        saveVillageBTN.setVisible(false);
 
         String vt = gf.getVillagetype();
         System.out.println(vt);
@@ -234,13 +230,13 @@ public class Controller {
 
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        for (LineState lineState: gf.getState().getLines()) {
+        for (Line lineState: gf.getState().getLines()) {
             graphicsContext.strokeLine(lineState.getX1(),lineState.getY1(),lineState.getX2(),lineState.getY2());
 
         }
 
-        for (CircleState circleState: gf.getState().getCircles()) {
-            
+        for (Circle circleState: gf.getState().getCircles()) {
+            graphicsContext.strokeArc(circleState.getX(),circleState.getY(),circleState.getR(),circleState.getR(),0,360, ArcType.OPEN);
 
         }
 

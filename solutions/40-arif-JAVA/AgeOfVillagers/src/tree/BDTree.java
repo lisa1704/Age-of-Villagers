@@ -29,8 +29,8 @@ public class BDTree implements ITree {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
 
-                    new Circle(graphicsContext,x,y,20).draw();
-                    new Rectangle(graphicsContext,x+5, y+10,15, 4).draw();
+                    new Circle(x,y,20).draw(graphicsContext);
+                    new Rectangle(x+5, y+10,15, 4).draw(graphicsContext);
 
                     radioButton.setSelected(false);
                     active = false;

@@ -25,8 +25,8 @@ public class BDHouse implements IHouse {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    new Triangle(graphicsContext, mouseEvent.getX(), mouseEvent.getY()).draw();
-                    new Rectangle(graphicsContext, mouseEvent.getX()-5, mouseEvent.getY()+10, 10,10).draw();
+                    new Triangle( mouseEvent.getX(), mouseEvent.getY()).draw(graphicsContext);
+                    new Rectangle(mouseEvent.getX()-5, mouseEvent.getY()+10, 10,10).draw(graphicsContext);
                     radioButton.setSelected(false);
                     active= false;
                 }
