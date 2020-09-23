@@ -45,6 +45,7 @@ namespace AgeOfVillagers
             // savevillage
             // 
             this.savevillage.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.savevillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.savevillage.Location = new System.Drawing.Point(66, 287);
             this.savevillage.Name = "savevillage";
             this.savevillage.Size = new System.Drawing.Size(166, 31);
@@ -56,6 +57,7 @@ namespace AgeOfVillagers
             // newvillage
             // 
             this.newvillage.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.newvillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.newvillage.Location = new System.Drawing.Point(66, 324);
             this.newvillage.Name = "newvillage";
             this.newvillage.Size = new System.Drawing.Size(166, 31);
@@ -67,6 +69,7 @@ namespace AgeOfVillagers
             // openvillage
             // 
             this.openvillage.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.openvillage.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.openvillage.Location = new System.Drawing.Point(66, 361);
             this.openvillage.Name = "openvillage";
             this.openvillage.Size = new System.Drawing.Size(166, 28);
@@ -115,6 +118,7 @@ namespace AgeOfVillagers
             // 
             this.AgeOfVillagerstitlelabel.AutoSize = true;
             this.AgeOfVillagerstitlelabel.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AgeOfVillagerstitlelabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.AgeOfVillagerstitlelabel.Location = new System.Drawing.Point(29, 9);
             this.AgeOfVillagerstitlelabel.Name = "AgeOfVillagerstitlelabel";
             this.AgeOfVillagerstitlelabel.Size = new System.Drawing.Size(222, 32);
@@ -125,7 +129,7 @@ namespace AgeOfVillagers
             // toolpanel
             // 
             this.toolpanel.BackColor = System.Drawing.Color.Lavender;
-            this.toolpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.toolpanel.Controls.Add(this.NationTypelistBox);
             this.toolpanel.Controls.Add(this.Itemslabel);
             this.toolpanel.Controls.Add(this.Nationlabel);
@@ -138,9 +142,9 @@ namespace AgeOfVillagers
             this.toolpanel.Controls.Add(this.waterradio);
             this.toolpanel.Controls.Add(this.houseradio);
             this.toolpanel.Controls.Add(this.treeradio);
-            this.toolpanel.Location = new System.Drawing.Point(641, 23);
+            this.toolpanel.Location = new System.Drawing.Point(636, 23);
             this.toolpanel.Name = "toolpanel";
-            this.toolpanel.Size = new System.Drawing.Size(296, 400);
+            this.toolpanel.Size = new System.Drawing.Size(308, 400);
             this.toolpanel.TabIndex = 9;
             this.toolpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.toolpanel_Paint);
             // 
@@ -162,9 +166,10 @@ namespace AgeOfVillagers
             // Itemslabel
             // 
             this.Itemslabel.AutoSize = true;
+            this.Itemslabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.Itemslabel.Location = new System.Drawing.Point(66, 204);
             this.Itemslabel.Name = "Itemslabel";
-            this.Itemslabel.Size = new System.Drawing.Size(48, 20);
+            this.Itemslabel.Size = new System.Drawing.Size(53, 20);
             this.Itemslabel.TabIndex = 13;
             this.Itemslabel.Text = "Items:";
             this.Itemslabel.Click += new System.EventHandler(this.label3_Click);
@@ -172,9 +177,10 @@ namespace AgeOfVillagers
             // Nationlabel
             // 
             this.Nationlabel.AutoSize = true;
+            this.Nationlabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.Nationlabel.Location = new System.Drawing.Point(67, 132);
             this.Nationlabel.Name = "Nationlabel";
-            this.Nationlabel.Size = new System.Drawing.Size(57, 20);
+            this.Nationlabel.Size = new System.Drawing.Size(63, 20);
             this.Nationlabel.TabIndex = 12;
             this.Nationlabel.Text = "Nation:";
             this.Nationlabel.Click += new System.EventHandler(this.label2_Click);
@@ -182,9 +188,10 @@ namespace AgeOfVillagers
             // VillageNamelabel
             // 
             this.VillageNamelabel.AutoSize = true;
+            this.VillageNamelabel.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.VillageNamelabel.Location = new System.Drawing.Point(67, 64);
             this.VillageNamelabel.Name = "VillageNamelabel";
-            this.VillageNamelabel.Size = new System.Drawing.Size(102, 20);
+            this.VillageNamelabel.Size = new System.Drawing.Size(111, 20);
             this.VillageNamelabel.TabIndex = 11;
             this.VillageNamelabel.Text = "Village Name:";
             this.VillageNamelabel.Click += new System.EventHandler(this.label1_Click_1);
@@ -201,7 +208,7 @@ namespace AgeOfVillagers
             // drawingpanel
             // 
             this.drawingpanel.BackColor = System.Drawing.Color.White;
-            this.drawingpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.drawingpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.drawingpanel.Location = new System.Drawing.Point(12, 23);
             this.drawingpanel.Name = "drawingpanel";
             this.drawingpanel.Size = new System.Drawing.Size(600, 400);
