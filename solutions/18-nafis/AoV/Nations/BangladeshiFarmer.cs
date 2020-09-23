@@ -1,4 +1,5 @@
 ﻿using System;
+using AoV.Shapes;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,25 +10,35 @@ namespace AoV.Nations
 {
     class BangladeshiFarmer : INation
     {
-        
-        public void ColorTerrain()
+
+        private Color bgColor = Color.Green;
+
+        public string getName()
         {
-            throw new NotImplementedException();
+            return "Bangladeshi Farmers";
+        }
+
+        public Color TerrainColor()
+        {
+            return bgColor;
         }
 
         public void DrawHouse(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiHouse bdHouse = new BangladeshiHouse(new Point(p.X, p.Y), new Point(p.X - 60, p.Y + 30), new Point(p.X + 60, p.Y + 110));
+            bdHouse.Draw(g);
         }
 
         public void DrawTree(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiTree bdTree = new BangladeshiTree(p);
+            bdTree.Draw(g);
         }
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            throw new NotImplementedException();
+            BangladeshiPond wSource = new BangladeshiPond(p);
+            wSource.Draw(g);
         }
     }
 }

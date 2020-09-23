@@ -21,11 +21,11 @@ namespace AoV.Shapes
             shapeComponent.Add(shape);
         }
 
-        public void Draw(Graphics g, Pen p)
+        public void Draw(Graphics g)
         {
             foreach(IShape item in shapeComponent)
             {
-                item.Draw(g, p);
+                item.Draw(g);
             }
         }
     }

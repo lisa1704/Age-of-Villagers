@@ -12,14 +12,10 @@ namespace AoV.Shapes
 
         private Point p1, p2, p3;
 
-        public BangladeshiHouse(Point p1, Point p2, Point p3)
+        public BangladeshiHouse(Point clickPoint, Point p1, Point p3)
         {
-
-            this.p1 = p1;
-            this.p2 = p2;
-            this.p3 = p3;
-            AddShape(new Triangle(p1, p2, new Point(p2.X, p3.Y)));
-            AddShape(new Rectangle(p2, p3));
+            AddShape(new Rectangle(p1, p3));
+            AddShape(new Triangle(clickPoint, p1, new Point(p3.X, p1.Y)));
         }
 
     }
