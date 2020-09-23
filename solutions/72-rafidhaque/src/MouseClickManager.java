@@ -7,6 +7,10 @@ public class MouseClickManager {
         double x = mouseEvent.getX();
         double y = mouseEvent.getY();
 
+        if (drawComponent == null) {
+            drawComponent = new NoTree();
+        }
+
         System.out.println(x+" "+y);
         if (mouseRestriction(x, y)) {
             drawComponent.setX(x);
