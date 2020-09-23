@@ -1,6 +1,7 @@
 ﻿using age_of_villagers.age_of_villagers.utilities;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -9,9 +10,10 @@ namespace age_of_villagers.age_of_villagers.Nations
     class Nation : Ination
     {
         private Panel villageCanvas;
-        Ihouse house;
-        Itree tree;
-        IwaterSource waterSource;
+        public Ihouse house;
+        public Itree tree;
+        public IwaterSource waterSource;
+        public Color color;
 
         public Nation(Panel villageCanvas)
         {
@@ -20,7 +22,7 @@ namespace age_of_villagers.age_of_villagers.Nations
 
         public void colorTerrain()
         {
-            throw new NotImplementedException();
+            villageCanvas.BackColor = color;
         }
 
         public void createHouse(Coordinate coordinate)

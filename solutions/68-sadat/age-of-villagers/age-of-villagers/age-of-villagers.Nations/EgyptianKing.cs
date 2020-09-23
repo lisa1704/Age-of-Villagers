@@ -1,4 +1,7 @@
-﻿using age_of_villagers.age_of_villagers.utilities;
+﻿using age_of_villagers.age_of_village.Items.House;
+using age_of_villagers.age_of_village.Items.Tree;
+using age_of_villagers.age_of_village.Items.WaterSource;
+using age_of_villagers.age_of_villagers.utilities;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,34 +10,14 @@ using System.Windows.Forms;
 
 namespace age_of_villagers.age_of_villagers.Nations
 {
-    class EgyptianKing : Ination
+    class EgyptianKing : Nation
     {
-        Panel villageCanvas;
-        public EgyptianKing(Panel villageCanvas)
+        public EgyptianKing(Panel villageCanvas) : base(villageCanvas)
         {
-            this.villageCanvas = villageCanvas;
-        }
-        public void colorTerrain()
-        {
-            villageCanvas.BackColor = System.Drawing.Color.Yellow;
-        }
-
-        public void createHouse(Coordinate coordinate)
-        {
-
-            
-        }
-
-        public void createTree(Coordinate coordinate)
-        {
-           
-
-        }
-
-        public void createWaterSource(Coordinate coordinate)
-        {
-           
-
+            base.house = new EgyptianKingHouse();
+            base.tree = new EgyptianKingTree();
+            base.waterSource = new EgyptianKingWaterSource();
+            base.color = System.Drawing.Color.Yellow;
         }
     }
 }

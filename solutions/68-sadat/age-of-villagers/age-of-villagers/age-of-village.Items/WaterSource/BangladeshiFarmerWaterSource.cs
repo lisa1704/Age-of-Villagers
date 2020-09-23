@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace age_of_villagers.age_of_village.Items.WaterSource
 {
-    class BangladeshiFarerWaterSource : IwaterSource
+    class BangladeshiFarmerWaterSource : IwaterSource
     {
         
 
