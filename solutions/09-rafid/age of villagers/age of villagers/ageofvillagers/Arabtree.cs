@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Arabtree
+public class Arabtree : IShape
 {
     public void CreateTree(int x, int y)
     {

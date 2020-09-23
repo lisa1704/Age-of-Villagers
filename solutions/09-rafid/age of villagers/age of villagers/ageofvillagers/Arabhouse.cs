@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Arabhouse
+public class Arabhouse : IShape
 {
     public void CreateHouse(int x, int y)
     {
