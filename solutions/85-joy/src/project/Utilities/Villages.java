@@ -8,7 +8,7 @@ import javax.swing.filechooser.FileSystemView;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Villages implements Serializable {
+public class Villages {
     public String VillageName;
     public ArrayList<VillageState> assetList;
 
@@ -22,6 +22,7 @@ public class Villages implements Serializable {
         this.assetList.add(currentState);
         return assetList;
     }
+
 
     public void SaveVillage(Villages village){
         String Filename = village.VillageName + ".aov";
@@ -42,6 +43,27 @@ public class Villages implements Serializable {
 
     public Villages LoadVillage(){
         Villages villages = null;
+        File selectedFile = this.selectFileFromPopup();
+        if(selectedFile != null)
+        {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(selectedFile));
+                villages = new Gson().fromJson(br,Villages.class);
+                System.out.println("File loaded Successfully!");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("FILE SELECTION ERROR!");
+            }
+
+        }
+        else{
+            System.out.println("FILE NOT SELECTED!");
+        }
+        return  villages;
+    }
+
+    public File selectFileFromPopup(){
         File selectedFile = null;
         final JFrame iFRAME = new JFrame();
         iFRAME.setAlwaysOnTop(true);
@@ -54,21 +76,11 @@ public class Villages implements Serializable {
         iFRAME.dispose();
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             selectedFile = fileChooser.getSelectedFile();
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(selectedFile));
-                villages = new Gson().fromJson(br,Villages.class);
-                System.out.println("File loaded Successfully!");
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
         else {
             System.out.println("No File Selected!");
         }
-
-
-        return  villages;
+        return selectedFile;
 
     }
 }
