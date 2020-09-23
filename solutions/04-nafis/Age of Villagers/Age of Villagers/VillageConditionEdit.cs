@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class VillageConditionEdit
+    public class VillageConditionEdit
     {
         private readonly NationController nationController;
         private readonly Graphics graphics;
