@@ -101,22 +101,34 @@ namespace age_of_villagers
         {
             Point point = new Point(e.X, e.Y);
 
-            if (tree.Checked)
+            switch (village)
             {
+                case null:
+                    {
+                        DialogResult _dialog = MessageBox.Show("Open a Village First!");
+                        break;
+                    }
 
-                village.nation.getTree(point).draw(g, p);
-                village.tree.Add(point);
-            }
-            else if (house.Checked)
-            {
-                village.nation.getHouse(point).draw(g, p);
-                village.house.Add(point);
+                default:
+                    if (tree.Checked)
+                    {
 
-            }
-            else if (watersource.Checked)
-            {
-                village.nation.getHouse(point).draw(g, p);
-                village.watersource.Add(point);
+                        village.nation.getTree(point).draw(g, p);
+                        village.tree.Add(point);
+                    }
+                    else if (house.Checked)
+                    {
+                        village.nation.getHouse(point).draw(g, p);
+                        village.house.Add(point);
+
+                    }
+                    else if (watersource.Checked)
+                    {
+                        village.nation.getHouse(point).draw(g, p);
+                        village.watersource.Add(point);
+                    }
+
+                    break;
             }
         }
     }

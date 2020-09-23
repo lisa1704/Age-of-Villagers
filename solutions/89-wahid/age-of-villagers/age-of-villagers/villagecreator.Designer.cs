@@ -83,6 +83,11 @@
             // villagelocationbox
             // 
             this.villagelocationbox.FormattingEnabled = true;
+            this.villagelocationbox.Items.AddRange(new object[] {
+            "Bangladeshi Farmers",
+            "Arab Bedouins",
+            "Inuit Hunters",
+            "Egyptian Kings"});
             this.villagelocationbox.Location = new System.Drawing.Point(786, 138);
             this.villagelocationbox.Name = "villagelocationbox";
             this.villagelocationbox.Size = new System.Drawing.Size(100, 23);

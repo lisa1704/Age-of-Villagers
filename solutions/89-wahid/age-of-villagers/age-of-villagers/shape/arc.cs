@@ -17,7 +17,7 @@ namespace age_of_villagers.shape
             width = bottomRight.X - topLeft.X;
             height = bottomRight.Y - topLeft.Y;
             startAngle = 0;
-            sweepAngle = 180;
+            sweepAngle = 360;
         }
         public void draw(Graphics g, Pen p)
         {
