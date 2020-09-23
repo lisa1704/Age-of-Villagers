@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace AgeOfVillagers
 {
@@ -135,8 +136,13 @@ namespace AgeOfVillagers
         private void NewVillage_Click(object sender, EventArgs e)
         {
             villagebox.Clear();
-            
-            Refresh();
+            house_locations.Clear();
+            tree_locations.Clear();
+            watersource_locations.Clear();
+            changeNation.ResetText();
+            Drawingpanel.Refresh();
+            Drawingpanel.BackColor = Color.White;
+           // Refresh();
 
         }
 
@@ -231,9 +237,9 @@ namespace AgeOfVillagers
             TerrainColor = nation.getNation().PaintTerrain();
             Drawingpanel.BackColor = TerrainColor;
 
-            house_locations.Clear();
-            tree_locations.Clear();
-            watersource_locations.Clear();
+           // house_locations.Clear();
+           // tree_locations.Clear();
+           // watersource_locations.Clear();
 
 
         }
