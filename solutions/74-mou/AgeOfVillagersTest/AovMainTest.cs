@@ -2,7 +2,7 @@ using AgeOfVillagers;
 using System;
 using System.Drawing;
 using Xunit;
-
+using Xunit.Sdk;
 
 namespace AgeOfVillagersTest
 {
@@ -60,9 +60,40 @@ namespace AgeOfVillagersTest
             Assert.Equal(expected, actual);
         }
 
-        // Type of nation test
+        // Bangladeshi Farmers test
+        NationFactory nationfactory = new NationFactory();
+        Graphics gr;
+        Point pTest = new Point(100, 50);
 
-        
+        [Fact]
+        public void BangladeshiTest()
+        {
+            INation expected = nationfactory.GetNation("Bangladeshi Farmers");
+            Assert.IsType<Bangladeshi>(expected);
+
+        }
+
+        [Fact]
+        public void BangladeshiHouseTest()
+        {
+            IShapes expected = nationfactory.GetNation("Bangladeshi Farmers").DrawHouse(gr, pTest);
+            Assert.IsType<BangladeshiHouse>(expected);
+        }
+
+        [Fact]
+        public void BangladeshiTreeTest()
+        {
+            IShapes expected = nationfactory.GetNation("Bangladeshi Farmers").DrawTree(gr, pTest);
+            Assert.IsType<BangladeshiTree>(expected);
+        }
+
+        [Fact]
+        public void BangladeshiWaterSourceTest()
+        {
+            IShapes expected = nationfactory.GetNation("Bangladeshi Farmers").DrawWaterSource(gr, pTest);
+            Assert.IsType<BangladeshiWaterSource>(expected);
+        }
+
 
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class EgyptianWaterSource : CompositeShapes
+    public class EgyptianWaterSource : CompositeShapes
     {
         public EgyptianWaterSource(Point p)
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiTree : CompositeShapes
+    public class BangladeshiTree : CompositeShapes
     {
         private Point p1, p2, p3, p4, p5;
         public BangladeshiTree(Point p)

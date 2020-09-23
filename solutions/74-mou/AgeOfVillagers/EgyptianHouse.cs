@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class EgyptianHouse : CompositeShapes
+    public class EgyptianHouse : CompositeShapes
     {
         Point p1, p2, p3, p4, p5;
 

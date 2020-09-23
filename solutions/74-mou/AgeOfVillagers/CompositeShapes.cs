@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class CompositeShapes : IShapes
+    public class CompositeShapes : IShapes
     {
         protected List<IShapes> listOfShapes;
 

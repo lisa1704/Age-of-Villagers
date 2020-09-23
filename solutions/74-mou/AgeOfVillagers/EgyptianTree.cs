@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class EgyptianTree : CompositeShapes
+    public class EgyptianTree : CompositeShapes
     {
         private Point pl, pr,pl1,pl2, pl3, pr1, pr2, pr3;
         public EgyptianTree(Point p)
