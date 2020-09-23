@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Triangle : Composite
+    public class Triangle : Composite
     {
         public Triangle(Point point_1, Point point_2, Point point_3)
         {

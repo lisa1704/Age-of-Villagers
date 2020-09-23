@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class Ellipse : Composite
+    public class Ellipse : Composite
     {
         public Ellipse(Point TopLeft, Point BottomRight)
         {
