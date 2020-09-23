@@ -58,6 +58,7 @@
     <Compile Include="Nations\INation.cs" />
     <Compile Include="Nations\InuitHunters.cs" />
     <Compile Include="Nations\NationFactory.cs" />
+    <Compile Include="Nations\NullNation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shapes\ArabHouse.cs" />
