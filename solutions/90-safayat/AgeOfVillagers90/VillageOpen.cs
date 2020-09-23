@@ -21,7 +21,7 @@ namespace AgeOfVillagers90
             }
         }
 
-        public VillageItem getsavedvillage()
+        public VillageItem GetSavedVillage()
         {
             return villageItemSave;
         }

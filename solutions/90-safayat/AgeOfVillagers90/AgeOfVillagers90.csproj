@@ -81,7 +81,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="ShapeEllipse.cs" />
-    <Compile Include="TAgle.cs" />
+    <Compile Include="TAngle.cs" />
     <Compile Include="VillageOpen.cs" />
     <Compile Include="VillageSave.cs" />
     <EmbeddedResource Include="Form1.resx">

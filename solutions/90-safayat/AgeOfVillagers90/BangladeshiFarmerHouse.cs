@@ -11,7 +11,7 @@ namespace AgeOfVillagers90
             Point triPoint = new Point(mainPoint.X + 8, mainPoint.Y + 8);
 
             AddComponent(new Rectangle(recPoint1, recPoint2));
-            AddComponent(new TAgle(mainPoint, recPoint1, triPoint));
+            AddComponent(new TAngle(mainPoint, recPoint1, triPoint));
         }
     }
 }

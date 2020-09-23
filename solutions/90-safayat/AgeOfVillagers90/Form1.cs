@@ -12,32 +12,25 @@ namespace AgeOfVillagers90
 {
     public partial class Form1 : Form
     {
-        string ItemText = "";
+        string NameofItem = "";
         string NameofVillage = "";
         string typeofNation = "";
         public List<Point> HousePoints { get; set; } = new List<Point>();
         public List<Point> TreePoints { get; set; } = new List<Point>();
         public List<Point> WaterSourcePoints { get; set; } = new List<Point>();
+
         VillageItem VillageItem;
-        NationFactory nationfactory = new NationFactory();
+
+        readonly NationFactory nationfactory = new NationFactory();
         public Form1()
         {
             InitializeComponent();
-        }
-
-        public void GetVillageSave() //getting the info from form design
-        {
-            VillageItem.NameofVillage = VillageNametextBox.Text;
-            VillageItem.PointHouse = this.HousePoints;
-            VillageItem.PointTree = this.TreePoints;
-            VillageItem.PointWaterSource = this.WaterSourcePoints;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
 
         private void SaveVillage_Click(object sender, EventArgs e)
         {
@@ -48,28 +41,39 @@ namespace AgeOfVillagers90
             MessageBox.Show(VillageName.Text +" Village Saved");
         }
 
+        public void GetVillageSave() //getting the info from form design
+        {
+            VillageItem.NameofVillage = VillageNametextBox.Text;
+            VillageItem.PointHouse = this.HousePoints;
+            VillageItem.PointTree = this.TreePoints;
+            VillageItem.PointWaterSource = this.WaterSourcePoints;
+        }
+
         private void Tree_Click(object sender, EventArgs e)
         {
-            ItemText = "Tree";
+            NameofItem = "Tree";
         }
 
         private void House_Click(object sender, EventArgs e)
         {
-            ItemText = "House";
+            NameofItem = "House";
         }
 
         private void WaterSource_Click(object sender, EventArgs e)
         {
-            ItemText = "WaterSource";
+            NameofItem = "WaterSource";
         }
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
             VillageOpen villageOpen = new VillageOpen();
             villageOpen.execute();
-            VillageItem = villageOpen.getsavedvillage();
-            setSavedVillage(VillageItem);
-            DrawPanel.Refresh();
+            VillageItem = villageOpen.GetSavedVillage();
+            if(VillageItem.NameofVillage != null)
+            {
+                SetSavedVillage(VillageItem);
+                DrawPanel.Refresh();
+            }  
         }
 
         private void NewVillage_Click(object sender, EventArgs e)
@@ -84,19 +88,12 @@ namespace AgeOfVillagers90
             DrawPanel.BackColor = nationfactory.GetNation(typeofNation).BackGroundColor();
         }
 
-
-
         private void VillageName_Click(object sender, EventArgs e) //show
         {
             
         }
 
-        private void Nation_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        public void setSavedVillage(VillageItem villageItem)
+        public void SetSavedVillage(VillageItem villageItem)
         {
             VillageNametextBox.Text = villageItem.NameofVillage;
             foreach(Point point in villageItem.PointHouse)
@@ -114,12 +111,12 @@ namespace AgeOfVillagers90
                 WaterSourcePoints.Add(point);
             }
         }
-        private void DrawPanel_Paint(object sender, PaintEventArgs e) //600*400
+
+        private void DrawPanel_Paint(object sender, PaintEventArgs e) 
         {
             Graphics g = DrawPanel.CreateGraphics();
             foreach (Point pt in HousePoints)
             {
-                //g.DrawLine(p, pt.X, pt.Y, 100, 100);
                 nationfactory.GetNation(typeofNation).DrawHouse(g, pt);
 
             }
@@ -146,15 +143,15 @@ namespace AgeOfVillagers90
 
         private void DrawingPanel(object sender, MouseEventArgs e) // mouse
         {
-            if (ItemText == "House")
+            if (NameofItem == "House")
             {
                 HousePoints.Add(e.Location);
             }
-            if (ItemText == "Tree")
+            if (NameofItem == "Tree")
             {
                 TreePoints.Add(e.Location);
             }
-            if (ItemText == "WaterSource")
+            if (NameofItem == "WaterSource")
             {
                 WaterSourcePoints.Add(e.Location);
             }

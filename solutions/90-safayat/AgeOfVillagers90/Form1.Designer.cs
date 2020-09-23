@@ -39,6 +39,7 @@
             this.NationList = new System.Windows.Forms.ComboBox();
             this.AgeofVillagers = new System.Windows.Forms.Label();
             this.VillageNametextBox = new System.Windows.Forms.TextBox();
+            this.TypeVillageName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -105,11 +106,11 @@
             // VillageName
             // 
             this.VillageName.AutoSize = true;
-            this.VillageName.Location = new System.Drawing.Point(706, 139);
+            this.VillageName.Location = new System.Drawing.Point(697, 133);
             this.VillageName.Name = "VillageName";
-            this.VillageName.Size = new System.Drawing.Size(69, 13);
+            this.VillageName.Size = new System.Drawing.Size(72, 13);
             this.VillageName.TabIndex = 11;
-            this.VillageName.Text = "Village Name";
+            this.VillageName.Text = "Village Name ";
             this.VillageName.Click += new System.EventHandler(this.VillageName_Click);
             // 
             // DrawPanel
@@ -141,7 +142,7 @@
             // 
             this.AgeofVillagers.AutoSize = true;
             this.AgeofVillagers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeofVillagers.Location = new System.Drawing.Point(676, 12);
+            this.AgeofVillagers.Location = new System.Drawing.Point(676, 25);
             this.AgeofVillagers.Name = "AgeofVillagers";
             this.AgeofVillagers.Size = new System.Drawing.Size(120, 20);
             this.AgeofVillagers.TabIndex = 14;
@@ -150,17 +151,27 @@
             // 
             // VillageNametextBox
             // 
-            this.VillageNametextBox.Location = new System.Drawing.Point(680, 99);
+            this.VillageNametextBox.Location = new System.Drawing.Point(680, 96);
             this.VillageNametextBox.Name = "VillageNametextBox";
             this.VillageNametextBox.Size = new System.Drawing.Size(116, 20);
             this.VillageNametextBox.TabIndex = 0;
             this.VillageNametextBox.TextChanged += new System.EventHandler(this.VillageNametextBox_TextChanged);
+            // 
+            // TypeVillageName
+            // 
+            this.TypeVillageName.AutoSize = true;
+            this.TypeVillageName.Location = new System.Drawing.Point(677, 73);
+            this.TypeVillageName.Name = "TypeVillageName";
+            this.TypeVillageName.Size = new System.Drawing.Size(102, 13);
+            this.TypeVillageName.TabIndex = 15;
+            this.TypeVillageName.Text = "Type Village Name :";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 435);
+            this.Controls.Add(this.TypeVillageName);
             this.Controls.Add(this.VillageNametextBox);
             this.Controls.Add(this.AgeofVillagers);
             this.Controls.Add(this.NationList);
@@ -192,6 +203,7 @@
         private System.Windows.Forms.ComboBox NationList;
         private System.Windows.Forms.Label AgeofVillagers;
         private System.Windows.Forms.TextBox VillageNametextBox;
+        private System.Windows.Forms.Label TypeVillageName;
     }
 }
 
