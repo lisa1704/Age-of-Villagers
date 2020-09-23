@@ -43,5 +43,14 @@ namespace AgeOfVillagers
 
         }
 
+        private void newVillage_MouseClick(object sender, MouseEventArgs e)
+        {
+            canvas.Invalidate();
+        }
+
+        private void newVillage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

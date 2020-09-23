@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.SaveVillage = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.newVillage = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -50,14 +50,15 @@
             this.SaveVillage.Text = "Save Village";
             this.SaveVillage.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // newVillage
             // 
-            this.button5.Location = new System.Drawing.Point(715, 399);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "New Village";
-            this.button5.UseVisualStyleBackColor = true;
+            this.newVillage.Location = new System.Drawing.Point(715, 399);
+            this.newVillage.Name = "newVillage";
+            this.newVillage.Size = new System.Drawing.Size(102, 34);
+            this.newVillage.TabIndex = 4;
+            this.newVillage.Text = "New Village";
+            this.newVillage.UseVisualStyleBackColor = true;
+            this.newVillage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.newVillage_MouseClick);
             // 
             // button6
             // 
@@ -156,7 +157,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.newVillage);
             this.Controls.Add(this.SaveVillage);
             this.Name = "Form1";
             this.Text = "Village Template";
@@ -167,7 +168,7 @@
 
         #endregion
         private System.Windows.Forms.Button SaveVillage;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button newVillage;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
 
