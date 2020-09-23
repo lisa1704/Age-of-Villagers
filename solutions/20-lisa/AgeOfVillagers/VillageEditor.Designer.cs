@@ -55,8 +55,8 @@
             // 
             // toolsPanel
             // 
-            this.toolsPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolsPanel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolsPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolsPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolsPanel.Location = new System.Drawing.Point(597, 0);
             this.toolsPanel.Name = "toolsPanel";
             this.toolsPanel.Padding = new System.Windows.Forms.Padding(1);
@@ -85,40 +85,44 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(652, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 24);
             this.button1.TabIndex = 3;
             this.button1.Text = "Save Village";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.SaveVillage_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(604, 367);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 24);
             this.button2.TabIndex = 3;
             this.button2.Text = "New Village";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.NewVillage_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(704, 367);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 24);
             this.button3.TabIndex = 3;
             this.button3.Text = "Open Village";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.OpenVillage_Click);
             // 
             // radioButton1
             // 
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.Location = new System.Drawing.Point(604, 156);
@@ -128,13 +132,14 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tree";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.TreeClick);
             this.radioButton1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tree_MouseClick);
             // 
             // radioButton2
             // 
             this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.Location = new System.Drawing.Point(652, 186);
@@ -144,13 +149,14 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Water Source";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.WaterSourceClick);
             this.radioButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.WaterSource_MouseClick);
             // 
             // radioButton3
             // 
             this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton3.Location = new System.Drawing.Point(704, 156);
@@ -160,14 +166,14 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "House";
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.HouseClick);
             this.radioButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.House_MouseClick);
             // 
             // NationBox
             // 
             this.NationBox.AllowDrop = true;
-            this.NationBox.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.NationBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.NationBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NationBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NationBox.FormattingEnabled = true;
@@ -186,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 403);
             this.Controls.Add(this.NationBox);
             this.Controls.Add(this.radioButton3);
