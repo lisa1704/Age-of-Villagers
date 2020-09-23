@@ -12,8 +12,12 @@ namespace AgeOfVillagers
         {
             this.form = form;
         }
+        public INation NationNameFactoryMethod()
+        {
+            return obj;
+        }
 
-         
+
     }
 
 }
