@@ -20,8 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ab0ca4d-0b11-47b0-a906-f824649c9a16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tests/TreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/WaterBodyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +72,7 @@
       <recent name="Project.Utilities.NationItems" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TreeTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="83-abedeen" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.WaterBodyTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -106,22 +95,6 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.HouseTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HouseTest.Bangladeshi_house_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="83-abedeen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.HouseTest" />
-      <option name="METHOD_NAME" value="Bangladeshi_house_test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,20 +130,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WaterBodyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="83-abedeen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WaterBodyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaterBodyTest.Bangladeshi_WaterBody_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="83-abedeen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WaterBodyTest" />
+      <option name="METHOD_NAME" value="Bangladeshi_WaterBody_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.HouseTest" />
-      <item itemvalue="JUnit.HouseTest.Bangladeshi_house_test" />
       <item itemvalue="JUnit.TreeTest" />
       <item itemvalue="JUnit.TreeTest.Egyptian_house_test" />
+      <item itemvalue="JUnit.WaterBodyTest.Bangladeshi_WaterBody_test" />
+      <item itemvalue="JUnit.WaterBodyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WaterBodyTest" />
+        <item itemvalue="JUnit.WaterBodyTest.Bangladeshi_WaterBody_test" />
         <item itemvalue="JUnit.TreeTest" />
         <item itemvalue="JUnit.TreeTest.Egyptian_house_test" />
         <item itemvalue="JUnit.HouseTest" />
-        <item itemvalue="JUnit.HouseTest.Bangladeshi_house_test" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +201,7 @@
       <workItem from="1600717179046" duration="1264000" />
       <workItem from="1600780032405" duration="1847000" />
       <workItem from="1600782261726" duration="23594000" />
-      <workItem from="1600868533977" duration="6527000" />
+      <workItem from="1600868533977" duration="6944000" />
     </task>
     <servers />
   </component>
@@ -256,33 +260,33 @@
     <state x="-1092" y="266" key="FileChooserDialogImpl/0.30.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1600454671627" />
     <state x="828" y="296" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1599726668571" />
     <state x="828" y="296" key="FileChooserDialogImpl/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600802923052" />
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1600875576396">
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom" timestamp="1600875609974">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.30.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1600468658957" />
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1600608039998" />
-    <state width="1877" height="257" key="GridCell.Tab.0.bottom/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875576396" />
+    <state width="1877" height="257" key="GridCell.Tab.0.bottom/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875609974" />
     <state width="1877" height="171" key="GridCell.Tab.0.bottom/1920.30.1920.1050/0.30.1920.1050@1920.30.1920.1050" timestamp="1600549692585" />
-    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1600875576396">
+    <state width="1877" height="257" key="GridCell.Tab.0.center" timestamp="1600875609974">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1877" height="332" key="GridCell.Tab.0.center/0.30.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1600468658957" />
     <state width="1877" height="171" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1600608039997" />
-    <state width="1877" height="257" key="GridCell.Tab.0.center/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875576396" />
+    <state width="1877" height="257" key="GridCell.Tab.0.center/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875609974" />
     <state width="1877" height="171" key="GridCell.Tab.0.center/1920.30.1920.1050/0.30.1920.1050@1920.30.1920.1050" timestamp="1600549692585" />
-    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1600875576396">
+    <state width="1877" height="257" key="GridCell.Tab.0.left" timestamp="1600875609974">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1877" height="332" key="GridCell.Tab.0.left/0.30.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1600468658956" />
     <state width="1877" height="171" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1600608039997" />
-    <state width="1877" height="257" key="GridCell.Tab.0.left/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875576396" />
+    <state width="1877" height="257" key="GridCell.Tab.0.left/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875609974" />
     <state width="1877" height="171" key="GridCell.Tab.0.left/1920.30.1920.1050/0.30.1920.1050@1920.30.1920.1050" timestamp="1600549692585" />
-    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1600875576396">
+    <state width="1877" height="257" key="GridCell.Tab.0.right" timestamp="1600875609974">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1877" height="332" key="GridCell.Tab.0.right/0.30.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1600468658957" />
     <state width="1877" height="171" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1600608039997" />
-    <state width="1877" height="257" key="GridCell.Tab.0.right/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875576396" />
+    <state width="1877" height="257" key="GridCell.Tab.0.right/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1600875609974" />
     <state width="1877" height="171" key="GridCell.Tab.0.right/1920.30.1920.1050/0.30.1920.1050@1920.30.1920.1050" timestamp="1600549692585" />
     <state x="440" y="129" width="1217" height="852" key="SettingsEditor" timestamp="1600802926523">
       <screen x="0" y="30" width="1920" height="1050" />
