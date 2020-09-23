@@ -11,7 +11,7 @@ namespace AgeOfVillagers
     {
         private readonly Point point1;
         private readonly Point point2;
-        public int x, y, width, heigth, initialngle, sweepAngle;
+        public int x, y, width, height, initialangle, sweepAngle;
         public Arc(Point point1, Point point2)
         {
             this.point1 = point1;
@@ -20,7 +20,7 @@ namespace AgeOfVillagers
         public void Draw(Graphics g)
         {
             var pen = new Pen(Color.Black, 1);
-            g.DrawArc(pen, x, y, width, heigth, initialngle, sweepAngle);
+            g.DrawArc(pen, x, y, width, height, initialangle, sweepAngle);
         }
     }
 }
