@@ -1,6 +1,6 @@
 package Project.Utilities.NationItems;
 
-public class BangladeshiFarmers implements INationColor{
+public class BangladeshiFarmersTerrain implements INationColor{
     private String TerrainColor = "#93cf88";
     @Override
     public String GetNationColor() {

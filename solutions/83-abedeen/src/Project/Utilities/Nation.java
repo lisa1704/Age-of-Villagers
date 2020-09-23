@@ -26,7 +26,7 @@ public class Nation {
     }
     private void ColorFactory(String nationType){
         if(nationType == "Bangladeshi Farmers"){
-            terrainColor = new BangladeshiFarmers();
+            terrainColor = new BangladeshiFarmersTerrain();
         }
         else if(nationType == "Arab Bedouins"){
             terrainColor = new Arab_Bedouin_Terrain();
