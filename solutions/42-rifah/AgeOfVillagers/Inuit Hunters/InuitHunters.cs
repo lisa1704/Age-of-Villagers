@@ -13,22 +13,25 @@ namespace AgeOfVillagers.Inuit_Hunters
             return Color.White;
         }
 
-        public void DrawHouse(Graphics g, Point point)
+        public Object DrawHouse(Graphics g, Point point)
         {
             InuitHuntersHouse inuitHunterHouse = new InuitHuntersHouse(point);
             inuitHunterHouse.Draw(g);
+            return inuitHunterHouse;
         }
 
-        public void DrawTree(Graphics g, Point point)
+        public Object DrawTree(Graphics g, Point point)
         {
             NullItems inuitHunterTree = new NullItems();
             inuitHunterTree.drawing();
+            return inuitHunterTree;
         }
 
-        public void DrawWaterSource(Graphics g, Point point)
+        public Object DrawWaterSource(Graphics g, Point point)
         {
             NullItems inuitHunterWaterSource = new NullItems();
             inuitHunterWaterSource.drawing();
+            return inuitHunterWaterSource;
         }
     }
 }

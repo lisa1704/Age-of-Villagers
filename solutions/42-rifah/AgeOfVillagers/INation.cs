@@ -11,9 +11,9 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
-        void DrawTree(Graphics g, Point point);
-        void DrawHouse(Graphics g, Point point);
-        void DrawWaterSource(Graphics g, Point point);
+        Object DrawTree(Graphics g, Point point);
+        Object DrawHouse(Graphics g, Point point);
+        Object DrawWaterSource(Graphics g, Point point);
         Color BackgroundColor();
 
     }
