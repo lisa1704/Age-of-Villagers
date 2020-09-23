@@ -13,12 +13,12 @@ namespace Age_of_villagers
     public partial class Form1 : Form
     {
 
-        String village_name;
+        String nation_name;
 
         Color ak_color;
 
 
-        Village village = new Village();
+        Nation nation = new Nation();
 
 
         public Form1()
@@ -92,8 +92,10 @@ namespace Age_of_villagers
 
             p = e.Location;
 
-            village.CheckVillage(village_name).DrawWaterSource(g,p);
 
+            nation.CheckVillage(nation_name).DrawWaterSource(g,p);
+
+            nation.CheckVillage(nation_name).DrawHouse(g,p);
 
 
 
@@ -101,15 +103,15 @@ namespace Age_of_villagers
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
 
-            village_name = comboBox1.Text;
 
-            village.CheckVillage(village_name);
+            nation_name = comboBox1.Text;
+
+            nation.CheckVillage(nation_name);
 
             panel.Refresh();
 
-            ak_color = village.CheckVillage(village_name).DrawBackground();
+            ak_color = nation.CheckVillage(nation_name).DrawBackground();
 
 
             panel.BackColor = ak_color;

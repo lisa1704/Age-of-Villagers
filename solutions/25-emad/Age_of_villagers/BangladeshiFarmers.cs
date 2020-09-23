@@ -15,7 +15,18 @@ namespace Age_of_villagers
 
         public void DrawHouse(Graphics graphics, Point point)
         {
+            Pen pen = new Pen(Color.Black);
            
+                Point trianglePoint1 = new Point(point.X + 20, point.Y - 20);
+                Point trianglePoint2 = new Point(point.X + 20, point.Y);
+                Point rectanglePoint1 = new Point(point.X, point.Y + 40);
+                Point rectanglePoint2 = new Point(trianglePoint2.X, trianglePoint2.Y + 20);
+                Triangle triangle = new Triangle(graphics, pen, point, trianglePoint1, trianglePoint2);
+                triangle.Draw();
+
+                Rectangle rectangle = new Rectangle(graphics, pen, point, trianglePoint2, rectanglePoint1, rectanglePoint2);
+                rectangle.Draw();
+            
         }
 
         public Color DrawBackground()

@@ -7,20 +7,22 @@ using System.Drawing;
 
 namespace Age_of_villagers
 {
-    class Rectangles : IShape
+    class Rectangle : IShape
     {
 
         Point a,b,c,d;
         Pen pen;
         Graphics g;
-        public Rectangles(Graphics g, Pen pen, Point a, Point b, Point c, Point d)
+        public Rectangle(Graphics g, Pen pen, Point a, Point b, Point c, Point d)
         {
 
             this.a = a;
             this.b = b;
             this.c = c;
             this.d = d;
-            
+            this.g = g;
+            this.pen = pen;
+
         }
 
         public void Draw()

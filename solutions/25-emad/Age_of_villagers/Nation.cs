@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace Age_of_villagers
 {
-    public class Village
+    public class Nation
     {
-        public INations village;
         
-        public INations CheckVillage(string villageType)
+        
+        public INations CheckVillage(string nationType)
         {
-            if (villageType == "Bangladeshi Farmers")
+            if (nationType == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
 
-            else if (villageType == "Arab Bedouin")
+            else if (nationType == "Arab Bedouin")
                 return new ArabBedouin();
 
-            else if (villageType == "Egyptian Kings")
+            else if (nationType == "Egyptian Kings")
                 return new EgyptianKings();
 
-            else if (villageType == "Inuit Hunters")
+            else if (nationType == "Inuit Hunters")
                 return new Inuit();
 
             else
