@@ -16,24 +16,24 @@ public class HouseFactoryTest {
     @Test
     protected void Arabian_House_Factory_Test()
     {
-        Nation arabHouse = new Nation("Arab Bedouins");
+        Nation Arab = new Nation("Arab Bedouins");
         IHouse house = new Arab_Bedouin_House();
-        Assertions.assertEquals(house.getClass(), arabHouse.house.getClass());
+        Assertions.assertEquals(house.getClass(), Arab.house.getClass());
     }
 
     @Test
     protected void Egyptian_House_Factory_Test()
     {
-        Nation EgyptianHouse = new Nation("Egyptian Kings");
+        Nation Egyptian = new Nation("Egyptian Kings");
         IHouse house = new Egyptian_Kings_House();
-        Assertions.assertEquals(house.getClass(), EgyptianHouse.house.getClass());
+        Assertions.assertEquals(house.getClass(), Egyptian.house.getClass());
     }
 
     @Test
     protected void Inuit_House_Factory_Test()
     {
-        Nation InuitHouse = new Nation("Inuit Hunters");
+        Nation Inuit = new Nation("Inuit Hunters");
         IHouse house = new Inuit_Hunters_House();
-        Assertions.assertEquals(house.getClass(), InuitHouse.house.getClass());
+        Assertions.assertEquals(house.getClass(), Inuit.house.getClass());
     }
 }
