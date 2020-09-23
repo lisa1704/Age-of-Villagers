@@ -55,6 +55,7 @@
     <Compile Include="BangladeshiItemFactory.cs" />
     <Compile Include="BangladeshiTree.cs" />
     <Compile Include="BangladeshiWaterSource.cs" />
+    <Compile Include="EgyptianItemFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
