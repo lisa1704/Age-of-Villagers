@@ -34,6 +34,7 @@ namespace Age_of_Villagers
             NationController nationController = new NationController(NationNameCombo.Text);
             primary.VillageNameText.Text = VillageNameText.Text;
             primary.NationNameCombo.Text = NationNameCombo.Text;
+            VillageDrawing.BackColor = nationController.GetNation(new Point()).GetTerrainColor();
             this.Hide();
 
         }

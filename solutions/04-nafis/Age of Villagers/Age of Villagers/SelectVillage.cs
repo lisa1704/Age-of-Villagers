@@ -38,7 +38,7 @@ namespace Age_of_Villagers
 
             villageWindow.NationNameCombo.Text = NationNameCombo.Text;
             villageWindow.VillageNameText.Text = villageCondition.name;
-
+            panel.BackColor = nationController.GetNation(new Point()).GetTerrainColor();
             panel.Refresh();
             villageConditionEdit.ResetState(villageCondition, NationNameCombo.Text);
             this.Hide();
