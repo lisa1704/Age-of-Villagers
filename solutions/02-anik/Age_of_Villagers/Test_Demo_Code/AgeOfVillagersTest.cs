@@ -3,7 +3,7 @@ using Xunit;
 
 namespace AgeOfVillagers
 {
-    public class AgeOfVillagersTest
+    public class AgeOfVillagers
     {
         [Fact]
         public void Test1()
