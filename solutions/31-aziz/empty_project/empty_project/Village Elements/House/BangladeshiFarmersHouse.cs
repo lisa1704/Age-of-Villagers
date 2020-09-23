@@ -15,7 +15,11 @@ namespace empty_project
 
             graphics.DrawLine(pen, new PointF(axis.X + 8, axis.Y - 8), new PointF(axis.X, axis.Y));
             graphics.DrawLine(pen, new PointF(axis.X + 8, axis.Y - 8), new PointF(axis.X + 16, axis.Y));
-            graphics.DrawRectangle(pen, axis.X, axis.Y, 16, 8);
+
+            graphics.DrawLine(pen, new PointF(axis.X, axis.Y), new PointF(axis.X + 16, axis.Y));
+            graphics.DrawLine(pen, new PointF(axis.X + 16, axis.Y), new PointF(axis.X + 16, axis.Y + 8));
+            graphics.DrawLine(pen, new PointF(axis.X + 16, axis.Y + 8), new PointF(axis.X, axis.Y + 8));
+            graphics.DrawLine(pen, new PointF(axis.X, axis.Y + 8), new PointF(axis.X, axis.Y));
         }
     }
 }
