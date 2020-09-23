@@ -56,10 +56,15 @@ namespace empty_project
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            village = saveOpenVillage.openVillageState();
-            Refresh();
-            village.draw(nation);
-            MessageBox.Show("Village Opened");
+            if (NationBox.SelectedIndex != -1)
+            {
+                village = saveOpenVillage.openVillageState();
+                Refresh();
+                village.draw(nation);
+                MessageBox.Show("Village Opened");
+            }
+            else
+                MessageBox.Show("Please select your Nation first");
         }
 
         private void House_Click(object sender, EventArgs e)
