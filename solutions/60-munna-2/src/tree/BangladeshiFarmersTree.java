@@ -5,7 +5,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import main.MainCanvas;
-import nations.BangladeshiFarmer;
 import shapes.Circle_Shape;
 import shapes.Point;
 import shapes.Rectangle_Shape;

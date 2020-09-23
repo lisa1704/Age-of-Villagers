@@ -9,4 +9,5 @@ class SampleTest {
     public void sample_Test(){
         assertEquals(2, 2);
     }
+
 }

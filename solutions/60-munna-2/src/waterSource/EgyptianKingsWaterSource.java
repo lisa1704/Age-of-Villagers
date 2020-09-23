@@ -14,7 +14,7 @@ public class EgyptianKingsWaterSource implements IWaterSource {
     private Canvas canvas;
     private Point point;
 
-    public EgyptianKingsWaterSource(Canvas canvas) {
+    public EgyptianKingsWaterSource() {
         MainCanvas mainCanvas = MainCanvas.getInstance();
         this.canvas = mainCanvas.getCanvas();
     }

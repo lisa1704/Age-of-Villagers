@@ -13,7 +13,7 @@ public class EgyptianKingsHouse implements IHouse{
     private Canvas canvas;
     private boolean flag;
 
-    public EgyptianKingsHouse(Canvas canvas) {
+    public EgyptianKingsHouse() {
         MainCanvas mainCanvas = MainCanvas.getInstance();
         this.canvas = mainCanvas.getCanvas();
     }

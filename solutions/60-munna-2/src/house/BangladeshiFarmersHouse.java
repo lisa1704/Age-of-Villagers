@@ -5,12 +5,11 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import main.MainCanvas;
-import nations.BangladeshiFarmer;
 import shapes.Point;
 import shapes.Rectangle_Shape;
 import shapes.Triangle_Shape;
 
-public class BangladeshiFarmersHouse extends BangladeshiFarmer implements IHouse {
+public class BangladeshiFarmersHouse implements IHouse {
 
     private Point top_center;
     private Point top_left;
