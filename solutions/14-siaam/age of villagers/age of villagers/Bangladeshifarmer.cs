@@ -18,5 +18,11 @@ namespace age_of_villagers
             house.drawComponent(g, point);
 
         }
+
+        public void drawTree(Graphics g, Point point)
+        {
+            BDtree tree = new BDtree();
+            tree.drawComponent(g, point);
+        }
     }
 }

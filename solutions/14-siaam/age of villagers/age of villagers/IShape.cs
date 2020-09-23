@@ -12,15 +12,7 @@ namespace age_of_villagers
         void draw(Graphics g, Pen p);
     }
 
-    class Circle : IShape
-    {
-        
-        public void draw(Graphics g, Pen p)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
+    
     class Rectangle : IShape
     {
         Point p1, p2,p3,p4;

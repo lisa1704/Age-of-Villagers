@@ -14,5 +14,10 @@ namespace age_of_villagers
         {
             throw new System.NotImplementedException();
         }
+
+        public void drawTree(Graphics g, Point point)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
