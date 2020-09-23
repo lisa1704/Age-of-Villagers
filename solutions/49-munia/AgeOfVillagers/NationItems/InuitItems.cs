@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgeOfVillagers.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace AgeOfVillagers.NationItems
         public void House(Graphics g, Point p)
         {
             // draw igloo
-            throw new NotImplementedException();
+            Circle c = new Circle(g,p,16);
         }
 
         public void Tree(Graphics g, Point p)
