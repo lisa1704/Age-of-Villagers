@@ -23,7 +23,7 @@ namespace AgeOfVillagers
         private List<Point> PointsOfHouse { get; set; } = new List<Point>();
         private List<Point> PointsOfTree { get; set; } = new List<Point>();
         private List<Point> PointsOfWatersource { get; set; } = new List<Point>();
-
+        
 
 
         public VillageEditorWindow()
@@ -126,7 +126,12 @@ namespace AgeOfVillagers
         }
         public void newvillage_Click(object sender, EventArgs e)
         {
-            //drawingpanel.Invalidate();
+            villagename.Clear();
+            PointsOfTree.Clear();
+            PointsOfHouse.Clear();
+            PointsOfWatersource.Clear();
+            drawingpanel.Refresh();
+
 
         }
 
