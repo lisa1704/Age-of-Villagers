@@ -23,6 +23,10 @@ import terrain.ITerrain;
 import tree.ITree;
 import water.IWater;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Controller {
     Canvas canvas;
@@ -146,7 +150,7 @@ public class Controller {
     }
 
     @FXML
-    void saveVillageBTN(ActionEvent event) {
+    void saveVillageBTN(ActionEvent event) throws IOException {
 
 
         State state = State.getInstance();
@@ -163,6 +167,11 @@ public class Controller {
 
         System.out.println(gf);
 
+        File output = new File("output.aov");
+        FileWriter writer = new FileWriter(output);
+        writer.write(json);
+        writer.flush();
+        writer.close();
 
 //
 //
