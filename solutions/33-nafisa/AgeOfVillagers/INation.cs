@@ -8,9 +8,9 @@ namespace AgeOfVillagers
 {
     public interface INation
     {
-        public void DrawHouse(Point point, Panel Drawingpanel);
-        public void DrawTree(Point point, Panel Drawingpanel);
-        public void DrawWaterSource(Point point, Panel Drawingpanel);
+        public object DrawHouse(Point point, Panel Drawingpanel);
+        public object DrawTree(Point point, Panel Drawingpanel);
+        public object DrawWaterSource(Point point, Panel Drawingpanel);
         public Color PaintTerrain();
 
     }

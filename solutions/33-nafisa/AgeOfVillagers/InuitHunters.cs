@@ -8,26 +8,29 @@ namespace AgeOfVillagers
 {
     public class InuitHunters : INation
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
         public Color terraincolor;
        
-        public void DrawHouse(Point point, Panel Drawingpanel)
+        public object DrawHouse(Point point, Panel Drawingpanel)
         {
             InuitHouse ihouse = new InuitHouse(point);
             ihouse.Draw(point, Drawingpanel);
+            return ihouse;
         }
 
-        public void DrawTree(Point point, Panel Drawingpanel)
+        public object DrawTree(Point point, Panel Drawingpanel)
         {
             NullItem nullTree = new NullItem();
             nullTree.Draw(point, Drawingpanel);
+            return nullTree;
         }
 
 
-        public void DrawWaterSource(Point point, Panel Drawingpanel)
+        public object DrawWaterSource(Point point, Panel Drawingpanel)
         {
             NullItem nullWsource = new NullItem();
             nullWsource.Draw(point, Drawingpanel);
+            return nullWsource;
         }
 
         public Color PaintTerrain()

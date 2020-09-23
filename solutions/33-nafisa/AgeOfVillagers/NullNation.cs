@@ -9,22 +9,25 @@ namespace AgeOfVillagers
     class NullNation : INation
     {   
         public Color terraincolor;
-        public void DrawHouse(Point point, Panel Drawingpanel)
+        public object DrawHouse(Point point, Panel Drawingpanel)
         {
             NullItem nullH = new NullItem();
             nullH.Draw(point, Drawingpanel);
+            return nullH;
         }
 
-        public void DrawTree(Point point, Panel Drawingpanel)
+        public object DrawTree(Point point, Panel Drawingpanel)
         {
             NullItem nullT = new NullItem();
             nullT.Draw(point, Drawingpanel);
+            return nullT;
         }
 
-        public void DrawWaterSource(Point point, Panel Drawingpanel)
+        public object DrawWaterSource(Point point, Panel Drawingpanel)
         {
             NullItem nullW = new NullItem();
             nullW.Draw(point, Drawingpanel);
+            return nullW;
         }
 
         public Color PaintTerrain()

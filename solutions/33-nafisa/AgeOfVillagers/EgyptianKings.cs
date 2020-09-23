@@ -8,25 +8,28 @@ namespace AgeOfVillagers
 {
     public class EgyptianKings : INation
     {
-        private Panel Drawingpanel;
+        //private Panel Drawingpanel;
         private Color terraincolor;
       
-        public void DrawHouse(Point point, Panel Drawingpanel)
+        public object DrawHouse(Point point, Panel Drawingpanel)
         {
             EgyptianHouse ehouse = new EgyptianHouse(point);
             ehouse.Draw(point, Drawingpanel);
+            return ehouse;
         }
 
-        public void DrawTree(Point point, Panel Drawingpanel)
+        public object DrawTree(Point point, Panel Drawingpanel)
         {
             EgyptianTree etree = new EgyptianTree(point);
             etree.Draw(point, Drawingpanel);
+            return etree;
         }
 
-        public void DrawWaterSource(Point point, Panel Drawingpanel)
+        public object DrawWaterSource(Point point, Panel Drawingpanel)
         {
             EgyptianWatersource ewatersource = new EgyptianWatersource(point);
             ewatersource.Draw(point, Drawingpanel);
+            return ewatersource;
         }
 
         public Color PaintTerrain()
