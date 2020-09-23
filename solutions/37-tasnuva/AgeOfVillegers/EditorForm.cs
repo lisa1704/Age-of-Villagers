@@ -14,6 +14,7 @@ namespace AgeOfVillegers
     public partial class EditorForm : Form
     {
         string type ;
+        string rdbutton ;
         string VillageName;
         string name;
         string nation;
@@ -25,7 +26,7 @@ namespace AgeOfVillegers
         
         public void get_state()
         {
-            this.village = new village(villagename.Text, H_points, T_points, W_points);
+           this.village = new village(villagename.Text, H_points, T_points, W_points);
         }
         public EditorForm()
         {
@@ -130,6 +131,11 @@ namespace AgeOfVillegers
 
         private void new_btn_Click(object sender, EventArgs e)
         {
+            VillageNameBox.Clear();
+            H_points.Clear();
+            T_points.Clear();
+            W_points.Clear();
+            drawpanel.Refresh();
             
         }
 
