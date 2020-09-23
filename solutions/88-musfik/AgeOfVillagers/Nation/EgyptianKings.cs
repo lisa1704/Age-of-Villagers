@@ -10,16 +10,13 @@ namespace AgeOfVillagers
         private String nation_name = "Egyptian Kings";
 
         public string nationName { get => nation_name; set => nation_name = value; }
+        
+        public Color getTerrainColor() => color;
 
         public IShape getItemShape(Point point, String itemType)
         {
             EgyptianItemFactory factory = new EgyptianItemFactory(itemType);
-            return factory.ItemProducer(point).getItemShape(point);
-        }
-
-        public Color getTerrainColor()
-        {
-            return color;
+            return factory.ItemProducer().getItemShape(point);
         }
     }
 }

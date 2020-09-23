@@ -11,15 +11,12 @@ namespace AgeOfVillagers
 
         public string nationName { get => nation_name; set => nation_name = value; }
 
+        public Color getTerrainColor() => color;
+
         public IShape getItemShape(Point point , String itemType)
         {
             ArabItemFactory factory = new ArabItemFactory(itemType);
-            return factory.ItemProducer(point).getItemShape(point);
-        }
-
-        public Color getTerrainColor()
-        {
-            return color;
+            return factory.ItemProducer().getItemShape(point);
         }
     }
 }

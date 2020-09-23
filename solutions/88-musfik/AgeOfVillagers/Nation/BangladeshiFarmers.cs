@@ -10,15 +10,13 @@ namespace AgeOfVillagers
         private String nation_name = "Bangladeshi Farmers";
 
         public string nationName { get => nation_name; set => nation_name = value; }
+        
+        public Color getTerrainColor() => color;
 
         public IShape getItemShape(Point point, String itemType)
         {
             BangladeshiItemFactory factory = new BangladeshiItemFactory(itemType);
-            return factory.ItemProducer(point).getItemShape(point);
-        }
-        public Color getTerrainColor()
-        {
-            return color;
+            return factory.ItemProducer().getItemShape(point);
         }
     }
 }

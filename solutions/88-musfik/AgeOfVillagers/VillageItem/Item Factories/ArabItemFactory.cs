@@ -15,18 +15,18 @@ namespace AgeOfVillagers.VillageItem
             type = nationItem;
         }
 
-        internal IVillageItem ItemProducer(Point point)
+        internal IVillageItem ItemProducer()
         {
             if (type == "House")
-                return new ArabHouse(point);
+                return new ArabHouse();
 
             else if (type == "Tree")
-                return new ArabTree(point);
+                return new ArabTree();
 
             else if (type == "Water")
-                return new NoWaterResource(point);
+                return new NoWaterResource();
 
-            return new NoTree(point);
+            return new NoTree();
         }
     }
 }

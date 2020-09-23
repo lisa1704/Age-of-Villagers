@@ -15,18 +15,18 @@ namespace AgeOfVillagers.VillageItem
             type = ItemType;
         }
 
-        internal IVillageItem ItemProducer(Point point)
+        internal IVillageItem ItemProducer()
         {
             if (type == "House")
-                return new BangladeshiHouse(point);
+                return new BangladeshiHouse();
 
             else if (type == "Tree")
-                return new BangladeshiTree(point);
+                return new BangladeshiTree();
 
             else if (type == "Water")
-                return new BangladeshiWaterResource(point);
+                return new BangladeshiWaterResource();
 
-            return new NoTree(point);
+            return new NoTree();
         }
     }
 }

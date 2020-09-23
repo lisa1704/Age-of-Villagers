@@ -15,18 +15,18 @@ namespace AgeOfVillagers.VillageItem
             type = ItemType;
         }
 
-        internal IVillageItem ItemProducer(Point point)
+        internal IVillageItem ItemProducer()
         {
             if (type == "House")
-                return new EgyptianHouse(point);
+                return new EgyptianHouse();
 
             else if (type == "Tree")
-                return new EgyptianTree(point);
+                return new EgyptianTree();
 
             else if (type == "Water")
-                return new EgyptianWaterResource(point);
+                return new EgyptianWaterResource();
 
-            return new NoTree(point);
+            return new NoTree();
         }
     }
 }
