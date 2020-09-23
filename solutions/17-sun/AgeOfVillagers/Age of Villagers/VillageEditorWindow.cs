@@ -24,7 +24,7 @@ namespace Age_of_Villagers
         INation Nation;
 
         //
-        BangladeshiFarmers farmer = new BangladeshiFarmers();
+         
         
         //
 
@@ -66,7 +66,7 @@ namespace Age_of_Villagers
             if (HouseSwitch)
             {
                 
-                farmer.Draw_House(local, gfx, p);
+                Nation.Draw_House(local, gfx, p);
 
 
 
@@ -75,27 +75,19 @@ namespace Age_of_Villagers
             if (TreeSwitch)
             {
 
-                farmer.Draw_Tree(local, gfx, p);
+                Nation.Draw_Tree(local, gfx, p);
                 
 
             }
             if (WaterSourceSwitch)
             {
-                farmer.Draw_WaterSource(local, gfx, p);
+                Nation.Draw_WaterSource(local, gfx, p);
 
             }
         }
 
 
-        private void VillageTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NationTitle_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void WaterSourceButton_Click(object sender, EventArgs e)
         {
@@ -124,7 +116,7 @@ namespace Age_of_Villagers
         {
             
             VillageEditorPanel.Invalidate();
-            VillageEditorPanel.BackColor = Color.Green; //BD
+            // nation based backgroud
             
         }
 
@@ -139,9 +131,29 @@ namespace Age_of_Villagers
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void NationListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (NationListBox.SelectedItem == "Bangladeshi Farmers")
+            {
+                Nation = new BangladeshiFarmers();
+                VillageEditorPanel.BackColor = Color.Green; //BD
 
+            }
+            else if(NationListBox.SelectedItem == "Arab Bedouins")
+            {
+               Nation = new ArabBedouins();
+                VillageEditorPanel.BackColor = Color.LightGoldenrodYellow; //Arabia
+            }
+            else if(NationListBox.SelectedItem == "Egyptian Kings")
+            {
+                Nation = new EgyptianKings();
+                VillageEditorPanel.BackColor = Color.Yellow; //Egypt
+            }
+            else if(NationListBox.SelectedItem == "Inuit Hunters")
+            {
+                Nation = new InuitHunters();
+                VillageEditorPanel.BackColor = Color.White; //Iceland
+            }
         }
     }
 }

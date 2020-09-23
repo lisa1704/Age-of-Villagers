@@ -75,7 +75,7 @@ namespace Age_of_Villagers
             this.VillageTitle.Size = new System.Drawing.Size(70, 23);
             this.VillageTitle.TabIndex = 3;
             this.VillageTitle.Text = "Village:";
-            this.VillageTitle.Click += new System.EventHandler(this.VillageTitle_Click);
+            ;
             // 
             // NationTitle
             // 
@@ -86,7 +86,7 @@ namespace Age_of_Villagers
             this.NationTitle.Size = new System.Drawing.Size(69, 23);
             this.NationTitle.TabIndex = 4;
             this.NationTitle.Text = "Nation:";
-            this.NationTitle.Click += new System.EventHandler(this.NationTitle_Click);
+            
             // 
             // TreeButton
             // 
@@ -162,6 +162,7 @@ namespace Age_of_Villagers
             this.NationListBox.Name = "NationListBox";
             this.NationListBox.Size = new System.Drawing.Size(162, 27);
             this.NationListBox.TabIndex = 11;
+            this.NationListBox.SelectedIndexChanged += new System.EventHandler(this.NationListBox_SelectedIndexChanged);
             // 
             // VillageNameBox
             // 
@@ -172,13 +173,13 @@ namespace Age_of_Villagers
             this.VillageNameBox.Name = "VillageNameBox";
             this.VillageNameBox.Size = new System.Drawing.Size(162, 35);
             this.VillageNameBox.TabIndex = 12;
-            this.VillageNameBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.VillageNameBox.SelectedIndexChanged += new System.EventHandler(this.VillageNameBox_SelectedIndexChanged);
             // 
             // VillageEditorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 412);
+            this.ClientSize = new System.Drawing.Size(880, 412);
             this.Controls.Add(this.VillageNameBox);
             this.Controls.Add(this.NationListBox);
             this.Controls.Add(this.SaveVillageButton);
@@ -200,7 +201,12 @@ namespace Age_of_Villagers
 
         }
 
-       
+        private void VillageNameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
 
         #endregion
