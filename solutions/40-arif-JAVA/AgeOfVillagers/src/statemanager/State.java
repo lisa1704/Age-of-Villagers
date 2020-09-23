@@ -1,8 +1,9 @@
 package statemanager;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class State {
+public class State implements Serializable {
     ArrayList<LineState> lines = new ArrayList<>();
     ArrayList<CircleState> circles = new ArrayList<>();
 
@@ -21,4 +22,8 @@ public class State {
     public void addCircle(CircleState circleState){
         circles.add(circleState);
     }
+//    @Override
+//    public String toString(){
+//
+//    }
 }

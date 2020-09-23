@@ -7,37 +7,21 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.ArcType;
-import javafx.stage.FileChooser;
-import nation.BDFarmers;
 import nation.NationManager;
 import statemanager.CareTaker;
 import statemanager.Originator;
 import statemanager.State;
-import terrain.BDFarmerTerrain;
+import statemanager.GameFile;
 import terrain.ITerrain;
 import tree.ITree;
 import water.IWater;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Base64;
-import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class Controller {
@@ -76,6 +60,8 @@ public class Controller {
     @FXML
     private AnchorPane terrain;
 
+    String seletedV;
+
 
 
     @FXML
@@ -97,6 +83,8 @@ public class Controller {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                 selectedVillage[0] = nation[Integer.parseInt(observableValue.getValue().toString())];
+
+                seletedV = selectedVillage[0];
 
                 System.out.println(selectedVillage[0]);
                 treeRB.setVisible(true);
@@ -164,20 +152,18 @@ public class Controller {
         State state = State.getInstance();
         System.out.println(state);
 
-//        try {
-//
-//            FileOutputStream fileOut = new FileOutputStream("nycanvas");
-//            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-//            objectOut.writeObject(canvas);
-//            objectOut.close();
-//            System.out.println("The Object  was succesfully written to a file");
-//
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//        }
-//        Gson gson = new Gson();
-//        Object src;
-//        String json = gson.toJson(canvas);
+        GameFile gameFile= new GameFile(villageName.getText(), seletedV, state);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(gameFile);
+
+        System.out.println(json);
+
+        GameFile gf = gson.fromJson(json,GameFile.class);
+
+        System.out.println(gf);
+
+
 //
 //
 //        System.out.println(json);
