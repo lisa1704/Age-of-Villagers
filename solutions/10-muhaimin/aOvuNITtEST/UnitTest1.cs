@@ -1,4 +1,7 @@
+using Age_of_Villagers;
 using System;
+using System.Drawing;
+using System.Windows.Forms;
 using Xunit;
 
 namespace aOvuNITtEST
@@ -6,10 +9,14 @@ namespace aOvuNITtEST
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Village_name_test()
         {
-            Assert.Equal(2 , 2);
-            
+            Village newVillage = new Village();
+            newVillage.villageName = "XYZ";
+            var expected = newVillage.getName();
+            Assert.Equal(expected, "XYZ");
+
+
         }
     }
 }
