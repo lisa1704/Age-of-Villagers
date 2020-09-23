@@ -60,10 +60,11 @@ namespace AgeOfVillagersTest
             Assert.Equal(expected, actual);
         }
 
-        // Bangladeshi Farmers test
         NationFactory nationfactory = new NationFactory();
         Graphics gr;
         Point pTest = new Point(100, 50);
+
+        // Bangladeshi Farmers test
 
         [Fact]
         public void BangladeshiTest()
@@ -92,6 +93,37 @@ namespace AgeOfVillagersTest
         {
             IShapes expected = nationfactory.GetNation("Bangladeshi Farmers").DrawWaterSource(gr, pTest);
             Assert.IsType<BangladeshiWaterSource>(expected);
+        }
+
+        //Arab Bedouin Test
+
+        [Fact]
+        public void ArabTest()
+        {
+            INation expected = nationfactory.GetNation("Arab Bedouin");
+            Assert.IsType<Bangladeshi>(expected);
+
+        }
+
+        [Fact]
+        public void ArabHouseTest()
+        {
+            IShapes expected = nationfactory.GetNation("Arab Bedouin").DrawHouse(gr, pTest);
+            Assert.IsType<ArabHouse>(expected);
+        }
+
+        [Fact]
+        public void ArabTreeTest()
+        {
+            IShapes expected = nationfactory.GetNation("Arab Bedouin").DrawTree(gr, pTest);
+            Assert.IsType<ArabTree>(expected);
+        }
+
+        [Fact]
+        public void ArabWaterSourceTest()
+        {
+            IShapes expected = nationfactory.GetNation("Arab Bedouin").DrawWaterSource(gr, pTest);
+            Assert.IsType<NullItemSelction>(expected);
         }
 
 

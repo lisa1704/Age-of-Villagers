@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class NullItemSelction : CompositeShapes
+    public class NullItemSelction : CompositeShapes
     {
         public void DrawShapes()
         {
