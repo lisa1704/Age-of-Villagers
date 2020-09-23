@@ -24,7 +24,7 @@ namespace empty_project
             village = new Village();
             saveOpenVillage = new VillageSaveOpen(village);
             chooseNation = new SelectNation(DrawingPanel);
-            NationBox.SelectedIndex = 1;
+            NationBox.SelectedIndex = -1;
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs paint)

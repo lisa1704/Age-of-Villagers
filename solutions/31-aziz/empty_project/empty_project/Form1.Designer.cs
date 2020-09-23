@@ -37,6 +37,7 @@
             this.DrawingPanel = new System.Windows.Forms.Panel();
             this.NationBox = new System.Windows.Forms.ComboBox();
             this.GameTitle = new System.Windows.Forms.TextBox();
+            this.SelectYourNation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -124,18 +125,32 @@
             // 
             // GameTitle
             // 
-            this.GameTitle.Location = new System.Drawing.Point(616, 54);
+            this.GameTitle.BackColor = System.Drawing.SystemColors.Menu;
+            this.GameTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GameTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameTitle.Location = new System.Drawing.Point(616, 24);
             this.GameTitle.Name = "GameTitle";
-            this.GameTitle.Size = new System.Drawing.Size(172, 23);
+            this.GameTitle.Size = new System.Drawing.Size(172, 26);
             this.GameTitle.TabIndex = 8;
             this.GameTitle.Text = "AGE OF VILLEGERS";
             this.GameTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SelectYourNation
+            // 
+            this.SelectYourNation.BackColor = System.Drawing.SystemColors.Menu;
+            this.SelectYourNation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SelectYourNation.Location = new System.Drawing.Point(650, 85);
+            this.SelectYourNation.Name = "SelectYourNation";
+            this.SelectYourNation.Size = new System.Drawing.Size(100, 16);
+            this.SelectYourNation.TabIndex = 9;
+            this.SelectYourNation.Text = "Select your Nation";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SelectYourNation);
             this.Controls.Add(this.GameTitle);
             this.Controls.Add(this.NationBox);
             this.Controls.Add(this.DrawingPanel);
@@ -164,6 +179,7 @@
         private System.Windows.Forms.Panel DrawingPanel;
         private System.Windows.Forms.ComboBox NationBox;
         private System.Windows.Forms.TextBox GameTitle;
+        private System.Windows.Forms.TextBox SelectYourNation;
     }
 }
 
