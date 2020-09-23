@@ -36,4 +36,12 @@ public class HouseFactoryTest {
         IHouse house = new Inuit_Hunters_House();
         Assertions.assertEquals(house.getClass(), Inuit.house.getClass());
     }
+
+    @Test
+    protected void Null_House_Factory_Test()
+    {
+        Nation any = new Nation("A random nation");
+        IHouse house = new Null_House();
+        Assertions.assertEquals(house.getClass(), any.house.getClass());
+    }
 }

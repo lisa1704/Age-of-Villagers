@@ -22,4 +22,20 @@ public class WaterBodyFactory {
         Assertions.assertEquals(water_body.getClass(), Egyptian.water_body.getClass());
     }
 
+    @Test
+    protected void Arabian_WaterBody_Factory_Test()
+    {
+        Nation Arab = new Nation("Arab Bedouins");
+        IWaterBody water_body = new Null_Water_Body();
+        Assertions.assertEquals(water_body.getClass(), Arab.water_body.getClass());
+    }
+
+    @Test
+    protected void Inuit_WaterBody_Factory_Test()
+    {
+        Nation Inuit = new Nation("Inuit Hunters");
+        IWaterBody water_body = new Null_Water_Body();
+        Assertions.assertEquals(water_body.getClass(), Inuit.water_body.getClass());
+    }
+
 }

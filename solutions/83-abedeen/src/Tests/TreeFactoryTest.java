@@ -30,4 +30,12 @@ public class TreeFactoryTest {
         Assertions.assertEquals(tree.getClass(), Egyptian.tree.getClass());
     }
 
+    @Test
+    protected void Inuit_Tree_Factory_Test()
+    {
+        Nation Inuit = new Nation("Inuit Hunters");
+        ITree tree = new Null_Tree();
+        Assertions.assertEquals(tree.getClass(), Inuit.tree.getClass());
+    }
+
 }
