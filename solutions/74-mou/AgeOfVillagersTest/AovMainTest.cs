@@ -101,7 +101,7 @@ namespace AgeOfVillagersTest
         public void ArabTest()
         {
             INation expected = nationfactory.GetNation("Arab Bedouin");
-            Assert.IsType<Bangladeshi>(expected);
+            Assert.IsType<Arab>(expected);
 
         }
 
@@ -125,6 +125,9 @@ namespace AgeOfVillagersTest
             IShapes expected = nationfactory.GetNation("Arab Bedouin").DrawWaterSource(gr, pTest);
             Assert.IsType<NullItemSelction>(expected);
         }
+
+        //Egyptian Kings Test
+
 
 
     }
