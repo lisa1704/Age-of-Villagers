@@ -1,7 +1,6 @@
 ﻿
 using Age_of_Villagers;
 using System;
-using Age_of_Villagers;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
