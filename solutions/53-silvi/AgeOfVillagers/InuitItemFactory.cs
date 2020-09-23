@@ -10,7 +10,11 @@ namespace AgeOfVillagers
     {
         public override IVillageItem getItem(string button)
         {
-            
+            if (button == "House")
+            {
+                return new InuitHunterHouse();
+            }
+            return null;
         }
     }
 }
