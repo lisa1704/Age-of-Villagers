@@ -8,21 +8,21 @@ namespace AgeOfVillagers
 {
     public class Factory_Nation
     {
-        public INation CreateNation(string ntype)
+        public INation GetNation(string NationType)
         {
-            if (ntype == "Bangladesh")
+            if (NationType == "Bangladesh Farmers")
             {
                 return new BangladeshFarmers();
             }
-            else if (ntype == "Arab")
+            else if (NationType == "Arab Bedouin")
             {
                 return new Arab_Bedouin();
             }
-            else if (ntype == "Egypt")
+            else if (NationType == "Egytian Kings")
             {
                 return new Egyptian_Kings();
             }
-            else if (ntype == "Inuit")
+            else if (NationType == "Inuit HUnters")
             {
                 return new Inuit_Hunters();
             }
