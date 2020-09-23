@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Age_of_Villagers
 {
-    class VillageConditionOpen : IVillage
+    public class VillageConditionOpen : IVillage
     {
         private VillageCondition villageCondition;
         public void PerformOperation()

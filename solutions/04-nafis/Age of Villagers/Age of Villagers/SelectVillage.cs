@@ -19,6 +19,7 @@ namespace Age_of_Villagers
 
         public SelectVillage(VillageWindow villageWindow, Graphics graphics, Pen pen, Panel panel, VillageCondition villageCondition)
         {
+            InitializeComponent();
             this.villageWindow = villageWindow;
             this.graphics = graphics;
             this.pen = pen;

@@ -110,7 +110,7 @@ namespace Age_of_Villagers
             villageCondition = new VillageCondition(VillageNameText.Text, HousePoints, TreePoints, WaterResourcePoints);
         }
 
-        private void VillageDrawing_MouseDown(object sender, EventArgs e)
+        private void VillageDrawing_MouseDown(object sender, MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
