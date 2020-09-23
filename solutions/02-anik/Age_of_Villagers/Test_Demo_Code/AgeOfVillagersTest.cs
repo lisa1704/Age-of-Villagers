@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Test_Demo_Code
+namespace AgeOfVillagers
 {
     public class AgeOfVillagersTest
     {
