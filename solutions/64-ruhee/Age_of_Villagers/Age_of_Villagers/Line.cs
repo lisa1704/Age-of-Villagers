@@ -7,18 +7,18 @@ namespace Age_of_Villagers.Age_of_Villagers
 {
     class Line : IShape
     {
-        private Point point_1;
-        private Point point_2;
+        private readonly Point pt1;
+        private readonly Point pt2;
 
-        public Line(Point point1, Point point2)
+        public Line(Point pt1, Point pt2)
         {
-            this.point_1 = point1;
-            this.point_2 = point2;
+            this.pt1 = pt1;
+            this.pt2 = pt2;
         }
 
         public void Draw(Graphics g,Pen pen)
         {
-            g.DrawLine(pen, point_1, point_2);
+            g.DrawLine(pen, pt1,pt2);
         }
 
     }

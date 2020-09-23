@@ -45,5 +45,10 @@ namespace Age_of_Villagers.BangladeshiFarmers
         {
             return new BangladeshiTrees(p);
         }
+
+        public IShape testwater(Point p)
+        {
+            return new BangladeshiWaterS(p);
+        }
     }
 }

@@ -58,10 +58,20 @@ namespace AOV_Test
         public void BangladeshiTree()
         {
             IShape bdtree = new BangladeshiFarmers().testtree(p);
-            IShape tree = new BangladeshiFarmers().DrawHouse(g, p);
+            IShape tree = new BangladeshiFarmers().DrawTree(g, p);
             bdtree.Equals(tree);
 
         }
+
+        [Fact]
+        public void BangladeshiWater()
+        {
+            IShape bdwater = new BangladeshiFarmers().testwater(p);
+            IShape water = new BangladeshiFarmers().DrawWaterSource(g, p);
+            bdwater.Equals(water);
+
+        }
+
 
     }
 }

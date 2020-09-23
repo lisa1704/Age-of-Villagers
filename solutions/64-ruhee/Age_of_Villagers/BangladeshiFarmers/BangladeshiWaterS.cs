@@ -6,18 +6,18 @@ using System.Text;
 
 namespace Age_of_Villagers.BangladeshiFarmers
 {
-    class BangladeshiWaterS:CShape
+    public class BangladeshiWaterS:CShape
     {
         public BangladeshiWaterS(Point pt)
         {
-            Point pt1 = new Point(pt.X - 30, pt.Y + 55);
-            Point pt2 = new Point(pt.X, pt.Y + 80);
-            Point pt3 = new Point(pt.X + 30, pt.Y + 55);
-            Point pt4 = new Point(pt.X + 55, pt.Y + 80);
-            Point pt5 = new Point(pt.X + 80, pt.Y + 30);
-            Point pt6 = new Point(pt.X + 55, pt.Y);
-            Point pt7 = new Point(pt.X + 30, pt.Y + 30);
-            Point pt8 = new Point(pt.X + 30, pt.Y);
+            Point pt1 = new Point(pt.X - 3, pt.Y + 2);
+            Point pt2 = new Point(pt.X - 8, pt.Y + 10);
+            Point pt3 = new Point(pt.X - 2, pt.Y + 16);
+            Point pt4 = new Point(pt.X, pt.Y + 12);
+            Point pt5 = new Point(pt.X + 5, pt.Y + 16);
+            Point pt6 = new Point(pt.X + 16, pt.Y + 8);
+            Point pt7 = new Point(pt.X + 7, pt.Y);
+            Point pt8 = new Point(pt.X + 3, pt.Y + 4);
 
             AddComponent(new Line(pt, pt1));
             AddComponent(new Line(pt1, pt2));
@@ -28,6 +28,8 @@ namespace Age_of_Villagers.BangladeshiFarmers
             AddComponent(new Line(pt6, pt7));
             AddComponent(new Line(pt7, pt8));
             AddComponent(new Line(pt8, pt));
+
+
         }
     }
 }

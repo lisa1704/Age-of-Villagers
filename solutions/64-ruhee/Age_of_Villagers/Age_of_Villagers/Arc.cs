@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Age_of_Villagers.Age_of_Villagers
 {
-    public class Arc : IShape
+    class Arc : IShape
     {
         public int x, y;
         private float width, height, StartAngle, SweepAngle;
@@ -38,6 +38,11 @@ namespace Age_of_Villagers.Age_of_Villagers
             this.TopLeft = TopLeft;
             this.BottomRight = BottomRight;
             AddComponent(new Arc(TopLeft.X, TopLeft.Y, BottomRight.X - TopLeft.X, BottomRight.Y - TopLeft.Y, 0, 360));
+        }
+
+        public void Draw(Graphics g,Pen pen)
+        {
+            g.DrawEllipse(pen, TopLeft.X, TopLeft.Y, BottomRight.X - TopLeft.X, BottomRight.Y - TopLeft.Y);
         }
     }
 }
