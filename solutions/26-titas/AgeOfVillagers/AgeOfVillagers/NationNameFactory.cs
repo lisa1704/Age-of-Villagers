@@ -14,6 +14,22 @@ namespace AgeOfVillagers
         }
         public INation NationNameFactoryMethod()
         {
+            if (form.comboBoxNationName.Text == "Bangladeshi Farmers")
+            {
+                obj = new BdFarmers();
+            }
+            else if (form.comboBoxNationName.Text == "Arab Bedouin")
+            {
+                obj = new ArabBedouin();
+            }
+            else if (form.comboBoxNationName.Text == "Egyptian Kings")
+            {
+                obj = new EgyptianKings();
+            }
+            else if (form.comboBoxNationName.Text == "Inuit Hunters")
+            {
+                obj = new InuitHunters();
+            }
             return obj;
         }
 
