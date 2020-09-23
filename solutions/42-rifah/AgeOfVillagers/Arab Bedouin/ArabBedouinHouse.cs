@@ -9,16 +9,16 @@ namespace AgeOfVillagers.Arab_Bedouin
     {
         public ArabBedouinHouse(Point point)
         {
-            Point point1 = new Point(point.X - 30, point.Y + 50);
-            Point point2 = new Point(point.X + 30, point.Y + 50);
-            Point point3 = new Point(point.X + 38, point.Y - 18);
-            Point point4 = new Point(point2.X + 35, point2.Y - 20);
+            Point bottomLeft = new Point(point.X - 6, point.Y + 12);
+            Point bottomRight = new Point(point.X + 6, point.Y + 12);
+            Point topMost = new Point(point.X + 4, point.Y - 4);
+            Point rightMost = new Point(point.X + 10, point.Y + 8);
 
 
-            AddComponent(new Triangle(point, point1, point2));
-            AddComponent(new Line(point, point3));
-            AddComponent(new Line(point2, point4));
-            AddComponent(new Line(point3, point4));
+            AddComponent(new Triangle(point, bottomLeft, bottomRight));
+            AddComponent(new Line(point, topMost));
+            AddComponent(new Line(bottomRight, rightMost));
+            AddComponent(new Line(topMost, rightMost));
 
         }
     }
