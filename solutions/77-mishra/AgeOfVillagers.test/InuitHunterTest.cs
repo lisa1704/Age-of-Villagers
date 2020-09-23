@@ -19,6 +19,11 @@ namespace AgeOfVillagers.test
 			Assert.Equal(point, test);
 
 		}
+		public void InuitHunterTreetest()
+        {
+			Point test = nations.getNation(point).DrawTree(p);
+			Assert.Equal(new Point(), test);
+        }
 
 	}
 }
