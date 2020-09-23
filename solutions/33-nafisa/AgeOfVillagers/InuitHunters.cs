@@ -17,6 +17,10 @@ namespace AgeOfVillagers
             ihouse.Draw(point, Drawingpanel);
             return ihouse;
         }
+        public object TestHouse(Point point)
+        {
+            return new InuitHouse(point);
+        }
 
         public object DrawTree(Point point, Panel Drawingpanel)
         {

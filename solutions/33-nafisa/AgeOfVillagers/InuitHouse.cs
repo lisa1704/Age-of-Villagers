@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHouse : CompositeShape
+    public class InuitHouse : CompositeShape
     {
        // private Panel Drawingpanel;
 
