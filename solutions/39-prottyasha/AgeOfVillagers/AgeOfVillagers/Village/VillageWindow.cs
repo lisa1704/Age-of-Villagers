@@ -1,4 +1,4 @@
-﻿using AgeOfVillagers.Open;
+using AgeOfVillagers.Open;
 using AgeOfVillagers.Save;
 using System;
 using System.Collections.Generic;
@@ -67,8 +67,26 @@ namespace AgeOfVillagers
 
         private void btn_openVillage_Click(object sender, EventArgs e)
         {
+            btn_newVillage_Click(this,e);
             OpenVillage ov = new OpenVillage();
             vill = ov.getVill();
+            using (NationSelectorAfterOpenVill nsaov = new NationSelectorAfterOpenVill())
+            {
+                if (nsaov.ShowDialog() == DialogResult.OK)
+                {
+                    selected_nation = nsaov.selected_nation;
+                }
+            }
+            vill.nation = selected_nation;
+            if (selected_nation == "Arab Bedouins")
+            {
+                vill.rivers_drawn = null;
+            }
+            if (selected_nation == "Inuit Hunters")
+            {
+                vill.rivers_drawn = null;
+                vill.trees_drawn = null;
+            }
             setSavedVill(vill);
         }
 
@@ -78,6 +96,8 @@ namespace AgeOfVillagers
             g.Clear(DrawingPanel.BackColor);
             vill = new Village();
             Label_villName.Text = "Untitled";
+            selected_nation = "";
+            selected_component = "";
         }
 
 
@@ -106,23 +126,32 @@ namespace AgeOfVillagers
             nation.setBgColor(g);
 
             Label_villName.Text = vill.village_name;
-            foreach (Point p in vill.trees_drawn.ToList())
+
+            if(!(vill.trees_drawn is null))
             {
-                selected_component = "tree";
-                drawInPanel(p);
+                foreach (Point p in vill.trees_drawn.ToList())
+                {
+                    selected_component = "tree";
+                    drawInPanel(p);
+                }
             }
-            foreach (Point p in vill.houses_drawn.ToList())
+            if (!(vill.houses_drawn is null))
             {
-                selected_component = "house";
-                drawInPanel(p);
+                foreach (Point p in vill.houses_drawn.ToList())
+                {
+                    selected_component = "house";
+                    drawInPanel(p);
+                }
             }
-            foreach (Point p in vill.rivers_drawn.ToList())
+            if (!(vill.trees_drawn is null))
             {
-                selected_component = "water_source";
-                drawInPanel(p);
+                foreach (Point p in vill.rivers_drawn.ToList())
+                {
+                    selected_component = "water_source";
+                    drawInPanel(p);
+                }
             }
-            nation_selector.SelectedIndex = nation_selector.Items.IndexOf(vill.nation);
-            
+                                                
             disappearingUnnecessaryRb();
         }
 
