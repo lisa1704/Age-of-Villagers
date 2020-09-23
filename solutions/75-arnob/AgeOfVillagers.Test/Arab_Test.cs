@@ -18,22 +18,13 @@ namespace AgeOfVillagers.Test
             Arab_Bedouin arab = new Arab_Bedouin("Arab Bedouin");
 
 
-       
-
-
-       
-       
-
 
         [Fact]
 
         public void ArabBedouinHouseTest()
         {
             Point pt1 = new Point(100, 100);
-            Point pt2 = new Point(96, 113);
-            Point pt3 = new Point(104, 113);
-            Point pt4 = new Point(108, 97);
-            Point pt5 = new Point(112, 111);
+            
 
             try
             {
@@ -53,13 +44,7 @@ namespace AgeOfVillagers.Test
         public void ArabBedouinTreeTest()
         {
             Point pt1 = new Point(100, 100);
-            Point pt2 = new Point(108, 96);
-            Point pt3 = new Point(92, 96);
-            Point pt4 = new Point(106, 90);
-            Point pt5 = new Point(94, 90);
-            Point pt6 = new Point(100, 87);
-            Point pt7 = new Point(99, 108);
-            Point pt8 = new Point(101, 100);
+            
 
             try
             {
