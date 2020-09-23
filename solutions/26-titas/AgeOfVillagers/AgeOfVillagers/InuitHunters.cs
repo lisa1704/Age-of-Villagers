@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class InuitHunters : INation
+    public class InuitHunters : INation
     {
         public void paint_house(MouseEventArgs e, Graphics g, Pen p)
         {

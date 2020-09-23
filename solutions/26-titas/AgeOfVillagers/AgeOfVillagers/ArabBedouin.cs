@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouin : INation
+    public class ArabBedouin : INation
     {
         public void paint_house(MouseEventArgs e, Graphics g, Pen p)
         {

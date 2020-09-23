@@ -92,7 +92,7 @@ namespace AgeOfVillagers
             Graphics g = panel1.CreateGraphics();
             //nationName = comboBoxNationName.Text;
             Pen p = new Pen(new SolidBrush(Color.Black), 2);
-            NationNameFactory nationName1 = new NationNameFactory(this);
+            NationNameFactory nationName1 = new NationNameFactory(comboBoxNationName.Text);
             
             INation nation = nationName1.NationNameFactoryMethod();
 

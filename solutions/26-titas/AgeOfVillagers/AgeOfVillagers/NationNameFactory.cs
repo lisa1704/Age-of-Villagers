@@ -4,29 +4,29 @@ using System.Text;
 
 namespace AgeOfVillagers
 {
-    class NationNameFactory
+    public class NationNameFactory
     {
-        Form1 form;
+        private readonly string nationName;
         INation obj;
-        public NationNameFactory(Form1 form)
+        public NationNameFactory(String nationName)
         {
-            this.form = form;
+            this.nationName = nationName;
         }
         public INation NationNameFactoryMethod()
         {
-            if (form.comboBoxNationName.Text == "Bangladeshi Farmers")
+            if (nationName == "Bangladeshi Farmers")
             {
                 obj = new BdFarmers();
             }
-            else if (form.comboBoxNationName.Text == "Arab Bedouin")
+            else if (nationName == "Arab Bedouin")
             {
                 obj = new ArabBedouin();
             }
-            else if (form.comboBoxNationName.Text == "Egyptian Kings")
+            else if (nationName == "Egyptian Kings")
             {
                 obj = new EgyptianKings();
             }
-            else if (form.comboBoxNationName.Text == "Inuit Hunters")
+            else if (nationName == "Inuit Hunters")
             {
                 obj = new InuitHunters();
             }

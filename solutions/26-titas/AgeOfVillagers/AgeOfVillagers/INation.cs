@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    interface INation
+    public interface INation
     {
         public void paint_house(MouseEventArgs e, Graphics g, Pen p);
         public void paint_tree(MouseEventArgs e, Graphics g, Pen p);
