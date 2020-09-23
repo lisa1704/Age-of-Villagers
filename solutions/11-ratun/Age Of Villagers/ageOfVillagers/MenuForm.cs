@@ -14,8 +14,10 @@ namespace ageOfVillagers
     {
         private string text="";
         private string currentselect;
-        private string currentNationName;
+        private string currentNationName,currentVillageName;
         readonly List<string> VillageNameList = new List<string>();
+        readonly List<string> NationNameList = new List<string>();
+        readonly List<Panel> panelList = new List<Panel>();
         public MenuForm()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace ageOfVillagers
         public void VillageName_TextChanged(object sender, EventArgs e)
         {
             MessageBox.Show(VillageName.Text);
+            currentVillageName = VillageName.Text;
         }
 
         public void Nation_TextChanged(object sender, EventArgs e)
@@ -80,6 +83,9 @@ namespace ageOfVillagers
             g.Save();
             Village v = new Village();
             v.Save();
+            VillageNameList.Add(currentVillageName);
+            panelList.Add(panel2);
+            NationNameList.Add(currentNationName);
             text += "Saving the village. ";
         }
 
