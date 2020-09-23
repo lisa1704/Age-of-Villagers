@@ -25,5 +25,31 @@ namespace Age_Of_Villagers_Test
             Assert.IsType<ArabBedouin> (nationController.getNation(new Point()));
 
         }
+        [Fact]
+        public void ArabHousepointTest()
+        {
+            Point result = nationController.getNation(point).GetHousePoint();
+            Assert.Equal(point, result);
+
+        }
+        [Fact]
+        public void ArabTreepointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetTreePoint();
+            Assert.Equal(new Point(), result);
+
+        }
+        [Fact]
+        public void ArabWaterPointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetWaterPoint();
+            Assert.Equal(new Point(), result);
+
+        }
     }
+}
 }
