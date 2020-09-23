@@ -13,17 +13,17 @@ namespace Age_of_Villagers
         {
             this.point = point;
         }
-        IShape INation.HouseDraw()
+        public IShape HouseDraw()
         {
             throw new NotImplementedException();
         }
 
-        IShape INation.TreeDraw()
+        public IShape TreeDraw()
         {
             throw new NotImplementedException();
         }
 
-        IShape INation.WaterSourceDraw()
+        public IShape WaterSourceDraw()
         {
             throw new NotImplementedException();
         }
