@@ -1,5 +1,6 @@
 ﻿using AgeOfVillagers.Factories;
 using AgeOfVillagers.Nation;
+using AgeOfVillagers.VillegeItems;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,20 +11,28 @@ namespace AgeOfVillagers.Test
 {
     public class EgyptianKingsTest
     {
-        INation bd = new NationFactory("Egyptian Kings").getNation();
+        INation ek = new NationFactory("Egyptian Kings").getNation();
 
         [Fact]
         public void NationNameTest()
         {
             var expected = "Egyptian Kings";
-            Assert.Equal(expected, bd.getNationName());
+            Assert.Equal(expected, ek.getNationName());
         }
 
         [Fact]
         public void TerrainColorTest()
         {
             var expected = Color.Yellow;
-            Assert.Equal(expected, bd.getTerrainColor());
+            Assert.Equal(expected, ek.getTerrainColor());
         }
+
+        [Fact]
+        public void HouseTest()
+        {
+            var expected = typeof(EgyptianHouse);
+            Assert.IsType(expected, ek.getHouse(new Point()));
+        }
+
     }
 }
