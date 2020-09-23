@@ -1,4 +1,5 @@
-﻿using Age_of_Villagers.Models.Manifests;
+﻿using Age_of_Villagers.Models;
+using Age_of_Villagers.Models.Manifests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,11 @@ namespace Age_of_Villagers
         Boolean HouseSwitch;
         Boolean TreeSwitch;
         Boolean WaterSourceSwitch;
+
+        //
+        BangladeshiFarmers farmer = new BangladeshiFarmers();
+        
+        //
 
         public VillageEditorWindow()
         {
@@ -47,6 +53,7 @@ namespace Age_of_Villagers
             xAxis = p.X;
             yAxis = p.Y;
             VillageEditorPanel.Invalidate();
+            VillageEditorPanel.BackColor = Color.Green;
         }
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
@@ -60,16 +67,17 @@ namespace Age_of_Villagers
 
             if (HouseSwitch)
             {
-                VillageEditorPanel.BackColor = Color.Green;
-                FarmerHouse hut = new FarmerHouse(local);
-                hut.Draw(gfx, p);
-               
+                
+                farmer.Draw_House(local, gfx, p);
+
+
+
 
             }
             if (TreeSwitch)
             {
-                
-                gfx.DrawRectangle(p, xAxis, yAxis, 16, 24);
+
+                farmer.Draw_Tree(local, gfx, p);
                 
 
             }

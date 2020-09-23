@@ -20,7 +20,7 @@ namespace Age_of_Villagers.Models
             throw new NotImplementedException();
         }
 
-        public void Draw_Tree()
+        public void Draw_Tree(Point location, Graphics gfx, Pen p)
         {
             throw new NotImplementedException();
         }
