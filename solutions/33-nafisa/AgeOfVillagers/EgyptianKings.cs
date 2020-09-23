@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     class EgyptianKings : INation
     {
         private Panel Drawingpanel;
-
+        private Color terraincolor;
         public EgyptianKings(Panel Drawingpanel)
         {
             this.Drawingpanel = Drawingpanel;
@@ -32,9 +32,10 @@ namespace AgeOfVillagers
             ewatersource.Draw(point, Drawingpanel);
         }
 
-        public void PaintTerrain(Panel Drawingpanel)
+        public Color PaintTerrain()
         {
-            Drawingpanel.BackColor = System.Drawing.Color.Yellow;
+            terraincolor = Color.Yellow;
+            return terraincolor;
         }
     }
 

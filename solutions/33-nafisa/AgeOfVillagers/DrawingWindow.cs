@@ -15,6 +15,7 @@ namespace AgeOfVillagers
         public static string VillageName;
         public static string nation_name; 
         private VillageState village;
+        public Color TerrainColor;
         //private Nations nation;
         public Boolean openbuttonclicked;
         public Boolean nationchanged;
@@ -209,7 +210,9 @@ namespace AgeOfVillagers
             nationlabel.Text = nation_name;
             visible_radiobutton(nation_name);
             Nations nation = new Nations(nation_name, Drawingpanel);
-            nation.getNation().PaintTerrain(Drawingpanel);
+            TerrainColor = nation.getNation().PaintTerrain();
+            Drawingpanel.BackColor = TerrainColor;
+
             house_locations.Clear();
             tree_locations.Clear();
             watersource_locations.Clear();

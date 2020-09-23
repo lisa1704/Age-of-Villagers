@@ -31,15 +31,13 @@ namespace AgeOfVillagers
             ws.Draw(point, Drawingpanel);
         }
 
-        public void PaintTerrain(Panel Drawingpanel)
-        {
+        public Color PaintTerrain() 
+        { 
+        
             terraincolor = Color.LightGreen;
-            Drawingpanel.BackColor = terraincolor;
+            return terraincolor;
             
         }
-        public Color GetTerrainColor()
-        {
-            return terraincolor;
-        }
+       
     }
 }

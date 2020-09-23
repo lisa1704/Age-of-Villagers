@@ -7,7 +7,8 @@ using System.Windows.Forms;
 namespace AgeOfVillagers
 {
     class NullNation : INation
-    {
+    {   
+        public Color terraincolor;
         public void DrawHouse(Point point, Panel Drawingpanel)
         {
             NullItem nullH = new NullItem();
@@ -26,9 +27,10 @@ namespace AgeOfVillagers
             nullW.Draw(point, Drawingpanel);
         }
 
-        public void PaintTerrain(Panel Drawingpanel)
+        public Color PaintTerrain()
         {
-            Drawingpanel.BackColor = Color.White;
+             terraincolor = Color.White;
+            return terraincolor;
         }
     }
 }

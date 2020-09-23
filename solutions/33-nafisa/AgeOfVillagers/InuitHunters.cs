@@ -9,7 +9,7 @@ namespace AgeOfVillagers
     class InuitHunters : INation
     {
         private Panel Drawingpanel;
-
+        public Color terraincolor;
         public InuitHunters(Panel Drawingpanel)
         {
             this.Drawingpanel = Drawingpanel;
@@ -33,9 +33,10 @@ namespace AgeOfVillagers
             nullWsource.Draw(point, Drawingpanel);
         }
 
-        public void PaintTerrain(Panel Drawingpanel)
+        public Color PaintTerrain()
         {
-            Drawingpanel.BackColor = System.Drawing.Color.White;
+            terraincolor = Color.White;
+            return terraincolor;
         }
     }
 }
