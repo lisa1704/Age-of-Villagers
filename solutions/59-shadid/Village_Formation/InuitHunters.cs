@@ -34,5 +34,9 @@ namespace Village_Formation
         {
            
         }
+        public string NationName()
+        {
+            return "Bangladeshi Farmers";
+        }
     }
 }

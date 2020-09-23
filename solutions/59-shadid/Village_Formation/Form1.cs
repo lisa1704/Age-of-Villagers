@@ -72,6 +72,7 @@ namespace Village_Formation
             BangladeshiFarmers bd = new BangladeshiFarmers(g);
             EgyptianKings ek = new EgyptianKings(g);
             InuitHunters ih = new InuitHunters(g);
+            ArabBedouin ab = new ArabBedouin(g);
            
             if (radioButton1.Checked)
             {
@@ -85,6 +86,7 @@ namespace Village_Formation
                 bd.DrawHouse(e);
                 ek.DrawHouse(e);
                 ih.DrawHouse(e);
+                ab.DrawHouse(e);
                 
 
             }
@@ -92,6 +94,7 @@ namespace Village_Formation
             {
                 bd.DrawTree(e);
                 ek.DrawTree(e);
+                ab.DrawTree(e);
             }
            
         }
