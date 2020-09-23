@@ -8,12 +8,8 @@ namespace AgeOfVillagers.Nations
 {
     class CheckNation
     {
-     
-        String name;
-        
-        public INation GetNation(String nationName)
+        public INation GetNation(String name)
         {
-           name = nationName;
             if (name == "Bangladeshi Farmers")
                 return new BangladeshiFarmers();
             else if (name == "Arab Bedouin")

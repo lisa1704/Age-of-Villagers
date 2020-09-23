@@ -17,7 +17,8 @@ namespace AgeOfVillagers
 
         Point point;
         String nationName = " ";
-        INation nation;
+        INation nation = new NullNation();
+        CheckNation checker = new CheckNation();
         public Form1()
         {
             InitializeComponent();
@@ -35,20 +36,18 @@ namespace AgeOfVillagers
         }
  private void NationChoose_SelectedIndexChanged(object sender, EventArgs e)
            {
-        NationChoose.Items.Add("Bangladeshi Farmers");
-        NationChoose.Items.Add("Arab Bedouin");
-        NationChoose.Items.Add("Egyptian Kings");
-        NationChoose.Items.Add("Inuit Hunters");
+            nation = checker.GetNation(NationChoose.Text);
 
         }
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = canvas.CreateGraphics();
-             BangladeshiFarmers nation = new BangladeshiFarmers();
+            // BangladeshiFarmers nation = new BangladeshiFarmers();
             //  EgyptianKings nation = new EgyptianKings();
             //ArabBeouins nation = new ArabBeouins();
             //InuitHunters nation = new InuitHunters();
+            
             canvas.BackColor = nation.TerrainColor();
 
             if (tree.Checked == true)
