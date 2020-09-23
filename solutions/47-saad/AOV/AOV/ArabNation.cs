@@ -23,7 +23,7 @@ namespace AOV
 
         public void DrawWaterSource(Graphics g, Point p)
         {
-            NullShape nothing = new NullShape(p);
+            NullShape nothing = new NullShape();
             nothing.draw(g);
         }
 

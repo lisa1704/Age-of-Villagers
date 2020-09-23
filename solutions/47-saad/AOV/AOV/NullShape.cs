@@ -9,8 +9,6 @@ namespace AOV
 {
     class NullShape : CompoundShape
     {
-        public NullShape(Point p)
-        {
-        }
+        
     }
 }

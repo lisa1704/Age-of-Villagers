@@ -7,19 +7,18 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    class BdHouse : CompoundShape
+    public class BdHouse : VillageItem
     {
+        private readonly Point _clicked;
+
         public BdHouse(Point clicked)
         {
-            Point x1 = new Point(clicked.X - 8, clicked.Y + 8);
-            Point x2 = new Point(clicked.X + 8, clicked.Y + 8);
-            Point topLeftCorner = new Point(clicked.X - 8, clicked.Y);
-            Point bottomRightCorner = new Point(clicked.X + 8, clicked.Y + 16);
-
-            addShape(new Rectangle(x1, bottomRightCorner));
-            addShape(new Triangle(clicked, x1, x2));
-            //Check
-            //addShape(new Rectangle(topLeftCorner, bottomRightCorner)); //Uncomment to check the height and width
+            _clicked = clicked;
+            villageItemShape = new BdHouseShape(new Point(_clicked.X,_clicked.Y),new Point(_clicked.X - 8, _clicked.Y + 8), new Point(_clicked.X + 8, _clicked.Y + 8), new Point(_clicked.X - 8, _clicked.Y), new Point(_clicked.X + 8, _clicked.Y + 16));
+        }
+        public override Point GetPoint()
+        {
+            return _clicked;
         }
     }
 }

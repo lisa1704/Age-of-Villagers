@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    interface IDraw
+    public interface IDraw
     {
         void draw(Graphics g);
     }

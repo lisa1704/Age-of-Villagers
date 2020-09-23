@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AOV
 {
-    abstract class CompoundShape : IDraw
+    public abstract class CompoundShape : IDraw
     {
         public List<IDraw> shapes;
 

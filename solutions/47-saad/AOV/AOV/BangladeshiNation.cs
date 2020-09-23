@@ -31,6 +31,6 @@ namespace AOV
         public Color GetColor()
         {
             return Color.Green;
-        }
+        }       
     }
 }
