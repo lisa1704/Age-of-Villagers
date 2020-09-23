@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Age_of_Villagers.Models.Manifests;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -12,19 +13,22 @@ namespace Age_of_Villagers.Models
 
         public void Draw_House(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            KingHouse house = new KingHouse(location);
+            house.Draw(gfx, p);
         }
 
      
 
         public void Draw_Tree(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            KingTree tree = new KingTree(location);
+            tree.Draw(gfx, p);
         }
 
         public void Draw_WaterSource(Point location, Graphics gfx, Pen p)
         {
-            throw new NotImplementedException();
+            KingWaterSource water = new KingWaterSource(location);
+            water.Draw(gfx, p);
         }
 
         public string Get_inhabitedVillage() 
