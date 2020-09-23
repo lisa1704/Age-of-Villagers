@@ -13,9 +13,9 @@ namespace AgeOfVillagers
    
     public partial class Form1 : Form
     {
-        int x;
-        int y;
-
+      //  int x;
+      //  int y;
+        Point point;
         public Form1()
         {
             InitializeComponent();
@@ -23,9 +23,9 @@ namespace AgeOfVillagers
 
         private void canvas_MouseClick(object sender, MouseEventArgs e)
         {
-            Point p = new Point(e.X, e.Y);
-            x = p.X;
-            y = p.Y;
+            point = new Point(e.X, e.Y);
+          //  x = p.X;
+          // y = p.Y;
             canvas.Invalidate();
         }
 
@@ -35,7 +35,7 @@ namespace AgeOfVillagers
             BangladeshiFarmers v = new BangladeshiFarmers();
             canvas.BackColor = v.terrainColor();
             if (tree.Checked == true)
-                v.DrawTree(g);
+                v.DrawTree(g,point);
             else if (House.Checked == true)
                 v.DrawHouse(g);
             else if (Water.Checked == true)
@@ -48,9 +48,5 @@ namespace AgeOfVillagers
             canvas.Invalidate();
         }
 
-        private void newVillage_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

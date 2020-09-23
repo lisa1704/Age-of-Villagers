@@ -21,9 +21,9 @@ namespace AgeOfVillagers
             t.Draw();
         }
 
-        public void DrawTree(Graphics g)
+        public void DrawTree(Graphics g, Point p)
         {
-            Rectangle r = new Rectangle(g);
+            Rectangle r = new Rectangle(g, p);
             r.Draw();
         }
 
