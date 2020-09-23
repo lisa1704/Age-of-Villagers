@@ -17,7 +17,7 @@ namespace AgeOfVillagers
 
         public void Draw_item(Graphics g, Point p)
         {
-            Point tb1 = new Point(p.X + 16, p.Y - 16);
+            Point tb1 = new Point(p.X + 12, p.Y - 16);
             Point tb2 = new Point(p.X + 24, p.Y);
 
             Point rb1 = new Point(tb2.X, tb2.Y + 16);

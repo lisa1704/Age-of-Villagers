@@ -21,6 +21,9 @@ namespace AgeOfVillagers
 
         Nation_factory nation_type = new Nation_factory();
 
+        List<Point> houses = new List<Point>();
+        List<Point> trees = new List<Point>();
+
         public editorVillagers()
         {
             InitializeComponent();
@@ -48,7 +51,12 @@ namespace AgeOfVillagers
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            Graphics g = panel1.CreateGraphics();
+            foreach (Point points in houses)
+            {
+                nation_type.Check_nation(nation).Draw_House(g,points);
+            }
+            
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
@@ -59,18 +67,12 @@ namespace AgeOfVillagers
 
             g.DrawLine(blackpen, e.X,e.Y,e.X+10,e.Y-10);
 
-            if (selected_item == "House")
+            if (house_rb.Checked)
             {
-                
+                houses.Add(e.Location);
+                panel1.Refresh();
             }
-            else if (selected_item == "Tree")
-            {
-                
-            }
-            else if (selected_item == "water")
-            {
-                
-            }
+            
         }
 
 

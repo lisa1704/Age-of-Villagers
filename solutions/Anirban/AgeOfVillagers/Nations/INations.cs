@@ -9,9 +9,9 @@ namespace AgeOfVillagers.Nations
 {
     public interface INations
     {
-        void Draw_Tree(Point x);
-        void Draw_House(Point x);
-        void Draw_Water(Point x);
+        void Draw_Tree(Graphics g,Point x);
+        void Draw_House(Graphics g, Point x);
+        void Draw_Water(Graphics g, Point x);
 
         Color terrain_Color();
     }

@@ -11,17 +11,17 @@ namespace AgeOfVillagers.Nations
     {
 
         Color bg_color = Color.White;
-        public void Draw_House()
+        public void Draw_House(Graphics g, Point x)
         {
             throw new NotImplementedException();
         }
 
-        public void Draw_Tree()
+        public void Draw_Tree(Graphics g, Point x)
         {
             throw new NotImplementedException();
         }
 
-        public void Draw_Water()
+        public void Draw_Water(Graphics g, Point x)
         {
             throw new NotImplementedException();
         }

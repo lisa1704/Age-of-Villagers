@@ -22,4 +22,8 @@ namespace AgeOfVillagers
             return widtth;
         }
     }
+
+    internal interface IVillage_items
+    {
+    }
 }
