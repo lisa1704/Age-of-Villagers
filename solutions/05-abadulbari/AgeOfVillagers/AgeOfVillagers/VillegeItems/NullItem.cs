@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class NullItem : VillageItem
+    public class NullItem : VillageItem
     {
         private readonly Point point;
 

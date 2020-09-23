@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class ArabianHouse : VillageItem
+    public class ArabianHouse : VillageItem
     {
         private readonly Point triangleTop, quadTop, bottomLeft, bottomMid, bottomRight;
 

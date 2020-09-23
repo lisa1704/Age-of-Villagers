@@ -8,7 +8,7 @@ using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers.VillegeItems
 {
-    class ArabianTree : VillageItem
+    public class ArabianTree : VillageItem
     {
         private readonly Point centre, branch1, branch2, branch3, branch4, branch5, logTopLeft, logBottomRight;
 
