@@ -25,5 +25,9 @@ namespace Ageofvillagers
             this.Item_name = Item_name;
             this.Nation_Name = Nation_Name;
         }
+        public State()
+        {
+
+        }
     }
 }
