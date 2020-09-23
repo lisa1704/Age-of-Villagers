@@ -1,4 +1,5 @@
-﻿using Age_Of_Villagers;
+﻿using AgeOfVillagers;
+using AgeOfVillagers.BangladeshiFarmers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace AgeOfVillagers
         {
             if (button == "House")
             {
-                return new BangladeshiHouse();
+                return BangladeshiHouse();
             }
             else if (button == "Tree")
             {

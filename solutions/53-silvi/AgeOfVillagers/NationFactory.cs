@@ -18,7 +18,7 @@ namespace AgeOfVillagers
             {
                 return new InuitItemFactory();
             }
-            else if (nation == "Egyptian King")
+            else if (nation == "Egyptian Kings")
             {
                 return new EgyptianItemFactory();
             }
@@ -26,8 +26,11 @@ namespace AgeOfVillagers
             {
                 return new ArabItemFactory();
             }
-
-            return null;
+            else
+            {
+                return new NullNation();
+            }
+            
         }
     }
 }
