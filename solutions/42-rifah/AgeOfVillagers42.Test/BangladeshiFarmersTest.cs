@@ -12,6 +12,7 @@ namespace AgeOfVillagers42.Test
     public class BangladeshiFarmersTest
     {
         Point point = new Point(42, 42);
+
         [TestMethod]
         public void BackgroundColorTest()
         {
@@ -25,24 +26,28 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void TreeTest()
         {
-            BDFarmersTest bdFarmers = new BDFarmersTest();
-            BDFarmersTree treeTest = new BDFarmersTree(point);
-            Object treeTestObject = bdFarmers.testTreePoint(point);
-            treeTestObject.Equals(treeTest);
+            BangladeshiFarmers bdFarmersTree = new BangladeshiFarmers();
+            Object actual = bdFarmersTree.testTreePoint(point);
+            Object expected = new BDFarmersTree(point);
+            actual.Equals(expected);
         }
 
         [TestMethod]
         public void HouseTest()
         {
-            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
-            Assert.AreEqual(2, 2);
+            BangladeshiFarmers bdFarmersHouse = new BangladeshiFarmers();
+            Object actual = bdFarmersHouse.testHousePoint(point);
+            Object expected = new BDFarmersHouse(point);
+            actual.Equals(expected);
         }
 
         [TestMethod]
         public void WatersourceTest()
         {
-            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
-            Assert.AreEqual(2, 2);
+            BangladeshiFarmers bdFarmersWS = new BangladeshiFarmers();
+            Object actual = bdFarmersWS.testWatersourcePoint(point);
+            Object expected = new BDFarmersWatersource(point);
+            actual.Equals(expected);
         }
     }
 }

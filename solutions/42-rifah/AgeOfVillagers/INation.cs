@@ -15,7 +15,6 @@ namespace AgeOfVillagers
         Object DrawHouse(Graphics g, Point point);
         Object DrawWaterSource(Graphics g, Point point);
         Color BackgroundColor();
-
     }
 
 }
