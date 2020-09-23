@@ -108,5 +108,23 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void EgyptianTree()
+        {
+            IShape egypttree = new EgyptianKings().testtree(p);
+            IShape tree = new EgyptianKings().DrawTree(g, p);
+            egypttree.Equals(tree);
+
+        }
+
+        [Fact]
+        public void EgyptianWater()
+        {
+            IShape egyptianwater = new EgyptianKings().testwater(p);
+            IShape water = new EgyptianKings().DrawWaterSource(g, p);
+            egyptianwater.Equals(water);
+
+        }
+
     }
 }
