@@ -16,9 +16,13 @@
             {
                 return new Egyptianking();
             }
-            else
+            else if (nation_name == "Inuit Hunter")
             {
                 return new Inuithunter();
+            }
+            else
+            {
+                return new Null_Nation();
             }
         }
     }

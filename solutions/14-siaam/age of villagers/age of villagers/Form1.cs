@@ -42,13 +42,21 @@ namespace age_of_villagers
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = panel1.CreateGraphics();
-            foreach (Point points in houses)
+            if (nameofnation == "Bangladeshi Farmers" || nameofnation == "Arab Beduin" || nameofnation == "Egyptian king" || nameofnation == "Inuit Hunter")
             {
-                nationtype.GetNation(nameofnation).drawHouse(g, points);
+                foreach (Point points in houses)
+                {
+                    nationtype.GetNation(nameofnation).drawHouse(g, points);
+                }
+                foreach (Point points in trees)
+                {
+                    nationtype.GetNation(nameofnation).drawTree(g, points);
+                }
+                
             }
-            foreach (Point points in trees)
+            else
             {
-                nationtype.GetNation(nameofnation).drawTree(g, points);
+                nationtype.GetNation(nameofnation).drawTree(g, new Point(200, 200));
             }
 
         }
