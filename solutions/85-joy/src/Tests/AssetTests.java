@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import project.Utilities.Factories.HouseFactory;
 import project.Utilities.Factories.IAssetFactory;
 import project.Utilities.Factories.TreeFactory;
+import project.Utilities.Factories.WaterSourceFactory;
 import project.Utilities.NationItems.*;
 
 
@@ -25,5 +26,17 @@ public class AssetTests {
 
         Assertions.assertEquals(new Arab_Bedouin_Tree().getClass(),tree.getClass());
     }
-    
+
+    @Test
+    void Arab_Bedouin_WaterSource_Test(){
+        IAssetFactory WaterSourceFactory = new WaterSourceFactory();
+        IWaterSource waterSource = (IWaterSource) WaterSourceFactory.createAsset("Arab Bedouin");
+
+        Assertions.assertEquals(waterSource.getClass(),new Null_WaterSource().getClass());
+    }
+
+    @Test
+    void Bangladeshi_Farmers_House_Test(){
+
+    }
 }
