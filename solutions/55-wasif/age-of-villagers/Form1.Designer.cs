@@ -97,6 +97,7 @@ namespace age_of_villagers
             this.button5.TabIndex = 7;
             this.button5.Text = "New Village";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -185,6 +186,8 @@ namespace age_of_villagers
             this.ResumeLayout(false);
 
         }
+
+        
 
 
 

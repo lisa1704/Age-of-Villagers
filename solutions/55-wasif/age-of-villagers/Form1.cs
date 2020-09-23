@@ -82,7 +82,10 @@ namespace age_of_villagers
 
             sv.save(newvillage);
         }
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Refresh();
+        }
     }
 }
 
