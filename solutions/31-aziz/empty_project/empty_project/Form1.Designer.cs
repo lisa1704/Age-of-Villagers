@@ -31,13 +31,13 @@
             this.SaveVillage = new System.Windows.Forms.Button();
             this.NewVillage = new System.Windows.Forms.Button();
             this.OpenVillage = new System.Windows.Forms.Button();
-            this.Tree = new System.Windows.Forms.Button();
-            this.House = new System.Windows.Forms.Button();
-            this.WaterSource = new System.Windows.Forms.Button();
             this.DrawingPanel = new System.Windows.Forms.Panel();
             this.NationBox = new System.Windows.Forms.ComboBox();
             this.GameTitle = new System.Windows.Forms.TextBox();
             this.SelectYourNation = new System.Windows.Forms.TextBox();
+            this.radioButtonTree = new System.Windows.Forms.RadioButton();
+            this.radioButtonHouse = new System.Windows.Forms.RadioButton();
+            this.radioButtonWaterSource = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // SaveVillage
@@ -69,36 +69,6 @@
             this.OpenVillage.Text = "Open Village";
             this.OpenVillage.UseVisualStyleBackColor = true;
             this.OpenVillage.Click += new System.EventHandler(this.OpenVillage_Click);
-            // 
-            // Tree
-            // 
-            this.Tree.Location = new System.Drawing.Point(659, 177);
-            this.Tree.Name = "Tree";
-            this.Tree.Size = new System.Drawing.Size(83, 23);
-            this.Tree.TabIndex = 4;
-            this.Tree.Text = "Tree";
-            this.Tree.UseVisualStyleBackColor = true;
-            this.Tree.Click += new System.EventHandler(this.Tree_Click);
-            // 
-            // House
-            // 
-            this.House.Location = new System.Drawing.Point(606, 224);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(91, 23);
-            this.House.TabIndex = 5;
-            this.House.Text = "House";
-            this.House.UseVisualStyleBackColor = true;
-            this.House.Click += new System.EventHandler(this.House_Click);
-            // 
-            // WaterSource
-            // 
-            this.WaterSource.Location = new System.Drawing.Point(703, 224);
-            this.WaterSource.Name = "WaterSource";
-            this.WaterSource.Size = new System.Drawing.Size(85, 23);
-            this.WaterSource.TabIndex = 6;
-            this.WaterSource.Text = "Water Source";
-            this.WaterSource.UseVisualStyleBackColor = true;
-            this.WaterSource.Click += new System.EventHandler(this.WaterSource_Click);
             // 
             // DrawingPanel
             // 
@@ -145,18 +115,57 @@
             this.SelectYourNation.TabIndex = 9;
             this.SelectYourNation.Text = "Select your Nation";
             // 
+            // radioButtonTree
+            // 
+            this.radioButtonTree.AutoSize = true;
+            this.radioButtonTree.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonTree.Location = new System.Drawing.Point(668, 188);
+            this.radioButtonTree.Name = "radioButtonTree";
+            this.radioButtonTree.Size = new System.Drawing.Size(46, 19);
+            this.radioButtonTree.TabIndex = 10;
+            this.radioButtonTree.TabStop = true;
+            this.radioButtonTree.Text = "Tree";
+            this.radioButtonTree.UseVisualStyleBackColor = false;
+            this.radioButtonTree.Click += new System.EventHandler(this.radioButtonTree_Click);
+            // 
+            // radioButtonHouse
+            // 
+            this.radioButtonHouse.AutoSize = true;
+            this.radioButtonHouse.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonHouse.Location = new System.Drawing.Point(616, 228);
+            this.radioButtonHouse.Name = "radioButtonHouse";
+            this.radioButtonHouse.Size = new System.Drawing.Size(59, 19);
+            this.radioButtonHouse.TabIndex = 11;
+            this.radioButtonHouse.TabStop = true;
+            this.radioButtonHouse.Text = "House";
+            this.radioButtonHouse.UseVisualStyleBackColor = false;
+            this.radioButtonHouse.Click += new System.EventHandler(this.radioButtonHouse_Click);
+            // 
+            // radioButtonWaterSource
+            // 
+            this.radioButtonWaterSource.AutoSize = true;
+            this.radioButtonWaterSource.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonWaterSource.Location = new System.Drawing.Point(693, 228);
+            this.radioButtonWaterSource.Name = "radioButtonWaterSource";
+            this.radioButtonWaterSource.Size = new System.Drawing.Size(95, 19);
+            this.radioButtonWaterSource.TabIndex = 12;
+            this.radioButtonWaterSource.TabStop = true;
+            this.radioButtonWaterSource.Text = "Water Source";
+            this.radioButtonWaterSource.UseVisualStyleBackColor = false;
+            this.radioButtonWaterSource.Click += new System.EventHandler(this.radioButtonWaterSource_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButtonWaterSource);
+            this.Controls.Add(this.radioButtonHouse);
+            this.Controls.Add(this.radioButtonTree);
             this.Controls.Add(this.SelectYourNation);
             this.Controls.Add(this.GameTitle);
             this.Controls.Add(this.NationBox);
             this.Controls.Add(this.DrawingPanel);
-            this.Controls.Add(this.WaterSource);
-            this.Controls.Add(this.House);
-            this.Controls.Add(this.Tree);
             this.Controls.Add(this.OpenVillage);
             this.Controls.Add(this.NewVillage);
             this.Controls.Add(this.SaveVillage);
@@ -173,13 +182,13 @@
         private System.Windows.Forms.Button SaveVillage;
         private System.Windows.Forms.Button NewVillage;
         private System.Windows.Forms.Button OpenVillage;
-        private System.Windows.Forms.Button Tree;
-        private System.Windows.Forms.Button House;
-        private System.Windows.Forms.Button WaterSource;
         private System.Windows.Forms.Panel DrawingPanel;
         private System.Windows.Forms.ComboBox NationBox;
         private System.Windows.Forms.TextBox GameTitle;
         private System.Windows.Forms.TextBox SelectYourNation;
+        private System.Windows.Forms.RadioButton radioButtonTree;
+        private System.Windows.Forms.RadioButton radioButtonHouse;
+        private System.Windows.Forms.RadioButton radioButtonWaterSource;
     }
 }
 

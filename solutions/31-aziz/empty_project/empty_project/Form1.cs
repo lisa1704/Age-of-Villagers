@@ -43,11 +43,6 @@ namespace empty_project
 
         }
 
-        private void Tree_Click(object sender, EventArgs e)
-        {
-            element_text = "Tree";
-        }
-
         private void NewVillage_Click(object sender, EventArgs e)
         {
             Refresh();
@@ -65,16 +60,6 @@ namespace empty_project
             }
             else
                 MessageBox.Show("Please select your Nation first");
-        }
-
-        private void House_Click(object sender, EventArgs e)
-        {
-            element_text = "House";
-        }
-
-        private void WaterSource_Click(object sender, EventArgs e)
-        {
-            element_text = "Water Source";
         }
 
         private void DrawingPanel_MouseClick(object sender, MouseEventArgs click)
@@ -103,6 +88,21 @@ namespace empty_project
             nation = chooseNation.NationIndex(NationBox.SelectedIndex);
             Refresh();
             village.draw(nation);
+        }
+
+        private void radioButtonTree_Click(object sender, EventArgs e)
+        {
+            element_text = "Tree";
+        }
+
+        private void radioButtonHouse_Click(object sender, EventArgs e)
+        {
+            element_text = "House";
+        }
+
+        private void radioButtonWaterSource_Click(object sender, EventArgs e)
+        {
+            element_text = "Water Source";
         }
     }
 }
