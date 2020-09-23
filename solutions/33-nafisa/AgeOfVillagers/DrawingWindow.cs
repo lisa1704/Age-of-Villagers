@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,7 +16,8 @@ namespace AgeOfVillagers
         public static string nation_name; 
         private VillageState village;
         //private Nations nation;
-        public Boolean buttonclicked;
+        public Boolean openbuttonclicked;
+        public Boolean nationchanged;
         private List<Point> house_locations { get; set; } = new List<Point>();
         private List<Point> tree_locations { get; set; } = new List<Point>();
         private List<Point> watersource_locations { get; set; } = new List<Point>();
@@ -24,39 +26,62 @@ namespace AgeOfVillagers
             InitializeComponent();
             village = new VillageState();
            
-
         }
         private void DrawingWindow_Load(object sender, EventArgs e)
         {
             
             nation_name = Form1.NationName;
-            label2.Text = Form1.VillageName;
-            label3.Text = nation_name;
+            villagebox.Text = Form1.VillageName;
+            nationlabel.Text = nation_name;
+            visible_radiobutton(nation_name);
             Nations nation = new Nations(nation_name, Drawingpanel);
             nation.getNation().PaintTerrain(Drawingpanel);
-            
-             if (nation_name == "Arab Beduins")
+           
+
+        }
+        private void visible_radiobutton(string nation_name)
+        {   
+            if (nation_name == "Bangladeshi Farmers")
             {
-                
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton3.Visible = true;
+            }
+            else if (nation_name == "Arab Beduins")
+            {
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
                 radioButton3.Visible = false;
             }
-            
-             if (nation_name == "Inuit Hunters")
+
+            else if (nation_name == "Inuit Hunters")
             {
+                radioButton2.Visible = true;
                 radioButton3.Visible = false;
                 radioButton1.Visible = false;
             }
-            
-            
-
-
+            else if (nation_name == "Egyptian Kings")
+            {
+                radioButton1.Visible = true;
+                radioButton2.Visible = true;
+                radioButton3.Visible = true;
+            }
 
         }
         public void GetVillageState()
         {   
 
-            village.villagename = label2.Text;
-            village.nationname = Form1.NationName;
+            village.villagename = villagebox.Text;
+            if(nationchanged == true)
+            {
+                village.nationname = changeNation.Text;
+                
+            }
+            else
+            {
+                village.nationname = Form1.NationName;
+            }
+           
             village.terraincolor = Drawingpanel.BackColor;
             village.Houses = house_locations;
             village.Trees =  tree_locations;
@@ -65,35 +90,11 @@ namespace AgeOfVillagers
         public void SetVillageState(VillageState village)
         {
             Drawingpanel.BackColor = village.terraincolor;
-            label2.Text = village.villagename;
-            label3.Text = village.nationname;
-            if (village.nationname == "Bangladeshi Farmers")
-            {
-                radioButton1.Visible = true;
-                radioButton2.Visible = true;
-                radioButton3.Visible = true;
-            }
-            else if (village.nationname == "Arab Beduins")
-            {
-                radioButton1.Visible = true;
-                radioButton2.Visible = true;
-                radioButton3.Visible = false;
-            }
-
-            else if (village.nationname == "Inuit Hunters")
-            {
-                radioButton2.Visible = true;
-                radioButton3.Visible = false;
-                radioButton1.Visible = false;
-            }
-            else if (village.nationname == "Egyptian Kings")
-            {
-                radioButton1.Visible = true;
-                radioButton2.Visible = true;
-                radioButton3.Visible = true;
-            }
-
-
+            villagebox.Text = village.villagename;
+            nation_name = village.nationname;
+            nationlabel.Text = nation_name;
+            visible_radiobutton(nation_name);
+            
             house_locations.Clear();
             tree_locations.Clear();
             watersource_locations.Clear();
@@ -104,7 +105,7 @@ namespace AgeOfVillagers
             }
             foreach (Point point in village.Trees)
             {
-                house_locations.Add(point);
+                tree_locations.Add(point);
             }
             foreach (Point point in village.Watersources)
             {
@@ -133,7 +134,7 @@ namespace AgeOfVillagers
 
         private void OpenVillage_Click(object sender, EventArgs e)
         {
-            buttonclicked = true;
+            openbuttonclicked = true;
             VillageStateLoader load = new VillageStateLoader();
 
             load.execute();
@@ -146,9 +147,13 @@ namespace AgeOfVillagers
         private void Drawingpanel_MouseClick(object sender, MouseEventArgs e)
         {
             
-            if (buttonclicked == true)
+            if (openbuttonclicked == true)
             {
                 nation_name = village.nationname;
+            }
+            else if (nationchanged == true)
+            {
+                nation_name = changeNation.Text;
             }
             else
             {
@@ -203,7 +208,7 @@ namespace AgeOfVillagers
                     nation.getNation().DrawTree(point, Drawingpanel);
                 }
             }
-            if (tree_locations != null)
+            if (watersource_locations != null)
             {
                 foreach (Point point in watersource_locations)
                 {
@@ -214,7 +219,21 @@ namespace AgeOfVillagers
 
         private void changeNation_SelectedIndexChanged(object sender, EventArgs e)
         {
+            nationchanged = true;
+            nation_name = changeNation.Text;
+            nationlabel.Text = nation_name;
+            visible_radiobutton(nation_name);
+            Nations nation = new Nations(nation_name, Drawingpanel);
+            nation.getNation().PaintTerrain(Drawingpanel);
+            house_locations.Clear();
+            tree_locations.Clear();
+            watersource_locations.Clear();
 
+
+        }
+        private void villagebox_TextChanged(object sender, EventArgs e)
+        {
+            VillageName = villagebox.Text;
         }
     }
 }

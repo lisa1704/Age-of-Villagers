@@ -32,9 +32,9 @@ namespace AgeOfVillagers
         {
             this.Drawingpanel = new System.Windows.Forms.Panel();
             this.ToolsPanel = new System.Windows.Forms.Panel();
+            this.villagebox = new System.Windows.Forms.TextBox();
             this.changeNation = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nationlabel = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@ namespace AgeOfVillagers
             // ToolsPanel
             // 
             this.ToolsPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ToolsPanel.Controls.Add(this.villagebox);
             this.ToolsPanel.Controls.Add(this.changeNation);
-            this.ToolsPanel.Controls.Add(this.label3);
-            this.ToolsPanel.Controls.Add(this.label2);
+            this.ToolsPanel.Controls.Add(this.nationlabel);
             this.ToolsPanel.Controls.Add(this.button3);
             this.ToolsPanel.Controls.Add(this.button2);
             this.ToolsPanel.Controls.Add(this.button1);
@@ -71,8 +71,25 @@ namespace AgeOfVillagers
             this.ToolsPanel.Size = new System.Drawing.Size(200, 400);
             this.ToolsPanel.TabIndex = 1;
             // 
+            // villagebox
+            // 
+            this.villagebox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.villagebox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.villagebox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.villagebox.Location = new System.Drawing.Point(30, 53);
+            this.villagebox.Name = "villagebox";
+            this.villagebox.Size = new System.Drawing.Size(143, 34);
+            this.villagebox.TabIndex = 11;
+            this.villagebox.Text = "Village name\r\n";
+            this.villagebox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.villagebox.TextChanged += new System.EventHandler(this.villagebox_TextChanged);
+            this.villagebox.VisibleChanged += new System.EventHandler(this.villagebox_TextChanged);
+            // 
             // changeNation
             // 
+            this.changeNation.BackColor = System.Drawing.SystemColors.Menu;
             this.changeNation.FormattingEnabled = true;
             this.changeNation.Items.AddRange(new object[] {
             "Bangladeshi Farmers",
@@ -85,26 +102,16 @@ namespace AgeOfVillagers
             this.changeNation.TabIndex = 10;
             this.changeNation.SelectedIndexChanged += new System.EventHandler(this.changeNation_SelectedIndexChanged);
             // 
-            // label3
+            // nationlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Bangladeshi Farmers";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(11, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 30);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "village name";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.nationlabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.nationlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nationlabel.Location = new System.Drawing.Point(15, 90);
+            this.nationlabel.Name = "nationlabel";
+            this.nationlabel.Size = new System.Drawing.Size(174, 30);
+            this.nationlabel.TabIndex = 9;
+            this.nationlabel.Text = "Nation name";
+            this.nationlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button3
             // 
@@ -177,7 +184,7 @@ namespace AgeOfVillagers
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(11, 15);
+            this.label1.Location = new System.Drawing.Point(9, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 44);
             this.label1.TabIndex = 0;
@@ -211,8 +218,8 @@ namespace AgeOfVillagers
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label nationlabel;
         private ComboBox changeNation;
+        private TextBox villagebox;
     }
 }
