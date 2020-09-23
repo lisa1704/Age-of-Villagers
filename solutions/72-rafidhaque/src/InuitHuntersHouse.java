@@ -24,4 +24,21 @@ public class InuitHuntersHouse extends DrawHouse {
 
         return arcs;
     }
+    @Override
+    public ArrayList<Shape> draw(double x, double y) {
+        Arc outerArc = new Arc(x+8, y+16, 8, 8, 0, 180);
+        Arc innerArc = new Arc(x+8, y+16, 2, 2, 0, 180);
+        outerArc.setFill(Color.TRANSPARENT);
+        outerArc.setStroke(Color.BLACK);
+        outerArc.setType(ArcType.ROUND);
+        innerArc.setFill(Color.TRANSPARENT);
+        innerArc.setStroke(Color.BLACK);
+        innerArc.setType(ArcType.ROUND);
+
+        ArrayList<Shape> arcs = new ArrayList<>();
+        arcs.add(outerArc);
+        arcs.add(innerArc);
+
+        return arcs;
+    }
 }
