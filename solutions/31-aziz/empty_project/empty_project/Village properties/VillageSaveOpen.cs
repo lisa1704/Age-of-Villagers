@@ -25,7 +25,7 @@ namespace empty_project
         {
             villageState = village;
             villageSerialized = JsonConvert.SerializeObject(villageState);
-            save.Filter = "AoV|*.AoV";
+            save.Filter = "aov|*.aov";
             if(save.ShowDialog()==DialogResult.OK)
             {
                 pathSave = save.FileName;
@@ -43,7 +43,7 @@ namespace empty_project
         }
         public Village openVillageState()
         {
-            open.Filter = "AoV|*.AoV";
+            open.Filter = "aov|*.aov";
             if (open.ShowDialog() == DialogResult.OK)
             {
                     file = open.FileName;
