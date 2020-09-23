@@ -30,7 +30,7 @@ namespace Ageofvillagers.Nations
         {
             Arab_House House = new Arab_House();
             House.Draw(g, p, x, y);
-            return "Arab House Draw";
+            return "Arab House Drawn";
         }
 
        
