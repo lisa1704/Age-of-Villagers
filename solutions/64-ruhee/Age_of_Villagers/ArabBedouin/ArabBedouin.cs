@@ -33,6 +33,9 @@ namespace Age_of_Villagers.ArabBedouin
             return (arabWaterS);
         }
 
-
+        public IShape testhouse(Point p)
+        {
+            return new ArabHouse(p);
+        }
     }
 }

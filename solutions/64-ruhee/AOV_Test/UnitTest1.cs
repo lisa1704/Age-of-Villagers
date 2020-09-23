@@ -72,6 +72,14 @@ namespace AOV_Test
 
         }
 
+        [Fact]
+        public void ArabHouse()
+        {
+            IShape arabhouse = new ArabBedouin().testhouse(p);
+            IShape house = new ArabBedouin().DrawHouse(g, p);
+            arabhouse.Equals(house);
+
+        }
 
     }
 }
