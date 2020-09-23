@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class ArabBedouinHouse : Composite
+    public class ArabBedouinHouse : Composite
     {
         public ArabBedouinHouse(Point point)
         {
@@ -24,3 +24,4 @@ namespace AgeOfVillagers
 
         }
     }
+}

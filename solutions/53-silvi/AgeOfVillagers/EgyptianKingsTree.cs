@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    internal class ArabBedouinTree : IVillageItem
+    public class EgyptianKingsTree : IVillageItem
     {
         public void Draw(Point e, Graphics g, Pen p)
         {

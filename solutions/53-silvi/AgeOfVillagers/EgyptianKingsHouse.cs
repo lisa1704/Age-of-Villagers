@@ -2,7 +2,7 @@
 
 namespace AgeOfVillagers
 {
-    class EgyptianKingsHouse : Composite
+    public class EgyptianKingsHouse : Composite
     {
         public EgyptianKingsHouse(Point point)
         {

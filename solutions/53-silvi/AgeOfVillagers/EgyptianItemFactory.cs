@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers
 {
-    class EgyptianItemFactory : INation
+    public class EgyptianItemFactory : INation
     {
         public Color BackgroundColor()
         {
