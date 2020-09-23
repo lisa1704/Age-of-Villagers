@@ -2,20 +2,21 @@
 
 namespace AOV
 {
-    class InuitHouse : CompoundShape
+    public class InuitHouse : NationItem
     {
+        private readonly Point _clicked;
         public InuitHouse(Point clicked)
         {
-            Point x1 = new Point(clicked.X , clicked.Y);
-            Point x2 = new Point(x1.X + 16, clicked.Y);
-            Point x3 = new Point(x1.X + 16, clicked.Y + 16);
-            Point x4 = new Point(x1.X , clicked.Y + 16);
+            _clicked = clicked;
+            Point x2 = new Point(_clicked.X + 16, _clicked.Y);
+            Point x3 = new Point(_clicked.X + 16, _clicked.Y + 16);
+            Point x4 = new Point(_clicked.X , _clicked.Y + 16);
 
-            addShape(new DrawLine(x3, x4));
-            addShape(new DrawArc(x1.X, x1.Y, 16, 30, 0, -180));
-            addShape(new DrawArc(x1.X + 6, x2.Y + 10, 4, 10, 0, -180));
-            //Check
-            //addShape(new Rectangle(x1, x3)); //Uncomment to check the height and width
+            villageItemShape = new InuitHouseShape(_clicked, x2, x3, x4);            
+        }
+        public override Point GetPoint()
+        {
+            return _clicked;
         }
     }
 }

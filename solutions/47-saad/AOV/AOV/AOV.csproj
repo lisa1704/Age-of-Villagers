@@ -81,6 +81,7 @@
     <Compile Include="Shapes\EgyptHouseShape.cs" />
     <Compile Include="Shapes\EgyptTreeShape.cs" />
     <Compile Include="Shapes\EgyptWaterShape.cs" />
+    <Compile Include="Shapes\InuitHouseShape.cs" />
     <Compile Include="Shapes\NullShape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
