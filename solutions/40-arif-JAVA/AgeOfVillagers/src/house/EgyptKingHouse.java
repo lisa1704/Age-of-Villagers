@@ -6,6 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
+import shape.Line;
 
 public class EgyptKingHouse implements IHouse {
 
@@ -22,8 +23,22 @@ public class EgyptKingHouse implements IHouse {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 if(active) {
-                    graphicsContext.strokeArc(mouseEvent.getX(), mouseEvent.getY(), 20, 30, 200, 360, ArcType.OPEN);
-                    graphicsContext.strokeText("     Egypt house", mouseEvent.getX(), mouseEvent.getY());
+
+                    double x= mouseEvent.getX();
+                    double y= mouseEvent.getY();
+
+
+                    new Line(x,y,x+20,y-20).draw(graphicsContext);
+
+                    new Line(x+20,y-20,x+30,y).draw(graphicsContext);
+
+                    new Line(x+30,y,x,y).draw(graphicsContext);
+
+
+
+                    new Line(x+30,y,x+40,y-10).draw(graphicsContext);
+                    new Line(x+20,y-20,x+40,y-10).draw(graphicsContext);
+
                     radioButton.setSelected(false);
                     active = false;
                 }
