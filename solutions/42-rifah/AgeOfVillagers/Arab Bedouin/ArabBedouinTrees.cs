@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AgeOfVillagers.Arab_Bedouin
 {
-    class ArabBedouinTrees : Composite
+    public class ArabBedouinTrees : Composite
     {
 
         public ArabBedouinTrees(Point point)
