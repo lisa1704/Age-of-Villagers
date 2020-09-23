@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Bdtree : Tree
+public class Bdtree : IShape
 {
     private string drawing = "";
 

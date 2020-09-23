@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Bdhouse : House
+public class Bdhouse : IShape
 {
 	public void CreateHouse(int x, int y)
     {
