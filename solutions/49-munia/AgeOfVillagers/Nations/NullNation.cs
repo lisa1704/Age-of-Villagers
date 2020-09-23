@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgeOfVillagers.Nations
 {
-    class NullNation : Nation
+    class NullNation : INation
     {
         Pen pen = new Pen(Color.Black);
         public void DrawHouse(Graphics g, Point p)

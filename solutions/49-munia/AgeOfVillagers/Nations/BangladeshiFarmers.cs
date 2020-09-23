@@ -11,7 +11,7 @@ using Rectangle = AgeOfVillagers.Shapes.Rectangle;
 
 namespace AgeOfVillagers 
 {
-    class BangladeshiFarmers : Nation 
+    class BangladeshiFarmers : INation 
     {
    
         Pen pen = new Pen(Color.Black);

@@ -56,7 +56,6 @@
     <Compile Include="NationItems\INationItems.cs" />
     <Compile Include="Nations\CheckNation.cs" />
     <Compile Include="Nations\INation.cs" />
-    <Compile Include="Nations\Nation.cs" />
     <Compile Include="Nations\NullNation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

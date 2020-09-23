@@ -19,7 +19,6 @@ namespace AgeOfVillagers.NationItems
             r.Draw();
            */
         }
-
         public void Tree(Graphics g, Point p)
         {
             throw new NotImplementedException();

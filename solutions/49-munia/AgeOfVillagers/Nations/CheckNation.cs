@@ -11,7 +11,7 @@ namespace AgeOfVillagers.Nations
      
         String name;
         
-        public Nation GetNation(String nationName)
+        public INation GetNation(String nationName)
         {
            name = nationName;
             if (name == "Bangladeshi Farmers")
