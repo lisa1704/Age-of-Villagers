@@ -14,15 +14,15 @@ namespace AoV.Nations
             {
                 return new BangladeshiFarmer();
             }
-            else if (nationType == "Arab Beduin")
+            else if (nationType == "Arab Bedouin")
             {
                 return new ArabBedouin();
             }
-            else if (nationType == "Egyptian king")
+            else if (nationType == "Egyptian Kings")
             {
                 return new EgyptianKing();
             }
-            else if (nationType == "Inuit Hunter")
+            else if (nationType == "Inuit Hunters")
             {
                 return new InuitHunters();
             }
