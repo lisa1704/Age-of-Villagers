@@ -22,8 +22,7 @@ namespace AoV.Shapes
         }
         public void Draw(Graphics g, Pen p)
         {
-            Pen pen = new Pen(Color.Black, 2);
-            g.DrawArc(pen, x, y, height, width, start, sweep);
+            g.DrawArc(p, x, y, height, width, start, sweep);
         }
     }
 }
