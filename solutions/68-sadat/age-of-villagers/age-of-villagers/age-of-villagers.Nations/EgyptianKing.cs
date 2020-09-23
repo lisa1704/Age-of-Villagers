@@ -22,36 +22,18 @@ namespace age_of_villagers.age_of_villagers.Nations
         public void createHouse(Coordinate coordinate)
         {
 
-            Pen pen = new Pen(Color.Black);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X + 8, coordinate.Y + 12));
-            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 8, coordinate.Y + 9));
-            graphics.DrawLine(pen, new PointF(coordinate.X + 8, coordinate.Y + 12), new PointF(coordinate.X - 2, coordinate.Y + 16));
-            graphics.DrawLine(pen, new PointF(coordinate.X - 8, coordinate.Y + 9), new PointF(coordinate.X - 2, coordinate.Y + 16));
-            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 2, coordinate.Y + 16));
+            
         }
 
         public void createTree(Coordinate coordinate)
         {
-            Pen pen = new Pen(Color.Black);
-            Graphics graphics = villageCanvas.CreateGraphics();
-
-            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X + 4, coordinate.Y - 20));
-            graphics.DrawLine(pen, new PointF(coordinate.X, coordinate.Y), new PointF(coordinate.X - 4, coordinate.Y - 20));
-            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 4, coordinate.Y - 24));
-            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 8, coordinate.Y - 20));
-            graphics.DrawLine(pen, new PointF(coordinate.X + 4, coordinate.Y - 20), new PointF(coordinate.X + 8, coordinate.Y - 24));
-            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 4, coordinate.Y - 24));
-            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 8, coordinate.Y - 20));
-            graphics.DrawLine(pen, new PointF(coordinate.X - 4, coordinate.Y - 20), new PointF(coordinate.X - 8, coordinate.Y - 24));
+           
 
         }
 
         public void createWaterSource(Coordinate coordinate)
         {
-            Pen pen = new Pen(Color.Black);
-            Graphics graphics = villageCanvas.CreateGraphics();
-            graphics.DrawEllipse(pen, coordinate.X, coordinate.Y, 12, 12);
+           
 
         }
     }
