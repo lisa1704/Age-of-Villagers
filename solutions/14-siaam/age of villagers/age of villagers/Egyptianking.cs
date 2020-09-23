@@ -18,7 +18,8 @@ namespace age_of_villagers
 
         public void drawTree(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            Egypttree egyptree = new Egypttree();
+            egyptree.drawComponent(g, point);
         }
     }
 }
