@@ -52,9 +52,8 @@ namespace Age_of_Villagers
             this.VillageEditorPanel.Name = "VillageEditorPanel";
             this.VillageEditorPanel.Size = new System.Drawing.Size(600, 400);
             this.VillageEditorPanel.TabIndex = 1;
-            this.VillageEditorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VillageEditorPanel_Paint);
             this.VillageEditorPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.VillageEditorPanel_Click);
-            // 
+            //
             // GameTitle
             // 
             this.GameTitle.AutoSize = true;

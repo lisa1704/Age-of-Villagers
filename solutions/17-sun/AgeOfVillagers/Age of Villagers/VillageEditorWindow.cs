@@ -14,9 +14,9 @@ namespace Age_of_Villagers
 {
     public partial class VillageEditorWindow : Form
     {
-        int xAxis;
-        int yAxis;
+       
         Point local;
+        Graphics gfx;
         Boolean HouseSwitch;
         Boolean TreeSwitch;
         Boolean WaterSourceSwitch;
@@ -29,6 +29,8 @@ namespace Age_of_Villagers
         public VillageEditorWindow()
         {
             InitializeComponent();
+            
+
         }
 
 
@@ -46,23 +48,18 @@ namespace Age_of_Villagers
 
 
        
-        private void VillageEditorPanel_Click(object sender, MouseEventArgs e)
-        {
-            Point p = new Point(e.X, e.Y);
-            local = p;
-            xAxis = p.X;
-            yAxis = p.Y;
-            VillageEditorPanel.Invalidate();
-            VillageEditorPanel.BackColor = Color.Green;
-        }
+  
         private void VillageEditorWindow_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void VillageEditorPanel_Paint(object sender, PaintEventArgs e)
+        private void VillageEditorPanel_Click(object sender, MouseEventArgs e)
         {
-            Graphics gfx = VillageEditorPanel.CreateGraphics();
+            gfx = VillageEditorPanel.CreateGraphics();
+            local.X = e.X;
+            local.Y = e.Y;
+
             Pen p = new Pen(Color.Black);
 
             if (HouseSwitch)
@@ -124,7 +121,10 @@ namespace Age_of_Villagers
 
         private void NewVillageButton_Click(object sender, EventArgs e)
         {
-
+            
+            VillageEditorPanel.Invalidate();
+            VillageEditorPanel.BackColor = Color.Green; //BD
+            
         }
 
         private void OpenVillageButton_Click(object sender, EventArgs e)
