@@ -62,7 +62,7 @@ namespace age_of_villagers
         }
         public Color draw_terrain()
         {
-            return Color.LightGoldenrodYellow;
+            return Color.Goldenrod;
         }
     }
 }

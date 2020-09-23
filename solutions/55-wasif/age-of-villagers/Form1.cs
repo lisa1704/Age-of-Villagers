@@ -16,10 +16,14 @@ namespace age_of_villagers
         public string village_type;
         public string item;
         Village newvillage;
+        village_factory villfact;
+        Graphics gp;
+        Point p;
         public Form1()
         {
             InitializeComponent();
             newvillage = new Village();
+            villfact = new village_factory(gp, p);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,6 +37,7 @@ namespace age_of_villagers
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             village_type = comboBox1.Text;
+            panel1.BackColor = villfact.get_nation(village_type).draw_terrain();
             Debug.WriteLine(village_type);
         }
         private void button1_Click(object sender, EventArgs e)
