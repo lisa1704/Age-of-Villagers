@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class NullWaterSource : IWaterSource
+    public class NullWaterSource : IWaterSource
     {
         public void draw(MouseEventArgs e)
         {

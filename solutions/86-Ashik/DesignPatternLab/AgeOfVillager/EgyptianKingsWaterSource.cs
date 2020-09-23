@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillager
 {
-    class EgyptianKingsWaterSource : IWaterSource
+    public class EgyptianKingsWaterSource : IWaterSource
     {
         int x, y, width, height, startAngle, sweepAngle;
         private readonly Graphics g;

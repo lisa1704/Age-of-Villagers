@@ -109,5 +109,35 @@ namespace DesignPatternLab.UnitTests
             IHouse tree = ab.drawHouse(e);
             Assert.IsInstanceOf(typeof(InuitHuntersHouse), tree);
         }
+
+        //testing object types of water source
+        [Test]
+        public void BDFarmersWaterSourceTest()
+        {
+            var bdFarmers = new BangladeshiFarmers(g, form);
+            IWaterSource tree = bdFarmers.drawWaterSource(e);
+            Assert.IsInstanceOf(typeof(BDFarmersWaterSource), tree);
+        }
+        [Test]
+        public void ArabBedouinsWaterSourceTest()
+        {
+            var ab = new ArabBedouin(g, form);
+            IWaterSource tree = ab.drawWaterSource(e);
+            Assert.IsInstanceOf(typeof(NullWaterSource), tree);
+        }
+        [Test]
+        public void EgyptianKingsWaterSourceTest()
+        {
+            var ab = new EgyptianKings(g, form);
+            IWaterSource tree = ab.drawWaterSource(e);
+            Assert.IsInstanceOf(typeof(EgyptianKingsWaterSource), tree);
+        }
+        [Test]
+        public void InuitHuntersWaterSourceTest()
+        {
+            var ab = new InuitHunters(g, form);
+            IWaterSource tree = ab.drawWaterSource(e);
+            Assert.IsInstanceOf(typeof(NullWaterSource), tree);
+        }
     }
 }
