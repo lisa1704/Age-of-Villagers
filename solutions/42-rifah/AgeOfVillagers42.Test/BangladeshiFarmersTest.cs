@@ -11,6 +11,7 @@ namespace AgeOfVillagers42.Test
     [TestClass]
     public class BangladeshiFarmersTest
     {
+        Point point = new Point(42, 42);
         [TestMethod]
         public void BackgroundColorTest()
         {
@@ -24,8 +25,10 @@ namespace AgeOfVillagers42.Test
         [TestMethod]
         public void TreeTest()
         {
-            BangladeshiFarmers bdFarmers = new BangladeshiFarmers();
-            Assert.AreEqual(2, 2);
+            BDFarmersTest bdFarmers = new BDFarmersTest();
+            BDFarmersTree treeTest = new BDFarmersTree(point);
+            Object treeTestObject = bdFarmers.testTreePoint(point);
+            treeTestObject.Equals(treeTest);
         }
 
         [TestMethod]
