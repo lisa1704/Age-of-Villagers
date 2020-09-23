@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Ageofvillagers.Nations
 {
@@ -12,6 +13,12 @@ namespace Ageofvillagers.Nations
     {
         private Graphics g;
         private Pen p;
+        public readonly String Name="Arab Beduin";
+        public string get_nation()
+        {
+            return Name;
+        }
+
         public ArabBeduin(Graphics g, Pen p)
         {
             this.g = g;
@@ -37,5 +44,7 @@ namespace Ageofvillagers.Nations
         {
             
         }
+
+        
     }
 }

@@ -10,9 +10,11 @@ namespace Ageofvillagers
     public partial class Ageofvillagers : Form
     {
         public string Item_type;
+        State state;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Item_type = "House";
+            
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {

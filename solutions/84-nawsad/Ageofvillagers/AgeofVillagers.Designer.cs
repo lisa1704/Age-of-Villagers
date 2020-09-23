@@ -46,6 +46,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -167,6 +168,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Save Village";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -299,6 +301,7 @@
         private System.Windows.Forms.TextBox SelectNationText;
         private System.Windows.Forms.Button RefreshButton;
         public System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

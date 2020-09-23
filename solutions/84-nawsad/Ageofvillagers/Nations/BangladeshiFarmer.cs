@@ -10,10 +10,15 @@ namespace Ageofvillagers
     {
         private Graphics g;
         private Pen p;
+        public readonly String Name = "Bangladeshi Farmer";
         public BangladeshiFarmer(Graphics g,Pen p)
         {
             this.g = g;
             this.p = p;
+        }
+        public string get_nation()
+        {
+            return Name;
         }
         public void drawHouse(int x, int y)
         {

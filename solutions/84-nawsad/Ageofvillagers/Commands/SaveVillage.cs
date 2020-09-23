@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Ageofvillagers
+namespace Ageofvillagers.Commands
 {
-    class SaveVillage
+    class SaveVillage:Command
     {
-
     }
 }

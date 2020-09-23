@@ -11,8 +11,8 @@ namespace Ageofvillagers
     
     class INationFactory
     {
-        INation nation;
-        String nation_type;
+      //  INation nation;
+        public  String nation_type;
         private Graphics g;
         private Pen p;
         public INationFactory(Graphics g,Pen p,string nation_type)

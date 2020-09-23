@@ -14,6 +14,7 @@ namespace Ageofvillagers
     {  
         public int mousepositionx;
         public int mousepositiony;
+        public List<State> Itemslist = new List<State>();
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
             mousepositionx = e.Location.X;
@@ -21,10 +22,25 @@ namespace Ageofvillagers
             if (Item_type == "House")
             {
                 nation.drawHouse(mousepositionx, mousepositiony);
+                Itemslist.Add(new State(mousepositionx, mousepositiony, "House",nation.get_nation()));
+                
+                foreach (var a in Itemslist)
+                {
+                   Console.WriteLine(a.Itemx);
+                    Console.WriteLine(a.Itemy);
+                    Console.WriteLine(a.Item_name);
+                    Console.WriteLine(a.Nation_Name);
+                    nation.drawHouse(a.Itemx + 10, a.Itemy + 10);
+
+                }
+                
+                
+                  
             }
             else if (Item_type == "Tree")
             {
                 nation.drawTree(mousepositionx,mousepositiony);
+
             }
             else if(Item_type=="Water Source")
             {

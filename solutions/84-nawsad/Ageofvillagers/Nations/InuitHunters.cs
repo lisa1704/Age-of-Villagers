@@ -11,10 +11,15 @@ namespace Ageofvillagers.Nations
     {   
         Graphics g;
         Pen p;
+        public readonly String Name = "Inuit Hunters";
         public InuitHunters(Graphics g,Pen p)
         {
             this.g = g;
             this.p = p;
+        }
+        public string get_nation()
+        {
+            return Name;
         }
         public void drawHouse(int x, int y)
         {

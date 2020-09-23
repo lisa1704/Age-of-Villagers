@@ -12,9 +12,14 @@ namespace Ageofvillagers.Nations
     {
         Graphics g;
         Pen p;
+        public readonly String Name = "Null";
         public NullNation()
         {
             
+        }
+        public string get_nation()
+        {
+            return Name;
         }
         public void drawHouse(int x, int y)
         {

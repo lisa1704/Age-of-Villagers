@@ -10,5 +10,6 @@ namespace Ageofvillagers
         void drawHouse(int x,int y);
         void drawTree(int x,int y);
         void drawWaterSource(int x,int y);
+        String get_nation();
     }
 }

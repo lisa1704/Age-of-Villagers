@@ -11,12 +11,17 @@ namespace Ageofvillagers.Nations
     {
         private Graphics g;
         private Pen p;
+        public readonly String Name = "Egyptian King";
         public EgyptianKing(Graphics g,Pen p)
         {
             this.g = g;
             this.p = p;
         }
-      
+        public string get_nation()
+        {
+            return Name;
+        }
+
         public void drawHouse(int x, int y)
         {
             Egyptian_House House = new Egyptian_House();

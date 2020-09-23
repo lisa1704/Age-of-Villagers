@@ -61,6 +61,9 @@
     <Compile Include="ChooseItem.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\OpenVillage.cs" />
+    <Compile Include="Commands\SaveVillage.cs" />
     <Compile Include="INationFactory.cs" />
     <Compile Include="Items\Arab_House.cs" />
     <Compile Include="Items\Arab_Tree.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="Shapes\Line.cs" />
     <Compile Include="Shapes\Rectangle.cs" />
     <Compile Include="Shapes\Triangle.cs" />
+    <Compile Include="State.cs" />
     <EmbeddedResource Include="AgeofVillagers.resx">
       <DependentUpon>AgeofVillagers.cs</DependentUpon>
     </EmbeddedResource>
