@@ -132,6 +132,7 @@
             this.Label_villName.TabIndex = 5;
             this.Label_villName.Text = "untitled";
             this.Label_villName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Label_villName.Click += new System.EventHandler(this.Label_villName_Click);
             // 
             // btn_saveVillage
             // 
