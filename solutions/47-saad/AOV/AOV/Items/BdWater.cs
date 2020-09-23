@@ -17,7 +17,7 @@ namespace AOV
             Point p8 = new Point(_clicked.X, _clicked.Y + 11);
             Point p9 = new Point(_clicked.X - 5, _clicked.Y + 7);
 
-            villageItemShape = new BdWaterSourceShape(_clicked, p2, p3, p4, p5, p6, p7, p8, p9);
+            nationItemShape = new BdWaterSourceShape(_clicked, p2, p3, p4, p5, p6, p7, p8, p9);
         }
         public override Point GetPoint()
         {

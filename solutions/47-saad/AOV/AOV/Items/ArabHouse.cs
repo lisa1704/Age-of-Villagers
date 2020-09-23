@@ -16,7 +16,7 @@ namespace AOV
             Point topLeftCorner = new Point(_clicked.X - 4, clicked.Y - 6);
             Point bottomRightCorner = new Point(clicked.X + 12, clicked.Y + 10);
 
-            villageItemShape = new ArabHouseShape(_clicked, x1, x2, x3, x4, topLeftCorner, bottomRightCorner);
+            nationItemShape = new ArabHouseShape(_clicked, x1, x2, x3, x4, topLeftCorner, bottomRightCorner);
 
            
             //Check

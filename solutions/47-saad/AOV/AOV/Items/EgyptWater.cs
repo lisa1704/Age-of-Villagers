@@ -11,7 +11,7 @@ namespace AOV
             _clicked = clicked;
             Point p = new Point(_clicked.X + 12, _clicked.Y + 12);
 
-            villageItemShape = new EgyptWaterShape(_clicked, p);
+            nationItemShape = new EgyptWaterShape(_clicked, p);
         }
         public override Point GetPoint()
         {

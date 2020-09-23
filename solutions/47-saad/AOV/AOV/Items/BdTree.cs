@@ -12,7 +12,7 @@ namespace AOV
             Point topLeftCorner = new Point(_clicked.X+7, _clicked.Y+14);
             Point bottomRightCorner = new Point(_clicked.X + 9, _clicked.Y + 24);
 
-            villageItemShape = new BdTreeShape(_clicked, top, topLeftCorner, bottomRightCorner);            
+            nationItemShape = new BdTreeShape(_clicked, top, topLeftCorner, bottomRightCorner);            
         }
         public override Point GetPoint()
         {

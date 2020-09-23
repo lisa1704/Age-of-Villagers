@@ -4,10 +4,10 @@ namespace AOV
 {
     public abstract class NationItem : IDraw
     {
-        protected CompoundShape villageItemShape = new NullShape();
+        protected CompoundShape nationItemShape = new NullShape();
         public void draw(Graphics g)
         {
-            villageItemShape.draw(g);
+            nationItemShape.draw(g);
         }
         public abstract Point GetPoint();
     }

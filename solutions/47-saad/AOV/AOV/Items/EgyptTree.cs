@@ -17,7 +17,7 @@ namespace AOV
             Point x8 = new Point(_clicked.X + 8, _clicked.Y - 24);
             Point x9 = new Point(_clicked.X + 8, _clicked.Y - 16);
 
-            villageItemShape = new EgyptTreeShape(_clicked, x2, x3, x4, x5, x6, x7, x8, x9);            
+            nationItemShape = new EgyptTreeShape(_clicked, x2, x3, x4, x5, x6, x7, x8, x9);            
         }
         public override Point GetPoint()
         {
