@@ -15,7 +15,6 @@ namespace AgeOfVillagers.Open
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                //vill.village_name = ofd.FileName;
                 Stream fileStream = ofd.OpenFile();
                 
                 using (StreamReader sr = new StreamReader(fileStream))
@@ -24,7 +23,7 @@ namespace AgeOfVillagers.Open
                     vill = JsonConvert.DeserializeObject<Village>(json);
                 }
             }
-            Console.WriteLine(vill);
+            vill.village_name = Path.GetFileNameWithoutExtension(ofd.FileName);
             return vill;
         }
     }

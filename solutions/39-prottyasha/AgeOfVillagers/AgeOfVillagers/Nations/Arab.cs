@@ -23,7 +23,7 @@ namespace AgeOfVillagers
 
         public override void setBgColor(Graphics g)
         {
-            g.Clear(Color.YellowGreen);
+            g.Clear(Color.Gold);
         }
     }
 }

@@ -32,6 +32,7 @@ namespace AgeOfVillagers
         }
 
         private void DrawingPanel_Paint(object sender, PaintEventArgs e) { }
+
         private void SidePanel_Paint(object sender, PaintEventArgs e) { }
 
         private void rbtn_house_CheckedChanged(object sender, EventArgs e)
@@ -57,11 +58,28 @@ namespace AgeOfVillagers
                 selected_component = "water_source";
             }
         }
+
         private void btn_saveVillage_Click(object sender, EventArgs e)
         {
             SaveVillage sv = new SaveVillage(vill);
             sv.SaveFile();
         }
+
+        private void btn_openVillage_Click(object sender, EventArgs e)
+        {
+            OpenVillage ov = new OpenVillage();
+            vill = ov.getVill();
+            setSavedVill(vill);
+        }
+
+        private void btn_newVillage_Click(object sender, EventArgs e)
+        {
+            DrawingPanel.Invalidate();
+            g.Clear(DrawingPanel.BackColor);
+            vill = new Village();
+            Label_villName.Text = "Untitled";
+        }
+
 
         public void SaveState(string selected_component, string selected_nation, Point p)
         {
@@ -79,14 +97,7 @@ namespace AgeOfVillagers
                 vill.rivers_drawn.Add(p);
             }
         }
-
-        private void btn_openVillage_Click(object sender, EventArgs e)
-        {
-            OpenVillage ov = new OpenVillage();
-            vill = ov.getVill();
-            setSavedVill(vill);
-        }
-
+                
         public void setSavedVill(Village vill)
         {
             selected_nation = vill.nation;
@@ -111,16 +122,11 @@ namespace AgeOfVillagers
                 drawInPanel(p);
             }
             nation_selector.SelectedIndex = nation_selector.Items.IndexOf(vill.nation);
-            //nation_selector_SelectedIndexChanged(null, null);
+            
             disappearingUnnecessaryRb();
         }
 
-        private void btn_newVillage_Click(object sender, EventArgs e)
-        {
-            DrawingPanel.Invalidate();
-            g.Clear(DrawingPanel.BackColor);
-            vill = new Village();
-        }
+        // control func
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
