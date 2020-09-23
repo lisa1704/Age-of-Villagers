@@ -19,7 +19,7 @@ namespace Age_of_villagers
         int X, Y;
         string text = "";
         string name = "";
-        String villagetype = "";
+        String VType = "";
         public Graphics g;
         public Pen p;
 
@@ -90,6 +90,18 @@ namespace Age_of_villagers
 
         }
 
+        private void drawHouse(int X,int Y)
+        {
+
+            g.DrawLine(p, X , Y , X - 10, Y + 20);
+            g.DrawLine(p, X -10, Y + 20, X + 10, Y + 20);
+            g.DrawLine(p, X , Y , X + 10, Y + 20);
+            g.DrawLine(p, X - 10, Y + 20, X + 10, Y + 20);
+            g.DrawLine(p, X - 10, Y + 20, X - 10, Y + 40);
+            g.DrawLine(p, X - 10, Y + 40, X + 10, Y + 40);
+            g.DrawLine(p, X + 10, Y + 40, X + 10, Y + 20);
+
+        }
         
 
         private void MainPanel_Paint(object sender, PaintEventArgs e)
@@ -104,6 +116,7 @@ namespace Age_of_villagers
 
         private void NationList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -112,28 +125,27 @@ namespace Age_of_villagers
 
         }
 
+        
+
         private void main_panelMouseClick(object sender, MouseEventArgs e)
         {
-            Point point = new Point(e.X, e.Y);
+            int x = e.Location.X;
+            int y = e.Location.Y;
 
             try
             {
-                if (House.Checked)
+                if (Tree.Checked)
                 {
-                    village.nation.getTree(point).draw(g, p);
-                    village.trees.Add(point);
-
+                    
                 }
                 
                 else if (House.Checked)
                 {
-                    village.nation.getHouse(point).draw(g, p);
-                    village.houses.Add(point);
+                    drawHouse(x, y);
                 }
                 else if(WaterSource.Checked)
                 {
-                    village.nation.getWaterSource(point).draw(g, p);
-                    village.waterSources.Add(point);
+                    
                 }
             }
             catch (Exception)

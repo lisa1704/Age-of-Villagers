@@ -68,7 +68,7 @@
             // 
             this.NationList.FormattingEnabled = true;
             this.NationList.Items.AddRange(new object[] {
-            "Bangladeshi",
+            "Bangladeshi Farmers",
             "Arab",
             "Egyptian",
             "Inuit"});
@@ -180,6 +180,7 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // VillageCreator
             // 

@@ -6,7 +6,7 @@ using Age_of_villagers.Shapes;
 
 namespace Age_of_villagers.Components
 {
-    class BangladeshiTree : VillageComponent
+    public class BangladeshiTree : VillageComponent
     {
         private readonly Point topLeft, bottomRight, centre;
 
