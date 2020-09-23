@@ -22,6 +22,9 @@ namespace AgeofVillegersTest
 
             AbstractNation bangladeshiVillageWaterSource = new BangladeshiFarmers(new Panel());
             Assert.AreEqual(bangladeshiVillageWaterSource.getWaterSourceType().GetType(), new BangladeshiFarmersWaterSource().GetType());
+
+            AbstractNation bangladeshiVillageBackgroundColor = new BangladeshiFarmers(new Panel());
+            Assert.AreEqual(bangladeshiVillageBackgroundColor.getColorType(), Color.Green);
         }
     }
 }

@@ -52,5 +52,10 @@ namespace empty_project
         {
             return this.waterSource;
         }
+
+        public Color getColorType()
+        {
+            return this.color;
+        }
     }
 }

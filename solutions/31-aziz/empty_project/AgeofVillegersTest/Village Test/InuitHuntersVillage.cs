@@ -22,6 +22,9 @@ namespace AgeofVillegersTest
 
             AbstractNation inuitVillageWaterSource = new InuitHunters(new Panel());
             Assert.AreEqual(inuitVillageWaterSource.getWaterSourceType().GetType(), new InuitHuntersWaterSource().GetType());
+
+            AbstractNation inuitVillageBanckgroundColor = new InuitHunters(new Panel());
+            Assert.AreEqual(inuitVillageBanckgroundColor.getColorType(), Color.White);
         }
     }
 }
