@@ -18,6 +18,8 @@ namespace Age_of_villagers
             this.a = a;
             this.b = b;
             this.c = c;
+            this.g = g;
+            this.pen = pen;
             
         }
 

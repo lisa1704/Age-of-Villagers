@@ -93,9 +93,21 @@ namespace Age_of_villagers
             p = e.Location;
 
 
-            nation.CheckVillage(nation_name).DrawWaterSource(g,p);
 
-            nation.CheckVillage(nation_name).DrawHouse(g,p);
+
+
+            if (house.Checked == true)
+            {
+                nation.CheckVillage(nation_name).DrawHouse(g, p);
+            }
+
+            else if (water_source.Checked == true)
+            {
+                nation.CheckVillage(nation_name).DrawWaterSource(g, p);
+            }
+
+            else
+                nation.CheckVillage(nation_name).DrawTree(g, p);
 
 
 
