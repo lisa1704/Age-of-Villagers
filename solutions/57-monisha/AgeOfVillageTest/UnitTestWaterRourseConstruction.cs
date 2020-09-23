@@ -10,6 +10,25 @@ namespace AgeOfVillageTest
     {
         public Graphics g;
         Point pt = new Point(100, 80);
+
+        [TestMethod]
+        public void TestBDWaterSourceConstruction()
+        {
+            BangladeshiWaterSource BDWaterTest = new BangladeshiWaterSource(pt);
+
+            BangladeshiFarmers BD = new BangladeshiFarmers();
+            object water = BD.testWaterSource(pt);
+            BDWaterTest.Equals(water);
+        }
+        [TestMethod]
+        public void TestEgyptWaterSourceConstruction()
+        {
+            EgyptianWaterSource EgyptWaterTest = new EgyptianWaterSource(pt);
+
+            EgyptianKings egyptian = new EgyptianKings();
+            object water = egyptian.testWaterSource(pt);
+            EgyptWaterTest.Equals(water);
+        }
         [TestMethod]
         public void TestArabWaterSourceConstruction()
         {

@@ -21,6 +21,7 @@ namespace AgeOfVillagers
             //return "KureGhor";
             return house;
         }
+
         public object testHouse(Point pt)
         {
             return new BangladeshiHouse(new Point(pt.X, pt.Y));
@@ -43,6 +44,12 @@ namespace AgeOfVillagers
             BDWaterSource.Paint(g, p);
             return new BangladeshiWaterSource(MPt);
         }
+
+        public object testWaterSource(Point pt)
+        {
+            return new BangladeshiWaterSource(pt);
+        }
+
         public Color GetTerrainColor()
         {
             //DrawPanel.BackColor = System.Drawing.Color.LightGoldenrodYellow;

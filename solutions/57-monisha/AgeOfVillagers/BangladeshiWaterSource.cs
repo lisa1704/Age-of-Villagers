@@ -9,7 +9,7 @@ using static AgeOfVillagers.ShapeArc;
 
 namespace AgeOfVillagers
 {
-    class BangladeshiWaterSource : CompositeShape
+   public class BangladeshiWaterSource : CompositeShape
     {
         public BangladeshiWaterSource(Point MPt)
         {
@@ -34,7 +34,7 @@ namespace AgeOfVillagers
         }
     }
 
-    class EgyptianWaterSource : CompositeShape
+   public class EgyptianWaterSource : CompositeShape
     {
         public EgyptianWaterSource(Point MPt)
         {
