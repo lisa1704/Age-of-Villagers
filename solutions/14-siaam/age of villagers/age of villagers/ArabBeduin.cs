@@ -12,7 +12,9 @@ namespace age_of_villagers
 
         public void drawHouse(Graphics g, Point point)
         {
-            throw new System.NotImplementedException();
+            Arabhouse arabhouse= new Arabhouse();
+            arabhouse.drawComponent(g, point);
+
         }
 
         public void drawTree(Graphics g, Point point)

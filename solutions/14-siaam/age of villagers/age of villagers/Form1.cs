@@ -42,7 +42,7 @@ namespace age_of_villagers
             Graphics g = panel1.CreateGraphics();
             foreach (Point points in Locations)
             {
-                nationtype.GetNation(nameofnation).drawTree(g, points);
+                nationtype.GetNation(nameofnation).drawHouse(g, points);
             }
 
         }
