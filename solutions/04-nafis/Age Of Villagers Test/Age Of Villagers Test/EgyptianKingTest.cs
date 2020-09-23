@@ -24,5 +24,31 @@ namespace Age_Of_Villagers_Test
             Assert.IsType<EgyptianKings> (nationController.getNation(new Point()));
 
         }
+        [Fact]
+        public void EgyptHousepointTest()
+        {
+            Point result = nationController.getNation(point).GetHousePoint();
+            Assert.Equal(point, result);
+
+        }
+        [Fact]
+        public void EgyptTreepointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetTreePoint();
+            Assert.Equal(new Point(), result);
+
+        }
+        [Fact]
+        public void EgyptWaterPointTest()
+        {
+
+
+            Point result = nationController.getNation(point).GetWaterPoint();
+            Assert.Equal(new Point(), result);
+
+        }
+
     }
 }

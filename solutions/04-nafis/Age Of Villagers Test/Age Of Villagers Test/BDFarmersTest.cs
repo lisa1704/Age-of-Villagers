@@ -52,5 +52,3 @@ namespace Age_Of_Villagers_Test
         }
     }
 }
-
-}
