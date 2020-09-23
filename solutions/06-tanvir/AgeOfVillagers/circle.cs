@@ -24,7 +24,7 @@ namespace AgeOfVillagers.Shapes
         }
         public void CreateShape()
         {
-            g.DrawArc(pen, x.X, x.Y, y, width, height, radius);
+            g.DrawArc(pen, x.X - 25, x.Y - 25, y, width, height, radius);
         }
     }
 }
