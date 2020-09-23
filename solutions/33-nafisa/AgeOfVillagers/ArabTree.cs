@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace AgeOfVillagers
 {
-    class ArabTree : CompositeShape
+    public class ArabTree : CompositeShape
     {
         //private Panel Drawingpanel;
 

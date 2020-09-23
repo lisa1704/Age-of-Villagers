@@ -24,6 +24,10 @@ namespace AgeOfVillagers
             abtree.Draw(point, Drawingpanel);
             return abtree;
         }
+        public object TestTree(Point point)
+        {
+            return new ArabTree(point);
+        }
 
     
         public object DrawWaterSource(Point point, Panel Drawingpanel)
