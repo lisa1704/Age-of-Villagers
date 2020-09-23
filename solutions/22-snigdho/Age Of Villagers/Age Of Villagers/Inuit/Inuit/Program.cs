@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
 namespace AgeOfVillagers.Inuit_Hunters
 {
     public class InuitHuntersHouse : Composite
