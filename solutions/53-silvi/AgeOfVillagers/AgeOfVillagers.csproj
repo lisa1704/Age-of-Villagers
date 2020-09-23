@@ -71,6 +71,7 @@
     <Compile Include="IShape.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="IVillageItem.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="NationFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
