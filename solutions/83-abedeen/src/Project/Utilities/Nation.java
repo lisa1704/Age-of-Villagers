@@ -23,7 +23,6 @@ public class Nation {
         water_body = (IWaterBody) waterbodyFactory.CreateAsset(nation_type);
 
         ColorFactory(nation_type);
-
     }
     private void ColorFactory(String nationType){
         if(nationType == "Bangladeshi Farmers"){
@@ -41,8 +40,9 @@ public class Nation {
         else {
             terrainColor = new Null_Color();
         }
-
     }
+
+
     public ArrayList<Shape> drawHouse(double x, double y){
         return this.house.drawAsset(x,y);
     }
