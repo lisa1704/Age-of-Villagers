@@ -11,16 +11,13 @@ namespace AgeOfVillagers.test
 		private static string stringtype = "Arab Beduin";
 		Nations nations = new Nations(stringtype);
 		Point point = new Point(90, 40);
-
+			
+		public void ArabTreetesting()
+        {
+			Point tests = nation.getNation(point).DrawHouse(p);
+			Assert.Equal(point, tests);
+        }
 		
-		public ArabBeduinTest()
-		{
-			public void ArabTreetesting()
-            {
-				Point tests = nation.getNation(point).DrawHouse(p);
-				Assert.Equal(point, tests);
-            }
-		}
 	}
 
 }
