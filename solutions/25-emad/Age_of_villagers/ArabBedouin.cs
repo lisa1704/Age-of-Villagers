@@ -74,10 +74,7 @@ namespace Age_of_villagers
 
         }
 
-        /*public void getName()
-        {
-            throw new NotImplementedException();
-        }*/
+      
 
 
         public string getName()

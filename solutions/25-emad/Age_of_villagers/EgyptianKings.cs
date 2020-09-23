@@ -70,7 +70,7 @@ namespace Age_of_villagers
 
         }
 
-        public void getName()
+        public String getName()
         {
             throw new NotImplementedException();
         }
