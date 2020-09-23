@@ -1,4 +1,4 @@
-﻿using System
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -14,18 +14,20 @@ namespace AgeOfVillagers.Arab_Bedouin
         public Object DrawHouse(Graphics g, Point point)
         public IShape DrawHouse(Point point)
         {
-            Arab_Bedouin_House arabBedouinHouse = new Arab_Bedouin_House(point);
+            ArabBedouinHouse arabBedouinHouse = new ArabBedouinHouse(point);
             arabBedouinHouse.Draw(g);
-            Composite arabBedouinHouse = new Arab_Bedouin_House(point);
+            Composite arabBedouinHouse = new ArabBedouinHouse(point);
+            
             return arabBedouinHouse;
         }
 
         public Object DrawTree(Graphics g, Point point)
         public IShape DrawTree(Point point)
         {
-            Arab_Bedouin_Trees arabBedouinTree = new Arab_Bedouin_Trees(point);
+            ArabBedouinTrees arabBedouinTree = new ArabBedouinTrees(point);
             arabBedouinTree.Draw(g);
-            Composite arabBedouinTree = new Arab_Bedouin_Trees(point);
+            Composite arabBedouinTree = new ArabBedouinTrees(point);
+         
             return arabBedouinTree;
         }
 
@@ -35,6 +37,7 @@ namespace AgeOfVillagers.Arab_Bedouin
             NullItems arabBedouinWaterSource = new NullItems();
             arabBedouinWaterSource.drawing();
             Composite arabBedouinWaterSource = new NullItems();
+      
             return arabBedouinWaterSource;
         }
     }
