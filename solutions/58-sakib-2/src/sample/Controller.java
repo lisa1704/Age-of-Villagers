@@ -1,6 +1,7 @@
 package sample;
 
 import Factory.NationFactory;
+import Nations.INation;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
@@ -41,6 +42,7 @@ public class Controller {
     public ArrayList<Point> houseList;
     public ArrayList<Point> wsList;
     public NationFactory nationFactory;
+    public INation nation;
 
     public void selectTree(){
         rbtnHouse.setSelected(false);
@@ -85,15 +87,15 @@ public class Controller {
                             int x,y;
                             x=(int)event.getX();
                             y=(int)event.getY();
+                            Point point=new Point(x,y);
                             gc=canvas.getGraphicsContext2D();
                             if (object=="Tree"){
                                 gc.fillText("T",x,y);
-                                treeList.add(new Point(x,y));
+                                treeList.add(point);
                             }
 
                             else if (object=="House"){
-                                gc.fillText("H",x,y);
-                                houseList.add(new Point(x,y));
+                                nation.getHouse().draw(canvas,point);
                             }
                             else if (object=="WS"){
                                 gc.fillText("W",x,y);
@@ -136,7 +138,8 @@ public class Controller {
                 System.out.println("Give all information!");
             }else{
                 nationFactory=new NationFactory();
-                BackgroundFill backgroundFill = nationFactory.getNation(nationOfVillage.getSelectionModel().getSelectedItem()).getTerrain().getTerrain();
+                nation=nationFactory.getNation(nationOfVillage.getSelectionModel().getSelectedItem());
+                BackgroundFill backgroundFill = nation.getTerrain().getTerrain();
                 Background background=new Background(backgroundFill);
                 drawSpace.setBackground(background);
 
