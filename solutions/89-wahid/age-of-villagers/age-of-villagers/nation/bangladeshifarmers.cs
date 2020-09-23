@@ -6,7 +6,7 @@ using System.Text;
 
 namespace age_of_villagers.nation
 {
-    class bangladeshifarmers : Ination
+    public class bangladeshifarmers : Ination
     {
         private Color colorofbackground = Color.Green;
 

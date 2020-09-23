@@ -10,12 +10,12 @@ namespace age_of_villagers.nation
     {
         public villageitem.villageitem getHouse(Point p)
         {
-            return new bangladeshihouse();
+            throw new NotImplementedException();
         }
 
         public string getNationName()
         {
-            return "Bangladeshi Farmers";
+            return "Arab Bedouins";
         }
 
         public Color getTerrainColor()
