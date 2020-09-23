@@ -44,7 +44,8 @@ namespace AoV
             if(canPaint)
             {
 
-                myShape = new Line(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(e.X, e.Y));
+                //myShape = new Line(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(e.X, e.Y));
+                myShape = new Triangle(new Point(pointX ?? e.X, pointY ?? e.Y), new Point(pointY ?? e.Y, e.X), new Point(e.X, pointX ?? e.X));
                 myShape.Draw(g);
                 pointX = e.X;
                 pointY = e.Y;
