@@ -17,6 +17,8 @@ namespace age_of_villagers
         public string item;
         Village newvillage;
         village_factory villfact;
+        INations nation;
+
         Graphics gp;
         Point p;
         public Form1()
@@ -38,6 +40,7 @@ namespace age_of_villagers
         {
             village_type = comboBox1.Text;
             panel1.BackColor = villfact.get_nation(village_type).draw_terrain();
+            nation = villfact.get_nation(village_type);
             Debug.WriteLine(village_type);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -93,6 +96,25 @@ namespace age_of_villagers
         {
             Open_village ov = new Open_village();
             newvillage = ov.Opvill();
+            ReDraw(newvillage);   
+        }
+
+        private void ReDraw(Village vi)
+        {
+            try
+            {
+                //villfact.get_nation(village_type).draw_terrain();
+            
+
+                vi.housepoint.ForEach(house => nation.draw_house());
+                vi.treepoint.ForEach(tree => nation.draw_tree());
+                vi.waterpoint.ForEach(watersource => nation.draw_watersource());
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No nation was selected");
+            }
         }
     }
 }
