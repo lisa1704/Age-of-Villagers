@@ -9,8 +9,11 @@ namespace AgeOfVillagers
     public class Arab_Bedouin : INation
     {
         public void draw_house()
+       
+
         {
             throw new NotImplementedException();
+            
         }
 
         public void draw_tree()
@@ -22,5 +25,7 @@ namespace AgeOfVillagers
         {
             throw new NotImplementedException();
         }
+
+     
     }
 }

@@ -51,27 +51,10 @@ namespace AgeOfVillagers
             }
 
         }
-        private void DrawPanelClick(object sender, MouseEventArgs e)
-        {
-            if (ItemText == "House")
-            {
-                HousePoints.Add(e.Location);
-            }
-            if (ItemText == "Tree")
-            {
-                TreePoints.Add(e.Location);
-            }
-            if (ItemText == "WaterSource")
-            {
-                WaterPoints.Add(e.Location);
-            }
-            DrawPanel.Invalidate();
-        }
 
         private void WaterSource_Click(object sender, EventArgs e)
         {
-
-        }
+            ItemText = "WaterSource";        }
 
         private void Save_Village_Click(object sender, EventArgs e)
         {
@@ -90,16 +73,17 @@ namespace AgeOfVillagers
 
         private void House_Click(object sender, EventArgs e)
         {
-
+            ItemText = "House";
         }
 
         private void Tree_Click(object sender, EventArgs e)
         {
-
+            ItemText = "Tree";
         }
 
         private void Nations_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Vtype = NationList.Text;
 
         }
 
@@ -110,6 +94,24 @@ namespace AgeOfVillagers
 
         private void VillageName_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Drawpanel(object sender, MouseEventArgs e)
+        {
+            if (ItemText == "House")
+            {
+                HousePoints.Add(e.Location);
+            }
+            if (ItemText == "Tree")
+            {
+                TreePoints.Add(e.Location);
+            }
+            if (ItemText == "WaterSource")
+            {
+                WaterPoints.Add(e.Location);
+            }
+            DrawPanel.Invalidate();
 
         }
     }

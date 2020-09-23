@@ -47,6 +47,7 @@
             this.DrawPanel.Size = new System.Drawing.Size(600, 400);
             this.DrawPanel.TabIndex = 0;
             this.DrawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DrawPanel_Paint);
+            this.DrawPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Drawpanel);
             // 
             // Tree
             // 
