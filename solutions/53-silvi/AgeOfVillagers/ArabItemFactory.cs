@@ -16,7 +16,7 @@ namespace AgeOfVillagers
             }
             else if (button == "Tree")
             {
-                return new ArabBedouinTree();
+                return new EgyptianKingsTree();
             }
             
             return null;

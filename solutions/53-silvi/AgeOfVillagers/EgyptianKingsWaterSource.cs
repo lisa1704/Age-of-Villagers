@@ -2,13 +2,12 @@
 
 namespace AgeOfVillagers
 {
-    class EgyptianKingsWaterSource : IVillageItem
+    class EgyptianKingsWaterSource : Composite
     {
-        public void Draw(Point e, Graphics g, Pen p)
+        public EgyptianKingsWaterSource(Point point)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawArc(p, x - 40, y - 50, 16, 16, 0, 360);
+            Point topPoint = new Point(point.X + 12, point.Y + 12);
+            AddComponent(new Ellipse(point, topPoint));
         }
     }
 }

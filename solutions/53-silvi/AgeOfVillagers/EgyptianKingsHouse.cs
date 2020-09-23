@@ -2,17 +2,16 @@
 
 namespace AgeOfVillagers
 {
-    class EgyptianKingsHouse : IVillageItem
+    class EgyptianKingsHouse : Composite
     {
-        public void Draw(Point e, Graphics g, Pen p)
+        public EgyptianKingsHouse(Point point)
         {
-            int x = e.X;
-            int y = e.Y;
-            g.DrawLine(p, x, y, x + 30, y + 10);
-            g.DrawLine(p, x + 30, y + 10, x + 50, y - 10);
-            g.DrawLine(p, x + 20, y - 30, x, y);
-            g.DrawLine(p, x + 20, y - 30, x + 30, y + 10);
-            g.DrawLine(p, x + 20, y - 30, x + 50, y - 10);
+            Point point1 = new Point(point.X - 9, point.Y + 14);
+            Point point2 = new Point(point.X + 4, point.Y + 16);
+            Point point3 = new Point(point.X + 7, point.Y + 10);
+
+            AddComponent(new Triangle(point2, point1, point));
+            AddComponent(new Triangle(point3, point2, point));
         }
     }
 }
