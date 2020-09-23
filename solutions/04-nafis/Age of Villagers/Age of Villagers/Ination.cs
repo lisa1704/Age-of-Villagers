@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Age_of_Villagers
 {
-    interface INation
+    public interface INation
     {
         IShape HouseDraw();
         Point GetHousePoint();

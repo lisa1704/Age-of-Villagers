@@ -17,7 +17,8 @@ namespace Age_of_Villagers
         private string NationName;
         Graphics graphics;
         Pen pen;
-        int x, y = -1;
+        int x = -1;
+        int y = -1;
         bool move = false;
         private List<Point> HousePoints { get; set; } = new List<Point>();
         private List<Point> TreePoints { get; set; } = new List<Point>();
@@ -111,8 +112,9 @@ namespace Age_of_Villagers
 
         private void VillageDrawing_MouseDown(object sender, EventArgs e)
         {
-            
-            
+            x = e.X;
+            y = e.Y;
+
             Point point = new Point(x, y);
 
             NationController nationController = new NationController(NationNameCombo.Text);
